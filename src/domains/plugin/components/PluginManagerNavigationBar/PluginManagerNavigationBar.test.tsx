@@ -1,4 +1,3 @@
-import { act, renderHook } from "@testing-library/react-hooks";
 import { translations as pluginTranslations } from "domains/plugin/i18n";
 import React from "react";
 import { fireEvent, render } from "utils/testing-library";
@@ -23,41 +22,27 @@ describe("PluginManagerNavigationBar", () => {
 	});
 
 	it("should update selected", () => {
-		const { result } = renderHook(() => {
+		const Component = () => {
 			const [currentView, setCurrentView] = React.useState("latest");
 
-			return {
-				currentView,
-				setCurrentView,
-			};
-		});
+			return (
+				<>
+					<span data-testid="currentView">{currentView}</span>
+					<PluginManagerNavigationBar menu={menu} selectedView={currentView} onChange={setCurrentView} />
+				</>
+			);
+		};
 
-		const { asFragment, getByTestId, rerender } = render(
-			<PluginManagerNavigationBar
-				menu={menu}
-				selectedView={result.current.currentView}
-				onChange={result.current.setCurrentView}
-			/>,
-		);
+		const { asFragment, getByTestId } = render(<Component />);
 
 		const navIds = ["gaming", "utility", "other", "my-plugins", "latest"];
 
 		for (const navId of navIds) {
 			const navItem = getByTestId(`tabs__tab-button-${navId}`);
 
-			act(() => {
-				fireEvent.click(navItem);
-			});
+			fireEvent.click(navItem);
 
-			rerender(
-				<PluginManagerNavigationBar
-					menu={menu}
-					selectedView={result.current.currentView}
-					onChange={result.current.setCurrentView}
-				/>,
-			);
-
-			expect(result.current.currentView).toBe(navId);
+			expect(getByTestId("currentView")).toHaveTextContent(navId);
 			expect(getByTestId(`tabs__tab-button-${navId}`)).toHaveAttribute("aria-selected", "true");
 		}
 

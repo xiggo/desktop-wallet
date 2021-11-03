@@ -1,4 +1,3 @@
-import { act } from "@testing-library/react-hooks";
 import React, { useState } from "react";
 import { fireEvent, render, screen, waitFor } from "utils/testing-library";
 
@@ -141,17 +140,13 @@ describe("SelectDropdown", () => {
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		act(() => {
-			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-		});
+		fireEvent.change(selectDropdown, { target: { value: "Opt" } });
 
 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(firstOption);
-		});
+		fireEvent.click(firstOption);
 	});
 
 	it.each([OptionType.base, OptionType.group])("should select option %s", (optType) => {
@@ -159,17 +154,13 @@ describe("SelectDropdown", () => {
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		act(() => {
-			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-		});
+		fireEvent.change(selectDropdown, { target: { value: "Opt" } });
 
 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.mouseDown(firstOption);
-		});
+		fireEvent.mouseDown(firstOption);
 
 		expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 	});
@@ -179,13 +170,8 @@ describe("SelectDropdown", () => {
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		act(() => {
-			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-		});
-
-		act(() => {
-			fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
-		});
+		fireEvent.change(selectDropdown, { target: { value: "Opt" } });
+		fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
 
 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
@@ -199,35 +185,20 @@ describe("SelectDropdown", () => {
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		act(() => {
-			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-		});
-
-		act(() => {
-			fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
-		});
-
-		act(() => {
-			fireEvent.keyDown(selectDropdown, { code: 8, key: "Backspace" });
-		});
+		fireEvent.change(selectDropdown, { target: { value: "Opt" } });
+		fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
+		fireEvent.keyDown(selectDropdown, { code: 8, key: "Backspace" });
 
 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.mouseOver(firstOption);
-		});
-
-		act(() => {
-			fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
-		});
+		fireEvent.mouseOver(firstOption);
+		fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
 
 		expect(firstOption).toHaveClass("is-highlighted");
 
-		act(() => {
-			fireEvent.keyDown(firstOption, { code: 13, key: "Enter" });
-		});
+		fireEvent.keyDown(firstOption, { code: 13, key: "Enter" });
 
 		expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 	});
@@ -256,31 +227,23 @@ describe("SelectDropdown", () => {
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		act(() => {
-			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-		});
+		fireEvent.change(selectDropdown, { target: { value: "Opt" } });
 
 		const firstOption = screen.getByTestId("SelectDropdown__option--0");
 
 		expect(firstOption).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
-		});
+		fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
 
 		expect(firstOption).toHaveClass("is-highlighted");
 
-		act(() => {
-			fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
-		});
+		fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
 
 		const secondOption = screen.getByTestId("SelectDropdown__option--1");
 
 		expect(secondOption).toHaveClass("is-highlighted");
 
-		act(() => {
-			fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
-		});
+		fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
 
 		expect(firstOption).toHaveClass("is-highlighted");
 	});
@@ -291,9 +254,7 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
 
 			expect(screen.getByTestId("Input__suggestion")).toHaveTextContent("Option 1");
 		},
@@ -305,13 +266,8 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-			});
-
-			act(() => {
-				fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
+			fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
 
 			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 		},
@@ -323,13 +279,8 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-			});
-
-			act(() => {
-				fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
+			fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
 
 			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 		},
@@ -339,23 +290,13 @@ describe("SelectDropdown", () => {
 		render(<Select options={getOptions(optType)} />);
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		act(() => {
-			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-		});
-
-		act(() => {
-			fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
-		});
+		fireEvent.change(selectDropdown, { target: { value: "Opt" } });
+		fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
 
 		expect(selectDropdown).toHaveValue("Option 1");
 
-		act(() => {
-			fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
-		});
-
-		act(() => {
-			fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
-		});
+		fireEvent.keyDown(selectDropdown, { code: 40, key: "ArrowDown" });
+		fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
 
 		expect(selectDropdown).toHaveValue("Option 2");
 	});
@@ -366,13 +307,8 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Optt" } });
-			});
-
-			act(() => {
-				fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Optt" } });
+			fireEvent.keyDown(selectDropdown, { code: 9, key: "Tab" });
 
 			expect(screen.getByTestId("select-list__input")).toHaveValue("");
 		},
@@ -384,13 +320,8 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-			});
-
-			act(() => {
-				fireEvent.keyDown(selectDropdown, { code: 65, key: "A" });
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
+			fireEvent.keyDown(selectDropdown, { code: 65, key: "A" });
 
 			expect(screen.getByTestId("select-list__input")).toHaveValue("");
 		},
@@ -402,26 +333,14 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-			});
-
-			act(() => {
-				fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
+			fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
 
 			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "test" } });
-			});
-
-			act(() => {
-				fireEvent.keyDown(selectDropdown, { code: 65, key: "A" });
-			});
-			act(() => {
-				fireEvent.keyDown(selectDropdown, { code: 65, key: "B" });
-			});
+			fireEvent.change(selectDropdown, { target: { value: "test" } });
+			fireEvent.keyDown(selectDropdown, { code: 65, key: "A" });
+			fireEvent.keyDown(selectDropdown, { code: 65, key: "B" });
 
 			expect(screen.getByTestId("select-list__input")).toHaveValue("");
 		},
@@ -433,13 +352,8 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-			});
-
-			act(() => {
-				fireEvent.blur(selectDropdown);
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
+			fireEvent.blur(selectDropdown);
 
 			await waitFor(() => expect(selectDropdown).toHaveValue("Option 1"));
 		},
@@ -451,13 +365,8 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Foobar" } });
-			});
-
-			act(() => {
-				fireEvent.blur(selectDropdown);
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Foobar" } });
+			fireEvent.blur(selectDropdown);
 
 			await waitFor(() => expect(selectDropdown).toHaveValue(""));
 		},
@@ -469,19 +378,12 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Opt" } });
-			});
-
-			act(() => {
-				fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Opt" } });
+			fireEvent.keyDown(selectDropdown, { code: 13, key: "Enter" });
 
 			expect(selectDropdown).toHaveValue("Option 1");
 
-			act(() => {
-				fireEvent.blur(selectDropdown);
-			});
+			fireEvent.blur(selectDropdown);
 
 			expect(selectDropdown).toHaveValue("Option 1");
 		},
@@ -492,15 +394,11 @@ describe("SelectDropdown", () => {
 		async (optType) => {
 			render(<Select options={getOptions(optType)} />);
 
-			act(() => {
-				fireEvent.focus(screen.getByTestId("SelectDropdown__input"));
-			});
+			fireEvent.focus(screen.getByTestId("SelectDropdown__input"));
 
 			await screen.findByTestId("SelectDropdown__option--0");
 
-			act(() => {
-				fireEvent.mouseDown(screen.getByTestId("SelectDropdown__option--0"));
-			});
+			fireEvent.mouseDown(screen.getByTestId("SelectDropdown__option--0"));
 
 			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
 		},
@@ -530,9 +428,7 @@ describe("SelectDropdown", () => {
 		expect(screen.queryByText("Option 2")).not.toBeInTheDocument();
 
 		// set null value
-		act(() => {
-			fireEvent.click(screen.getByTestId("btn-reset"));
-		});
+		fireEvent.click(screen.getByTestId("btn-reset"));
 
 		// check value reset and dropdown not open
 		expect(screen.getByTestId("select-list__input")).toHaveValue("");
@@ -543,9 +439,7 @@ describe("SelectDropdown", () => {
 		render(<Select options={getOptions(optType)} allowFreeInput />);
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		act(() => {
-			fireEvent.change(selectDropdown, { target: { value: "Test" } });
-		});
+		fireEvent.change(selectDropdown, { target: { value: "Test" } });
 
 		expect(screen.getByTestId("select-list__input")).toHaveValue("Test");
 	});
@@ -556,13 +450,8 @@ describe("SelectDropdown", () => {
 			render(<Select options={getOptions(optType)} allowFreeInput={true} />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Test" } });
-			});
-
-			act(() => {
-				fireEvent.blur(selectDropdown);
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Test" } });
+			fireEvent.blur(selectDropdown);
 
 			expect(screen.getByTestId("select-list__input")).toHaveValue("Test");
 		},
@@ -583,15 +472,11 @@ describe("SelectDropdown", () => {
 		(optType) => {
 			render(<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />);
 			const selectDropdown = screen.getByTestId("SelectDropdown__input");
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: options[0].label } });
-			});
+			fireEvent.change(selectDropdown, { target: { value: options[0].label } });
 
 			expect(screen.getByTestId("select-list__input")).toHaveValue(options[0].label);
 
-			act(() => {
-				fireEvent.change(selectDropdown, { target: { value: "Unmatched" } });
-			});
+			fireEvent.change(selectDropdown, { target: { value: "Unmatched" } });
 
 			expect(() => screen.getByTestId("SelectDropdown__option--0")).toThrow();
 		},
@@ -600,15 +485,11 @@ describe("SelectDropdown", () => {
 	it.each([OptionType.base, OptionType.group])("should show all options %s when empty input", (optType) => {
 		render(<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />);
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
-		act(() => {
-			fireEvent.change(selectDropdown, { target: { value: options[0].label } });
-		});
+		fireEvent.change(selectDropdown, { target: { value: options[0].label } });
 
 		expect(screen.getByTestId("select-list__input")).toHaveValue(options[0].label);
 
-		act(() => {
-			fireEvent.change(selectDropdown, { target: { value: "" } });
-		});
+		fireEvent.change(selectDropdown, { target: { value: "" } });
 
 		expect(screen.getByTestId("select-list__input")).toHaveValue("");
 		expect(screen.getByTestId("SelectDropdown__option--0")).toBeInTheDocument();

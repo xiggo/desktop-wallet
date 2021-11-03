@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
@@ -39,9 +39,7 @@ describe("InputAddress", () => {
 			<TestInputAddress coin="ARK" network="ark.devnet" registerRef={register} profile={profile} />,
 		);
 
-		act(() => {
-			fireEvent.input(getByTestId("InputAddress__input"), { target: { value: "Abc" } });
-		});
+		fireEvent.input(getByTestId("InputAddress__input"), { target: { value: "Abc" } });
 
 		await waitForNextUpdate();
 
@@ -64,10 +62,8 @@ describe("InputAddress", () => {
 			/>,
 		);
 
-		act(() => {
-			fireEvent.input(getByTestId("InputAddress__input"), {
-				target: { value: validAddress },
-			});
+		fireEvent.input(getByTestId("InputAddress__input"), {
+			target: { value: validAddress },
 		});
 
 		await waitForNextUpdate();
@@ -90,9 +86,7 @@ describe("InputAddress", () => {
 			/>,
 		);
 
-		act(() => {
-			fireEvent.input(getByTestId("InputAddress__input"), { target: { value: "Abc" } });
-		});
+		fireEvent.input(getByTestId("InputAddress__input"), { target: { value: "Abc" } });
 
 		await waitForNextUpdate();
 

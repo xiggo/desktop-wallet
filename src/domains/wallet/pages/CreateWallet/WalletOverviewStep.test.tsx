@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
@@ -50,9 +50,7 @@ describe("WalletOverviewStep", () => {
 			// @ts-ignore
 			navigator.clipboard = { writeText: writeTextMock };
 
-			act(() => {
-				fireEvent.click(getByTestId("CreateWallet__copy"));
-			});
+			fireEvent.click(getByTestId("CreateWallet__copy"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(MNEMONICS[0]));
 
@@ -60,7 +58,7 @@ describe("WalletOverviewStep", () => {
 			navigator.clipboard = clipboardOriginal;
 		});
 
-		it("should show success toast on succesfull download", async () => {
+		it("should show success toast on successful download", async () => {
 			const { result: form } = renderHook(() =>
 				useForm({
 					defaultValues: {
@@ -84,11 +82,11 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			await act(async () => {
-				fireEvent.click(getByTestId("CreateWallet__download"));
-			});
+			fireEvent.click(getByTestId("CreateWallet__download"));
 
-			expect(toastSpy).toHaveBeenCalled();
+			await waitFor(() => {
+				expect(toastSpy).toHaveBeenCalled();
+			});
 
 			toastSpy.mockRestore();
 		});
@@ -117,9 +115,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			await act(async () => {
-				fireEvent.click(getByTestId("CreateWallet__download"));
-			});
+			fireEvent.click(getByTestId("CreateWallet__download"));
 
 			expect(toastSpy).not.toHaveBeenCalled();
 
@@ -150,11 +146,11 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			await act(async () => {
-				fireEvent.click(getByTestId("CreateWallet__download"));
-			});
+			fireEvent.click(getByTestId("CreateWallet__download"));
 
-			expect(toastSpy).toHaveBeenCalled();
+			await waitFor(() => {
+				expect(toastSpy).toHaveBeenCalled();
+			});
 
 			toastSpy.mockRestore();
 		});

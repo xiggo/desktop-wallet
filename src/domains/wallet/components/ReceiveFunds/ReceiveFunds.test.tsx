@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Networks } from "@payvo/sdk";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
 
 import { ReceiveFunds } from "./ReceiveFunds";
 
@@ -58,9 +58,7 @@ describe("ReceiveFunds", () => {
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalled();
 	});
@@ -74,9 +72,7 @@ describe("ReceiveFunds", () => {
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__address")).toHaveLength(1));
 		await waitFor(() => expect(queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		act(() => {
-			fireEvent.click(getByTestId("ReceiveFunds__toggle"));
-		});
+		fireEvent.click(getByTestId("ReceiveFunds__toggle"));
 
 		await waitFor(() => expect(getByTestId("ReceiveFundsForm__amount")).toHaveValue(""));
 		await waitFor(() => expect(getByTestId("ReceiveFundsForm__memo")).toHaveValue(""));

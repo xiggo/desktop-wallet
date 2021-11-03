@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { MnemonicList } from "./MnemonicList";
 

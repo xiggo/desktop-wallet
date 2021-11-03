@@ -3,7 +3,7 @@ import { Contracts } from "@payvo/profiles";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { SelectRecipient } from "./SelectRecipient";
 
@@ -53,15 +53,11 @@ describe("SelectRecipient", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
-		});
+		fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
 		await findByTestId("modal__inner");
 
-		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(getByTestId("modal__close-btn"));
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
@@ -101,9 +97,7 @@ describe("SelectRecipient", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
-		});
+		fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
 		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 	});
@@ -115,11 +109,10 @@ describe("SelectRecipient", () => {
 		const address = "bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT";
 		const recipientInputField = getByTestId("SelectDropdown__input");
 
-		await act(async () => {
-			fireEvent.change(recipientInputField, { target: { value: address } });
-		});
+		fireEvent.change(recipientInputField, { target: { value: address } });
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(address);
+
 		expect(onChange).toBeCalledWith(address, {
 			alias: undefined,
 			isContact: false,
@@ -142,9 +135,7 @@ describe("SelectRecipient", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
-		});
+		fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
 		await waitFor(() => {
 			expect(getByTestId("modal__inner")).toBeInTheDocument();
@@ -152,9 +143,7 @@ describe("SelectRecipient", () => {
 
 		const firstAddress = getByTestId("RecipientListItem__select-button-2");
 
-		act(() => {
-			fireEvent.click(firstAddress);
-		});
+		fireEvent.click(firstAddress);
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
@@ -175,9 +164,7 @@ describe("SelectRecipient", () => {
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
-		});
+		fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
 		await waitFor(() => {
 			expect(getByTestId("modal__inner")).toBeInTheDocument();
@@ -185,9 +172,7 @@ describe("SelectRecipient", () => {
 
 		const lastAddress = getByTestId("RecipientListItem__selected-button-2");
 
-		act(() => {
-			fireEvent.click(lastAddress);
-		});
+		fireEvent.click(lastAddress);
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
 		expect(onChange).not.toBeCalled();
@@ -209,11 +194,9 @@ describe("SelectRecipient", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		await act(async () => {
-			fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
+		fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
-			expect(() => getAllByTestId("RecipientListItem__select-button")).toThrow();
-		});
+		await waitFor(() => expect(() => getAllByTestId("RecipientListItem__select-button")).toThrow());
 	});
 
 	it("should filter recipients list by MultiSignature type", async () => {
@@ -221,9 +204,7 @@ describe("SelectRecipient", () => {
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
-		});
+		fireEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
@@ -236,14 +217,13 @@ describe("SelectRecipient", () => {
 
 		rerender(<SelectRecipient profile={profile} exceptMultiSignature />);
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
-		});
+		fireEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
-			expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 		});
+
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 
 		isMultiSignatureSpy.mockRestore();
 	});

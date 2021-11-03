@@ -1,6 +1,5 @@
 import React from "react";
-import { act } from "react-dom/test-utils";
-import { fireEvent, render, within } from "testing-library";
+import { fireEvent, render, within } from "utils/testing-library";
 
 import { Table } from "./Table";
 
@@ -58,17 +57,13 @@ describe("Table", () => {
 
 		const th = getAllByRole("columnheader")[0];
 
-		act(() => {
-			fireEvent.click(th);
-		});
+		fireEvent.click(th);
 
 		expect(th).toHaveTextContent("chevron-down-small.svg");
 
 		expect(within(th).getByRole("img")).toHaveClass("rotate-180");
 
-		act(() => {
-			fireEvent.click(th);
-		});
+		fireEvent.click(th);
 
 		expect(within(th).getByRole("img")).not.toHaveClass("rotate-180");
 	});

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import React from "react";
-import { act, fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, waitFor } from "utils/testing-library";
 
 import { PasswordModal } from "./PasswordModal";
 
@@ -21,15 +21,9 @@ describe("PasswordModal", () => {
 	});
 
 	it("should render with title and description", async () => {
-		let renderContext: any;
-
-		await act(async () => {
-			renderContext = render(
-				<PasswordModal isOpen={true} title="Password title" description="Password description" />,
-			);
-		});
-
-		const { asFragment, getByTestId } = renderContext;
+		const { asFragment, getByTestId } = render(
+			<PasswordModal isOpen={true} title="Password title" description="Password description" />,
+		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent("Password title");
 		expect(getByTestId("modal__inner")).toHaveTextContent("Password description");
@@ -41,16 +35,12 @@ describe("PasswordModal", () => {
 
 		const { findByTestId, getByTestId } = render(<PasswordModal isOpen={true} onSubmit={onSuccess} />);
 
-		await act(async () => {
-			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "password" } });
-		});
+		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "password" } });
 
 		// wait for formState.isValid to be updated
 		await findByTestId("PasswordModal__submit-button");
 
-		act(() => {
-			fireEvent.click(getByTestId("PasswordModal__submit-button"));
-		});
+		fireEvent.click(getByTestId("PasswordModal__submit-button"));
 
 		await waitFor(() => {
 			expect(onSuccess).toBeCalled();

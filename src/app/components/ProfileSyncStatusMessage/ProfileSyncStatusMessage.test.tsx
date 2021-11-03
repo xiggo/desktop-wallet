@@ -1,5 +1,4 @@
 import React from "react";
-import { act } from "react-dom/test-utils";
 import { Route } from "react-router-dom";
 import { fireEvent, render, waitFor } from "utils/testing-library";
 
@@ -70,9 +69,7 @@ describe("SyncErrorMessage", () => {
 		await findByText(failedNetworkNames[1]);
 		await findByText(failedNetworkNames[2]);
 
-		act(() => {
-			fireEvent.click(getByTestId("SyncErrorMessage__retry"));
-		});
+		fireEvent.click(getByTestId("SyncErrorMessage__retry"));
 
 		await waitFor(() => expect(onRetry).toHaveBeenCalled());
 

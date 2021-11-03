@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { ResetProfile } from "./ResetProfile";
 
@@ -31,9 +31,7 @@ describe("ResetProfile", () => {
 
 		await findByTestId("modal__inner");
 
-		act(() => {
-			fireEvent.click(getByTestId("ResetProfile__submit-button"));
-		});
+		fireEvent.click(getByTestId("ResetProfile__submit-button"));
 
 		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Theme)).not.toBe(theme));
 

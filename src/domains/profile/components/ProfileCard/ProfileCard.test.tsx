@@ -1,7 +1,6 @@
 import { Contracts } from "@payvo/profiles";
-import { act } from "@testing-library/react-hooks";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render } from "testing-library";
+import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 
 import { ProfileCard } from "./ProfileCard";
 
@@ -54,9 +53,7 @@ describe("ProfileCard", () => {
 		const { getByTestId } = render(<ProfileCard profile={profile} actions={options} />);
 		const toggle = getByTestId("dropdown__toggle");
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 	});
@@ -66,9 +63,7 @@ describe("ProfileCard", () => {
 		const { getByTestId } = render(<ProfileCard profile={profile} actions={options} onSelect={onSelect} />);
 		const toggle = getByTestId("dropdown__toggle");
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -76,9 +71,7 @@ describe("ProfileCard", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(firstOption);
-		});
+		fireEvent.click(firstOption);
 
 		expect(onSelect).toBeCalledWith({ label: "Option 1", value: "1" });
 	});
@@ -87,9 +80,7 @@ describe("ProfileCard", () => {
 		const { container, getByTestId } = render(<ProfileCard profile={profile} actions={options} />);
 		const toggle = getByTestId("dropdown__toggle");
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -97,9 +88,7 @@ describe("ProfileCard", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(firstOption);
-		});
+		fireEvent.click(firstOption);
 
 		expect(container.querySelectorAll("ul").length).toEqual(0);
 	});

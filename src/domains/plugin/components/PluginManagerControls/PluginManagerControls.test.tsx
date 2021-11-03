@@ -1,6 +1,5 @@
-import { act, renderHook } from "@testing-library/react-hooks";
 import React from "react";
-import { fireEvent, render } from "testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { PluginManagerControls } from "./PluginManagerControls";
 
@@ -13,55 +12,33 @@ describe("PluginManagerControls", () => {
 	});
 
 	it("should toggle between list and grid", () => {
-		const { result } = renderHook(() => {
+		const Component = () => {
 			const [viewType, setViewType] = React.useState("grid");
 
-			return {
-				setViewType,
-				viewType,
-			};
-		});
+			return (
+				<div>
+					<span data-testid="viewType">{viewType}</span>
+					<PluginManagerControls
+						selectedViewType={viewType}
+						onSelectListView={() => setViewType("list")}
+						onSelectGridView={() => setViewType("grid")}
+					/>
+				</div>
+			);
+		};
 
-		const { asFragment, getByTestId, rerender } = render(
-			<PluginManagerControls
-				selectedViewType={result.current.viewType}
-				onSelectListView={() => result.current.setViewType("list")}
-				onSelectGridView={() => result.current.setViewType("grid")}
-			/>,
-		);
+		const { asFragment, getByTestId } = render(<Component />);
 
 		const gridIcon = getByTestId("LayoutControls__grid--icon");
 		const listIcon = getByTestId("LayoutControls__list--icon");
 
-		act(() => {
-			fireEvent.click(listIcon);
-		});
+		fireEvent.click(listIcon);
 
-		expect(result.current.viewType).toBe("list");
+		expect(getByTestId("viewType")).toHaveTextContent("list");
 
-		rerender(
-			<PluginManagerControls
-				selectedViewType={result.current.viewType}
-				onSelectListView={() => result.current.setViewType("list")}
-				onSelectGridView={() => result.current.setViewType("grid")}
-			/>,
-		);
+		fireEvent.click(gridIcon);
 
-		expect(result.current.viewType).toBe("list");
-
-		act(() => {
-			fireEvent.click(gridIcon);
-		});
-
-		rerender(
-			<PluginManagerControls
-				selectedViewType={result.current.viewType}
-				onSelectListView={() => result.current.setViewType("list")}
-				onSelectGridView={() => result.current.setViewType("grid")}
-			/>,
-		);
-
-		expect(result.current.viewType).toBe("grid");
+		expect(getByTestId("viewType")).toHaveTextContent("grid");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

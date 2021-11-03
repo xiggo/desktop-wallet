@@ -5,7 +5,7 @@ import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 const history = createMemoryHistory();
 let profile: Contracts.IProfile;
@@ -60,10 +60,9 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await act(async () => {
-			fireEvent.click(await findByTestId("Export-settings__submit-button"));
-			await waitFor(() => expect(dialogMock).toHaveBeenCalled());
-		});
+		fireEvent.click(await findByTestId("Export-settings__submit-button"));
+
+		await waitFor(() => expect(dialogMock).toHaveBeenCalled());
 
 		dialogMock.mockRestore();
 	});

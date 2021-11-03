@@ -7,7 +7,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import { act, env, fireEvent, getDefaultProfileId, MNEMONICS, render, syncDelegates } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, syncDelegates } from "utils/testing-library";
 
 import { AddressRow } from "./AddressRow";
 
@@ -380,9 +380,7 @@ describe("AddressRow", () => {
 
 		await findByTestId("StatusIcon__icon");
 
-		act(() => {
-			fireEvent.click(selectButton);
-		});
+		fireEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
 		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());

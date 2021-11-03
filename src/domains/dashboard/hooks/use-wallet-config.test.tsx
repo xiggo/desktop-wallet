@@ -102,14 +102,18 @@ describe("useWalletConfig", () => {
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => useWalletConfig({ defaults: { selectedNetworkIds: [] }, profile }), {
-			wrapper,
-		});
+		const { result, waitForNextUpdate } = renderHook(
+			() => useWalletConfig({ defaults: { selectedNetworkIds: [] }, profile }),
+			{
+				wrapper,
+			},
+		);
 
-		// eslint-disable-next-line @typescript-eslint/require-await
-		await act(async () => {
+		act(() => {
 			result.current.setValue("selectedNetworkIds", ["ark.devnet"]);
 		});
+
+		await waitForNextUpdate();
 
 		await waitFor(() => {
 			expect(result.current.selectedNetworkIds).toEqual(["ark.devnet"]);

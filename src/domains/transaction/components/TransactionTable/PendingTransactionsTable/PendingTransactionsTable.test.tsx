@@ -4,7 +4,7 @@ import { PendingTransactions } from "domains/transaction/components/TransactionT
 import nock from "nock";
 import React from "react";
 import * as utils from "utils/electron-utils";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { PendingTransaction } from "./PendingTransactionsTable.contracts";
 
@@ -303,9 +303,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		act(() => {
-			fireEvent.click(getAllByTestId("TableRow")[0]);
-		});
+		fireEvent.click(getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalled());
 
@@ -503,9 +501,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		act(() => {
-			fireEvent.click(screen.getAllByTestId("TransactionRow__sign")[0]);
-		});
+		fireEvent.click(screen.getAllByTestId("TransactionRow__sign")[0]);
 
 		expect(onClick).toHaveBeenCalled();
 		expect(asFragment()).toMatchSnapshot();
@@ -521,15 +517,11 @@ describe("Signed Transaction Table", () => {
 
 		const canBeSignedMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		render(<PendingTransactions isCompact={false} wallet={wallet} pendingTransactions={pendingTransactions} />);
-		act(() => {
-			fireEvent.mouseEnter(screen.getAllByRole("row")[1]);
-		});
+		fireEvent.mouseEnter(screen.getAllByRole("row")[1]);
 
 		await waitFor(() => expect(screen.getAllByRole("row")[1]).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.mouseLeave(screen.getAllByRole("row")[1]);
-		});
+		fireEvent.mouseLeave(screen.getAllByRole("row")[1]);
 
 		await waitFor(() => expect(screen.getAllByRole("row")[1]).toBeInTheDocument());
 		canBeSignedMock.mockRestore();
@@ -591,17 +583,13 @@ describe("Signed Transaction Table", () => {
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		act(() => {
-			fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
-		});
+		fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
 
 		expect(getByTestId("modal__inner")).toBeInTheDocument();
 		expect(getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
 		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
-		});
+		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
 
 		await waitFor(() => expect(onRemove).toHaveBeenCalled());
 
@@ -632,16 +620,12 @@ describe("Signed Transaction Table", () => {
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		act(() => {
-			fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
-		});
+		fireEvent.click(getAllByTestId("TableRemoveButton")[0]);
 
 		expect(getByTestId("modal__inner")).toBeInTheDocument();
 		expect(getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
-		});
+		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
 
 		expect(() => getByTestId("modal__inner")).toThrow();
 

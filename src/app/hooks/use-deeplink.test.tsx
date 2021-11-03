@@ -3,7 +3,7 @@ import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import React from "react";
 import { Route } from "react-router-dom";
-import { getDefaultProfileId, getDefaultWalletId, render } from "testing-library";
+import { getDefaultProfileId, getDefaultWalletId, render } from "utils/testing-library";
 
 import { useDeeplink } from "./use-deeplink";
 

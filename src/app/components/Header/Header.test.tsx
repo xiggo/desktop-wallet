@@ -1,6 +1,6 @@
 import { Button } from "app/components/Button";
 import React from "react";
-import { render } from "testing-library";
+import { render } from "utils/testing-library";
 
 import { Header } from "./Header";
 

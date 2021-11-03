@@ -2,7 +2,6 @@ import { Contracts } from "@payvo/profiles";
 import { waitFor } from "@testing-library/react";
 import nock from "nock";
 import React from "react";
-import { act } from "react-dom/test-utils";
 import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { Notifications } from ".";
@@ -57,9 +56,7 @@ describe("Notifications", () => {
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
-		act(() => {
-			fireEvent.click(screen.getAllByTestId("NotificationItem__action")[1]);
-		});
+		fireEvent.click(screen.getAllByTestId("NotificationItem__action")[1]);
 
 		await waitFor(() => expect(onNotificationAction).toHaveBeenCalled());
 	});
@@ -72,9 +69,7 @@ describe("Notifications", () => {
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
-		act(() => {
-			fireEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
-		});
+		fireEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
 
 		await waitFor(() => expect(onTransactionClick).toHaveBeenCalled());
 

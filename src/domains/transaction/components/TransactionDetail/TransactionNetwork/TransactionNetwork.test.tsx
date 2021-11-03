@@ -1,6 +1,6 @@
 import React from "react";
-import { render } from "testing-library";
 import { availableNetworksMock } from "tests/mocks/networks";
+import { render } from "utils/testing-library";
 
 import { translations as transactionTranslations } from "../../../i18n";
 import { TransactionNetwork } from "./TransactionNetwork";

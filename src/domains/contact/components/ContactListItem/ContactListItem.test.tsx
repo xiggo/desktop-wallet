@@ -1,7 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act } from "react-dom/test-utils";
-import { env, fireEvent, getDefaultProfileId, render } from "testing-library";
+import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 
 import { ContactListItem } from "./ContactListItem";
 
@@ -39,7 +38,7 @@ describe("ContactListItem", () => {
 		const { asFragment, getAllByTestId, getByTestId } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} />
+					<ContactListItem item={contact} useTestNetworks={false} />
 				</tbody>
 			</table>,
 		);
@@ -141,9 +140,7 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
-		});
+		fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
 
 		expect(onAction).toHaveBeenCalled();
 	});
@@ -159,9 +156,7 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
-		});
+		fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
 
 		expect(onAction).toHaveBeenCalled();
 	});
@@ -177,13 +172,8 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		act(() => {
-			fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
-		});
-
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__option--0"));
-		});
+		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
+		fireEvent.click(getByTestId("dropdown__option--0"));
 
 		expect(onAction).toHaveBeenCalled();
 	});
@@ -199,13 +189,8 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		act(() => {
-			fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
-		});
-
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__option--0"));
-		});
+		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
+		fireEvent.click(getByTestId("dropdown__option--0"));
 
 		expect(onAction).toHaveBeenCalled();
 	});
@@ -221,13 +206,8 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		act(() => {
-			fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
-		});
-
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__option--0"));
-		});
+		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
+		fireEvent.click(getByTestId("dropdown__option--0"));
 
 		expect(onAction).not.toHaveBeenCalled();
 	});
@@ -243,13 +223,8 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		act(() => {
-			fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
-		});
-
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__option--0"));
-		});
+		fireEvent.click(getAllByTestId("dropdown__toggle")[0]);
+		fireEvent.click(getByTestId("dropdown__option--0"));
 
 		expect(onAction).not.toHaveBeenCalled();
 	});
@@ -265,9 +240,7 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
-		});
+		fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
 
 		expect(onAction).toHaveBeenCalledWith(
 			{ label: "Option 1", value: "option_1" },
@@ -286,9 +259,7 @@ describe("ContactListItem", () => {
 			</table>,
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
-		});
+		fireEvent.click(getByTestId("ContactListItem__one-option-button-0"));
 
 		expect(onAction).toHaveBeenCalledWith(
 			{ label: "Option 1", value: "option_1" },

@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { ConfirmSendTransaction } from "./ConfirmSendTransaction";
 
@@ -42,9 +42,7 @@ describe("ConfirmSendTransaction", () => {
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
-		});
+		fireEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 
 		expect(onConfirm).toHaveBeenCalled();
 	});
@@ -57,9 +55,7 @@ describe("ConfirmSendTransaction", () => {
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
-		});
+		fireEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
 
 		expect(onCancel).toHaveBeenCalled();
 	});

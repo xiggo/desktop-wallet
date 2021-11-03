@@ -1,7 +1,7 @@
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import React from "react";
-import { render, waitFor } from "testing-library";
+import { render, waitFor } from "utils/testing-library";
 
 import { TransactionVotes } from "./TransactionVotes";
 

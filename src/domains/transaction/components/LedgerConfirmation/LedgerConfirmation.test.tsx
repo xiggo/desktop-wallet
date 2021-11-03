@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "testing-library";
+import { render } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { LedgerConfirmation } from "./LedgerConfirmation";

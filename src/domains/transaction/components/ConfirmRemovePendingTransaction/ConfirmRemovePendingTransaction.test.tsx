@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@payvo/profiles";
 import { translations } from "domains/transaction/i18n";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 
 import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
 
@@ -130,9 +130,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 			),
 		).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
-		});
+		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
 
 		expect(onClose).toHaveBeenCalled();
 	});
@@ -153,9 +151,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 			),
 		).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
-		});
+		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__remove"));
 
 		expect(onRemove).toHaveBeenCalled();
 	});

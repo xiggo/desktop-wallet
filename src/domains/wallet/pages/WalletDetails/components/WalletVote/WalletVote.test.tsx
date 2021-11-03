@@ -4,7 +4,7 @@ import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { act, env, fireEvent, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, syncDelegates, waitFor } from "utils/testing-library";
 
 import { WalletVote } from "./WalletVote";
 
@@ -540,9 +540,7 @@ describe("WalletVote", () => {
 		);
 
 		await findByTestId("WalletVote");
-		act(() => {
-			fireEvent.click(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
-		});
+		fireEvent.click(getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
 
 		expect(onButtonClick).toHaveBeenCalled();
 
@@ -564,9 +562,7 @@ describe("WalletVote", () => {
 		await findByTestId("WalletVote");
 		await waitFor(() => expect(getByTestId("WalletVote")).not.toBeDisabled());
 
-		act(() => {
-			fireEvent.click(getByText(t("COMMON.VOTE")));
-		});
+		fireEvent.click(getByText(t("COMMON.VOTE")));
 
 		expect(onButtonClick).toHaveBeenCalled();
 

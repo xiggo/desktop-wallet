@@ -40,15 +40,12 @@ describe("SignIn", () => {
 	});
 
 	it("should render a modal", async () => {
-		let renderContext: any;
+		const { asFragment, getByTestId } = render(<SignIn isOpen={true} profile={profile} />);
 
-		await act(async () => {
-			renderContext = render(<SignIn isOpen={true} profile={profile} />);
+		await waitFor(() => {
+			expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SIGN_IN.TITLE);
 		});
 
-		const { asFragment, getByTestId } = renderContext;
-
-		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SIGN_IN.TITLE);
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SIGN_IN.DESCRIPTION);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -58,9 +55,7 @@ describe("SignIn", () => {
 
 		const { getByTestId } = render(<SignIn isOpen={true} profile={profile} onCancel={onCancel} />);
 
-		act(() => {
-			fireEvent.click(getByTestId("SignIn__cancel-button"));
-		});
+		fireEvent.click(getByTestId("SignIn__cancel-button"));
 
 		await waitFor(() => {
 			expect(onCancel).toBeCalled();
@@ -72,16 +67,12 @@ describe("SignIn", () => {
 
 		const { findByTestId, getByTestId } = render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
-		await act(async () => {
-			fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: getDefaultPassword() } });
-		});
+		fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: getDefaultPassword() } });
 
 		// wait for formState.isValid to be updated
 		await findByTestId("SignIn__submit-button");
 
-		act(() => {
-			fireEvent.click(getByTestId("SignIn__submit-button"));
-		});
+		fireEvent.click(getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
 			expect(onSuccess).toBeCalled();
@@ -93,16 +84,12 @@ describe("SignIn", () => {
 
 		const { findByTestId, getByTestId } = render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
-		await act(async () => {
-			fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "wrong password" } });
-		});
+		fireEvent.input(getByTestId("SignIn__input--password"), { target: { value: "wrong password" } });
 
 		// wait for formState.isValid to be updated
 		await findByTestId("SignIn__submit-button");
 
-		act(() => {
-			fireEvent.click(getByTestId("SignIn__submit-button"));
-		});
+		fireEvent.click(getByTestId("SignIn__submit-button"));
 
 		// wait for formState.isValid to be updated
 		await findByTestId("SignIn__submit-button");
@@ -114,27 +101,17 @@ describe("SignIn", () => {
 	it("should set an error and disable the input if the password is invalid multiple times", async () => {
 		const onSuccess = jest.fn();
 
-		let renderContext: any;
-
-		await act(async () => {
-			renderContext = render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
-		});
-
-		const { findByTestId, getByTestId } = renderContext;
+		const { findByTestId, getByTestId } = render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
 		for (const index of [1, 2, 3]) {
-			await act(async () => {
-				fireEvent.input(getByTestId("SignIn__input--password"), {
-					target: { value: `wrong password ${index}` },
-				});
+			fireEvent.input(getByTestId("SignIn__input--password"), {
+				target: { value: `wrong password ${index}` },
 			});
 
 			// wait for form to be updated
 			await findByTestId("SignIn__submit-button");
 
-			act(() => {
-				fireEvent.click(getByTestId("SignIn__submit-button"));
-			});
+			fireEvent.click(getByTestId("SignIn__submit-button"));
 
 			// wait for form to be updated
 			await findByTestId("SignIn__submit-button");

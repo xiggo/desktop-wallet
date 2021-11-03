@@ -7,7 +7,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import walletFixture from "tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
 import coldWalletFixture from "tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { AddParticipant } from "./AddParticipant";
 
@@ -215,9 +215,7 @@ describe("Add Participant", () => {
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(walletFixture.data.address),
 		);
 
-		await act(async () => {
-			fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
-		});
+		fireEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2));
 

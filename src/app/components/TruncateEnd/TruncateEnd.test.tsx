@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, render } from "testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { TruncateEnd } from "./TruncateEnd";
 
@@ -25,9 +25,7 @@ describe("TruncateEnd", () => {
 	it("should show tooltip", () => {
 		const { getByTestId, baseElement } = render(<TruncateEnd text="ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT" />);
 
-		act(() => {
-			fireEvent.mouseEnter(getByTestId("TruncateEnd"));
-		});
+		fireEvent.mouseEnter(getByTestId("TruncateEnd"));
 
 		expect(baseElement).toHaveTextContent("ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT");
 	});

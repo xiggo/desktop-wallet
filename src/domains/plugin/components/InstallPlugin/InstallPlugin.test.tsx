@@ -1,5 +1,4 @@
 import { Contracts } from "@payvo/profiles";
-import { act } from "@testing-library/react-hooks";
 import { toasts } from "app/services";
 import { translations as pluginTranslations } from "domains/plugin/i18n";
 import { ipcRenderer } from "electron";
@@ -255,13 +254,11 @@ describe("InstallPlugin", () => {
 			</PluginManagerProvider>,
 		);
 
-		await act(async () => {
-			fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
+		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
-			await screen.findByTestId("InstallPlugin__step--second");
+		await screen.findByTestId("InstallPlugin__step--second");
 
-			await screen.findByTestId("InstallPlugin__step--third");
-		});
+		await screen.findByTestId("InstallPlugin__step--third");
 
 		fireEvent.click(screen.getByTestId("InstallPlugin__enable-button"));
 

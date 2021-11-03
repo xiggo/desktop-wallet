@@ -146,9 +146,7 @@ describe("SendVote", () => {
 		// Back to select a delegate page
 		await waitFor(() => expect(getByTestId("StepNavigation__back-button")).not.toBeDisabled());
 
-		act(() => {
-			fireEvent.click(getByTestId("StepNavigation__back-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__back-button"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -192,9 +190,7 @@ describe("SendVote", () => {
 		// Back to select a delegate page
 		await waitFor(() => expect(getByTestId("StepNavigation__back-button")).not.toBeDisabled());
 
-		act(() => {
-			fireEvent.click(getByTestId("StepNavigation__back-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__back-button"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -247,9 +243,7 @@ describe("SendVote", () => {
 		// Back to select a delegate page
 		await waitFor(() => expect(getByTestId("StepNavigation__back-button")).not.toBeDisabled());
 
-		act(() => {
-			fireEvent.click(getByTestId("StepNavigation__back-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__back-button"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -355,17 +349,19 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
-		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__send-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		act(() => jest.advanceTimersByTime(1000));
+		act(() => {
+			jest.advanceTimersByTime(1000);
+		});
 
 		setTimeout(() => {
 			votesMock.mockRestore();
 		}, 3000);
 
-		act(() => jest.runOnlyPendingTimers());
+		act(() => {
+			jest.runOnlyPendingTimers();
+		});
 
 		await findByTestId("TransactionSuccessful");
 		await waitFor(() => expect(setInterval).toHaveBeenCalledTimes(1));
@@ -373,9 +369,7 @@ describe("SendVote", () => {
 		const historySpy = jest.spyOn(history, "push");
 
 		// Go back to wallet
-		act(() => {
-			fireEvent.click(getByTestId("StepNavigation__back-to-wallet-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -493,17 +487,19 @@ describe("SendVote", () => {
 
 		const splitVotingMethodMock = jest.spyOn(wallet.network(), "votingMethod").mockReturnValue("split");
 
-		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__send-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		act(() => jest.advanceTimersByTime(1000));
+		act(() => {
+			jest.advanceTimersByTime(1000);
+		});
 
 		setTimeout(() => {
 			votesMock.mockRestore();
 		}, 3000);
 
-		act(() => jest.runOnlyPendingTimers());
+		act(() => {
+			jest.runOnlyPendingTimers();
+		});
 
 		await findByTestId("TransactionSuccessful");
 		await waitFor(() => expect(setInterval).toHaveBeenCalledTimes(2));
@@ -511,9 +507,7 @@ describe("SendVote", () => {
 		const historySpy = jest.spyOn(history, "push");
 
 		// Go back to wallet
-		act(() => {
-			fireEvent.click(getByTestId("StepNavigation__back-to-wallet-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -578,9 +572,7 @@ describe("SendVote", () => {
 		// Fee
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
-		});
+		fireEvent.click(within(screen.getByTestId("InputFee")).getAllByRole("radio")[2]);
 
 		expect(screen.getAllByRole("radio")[2]).toBeChecked();
 
@@ -621,11 +613,11 @@ describe("SendVote", () => {
 		userEvent.keyboard("{enter}");
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
-		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__send-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		act(() => jest.advanceTimersByTime(1000));
+		act(() => {
+			jest.advanceTimersByTime(1000);
+		});
 
 		await findByTestId("TransactionSuccessful");
 		await waitFor(() => expect(container).toMatchSnapshot());
@@ -671,9 +663,7 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
 
-		act(() => {
-			fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		});
+		fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		fireEvent.input(getByTestId("InputCurrency"), { target: { value: "0.02" } });
 
@@ -733,9 +723,7 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username));
 
-		act(() => {
-			fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		});
+		fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		fireEvent.input(getByTestId("InputCurrency"), { target: { value: "0.02" } });
 
@@ -838,11 +826,11 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
-		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__send-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		act(() => jest.advanceTimersByTime(1000));
+		act(() => {
+			jest.advanceTimersByTime(1000);
+		});
 
 		await findByTestId("TransactionSuccessful");
 		await waitFor(() => expect(container).toMatchSnapshot());
@@ -889,9 +877,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
 
 		// Fee
-		act(() => {
-			fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		});
+		fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(getByTestId("InputCurrency"), { target: { value: "10" } });
 
 		expect(getByTestId("InputCurrency")).toHaveValue("10");
@@ -949,9 +935,7 @@ describe("SendVote", () => {
 		await waitFor(() => expect(getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username));
 
 		// Fee
-		act(() => {
-			fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
-		});
+		fireEvent.click(getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 		fireEvent.change(getByTestId("InputCurrency"), { target: { value: "10" } });
 
 		expect(getByTestId("InputCurrency")).toHaveValue("10");
@@ -1171,11 +1155,11 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
-		act(() => jest.advanceTimersByTime(1000));
+		act(() => {
+			jest.advanceTimersByTime(1000);
+		});
 
 		await findByTestId("TransactionSuccessful");
 
@@ -1290,11 +1274,11 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__continue-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__continue-button"));
 
-		act(() => jest.advanceTimersByTime(1000));
+		act(() => {
+			jest.advanceTimersByTime(1000);
+		});
 
 		await findByTestId("TransactionSuccessful");
 
@@ -1378,19 +1362,17 @@ describe("SendVote", () => {
 		const transactionMock = createVoteTransactionMock(wallet);
 
 		const passwordInput = getByTestId("AuthenticationStep__encryption-password");
-		act(() => {
-			fireEvent.input(passwordInput, { target: { value: "password" } });
-		});
+		fireEvent.input(passwordInput, { target: { value: "password" } });
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
 
 		await waitFor(() => expect(getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
-		await act(async () => {
-			fireEvent.click(getByTestId("StepNavigation__send-button"));
-		});
+		fireEvent.click(getByTestId("StepNavigation__send-button"));
 
-		act(() => jest.advanceTimersByTime(1000));
+		act(() => {
+			jest.advanceTimersByTime(1000);
+		});
 
 		await findByTestId("TransactionSuccessful");
 

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { act, fireEvent, render, screen } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { TruncateMiddleDynamic } from "./TruncateMiddleDynamic";
 
@@ -39,9 +39,7 @@ describe("TruncateMiddleDynamic", () => {
 
 		rerender(<Component value="Lorem ipsum dolor sit ame" />);
 
-		act(() => {
-			fireEvent.mouseEnter(screen.getByText("Lorem ipsu…or sit ame"));
-		});
+		fireEvent.mouseEnter(screen.getByText("Lorem ipsu…or sit ame"));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 

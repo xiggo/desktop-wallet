@@ -1,11 +1,11 @@
-import { act } from "@testing-library/react";
-import { renderHook } from "@testing-library/react-hooks";
+import { act, renderHook } from "@testing-library/react-hooks";
 
 import { useDebounce } from "./debounce";
 
 describe("useDebounce", () => {
 	it("should render useDebounce", () => {
 		jest.useFakeTimers();
+
 		const { result } = renderHook(() => useDebounce("query", 2000));
 
 		// loading

@@ -169,21 +169,15 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		act(() => {
-			fireEvent.input(messageInput, { target: { value: "Hello World" } });
-		});
+		fireEvent.input(messageInput, { target: { value: "Hello World" } });
 
 		const mnemonicInput = screen.getByTestId("SignMessage__mnemonic-input");
 
-		act(() => {
-			fireEvent.input(mnemonicInput, { target: { value: mnemonic } });
-		});
+		fireEvent.input(mnemonicInput, { target: { value: mnemonic } });
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
-		});
+		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
@@ -193,9 +187,7 @@ describe("SignMessage", () => {
 		// @ts-ignore
 		navigator.clipboard = { writeText: writeTextMock };
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SignMessage__copy-button"));
-		});
+		fireEvent.click(screen.getByTestId("SignMessage__copy-button"));
 
 		await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(JSON.stringify(signedMessage)));
 
@@ -222,27 +214,19 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		act(() => {
-			fireEvent.input(messageInput, { target: { value: "Hello World" } });
-		});
+		fireEvent.input(messageInput, { target: { value: "Hello World" } });
 
 		const mnemonicInput = screen.getByTestId("SignMessage__mnemonic-input");
 
-		act(() => {
-			fireEvent.input(mnemonicInput, { target: { value: mnemonic } });
-		});
+		fireEvent.input(mnemonicInput, { target: { value: mnemonic } });
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
-		});
+		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SignMessage__back-button"));
-		});
+		fireEvent.click(screen.getByTestId("SignMessage__back-button"));
 
 		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
 	});
@@ -280,21 +264,15 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		act(() => {
-			fireEvent.input(messageInput, { target: { value: "Hello World" } });
-		});
+		fireEvent.input(messageInput, { target: { value: "Hello World" } });
 
 		const passwordInput = screen.getByTestId("SignMessage__encryption-password");
 
-		act(() => {
-			fireEvent.input(passwordInput, { target: { value: "password" } });
-		});
+		fireEvent.input(passwordInput, { target: { value: "password" } });
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
-		});
+		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
@@ -342,21 +320,15 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		act(() => {
-			fireEvent.input(messageInput, { target: { value: "Hello World" } });
-		});
+		fireEvent.input(messageInput, { target: { value: "Hello World" } });
 
 		const secretInput = screen.getByTestId("SignMessage__secret-input");
 
-		act(() => {
-			fireEvent.input(secretInput, { target: { value: "secret" } });
-		});
+		fireEvent.input(secretInput, { target: { value: "secret" } });
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
-		});
+		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
 
@@ -404,15 +376,11 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		act(() => {
-			fireEvent.input(messageInput, { target: { value: "Hello World" } });
-		});
+		fireEvent.input(messageInput, { target: { value: "Hello World" } });
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
-		});
+		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByTestId("LedgerWaitingDevice-loading_message");
 
@@ -473,15 +441,11 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		act(() => {
-			fireEvent.input(messageInput, { target: { value: "Hello World" } });
-		});
+		fireEvent.input(messageInput, { target: { value: "Hello World" } });
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
-		});
+		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByTestId("LedgerWaitingDevice-loading_message");
 
@@ -538,15 +502,11 @@ describe("SignMessage", () => {
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
-		act(() => {
-			fireEvent.input(messageInput, { target: { value: "Hello World" } });
-		});
+		fireEvent.input(messageInput, { target: { value: "Hello World" } });
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
-		});
+		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await waitFor(
 			() => {

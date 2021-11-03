@@ -6,7 +6,6 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import {
-	act,
 	env,
 	fireEvent,
 	getDefaultProfileId,
@@ -111,7 +110,7 @@ describe("Transactions", () => {
 	it("should render with custom title", async () => {
 		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<Transactions profile={profile} wallets={profile.wallets().values()} title={<h1>Test</h1>} />
+				<Transactions profile={profile} wallets={profile.wallets().values()} title={<span>Test</span>} />
 			</Route>,
 			{
 				history,
@@ -159,15 +158,11 @@ describe("Transactions", () => {
 
 		expect(getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByRole("button", { name: /Type/ }));
-		});
+		fireEvent.click(getByRole("button", { name: /Type/ }));
 
 		await findByTestId("dropdown__option--core-0");
 
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__option--core-0"));
-		});
+		fireEvent.click(getByTestId("dropdown__option--core-0"));
 
 		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4));
 	});
@@ -195,15 +190,11 @@ describe("Transactions", () => {
 
 		expect(getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByRole("button", { name: /Type/ }));
-		});
+		fireEvent.click(getByRole("button", { name: /Type/ }));
 
 		await findByTestId("dropdown__option--core-9");
 
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__option--core-9"));
-		});
+		fireEvent.click(getByTestId("dropdown__option--core-9"));
 
 		await findByTestId("EmptyBlock");
 	});
@@ -235,15 +226,11 @@ describe("Transactions", () => {
 
 		expect(getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByRole("button", { name: /Type/ }));
-		});
+		fireEvent.click(getByRole("button", { name: /Type/ }));
 
 		await findByTestId("dropdown__option--magistrate-0");
 
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__option--magistrate-0"));
-		});
+		fireEvent.click(getByTestId("dropdown__option--magistrate-0"));
 
 		await findByTestId("EmptyBlock");
 		transactionsAggregateMock.mockRestore();
@@ -268,17 +255,13 @@ describe("Transactions", () => {
 			{ timeout: 4000 },
 		);
 
-		act(() => {
-			fireEvent.click(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
-		});
+		fireEvent.click(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => {
 			expect(getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
-		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(getByTestId("modal__close-btn"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -304,16 +287,15 @@ describe("Transactions", () => {
 			expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
 		});
 
-		act(() => {
-			fireEvent.click(getByTestId("transactions__fetch-more-button"));
-		});
+		fireEvent.click(getByTestId("transactions__fetch-more-button"));
 
 		expect(getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.LOADING);
 
 		await waitFor(() => {
 			expect(getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.VIEW_MORE);
-			expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8);
 		});
+
+		expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8);
 
 		process.env.REACT_APP_IS_UNIT = undefined;
 
@@ -336,6 +318,9 @@ describe("Transactions", () => {
 
 		await waitFor(() => {
 			expect(queryByTestId("transactions__fetch-more-button")).not.toBeInTheDocument();
+		});
+
+		await waitFor(() => {
 			expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
 		});
 
@@ -417,9 +402,7 @@ describe("Transactions", () => {
 
 		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4));
 
-		act(() => {
-			fireEvent.click(getByTestId("tabs__tab-button-sent"));
-		});
+		fireEvent.click(getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -438,9 +421,7 @@ describe("Transactions", () => {
 
 		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8));
 
-		act(() => {
-			fireEvent.click(getByTestId("tabs__tab-button-sent"));
-		});
+		fireEvent.click(getByTestId("tabs__tab-button-sent"));
 
 		await waitFor(() => expect(within(getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8));
 	});

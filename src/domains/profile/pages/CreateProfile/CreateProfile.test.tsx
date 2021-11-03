@@ -5,9 +5,9 @@ import electron from "electron";
 import { getCurrency } from "locale-currency";
 import os from "os";
 import React from "react";
-import { act, env, fireEvent, render, screen, waitFor } from "testing-library";
 import { StubStorage } from "tests/mocks";
 import * as utils from "utils/electron-utils";
+import { act, env, fireEvent, render, screen, waitFor } from "utils/testing-library";
 
 import { CreateProfile } from "./CreateProfile";
 

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
-import userEvent from "@testing-library/user-event";
 import React from "react";
 import { act, fireEvent, render, screen, waitFor } from "utils/testing-library";
 
@@ -34,7 +32,7 @@ describe("HeaderSearchBar", () => {
 		const longText = text.repeat(100);
 
 		fireEvent.change(input, { target: { value: longText } });
-		userEvent.type(input, text + "!");
+		fireEvent.change(input, text + "!");
 
 		expect(input.value).toBe(text.repeat(100));
 		expect(input.value.length).toBe(1000);
@@ -48,12 +46,10 @@ describe("HeaderSearchBar", () => {
 
 		const input = screen.getByTestId("Input") as HTMLInputElement;
 
-		act(() => {
-			fireEvent.change(input, {
-				target: {
-					value: "test",
-				},
-			});
+		fireEvent.change(input, {
+			target: {
+				value: "test",
+			},
 		});
 
 		expect(input.value).toBe("test");
@@ -94,9 +90,7 @@ describe("HeaderSearchBar", () => {
 
 		expect(screen.getByTestId("Input")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.mouseDown(outsideElement);
-		});
+		fireEvent.mouseDown(outsideElement);
 
 		expect(() => screen.getByTestId("Input")).toThrow(/Unable to find an element by/);
 	});
@@ -109,25 +103,21 @@ describe("HeaderSearchBar", () => {
 
 		const input = screen.getByTestId("Input") as HTMLInputElement;
 
-		act(() => {
-			fireEvent.change(input, {
-				target: {
-					value: "test",
-				},
-			});
+		fireEvent.change(input, {
+			target: {
+				value: "test",
+			},
 		});
 
 		expect(input.value).toBe("test");
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("header-search-bar__reset"));
-		});
+		fireEvent.click(screen.getByTestId("header-search-bar__reset"));
 
 		expect(input.value).not.toBe("test");
 		expect(onReset).toHaveBeenCalled();
 	});
 
-	it("should call onSearch", async () => {
+	it("should call onSearch", () => {
 		jest.useFakeTimers();
 
 		const onSearch = jest.fn();
@@ -136,22 +126,20 @@ describe("HeaderSearchBar", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		act(() => {
-			fireEvent.change(screen.getByTestId("Input"), {
-				target: {
-					value: "test",
-				},
-			});
+		fireEvent.change(screen.getByTestId("Input"), {
+			target: {
+				value: "test",
+			},
 		});
 
-		await act(async () => {
+		act(() => {
 			jest.runAllTimers();
 		});
 
 		expect(onSearch).toHaveBeenCalled();
 	});
 
-	it("should set custom debounce timeout form props", async () => {
+	it("should set custom debounce timeout form props", () => {
 		jest.useFakeTimers();
 
 		const onSearch = jest.fn();
@@ -160,15 +148,13 @@ describe("HeaderSearchBar", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		act(() => {
-			fireEvent.change(screen.getByTestId("Input"), {
-				target: {
-					value: "test",
-				},
-			});
+		fireEvent.change(screen.getByTestId("Input"), {
+			target: {
+				value: "test",
+			},
 		});
 
-		await act(async () => {
+		act(() => {
 			jest.runAllTimers();
 		});
 

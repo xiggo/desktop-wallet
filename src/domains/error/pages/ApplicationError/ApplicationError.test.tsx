@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, render } from "utils/testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { ApplicationError } from "./ApplicationError";
@@ -15,9 +15,7 @@ describe("ApplicationError", () => {
 		expect(getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.TITLE);
 		expect(getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.DESCRIPTION);
 
-		act(() => {
-			fireEvent.click(getByTestId("ApplicationError__button--reload"));
-		});
+		fireEvent.click(getByTestId("ApplicationError__button--reload"));
 
 		expect(onResetErrorBoundary).toHaveBeenCalled();
 		expect(asFragment()).toMatchSnapshot();

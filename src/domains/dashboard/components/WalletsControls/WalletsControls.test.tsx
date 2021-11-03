@@ -1,6 +1,5 @@
 import React from "react";
-import { act } from "react-dom/test-utils";
-import { fireEvent, render } from "testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { WalletsControls } from "./WalletsControls";
 
@@ -33,9 +32,7 @@ describe("WalletsControls", () => {
 		);
 		const toggle = getByTestId("LayoutControls__grid--icon");
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(function_).toBeCalled();
 	});
@@ -45,9 +42,7 @@ describe("WalletsControls", () => {
 		const { getByTestId } = render(<WalletsControls filterProperties={filterProperties as any} />);
 		const toggle = getByTestId("LayoutControls__grid--icon");
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(function_).not.toBeCalled();
 	});
@@ -62,9 +57,7 @@ describe("WalletsControls", () => {
 		);
 		const toggle = getByTestId("LayoutControls__grid--icon");
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(function_).not.toBeCalled();
 	});
@@ -79,9 +72,7 @@ describe("WalletsControls", () => {
 		);
 		const toggle = getByTestId("LayoutControls__list--icon");
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(function_).toBeCalled();
 	});
@@ -91,9 +82,7 @@ describe("WalletsControls", () => {
 		const { getByTestId } = render(<WalletsControls filterProperties={filterProperties as any} />);
 		const toggle = getByTestId("LayoutControls__list--icon");
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(function_).not.toBeCalled();
 	});
@@ -103,9 +92,7 @@ describe("WalletsControls", () => {
 		const { getByTestId } = render(<WalletsControls viewType="list" filterProperties={filterProperties as any} />);
 		const toggle = getByTestId("LayoutControls__list--icon");
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(function_).not.toBeCalled();
 	});

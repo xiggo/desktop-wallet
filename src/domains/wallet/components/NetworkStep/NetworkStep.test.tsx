@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
@@ -52,9 +52,7 @@ describe("SelectNetworkStep", () => {
 
 		expect(selectNetworkInput).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.focus(selectNetworkInput);
-		});
+		fireEvent.focus(selectNetworkInput);
 
 		expect(queryByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 		expect(queryByTestId("NetworkIcon-ARK-ark.devnet")).toBeNull();

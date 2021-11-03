@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/profiles";
-import { act, fireEvent, screen, waitFor } from "@testing-library/react";
+import { fireEvent, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
@@ -40,14 +40,13 @@ describe("UpdateWalletName", () => {
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_NAME_WALLET.DESCRIPTION);
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(commonTranslations.NAME);
 
-		const input = screen.getByTestId("UpdateWalletName__input");
 		const name = "Sample label";
 
-		await act(async () => {
-			fireEvent.input(input, { target: { value: name } });
-		});
+		fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: name } });
 
-		expect(input).toHaveValue(name);
+		await waitFor(() => {
+			expect(screen.getByTestId("UpdateWalletName__input")).toHaveValue(name);
+		});
 
 		expect(screen.getByTestId("UpdateWalletName__submit")).not.toBeDisabled();
 
@@ -67,13 +66,13 @@ describe("UpdateWalletName", () => {
 		const nameVariations = ["ARK Wallet 2", "ark wallet 2", " ARK Wallet 2", "ARK Wallet 2 "];
 
 		for (const name of nameVariations) {
-			await act(async () => {
-				fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: name } });
+			fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: name } });
+
+			await waitFor(() => {
+				expect(screen.getByTestId("Input__error")).toBeVisible();
 			});
 
-			expect(screen.getByTestId("Input__error")).toBeVisible();
 			expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
-
 			expect(asFragment()).toMatchSnapshot();
 		}
 	});
@@ -83,9 +82,7 @@ describe("UpdateWalletName", () => {
 			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={jest.fn()} onCancel={jest.fn()} />,
 		);
 
-		await act(async () => {
-			fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: "      " } });
-		});
+		fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: "      " } });
 
 		// wait for formState.isValid to be updated
 		await screen.findByTestId("UpdateWalletName__submit");
@@ -99,10 +96,8 @@ describe("UpdateWalletName", () => {
 			<UpdateWalletName profile={profile} wallet={wallet} onAfterSave={jest.fn()} onCancel={jest.fn()} />,
 		);
 
-		await act(async () => {
-			fireEvent.input(screen.getByTestId("UpdateWalletName__input"), {
-				target: { value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fugit distinctio" },
-			});
+		fireEvent.input(screen.getByTestId("UpdateWalletName__input"), {
+			target: { value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fugit distinctio" },
 		});
 
 		// wait for formState.isValid to be updated

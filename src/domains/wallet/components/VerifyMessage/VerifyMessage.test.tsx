@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "testing-library";
-import { MNEMONICS } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
 
 import { VerifyMessage } from "./VerifyMessage";
 
@@ -59,15 +57,11 @@ describe("VerifyMessage", () => {
 
 		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(screen.getByTestId("VerifyMessage__json")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
 	});
@@ -79,9 +73,7 @@ describe("VerifyMessage", () => {
 
 		const cancelButton = screen.getByTestId("VerifyMessage__cancel");
 
-		act(() => {
-			fireEvent.click(cancelButton);
-		});
+		fireEvent.click(cancelButton);
 
 		expect(onCancel).toHaveBeenCalled();
 	});
@@ -93,9 +85,7 @@ describe("VerifyMessage", () => {
 
 		const closeButton = screen.getByTestId("modal__close-btn");
 
-		act(() => {
-			fireEvent.click(closeButton);
-		});
+		fireEvent.click(closeButton);
 
 		expect(onClose).toHaveBeenCalled();
 	});
@@ -109,17 +99,9 @@ describe("VerifyMessage", () => {
 		const messageInput = screen.getByTestId("VerifyMessage__manual-message");
 		const signatureInput = screen.getByTestId("VerifyMessage__manual-signature");
 
-		act(() => {
-			fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
-		});
-
-		act(() => {
-			fireEvent.input(messageInput, { target: { value: signedMessage.message } });
-		});
-
-		act(() => {
-			fireEvent.input(signatureInput, { target: { value: signedMessage.signature } });
-		});
+		fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
+		fireEvent.input(messageInput, { target: { value: signedMessage.message } });
+		fireEvent.input(signatureInput, { target: { value: signedMessage.signature } });
 
 		const submitButton = screen.getByTestId("VerifyMessage__submit");
 
@@ -127,9 +109,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).not.toBeDisabled();
 		});
 
-		act(() => {
-			fireEvent.click(submitButton);
-		});
+		fireEvent.click(submitButton);
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(true);
@@ -147,15 +127,11 @@ describe("VerifyMessage", () => {
 
 		const toggle = screen.getByRole("checkbox");
 
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		const jsonStringInput = screen.getByTestId("VerifyMessage__json-jsonString");
 
-		act(() => {
-			fireEvent.input(jsonStringInput, { target: { value: JSON.stringify(signedMessage) } });
-		});
+		fireEvent.input(jsonStringInput, { target: { value: JSON.stringify(signedMessage) } });
 
 		expect(jsonStringInput).toHaveValue(JSON.stringify(signedMessage));
 
@@ -165,9 +141,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).not.toBeDisabled();
 		});
 
-		act(() => {
-			fireEvent.click(submitButton);
-		});
+		fireEvent.click(submitButton);
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(true);
@@ -180,34 +154,23 @@ describe("VerifyMessage", () => {
 
 	it("should fail to verify with invalid signature", async () => {
 		const onSubmit = jest.fn();
+		const onClose = jest.fn();
 
-		await renderComponent({ onSubmit });
+		await renderComponent({ onClose, onSubmit });
 
 		const signatoryInput = screen.getByTestId("VerifyMessage__manual-signatory");
 		const messageInput = screen.getByTestId("VerifyMessage__manual-message");
 		const signatureInput = screen.getByTestId("VerifyMessage__manual-signature");
 
-		act(() => {
-			fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
-		});
-
-		act(() => {
-			fireEvent.input(messageInput, { target: { value: signedMessage.message } });
-		});
-
-		act(() => {
-			fireEvent.input(signatureInput, { target: { value: "fake-signature" } });
-		});
-
-		const submitButton = screen.getByTestId("VerifyMessage__submit");
+		fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
+		fireEvent.input(messageInput, { target: { value: signedMessage.message } });
+		fireEvent.input(signatureInput, { target: { value: "fake-signature" } });
 
 		await waitFor(() => {
-			expect(submitButton).not.toBeDisabled();
+			expect(screen.getByTestId("VerifyMessage__submit")).not.toBeDisabled();
 		});
 
-		act(() => {
-			fireEvent.click(submitButton);
-		});
+		fireEvent.click(screen.getByTestId("VerifyMessage__submit"));
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(false);
@@ -217,15 +180,18 @@ describe("VerifyMessage", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent("error-banner-dark-green.svg");
 		});
 
-		await act(async () => {
-			fireEvent.click(screen.getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
+
+		await waitFor(() => {
+			expect(onClose).toHaveBeenCalled();
 		});
 	});
 
 	it("should fail to verify using invalid data", async () => {
 		const onSubmit = jest.fn();
+		const onClose = jest.fn();
 
-		await renderComponent({ onSubmit });
+		await renderComponent({ onClose, onSubmit });
 
 		const signatoryInput = screen.getByTestId("VerifyMessage__manual-signatory");
 		const messageInput = screen.getByTestId("VerifyMessage__manual-message");
@@ -233,17 +199,9 @@ describe("VerifyMessage", () => {
 
 		const messageSpy = jest.spyOn(wallet.message(), "verify").mockRejectedValue(new Error());
 
-		act(() => {
-			fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
-		});
-
-		act(() => {
-			fireEvent.input(messageInput, { target: { value: signedMessage.message } });
-		});
-
-		act(() => {
-			fireEvent.input(signatureInput, { target: { value: "fake-signature" } });
-		});
+		fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
+		fireEvent.input(messageInput, { target: { value: signedMessage.message } });
+		fireEvent.input(signatureInput, { target: { value: "fake-signature" } });
 
 		const submitButton = screen.getByTestId("VerifyMessage__submit");
 
@@ -251,9 +209,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).not.toBeDisabled();
 		});
 
-		act(() => {
-			fireEvent.click(submitButton);
-		});
+		fireEvent.click(submitButton);
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(false);
@@ -263,8 +219,10 @@ describe("VerifyMessage", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent("error-banner-dark-green.svg");
 		});
 
-		await act(async () => {
-			fireEvent.click(screen.getByTestId("modal__close-btn"));
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
+
+		await waitFor(() => {
+			expect(onClose).toHaveBeenCalled();
 		});
 
 		messageSpy.mockRestore();

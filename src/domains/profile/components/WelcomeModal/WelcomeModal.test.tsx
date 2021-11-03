@@ -3,8 +3,7 @@ import { ConfigurationProvider } from "app/contexts";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { translations } from "domains/profile/i18n";
 import React from "react";
-import { fireEvent, render } from "testing-library";
-import { env, getDefaultProfileId } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 
 import { WelcomeModal } from "./WelcomeModal";
 

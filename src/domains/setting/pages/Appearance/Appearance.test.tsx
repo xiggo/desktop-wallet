@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { camelCase } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
-import { screen, within } from "@testing-library/react";
+import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { toasts } from "app/services";
 import { translations } from "domains/setting/i18n";
 import { createMemoryHistory, MemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, getDefaultProfileId, render } from "utils/testing-library";
+import { env, getDefaultProfileId, render } from "utils/testing-library";
 
 import { AppearanceSettings } from "./Appearance";
 
@@ -55,9 +55,7 @@ describe("Appearance Settings", () => {
 
 		expect(screen.getByTestId("AppearanceFooterButtons__cancel")).toBeInTheDocument();
 
-		await act(async () => {
-			userEvent.click(screen.getByTestId("AppearanceFooterButtons__cancel"));
-		});
+		userEvent.click(screen.getByTestId("AppearanceFooterButtons__cancel"));
 
 		expect(historyGoSpy).toHaveBeenCalledTimes(1);
 		expect(historyGoSpy).toHaveBeenCalledWith(-1);
@@ -73,20 +71,22 @@ describe("Appearance Settings", () => {
 		expect(blueRadioButton).not.toBeChecked();
 		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).not.toBe("blue");
 
-		await act(async () => {
-			userEvent.click(blueRadioButton);
+		userEvent.click(blueRadioButton);
+
+		await waitFor(() => {
+			expect(blueRadioButton).toBeChecked();
 		});
 
-		expect(blueRadioButton).toBeChecked();
 		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).not.toBe("blue");
 
 		expect(screen.getByTestId("AppearanceFooterButtons__save")).not.toBeDisabled();
 
-		await act(async () => {
-			userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+
+		await waitFor(() => {
+			expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).toBe("blue");
 		});
 
-		expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).toBe("blue");
 		expect(toastSuccess).toHaveBeenCalled();
 	});
 
@@ -107,20 +107,22 @@ describe("Appearance Settings", () => {
 
 		expect(profile.settings().get(Contracts.ProfileSetting.Theme)).not.toBe("dark");
 
-		await act(async () => {
-			userEvent.click(darkButton);
+		userEvent.click(darkButton);
+
+		await waitFor(() => {
+			expect(darkButton).toBeChecked();
 		});
 
-		expect(darkButton).toBeChecked();
 		expect(profile.settings().get(Contracts.ProfileSetting.Theme)).not.toBe("dark");
 
 		expect(screen.getByTestId("AppearanceFooterButtons__save")).not.toBeDisabled();
 
-		await act(async () => {
-			userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+
+		await waitFor(() => {
+			expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("dark");
 		});
 
-		expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("dark");
 		expect(toastSuccess).toHaveBeenCalled();
 	});
 
@@ -140,20 +142,22 @@ describe("Appearance Settings", () => {
 		expect(screen.getByTestId(toggleTestId)).toBeChecked();
 		expect(profile.settings().get(key)).toBe(true);
 
-		await act(async () => {
-			userEvent.click(screen.getByTestId(toggleTestId));
+		userEvent.click(screen.getByTestId(toggleTestId));
+
+		await waitFor(() => {
+			expect(screen.getByTestId(toggleTestId)).not.toBeChecked();
 		});
 
-		expect(screen.getByTestId(toggleTestId)).not.toBeChecked();
 		expect(profile.settings().get(key)).toBe(true);
 
 		expect(screen.getByTestId("AppearanceFooterButtons__save")).not.toBeDisabled();
 
-		await act(async () => {
-			userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+		userEvent.click(screen.getByTestId("AppearanceFooterButtons__save"));
+
+		await waitFor(() => {
+			expect(profile.settings().get(key)).toBe(false);
 		});
 
-		expect(profile.settings().get(key)).toBe(false);
 		expect(toastSuccess).toHaveBeenCalled();
 	});
 });

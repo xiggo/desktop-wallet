@@ -333,30 +333,30 @@ describe("useProfileSynchronizer", () => {
 		let configuration: any;
 		let profileErroredNetworks: string[] = [];
 
-		await act(async () => {
-			const Component = () => {
-				configuration = useConfiguration();
-				useProfileSynchronizer({
-					onProfileSyncError: (erroredNetworks: string[], retrySync) => {
-						profileErroredNetworks = erroredNetworks;
-						retrySync();
-					},
-				});
-				return <div data-testid="ProfileSynced">test</div>;
-			};
+		const Component = () => {
+			configuration = useConfiguration();
 
-			const { findByTestId } = render(
-				<Route path="/profiles/:profileId/dashboard">
-					<Component />
-				</Route>,
-				{
-					history,
-					routes: [dashboardURL],
+			useProfileSynchronizer({
+				onProfileSyncError: (erroredNetworks: string[], retrySync) => {
+					profileErroredNetworks = erroredNetworks;
+					retrySync();
 				},
-			);
+			});
 
-			await findByTestId("ProfileSynced");
-		});
+			return <div data-testid="ProfileSynced">test</div>;
+		};
+
+		const { findByTestId } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Component />
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+			},
+		);
+
+		await findByTestId("ProfileSynced");
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 		const mockWalletSyncStatus = jest
@@ -413,20 +413,19 @@ describe("useProfileSynchronizer", () => {
 
 	it("should sync profile", async () => {
 		history.push(dashboardURL);
-		await act(async () => {
-			const { findByTestId } = render(
-				<Route path="/profiles/:profileId/dashboard">
-					<div data-testid="ProfileSynced">test</div>
-				</Route>,
-				{
-					history,
-					routes: [dashboardURL],
-					withProfileSynchronizer: true,
-				},
-			);
 
-			await findByTestId("ProfileSynced");
-		});
+		const { findByTestId } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<div data-testid="ProfileSynced">test</div>
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+				withProfileSynchronizer: true,
+			},
+		);
+
+		await findByTestId("ProfileSynced");
 	});
 });
 
@@ -663,20 +662,18 @@ describe("useProfileRestore", () => {
 			throw new Error("sync test");
 		});
 
-		await act(async () => {
-			render(
-				<Route path="/profiles/:profileId/dashboard">
-					<div data-testid="ProfileSynced">test</div>
-				</Route>,
-				{
-					history,
-					routes: [dashboardURL],
-					withProfileSynchronizer: true,
-				},
-			);
+		render(
+			<Route path="/profiles/:profileId/dashboard">
+				<div data-testid="ProfileSynced">test</div>
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+				withProfileSynchronizer: true,
+			},
+		);
 
-			await waitFor(() => expect(profileSyncMock).toHaveBeenCalled());
-		});
+		await waitFor(() => expect(profileSyncMock).toHaveBeenCalled());
 
 		profileSyncMock.mockRestore();
 	});

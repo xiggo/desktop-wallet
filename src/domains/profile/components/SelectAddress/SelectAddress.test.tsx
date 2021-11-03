@@ -1,7 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "testing-library";
-import { MNEMONICS } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, waitFor } from "utils/testing-library";
 
 import { SelectAddress } from "./SelectAddress";
 
@@ -67,15 +66,11 @@ describe("SelectAddress", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectAddress__wrapper"));
-		});
+		fireEvent.click(getByTestId("SelectAddress__wrapper"));
 
 		expect(getByTestId("modal__inner")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(getByTestId("modal__close-btn"));
 
 		await waitFor(() => {
 			expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -94,9 +89,7 @@ describe("SelectAddress", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectAddress__wrapper"));
-		});
+		fireEvent.click(getByTestId("SelectAddress__wrapper"));
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
@@ -112,9 +105,7 @@ describe("SelectAddress", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectAddress__wrapper"));
-		});
+		fireEvent.click(getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
 			expect(getByTestId("modal__inner")).toBeInTheDocument();
@@ -122,9 +113,7 @@ describe("SelectAddress", () => {
 
 		const firstAddress = getByTestId("SearchWalletListItem__select-0");
 
-		act(() => {
-			fireEvent.click(firstAddress);
-		});
+		fireEvent.click(firstAddress);
 
 		await waitFor(() => {
 			expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -147,9 +136,7 @@ describe("SelectAddress", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectAddress__wrapper"));
-		});
+		fireEvent.click(getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
 			expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -170,9 +157,7 @@ describe("SelectAddress", () => {
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectAddress__wrapper"));
-		});
+		fireEvent.click(getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
 			expect(getByTestId("modal__inner")).toBeInTheDocument();
@@ -180,13 +165,12 @@ describe("SelectAddress", () => {
 
 		const firstAddress = getByTestId("SearchWalletListItem__select-0");
 
-		act(() => {
-			fireEvent.click(firstAddress);
-		});
+		fireEvent.click(firstAddress);
 
 		await waitFor(() => {
 			expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
-			expect(onChange).toBeCalled();
 		});
+
+		expect(onChange).toBeCalled();
 	});
 });

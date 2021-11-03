@@ -1,6 +1,6 @@
 import * as useRandomNumberHook from "app/hooks/use-random-number";
 import React from "react";
-import { render } from "testing-library";
+import { render } from "utils/testing-library";
 
 import { PluginCardSkeleton } from "./PluginCardSkeleton";
 

@@ -4400,10 +4400,11 @@ exports[`Transactions should render with custom title 1`] = `
   >
     <h2
       class="mb-6 text-2xl font-bold"
-    />
-    <h1>
-      Test
-    </h1>
+    >
+      <span>
+        Test
+      </span>
+    </h2>
   </div>
   <div
     class="mb-8"

@@ -1,13 +1,12 @@
-import { ImportFile } from "domains/profile/pages/ImportProfile/models";
 import { ProcessingImport } from "domains/profile/pages/ImportProfile/ProcessingImportStep";
 import fs from "fs";
 import React from "react";
-import { act, env, fireEvent, render, screen, waitFor } from "utils/testing-library";
+import { env, fireEvent, render, screen, waitFor } from "utils/testing-library";
 
-let dwe: ImportFile;
-let passwordProtectedDwe: ImportFile;
-let json: ImportFile;
-let jsonEmpty: ImportFile;
+let dwe: any;
+let passwordProtectedDwe: any;
+let json: any;
+let jsonEmpty: any;
 
 describe("Import Profile - Processing import", () => {
 	beforeAll(() => {
@@ -58,15 +57,11 @@ describe("Import Profile - Processing import", () => {
 		);
 		await findByTestId("modal__inner");
 
-		act(() => {
-			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
-		});
+		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
 
 		await findByTestId("PasswordModal__submit-button");
 
-		act(() => {
-			fireEvent.click(getByTestId("PasswordModal__submit-button"));
-		});
+		fireEvent.click(getByTestId("PasswordModal__submit-button"));
 
 		await waitFor(() => expect(onPasswordChange).toHaveBeenCalledWith("S3cUrePa$sword"));
 
@@ -80,9 +75,7 @@ describe("Import Profile - Processing import", () => {
 		);
 		await findByTestId("modal__inner");
 
-		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(getByTestId("modal__close-btn"));
 
 		await waitFor(() => expect(onBack).toHaveBeenCalledWith());
 	});
@@ -99,15 +92,11 @@ describe("Import Profile - Processing import", () => {
 		);
 		await screen.findByTestId("modal__inner");
 
-		act(() => {
-			fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "invalid" } });
-		});
+		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "invalid" } });
 
 		await screen.findByTestId("PasswordModal__submit-button");
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
-		});
+		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await screen.findByTestId("modal__inner");
 		await waitFor(() => expect(screen.getByTestId("PasswordModal__input")).toHaveValue("invalid"));
@@ -129,15 +118,11 @@ describe("Import Profile - Processing import", () => {
 		);
 		await findByTestId("modal__inner");
 
-		act(() => {
-			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "invalid" } });
-		});
+		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "invalid" } });
 
 		await findByTestId("PasswordModal__submit-button");
 
-		act(() => {
-			fireEvent.click(getByTestId("PasswordModal__submit-button"));
-		});
+		fireEvent.click(getByTestId("PasswordModal__submit-button"));
 
 		await findByTestId("modal__inner");
 		await waitFor(() => expect(onPasswordChange).not.toHaveBeenCalledWith("testtest2"));

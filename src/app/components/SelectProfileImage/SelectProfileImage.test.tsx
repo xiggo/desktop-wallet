@@ -6,7 +6,7 @@ import { translations } from "app/i18n/common/i18n";
 import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
-import { render } from "testing-library";
+import { render } from "utils/testing-library";
 
 import { SelectProfileImage } from "./SelectProfileImage";
 

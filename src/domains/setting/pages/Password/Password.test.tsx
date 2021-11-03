@@ -8,20 +8,26 @@ import { PasswordSettings } from "domains/setting/pages";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 const translations = buildTranslations();
 const history = createMemoryHistory();
 
 let profile: Contracts.IProfile;
 
-describe("Password Settings", () => {
-	beforeAll(async () => {
-		profile = env.profiles().findById(getDefaultProfileId());
-		await env.profiles().restore(profile);
-		await profile.sync();
-	});
+const password = "S3cUrePa$sword";
 
-	beforeEach(() => {
+describe("Password Settings", () => {
+	beforeEach(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		if (profile.usesPassword()) {
+			await env.profiles().restore(profile, password);
+		} else {
+			await env.profiles().restore(profile);
+		}
+
+		await profile.sync();
+
 		history.push(`/profiles/${profile.id()}/settings/password`);
 	});
 
@@ -59,24 +65,18 @@ describe("Password Settings", () => {
 
 		expect(() => getByTestId(currentPasswordInput)).toThrow(/Unable to find an element by/);
 
-		await act(async () => {
-			fireEvent.input(getByTestId("Password-settings__input--password_1"), {
-				target: { value: "S3cUrePa$sword" },
-			});
+		fireEvent.input(getByTestId("Password-settings__input--password_1"), {
+			target: { value: password },
 		});
 
-		await act(async () => {
-			fireEvent.input(getByTestId("Password-settings__input--password_2"), {
-				target: { value: "S3cUrePa$sword" },
-			});
+		fireEvent.input(getByTestId("Password-settings__input--password_2"), {
+			target: { value: password },
 		});
 
 		// wait for formState.isValid to be updated
 		await findByTestId("Password-settings__submit-button");
 
-		await act(async () => {
-			fireEvent.click(getByTestId("Password-settings__submit-button"));
-		});
+		fireEvent.click(getByTestId("Password-settings__submit-button"));
 
 		await findByTestId(currentPasswordInput);
 
@@ -84,7 +84,9 @@ describe("Password Settings", () => {
 	});
 
 	it("should change a password", async () => {
-		const { container, findByTestId, getByTestId } = render(
+		profile.auth().setPassword(password);
+
+		const { findByTestId, getByTestId } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -94,47 +96,40 @@ describe("Password Settings", () => {
 			},
 		);
 
-		expect(container).toBeInTheDocument();
-
-		await act(async () => {
-			fireEvent.click(await findByTestId("side-menu__item--password"));
+		await waitFor(() => {
+			expect(getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
 
-		const currentPasswordInput = "Password-settings__input--currentPassword";
-
-		await findByTestId(currentPasswordInput);
-
-		act(() => {
-			fireEvent.input(getByTestId(currentPasswordInput), { target: { value: "S3cUrePa$sword" } });
-		});
-		act(() => {
-			fireEvent.input(getByTestId("Password-settings__input--password_1"), {
-				target: { value: "S3cUrePa$sword2different" },
-			});
-		});
-		act(() => {
-			fireEvent.input(getByTestId("Password-settings__input--password_2"), {
-				target: { value: "S3cUrePa$sword2different" },
-			});
+		fireEvent.input(getByTestId("Password-settings__input--currentPassword"), {
+			target: { value: password },
 		});
 
-		// wait for formState.isValid to be updated
-		await findByTestId("Password-settings__submit-button");
-
-		await act(async () => {
-			fireEvent.click(getByTestId("Password-settings__submit-button"));
+		fireEvent.input(getByTestId("Password-settings__input--password_1"), {
+			target: { value: "S3cUrePa$sword2different" },
 		});
 
-		await findByTestId(currentPasswordInput);
+		fireEvent.input(getByTestId("Password-settings__input--password_2"), {
+			target: { value: "S3cUrePa$sword2different" },
+		});
+
+		await waitFor(() => {
+			expect(getByTestId("Password-settings__submit-button")).toBeEnabled();
+		});
+
+		fireEvent.click(getByTestId("Password-settings__submit-button"));
+
+		await findByTestId("Password-settings__input--currentPassword");
 	});
 
 	it("should show an error toast if the current password does not match", async () => {
+		profile.auth().setPassword(password);
+
 		const toastSpy = jest.spyOn(toasts, "error");
 		const authMock = jest.spyOn(profile, "auth").mockImplementation(() => {
 			throw new Error("mismatch");
 		});
 
-		const { container, asFragment, findByTestId, getByTestId } = render(
+		const { asFragment, findByTestId, getByTestId } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -144,42 +139,41 @@ describe("Password Settings", () => {
 			},
 		);
 
-		expect(container).toBeInTheDocument();
-
-		await act(async () => {
-			fireEvent.click(await findByTestId("side-menu__item--password"));
+		await waitFor(() => {
+			expect(getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
+
+		fireEvent.click(await findByTestId("side-menu__item--password"));
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
 		await findByTestId(currentPasswordInput);
 
-		await act(async () => {
-			fireEvent.input(getByTestId(currentPasswordInput), { target: { value: "wrong!" } });
+		fireEvent.input(getByTestId(currentPasswordInput), { target: { value: "wrong!" } });
+
+		await waitFor(() => {
+			expect(getByTestId(currentPasswordInput)).toHaveValue("wrong!");
 		});
 
-		await act(async () => {
-			fireEvent.input(getByTestId("Password-settings__input--password_1"), {
-				target: { value: "AnotherS3cUrePa$swordNew" },
-			});
+		fireEvent.input(getByTestId("Password-settings__input--password_1"), {
+			target: { value: "AnotherS3cUrePa$swordNew" },
 		});
 
-		await act(async () => {
-			fireEvent.input(getByTestId("Password-settings__input--password_2"), {
-				target: { value: "AnotherS3cUrePa$swordNew" },
-			});
+		fireEvent.input(getByTestId("Password-settings__input--password_2"), {
+			target: { value: "AnotherS3cUrePa$swordNew" },
 		});
 
-		// wait for formState.isValid to be updated
-		await findByTestId("Password-settings__submit-button");
-
-		await act(async () => {
-			fireEvent.click(getByTestId("Password-settings__submit-button"));
+		await waitFor(() => {
+			expect(getByTestId("Password-settings__submit-button")).toBeEnabled();
 		});
 
-		expect(toastSpy).toHaveBeenCalledWith(
-			`${translations.COMMON.ERROR}: ${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`,
-		);
+		fireEvent.click(getByTestId("Password-settings__submit-button"));
+
+		await waitFor(() => {
+			expect(toastSpy).toHaveBeenCalledWith(
+				`${translations.COMMON.ERROR}: ${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`,
+			);
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -187,7 +181,9 @@ describe("Password Settings", () => {
 	});
 
 	it("should trigger password confirmation mismatch error", async () => {
-		const { container, asFragment, findByTestId, getByTestId } = render(
+		profile.auth().setPassword(password);
+
+		const { asFragment, findByTestId, getByTestId } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
 			</Route>,
@@ -197,44 +193,40 @@ describe("Password Settings", () => {
 			},
 		);
 
-		expect(container).toBeInTheDocument();
-
-		await act(async () => {
-			fireEvent.click(await findByTestId("side-menu__item--password"));
+		await waitFor(() => {
+			expect(getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
+
+		fireEvent.click(getByTestId("side-menu__item--password"));
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
 		await findByTestId(currentPasswordInput);
 
-		act(() => {
-			fireEvent.input(getByTestId(currentPasswordInput), { target: { value: "S3cUrePa$sword" } });
+		fireEvent.input(getByTestId(currentPasswordInput), { target: { value: password } });
+
+		await waitFor(() => {
+			expect(getByTestId(currentPasswordInput)).toHaveValue(password);
 		});
 
-		act(() => {
-			fireEvent.input(getByTestId("Password-settings__input--password_1"), {
-				target: { value: "S3cUrePa$sword2different" },
-			});
+		fireEvent.input(getByTestId("Password-settings__input--password_1"), {
+			target: { value: "S3cUrePa$sword2different" },
 		});
 
 		await waitFor(() =>
 			expect(getByTestId("Password-settings__input--password_1")).toHaveValue("S3cUrePa$sword2different"),
 		);
 
-		act(() => {
-			fireEvent.input(getByTestId("Password-settings__input--password_2"), {
-				target: { value: "S3cUrePa$sword2different1" },
-			});
+		fireEvent.input(getByTestId("Password-settings__input--password_2"), {
+			target: { value: "S3cUrePa$sword2different1" },
 		});
 
 		await waitFor(() =>
 			expect(getByTestId("Password-settings__input--password_2")).toHaveValue("S3cUrePa$sword2different1"),
 		);
 
-		act(() => {
-			fireEvent.input(getByTestId("Password-settings__input--password_1"), {
-				target: { value: "new password 2" },
-			});
+		fireEvent.input(getByTestId("Password-settings__input--password_1"), {
+			target: { value: "new password 2" },
 		});
 
 		await waitFor(() =>
@@ -247,6 +239,8 @@ describe("Password Settings", () => {
 	});
 
 	it("should not allow setting the current password as the new password", async () => {
+		profile.auth().setPassword(password);
+
 		const { asFragment, findByTestId, getByTestId } = render(
 			<Route path="/profiles/:profileId/settings/:activeSetting">
 				<PasswordSettings />
@@ -256,29 +250,25 @@ describe("Password Settings", () => {
 			},
 		);
 
-		await act(async () => {
-			fireEvent.click(await findByTestId("side-menu__item--password"));
+		await waitFor(() => {
+			expect(getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
+
+		fireEvent.click(getByTestId("side-menu__item--password"));
 
 		await findByTestId("Password-settings__input--currentPassword");
 
-		act(() => {
-			fireEvent.input(getByTestId("Password-settings__input--currentPassword"), {
-				target: { value: "S3cUrePa$sword" },
-			});
+		fireEvent.input(getByTestId("Password-settings__input--currentPassword"), {
+			target: { value: password },
 		});
 
-		await waitFor(() =>
-			expect(getByTestId("Password-settings__input--currentPassword")).toHaveValue("S3cUrePa$sword"),
-		);
+		await waitFor(() => expect(getByTestId("Password-settings__input--currentPassword")).toHaveValue(password));
 
-		act(() => {
-			fireEvent.input(getByTestId("Password-settings__input--password_1"), {
-				target: { value: "S3cUrePa$sword" },
-			});
+		fireEvent.input(getByTestId("Password-settings__input--password_1"), {
+			target: { value: password },
 		});
 
-		await waitFor(() => expect(getByTestId("Password-settings__input--password_1")).toHaveValue("S3cUrePa$sword"));
+		await waitFor(() => expect(getByTestId("Password-settings__input--password_1")).toHaveValue(password));
 
 		await waitFor(() =>
 			expect(getByTestId("Password-settings__input--password_1")).toHaveAttribute("aria-invalid"),
@@ -290,6 +280,8 @@ describe("Password Settings", () => {
 	});
 
 	it("should allow to remove the password", async () => {
+		profile.auth().setPassword(password);
+
 		const toastSpy = jest.spyOn(toasts, "success");
 		const forgetPasswordSpy = jest.spyOn(profile.auth(), "forgetPassword").mockImplementation();
 
@@ -325,7 +317,7 @@ describe("Password Settings", () => {
 		// Fill in current password and confirm.
 
 		fireEvent.input(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), {
-			target: { value: "S3cUrePa$sword" },
+			target: { value: password },
 		});
 
 		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).not.toBeDisabled());
@@ -338,7 +330,7 @@ describe("Password Settings", () => {
 			),
 		);
 
-		expect(forgetPasswordSpy).toHaveBeenCalledWith("S3cUrePa$sword");
+		expect(forgetPasswordSpy).toHaveBeenCalledWith(password);
 		expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.PASSWORD.REMOVAL.SUCCESS);
 
 		forgetPasswordSpy.mockRestore();
@@ -346,6 +338,8 @@ describe("Password Settings", () => {
 	});
 
 	it("should not allow password removal if current password does not match", async () => {
+		profile.auth().setPassword(password);
+
 		const toastSpy = jest.spyOn(toasts, "error");
 
 		jest.spyOn(profile.auth(), "forgetPassword").mockImplementationOnce(() => {

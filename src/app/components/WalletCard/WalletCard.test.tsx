@@ -3,7 +3,7 @@ import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { WalletCard } from "./WalletCard";
 
@@ -172,7 +172,7 @@ describe("Wallet Card", () => {
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
 
-		fireEvent.click(screen.getByText(wallet.alias()));
+		fireEvent.click(screen.getByText(wallet.alias()!));
 
 		expect(history.location.pathname).not.toBe(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 

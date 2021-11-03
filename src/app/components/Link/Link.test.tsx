@@ -1,7 +1,7 @@
 import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
-import { act, fireEvent, render } from "testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { Link } from "./Link";
 
@@ -38,9 +38,7 @@ describe("Link", () => {
 
 		const { asFragment, getByTestId } = render(<Link to={externalLink} isExternal />);
 
-		act(() => {
-			fireEvent.click(getByTestId("Link"));
-		});
+		fireEvent.click(getByTestId("Link"));
 
 		expect(ipcRendererMock).toHaveBeenCalledWith("open-external", externalLink);
 		expect(asFragment()).toMatchSnapshot();
@@ -53,9 +51,7 @@ describe("Link", () => {
 
 		const { asFragment, getByTestId } = render(<Link to={externalLink} isExternal />);
 
-		act(() => {
-			fireEvent.click(getByTestId("Link"));
-		});
+		fireEvent.click(getByTestId("Link"));
 
 		expect(toastSpy).toHaveBeenCalled();
 		expect(asFragment()).toMatchSnapshot();
@@ -69,15 +65,11 @@ describe("Link", () => {
 		);
 		const link = getByTestId("Link");
 
-		act(() => {
-			fireEvent.mouseEnter(link);
-		});
+		fireEvent.mouseEnter(link);
 
 		expect(baseElement).toHaveTextContent("Custom Tooltip");
 
-		act(() => {
-			fireEvent.click(link);
-		});
+		fireEvent.click(link);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

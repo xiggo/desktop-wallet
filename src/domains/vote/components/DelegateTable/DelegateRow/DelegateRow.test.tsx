@@ -4,7 +4,7 @@ import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
 import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
-import { act, env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { VoteDelegateProperties } from "../DelegateTable.models";
 import { DelegateRow } from "./DelegateRow";
@@ -72,9 +72,7 @@ describe("DelegateRow", () => {
 		);
 		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		act(() => {
-			fireEvent.click(selectButton);
-		});
+		fireEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
 		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());

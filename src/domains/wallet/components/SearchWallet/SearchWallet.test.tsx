@@ -194,17 +194,13 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
 
-		act(() => {
-			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -244,17 +240,13 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
 
-		act(() => {
-			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "Sample Wallet" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "Sample Wallet" } });
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -295,18 +287,14 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
 
-		act(() => {
-			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		// Search by wallet alias
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "Sample Wallet" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "Sample Wallet" } });
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -315,9 +303,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(1));
 
 		// Reset search
-		act(() => {
-			fireEvent.click(getByTestId("header-search-bar__reset"));
-		});
+		fireEvent.click(getByTestId("header-search-bar__reset"));
 
 		await waitFor(() => expect(searchInput).toHaveValue(""));
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
@@ -355,20 +341,16 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		await waitFor(() => expect(queryAllByTestId("TableRow")).toHaveLength(2));
 
-		act(() => {
-			fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await findByTestId("HeaderSearchBar__input");
 		const searchInput = within(getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		await act(async () => {
-			fireEvent.change(getByTestId("Input"), {
-				target: {
-					value: "non existent wallet name",
-				},
-			});
+		fireEvent.change(getByTestId("Input"), {
+			target: {
+				value: "non existent wallet name",
+			},
 		});
 
 		act(() => {

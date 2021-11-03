@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/require-await */
+import { waitFor } from "@testing-library/react";
 import React from "react";
 import { act, fireEvent, render, screen } from "utils/testing-library";
 
@@ -50,15 +50,13 @@ describe("Clipboard", () => {
 			</Clipboard>,
 		);
 
-		await act(async () => {
-			fireEvent.click(getByTestId("clipboard-icon__wrapper"));
-		});
+		fireEvent.click(getByTestId("clipboard-icon__wrapper"));
 
 		act(() => {
 			jest.runOnlyPendingTimers();
 		});
 
-		expect(onError).not.toHaveBeenCalled();
+		await waitFor(() => expect(onError).not.toHaveBeenCalled());
 	});
 
 	describe("on success", () => {
@@ -73,11 +71,9 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				await act(async () => {
-					fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
-				});
+				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
-				expect(onSuccess).toHaveBeenCalled();
+				await waitFor(() => expect(onSuccess).toHaveBeenCalled());
 			},
 		);
 
@@ -92,11 +88,9 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				await act(async () => {
-					fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
-				});
+				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
-				expect(onSuccess).not.toHaveBeenCalled();
+				await waitFor(() => expect(onSuccess).not.toHaveBeenCalled());
 			},
 		);
 	});
@@ -119,11 +113,9 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				await act(async () => {
-					fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
-				});
+				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
-				expect(onError).toHaveBeenCalled();
+				await waitFor(() => expect(onError).toHaveBeenCalled());
 			},
 		);
 
@@ -138,11 +130,9 @@ describe("Clipboard", () => {
 					</Clipboard>,
 				);
 
-				await act(async () => {
-					fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
-				});
+				fireEvent.click(getByTestId(`clipboard-${variant}__wrapper`));
 
-				expect(onError).not.toHaveBeenCalled();
+				await waitFor(() => expect(onError).not.toHaveBeenCalled());
 			},
 		);
 	});

@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import { Networks } from "@payvo/sdk";
-import { act, fireEvent, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { translations } from "domains/transaction/i18n";
 import { describe } from "jest-circus";
@@ -171,9 +171,7 @@ describe("InputFee", () => {
 
 			expect(inputElement).toBeInTheDocument();
 
-			act(() => {
-				fireEvent.input(inputElement, { target: { value: "0.447" } });
-			});
+			fireEvent.input(inputElement, { target: { value: "0.447" } });
 
 			expect(defaultProps.onChange).toHaveBeenCalledWith("0.447");
 			expect(inputElement).toHaveValue("0.447");
@@ -233,9 +231,7 @@ describe("InputFee", () => {
 
 			render(<InputFee {...defaultProps} />);
 
-			act(() => {
-				fireEvent.input(screen.getByTestId("InputCurrency"), { target: { value: "-1.4" } });
-			});
+			fireEvent.input(screen.getByTestId("InputCurrency"), { target: { value: "-1.4" } });
 
 			expect(screen.getByTestId("InputCurrency")).toHaveValue("1.4");
 		});

@@ -90,40 +90,35 @@ describe("Import Profile - Profile Form Step", () => {
 		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
 		// Upload avatar image
-		await act(async () => {
-			fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
-		});
+		fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
 		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile 1" } });
 
-		const selectDropdown = getByTestId("SelectDropdown__input");
-
-		await act(async () => {
-			fireEvent.focus(selectDropdown);
-		});
+		fireEvent.focus(getByTestId("SelectDropdown__input"));
 
 		fireEvent.click(getByTestId("SelectDropdown__option--0"));
 
-		await act(async () => {
-			fireEvent.click(getByTestId("CreateProfile__submit-button"));
+		await waitFor(() => {
+			expect(getByTestId("CreateProfile__submit-button")).toBeEnabled();
 		});
+
+		fireEvent.click(getByTestId("CreateProfile__submit-button"));
 
 		expect(emptyProfile.usesPassword()).toBe(false);
 
 		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile 2" } });
+
 		fireEvent.click(container.querySelector("input[name=isDarkMode]")!);
 
-		await act(async () => {
-			fireEvent.click(getByTestId("CreateProfile__submit-button"));
-		});
+		fireEvent.click(getByTestId("CreateProfile__submit-button"));
 
 		const newProfile = env.profiles().findById(emptyProfile.id());
 
-		expect(newProfile.name()).toEqual("test profile 2");
-		expect(newProfile.usesPassword()).toBe(false);
+		await waitFor(() => expect(newProfile.name()).toEqual("test profile 2"));
 
+		expect(newProfile.usesPassword()).toBe(false);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -139,9 +134,7 @@ describe("Import Profile - Profile Form Step", () => {
 		await waitFor(() => expect(getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
 		// Upload avatar image
-		await act(async () => {
-			fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
-		});
+		fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
@@ -149,27 +142,23 @@ describe("Import Profile - Profile Form Step", () => {
 
 		const selectDropdown = getByTestId("SelectDropdown__input");
 
-		await act(async () => {
-			fireEvent.focus(selectDropdown);
-		});
+		fireEvent.focus(selectDropdown);
 
 		fireEvent.click(getByTestId("SelectDropdown__option--0"));
 
-		await act(async () => {
-			fireEvent.click(getByTestId("CreateProfile__submit-button"));
-		});
+		fireEvent.click(getByTestId("CreateProfile__submit-button"));
 
 		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "profile2" } });
 		fireEvent.click(container.querySelector("input[name=isDarkMode]")!);
 
-		await act(async () => {
-			fireEvent.change(getAllByTestId("InputPassword")[0], { target: { value: "S3cUrePa$sword" } });
-			fireEvent.change(getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword" } });
+		fireEvent.change(getAllByTestId("InputPassword")[0], { target: { value: "S3cUrePa$sword" } });
+		fireEvent.change(getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword" } });
+
+		await waitFor(() => {
+			expect(getByTestId("CreateProfile__submit-button")).toBeEnabled();
 		});
 
-		await act(async () => {
-			fireEvent.click(getByTestId("CreateProfile__submit-button"));
-		});
+		fireEvent.click(getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(env.profiles().count()).toBe(profilesCount + 1));
 
@@ -214,7 +203,7 @@ describe("Import Profile - Profile Form Step", () => {
 		const emptyProfile = env.profiles().create("test6");
 		const shouldUseDarkColorsSpy = jest.spyOn(utils, "shouldUseDarkColors").mockReturnValue(false);
 
-		const { asFragment, getAllByTestId, getByTestId, queryByTestId } = render(
+		const { asFragment, getAllByTestId, getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} profile={emptyProfile} shouldValidate />
 			</EnvironmentProvider>,
@@ -224,17 +213,13 @@ describe("Import Profile - Profile Form Step", () => {
 
 		act(() => getAllByTestId("Input")[0].focus());
 
-		await act(async () => {
-			fireEvent.input(getAllByTestId("Input")[0], { target: { value: "t" } });
-		});
+		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "t" } });
 
 		act(() => getAllByTestId("InputPassword")[1].focus());
 
 		expect(getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
-		await act(async () => {
-			fireEvent.input(getAllByTestId("Input")[0], { target: { value: "te" } });
-		});
+		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "te" } });
 
 		act(() => getAllByTestId("InputPassword")[0].focus());
 
@@ -242,8 +227,10 @@ describe("Import Profile - Profile Form Step", () => {
 
 		act(() => getAllByTestId("Input")[0].focus());
 
-		await act(async () => {
-			fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile" } });
+		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile" } });
+
+		await waitFor(() => {
+			expect(getAllByTestId("Input")[0]).toHaveValue("test profile");
 		});
 
 		act(() => getAllByTestId("InputPassword")[0].focus());
@@ -254,23 +241,30 @@ describe("Import Profile - Profile Form Step", () => {
 
 		act(() => getAllByTestId("Input")[0].focus());
 
-		await act(async () => {
-			fireEvent.input(getAllByTestId("Input")[0], { target: { value: "" } });
+		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "" } });
+
+		await waitFor(() => {
+			expect(getAllByTestId("Input")[0]).toHaveValue("");
 		});
 
 		act(() => getAllByTestId("InputPassword")[0].focus());
 
-		expect(queryByTestId("SelectProfileImage__avatar-identicon")).not.toBeInTheDocument();
+		expect(() => getByTestId("SelectProfileImage__avatar")).toThrow(/^Unable to find an element by/);
+
+		// Upload avatar image
+		fireEvent.click(getByTestId("SelectProfileImage__upload-button"));
+
+		expect(() => getByTestId("SelectProfileImage__avatar")).toBeTruthy();
 
 		act(() => getAllByTestId("Input")[0].focus());
 
-		await act(async () => {
-			fireEvent.input(getAllByTestId("Input")[0], { target: { value: "t" } });
+		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "t" } });
+
+		await waitFor(() => {
+			expect(getAllByTestId("Input")[0]).toHaveValue("t");
 		});
 
 		act(() => getAllByTestId("InputPassword")[0].focus());
-
-		expect(getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 

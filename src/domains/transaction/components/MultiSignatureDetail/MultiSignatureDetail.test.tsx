@@ -414,9 +414,7 @@ describe("MultiSignatureDetail", () => {
 
 		expect(container).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
-		});
+		fireEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
 
 		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
 		await screen.findByText(translations.SUCCESS.TITLE);
@@ -449,9 +447,7 @@ describe("MultiSignatureDetail", () => {
 
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockReturnValue(false);
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
-		});
+		fireEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
 
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
 
@@ -504,9 +500,7 @@ describe("MultiSignatureDetail", () => {
 
 		expect(container).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
-		});
+		fireEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
 
 		await waitFor(() => expect(screen.getByTestId("ErrorStep")));
 		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
@@ -531,15 +525,11 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__sign"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__sign"));
 
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep")));
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__back"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__back"));
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
@@ -571,9 +561,7 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__cancel")));
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__cancel"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__cancel"));
 
 		expect(onClose).toHaveBeenCalled();
 	});
@@ -595,9 +583,7 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__sign"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__sign"));
 
 		await screen.findByTestId("AuthenticationStep");
 	});
@@ -639,27 +625,21 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__sign"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__sign"));
 
 		await screen.findByTestId("AuthenticationStep");
 
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
 
-		act(() => {
-			fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: passphrase,
-				},
-			});
+		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
+			target: {
+				value: passphrase,
+			},
 		});
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__continue"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__continue"));
 
 		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
 		await waitFor(() => expect(broadcastMock).toHaveBeenCalled());
@@ -704,25 +684,19 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__sign"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__sign"));
 
 		await screen.findByTestId("AuthenticationStep");
 
-		act(() => {
-			fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: passphrase,
-				},
-			});
+		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
+			target: {
+				value: passphrase,
+			},
 		});
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__continue"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__continue"));
 
 		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
@@ -771,25 +745,19 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__sign"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__sign"));
 
 		await screen.findByTestId("AuthenticationStep");
 
-		act(() => {
-			fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: passphrase,
-				},
-			});
+		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
+			target: {
+				value: passphrase,
+			},
 		});
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__continue"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__continue"));
 
 		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
@@ -838,25 +806,19 @@ describe("MultiSignatureDetail", () => {
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__sign")));
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__sign"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__sign"));
 
 		await screen.findByTestId("AuthenticationStep");
 
-		act(() => {
-			fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
-				target: {
-					value: passphrase,
-				},
-			});
+		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), {
+			target: {
+				value: passphrase,
+			},
 		});
 
 		await waitFor(() => expect(screen.getByTestId("Paginator__continue")).not.toBeDisabled(), { timeout: 1000 });
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__continue"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__continue"));
 
 		await waitFor(() => expect(addSignatureMock).toHaveBeenCalled());
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
@@ -955,9 +917,7 @@ describe("MultiSignatureDetail", () => {
 			}
 		});
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__sign"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__sign"));
 
 		await waitFor(() => expect(() => screen.getByTestId("Paginator__continue")), { timeout: 1000 });
 
@@ -1064,9 +1024,7 @@ describe("MultiSignatureDetail", () => {
 			}
 		});
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("Paginator__sign"));
-		});
+		fireEvent.click(screen.getByTestId("Paginator__sign"));
 
 		await screen.findByTestId("LedgerDeviceError");
 

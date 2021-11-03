@@ -60,55 +60,62 @@ exports[`PluginManagerControls should render 1`] = `
 
 exports[`PluginManagerControls should toggle between list and grid 1`] = `
 <DocumentFragment>
-  <div
-    class="flex items-center"
-    data-testid="PluginManagerControls"
-  >
+  <div>
+    <span
+      data-testid="viewType"
+    >
+      grid
+    </span>
     <div
-      class="flex items-center space-x-1"
+      class="flex items-center"
+      data-testid="PluginManagerControls"
     >
       <div
-        data-testid="LayoutControls__list"
+        class="flex items-center space-x-1"
       >
         <div
-          class="group"
+          data-testid="LayoutControls__list"
         >
-          <button
-            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
-            data-testid="LayoutControls__list--icon"
+          <div
+            class="group"
           >
-            <div
-              class="sc-bdnxRM NjstW"
-              height="20"
-              width="20"
+            <button
+              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus"
+              data-testid="LayoutControls__list--icon"
             >
-              <svg>
-                list.svg
-              </svg>
-            </div>
-          </button>
+              <div
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  list.svg
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
-      </div>
-      <div
-        data-testid="LayoutControls__grid"
-      >
         <div
-          class="group"
+          data-testid="LayoutControls__grid"
         >
-          <button
-            class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
-            data-testid="LayoutControls__grid--icon"
+          <div
+            class="group"
           >
-            <div
-              class="sc-bdnxRM NjstW"
-              height="20"
-              width="20"
+            <button
+              class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 cWmnHb ring-focus active"
+              data-testid="LayoutControls__grid--icon"
             >
-              <svg>
-                grid.svg
-              </svg>
-            </div>
-          </button>
+              <div
+                class="sc-bdnxRM NjstW"
+                height="20"
+                width="20"
+              >
+                <svg>
+                  grid.svg
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </div>

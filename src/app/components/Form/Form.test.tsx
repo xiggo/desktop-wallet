@@ -1,27 +1,25 @@
-import { act, renderHook } from "@testing-library/react-hooks";
+import { screen } from "@testing-library/react";
+import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { fireEvent, render } from "testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { Form } from "./Form";
 
 describe("Form", () => {
 	it("should render with provider", async () => {
-		const { result: form } = renderHook(() => useForm());
+		const { result: form, waitForNextUpdate } = renderHook(() => useForm());
 		const onSubmit = jest.fn();
 
-		const tree = (
+		render(
 			<Form context={form.current} onSubmit={onSubmit}>
 				<input name="name" ref={form.current.register()} defaultValue="test" />
-			</Form>
+			</Form>,
 		);
 
-		const { getByTestId } = render(tree);
+		fireEvent.submit(screen.getByTestId("Form"));
 
-		// eslint-disable-next-line @typescript-eslint/require-await
-		await act(async () => {
-			fireEvent.submit(getByTestId("Form"));
-		});
+		await waitForNextUpdate();
 
 		expect(onSubmit).toHaveBeenCalledWith({ name: "test" }, expect.anything());
 	});

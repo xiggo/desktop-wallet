@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { DTO } from "@payvo/profiles";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import nock from "nock";
 import React from "react";
-import { env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } from "utils/testing-library";
+import { act, env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } from "utils/testing-library";
 
 import { useProfileTransactions } from "./use-profile-transactions";
 
@@ -28,6 +27,8 @@ describe("useProfileTransactions", () => {
 	});
 
 	it("should run updates periodically", async () => {
+		let hook: any;
+
 		const profile = env.profiles().findById(getDefaultProfileId());
 
 		await syncDelegates(profile);
@@ -41,64 +42,53 @@ describe("useProfileTransactions", () => {
 			</EnvironmentProvider>
 		);
 
-		await act(async () => {
-			const { result } = renderHook(
-				() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
-				{
-					wrapper,
-				},
-			);
-
-			jest.advanceTimersByTime(30_000);
-			await waitFor(() => expect(result.current.transactions).toHaveLength(30));
+		hook = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
 		});
+
+		jest.advanceTimersByTime(30_000);
+
+		await hook.waitForNextUpdate();
+
+		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(30));
 
 		const sent = await profile.transactionAggregate().all({ limit: 1 });
+
 		const items = sent.items();
 
-		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
-			const response = {
-				hasMorePages: () => false,
-				items: () => items,
-			};
-			return Promise.resolve(response);
+		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => items,
+		} as any);
+
+		hook = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
 		});
 
-		await act(async () => {
-			const { result } = renderHook(
-				() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
-				{
-					wrapper,
-				},
-			);
+		jest.advanceTimersByTime(30_000);
 
-			jest.advanceTimersByTime(30_000);
+		await hook.waitForNextUpdate();
 
-			await waitFor(() => expect(result.current.transactions.length).toEqual(0));
-		});
+		expect(mockTransactionsAggregate).toHaveBeenCalled();
+
+		await waitFor(() => expect(hook.result.current.transactions).toHaveLength(items.length));
 
 		mockTransactionsAggregate.mockRestore();
 
-		const mockEmptyTransactions = jest.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
-			const response = {
-				hasMorePages: () => false,
-				items: () => [],
-			};
-			return Promise.resolve(response);
+		const mockEmptyTransactions = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		} as any);
+
+		hook = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
 		});
 
-		await act(async () => {
-			const { result } = renderHook(
-				() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
-				{
-					wrapper,
-				},
-			);
+		jest.advanceTimersByTime(30_000);
 
-			jest.advanceTimersByTime(30_000);
+		await hook.waitForNextUpdate();
 
-			await waitFor(() => expect(result.current.transactions.length).toEqual(0));
-		});
+		await waitFor(() => expect(hook.result.current.transactions.length).toEqual(0));
 
 		mockEmptyTransactions.mockRestore();
 		jest.clearAllTimers();
@@ -150,43 +140,61 @@ describe("useProfileTransactions", () => {
 			</EnvironmentProvider>
 		);
 
-		const {
-			result: { current },
-		} = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), { wrapper });
+		const { result, waitForNextUpdate } = renderHook(
+			() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
+			{
+				wrapper,
+			},
+		);
 
-		await act(async () => {
-			current.updateFilters({ activeMode: "sent" });
-			jest.runOnlyPendingTimers();
-
-			await waitFor(() => expect(current.isLoadingMore).toBe(false));
-
-			act(() => {
-				jest.clearAllTimers();
-				current.updateFilters({ activeMode: "all" });
-				jest.runOnlyPendingTimers();
-			});
-
-			await waitFor(() => expect(current.isLoadingMore).toBe(false));
-			await waitFor(() => expect(current.transactions).toHaveLength(0));
-
-			const mockTransactionsAggregate = jest
-				.spyOn(profile.transactionAggregate(), "sent")
-				.mockImplementation(() => {
-					const response = {
-						hasMorePages: () => true,
-						items: () => [],
-					};
-					return Promise.resolve(response);
-				});
-
-			current.updateFilters({ activeMode: "sent" });
-			jest.runOnlyPendingTimers();
-
-			await waitFor(() => expect(current.transactions).toHaveLength(0));
-			await waitFor(() => expect(current.isLoadingMore).toBe(false));
-
-			mockTransactionsAggregate.mockRestore();
+		hookAct(() => {
+			result.current.updateFilters({ activeMode: "sent" });
 		});
+
+		act(() => {
+			jest.runOnlyPendingTimers();
+		});
+
+		await waitForNextUpdate();
+
+		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
+
+		act(() => {
+			jest.clearAllTimers();
+		});
+
+		hookAct(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		act(() => {
+			jest.runOnlyPendingTimers();
+		});
+
+		await waitForNextUpdate();
+
+		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
+		await waitFor(() => expect(result.current.transactions).toHaveLength(30));
+
+		const mockEmpty = jest.spyOn(profile.transactionAggregate(), "sent").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		} as any);
+
+		hookAct(() => {
+			result.current.updateFilters({ activeMode: "sent" });
+		});
+
+		act(() => {
+			jest.runOnlyPendingTimers();
+		});
+
+		await waitForNextUpdate();
+
+		await waitFor(() => expect(result.current.transactions).toHaveLength(0));
+		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
+
+		mockEmpty.mockRestore();
 	});
 
 	it("should hide unconfirmed transactions", async () => {
@@ -208,35 +216,43 @@ describe("useProfileTransactions", () => {
 
 		const mockIsConfirmed = jest.spyOn(items[0], "isConfirmed").mockReturnValue(false);
 
-		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
-			const response = {
-				hasMorePages: () => true,
-				items: () => items,
-			};
-			return Promise.resolve(response);
-		});
+		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => true,
+			items: () => items,
+		} as any);
 
-		const {
-			result: { current },
-		} = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), { wrapper });
+		const { result, waitForNextUpdate } = renderHook(
+			() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
+			{ wrapper },
+		);
 
-		await act(async () => {
+		act(() => {
 			jest.runOnlyPendingTimers();
-
-			await waitFor(() => expect(current.isLoadingMore).toBe(false));
-
-			act(() => {
-				jest.clearAllTimers();
-				current.updateFilters({ activeMode: "all" });
-				jest.runOnlyPendingTimers();
-			});
-
-			await waitFor(() => expect(current.isLoadingMore).toBe(false));
-			await waitFor(() => expect(current.transactions).toHaveLength(0));
-
-			mockTransactionsAggregate.mockRestore();
-			mockIsConfirmed.mockRestore();
 		});
+
+		await waitForNextUpdate();
+
+		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
+
+		act(() => {
+			jest.clearAllTimers();
+		});
+
+		hookAct(() => {
+			result.current.updateFilters({ activeMode: "all" });
+		});
+
+		act(() => {
+			jest.runOnlyPendingTimers();
+		});
+
+		await waitForNextUpdate();
+
+		await waitFor(() => expect(result.current.isLoadingMore).toBe(false));
+		await waitFor(() => expect(result.current.transactions).toHaveLength(items.length));
+
+		mockTransactionsAggregate.mockRestore();
+		mockIsConfirmed.mockRestore();
 	});
 
 	it("#fetchMore", async () => {
@@ -253,36 +269,30 @@ describe("useProfileTransactions", () => {
 			</EnvironmentProvider>
 		);
 
-		await act(async () => {
-			const { result } = renderHook(
-				() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
-				{ wrapper },
-			);
-
-			await waitFor(() =>
-				expect(
-					result.current.fetchTransactions({ wallets: profile.wallets().values() }),
-				).resolves.toBeInstanceOf(DTO.ExtendedConfirmedTransactionDataCollection),
-			);
-
-			await result.current.fetchMore();
-
-			await waitFor(() => expect(result.current.transactions.length).toEqual(30), { timeout: 4000 });
-
-			const mockTransactionsAggregate = jest
-				.spyOn(profile.transactionAggregate(), "all")
-				.mockImplementation(() => {
-					const response = {
-						hasMorePages: () => false,
-						items: () => [],
-					};
-					return Promise.resolve(response);
-				});
-
-			await result.current.fetchMore();
-
-			await waitFor(() => expect(result.current.transactions.length).toEqual(30), { timeout: 4000 });
-			mockTransactionsAggregate.mockRestore();
+		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
+			wrapper,
 		});
+
+		await waitFor(() =>
+			expect(result.current.fetchTransactions({ wallets: profile.wallets().values() })).resolves.toBeTruthy(),
+		);
+
+		await hookAct(async () => {
+			await result.current.fetchMore();
+		});
+
+		await waitFor(() => expect(result.current.transactions.length).toEqual(30), { timeout: 4000 });
+
+		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		} as any);
+
+		await hookAct(async () => {
+			await result.current.fetchMore();
+		});
+
+		await waitFor(() => expect(result.current.transactions.length).toEqual(30), { timeout: 4000 });
+		mockTransactionsAggregate.mockRestore();
 	});
 });

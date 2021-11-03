@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { act, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+import { fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { MultiPaymentDetail } from "./MultiPaymentDetail";
@@ -117,9 +117,7 @@ describe("MultiPaymentDetail", () => {
 
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.mouseEnter(screen.getByTestId("AmountLabel__hint"));
-		});
+		fireEvent.mouseEnter(screen.getByTestId("AmountLabel__hint"));
 
 		expect(screen.getByText("Including 99 ARK sent to itself")).toBeInTheDocument();
 

@@ -64,9 +64,7 @@ describe("Synchronizer Hook", () => {
 
 		await waitFor(() => expect(onCall).toHaveBeenCalledTimes(6));
 
-		act(() => {
-			fireEvent.click(screen.getByRole("button"));
-		});
+		fireEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(clearInterval).toHaveBeenCalledTimes(2));
 	});
@@ -88,9 +86,7 @@ describe("Synchronizer Hook", () => {
 
 		await waitFor(() => expect(onCall).toHaveBeenCalledTimes(6));
 
-		act(() => {
-			fireEvent.click(screen.getByRole("button"));
-		});
+		fireEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(clearInterval).toHaveBeenCalledTimes(2));
 	});
@@ -111,14 +107,17 @@ describe("Synchronizer Hook", () => {
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => useSynchronizer(jobsWithErrors), { wrapper });
+		const { result, waitForNextUpdate } = renderHook(() => useSynchronizer(jobsWithErrors), { wrapper });
 
-		await hookAct(async () => {
+		act(() => {
 			result.current.runAll();
-			await waitFor(() =>
-				expect(result.current.error).toEqual({ error: "Some error", timestamp: expect.any(Number) }),
-			);
 		});
+
+		await waitForNextUpdate();
+
+		await waitFor(() =>
+			expect(result.current.error).toEqual({ error: "Some error", timestamp: expect.any(Number) }),
+		);
 	});
 
 	it("should clear errors", async () => {
@@ -137,17 +136,20 @@ describe("Synchronizer Hook", () => {
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => useSynchronizer(jobsWithErrors), { wrapper });
+		const { result, waitForNextUpdate } = renderHook(() => useSynchronizer(jobsWithErrors), { wrapper });
 
-		await hookAct(async () => {
+		hookAct(() => {
 			result.current.runAll();
-			await waitFor(() =>
-				expect(result.current.error).toEqual({ error: "Some error", timestamp: expect.any(Number) }),
-			);
-
-			result.current.clearError();
-
-			await waitFor(() => expect(result.current.error).toBeUndefined());
 		});
+
+		await waitForNextUpdate();
+
+		expect(result.current.error).toEqual({ error: "Some error", timestamp: expect.any(Number) });
+
+		hookAct(() => {
+			result.current.clearError();
+		});
+
+		await waitFor(() => expect(result.current.error).toBeUndefined());
 	});
 });

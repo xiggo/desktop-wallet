@@ -144,7 +144,7 @@ export const SendVote = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const handleNext = async (suppressWarning?: boolean) => {
+	const handleNext = (suppressWarning?: boolean) => {
 		abortReference.current = new AbortController();
 
 		const newIndex = activeTab + 1;
@@ -160,12 +160,12 @@ export const SendVote = () => {
 
 		// Skip authorization step
 		if (newIndex === Step.AuthenticationStep && senderWallet?.isMultiSignature()) {
-			await handleSubmit(submitForm)();
+			void handleSubmit(submitForm)();
 			return;
 		}
 
 		if (newIndex === Step.AuthenticationStep && senderWallet?.isLedger()) {
-			handleSubmit(submitForm)();
+			void handleSubmit(submitForm)();
 		}
 
 		setActiveTab(newIndex);
@@ -438,7 +438,7 @@ export const SendVote = () => {
 									onBackToWalletClick={() =>
 										history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}`)
 									}
-									onContinueClick={async () => await handleNext()}
+									onContinueClick={() => handleNext()}
 									isLoading={isSubmitting}
 									isNextDisabled={isNextDisabled}
 									size={4}
@@ -453,7 +453,7 @@ export const SendVote = () => {
 						variant={feeWarningVariant}
 						onCancel={(suppressWarning: boolean) => dismissFeeWarning(handleBack, suppressWarning)}
 						onConfirm={(suppressWarning: boolean) =>
-							dismissFeeWarning(async () => await handleNext(true), suppressWarning)
+							dismissFeeWarning(() => handleNext(true), suppressWarning)
 						}
 					/>
 				</Form>

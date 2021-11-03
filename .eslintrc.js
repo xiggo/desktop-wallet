@@ -148,7 +148,7 @@ module.exports = {
 		"testing-library/no-node-access": "warn", // @TODO: set to error and fix
 		"testing-library/no-promise-in-fire-event": "warn", // @TODO: set to error and fix
 		"testing-library/no-render-in-setup": "warn", // @TODO: set to error and fix
-		"testing-library/no-unnecessary-act": "warn", // @TODO: set to error and fix
+		"testing-library/no-unnecessary-act": "error",
 		"testing-library/no-wait-for-empty-callback": "warn", // @TODO: set to error and fix
 		"testing-library/no-wait-for-multiple-assertions": "warn", // @TODO: set to error and fix
 		"testing-library/no-wait-for-side-effects": "warn", // @TODO: set to error and fix

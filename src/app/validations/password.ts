@@ -42,11 +42,11 @@ export const password = (t: any) => ({
 				return t("COMMON.VALIDATION.PASSWORD_SAME_AS_OLD");
 			}
 
-			if (!(await evaluate(password))) {
-				return t("COMMON.VALIDATION.PASSWORD_WEAK");
-			}
-
 			try {
+				if (!(await evaluate(password))) {
+					return t("COMMON.VALIDATION.PASSWORD_WEAK");
+				}
+
 				const hasBeenLeaked = await pwned(password);
 
 				if (hasBeenLeaked) {

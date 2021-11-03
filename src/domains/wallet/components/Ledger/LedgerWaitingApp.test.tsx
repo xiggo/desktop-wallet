@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, render } from "utils/testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { LedgerWaitingApp } from "./LedgerWaitingApp";
 
@@ -9,9 +9,7 @@ describe("LedgerWaitingApp", () => {
 
 		const { getByTestId } = render(<LedgerWaitingApp isOpen={true} coinName="ARK" onClose={onClose} />);
 
-		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalled();
 	});

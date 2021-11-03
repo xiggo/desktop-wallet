@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, waitFor } from "utils/testing-library";
 
 import { ErrorStep } from ".";
 
@@ -28,9 +28,7 @@ describe("ErrorStep", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(getByTestId("ErrorStep__wallet-button"));
-		});
+		fireEvent.click(getByTestId("ErrorStep__wallet-button"));
 
 		await waitFor(() => expect(onBack).toHaveBeenCalled());
 	});
@@ -41,9 +39,7 @@ describe("ErrorStep", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(getByTestId("ErrorStep__repeat-button"));
-		});
+		fireEvent.click(getByTestId("ErrorStep__repeat-button"));
 
 		await waitFor(() => expect(onRepeat).toHaveBeenCalled());
 	});

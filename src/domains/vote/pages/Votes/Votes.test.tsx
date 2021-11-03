@@ -9,7 +9,6 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import {
-	act,
 	env,
 	fireEvent,
 	getDefaultProfileId,
@@ -146,9 +145,7 @@ describe("Votes", () => {
 
 		await screen.findByTestId("AddressRow__select-0");
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
 
 		const toggle = screen.getByTestId("NetworkOption__ark.devnet");
 
@@ -191,9 +188,7 @@ describe("Votes", () => {
 
 		expect(screen.getAllByTestId("AddressTable")).toHaveLength(2);
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
 		expect(screen.getByTestId("NetworkOptions").firstChild).toHaveTextContent("ark.svg");
@@ -211,9 +206,7 @@ describe("Votes", () => {
 
 		await screen.findByTestId("AddressRow__select-0");
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeInTheDocument(),
@@ -245,9 +238,7 @@ describe("Votes", () => {
 
 		await screen.findByTestId("AddressRow__select-0");
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("FilterWallets")).getByTestId("dropdown__toggle")).toBeInTheDocument(),
@@ -293,17 +284,13 @@ describe("Votes", () => {
 
 		await screen.findByTestId("DelegateRow__toggle-0");
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__content")).toBeInTheDocument(),
 		);
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("VotesFilter__option--current"));
-		});
+		fireEvent.click(screen.getByTestId("VotesFilter__option--current"));
 
 		await waitFor(() => expect(screen.getAllByTestId("DelegateRow__toggle-0")).toHaveLength(1));
 
@@ -317,9 +304,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(screen.getByRole("button", { name: /Create/ }));
-		});
+		fireEvent.click(screen.getByRole("button", { name: /Create/ }));
 
 		expect(history.location.pathname).toEqual(`/profiles/${emptyProfile.id()}/wallets/create`);
 		expect(asFragment()).toMatchSnapshot();
@@ -332,9 +317,7 @@ describe("Votes", () => {
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(screen.getByRole("button", { name: /Import/ }));
-		});
+		fireEvent.click(screen.getByRole("button", { name: /Import/ }));
 
 		expect(history.location.pathname).toEqual(`/profiles/${emptyProfile.id()}/wallets/import`);
 		expect(asFragment()).toMatchSnapshot();
@@ -368,9 +351,7 @@ describe("Votes", () => {
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-0");
 
-		act(() => {
-			fireEvent.click(selectAddressButton);
-		});
+		fireEvent.click(selectAddressButton);
 
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
@@ -380,15 +361,11 @@ describe("Votes", () => {
 
 		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		act(() => {
-			fireEvent.click(selectDelegateButton);
-		});
+		fireEvent.click(selectDelegateButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
-		});
+		fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -404,9 +381,7 @@ describe("Votes", () => {
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
-		act(() => {
-			fireEvent.click(selectAddressButton);
-		});
+		fireEvent.click(selectAddressButton);
 
 		await screen.findByTestId("DelegateTable");
 
@@ -425,9 +400,7 @@ describe("Votes", () => {
 
 		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		act(() => {
-			fireEvent.click(selectDelegateButton);
-		});
+		fireEvent.click(selectDelegateButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
@@ -451,9 +424,7 @@ describe("Votes", () => {
 
 		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		act(() => {
-			fireEvent.click(selectDelegateButton);
-		});
+		fireEvent.click(selectDelegateButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
@@ -486,17 +457,13 @@ describe("Votes", () => {
 
 		await screen.findByTestId("DelegateRow__toggle-0");
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
 
 		await waitFor(() =>
 			expect(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__content")).not.toBeDisabled(),
 		);
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("VotesFilter__option--current"));
-		});
+		fireEvent.click(screen.getByTestId("VotesFilter__option--current"));
 
 		await screen.findByTestId("EmptyResults");
 	});
@@ -537,9 +504,7 @@ describe("Votes", () => {
 		});
 		const walletRestoreMock = jest.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
 
-		act(() => {
-			fireEvent.click(selectDelegateButton);
-		});
+		fireEvent.click(selectDelegateButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable__footer--votecombination")).toHaveTextContent("1/1");
@@ -564,15 +529,11 @@ describe("Votes", () => {
 
 		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		act(() => {
-			fireEvent.click(selectDelegateButton);
-		});
+		fireEvent.click(selectDelegateButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
-		});
+		fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -588,9 +549,7 @@ describe("Votes", () => {
 
 		const selectAddressButton = screen.getByTestId("AddressRow__select-1");
 
-		act(() => {
-			fireEvent.click(selectAddressButton);
-		});
+		fireEvent.click(selectAddressButton);
 
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
@@ -600,23 +559,17 @@ describe("Votes", () => {
 
 		const selectUnvoteButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		act(() => {
-			fireEvent.click(selectUnvoteButton);
-		});
+		fireEvent.click(selectUnvoteButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
 		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
 
-		act(() => {
-			fireEvent.click(selectVoteButton);
-		});
+		fireEvent.click(selectVoteButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
-		});
+		fireEvent.click(screen.getByTestId("DelegateTable__continue-button"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -655,17 +608,13 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -677,17 +626,13 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "ARK Wallet 2" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "ARK Wallet 2" } });
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -701,25 +646,19 @@ describe("Votes", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		// Search by wallet alias
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "non existent wallet name" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "non existent wallet name" } });
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
 
 		// Reset search
-		act(() => {
-			fireEvent.click(screen.getByTestId("header-search-bar__reset"));
-		});
+		fireEvent.click(screen.getByTestId("header-search-bar__reset"));
 
 		await waitFor(() => expect(searchInput).toHaveValue(""));
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
@@ -761,17 +700,13 @@ describe("Votes", () => {
 		await screen.findByTestId("DelegateTable");
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "DBk4cPYpqp7EBc" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "DBk4cPYpqp7EBc" } });
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});
@@ -783,17 +718,13 @@ describe("Votes", () => {
 		await screen.findByTestId("DelegateTable");
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "itsanametoo" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "itsanametoo" } });
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 	});

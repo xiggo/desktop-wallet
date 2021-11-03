@@ -1,7 +1,7 @@
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { render } from "testing-library";
+import { render } from "utils/testing-library";
 
 import { TimeAgo } from "./TimeAgo";
 

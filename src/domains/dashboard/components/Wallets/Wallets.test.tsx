@@ -12,7 +12,6 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 import {
-	act,
 	env,
 	fireEvent,
 	getDefaultProfileId,
@@ -111,9 +110,7 @@ describe("Wallets", () => {
 		);
 
 		const toggle = getByTestId("LayoutControls__list--icon");
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		await findByTestId("WalletsList");
 
@@ -131,15 +128,13 @@ describe("Wallets", () => {
 			},
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("LayoutControls__list--icon"));
-		});
+		fireEvent.click(getByTestId("LayoutControls__list--icon"));
 
 		await findByTestId("WalletsList");
 
-		act(() => {
-			fireEvent.click(getByTestId("LayoutControls__grid--icon"));
-		});
+		fireEvent.click(getByTestId("LayoutControls__grid--icon"));
+
+		await findByTestId("WalletsGrid");
 
 		expect(getByTestId("WalletsGrid")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -175,16 +170,12 @@ describe("Wallets", () => {
 		);
 
 		const toggle = getByTestId("LayoutControls__list--icon");
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		await findByTestId("WalletsList");
 		await findByTestId("WalletsList__ViewMore");
 
-		act(() => {
-			fireEvent.click(getByTestId("WalletsList__ViewMore"));
-		});
+		fireEvent.click(getByTestId("WalletsList__ViewMore"));
 
 		await waitFor(() => expect(getAllByTestId("TableRow")).toHaveLength(3));
 
@@ -236,29 +227,16 @@ describe("Wallets", () => {
 			},
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__toggle"));
-		});
-
-		act(() => {
-			fireEvent.click(getByTestId("filter-wallets__wallets"));
-		});
-
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__option--1"));
-		});
+		fireEvent.click(getByTestId("dropdown__toggle"));
+		fireEvent.click(getByTestId("filter-wallets__wallets"));
+		fireEvent.click(getByTestId("dropdown__option--1"));
 
 		await waitFor(() =>
 			expect(getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.STARRED),
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("filter-wallets__wallets"));
-		});
-
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__option--0"));
-		});
+		fireEvent.click(getByTestId("filter-wallets__wallets"));
+		fireEvent.click(getByTestId("dropdown__option--0"));
 
 		await waitFor(() => expect(getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.ALL));
 	});
@@ -297,9 +275,7 @@ describe("Wallets", () => {
 			},
 		);
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("WalletControls")).getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(within(screen.getByTestId("WalletControls")).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
 		expect(screen.getByTestId("NetworkOptions").firstChild).toHaveTextContent("ark.svg");
@@ -321,23 +297,17 @@ describe("Wallets", () => {
 			},
 		);
 
-		act(() => {
-			fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
-		});
+		fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
-		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(getByTestId("modal__close-btn"));
 
 		await waitFor(() =>
 			expect(queryByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).not.toBeInTheDocument(),
 		);
 
-		act(() => {
-			fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
-		});
+		fireEvent.click(getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
@@ -358,13 +328,9 @@ describe("Wallets", () => {
 		);
 
 		const toggle = getByTestId("LayoutControls__list--icon");
-		act(() => {
-			fireEvent.click(toggle);
-		});
 
-		act(() => {
-			fireEvent.click(getByText(wallets[0].alias()!));
-		});
+		fireEvent.click(toggle);
+		fireEvent.click(getByText(wallets[0].alias()!));
 
 		expect(history.location.pathname).toMatch(`/profiles/${profile.id()}/wallets/${wallets[0].id()}`);
 	});
@@ -463,9 +429,7 @@ describe("Wallets", () => {
 		);
 
 		const toggle = getByTestId("LayoutControls__list--icon");
-		act(() => {
-			fireEvent.click(toggle);
-		});
+		fireEvent.click(toggle);
 
 		await findByTestId("WalletsList");
 

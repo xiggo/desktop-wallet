@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "testing-library";
+import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { translations } from "../../i18n";
 import { DeleteContact } from "./DeleteContact";
@@ -22,7 +22,7 @@ describe("DeleteContact", () => {
 
 	it("should not render if not open", () => {
 		const { asFragment, getByTestId } = render(
-			<DeleteContact isOpen={false} onDelete={onDelete} profile={profile} />,
+			<DeleteContact contact={contact} isOpen={false} onDelete={onDelete} profile={profile} />,
 		);
 
 		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -31,7 +31,7 @@ describe("DeleteContact", () => {
 
 	it("should render a modal", () => {
 		const { asFragment, getByTestId } = render(
-			<DeleteContact isOpen={true} onDelete={onDelete} profile={profile} />,
+			<DeleteContact contact={contact} isOpen={true} onDelete={onDelete} profile={profile} />,
 		);
 
 		expect(getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELETE_CONTACT.TITLE);
@@ -45,9 +45,7 @@ describe("DeleteContact", () => {
 		);
 		const deleteButton = getByTestId("DeleteResource__submit-button");
 
-		act(() => {
-			fireEvent.click(deleteButton);
-		});
+		fireEvent.click(deleteButton);
 
 		await waitFor(() => expect(onDelete).toBeCalled());
 

@@ -95,11 +95,11 @@ describe("useUpdater hook", () => {
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 		const { result } = renderHook(() => useUpdater(), { wrapper });
 
-		await act(async () => {
+		act(() => {
 			result.current.notifyForUpdates();
 		});
 
-		expect(consoleSpy).toHaveBeenCalledWith("Checking for update failed: Error!");
+		await waitFor(() => expect(consoleSpy).toHaveBeenCalledWith("Checking for update failed: Error!"));
 
 		consoleSpy.mockRestore();
 	});
@@ -108,7 +108,7 @@ describe("useUpdater hook", () => {
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 		const { result } = renderHook(() => useUpdater(), { wrapper });
 
-		await act(async () => {
+		act(() => {
 			result.current.notifyForUpdates();
 		});
 
@@ -150,12 +150,14 @@ describe("useUpdater hook", () => {
 			return Promise.resolve(response);
 		});
 
-		const { result } = renderHook(() => useUpdater(), { wrapper });
+		const { result, waitForNextUpdate } = renderHook(() => useUpdater(), { wrapper });
 
-		await act(async () => {
+		act(() => {
 			result.current.notifyForUpdates();
-
-			await waitFor(() => expect(result.current.downloadStatus).toBe("idle"));
 		});
+
+		await waitForNextUpdate();
+
+		await waitFor(() => expect(result.current.downloadStatus).toBe("idle"));
 	});
 });

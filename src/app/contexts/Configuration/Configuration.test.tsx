@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, waitFor } from "utils/testing-library";
 
 import { ConfigurationProvider } from ".";
 import { useConfiguration } from "./Configuration";
@@ -60,9 +60,7 @@ describe("Configuration Context", () => {
 
 		await waitFor(() => expect(() => getByTestId("Configuration__list")).toThrowError(/Unable to find/));
 
-		act(() => {
-			fireEvent.click(getByTestId("Configuration__consumer"));
-		});
+		fireEvent.click(getByTestId("Configuration__consumer"));
 
 		await findByTestId("Configuration__list");
 

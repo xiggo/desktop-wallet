@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, waitFor } from "utils/testing-library";
 
 import { VotesFilter } from ".";
 
@@ -13,9 +13,7 @@ describe("VotesFilter", () => {
 	it("should render default", async () => {
 		const { asFragment, getByTestId, findByTestId } = render(<VotesFilter totalCurrentVotes={1} />);
 
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(getByTestId("dropdown__toggle"));
 
 		await findByTestId("dropdown__content");
 
@@ -27,9 +25,7 @@ describe("VotesFilter", () => {
 			<VotesFilter totalCurrentVotes={1} selectedOption="current" />,
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(getByTestId("dropdown__toggle"));
 
 		await findByTestId("dropdown__content");
 
@@ -39,9 +35,7 @@ describe("VotesFilter", () => {
 	it("should render with disabled current option", async () => {
 		const { asFragment, getByTestId, findByTestId } = render(<VotesFilter totalCurrentVotes={0} />);
 
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(getByTestId("dropdown__toggle"));
 
 		await findByTestId("dropdown__content");
 
@@ -52,21 +46,15 @@ describe("VotesFilter", () => {
 		const onChange = jest.fn();
 		const { getByTestId, findByTestId } = render(<VotesFilter totalCurrentVotes={2} onChange={onChange} />);
 
-		act(() => {
-			fireEvent.click(getByTestId("dropdown__toggle"));
-		});
+		fireEvent.click(getByTestId("dropdown__toggle"));
 
 		await findByTestId("dropdown__content");
 
-		act(() => {
-			fireEvent.click(getByTestId("VotesFilter__option--current"));
-		});
+		fireEvent.click(getByTestId("VotesFilter__option--current"));
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("current"));
 
-		act(() => {
-			fireEvent.click(getByTestId("VotesFilter__option--all"));
-		});
+		fireEvent.click(getByTestId("VotesFilter__option--all"));
 
 		await waitFor(() => expect(onChange).toHaveBeenCalledWith("all"));
 	});

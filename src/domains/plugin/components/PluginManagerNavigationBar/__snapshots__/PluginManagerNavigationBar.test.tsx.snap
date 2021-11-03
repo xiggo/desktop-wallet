@@ -149,6 +149,11 @@ exports[`PluginManagerNavigationBar should render 1`] = `
 
 exports[`PluginManagerNavigationBar should update selected 1`] = `
 <DocumentFragment>
+  <span
+    data-testid="currentView"
+  >
+    latest
+  </span>
   <nav
     class="PluginManagerNavigationBar__NavWrapper-sc-1dpfsae-0 eAgndL sticky my-4 dark:bg-black top-21 bg-theme-secondary-100"
     data-testid="PluginManagerNavigationBar"

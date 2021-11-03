@@ -34,13 +34,15 @@ describe("useWalletFilters", () => {
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => useWalletFilters({ profile }), { wrapper });
+		const { result, waitForNextUpdate } = renderHook(() => useWalletFilters({ profile }), { wrapper });
 
 		expect(result.current.isFilterChanged).toBe(false);
 
 		act(() => {
 			result.current.update("viewType", "list");
 		});
+
+		await waitForNextUpdate();
 
 		expect(result.current.isFilterChanged).toBe(false);
 
@@ -54,12 +56,14 @@ describe("useWalletFilters", () => {
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => useWalletFilters({ profile }), { wrapper });
+		const { result, waitForNextUpdate } = renderHook(() => useWalletFilters({ profile }), { wrapper });
 
 		act(() => {
 			result.current.update("viewType", "grid");
 			result.current.update("selectedNetworkIds", []);
 		});
+
+		await waitForNextUpdate();
 
 		expect(result.current.isFilterChanged).toBe(true);
 
@@ -73,11 +77,13 @@ describe("useWalletFilters", () => {
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => useWalletFilters({ profile }), { wrapper });
+		const { result, waitForNextUpdate } = renderHook(() => useWalletFilters({ profile }), { wrapper });
 
 		act(() => {
 			result.current.update("walletsDisplayType", "starred");
 		});
+
+		await waitForNextUpdate();
 
 		expect(result.current.isFilterChanged).toBe(true);
 

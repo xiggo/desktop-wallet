@@ -2,7 +2,7 @@ import { Contracts } from "@payvo/profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, render } from "testing-library";
+import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
 
 import { WalletListItem } from "./WalletListItem";
 
@@ -43,8 +43,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(getByText(wallet.alias())).toBeInTheDocument();
-
+		expect(getByText(wallet.alias()!)).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 	});
 
@@ -95,7 +94,7 @@ describe("WalletListItem", () => {
 	});
 
 	it("should render with default BTC as default exchangeCurrency", () => {
-		const mockExchangeCurrency = jest.spyOn(wallet, "exchangeCurrency").mockReturnValue(undefined);
+		const mockExchangeCurrency = jest.spyOn(wallet, "exchangeCurrency").mockReturnValue(undefined as any);
 		const { container, getByText } = render(
 			<table>
 				<tbody>
@@ -110,7 +109,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		expect(getByText(wallet.alias())).toBeInTheDocument();
+		expect(getByText(wallet.alias()!)).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 
@@ -134,9 +133,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		act(() => {
-			fireEvent.click(getByText(wallet.alias()));
-		});
+		fireEvent.click(getByText(wallet.alias()!));
 
 		expect(onClick).toHaveBeenCalledWith(wallet.id());
 	});
@@ -160,9 +157,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		act(() => {
-			fireEvent.click(getByText(wallet.alias()));
-		});
+		fireEvent.click(getByText(wallet.alias()!));
 
 		expect(onClick).not.toHaveBeenCalled();
 

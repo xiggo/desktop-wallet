@@ -1,7 +1,7 @@
 import { Contracts, DTO } from "@payvo/profiles";
 import nock from "nock";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "utils/testing-library";
 
 import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 
@@ -70,9 +70,7 @@ describe("NotificationsTransactionTable", () => {
 
 		expect(getAllByTestId("TableRow")).toHaveLength(transactions.length);
 
-		act(() => {
-			fireEvent.click(getAllByTestId("TableRow")[0]);
-		});
+		fireEvent.click(getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalled());
 	});

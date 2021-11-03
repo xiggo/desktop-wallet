@@ -4,7 +4,7 @@ import { httpClient } from "app/services";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { StubStorage } from "tests/mocks";
-import { act, env, fireEvent, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, render, waitFor } from "utils/testing-library";
 
 import { EnvironmentProvider, useEnvironmentContext } from "./Environment";
 
@@ -73,9 +73,7 @@ describe("Environment Context", () => {
 
 		const { getByRole } = render(<App />, { withProviders: false });
 
-		act(() => {
-			fireEvent.click(getByRole("button"));
-		});
+		fireEvent.click(getByRole("button"));
 
 		await waitFor(() => expect(getByRole("heading")).toHaveTextContent("Counter 1"));
 
@@ -108,9 +106,7 @@ describe("Environment Context", () => {
 
 		const { getByRole } = render(<App />, { history });
 
-		act(() => {
-			fireEvent.click(getByRole("button"));
-		});
+		fireEvent.click(getByRole("button"));
 
 		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Name)).toEqual("bar"));
 	});
@@ -147,9 +143,7 @@ describe("Environment Context", () => {
 
 		const { getByRole } = render(<App />, { withProviders: false });
 
-		act(() => {
-			fireEvent.click(getByRole("button"));
-		});
+		fireEvent.click(getByRole("button"));
 
 		await waitFor(() => expect(getByRole("heading")).toHaveTextContent("Counter 1"));
 

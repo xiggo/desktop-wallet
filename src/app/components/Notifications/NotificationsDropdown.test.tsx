@@ -3,7 +3,7 @@ import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
 
 import { NotificationsDropdown } from ".";
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
@@ -41,9 +41,7 @@ describe("Notifications", () => {
 	it("should render with transactions and plugins", async () => {
 		const { container } = render(<NotificationsDropdown profile={profile} />);
 
-		act(() => {
-			fireEvent.click(screen.getAllByRole("button")[0]);
-		});
+		fireEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
@@ -64,16 +62,12 @@ describe("Notifications", () => {
 			},
 		);
 
-		act(() => {
-			fireEvent.click(screen.getAllByRole("button")[0]);
-		});
+		fireEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
-		act(() => {
-			fireEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
-		});
+		fireEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
 
 		await screen.findByTestId("modal__inner");
 
@@ -81,9 +75,7 @@ describe("Notifications", () => {
 
 		expect(container).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 	});
@@ -99,24 +91,18 @@ describe("Notifications", () => {
 			},
 		);
 
-		act(() => {
-			fireEvent.click(screen.getAllByRole("button")[0]);
-		});
+		fireEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
-		act(() => {
-			fireEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
-		});
+		fireEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
 
 		await screen.findByTestId("WalletUpdate__first-step");
 
 		expect(container).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
@@ -134,24 +120,18 @@ describe("Notifications", () => {
 			},
 		);
 
-		act(() => {
-			fireEvent.click(screen.getAllByRole("button")[0]);
-		});
+		fireEvent.click(screen.getAllByRole("button")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("NotificationItem")).toHaveLength(2));
 		await waitFor(() => expect(screen.queryAllByTestId("TransactionRowMode").length).toBeGreaterThan(0));
 
-		act(() => {
-			fireEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
-		});
+		fireEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
 
 		await screen.findByTestId("WalletUpdate__first-step");
 
 		expect(container).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("WalletUpdate__cancel-button"));
-		});
+		fireEvent.click(screen.getByTestId("WalletUpdate__cancel-button"));
 
 		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 

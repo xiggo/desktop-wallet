@@ -3,7 +3,7 @@ import { httpClient } from "app/services";
 import nock from "nock";
 import React from "react";
 import { TransactionFixture } from "tests/fixtures/transactions";
-import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { NotificationTransactionItem } from "./NotificationTransactionItem";
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
@@ -76,9 +76,8 @@ describe("Notifications", () => {
 		);
 		await waitFor(() => expect(getAllByTestId("TransactionRowMode").length).toEqual(1));
 
-		act(() => {
-			fireEvent.click(getByTestId("TransactionRowMode"));
-		});
+		fireEvent.click(getByTestId("TransactionRowMode"));
+
 		await waitFor(() => expect(onTransactionClick).toHaveBeenCalled());
 	});
 });

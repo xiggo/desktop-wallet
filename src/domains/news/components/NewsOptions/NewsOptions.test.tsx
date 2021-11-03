@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, waitFor } from "utils/testing-library";
 
 import { NewsOptions } from "./NewsOptions";
 
@@ -19,18 +19,14 @@ describe("NewsOptions", () => {
 			<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={jest.fn()} />,
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("NewsOptions__category-Technical"));
-		});
+		fireEvent.click(getByTestId("NewsOptions__category-Technical"));
 	});
 
 	it("should select asset", () => {
 		const { getByTestId } = render(<NewsOptions selectedCategories={categories} selectedCoins={coins} />);
 
 		const arkOption = getByTestId("NetworkOption__ark.mainnet");
-		act(() => {
-			fireEvent.click(arkOption);
-		});
+		fireEvent.click(arkOption);
 	});
 
 	it("should emit onSubmit with all selected filters", async () => {
@@ -40,10 +36,8 @@ describe("NewsOptions", () => {
 			<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={onSubmit} />,
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("NewsOptions__category-Technical"));
-			fireEvent.click(getByTestId("NetworkOption__ark.mainnet"));
-		});
+		fireEvent.click(getByTestId("NewsOptions__category-Technical"));
+		fireEvent.click(getByTestId("NetworkOption__ark.mainnet"));
 
 		await waitFor(() =>
 			expect(onSubmit).toBeCalledWith({

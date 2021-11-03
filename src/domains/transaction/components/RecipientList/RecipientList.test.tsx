@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 import React from "react";
-import { act } from "react-dom/test-utils";
 import { fireEvent, render, screen } from "utils/testing-library";
 
 import { RecipientList } from ".";
@@ -95,9 +94,7 @@ describe("RecipientList", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		await act(async () => {
-			fireEvent.click(removeButton[0]);
-		});
+		fireEvent.click(removeButton[0]);
 
 		expect(onRemove).toBeCalled();
 	});
@@ -113,9 +110,7 @@ describe("RecipientList", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		await act(async () => {
-			fireEvent.click(removeButton[0]);
-		});
+		fireEvent.click(removeButton[0]);
 
 		expect(onRemove).not.toBeCalled();
 	});

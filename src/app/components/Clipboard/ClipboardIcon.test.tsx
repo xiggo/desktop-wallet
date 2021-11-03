@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/require-await */
+import { waitFor } from "@testing-library/react";
 import React from "react";
-import { act, fireEvent, render, screen } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { translations } from "../../i18n/common/i18n";
 import { Clipboard } from "./Clipboard";
@@ -16,16 +16,14 @@ describe("ClipboardIcon", () => {
 		(navigator as any).clipboard.writeText.mockRestore();
 	});
 
-	it("should render with tooltip in the dark mode", async () => {
+	it("should render with tooltip in the dark mode", () => {
 		render(
 			<Clipboard variant="icon" data="" tooltipDarkTheme>
 				<span>Hello!</span>
 			</Clipboard>,
 		);
 
-		act(() => {
-			fireEvent.mouseEnter(screen.getByTestId("clipboard-icon__wrapper"));
-		});
+		fireEvent.mouseEnter(screen.getByTestId("clipboard-icon__wrapper"));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 	});
@@ -37,18 +35,15 @@ describe("ClipboardIcon", () => {
 			</Clipboard>,
 		);
 
-		act(() => {
-			fireEvent.mouseEnter(getByTestId("clipboard-icon__wrapper"));
-		});
+		fireEvent.mouseEnter(getByTestId("clipboard-icon__wrapper"));
 
 		expect(baseElement).toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT);
 		expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.SUCCESS);
 
-		await act(async () => {
-			fireEvent.click(getByTestId("clipboard-icon__wrapper"));
-		});
+		fireEvent.click(getByTestId("clipboard-icon__wrapper"));
 
-		expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT);
+		await waitFor(() => expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT));
+
 		expect(baseElement).toHaveTextContent(translations.CLIPBOARD.SUCCESS);
 	});
 });

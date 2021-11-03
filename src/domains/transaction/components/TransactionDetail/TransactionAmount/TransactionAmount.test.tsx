@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, render, screen } from "utils/testing-library";
+import { fireEvent, render, screen } from "utils/testing-library";
 
 import { translations as transactionTranslations } from "../../../i18n";
 import { TransactionAmount } from "./TransactionAmount";
@@ -50,9 +50,7 @@ describe("TransactionAmount", () => {
 		expect(screen.getByTestId("AmountLabel__hint")).toBeInTheDocument();
 		expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.mouseEnter(screen.getByTestId("AmountLabel__hint"));
-		});
+		fireEvent.mouseEnter(screen.getByTestId("AmountLabel__hint"));
 
 		expect(screen.getByText("Including 1 DARK sent to itself")).toBeInTheDocument();
 	});

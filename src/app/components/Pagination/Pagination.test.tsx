@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, waitFor } from "testing-library";
+import { fireEvent, render, waitFor } from "utils/testing-library";
 
 import { Pagination } from "./Pagination";
 

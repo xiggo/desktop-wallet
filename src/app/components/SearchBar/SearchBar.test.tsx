@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
+import { waitFor } from "@testing-library/react";
 import { translations } from "app/i18n/common/i18n";
 import React from "react";
-import { act, fireEvent, render } from "testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { SearchBar } from "./SearchBar";
 
@@ -30,10 +31,8 @@ describe("SearchBar", () => {
 			},
 		});
 
-		await act(async () => {
-			fireEvent.click(getByTestId("SearchBar__button"));
-		});
+		fireEvent.click(getByTestId("SearchBar__button"));
 
-		expect(onSearch).toHaveBeenCalledWith("test query");
+		await waitFor(() => expect(onSearch).toHaveBeenCalledWith("test query"));
 	});
 });

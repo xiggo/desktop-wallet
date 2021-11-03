@@ -81,9 +81,7 @@ describe("SearchRecipient", () => {
 
 		expect(screen.getByTestId("RecipientListItem__selected-button-0")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(screen.getByTestId("RecipientListItem__selected-button-0"));
-		});
+		fireEvent.click(screen.getByTestId("RecipientListItem__selected-button-0"));
 
 		expect(onAction).toBeCalled();
 
@@ -106,17 +104,13 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -142,17 +136,13 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "Ark Wallet 1" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "Ark Wallet 1" } });
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -178,17 +168,13 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "Ark Wallet 1" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "Ark Wallet 1" } });
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -197,9 +183,7 @@ describe("SearchRecipient", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 
 		// Reset search
-		act(() => {
-			fireEvent.click(screen.getByTestId("header-search-bar__reset"));
-		});
+		fireEvent.click(screen.getByTestId("header-search-bar__reset"));
 
 		await waitFor(() => expect(searchInput).toHaveValue(""));
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
@@ -223,17 +207,13 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		act(() => {
-			fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
-		});
+		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		act(() => {
-			fireEvent.change(searchInput, { target: { value: "non-existent recipient address" } });
-		});
+		fireEvent.change(searchInput, { target: { value: "non-existent recipient address" } });
 
 		act(() => {
 			jest.advanceTimersByTime(100);

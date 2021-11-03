@@ -1,17 +1,18 @@
 import { Contracts } from "@payvo/profiles";
 import { ReadOnlyWallet } from "@payvo/profiles/distribution/read-only-wallet";
-import { renderHook } from "@testing-library/react-hooks";
+import { buildTranslations } from "app/i18n/helpers";
 import { translations as voteTranslations } from "domains/vote/i18n";
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
-import { act, env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { VoteDelegateProperties } from "../DelegateTable.models";
 import { DelegateFooter } from "./DelegateFooter";
 
 let wallet: Contracts.IReadWriteWallet;
 let delegate: Contracts.IReadOnlyWallet;
+
+const translations = buildTranslations();
 
 describe("DelegateFooter", () => {
 	beforeAll(() => {
@@ -75,11 +76,6 @@ describe("DelegateFooter", () => {
 	});
 
 	it("should calculate remaining balance show it", () => {
-		const {
-			result: {
-				current: { t },
-			},
-		} = renderHook(() => useTranslation());
 		const votesAmountMinimumMock = jest.spyOn(wallet.network(), "votesAmountMinimum").mockReturnValue(10);
 
 		render(
@@ -93,13 +89,13 @@ describe("DelegateFooter", () => {
 		);
 
 		expect(screen.getByTestId("DelegateTable__available-balance")).toBeInTheDocument();
+
 		expect(
 			screen.getByText(
-				t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE", {
-					percent: 50,
-				}),
+				translations.VOTE.DELEGATE_TABLE.VOTE_AMOUNT.AVAILABLE_TO_VOTE.replace("{{percent}}", "50"),
 			),
 		).toBeInTheDocument();
+
 		expect(screen.getByText(`16.87544901 ${wallet.network().ticker()}`)).toBeInTheDocument();
 
 		votesAmountMinimumMock.mockRestore();
@@ -129,9 +125,7 @@ describe("DelegateFooter", () => {
 
 		expect(continueButton).toBeDisabled();
 
-		act(() => {
-			fireEvent.mouseEnter(continueWrapper);
-		});
+		fireEvent.mouseEnter(continueWrapper);
 
 		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE);
 
@@ -159,9 +153,7 @@ describe("DelegateFooter", () => {
 
 		expect(continueButton).not.toBeDisabled();
 
-		act(() => {
-			fireEvent.mouseEnter(continueWrapper);
-		});
+		fireEvent.mouseEnter(continueWrapper);
 
 		expect(baseElement).not.toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE);
 	});
@@ -192,9 +184,7 @@ describe("DelegateFooter", () => {
 
 		expect(continueButton).toBeDisabled();
 
-		act(() => {
-			fireEvent.mouseEnter(continueWrapper);
-		});
+		fireEvent.mouseEnter(continueWrapper);
 
 		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.ZERO_AMOUNT);
 

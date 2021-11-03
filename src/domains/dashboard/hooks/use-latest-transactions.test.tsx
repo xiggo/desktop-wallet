@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { act, renderHook } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import nock from "nock";
 import React from "react";
@@ -39,13 +39,9 @@ describe("useLatestTransactions", () => {
 		const sent = await profile.transactionAggregate().all({ limit: 10 });
 		const items = sent.items();
 
-		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
-			const response = {
-				hasMorePages: () => false,
-				items: () => items,
-			};
-			return Promise.resolve(response);
-		});
+		const mockTransactionsAggregate = jest
+			.spyOn(profile.transactionAggregate(), "all")
+			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
@@ -53,27 +49,25 @@ describe("useLatestTransactions", () => {
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => useLatestTransactions({ profile, profileIsSyncing: false }), { wrapper });
+		const { result, waitForNextUpdate } = renderHook(
+			() => useLatestTransactions({ profile, profileIsSyncing: false }),
+			{ wrapper },
+		);
 
-		await act(async () => {
-			jest.runOnlyPendingTimers();
+		jest.runOnlyPendingTimers();
 
-			await waitFor(() => expect(result.current.isLoadingTransactions).toBeFalsy());
+		await waitForNextUpdate();
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBeFalsy());
 
-			await waitFor(() => expect(result.current.latestTransactions).toHaveLength(10));
+		expect(result.current.latestTransactions).toHaveLength(10);
 
-			mockTransactionsAggregate.mockRestore();
-		});
+		mockTransactionsAggregate.mockRestore();
 	});
 
 	it("should render loading state when profile is syncing", async () => {
-		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
-			const response = {
-				hasMorePages: () => false,
-				items: () => [],
-			};
-			return Promise.resolve(response);
-		});
+		const mockTransactionsAggregate = jest
+			.spyOn(profile.transactionAggregate(), "all")
+			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => [] } as any));
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
@@ -81,14 +75,16 @@ describe("useLatestTransactions", () => {
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => useLatestTransactions({ profile, profileIsSyncing: true }), { wrapper });
+		const { result, waitForNextUpdate } = renderHook(
+			() => useLatestTransactions({ profile, profileIsSyncing: true }),
+			{ wrapper },
+		);
 
-		await act(async () => {
-			jest.runOnlyPendingTimers();
+		jest.runOnlyPendingTimers();
 
-			await waitFor(() => expect(result.current.isLoadingTransactions).toBeTruthy());
+		await waitForNextUpdate();
+		await waitFor(() => expect(result.current.isLoadingTransactions).toBeTruthy());
 
-			mockTransactionsAggregate.mockRestore();
-		});
+		mockTransactionsAggregate.mockRestore();
 	});
 });

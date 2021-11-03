@@ -1,6 +1,6 @@
 import React from "react";
-import { render, screen } from "testing-library";
 import { TransactionFixture } from "tests/fixtures/transactions";
+import { render, screen } from "utils/testing-library";
 
 import { BaseTransactionRowMode, TransactionRowMode } from "./TransactionRowMode";
 

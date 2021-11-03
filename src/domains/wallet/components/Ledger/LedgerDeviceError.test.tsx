@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act, fireEvent, render } from "utils/testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { LedgerDeviceError } from "./LedgerDeviceError";
 
@@ -17,9 +17,7 @@ describe("LedgerDeviceError", () => {
 			/>,
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalled();
 	});

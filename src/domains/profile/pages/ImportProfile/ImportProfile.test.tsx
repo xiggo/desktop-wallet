@@ -5,7 +5,7 @@ import { ImportProfile } from "domains/profile/pages/ImportProfile/ImportProfile
 import fs from "fs";
 import { createMemoryHistory } from "history";
 import React from "react";
-import { act, env, fireEvent, render, waitFor } from "utils/testing-library";
+import { env, fireEvent, render, waitFor } from "utils/testing-library";
 
 const passwordProtectedDwe = fs.readFileSync("src/tests/fixtures/profile/import/password-protected-profile.dwe");
 const corruptedDwe = fs.readFileSync("src/tests/fixtures/profile/import/corrupted-profile.dwe");
@@ -57,9 +57,7 @@ describe("ImportProfile", () => {
 		expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 		expect(getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectFileStep__back"));
-		});
+		fireEvent.click(getByTestId("SelectFileStep__back"));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalled());
 		historyMock.mockRestore();
@@ -77,9 +75,7 @@ describe("ImportProfile", () => {
 
 		expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByTestId("SelectFileStep__change-file"));
-		});
+		fireEvent.click(getByTestId("SelectFileStep__change-file"));
 
 		await waitFor(() => expect(() => getByTestId("SelectFileStep__change-file")).toThrow());
 	});
@@ -97,12 +93,10 @@ describe("ImportProfile", () => {
 		expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 		expect(getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
-				},
-			});
+		fireEvent.drop(getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+			},
 		});
 
 		await findByTestId("ProcessingImport");
@@ -121,27 +115,21 @@ describe("ImportProfile", () => {
 		expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 		expect(getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
-				},
-			});
+		fireEvent.drop(getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+			},
 		});
 
 		await findByTestId("ProcessingImport");
 		await findByTestId("modal__inner");
 
-		await act(async () => {
-			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
-		});
+		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
 
 		// wait for formState.isValid to be updated
 		await findByTestId("PasswordModal__submit-button");
 
-		act(() => {
-			fireEvent.click(getByTestId("PasswordModal__submit-button"));
-		});
+		fireEvent.click(getByTestId("PasswordModal__submit-button"));
 
 		await findByTestId("ProcessingImport");
 	});
@@ -159,20 +147,16 @@ describe("ImportProfile", () => {
 		expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 		expect(getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
-				},
-			});
+		fireEvent.drop(getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+			},
 		});
 
 		await findByTestId("ProcessingImport");
 		await findByTestId("modal__inner");
 
-		act(() => {
-			fireEvent.click(getByTestId("modal__close-btn"));
-		});
+		fireEvent.click(getByTestId("modal__close-btn"));
 
 		await findByTestId("SelectFileStep__change-file");
 	});
@@ -300,31 +284,27 @@ describe("ImportProfile", () => {
 		expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 		expect(getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
-				},
-			});
+		fireEvent.drop(getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
+			},
 		});
 
 		await findByTestId("ProcessingImport");
 		await findByTestId("modal__inner");
 
-		await act(async () => {
-			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
+		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
+
+		await waitFor(() => {
+			expect(getByTestId("PasswordModal__input")).toHaveValue("S3cUrePa$sword");
 		});
 
-		act(() => {
-			fireEvent.click(getByTestId("PasswordModal__submit-button"));
-		});
+		fireEvent.click(getByTestId("PasswordModal__submit-button"));
 
 		await findByTestId("ProcessingImport");
 		await findByTestId("CreateProfile__form");
 
-		act(() => {
-			fireEvent.click(getByTestId("CreateProfile__back-button"));
-		});
+		fireEvent.click(getByTestId("CreateProfile__back-button"));
 
 		await findByTestId("SelectFileStep__change-file");
 	});
@@ -343,24 +323,22 @@ describe("ImportProfile", () => {
 		expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 		expect(getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
-				},
-			});
+		fireEvent.drop(getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+			},
 		});
 
 		await findByTestId("ProcessingImport");
 		await findByTestId("modal__inner");
 
-		await act(async () => {
-			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
+		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
+
+		await waitFor(() => {
+			expect(getByTestId("PasswordModal__input")).toHaveValue("wrong password");
 		});
 
-		act(() => {
-			fireEvent.click(getByTestId("PasswordModal__submit-button"));
-		});
+		fireEvent.click(getByTestId("PasswordModal__submit-button"));
 
 		await findByTestId("ImportError");
 
@@ -381,30 +359,26 @@ describe("ImportProfile", () => {
 		expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 		expect(getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
-				},
-			});
+		fireEvent.drop(getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
+			},
 		});
 
 		await findByTestId("ProcessingImport");
 		await findByTestId("modal__inner");
 
-		await act(async () => {
-			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
+		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
+
+		await waitFor(() => {
+			expect(getByTestId("PasswordModal__input")).toHaveValue("wrong password");
 		});
 
-		act(() => {
-			fireEvent.click(getByTestId("PasswordModal__submit-button"));
-		});
+		fireEvent.click(getByTestId("PasswordModal__submit-button"));
 
 		await findByTestId("ImportError");
 
-		act(() => {
-			fireEvent.click(getByTestId("ImportError__retry"));
-		});
+		fireEvent.click(getByTestId("ImportError__retry"));
 
 		await findByTestId("ImportError");
 		corruptedDweMock.mockRestore();
@@ -425,30 +399,26 @@ describe("ImportProfile", () => {
 		expect(getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 		expect(getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.drop(getByTestId("SelectFile__browse-files"), {
-				dataTransfer: {
-					files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
-				},
-			});
+		fireEvent.drop(getByTestId("SelectFile__browse-files"), {
+			dataTransfer: {
+				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+			},
 		});
 
 		await findByTestId("ProcessingImport");
 		await findByTestId("modal__inner");
 
-		await act(async () => {
-			fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
+		fireEvent.input(getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
+
+		await waitFor(() => {
+			expect(getByTestId("PasswordModal__input")).toHaveValue("wrong password");
 		});
 
-		act(() => {
-			fireEvent.click(getByTestId("PasswordModal__submit-button"));
-		});
+		fireEvent.click(getByTestId("PasswordModal__submit-button"));
 
 		await findByTestId("ImportError");
 
-		act(() => {
-			fireEvent.click(getByTestId("ImportError__back"));
-		});
+		fireEvent.click(getByTestId("ImportError__back"));
 
 		await findByTestId("ImportError");
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));

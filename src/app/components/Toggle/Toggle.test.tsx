@@ -1,6 +1,5 @@
 import React from "react";
-import { fireEvent, render } from "testing-library";
-import { act } from "utils/testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { Toggle } from "./Toggle";
 
@@ -42,9 +41,7 @@ describe("Toggle", () => {
 		const { asFragment, getByRole } = render(<Toggle />);
 		const toggle = getByRole("checkbox");
 
-		act(() => {
-			fireEvent.change(toggle, { target: { checked: true } });
-		});
+		fireEvent.change(toggle, { target: { checked: true } });
 
 		expect(toggle.checked).toEqual(true);
 		expect(asFragment()).toMatchSnapshot();

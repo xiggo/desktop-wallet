@@ -1,7 +1,7 @@
 import { fireEvent } from "@testing-library/react";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, render } from "testing-library";
+import { render } from "utils/testing-library";
 
 import { useQueryParams as useQueryParameters } from "./use-query-params";
 
@@ -28,9 +28,7 @@ describe("useQueryParams hook", () => {
 
 		expect(getByTestId("header_test")).toBeInTheDocument();
 
-		act(() => {
-			fireEvent.click(getByTestId("header_test"));
-		});
+		fireEvent.click(getByTestId("header_test"));
 
 		expect(getByText("useQueryParams Test Component")).toBeInTheDocument();
 	});

@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render } from "testing-library";
+import { fireEvent, render } from "utils/testing-library";
 
 import { Tab, TabList, TabPanel, Tabs } from "./Tabs";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { act, fireEvent, render, waitFor } from "utils/testing-library";
+import { fireEvent, render, waitFor } from "utils/testing-library";
 
 import { PaginationSearch } from "./PaginationSearch";
 
@@ -27,9 +27,7 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearchToggle"));
-		});
+		fireEvent.click(getByTestId("PaginationSearchToggle"));
 
 		await findByTestId("PaginationSearchForm");
 	});
@@ -45,15 +43,11 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearchToggle"));
-		});
+		fireEvent.click(getByTestId("PaginationSearchToggle"));
 
 		await findByTestId("PaginationSearchForm");
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearch__cancel"));
-		});
+		fireEvent.click(getByTestId("PaginationSearch__cancel"));
 
 		await waitFor(() => expect(() => getByTestId("PaginationSearchForm")).toThrow());
 	});
@@ -71,27 +65,21 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearchToggle"));
-		});
+		fireEvent.click(getByTestId("PaginationSearchToggle"));
 
 		await findByTestId("PaginationSearchForm");
 
-		act(() => {
-			fireEvent.input(getByTestId("PaginationSearch__input"), {
-				target: {
-					value: "1",
-				},
-			});
-
-			fireEvent.click(getByTestId("PaginationSearch__submit"));
+		fireEvent.input(getByTestId("PaginationSearch__input"), {
+			target: {
+				value: "1",
+			},
 		});
+
+		fireEvent.click(getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(getByTestId("PaginationSearch__input")).toHaveValue(1));
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearch__submit"));
-		});
+		fireEvent.click(getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(1));
 	});
@@ -109,27 +97,21 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearchToggle"));
-		});
+		fireEvent.click(getByTestId("PaginationSearchToggle"));
 
 		await findByTestId("PaginationSearchForm");
 
-		act(() => {
-			fireEvent.input(getByTestId("PaginationSearch__input"), {
-				target: {
-					value: "6",
-				},
-			});
-
-			fireEvent.click(getByTestId("PaginationSearch__submit"));
+		fireEvent.input(getByTestId("PaginationSearch__input"), {
+			target: {
+				value: "6",
+			},
 		});
+
+		fireEvent.click(getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(getByTestId("PaginationSearch__input")).toHaveValue(5));
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearch__submit"));
-		});
+		fireEvent.click(getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(5));
 	});
@@ -147,15 +129,11 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearchToggle"));
-		});
+		fireEvent.click(getByTestId("PaginationSearchToggle"));
 
 		await findByTestId("PaginationSearchForm");
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearch__submit"));
-		});
+		fireEvent.click(getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).not.toHaveBeenCalled());
 	});
@@ -173,27 +151,21 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearchToggle"));
-		});
+		fireEvent.click(getByTestId("PaginationSearchToggle"));
 
 		await findByTestId("PaginationSearchForm");
 
-		act(() => {
-			fireEvent.input(getByTestId("PaginationSearch__input"), {
-				target: {
-					value: "0",
-				},
-			});
-
-			fireEvent.click(getByTestId("PaginationSearch__submit"));
+		fireEvent.input(getByTestId("PaginationSearch__input"), {
+			target: {
+				value: "0",
+			},
 		});
+
+		fireEvent.click(getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(getByTestId("PaginationSearch__input")).toHaveValue(0));
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearch__submit"));
-		});
+		fireEvent.click(getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).not.toHaveBeenCalled());
 	});
@@ -211,27 +183,21 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearchToggle"));
-		});
+		fireEvent.click(getByTestId("PaginationSearchToggle"));
 
 		await findByTestId("PaginationSearchForm");
 
-		act(() => {
-			fireEvent.input(getByTestId("PaginationSearch__input"), {
-				target: {
-					value: "100000000",
-				},
-			});
-
-			fireEvent.click(getByTestId("PaginationSearch__submit"));
+		fireEvent.input(getByTestId("PaginationSearch__input"), {
+			target: {
+				value: "100000000",
+			},
 		});
+
+		fireEvent.click(getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(getByTestId("PaginationSearch__input")).toHaveValue(100_000_000));
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearch__submit"));
-		});
+		fireEvent.click(getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(100_000_000));
 	});
@@ -255,15 +221,11 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => {
-			fireEvent.click(getByTestId("PaginationSearchToggle"));
-		});
+		fireEvent.click(getByTestId("PaginationSearchToggle"));
 
 		await findByTestId("PaginationSearchForm");
 
-		act(() => {
-			fireEvent.mouseDown(getByTestId("somewhere-outside"));
-		});
+		fireEvent.mouseDown(getByTestId("somewhere-outside"));
 
 		await waitFor(() => expect(() => getByTestId("PaginationSearchForm")).toThrow());
 	});

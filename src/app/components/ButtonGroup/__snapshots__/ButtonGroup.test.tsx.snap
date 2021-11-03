@@ -32,7 +32,6 @@ exports[`ButtonGroupOption should render 1`] = `
   >
     Test 2
   </button>
-  ,
 </DocumentFragment>
 `;
 

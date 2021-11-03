@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import nock from "nock";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, waitFor } from "testing-library";
+import { env, fireEvent, getDefaultProfileId, render, waitFor } from "utils/testing-library";
 
 import { NotificationItem } from "./NotificationItem";
 
@@ -43,9 +43,7 @@ describe("Notifications", () => {
 			</table>,
 		);
 
-		act(() => {
-			fireEvent.click(getByTestId("NotificationItem__action"));
-		});
+		fireEvent.click(getByTestId("NotificationItem__action"));
 
 		await waitFor(() => expect(onAction).toHaveBeenCalled());
 	});

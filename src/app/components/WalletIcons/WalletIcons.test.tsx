@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { act, env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { WalletIcons } from "./WalletIcons";
 
@@ -17,9 +17,7 @@ describe("WalletIcons", () => {
 
 		render(<WalletIcons wallet={wallet} tooltipDarkTheme />);
 
-		act(() => {
-			fireEvent.mouseEnter(screen.getByTestId("WalletIcon__Verified"));
-		});
+		fireEvent.mouseEnter(screen.getByTestId("WalletIcon__Verified"));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 
