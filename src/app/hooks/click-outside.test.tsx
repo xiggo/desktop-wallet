@@ -10,7 +10,7 @@ describe("ClickOutside Hook", () => {
 
 		fireEvent.mouseDown(element);
 
-		expect(callback).not.toBeCalled();
+		expect(callback).not.toHaveBeenCalled();
 	});
 
 	it("should call callback if clicked outside target element", () => {
@@ -22,7 +22,7 @@ describe("ClickOutside Hook", () => {
 
 		fireEvent.mouseDown(document);
 
-		expect(callback).toBeCalled();
+		expect(callback).toHaveBeenCalled();
 	});
 
 	it("should do nothing if callback is not provided", () => {

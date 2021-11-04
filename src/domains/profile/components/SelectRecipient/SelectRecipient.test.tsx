@@ -113,7 +113,7 @@ describe("SelectRecipient", () => {
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(address);
 
-		expect(onChange).toBeCalledWith(address, {
+		expect(onChange).toHaveBeenCalledWith(address, {
 			alias: undefined,
 			isContact: false,
 			isDelegate: false,
@@ -150,7 +150,7 @@ describe("SelectRecipient", () => {
 		const selectedAddressValue = profile.contacts().values()[0].addresses().values()[0].address();
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
-		expect(onChange).toBeCalledWith(selectedAddressValue, expect.any(Object));
+		expect(onChange).toHaveBeenCalledWith(selectedAddressValue, expect.any(Object));
 	});
 
 	it("should call onChange prop only when values change", async () => {
@@ -175,7 +175,7 @@ describe("SelectRecipient", () => {
 		fireEvent.click(lastAddress);
 
 		expect(getByTestId("SelectDropdown__input")).toHaveValue(selectedAddressValue);
-		expect(onChange).not.toBeCalled();
+		expect(onChange).not.toHaveBeenCalled();
 	});
 
 	it("should filter recipients list by network if provided", async () => {

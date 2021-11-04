@@ -32,15 +32,13 @@ describe("Plugin Hooks", () => {
 	});
 
 	it("should fail to register an invalid command", () => {
-		expect(() => subject.registerCommand("test.plus", 1)).toThrowError();
+		expect(() => subject.registerCommand("test.plus", 1)).toThrow();
 	});
 
 	it("should fail to register a duplicate handler", () => {
 		subject.registerCommand("test.log", (value) => value);
 
-		expect(() => subject.registerCommand("test.log", () => void 0)).toThrowError(
-			"Command test.log already registered",
-		);
+		expect(() => subject.registerCommand("test.log", () => void 0)).toThrow("Command test.log already registered");
 	});
 
 	it("should apply multiple filters", () => {
@@ -52,7 +50,7 @@ describe("Plugin Hooks", () => {
 	});
 
 	it("should fail to add an invalid filter", () => {
-		expect(() => subject.addFilter("test", "log", 1)).toThrowError();
+		expect(() => subject.addFilter("test", "log", 1)).toThrow();
 	});
 
 	it("should return undefined if no filter is applied", () => {
@@ -65,6 +63,6 @@ describe("Plugin Hooks", () => {
 
 		subject.clearAll();
 
-		expect(() => subject.executeCommand("test.plus")).toThrowError("Command test.plus not found");
+		expect(() => subject.executeCommand("test.plus")).toThrow("Command test.plus not found");
 	});
 });

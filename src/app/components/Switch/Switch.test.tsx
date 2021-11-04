@@ -64,12 +64,12 @@ describe("Switch", () => {
 
 		fireEvent.click(getByRole("checkbox"));
 
-		expect(onChange).toBeCalledWith("b");
+		expect(onChange).toHaveBeenCalledWith("b");
 		expect(getByRole("checkbox")).toBeChecked();
 
 		fireEvent.click(getByRole("checkbox"));
 
-		expect(onChange).toBeCalledWith("a");
+		expect(onChange).toHaveBeenCalledWith("a");
 		expect(getByRole("checkbox")).not.toBeChecked();
 	});
 
@@ -78,12 +78,12 @@ describe("Switch", () => {
 
 		fireEvent.click(getByText("Option B"));
 
-		expect(onChange).toBeCalledWith("b");
+		expect(onChange).toHaveBeenCalledWith("b");
 		expect(getByRole("checkbox")).toBeChecked();
 
 		fireEvent.click(getByText("Option A"));
 
-		expect(onChange).toBeCalledWith("a");
+		expect(onChange).toHaveBeenCalledWith("a");
 		expect(getByRole("checkbox")).not.toBeChecked();
 	});
 

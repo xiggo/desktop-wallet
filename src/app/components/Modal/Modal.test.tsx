@@ -36,7 +36,7 @@ describe("Modal", () => {
 
 		fireEvent.click(screen.getByTestId("modal__overlay"));
 
-		expect(onClose).toBeCalled();
+		expect(onClose).toHaveBeenCalled();
 	});
 
 	it("should no close by click on modal content", () => {
@@ -52,7 +52,7 @@ describe("Modal", () => {
 
 		fireEvent.click(screen.getByTestId("modal__inner"));
 
-		expect(onClose).not.toBeCalled();
+		expect(onClose).not.toHaveBeenCalled();
 	});
 
 	it("should closed by the Esc key", async () => {

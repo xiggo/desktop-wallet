@@ -22,7 +22,7 @@ describe("Environment Context", () => {
 			return <p>{env.profiles().count()}</p>;
 		};
 
-		expect(() => render(<Test />, { withProviders: false })).toThrowError();
+		expect(() => render(<Test />, { withProviders: false })).toThrow();
 
 		console.error.mockRestore();
 	});

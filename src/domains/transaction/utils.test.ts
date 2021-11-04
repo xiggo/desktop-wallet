@@ -19,9 +19,9 @@ describe("Transaction utils", () => {
 
 	describe("handleBroadcastError", () => {
 		it("should throw if rejected", () => {
-			expect(() =>
-				handleBroadcastError({ accepted: [], errors: { id: "ERROR" }, rejected: ["id"] }),
-			).toThrowError("ERROR");
+			expect(() => handleBroadcastError({ accepted: [], errors: { id: "ERROR" }, rejected: ["id"] })).toThrow(
+				"ERROR",
+			);
 		});
 
 		it("should not throw if accepted", () => {

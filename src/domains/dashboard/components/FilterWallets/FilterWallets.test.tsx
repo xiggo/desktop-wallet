@@ -63,7 +63,7 @@ describe("FilterWallets", () => {
 
 		fireEvent.click(getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
-		expect(onChange).toBeCalledWith("selectedNetworkIds", [networkOptions[0].network.id()]);
+		expect(onChange).toHaveBeenCalledWith("selectedNetworkIds", [networkOptions[0].network.id()]);
 	});
 
 	it("should emit onChange for wallets display type change", () => {
@@ -77,7 +77,7 @@ describe("FilterWallets", () => {
 
 		fireEvent.click(getByTestId("dropdown__option--0"));
 
-		expect(onChange).toBeCalled();
+		expect(onChange).toHaveBeenCalled();
 	});
 
 	it("should not emit onChange for wallet display type change", () => {
@@ -91,6 +91,6 @@ describe("FilterWallets", () => {
 
 		fireEvent.click(getByTestId("dropdown__option--0"));
 
-		expect(onChange).not.toBeCalled();
+		expect(onChange).not.toHaveBeenCalled();
 	});
 });

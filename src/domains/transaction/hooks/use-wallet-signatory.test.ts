@@ -84,7 +84,7 @@ describe("useWalletSignatory", () => {
 	it("should throw error if no input is provided", async () => {
 		const { result } = renderHook(() => useWalletSignatory(wallet));
 
-		await expect(result.current.sign({})).rejects.toThrowError(
+		await expect(result.current.sign({})).rejects.toThrow(
 			"Signing failed. No mnemonic or encryption password provided",
 		);
 	});

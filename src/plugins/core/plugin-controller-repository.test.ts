@@ -63,11 +63,11 @@ describe("Plugin Controller subject", () => {
 		subject.push(plugin);
 		subject.runAllEnabled(profile);
 
-		expect(() => subject.runAllEnabled(profile)).toThrowError();
+		expect(() => subject.runAllEnabled(profile)).toThrow();
 	});
 
 	it("should fail to dispose if not running", () => {
-		expect(() => subject.dispose()).toThrowError();
+		expect(() => subject.dispose()).toThrow();
 	});
 
 	it("should dispose", () => {

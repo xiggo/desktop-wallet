@@ -43,7 +43,7 @@ describe("PasswordModal", () => {
 		fireEvent.click(getByTestId("PasswordModal__submit-button"));
 
 		await waitFor(() => {
-			expect(onSuccess).toBeCalled();
+			expect(onSuccess).toHaveBeenCalled();
 		});
 	});
 });

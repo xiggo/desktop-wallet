@@ -73,7 +73,7 @@ describe("Dropdown", () => {
 
 		fireEvent.click(firstOption);
 
-		expect(onSelect).toBeCalledWith({ label: "Option 1", value: "1" });
+		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
 
 	it("should select option with enter key", () => {
@@ -91,7 +91,7 @@ describe("Dropdown", () => {
 
 		fireEvent.keyDown(firstOption, { code: 13, key: "Enter" });
 
-		expect(onSelect).toBeCalledWith({ label: "Option 1", value: "1" });
+		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
 
 	it("should select option with space key", () => {
@@ -109,7 +109,7 @@ describe("Dropdown", () => {
 
 		fireEvent.keyDown(firstOption, { key: " ", keyCode: 32 });
 
-		expect(onSelect).toBeCalledWith({ label: "Option 1", value: "1" });
+		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
 
 	it("should ignore triggering onSelect callback if not exists", () => {
@@ -337,7 +337,7 @@ describe("Dropdown ClickOutside Hook", () => {
 
 		fireEvent.mouseDown(element);
 
-		expect(callback).not.toBeCalled();
+		expect(callback).not.toHaveBeenCalled();
 	});
 
 	it("should call callback if clicked outside target element", () => {
@@ -349,7 +349,7 @@ describe("Dropdown ClickOutside Hook", () => {
 
 		fireEvent.mouseDown(document);
 
-		expect(callback).toBeCalled();
+		expect(callback).toHaveBeenCalled();
 	});
 
 	it("should do nothing if callback is not provided", () => {
@@ -454,7 +454,7 @@ describe("Dropdown positioning", () => {
 
 		fireEvent.click(toggle);
 
-		expect(getBoundingClientRectSpy).toBeCalledTimes(0);
+		expect(getBoundingClientRectSpy).toHaveBeenCalledTimes(0);
 
 		getBoundingClientRectSpy.mockRestore();
 		documentClientHeightSpy.mockRestore();

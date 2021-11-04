@@ -83,7 +83,7 @@ describe("SearchRecipient", () => {
 
 		fireEvent.click(screen.getByTestId("RecipientListItem__selected-button-0"));
 
-		expect(onAction).toBeCalled();
+		expect(onAction).toHaveBeenCalled();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

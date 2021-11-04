@@ -15,7 +15,7 @@ describe("Plugin Configuration", () => {
 	it("should fail to validate", () => {
 		const subject = PluginConfigurationData.make({ version: 1 });
 
-		expect(() => subject.validate()).toThrowError();
+		expect(() => subject.validate()).toThrow();
 	});
 
 	it("should format title with scope", () => {

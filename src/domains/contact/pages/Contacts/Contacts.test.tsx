@@ -199,7 +199,7 @@ describe("Contacts", () => {
 		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => {
-			expect(() => profile.contacts().findById(newContact.id())).toThrowError("Failed to find");
+			expect(() => profile.contacts().findById(newContact.id())).toThrow("Failed to find");
 		});
 
 		contactsSpy.mockRestore();
@@ -280,7 +280,7 @@ describe("Contacts", () => {
 		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => {
-			expect(() => profile.contacts().findById(newContact.id())).toThrowError("Failed to find");
+			expect(() => profile.contacts().findById(newContact.id())).toThrow("Failed to find");
 		});
 
 		contactsSpy.mockRestore();

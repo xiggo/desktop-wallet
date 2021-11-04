@@ -22,7 +22,7 @@ describe("LayoutControls", () => {
 
 		fireEvent.click(getByTestId(element));
 
-		expect(function_).toBeCalled();
+		expect(function_).toHaveBeenCalled();
 	});
 
 	it.each([
@@ -35,6 +35,6 @@ describe("LayoutControls", () => {
 
 		fireEvent.click(getByTestId(element));
 
-		expect(function_).not.toBeCalled();
+		expect(function_).not.toHaveBeenCalled();
 	});
 });

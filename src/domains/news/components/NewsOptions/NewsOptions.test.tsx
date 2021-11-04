@@ -40,7 +40,7 @@ describe("NewsOptions", () => {
 		fireEvent.click(getByTestId("NetworkOption__ark.mainnet"));
 
 		await waitFor(() =>
-			expect(onSubmit).toBeCalledWith({
+			expect(onSubmit).toHaveBeenCalledWith({
 				categories: ["Technical"],
 				coins: ["ARK"],
 			}),

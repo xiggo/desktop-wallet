@@ -570,7 +570,7 @@ describe("DelegateVoteAmount", () => {
 		fireEvent.input(amountField, { target: { value: 40 } });
 
 		await waitFor(() => {
-			expect(toggleUnvotesSelected).not.toBeCalled();
+			expect(toggleUnvotesSelected).not.toHaveBeenCalled();
 			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10);
 			expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 		});
@@ -580,7 +580,7 @@ describe("DelegateVoteAmount", () => {
 		fireEvent.input(amountField, { target: { value: 50 } });
 
 		await waitFor(() => {
-			expect(toggleUnvotesSelected).not.toBeCalled();
+			expect(toggleUnvotesSelected).not.toHaveBeenCalled();
 			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20);
 			expect(setAvailableBalance).toHaveBeenLastCalledWith(70);
 		});

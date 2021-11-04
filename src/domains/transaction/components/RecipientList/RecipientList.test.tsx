@@ -96,7 +96,7 @@ describe("RecipientList", () => {
 
 		fireEvent.click(removeButton[0]);
 
-		expect(onRemove).toBeCalled();
+		expect(onRemove).toHaveBeenCalled();
 	});
 
 	it("should not call onRemove callback if not provided", async () => {
@@ -112,7 +112,7 @@ describe("RecipientList", () => {
 
 		fireEvent.click(removeButton[0]);
 
-		expect(onRemove).not.toBeCalled();
+		expect(onRemove).not.toHaveBeenCalled();
 	});
 
 	it("should render exchange amount", async () => {

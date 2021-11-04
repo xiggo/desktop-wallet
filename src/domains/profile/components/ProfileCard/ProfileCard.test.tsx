@@ -73,7 +73,7 @@ describe("ProfileCard", () => {
 
 		fireEvent.click(firstOption);
 
-		expect(onSelect).toBeCalledWith({ label: "Option 1", value: "1" });
+		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
 
 	it("should ignore triggering onSelect callback if not exists", () => {

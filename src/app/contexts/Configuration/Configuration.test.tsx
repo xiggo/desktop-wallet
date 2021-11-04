@@ -25,7 +25,7 @@ describe("Configuration Context", () => {
 			return <p>Configuration content</p>;
 		};
 
-		expect(() => render(<Test />, { withProviders: false })).toThrowError();
+		expect(() => render(<Test />, { withProviders: false })).toThrow();
 
 		console.error.mockRestore();
 	});
@@ -58,7 +58,7 @@ describe("Configuration Context", () => {
 
 		expect(getByTestId("Configuration__consumer")).toBeInTheDocument();
 
-		await waitFor(() => expect(() => getByTestId("Configuration__list")).toThrowError(/Unable to find/));
+		await waitFor(() => expect(() => getByTestId("Configuration__list")).toThrow(/Unable to find/));
 
 		fireEvent.click(getByTestId("Configuration__consumer"));
 

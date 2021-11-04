@@ -360,7 +360,7 @@ describe("Exchange", () => {
 			expect(() => screen.getAllByTestId("TableRow")).toThrow(/Unable to find an element by/);
 		});
 
-		expect(() => profile.exchangeTransactions().findById(exchangeTransaction.id())).toThrowError("Failed to find");
+		expect(() => profile.exchangeTransactions().findById(exchangeTransaction.id())).toThrow("Failed to find");
 
 		expect(toastSpy).toHaveBeenCalled();
 

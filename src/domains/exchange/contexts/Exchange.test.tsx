@@ -17,7 +17,7 @@ describe("Exchange Context", () => {
 			return <span>provider counts: {exchangeProviders.length}</span>;
 		};
 
-		expect(() => render(<Test />)).toThrowError();
+		expect(() => render(<Test />)).toThrow();
 
 		console.error.mockRestore();
 	});

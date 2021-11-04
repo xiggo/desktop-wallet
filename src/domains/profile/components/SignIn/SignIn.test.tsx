@@ -58,7 +58,7 @@ describe("SignIn", () => {
 		fireEvent.click(getByTestId("SignIn__cancel-button"));
 
 		await waitFor(() => {
-			expect(onCancel).toBeCalled();
+			expect(onCancel).toHaveBeenCalled();
 		});
 	});
 
@@ -75,7 +75,7 @@ describe("SignIn", () => {
 		fireEvent.click(getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
-			expect(onSuccess).toBeCalled();
+			expect(onSuccess).toHaveBeenCalled();
 		});
 	});
 

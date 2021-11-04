@@ -144,7 +144,7 @@ describe("WalletHeader", () => {
 		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
 		await findByText(wallet.address());
 
-		expect(() => getByTestId("WalletHeader__currency-balance")).toThrowError(/Unable to find/);
+		expect(() => getByTestId("WalletHeader__currency-balance")).toThrow(/Unable to find/);
 
 		networkSpy.mockRestore();
 	});

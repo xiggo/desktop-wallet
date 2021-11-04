@@ -36,7 +36,7 @@ describe("SelectProfileImage", () => {
 
 		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
-		expect(onSelect).toBeCalled();
+		expect(onSelect).toHaveBeenCalled();
 	});
 
 	it("should handle upload file", async () => {
@@ -64,7 +64,7 @@ describe("SelectProfileImage", () => {
 			}),
 		).resolves.not.toThrow();
 
-		await waitFor(() => expect(onSelect).toBeCalled());
+		await waitFor(() => expect(onSelect).toHaveBeenCalled());
 	});
 
 	it("should not allow to upload an invalid file image", async () => {
@@ -107,6 +107,6 @@ describe("SelectProfileImage", () => {
 		button.addEventListener("click", openFileDialog as any);
 		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
-		await waitFor(() => expect(onSelect).not.toBeCalled());
+		await waitFor(() => expect(onSelect).not.toHaveBeenCalled());
 	});
 });

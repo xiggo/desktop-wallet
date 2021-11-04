@@ -34,7 +34,7 @@ describe("WalletsControls", () => {
 
 		fireEvent.click(toggle);
 
-		expect(function_).toBeCalled();
+		expect(function_).toHaveBeenCalled();
 	});
 
 	it("should ignore event emition for grid view if callback not provided", () => {
@@ -44,7 +44,7 @@ describe("WalletsControls", () => {
 
 		fireEvent.click(toggle);
 
-		expect(function_).not.toBeCalled();
+		expect(function_).not.toHaveBeenCalled();
 	});
 
 	it("should ignore grid event if already on grid view", () => {
@@ -59,7 +59,7 @@ describe("WalletsControls", () => {
 
 		fireEvent.click(toggle);
 
-		expect(function_).not.toBeCalled();
+		expect(function_).not.toHaveBeenCalled();
 	});
 
 	it("should emit event for list view selection and call callback if provided", () => {
@@ -74,7 +74,7 @@ describe("WalletsControls", () => {
 
 		fireEvent.click(toggle);
 
-		expect(function_).toBeCalled();
+		expect(function_).toHaveBeenCalled();
 	});
 
 	it("should ignore event emition for list view if callback not provided", () => {
@@ -84,7 +84,7 @@ describe("WalletsControls", () => {
 
 		fireEvent.click(toggle);
 
-		expect(function_).not.toBeCalled();
+		expect(function_).not.toHaveBeenCalled();
 	});
 
 	it("should ignore list event if already on grid view", () => {
@@ -94,6 +94,6 @@ describe("WalletsControls", () => {
 
 		fireEvent.click(toggle);
 
-		expect(function_).not.toBeCalled();
+		expect(function_).not.toHaveBeenCalled();
 	});
 });

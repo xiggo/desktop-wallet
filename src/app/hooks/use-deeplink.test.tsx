@@ -38,7 +38,7 @@ describe("useDeeplink hook", () => {
 		);
 
 		expect(getByText("Deeplink tester")).toBeInTheDocument();
-		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to select a profile", () => {
@@ -60,7 +60,7 @@ describe("useDeeplink hook", () => {
 
 		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE);
-		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to coin not supported", () => {
@@ -84,7 +84,7 @@ describe("useDeeplink hook", () => {
 
 		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenLastCalledWith('Invalid URI: Coin "doge" not supported.');
-		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to network not supported", () => {
@@ -108,7 +108,7 @@ describe("useDeeplink hook", () => {
 
 		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" not supported.');
-		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to no senders available", () => {
@@ -134,7 +134,7 @@ describe("useDeeplink hook", () => {
 		expect(toastErrorSpy).toHaveBeenCalledWith(
 			'Invalid URI: The current profile has no wallets available for the "ark.mainnet" network',
 		);
-		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and navigate", () => {
@@ -162,7 +162,7 @@ describe("useDeeplink hook", () => {
 
 		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(history.location.pathname).toEqual(`/profiles/${getDefaultProfileId()}/send-transfer`);
-		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and navigate when no method found", () => {
@@ -187,7 +187,7 @@ describe("useDeeplink hook", () => {
 
 		expect(getByText("Deeplink tester")).toBeInTheDocument();
 		expect(history.location.pathname).toEqual("/");
-		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 
 	it("should not use create", () => {
@@ -205,6 +205,6 @@ describe("useDeeplink hook", () => {
 		);
 
 		expect(getByText("Deeplink tester")).toBeInTheDocument();
-		expect(ipcRenderer.on).toBeCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 });

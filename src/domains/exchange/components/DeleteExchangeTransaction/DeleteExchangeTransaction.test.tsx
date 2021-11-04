@@ -79,6 +79,6 @@ describe("DeleteExchangeTransaction", () => {
 
 		await waitFor(() => expect(onDelete).toHaveBeenCalled());
 
-		expect(() => profile.exchangeTransactions().findById(exchangeTransaction.id())).toThrowError("Failed to find");
+		expect(() => profile.exchangeTransactions().findById(exchangeTransaction.id())).toThrow("Failed to find");
 	});
 });
