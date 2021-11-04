@@ -14,7 +14,7 @@ describe("Input", () => {
 		const { asFragment, getByTestId } = render(<Input as="select" />);
 		const input = getByTestId("Input");
 
-		expect(input.tagName).toEqual("SELECT");
+		expect(input.tagName).toBe("SELECT");
 
 		expect(asFragment()).toMatchSnapshot();
 	});

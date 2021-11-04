@@ -36,7 +36,7 @@ describe("PluginLoaderFileSystem", () => {
 	});
 
 	it("should find source directory", () => {
-		expect(subject.find("src/tests/fixtures/plugins/packages/plugin-test-custom-button")).not.toBeUndefined();
+		expect(subject.find("src/tests/fixtures/plugins/packages/plugin-test-custom-button")).toBeDefined();
 	});
 
 	it("should remove a valid folder", () => {

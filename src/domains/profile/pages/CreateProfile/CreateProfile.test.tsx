@@ -124,7 +124,7 @@ describe("CreateProfile", () => {
 
 		const profile = env.profiles().first();
 
-		expect(profile.name()).toEqual("test profile 1");
+		expect(profile.name()).toBe("test profile 1");
 		expect(profile.settings().all()).toEqual({
 			...baseSettings,
 			AVATAR: expect.stringMatching(BASE64_REGEX),

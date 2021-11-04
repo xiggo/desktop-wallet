@@ -108,7 +108,7 @@ describe("Use Message Signer Hook", () => {
 
 		await expect(
 			result.current.sign(wallet, "message", undefined, undefined, undefined, { abortSignal }),
-		).rejects.toEqual("ERR_ABORT");
+		).rejects.toBe("ERR_ABORT");
 
 		jest.clearAllMocks();
 	});

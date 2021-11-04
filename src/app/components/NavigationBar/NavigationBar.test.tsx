@@ -86,7 +86,7 @@ describe("NavigationBar", () => {
 
 		fireEvent.click(getByText("test"));
 
-		expect(history.location.pathname).toEqual("/test");
+		expect(history.location.pathname).toBe("/test");
 	});
 
 	it("should open user actions dropdown on click", () => {

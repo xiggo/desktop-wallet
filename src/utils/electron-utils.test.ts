@@ -12,7 +12,7 @@ describe("Electron utils", () => {
 		it("should set theme source", () => {
 			setThemeSource("theme");
 
-			expect(electron.remote.nativeTheme.themeSource).toEqual("theme");
+			expect(electron.remote.nativeTheme.themeSource).toBe("theme");
 		});
 	});
 
@@ -119,7 +119,7 @@ describe("Electron utils", () => {
 				filePath: undefined,
 			}));
 
-			await expect(saveFile()).resolves.toEqual(undefined);
+			await expect(saveFile()).resolves.toBeUndefined();
 		});
 
 		it("should return the basename", async () => {
@@ -127,7 +127,7 @@ describe("Electron utils", () => {
 				filePath: "filename.txt",
 			}));
 
-			await expect(saveFile("raw", "filename", { returnBasename: true })).resolves.toEqual("filename.txt");
+			await expect(saveFile("raw", "filename", { returnBasename: true })).resolves.toBe("filename.txt");
 		});
 
 		describe("with filter parameter", () => {

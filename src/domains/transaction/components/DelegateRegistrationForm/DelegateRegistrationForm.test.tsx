@@ -113,7 +113,7 @@ describe("DelegateRegistrationForm", () => {
 		fireEvent.change(screen.getByTestId("Input__username"), { target: { value: "test_delegate" } });
 
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
-		await waitFor(() => expect(form?.getValues("username")).toEqual("test_delegate"));
+		await waitFor(() => expect(form?.getValues("username")).toBe("test_delegate"));
 	});
 
 	it("should set fee", async () => {

@@ -68,7 +68,7 @@ describe("InputAddress", () => {
 
 		await waitForNextUpdate();
 
-		expect(errors.address?.message).toBe(undefined);
+		expect(errors.address?.message).toBeUndefined();
 		expect(onValidAddress).toHaveBeenCalledWith(validAddress);
 	});
 

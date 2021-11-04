@@ -31,7 +31,7 @@ describe("RouterView", () => {
 			</MemoryRouter>,
 		);
 
-		expect(getByTestId("RouterView__wrapper").tagName).toEqual("SECTION");
+		expect(getByTestId("RouterView__wrapper").tagName).toBe("SECTION");
 		expect(asFragment()).toMatchSnapshot();
 	});
 

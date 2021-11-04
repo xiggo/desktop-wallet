@@ -108,7 +108,7 @@ describe("Environment Context", () => {
 
 		fireEvent.click(getByRole("button"));
 
-		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Name)).toEqual("bar"));
+		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Name)).toBe("bar"));
 	});
 
 	it("should not persist on e2e", async () => {

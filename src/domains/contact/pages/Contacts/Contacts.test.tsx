@@ -307,8 +307,8 @@ describe("Contacts", () => {
 
 		fireEvent.click(screen.getAllByTestId("ContactListItem__send-button")[0]);
 
-		expect(history.location.pathname).toEqual("/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer");
-		expect(history.location.search).toEqual(
+		expect(history.location.pathname).toBe("/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/send-transfer");
+		expect(history.location.search).toBe(
 			"?coin=ARK&network=ark.devnet&recipient=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 		);
 

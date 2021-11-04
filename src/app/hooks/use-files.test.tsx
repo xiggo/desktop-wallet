@@ -10,11 +10,11 @@ describe("useFiles", () => {
 
 		const { content, name, extension } = result.current.readFileContents("filePath");
 
-		expect(extension).toEqual("");
-		expect(name).toEqual("filePath");
+		expect(extension).toBe("");
+		expect(name).toBe("filePath");
 
 		expect(content).toBeInstanceOf(Buffer);
-		expect(content.toString()).toEqual("test mnemonic");
+		expect(content.toString()).toBe("test mnemonic");
 	});
 
 	it("should open file", () => {

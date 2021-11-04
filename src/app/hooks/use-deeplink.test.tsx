@@ -186,7 +186,7 @@ describe("useDeeplink hook", () => {
 		);
 
 		expect(getByText("Deeplink tester")).toBeInTheDocument();
-		expect(history.location.pathname).toEqual("/");
+		expect(history.location.pathname).toBe("/");
 		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
 	});
 

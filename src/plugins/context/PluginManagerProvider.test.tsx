@@ -246,7 +246,7 @@ describe("PluginManagerProvider", () => {
 			}),
 		);
 
-		expect(manager.plugins().findById("test-plugin")).not.toBeUndefined();
+		expect(manager.plugins().findById("test-plugin")).toBeDefined();
 
 		ipcRendererSpy.mockRestore();
 	});

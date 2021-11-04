@@ -596,7 +596,7 @@ describe("PluginManager", () => {
 		);
 
 		expect(history.location.pathname).toEqual(`/profiles/${fixtureProfileId}/plugins/details`);
-		expect(history.location.search).toEqual("?pluginId=@dated/delegate-calculator-wallet-plugin");
+		expect(history.location.search).toBe("?pluginId=@dated/delegate-calculator-wallet-plugin");
 	});
 
 	it("should open the plugin view page", async () => {

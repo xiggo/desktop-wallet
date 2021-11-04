@@ -267,7 +267,7 @@ describe("Welcome", () => {
 
 		fireEvent.click(getByText(translations.CREATE_PROFILE));
 
-		expect(history.location.pathname).toEqual("/profiles/create");
+		expect(history.location.pathname).toBe("/profiles/create");
 		expect(asFragment()).toMatchSnapshot();
 	});
 

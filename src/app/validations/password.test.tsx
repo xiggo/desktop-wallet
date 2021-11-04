@@ -17,7 +17,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("")).resolves.toEqual(true);
+		await expect(passwordValidation.password().validate("")).resolves.toBe(true);
 	});
 
 	it("should require at least 1 lowercase character", async () => {
@@ -89,7 +89,7 @@ describe("Password Validation", () => {
 
 		pwnd.mockImplementation(() => Promise.resolve(0));
 
-		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toEqual(true);
+		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toBe(true);
 		expect(pwnd).toHaveBeenCalledWith("S3cUr3!Pas#w0rd");
 	});
 
@@ -100,7 +100,7 @@ describe("Password Validation", () => {
 
 		pwnd.mockImplementation(() => Promise.reject());
 
-		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toEqual(true);
+		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toBe(true);
 	});
 
 	it("should require different password than the old password", async () => {
@@ -112,7 +112,7 @@ describe("Password Validation", () => {
 		await expect(passwordRule.validate("S3cUr3!Pas#w0rd")).resolves.toEqual(
 			t("COMMON.VALIDATION.PASSWORD_SAME_AS_OLD"),
 		);
-		await expect(passwordRule.validate("S3cUr3!Pas#w0rd2different")).resolves.toEqual(true);
+		await expect(passwordRule.validate("S3cUr3!Pas#w0rd2different")).resolves.toBe(true);
 	});
 
 	it("should match password and confirm password", () => {
@@ -122,7 +122,7 @@ describe("Password Validation", () => {
 		const passwordValidation = password(t);
 		const confirmPassword = passwordValidation.confirmPassword("password");
 
-		expect(confirmPassword.validate("password")).toEqual(true);
+		expect(confirmPassword.validate("password")).toBe(true);
 	});
 
 	it("should fail on password and confirm password mismatch", () => {
@@ -156,8 +156,8 @@ describe("Password Validation", () => {
 		const passwordValidation = password(t);
 		const confirmPassword = passwordValidation.confirmOptionalPassword();
 
-		expect(confirmPassword.validate()).toEqual(true);
-		expect(confirmPassword.validate()).toEqual(true);
+		expect(confirmPassword.validate()).toBe(true);
+		expect(confirmPassword.validate()).toBe(true);
 		expect(confirmPassword.validate("password")).toEqual(
 			t("COMMON.VALIDATION.FIELD_REQUIRED", {
 				field: t("SETTINGS.GENERAL.PERSONAL.PASSWORD"),

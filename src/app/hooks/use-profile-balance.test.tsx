@@ -15,7 +15,7 @@ describe("useProfileBalance", () => {
 			result: { current },
 		} = renderHook(() => useProfileBalance({ profile }), { wrapper });
 
-		expect(current.convertedBalance).toEqual(0);
+		expect(current.convertedBalance).toBe(0);
 	});
 
 	it("should get zero balance if loading", async () => {
@@ -26,7 +26,7 @@ describe("useProfileBalance", () => {
 			result: { current },
 		} = renderHook(() => useProfileBalance({ isLoading: true, profile }), { wrapper });
 
-		expect(current.convertedBalance).toEqual(0);
+		expect(current.convertedBalance).toBe(0);
 	});
 
 	it("should update balance", async () => {
@@ -39,7 +39,7 @@ describe("useProfileBalance", () => {
 			result: { current },
 		} = renderHook(() => useProfileBalance({ profile }), { wrapper });
 
-		expect(current.convertedBalance).toEqual(10_000);
+		expect(current.convertedBalance).toBe(10_000);
 
 		profileConvertedBalanceMock.mockRestore();
 	});
@@ -57,7 +57,7 @@ describe("useProfileBalance", () => {
 			result: { current },
 		} = renderHook(() => useProfileBalance({ profile }), { wrapper });
 
-		expect(current.convertedBalance).toEqual(0);
+		expect(current.convertedBalance).toBe(0);
 
 		profileConvertedBalanceMock.mockRestore();
 		mockProfileStatus.mockRestore();
@@ -73,7 +73,7 @@ describe("useProfileBalance", () => {
 			result: { current },
 		} = renderHook(() => useProfileBalance({ profile }), { wrapper });
 
-		expect(current.convertedBalance).toEqual(0);
+		expect(current.convertedBalance).toBe(0);
 
 		profileConvertedBalanceMock.mockRestore();
 	});

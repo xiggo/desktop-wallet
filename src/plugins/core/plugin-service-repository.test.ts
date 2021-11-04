@@ -15,6 +15,6 @@ describe("Plugin Service Repository", () => {
 		const repository = new PluginServiceRepository();
 		repository.register([new EventsPluginService()]);
 
-		expect(repository.findById(PluginServiceIdentifier.Events)).not.toBeUndefined();
+		expect(repository.findById(PluginServiceIdentifier.Events)).toBeDefined();
 	});
 });

@@ -86,7 +86,7 @@ describe("HttpPluginService", () => {
 		manager.plugins().push(ctrl);
 		manager.plugins().runAllEnabled(profile);
 
-		await waitFor(() => expect(response).toBe(undefined));
+		await waitFor(() => expect(response).toBeUndefined());
 
 		expect(consoleSpy).toHaveBeenCalled();
 

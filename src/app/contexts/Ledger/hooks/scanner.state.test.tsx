@@ -124,6 +124,6 @@ describe("Scanner State", () => {
 			});
 		});
 
-		await waitFor(() => expect(result.current[0].error).toEqual("Failed"));
+		await waitFor(() => expect(result.current[0].error).toBe("Failed"));
 	});
 });

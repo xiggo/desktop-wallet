@@ -116,7 +116,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		const newProfile = env.profiles().findById(emptyProfile.id());
 
-		await waitFor(() => expect(newProfile.name()).toEqual("test profile 2"));
+		await waitFor(() => expect(newProfile.name()).toBe("test profile 2"));
 
 		expect(newProfile.usesPassword()).toBe(false);
 		expect(asFragment()).toMatchSnapshot();

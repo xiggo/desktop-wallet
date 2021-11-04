@@ -42,7 +42,7 @@ describe("Use MultiSignature Status Hook", () => {
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
-		expect(result.current.status.value).toEqual("isAwaitingOurSignature");
+		expect(result.current.status.value).toBe("isAwaitingOurSignature");
 
 		jest.clearAllMocks();
 	});
@@ -53,7 +53,7 @@ describe("Use MultiSignature Status Hook", () => {
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
-		expect(result.current.status.value).toEqual("isAwaitingOtherSignatures");
+		expect(result.current.status.value).toBe("isAwaitingOtherSignatures");
 
 		jest.clearAllMocks();
 	});
@@ -65,7 +65,7 @@ describe("Use MultiSignature Status Hook", () => {
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
-		expect(result.current.status.value).toEqual("isAwaitingConfirmation");
+		expect(result.current.status.value).toBe("isAwaitingConfirmation");
 
 		jest.clearAllMocks();
 	});
@@ -78,7 +78,7 @@ describe("Use MultiSignature Status Hook", () => {
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
-		expect(result.current.status.value).toEqual("isMultiSignatureReady");
+		expect(result.current.status.value).toBe("isMultiSignatureReady");
 
 		jest.clearAllMocks();
 	});
@@ -91,7 +91,7 @@ describe("Use MultiSignature Status Hook", () => {
 
 		const { result } = renderHook(() => useMultiSignatureStatus({ transaction, wallet }));
 
-		expect(result.current.status.value).toEqual("isAwaitingFinalSignature");
+		expect(result.current.status.value).toBe("isAwaitingFinalSignature");
 
 		jest.clearAllMocks();
 	});

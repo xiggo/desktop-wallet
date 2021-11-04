@@ -56,6 +56,6 @@ describe("useNetworkStatus", () => {
 			eventMap.online();
 		});
 
-		expect(result.current.valueOf()).toEqual(true);
+		expect(result.current.valueOf()).toBe(true);
 	});
 });

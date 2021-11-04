@@ -38,7 +38,7 @@ describe("useProfileImport", () => {
 		await act(async () => {
 			const profile = await result.current.importProfile({ file: dwe });
 
-			expect(profile?.name()).toEqual("test");
+			expect(profile?.name()).toBe("test");
 		});
 	});
 
@@ -51,7 +51,7 @@ describe("useProfileImport", () => {
 				password: "S3cUrePa$sword",
 			});
 
-			expect(profile?.name()).toEqual("test");
+			expect(profile?.name()).toBe("test");
 		});
 	});
 
@@ -95,7 +95,7 @@ describe("useProfileImport", () => {
 		await act(async () => {
 			const profile = await result.current.importProfile({ file: json });
 
-			expect(profile?.wallets().count()).toEqual(2);
+			expect(profile?.wallets().count()).toBe(2);
 		});
 	});
 

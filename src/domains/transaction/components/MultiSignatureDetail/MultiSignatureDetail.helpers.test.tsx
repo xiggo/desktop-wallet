@@ -45,7 +45,7 @@ describe("MultiSignatureDetail Helpers", () => {
 	it("should extract multisignature info", () => {
 		const { min, publicKeys } = getMultiSignatureInfo(transaction);
 
-		expect(min).toEqual(2);
+		expect(min).toBe(2);
 		expect(publicKeys).toHaveLength(0);
 	});
 
@@ -58,7 +58,7 @@ describe("MultiSignatureDetail Helpers", () => {
 
 		const { min, publicKeys } = getMultiSignatureInfo(transaction);
 
-		expect(min).toEqual(2);
+		expect(min).toBe(2);
 		expect(publicKeys).toHaveLength(0);
 	});
 

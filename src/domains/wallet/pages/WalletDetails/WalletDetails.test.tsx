@@ -499,14 +499,14 @@ describe("WalletDetails", () => {
 
 		fireEvent.click(deleteWalletOption);
 
-		expect(profile.wallets().count()).toEqual(4);
+		expect(profile.wallets().count()).toBe(4);
 		expect(profile.notifications().transactions().recent()).toHaveLength(2);
 
 		await findByTestId("modal__inner");
 
 		fireEvent.click(getByTestId("DeleteResource__submit-button"));
 
-		await waitFor(() => expect(profile.wallets().count()).toEqual(3));
+		await waitFor(() => expect(profile.wallets().count()).toBe(3));
 
 		expect(profile.notifications().transactions().recent()).toHaveLength(0);
 	});

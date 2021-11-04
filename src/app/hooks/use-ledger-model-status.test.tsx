@@ -13,7 +13,7 @@ describe("useLedgerModelStatus", () => {
 				}),
 			);
 
-			expect(result.current.isLedgerModelSupported).toEqual(false);
+			expect(result.current.isLedgerModelSupported).toBe(false);
 		});
 
 		it("should support NanoS", () => {
@@ -21,7 +21,7 @@ describe("useLedgerModelStatus", () => {
 				useLedgerModelStatus({ connectedModel: Contracts.WalletLedgerModel.NanoS }),
 			);
 
-			expect(result.current.isLedgerModelSupported).toEqual(true);
+			expect(result.current.isLedgerModelSupported).toBe(true);
 		});
 
 		it("should support NanoX", () => {
@@ -29,7 +29,7 @@ describe("useLedgerModelStatus", () => {
 				useLedgerModelStatus({ connectedModel: Contracts.WalletLedgerModel.NanoX }),
 			);
 
-			expect(result.current.isLedgerModelSupported).toEqual(true);
+			expect(result.current.isLedgerModelSupported).toBe(true);
 		});
 
 		it("should support only NanoX", () => {
@@ -40,7 +40,7 @@ describe("useLedgerModelStatus", () => {
 				}),
 			);
 
-			expect(result.current.isLedgerModelSupported).toEqual(true);
+			expect(result.current.isLedgerModelSupported).toBe(true);
 		});
 
 		it("should support only NanoS", () => {
@@ -51,7 +51,7 @@ describe("useLedgerModelStatus", () => {
 				}),
 			);
 
-			expect(result.current.isLedgerModelSupported).toEqual(true);
+			expect(result.current.isLedgerModelSupported).toBe(true);
 		});
 
 		it("should return false if supported and connected models don't match", () => {
@@ -62,7 +62,7 @@ describe("useLedgerModelStatus", () => {
 				}),
 			);
 
-			expect(result.current.isLedgerModelSupported).toEqual(false);
+			expect(result.current.isLedgerModelSupported).toBe(false);
 		});
 	});
 });

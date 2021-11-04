@@ -155,7 +155,7 @@ describe("Use Transaction Builder with Ledger", () => {
 			}
 		});
 
-		await waitFor(() => expect(error).toEqual("ERR_ABORT"));
+		await waitFor(() => expect(error).toBe("ERR_ABORT"));
 
 		jest.clearAllMocks();
 	});

@@ -35,8 +35,8 @@ describe("useWalletConfig", () => {
 		);
 
 		expect(current.selectedNetworkIds).toEqual(defaultNetworkIds);
-		expect(current.walletsDisplayType).toEqual("all");
-		expect(current.viewType).toEqual("grid");
+		expect(current.walletsDisplayType).toBe("all");
+		expect(current.viewType).toBe("grid");
 	});
 
 	it("should render with ledger wallet display type", async () => {
@@ -53,7 +53,7 @@ describe("useWalletConfig", () => {
 		});
 
 		await waitFor(() => {
-			expect(result.current.walletsDisplayType).toEqual("ledger");
+			expect(result.current.walletsDisplayType).toBe("ledger");
 		});
 	});
 
@@ -71,7 +71,7 @@ describe("useWalletConfig", () => {
 		});
 
 		await waitFor(() => {
-			expect(result.current.walletsDisplayType).toEqual("starred");
+			expect(result.current.walletsDisplayType).toBe("starred");
 		});
 	});
 

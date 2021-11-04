@@ -101,7 +101,7 @@ describe("useQRCode hook", () => {
 
 		await waitForNextUpdate();
 
-		await waitFor(() => expect(result.current.uri).toBe(undefined));
-		await waitFor(() => expect(result.current.image).toBe(undefined));
+		await waitFor(() => expect(result.current.uri).toBeUndefined());
+		await waitFor(() => expect(result.current.image).toBeUndefined());
 	});
 });

@@ -26,6 +26,6 @@ describe("useScroll", () => {
 			eventMap.scroll();
 		});
 
-		expect(result.current.valueOf()).toEqual(0);
+		expect(result.current.valueOf()).toBe(0);
 	});
 });

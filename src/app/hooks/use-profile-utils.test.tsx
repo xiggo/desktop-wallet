@@ -51,14 +51,14 @@ describe("useProfileUtils", () => {
 			result: { current },
 		} = renderHook(() => useProfileUtils(env), { wrapper });
 
-		expect(current.getProfileStoredPassword(profile)).toEqual(undefined);
-		expect(current.getProfileStoredPassword(passwordLessProfile)).toEqual(undefined);
+		expect(current.getProfileStoredPassword(profile)).toBeUndefined();
+		expect(current.getProfileStoredPassword(passwordLessProfile)).toBeUndefined();
 
 		memoryPasswordMock.mockRestore();
 
 		const passwordMock = jest.spyOn(profile.password(), "get").mockImplementation(() => "password");
 
-		expect(current.getProfileStoredPassword(profile)).toEqual("password");
+		expect(current.getProfileStoredPassword(profile)).toBe("password");
 
 		mockUsesPassword.mockRestore();
 		mockPasswordLessProfile.mockRestore();
@@ -76,7 +76,7 @@ describe("useProfileUtils", () => {
 
 		await profile.wallets().restore();
 
-		expect(current.getErroredNetworks(profile).hasErroredNetworks).toEqual(false);
+		expect(current.getErroredNetworks(profile).hasErroredNetworks).toBe(false);
 		expect(current.getErroredNetworks(profile).erroredNetworks).toHaveLength(0);
 	});
 
@@ -90,7 +90,7 @@ describe("useProfileUtils", () => {
 			result: { current },
 		} = renderHook(() => useProfileUtils(env), { wrapper });
 
-		expect(current.getErroredNetworks(profile).hasErroredNetworks).toEqual(true);
+		expect(current.getErroredNetworks(profile).hasErroredNetworks).toBe(true);
 		expect(current.getErroredNetworks(profile).erroredNetworks).toHaveLength(1);
 
 		walletRestoreMock.mockRestore();

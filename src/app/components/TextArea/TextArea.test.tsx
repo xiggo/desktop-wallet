@@ -8,7 +8,7 @@ describe("TextArea", () => {
 		const { getByTestId, asFragment } = render(<TextArea ref={React.createRef()} />);
 		const textarea = getByTestId("TextArea");
 
-		expect(textarea.tagName).toEqual("TEXTAREA");
+		expect(textarea.tagName).toBe("TEXTAREA");
 		expect(asFragment()).toMatchSnapshot();
 	});
 

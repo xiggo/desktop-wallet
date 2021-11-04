@@ -5,7 +5,7 @@ describe("Transaction utils", () => {
 		it("should return isNoDeviceError", () => {
 			const error = isNoDeviceError("no device found");
 
-			expect(error).toEqual(true);
+			expect(error).toBe(true);
 		});
 	});
 
@@ -13,7 +13,7 @@ describe("Transaction utils", () => {
 		it("should return isRejectionError", () => {
 			const error = isRejectionError("Condition of use not satisfied");
 
-			expect(error).toEqual(true);
+			expect(error).toBe(true);
 		});
 	});
 

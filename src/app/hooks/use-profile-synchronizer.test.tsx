@@ -44,7 +44,7 @@ describe("useProfileSyncStatus", () => {
 			result: { current },
 		} = renderHook(() => useProfileSyncStatus(), { wrapper });
 
-		expect(current.shouldRestore(profile)).toEqual(true);
+		expect(current.shouldRestore(profile)).toBe(true);
 
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 
@@ -61,10 +61,10 @@ describe("useProfileSyncStatus", () => {
 			result: { current },
 		} = renderHook(() => useProfileSyncStatus(), { wrapper });
 
-		expect(current.isIdle()).toEqual(true);
-		expect(current.shouldRestore(profile)).toEqual(false);
-		expect(current.shouldSync()).toEqual(true);
-		expect(current.shouldMarkCompleted()).toEqual(false);
+		expect(current.isIdle()).toBe(true);
+		expect(current.shouldRestore(profile)).toBe(false);
+		expect(current.shouldSync()).toBe(true);
+		expect(current.shouldMarkCompleted()).toBe(false);
 	});
 
 	it("#restoring", async () => {
@@ -81,10 +81,10 @@ describe("useProfileSyncStatus", () => {
 			current.setStatus("restoring");
 		});
 
-		expect(current.isIdle()).toEqual(false);
-		expect(current.shouldRestore(profile)).toEqual(false);
-		expect(current.shouldSync()).toEqual(false);
-		expect(current.shouldMarkCompleted()).toEqual(false);
+		expect(current.isIdle()).toBe(false);
+		expect(current.shouldRestore(profile)).toBe(false);
+		expect(current.shouldSync()).toBe(false);
+		expect(current.shouldMarkCompleted()).toBe(false);
 	});
 
 	it("#restored", async () => {
@@ -101,10 +101,10 @@ describe("useProfileSyncStatus", () => {
 			current.markAsRestored(profile.id());
 		});
 
-		expect(current.isIdle()).toEqual(false);
-		expect(current.shouldRestore(profile)).toEqual(false);
-		expect(current.shouldSync()).toEqual(true);
-		expect(current.shouldMarkCompleted()).toEqual(false);
+		expect(current.isIdle()).toBe(false);
+		expect(current.shouldRestore(profile)).toBe(false);
+		expect(current.shouldSync()).toBe(true);
+		expect(current.shouldMarkCompleted()).toBe(false);
 	});
 
 	it("#syncing", async () => {
@@ -122,10 +122,10 @@ describe("useProfileSyncStatus", () => {
 			current.setStatus("syncing");
 		});
 
-		expect(current.isIdle()).toEqual(false);
-		expect(current.shouldRestore(profile)).toEqual(false);
-		expect(current.shouldSync()).toEqual(false);
-		expect(current.shouldMarkCompleted()).toEqual(false);
+		expect(current.isIdle()).toBe(false);
+		expect(current.shouldRestore(profile)).toBe(false);
+		expect(current.shouldSync()).toBe(false);
+		expect(current.shouldMarkCompleted()).toBe(false);
 	});
 
 	it("#synced", async () => {
@@ -142,10 +142,10 @@ describe("useProfileSyncStatus", () => {
 			current.setStatus("synced");
 		});
 
-		expect(current.isIdle()).toEqual(false);
-		expect(current.shouldRestore(profile)).toEqual(false);
-		expect(current.shouldSync()).toEqual(false);
-		expect(current.shouldMarkCompleted()).toEqual(true);
+		expect(current.isIdle()).toBe(false);
+		expect(current.shouldRestore(profile)).toBe(false);
+		expect(current.shouldSync()).toBe(false);
+		expect(current.shouldMarkCompleted()).toBe(true);
 	});
 
 	it("#completed", async () => {
@@ -162,10 +162,10 @@ describe("useProfileSyncStatus", () => {
 			current.setStatus("completed");
 		});
 
-		expect(current.isIdle()).toEqual(false);
-		expect(current.shouldRestore(profile)).toEqual(false);
-		expect(current.shouldSync()).toEqual(false);
-		expect(current.shouldMarkCompleted()).toEqual(false);
+		expect(current.isIdle()).toBe(false);
+		expect(current.shouldRestore(profile)).toBe(false);
+		expect(current.shouldSync()).toBe(false);
+		expect(current.shouldMarkCompleted()).toBe(false);
 	});
 });
 
@@ -215,7 +215,7 @@ describe("useProfileSynchronizer", () => {
 			jest.runAllTimers();
 		});
 
-		await waitFor(() => expect(history.location.pathname).toEqual("/"));
+		await waitFor(() => expect(history.location.pathname).toBe("/"));
 		await waitFor(() => expect(() => getByTestId("ProfileSynced")).toThrow(), { timeout: 4000 });
 
 		jest.clearAllTimers();
@@ -366,13 +366,13 @@ describe("useProfileSynchronizer", () => {
 		await renderAct(async () => {
 			configuration.setConfiguration({ profileIsSyncingWallets: true });
 		});
-		await waitFor(() => expect(configuration.profileIsSyncingWallets).toEqual(true));
+		await waitFor(() => expect(configuration.profileIsSyncingWallets).toBe(true));
 
 		await renderAct(async () => {
 			configuration.setConfiguration({ profileIsSyncingWallets: false });
 		});
 
-		await waitFor(() => expect(configuration.profileIsSyncingWallets).toEqual(false));
+		await waitFor(() => expect(configuration.profileIsSyncingWallets).toBe(false));
 		await waitFor(() => expect(profileErroredNetworks).toHaveLength(1));
 
 		mockWalletSyncStatus.mockRestore();
@@ -404,11 +404,11 @@ describe("useProfileSynchronizer", () => {
 
 		await screen.findByTestId("ResetSyncProfile");
 
-		await waitFor(() => expect(configuration.isProfileInitialSync).toEqual(false));
+		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(false));
 
 		fireEvent.click(screen.getByTestId("ResetSyncProfile"));
 
-		await waitFor(() => expect(configuration.isProfileInitialSync).toEqual(true));
+		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(true));
 	});
 
 	it("should sync profile", async () => {
@@ -448,7 +448,7 @@ describe("useProfileRestore", () => {
 			result: { current },
 		} = renderHook(() => useProfileRestore(), { wrapper });
 
-		await expect(current.restoreProfile(profile)).resolves.toEqual(false);
+		await expect(current.restoreProfile(profile)).resolves.toBe(false);
 
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 	});
@@ -485,7 +485,7 @@ describe("useProfileRestore", () => {
 			isRestored = await current.restoreProfile(profile);
 		});
 
-		expect(isRestored).toEqual(true);
+		expect(isRestored).toBe(true);
 
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 		mockProfileFromUrl.mockRestore();
@@ -523,7 +523,7 @@ describe("useProfileRestore", () => {
 			isRestored = await current.restoreProfile(profile, "password");
 		});
 
-		expect(isRestored).toEqual(true);
+		expect(isRestored).toBe(true);
 
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 		mockProfileFromUrl.mockRestore();
@@ -595,7 +595,7 @@ describe("useProfileRestore", () => {
 			isRestored = await current.restoreProfile(profile);
 		});
 
-		expect(isRestored).toEqual(false);
+		expect(isRestored).toBe(false);
 
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 	});

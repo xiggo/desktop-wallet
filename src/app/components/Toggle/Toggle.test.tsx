@@ -43,7 +43,7 @@ describe("Toggle", () => {
 
 		fireEvent.change(toggle, { target: { checked: true } });
 
-		expect(toggle.checked).toEqual(true);
+		expect(toggle.checked).toBe(true);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });
