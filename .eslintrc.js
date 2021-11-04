@@ -98,6 +98,7 @@ module.exports = {
 		"jest/no-conditional-expect": "off",
 		"jest/no-done-callback": "off",
 		"jest/no-identical-title": "error",
+		"jest/prefer-todo": "error",
 		"jest/valid-expect": "off",
 		"jest/valid-expect-in-promise": "off",
 		"max-lines": ["warn", { max: 300, skipBlankLines: true, skipComments: true }],
