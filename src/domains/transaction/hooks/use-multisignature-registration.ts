@@ -91,7 +91,7 @@ export const useMultiSignatureRegistration = () => {
 
 		try {
 			transaction.generatedAddress = (
-				await wallet.coin().address().fromMultiSignature(minParticipants, publicKeys)
+				await wallet.coin().address().fromMultiSignature({ min: minParticipants, publicKeys, senderPublicKey })
 			).address;
 		} catch {
 			// We are using a coin that doesn't support multi-signature address derivation.

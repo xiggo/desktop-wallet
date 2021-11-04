@@ -40,7 +40,7 @@ export const MultiSignatureRegistrationDetail = ({ isOpen, transaction, onClose 
 			const { address } = await wallet
 				.coin()
 				.address()
-				.fromMultiSignature(transaction.min(), transaction.publicKeys());
+				.fromMultiSignature({ min: transaction.min(), publicKeys: transaction.publicKeys() });
 
 			setGeneratedAddress(address);
 		};

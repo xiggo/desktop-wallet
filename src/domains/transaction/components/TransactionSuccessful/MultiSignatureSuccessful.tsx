@@ -57,7 +57,11 @@ export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }
 			const { min, publicKeys } = getMultiSignatureInfo(transaction);
 
 			try {
-				const { address } = await senderWallet.coin().address().fromMultiSignature(min, publicKeys);
+				const { address } = await senderWallet
+					.coin()
+					.address()
+					.fromMultiSignature({ min, publicKeys, senderPublicKey: senderWallet.publicKey() });
+
 				setGeneratedAddress(address);
 				/* istanbul ignore next */
 			} catch {
