@@ -17,5 +17,5 @@
 		"target": "es2019",
 		"useUnknownInCatchVariables": false
 	},
-	"include": ["src", "public", "custom.d.ts"]
+	"include": ["src", "public", "custom.d.ts", "global.d.ts"]
 }

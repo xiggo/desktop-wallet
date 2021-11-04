@@ -131,9 +131,11 @@ const ExchangeTransactionsRowStatus: React.FC<ExchangeTransactionsRowStatusPrope
 	};
 
 	const { name, color } = getIcon(status);
-
+	const transactionStatus = (Contracts.ExchangeTransactionStatus[
+		status
+	] as keyof typeof Contracts.ExchangeTransactionStatus).toUpperCase();
 	return (
-		<Tooltip content={t(`EXCHANGE.STATUS.${Contracts.ExchangeTransactionStatus[status].toUpperCase()}`)}>
+		<Tooltip content={t(`EXCHANGE.STATUS.${transactionStatus}`)}>
 			<span>
 				<Icon name={name} size="lg" className={color} />
 			</span>

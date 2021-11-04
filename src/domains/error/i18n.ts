@@ -1,4 +1,4 @@
-export const translations: { [key: string]: any } = {
+export const translations = {
 	APPLICATION: {
 		DESCRIPTION: "It looks like something went wrong. Try visiting another page or reloading.",
 		RELOAD: "Reload",

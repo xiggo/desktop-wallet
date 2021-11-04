@@ -1,7 +1,7 @@
 import { Enums } from "@payvo/sdk";
 import { Modal } from "app/components/Modal";
 import { RecipientList } from "domains/transaction/components/RecipientList";
-import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
+import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
 	TransactionDetail,
 	TransactionExplorerLink,

@@ -1,4 +1,4 @@
-export const translations: { [key: string]: any } = {
+export const translations = {
 	DASHBOARD_PAGE: {
 		CHART: {
 			PERCENTAGES_LABEL: "Total Portfolio",

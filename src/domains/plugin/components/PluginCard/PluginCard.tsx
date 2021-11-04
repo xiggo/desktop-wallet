@@ -7,11 +7,12 @@ import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { PluginCategories } from "../../plugin.contracts";
 import { PluginImage } from "../PluginImage";
 
 interface PluginCardProperties {
 	actions?: DropdownOption[];
-	category?: string;
+	category?: PluginCategories;
 	plugin: any;
 	onClick?: () => void;
 	onSelect?: (action: any) => void;
@@ -20,7 +21,7 @@ interface PluginCardProperties {
 	showCategory?: boolean;
 }
 
-export const BlankPluginCard = ({ name, category }: { name?: string; category?: string }) => {
+export const BlankPluginCard = ({ name, category }: { name?: string; category?: PluginCategories }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -160,7 +161,7 @@ export const PluginCard = ({
 								<Icon name="Categories" size="lg" />
 
 								<span className="text-sm font-semibold">
-									{t(`PLUGINS.CATEGORIES.${plugin.category.toUpperCase()}`)}
+									{t(`PLUGINS.CATEGORIES.${(plugin.category as PluginCategories).toUpperCase()}`)}
 								</span>
 							</div>
 						)}

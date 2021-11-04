@@ -5,16 +5,17 @@ import { useEnvironmentContext } from "app/contexts";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { AVAILABLE_CATEGORIES } from "../../data";
+import { AVAILABLE_CATEGORIES } from "../../news.constants";
+import { AvailableNewsCategories } from "../../news.contracts";
 import { SelectCategory } from "./components/SelectCategory";
 
 interface Option {
-	name: string;
+	name: AvailableNewsCategories;
 	isSelected: boolean;
 }
 
 interface NewsOptionsProperties {
-	selectedCategories: string[];
+	selectedCategories: AvailableNewsCategories[];
 	selectedCoins: string[];
 	onSubmit?: (data: object) => void;
 }
@@ -30,7 +31,7 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSubmit }: New
 	const { t } = useTranslation();
 
 	const [categories, setCategories] = useState<Option[]>(
-		AVAILABLE_CATEGORIES.map((name: string) => ({
+		AVAILABLE_CATEGORIES.map((name) => ({
 			isSelected: selectedCategories.length === 0 || selectedCategories.includes(name),
 			name,
 		})),
@@ -86,8 +87,8 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSubmit }: New
 	};
 
 	const handleQueryUpdate = useCallback(() => {
-		const categoryNames = categories.reduce(
-			(accumulator: string[], category: Option) =>
+		const categoryNames = categories.reduce<AvailableNewsCategories[]>(
+			(accumulator, category) =>
 				category.name !== "All" && category.isSelected ? accumulator.concat(category.name) : accumulator,
 			[],
 		);

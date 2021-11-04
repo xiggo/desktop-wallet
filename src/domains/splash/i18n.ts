@@ -1,4 +1,4 @@
-export const translations: { [key: string]: any } = {
+export const translations = {
 	BRAND: "Payvo Wallet",
 	COPYRIGHT: "© ARK.io",
 	LOADING: "Initializing...",

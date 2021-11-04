@@ -15,7 +15,7 @@ interface WalletIconsProperties {
 }
 
 interface WalletIconProperties {
-	type: string;
+	type: "SecondSignature" | "Multisignature" | "TestNetwork" | "Ledger" | "Starred" | "Verified";
 	label?: string;
 	iconColor?: string;
 	iconSize?: Size;
@@ -44,7 +44,10 @@ const WalletIcon = ({ type, label, iconColor, iconSize = "lg", tooltipDarkTheme 
 	const { t } = useTranslation();
 
 	return (
-		<Tooltip content={label || t(`COMMON.${constantCase(type)}`)} theme={tooltipDarkTheme ? "dark" : undefined}>
+		<Tooltip
+			content={label || t((`COMMON.${constantCase(type)}` as const) as any)}
+			theme={tooltipDarkTheme ? "dark" : undefined}
+		>
 			<div data-testid={`WalletIcon__${type}`} className={`inline-block p-1 ${iconColor || getIconColor(type)}`}>
 				<Icon name={getIconName(type)} size={iconSize} />
 			</div>

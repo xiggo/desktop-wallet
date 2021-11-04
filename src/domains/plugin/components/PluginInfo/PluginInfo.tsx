@@ -2,13 +2,14 @@ import { Alert } from "app/components/Alert";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { PluginPermissions } from "../../plugin.contracts";
 import { Description, Images, Permissions, Requirements } from "./PluginInfo.blocks";
 
 interface PluginInfoProperties {
 	description?: string;
 	images: string[];
 	minimumVersion?: string;
-	permissions: string[];
+	permissions: PluginPermissions[];
 }
 
 const defaultProps = {

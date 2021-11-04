@@ -12,7 +12,7 @@ import tw, { styled } from "twin.macro";
 import {
 	RecipientList as RecipientListProperties,
 	RecipientListItem as RecipientListItemProperties,
-} from "./RecipientList.models";
+} from "./RecipientList.contracts";
 import { defaultStyle } from "./RecipientList.styles";
 
 const RecipientListWrapper = styled.div`
@@ -73,7 +73,7 @@ const RecipientListItem = ({
 
 			<td className="flex-1 py-6 ml-5 w-28">
 				<div className="mb-1 text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700">
-					<span>{t(label || "COMMON.RECIPIENT_#", { count: listIndex! + 1 })}</span>
+					<span>{t(label ?? "COMMON.RECIPIENT_#", { count: listIndex! + 1 })}</span>
 				</div>
 				<Address address={address} walletName={alias} />
 			</td>

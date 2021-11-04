@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/profiles";
-import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
+import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export interface AddRecipientProperties {
 	assetSymbol?: string;

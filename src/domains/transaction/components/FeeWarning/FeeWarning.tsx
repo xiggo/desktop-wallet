@@ -35,7 +35,7 @@ export const FeeWarning = ({ isOpen, variant, onCancel, onConfirm }: FeeWarningP
 			onClose={onCancel}
 		>
 			<div className="mt-8 mb-6 text-theme-secondary-text">
-				{t(`TRANSACTION.MODAL_FEE_WARNING.DESCRIPTION.TOO_${variant}`)}
+				{variant && t(`TRANSACTION.MODAL_FEE_WARNING.DESCRIPTION.TOO_${variant}`)}
 			</div>
 
 			<FormField name="suppressWarning">

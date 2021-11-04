@@ -8,7 +8,7 @@ import { Image } from "app/components/Image";
 import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
 import { getMultiSignatureInfo } from "domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
 import { RecipientList } from "domains/transaction/components/RecipientList";
-import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
+import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
 	TransactionDetail,
 	TransactionNetwork,

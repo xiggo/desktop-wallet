@@ -5,9 +5,11 @@ import { usePluginStatus } from "domains/plugin/hooks/use-plugin-status";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { PluginCategories } from "../../../../plugin.contracts";
+
 interface Properties {
 	author?: string;
-	category?: string;
+	category?: PluginCategories;
 	isEnabled?: boolean;
 	isInstalled?: boolean;
 	isLoadingSize?: boolean;

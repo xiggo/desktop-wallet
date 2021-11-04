@@ -8,6 +8,7 @@ import { PluginDropdown } from "domains/plugin/components/PluginDropdown";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { PluginCategories } from "../../plugin.contracts";
 import { PluginImage, PluginImageProgressSize } from "../PluginImage";
 import { PluginLaunchButton } from "./PluginListItem.blocks";
 
@@ -126,7 +127,7 @@ export const PluginListItem = ({
 			{showCategory && (
 				<TableCell isCompact={isCompact}>
 					<span className="text-theme-secondary-text">
-						{t(`PLUGINS.CATEGORIES.${plugin.category.toUpperCase()}`)}
+						{t(`PLUGINS.CATEGORIES.${(plugin.category as PluginCategories).toUpperCase()}`)}
 					</span>
 				</TableCell>
 			)}

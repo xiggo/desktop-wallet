@@ -13,7 +13,7 @@ import { translations as VOTE } from "../../../domains/vote/i18n";
 import { translations as WALLETS } from "../../../domains/wallet/i18n";
 import { translations as COMMON } from "../common/i18n";
 
-export const buildTranslations = (): any => ({
+export const buildTranslations = () => ({
 	COMMON,
 	CONTACTS,
 	DASHBOARD,

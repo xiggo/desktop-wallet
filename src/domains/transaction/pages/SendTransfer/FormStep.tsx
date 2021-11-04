@@ -8,7 +8,7 @@ import { SelectNetwork } from "domains/network/components/SelectNetwork";
 import { SelectAddress } from "domains/profile/components/SelectAddress";
 import { AddRecipient } from "domains/transaction/components/AddRecipient";
 import { FeeField } from "domains/transaction/components/FeeField";
-import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
+import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 import { buildTransferData } from "domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";

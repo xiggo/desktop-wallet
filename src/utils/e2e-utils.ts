@@ -3,10 +3,13 @@
 
 import { Before, Given, IWorld, Then, When } from "@cucumber/cucumber";
 import { TestStepFunction } from "@cucumber/cucumber/lib/support_code_library_builder/types";
+import delve from "dlv";
 import { resolve } from "path";
 import { ClientFunction, RequestMock } from "testcafe";
 
 import { buildTranslations } from "../app/i18n/helpers";
+import { TranslationSet } from "../app/i18n/react-i18next.contracts";
+import { NestedLeaves } from "../types/generics";
 
 export const getPageURL = () => resolve("build/index.html");
 
@@ -478,17 +481,10 @@ export const cucumber = (
 	}
 };
 
-export const lang = (translation: string, values: Record<string, string> = {}): string => {
-	let result: string = buildTranslations() as string;
-
-	for (const segment of translation.split(".")) {
-		// @ts-ignore
-		result = result[segment] as string;
-	}
-
-	for (const [key, value] of Object.entries(values)) {
-		result = result.replace(`{{${key}}}`, value);
-	}
-
-	return result;
+export const translate = (path: NestedLeaves<TranslationSet>, values: Record<string, string> = {}): string => {
+	const languageString = delve(buildTranslations(), path, "No translation found") as string;
+	return Object.entries(values).reduce<string>(
+		(acc, [key, value]) => acc.replace(`{{${key}}}`, value),
+		languageString,
+	);
 };

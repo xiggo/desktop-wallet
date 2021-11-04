@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/profiles";
 import { Coins, Networks } from "@payvo/sdk";
 
-import { RecipientListItem } from "../components/RecipientList/RecipientList.models";
+import { RecipientListItem } from "../components/RecipientList/RecipientList.contracts";
 
 export const sendTransfer = (t: any) => ({
 	amount: (

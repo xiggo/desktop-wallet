@@ -26,9 +26,12 @@ export const MultiSignatureStatus = ({
 	if (wallet.transaction().isAwaitingOtherSignatures(transaction.id())) {
 		return (
 			<>
-				{t("TRANSACTION.MULTISIGNATURE.AWAITING_OTHER_SIGNATURE_COUNT", {
-					count: wallet.coin().multiSignature().remainingSignatureCount(transaction.data()),
-				})}
+				{
+					// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+					t("TRANSACTION.MULTISIGNATURE.AWAITING_OTHER_SIGNATURE_COUNT" as any, {
+						count: wallet.coin().multiSignature().remainingSignatureCount(transaction.data()),
+					})
+				}
 			</>
 		);
 	}

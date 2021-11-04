@@ -1,11 +1,9 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 import { Selector } from "testcafe";
 
-import { buildTranslations } from "../../../app/i18n/helpers";
-import { cucumber, lang, visitWelcomeScreen } from "../../../utils/e2e-utils";
+import { cucumber, translate, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToContacts } from "../e2e/common";
 
-const translations = buildTranslations();
 const contactName = "Test contact";
 const nameInput = Selector('[data-testid="contact-form__name-input"]');
 const addressInput = Selector('[data-testid="contact-form__address-input"]');
@@ -19,7 +17,7 @@ const preSteps = {
 		await t.click(Selector('[data-testid="contacts__add-contact-btn"]'));
 		await t
 			.expect(
-				Selector('[data-testid="modal__inner"]').withText(translations.CONTACTS.MODAL_CREATE_CONTACT.TITLE)
+				Selector('[data-testid="modal__inner"]').withText(translate("CONTACTS.MODAL_CREATE_CONTACT.TITLE"))
 					.exists,
 			)
 			.ok();
@@ -39,7 +37,7 @@ cucumber("@createContact", {
 		await t.click(Selector('[data-testid="contact-form__save-btn"]'));
 		await t
 			.expect(
-				Selector('[data-testid="modal__inner"]').withText(translations.CONTACTS.MODAL_CREATE_CONTACT.TITLE)
+				Selector('[data-testid="modal__inner"]').withText(translate("CONTACTS.MODAL_CREATE_CONTACT.TITLE"))
 					.exists,
 			)
 			.notOk();
@@ -62,7 +60,7 @@ cucumber("@createContact-openAndCancelModal", {
 	"Then the modal is closed": async (t: TestController) => {
 		await t
 			.expect(
-				Selector('[data-testid="modal__inner"]').withText(translations.CONTACTS.MODAL_CREATE_CONTACT.TITLE)
+				Selector('[data-testid="modal__inner"]').withText(translate("CONTACTS.MODAL_CREATE_CONTACT.TITLE"))
 					.exists,
 			)
 			.notOk();
@@ -97,7 +95,7 @@ cucumber("@createContact-duplicateName", {
 		await t.expect(Selector('[data-testid="Input__error"]').hasAttribute("data-errortext")).ok();
 		await t
 			.expect(Selector('[data-testid="Input__error"]').getAttribute("data-errortext"))
-			.eql(lang("CONTACTS.VALIDATION.NAME_EXISTS", { name: "Sam" }));
+			.eql(translate("CONTACTS.VALIDATION.NAME_EXISTS", { name: "Sam" }));
 	},
 	"And the save button is disabled": async (t: TestController) => {
 		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).ok();
@@ -135,7 +133,7 @@ cucumber("@createContact-noName", {
 		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).ok();
 		await t
 			.expect(
-				Selector('[data-testid="modal__inner"]').withText(translations.CONTACTS.MODAL_CREATE_CONTACT.TITLE)
+				Selector('[data-testid="modal__inner"]').withText(translate("CONTACTS.MODAL_CREATE_CONTACT.TITLE"))
 					.exists,
 			)
 			.ok();

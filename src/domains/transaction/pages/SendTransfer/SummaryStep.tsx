@@ -1,6 +1,6 @@
 import { Contracts, DTO } from "@payvo/profiles";
 import { useWalletAlias } from "app/hooks";
-import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.models";
+import { RecipientListItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
 	TransactionAmount,
 	TransactionFee,

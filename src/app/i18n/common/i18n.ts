@@ -1,4 +1,4 @@
-export const translations: { [key: string]: any } = {
+export const translations = {
 	"PAGE_#": "Page {{page}}",
 	"RECIPIENT_#": "Recipient #{{count}}",
 	// eslint-disable-next-line

@@ -7,10 +7,11 @@ import { PluginCard } from "domains/plugin/components/PluginCard";
 import React, { useCallback } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
+import { PluginCategories } from "../../plugin.contracts";
 import { PluginCardSkeleton } from "../PluginCard/PluginCardSkeleton";
 
 interface PluginGridProperties {
-	category?: string;
+	category?: PluginCategories;
 	className?: string;
 	emptyMessage?: string;
 	isLoading?: boolean;

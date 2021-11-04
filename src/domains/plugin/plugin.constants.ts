@@ -10,7 +10,7 @@ export const pluginData = {
 	size: "4.2",
 	url: "github.com",
 	version: "1.3.8",
-};
+} as const;
 
 export const plugins = [
 	{
@@ -50,4 +50,6 @@ export const plugins = [
 		rating: 4.9,
 		version: "2.0.0",
 	},
-];
+] as const;
+
+export const PLUGIN_CATEGORIES = ["gaming", "utility", "other"] as const;

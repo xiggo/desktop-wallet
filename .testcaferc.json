@@ -8,5 +8,13 @@
 	},
 	"skipJsErrors": true,
 	"selectorTimeout": 20000,
-	"assertionTimeout": 15000
+	"assertionTimeout": 15000,
+	"compilerOptions": {
+		"typescript": {
+			"customCompilerModulePath": "../typescript",
+			"options": {
+				"esModuleInterop": true
+			}
+		}
+	}
 }

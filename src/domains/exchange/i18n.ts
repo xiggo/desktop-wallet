@@ -1,4 +1,4 @@
-export const translations: { [key: string]: any } = {
+export const translations = {
 	EMPTY_MESSAGE: "You haven't made any swaps yet. Once you initiate a transaction they will show up here.",
 
 	ERROR: {

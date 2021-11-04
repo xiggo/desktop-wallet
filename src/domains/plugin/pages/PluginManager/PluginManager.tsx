@@ -28,7 +28,8 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { assertPluginController } from "utils/assertions";
 
-const categories = ["gaming", "utility", "other"];
+import { PLUGIN_CATEGORIES } from "../../plugin.constants";
+import { PluginCategories } from "../../plugin.contracts";
 
 interface LatestPluginsProperties {
 	isLoading?: boolean;
@@ -63,7 +64,7 @@ const LatestPlugins = ({
 }: LatestPluginsProperties) => {
 	const { t } = useTranslation();
 
-	const renderPlugins = (plugins: any[], category: string) => {
+	const renderPlugins = (plugins: any[], category: PluginCategories) => {
 		if (viewType === "grid") {
 			return (
 				<PluginGrid
@@ -102,7 +103,7 @@ const LatestPlugins = ({
 
 	return (
 		<>
-			{categories.map((category: string) => {
+			{PLUGIN_CATEGORIES.map((category) => {
 				let plugins: any[] = pluginsByCategory[category] ?? [];
 				const categoryCount = plugins.length;
 
@@ -158,10 +159,14 @@ const UpdateAllBanner = ({
 
 	const renderText = () => {
 		if (!hasCompatibleUpdateAvailableCount) {
-			return <span>{t("PLUGINS.UPDATE_ALL_NOTICE_INCOMPATIBLE", { count: hasUpdateAvailableCount })}</span>;
+			// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+			return (
+				<span>{t("PLUGINS.UPDATE_ALL_NOTICE_INCOMPATIBLE" as any, { count: hasUpdateAvailableCount })}</span>
+			);
 		}
 
-		return <span>{t("PLUGINS.UPDATE_ALL_NOTICE", { count: hasUpdateAvailableCount })}</span>;
+		// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+		return <span>{t("PLUGINS.UPDATE_ALL_NOTICE" as any, { count: hasUpdateAvailableCount })}</span>;
 	};
 
 	return (
@@ -382,7 +387,7 @@ export const PluginManager = () => {
 		startUpdate(pluginsWithCompatibleUpdate);
 	};
 
-	const menu = ["latest", "all", ...categories].map((name: string) => {
+	const menu = (["latest", "all", ...PLUGIN_CATEGORIES] as const).map((name) => {
 		const menuItem: PluginManagerNavigationBarItem = {
 			name,
 			title: t(`PLUGINS.PAGE_PLUGIN_MANAGER.VIEW.${name.toUpperCase()}`),
@@ -462,7 +467,7 @@ export const PluginManager = () => {
 					{currentView !== "latest" && (
 						<>
 							<h2 className="mb-6 font-bold">
-								{t(`PLUGINS.PAGE_PLUGIN_MANAGER.VIEW.${snakeCase(currentView)?.toUpperCase()}`)}
+								{t(`PLUGINS.PAGE_PLUGIN_MANAGER.VIEW.${snakeCase(currentView)?.toUpperCase()}` as any)}
 							</h2>
 
 							{currentView === "my-plugins" && (

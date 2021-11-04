@@ -1,4 +1,4 @@
-export const translations: { [key: string]: any } = {
+export const translations = {
 	CONTACTS_PAGE: {
 		ADD_CONTACT: "Add Contact",
 		EMPTY_MESSAGE:

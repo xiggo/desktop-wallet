@@ -8,6 +8,7 @@ import { PluginUpdateStatus } from "plugins/types";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { PluginCategories } from "../../plugin.contracts";
 import { PluginImage } from "../PluginImage";
 import { PluginSpecs } from "./components/PluginSpecs";
 
@@ -16,7 +17,7 @@ interface Properties {
 	description?: string;
 	logo?: string;
 	author?: string;
-	category: string;
+	category: PluginCategories;
 	url?: string;
 	version?: string;
 	size?: string;

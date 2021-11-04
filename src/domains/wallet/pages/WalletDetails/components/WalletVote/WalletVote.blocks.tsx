@@ -44,7 +44,10 @@ const EmptyVotes = ({ wallet }: EmptyVotesProperties) => {
 
 			<div className="flex flex-col justify-between">
 				<span className="font-semibold">
-					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.TITLE", { count: maxVotes })}
+					{
+						// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+						t("WALLETS.PAGE_WALLET_DETAILS.VOTES.TITLE" as any, { count: maxVotes })
+					}
 					<span className="ml-1 text-theme-secondary-500 dark:text-theme-secondary-700">0/{maxVotes}</span>
 				</span>
 
@@ -95,16 +98,22 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 			if (activeCount > 1) {
 				return (
 					<span className="font-semibold text-theme-success-600">
-						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: activeCount })}
+						{
+							// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+							t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE" as any, { count: activeCount })
+						}
 					</span>
 				);
 			}
 
 			return (
 				<span className="font-semibold text-theme-success-600">
-					{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", {
-						count: activeCount,
-					})}
+					{
+						// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+						t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE" as any, {
+							count: activeCount,
+						})
+					}
 				</span>
 			);
 		}
@@ -114,11 +123,17 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 				return (
 					<>
 						<HintIcon
-							tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING", { count: standbyCount })}
+							// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+							tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING" as any, {
+								count: standbyCount,
+							})}
 						/>
 
 						<span className="font-semibold text-theme-warning-500">
-							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: standbyCount })}
+							{
+								// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+								t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY" as any, { count: standbyCount })
+							}
 						</span>
 					</>
 				);
@@ -127,13 +142,19 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 			return (
 				<>
 					<HintIcon
-						tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING", { count: standbyCount })}
+						// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+						tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING" as any, {
+							count: standbyCount,
+						})}
 					/>
 
 					<span className="font-semibold text-theme-warning-500">
-						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", {
-							count: standbyCount,
-						})}
+						{
+							// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+							t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY" as any, {
+								count: standbyCount,
+							})
+						}
 					</span>
 				</>
 			);
@@ -144,13 +165,17 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 				return (
 					<>
 						<HintIcon
-							tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING", {
+							// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+							tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING" as any, {
 								count: resignedCount,
 							})}
 						/>
 
 						<span className="font-semibold text-theme-danger-600">
-							{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED", { count: resignedCount })}
+							{
+								// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+								t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED" as any, { count: resignedCount })
+							}
 						</span>
 					</>
 				);
@@ -159,11 +184,17 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 			return (
 				<>
 					<HintIcon
-						tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING", { count: resignedCount })}
+						// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+						tooltipContent={t("WALLETS.PAGE_WALLET_DETAILS.VOTES.NOT_FORGING" as any, {
+							count: resignedCount,
+						})}
 					/>
 
 					<span className="font-semibold text-theme-danger-600">
-						{t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED", { count: resignedCount })}
+						{
+							// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+							t("WALLETS.PAGE_WALLET_DETAILS.VOTES.RESIGNED" as any, { count: resignedCount })
+						}
 					</span>
 				</>
 			);
@@ -181,9 +212,17 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 					<span className="font-semibold">
 						{standbyCount > 0 && (
 							<span className="text-theme-secondary-500 dark:text-theme-secondary-700">
-								{t(`WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY${standbyCount === 1 ? "_COUNT" : ""}`, {
-									count: standbyCount,
-								})}
+								{
+									// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+									t(
+										`WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY${
+											standbyCount === 1 ? "_COUNT" : ""
+										}` as any,
+										{
+											count: standbyCount,
+										},
+									)
+								}
 							</span>
 						)}
 
@@ -212,9 +251,17 @@ const Votes = ({ wallet, votes, activeDelegates, onButtonClick }: VotesPropertie
 					{standbyCount > 0 && (
 						<span className="text-theme-secondary-500 dark:text-theme-secondary-700">
 							&nbsp;/&nbsp;
-							{t(`WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY${standbyCount === 1 ? "_COUNT" : ""}`, {
-								count: standbyCount,
-							})}
+							{
+								// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+								t(
+									`WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY${
+										standbyCount === 1 ? "_COUNT" : ""
+									}` as any,
+									{
+										count: standbyCount,
+									},
+								)
+							}
 						</span>
 					)}
 

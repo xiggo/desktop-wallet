@@ -1,3 +1,5 @@
+type RecipientListLabel = "TRANSACTION.MULTISIGNATURE.PARTICIPANT_#";
+
 export interface RecipientListItem {
 	address: string;
 	displayAmount?: string;
@@ -6,7 +8,7 @@ export interface RecipientListItem {
 	exchangeTicker?: string;
 	assetSymbol?: string;
 	isEditable?: boolean;
-	label?: string;
+	label?: RecipientListLabel;
 	listIndex?: number;
 	variant?: "condensed";
 	alias?: string;
@@ -23,7 +25,7 @@ export interface RecipientList {
 	isEditable?: boolean;
 	recipients?: RecipientListItem[];
 	showAmount?: boolean;
-	label?: string;
+	label?: RecipientListLabel;
 	variant?: "condensed";
 	tooltipDisabled?: string;
 	disableButton?: (address: string) => boolean;

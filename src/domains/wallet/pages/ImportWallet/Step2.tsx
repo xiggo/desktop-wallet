@@ -136,7 +136,7 @@ const ImportInputField = ({ type, coin, profile }: { type: string; coin: Coins.C
 			<>
 				<MnemonicField
 					profile={profile}
-					label={t(`COMMON.MNEMONIC_TYPE.${type.toUpperCase()}`)}
+					label={t(`COMMON.MNEMONIC_TYPE.${(type as "bip39" | "bip44" | "bip49" | "bip84").toUpperCase()}`)}
 					data-testid="ImportWallet__mnemonic-input"
 					findAddress={findAddress}
 					network={network}

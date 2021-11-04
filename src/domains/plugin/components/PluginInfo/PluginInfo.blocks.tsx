@@ -3,6 +3,7 @@ import { TruncateEnd } from "app/components/TruncateEnd";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { PluginPermissions } from "../../plugin.contracts";
 import { PluginPermissionsModal } from "../PluginPermissionsModal/PluginPermissionsModal";
 
 const Description = ({ description }: { description?: string }) => {
@@ -20,7 +21,7 @@ const Description = ({ description }: { description?: string }) => {
 	);
 };
 
-const Permissions = ({ permissions }: { permissions: string[] }) => {
+const Permissions = ({ permissions }: { permissions: PluginPermissions[] }) => {
 	const { t, i18n } = useTranslation();
 
 	const [showPermissionsModal, setShowPermissionsModal] = useState(false);
@@ -29,8 +30,8 @@ const Permissions = ({ permissions }: { permissions: string[] }) => {
 		return <></>;
 	}
 
-	const translatedPermissions = permissions.map((permission: string) => {
-		const key = `PLUGINS.PERMISSIONS.${permission}`;
+	const translatedPermissions = permissions.map((permission) => {
+		const key = `PLUGINS.PERMISSIONS.${permission}` as const;
 		return i18n.exists(key) ? t(key) : permission;
 	});
 

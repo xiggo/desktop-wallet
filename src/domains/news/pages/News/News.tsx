@@ -15,10 +15,11 @@ import { NewsOptions } from "domains/news/components/NewsOptions";
 import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { AVAILABLE_CATEGORIES } from "../../data";
+import { AVAILABLE_CATEGORIES } from "../../news.constants";
+import { AvailableNewsCategories } from "../../news.contracts";
 
 interface NewsFilters {
-	categories: string[];
+	categories: AvailableNewsCategories[];
 	coins: string[];
 	searchQuery?: string;
 }

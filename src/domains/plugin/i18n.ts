@@ -1,4 +1,4 @@
-export const translations: { [key: string]: any } = {
+export const translations = {
 	CATEGORIES: {
 		GAME: "Game",
 		GAMING: "Gaming",

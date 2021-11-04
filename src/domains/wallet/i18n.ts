@@ -1,4 +1,4 @@
-export const translations: { [key: string]: any } = {
+export const translations = {
 	MESSAGE: "Message",
 	MNEMONIC_VERIFICATION: {
 		SELECT_WORD: "Select the {{position}}{{ordinalIndicator}} Word",

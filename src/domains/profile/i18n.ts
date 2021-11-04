@@ -1,4 +1,4 @@
-export const translations: { [key: string]: any } = {
+export const translations = {
 	CREATE_PROFILE: "Create Profile",
 	IMPORT: {
 		ERROR_STEP: {

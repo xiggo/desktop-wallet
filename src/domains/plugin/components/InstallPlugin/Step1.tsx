@@ -1,14 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { PluginPermissions } from "../../plugin.contracts";
+
 interface Properties {
 	plugin: any;
 }
 
 export const FirstStep = ({ plugin }: Properties) => {
 	const { t, i18n } = useTranslation();
-	const translatedPermissions = plugin.permissions.map((permission: string) => {
-		const key = `PLUGINS.PERMISSIONS.${permission}`;
+	const translatedPermissions = (plugin.permissions as PluginPermissions[]).map((permission) => {
+		const key = `PLUGINS.PERMISSIONS.${permission}` as const;
 		return i18n.exists(key) ? t(key) : permission;
 	});
 

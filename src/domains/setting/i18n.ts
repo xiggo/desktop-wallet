@@ -1,4 +1,4 @@
-export const translations: { [key: string]: any } = {
+export const translations = {
 	APPEARANCE: {
 		MENU_ITEM: "Appearance",
 		OPTIONS: {

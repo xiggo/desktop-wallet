@@ -51,7 +51,8 @@ export const useMultiSignatureStatus = ({ wallet, transaction }: Properties) => 
 			return {
 				className: "text-theme-warning-300",
 				icon: "ClockPencil",
-				label: t("TRANSACTION.MULTISIGNATURE.AWAITING_OTHER_SIGNATURE_COUNT", {
+				// TODO: waiting for i18next.TS will support plurals https://github.com/i18next/i18next/issues/1683
+				label: t("TRANSACTION.MULTISIGNATURE.AWAITING_OTHER_SIGNATURE_COUNT" as any, {
 					count: wallet.coin().multiSignature().remainingSignatureCount(transaction.data()),
 				}),
 				value: "isAwaitingOtherSignatures",
