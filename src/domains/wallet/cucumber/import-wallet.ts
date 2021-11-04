@@ -56,7 +56,7 @@ cucumber("@importWallet-address", {
 	...preSteps,
 	"When she changes the import type to address": async (t: TestController) => {
 		await t.click('[data-testid="SelectDropdown__input"]');
-		await t.click(Selector("#ImportWallet__select-item-1"));
+		await t.click(Selector(".select-list-option__label").withText(translations.COMMON.ADDRESS));
 	},
 	"And enters a valid address to import": async (t: TestController) => {
 		const addressInput = Selector("[data-testid=ImportWallet__address-input]");
@@ -81,7 +81,7 @@ cucumber("@importWallet-invalidAddress", {
 	...preSteps,
 	"When she changes the import type to address": async (t: TestController) => {
 		await t.click('[data-testid="SelectDropdown__input"]');
-		await t.click(Selector("#ImportWallet__select-item-1"));
+		await t.click(Selector(".select-list-option__label").withText(translations.COMMON.ADDRESS));
 	},
 	"And enters an invalid address to import": async (t: TestController) => {
 		const addressInput = Selector("[data-testid=ImportWallet__address-input]");

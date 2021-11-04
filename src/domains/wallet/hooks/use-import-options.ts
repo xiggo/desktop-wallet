@@ -2,14 +2,6 @@ import { Networks } from "@payvo/sdk";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-const convertMethodName = (methodName: string) => {
-	if (methodName === "bip38") {
-		return "encryptedWif";
-	}
-
-	return methodName;
-};
-
 export enum OptionsValue {
 	ADDRESS = "address",
 	BIP39 = "bip39",
@@ -23,16 +15,30 @@ export enum OptionsValue {
 	WIF = "wif",
 }
 
-interface Network {
-	options: string[];
-	defaultOption?: string;
+export interface ImportOption {
+	label: string;
+	value: string;
+	canBeEncrypted?: boolean;
 }
 
-export const useImportOptions = (methods: Networks.NetworkManifestImportMethods) => {
+interface ImportOptions {
+	defaultOption: ImportOption;
+	options: ImportOption[];
+}
+
+const convertMethodName = (methodName: string) => {
+	if (methodName === "bip38") {
+		return OptionsValue.ENCRYPTED_WIF;
+	}
+
+	return methodName;
+};
+
+export const useImportOptions = (methods: Networks.NetworkManifestImportMethods): ImportOptions => {
 	const { t } = useTranslation();
 
-	const allOptions = useMemo(
-		() => [
+	return useMemo(() => {
+		const allOptions: ImportOption[] = [
 			{ label: t("COMMON.MNEMONIC_TYPE.BIP39"), value: OptionsValue.BIP39 },
 			{ label: t("COMMON.MNEMONIC_TYPE.BIP44"), value: OptionsValue.BIP44 },
 			{ label: t("COMMON.MNEMONIC_TYPE.BIP49"), value: OptionsValue.BIP49 },
@@ -43,47 +49,34 @@ export const useImportOptions = (methods: Networks.NetworkManifestImportMethods)
 			{ label: t("COMMON.SECRET"), value: OptionsValue.SECRET },
 			{ label: t("COMMON.WIF"), value: OptionsValue.WIF },
 			{ label: t("COMMON.ENCRYPTED_WIF"), value: OptionsValue.ENCRYPTED_WIF },
-		],
-		[t],
-	);
+		];
 
-	const network = useMemo(
-		() =>
-			Object.entries(methods).reduce<Network>(
-				(network, [methodName, method]) => {
-					const option = convertMethodName(methodName);
+		let defaultOption: ImportOption | undefined;
 
-					if (method.default) {
-						network.defaultOption = option;
-					}
+		const options: ImportOption[] = [];
 
-					network.options.push(option);
+		for (const [methodName, method] of Object.entries(methods)) {
+			const matchingOption = allOptions.find((option) => option.value === convertMethodName(methodName));
 
-					return network;
-				},
-				{
-					defaultOption: undefined,
-					options: [],
-				},
-			),
-		[methods],
-	);
-
-	return useMemo(() => {
-		let defaultOption: string | undefined;
-
-		const options = allOptions.filter((option) => {
-			// check if default option exist in options
-			if (network.defaultOption === option.value) {
-				defaultOption = network.defaultOption;
+			if (!matchingOption) {
+				continue;
 			}
-			return network.options.includes(option.value);
-		});
+
+			if (method.default) {
+				defaultOption = matchingOption;
+			}
+
+			options.push({
+				canBeEncrypted: !!method.canBeEncrypted,
+				label: matchingOption.label,
+				value: matchingOption.value,
+			});
+		}
 
 		if (!defaultOption) {
-			defaultOption = options[0].value;
+			defaultOption = options[0];
 		}
 
 		return { defaultOption, options };
-	}, [allOptions, network]);
+	}, [t, methods]);
 };

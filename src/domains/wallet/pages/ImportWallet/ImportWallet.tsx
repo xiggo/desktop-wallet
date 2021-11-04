@@ -1,6 +1,5 @@
 import { uniq } from "@arkecosystem/utils";
 import { Contracts } from "@payvo/profiles";
-import { Networks } from "@payvo/sdk";
 import { Button } from "app/components/Button";
 import { Form } from "app/components/Form";
 import { Page, Section } from "app/components/Layout";
@@ -69,7 +68,7 @@ export const ImportWallet = () => {
 
 	useEffect(() => {
 		register("network", { required: true });
-		register({ name: "type", type: "custom" });
+		register({ name: "importOption", type: "custom" });
 	}, [register]);
 
 	useEffect(() => {
@@ -98,9 +97,15 @@ export const ImportWallet = () => {
 				setIsImporting(true);
 
 				try {
-					const { canBeEncrypted } = await importWallet();
+					await importWallet();
 
-					setActiveTab(canBeEncrypted ? Step.EncryptPasswordStep : Step.SummaryStep);
+					const importOption = getValues("importOption");
+
+					if (importOption.canBeEncrypted) {
+						setActiveTab(Step.EncryptPasswordStep);
+					} else {
+						setActiveTab(Step.SummaryStep);
+					}
 				} catch (error) {
 					/* istanbul ignore next */
 					toasts.error(error.message);
@@ -164,13 +169,13 @@ export const ImportWallet = () => {
 		setActiveTab(activeTab - 1);
 	};
 
-	const importWallet = async (): Promise<Networks.ImportMethod> => {
-		const { network, type, encryptedWif } = getValues();
+	const importWallet = async (): Promise<void> => {
+		const { network, importOption, encryptedWif } = getValues();
 
 		const wallet = await importWalletByType({
 			encryptedWif,
 			network,
-			type,
+			type: importOption.value,
 			value: walletGenerationInput!,
 		});
 
@@ -190,8 +195,6 @@ export const ImportWallet = () => {
 		await syncAll(wallet);
 
 		await persist();
-
-		return network.importMethods()[type];
 	};
 
 	const encryptMnemonics = async () => {

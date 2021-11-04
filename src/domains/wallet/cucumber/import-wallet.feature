@@ -24,14 +24,14 @@ Feature: Import Wallet
         And the continue button is disabled
 
     @importWallet-mnemonic
-    Scenario: Sucessfully Import Wallet via Mnemonic
+    Scenario: Successfully Import Wallet via Mnemonic
         Given Alice is on the import wallet page
         When she enters a valid mnemonic to import
         And completes the import wallet steps for mnemonic
         Then the wallet is imported to her profile
 
     @importWallet-address
-    Scenario: Sucessfully Import Wallet via Address
+    Scenario: Successfully Import Wallet via Address
         Given Alice is on the import wallet page
         When she changes the import type to address
         And enters a valid address to import

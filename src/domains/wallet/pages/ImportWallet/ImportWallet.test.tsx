@@ -128,7 +128,7 @@ describe("ImportWallet", () => {
 				defaultValues: { network },
 			});
 
-			form.register("type");
+			form.register("importOption");
 			form.register("network");
 
 			return (
@@ -159,13 +159,20 @@ describe("ImportWallet", () => {
 		fireEvent.change(passphraseInput, { target: { value: mnemonic } });
 
 		await waitFor(() => {
-			expect(form.getValues()).toMatchObject({ type: OptionsValue.BIP39, value: mnemonic });
+			expect(form.getValues()).toMatchObject({
+				importOption: {
+					canBeEncrypted: false,
+					label: "Mnemonic",
+					value: OptionsValue.BIP39,
+				},
+				value: mnemonic,
+			});
 		});
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should import type be editable in 2nd step", async () => {
+	it("should be possible to change import type in 2nd step", async () => {
 		let form: ReturnType<typeof useForm>;
 
 		const Component = () => {
@@ -178,7 +185,7 @@ describe("ImportWallet", () => {
 					permissions: [],
 				},
 				bip39: {
-					default: false,
+					default: true,
 					permissions: [],
 				},
 			});
@@ -187,7 +194,7 @@ describe("ImportWallet", () => {
 				defaultValues: { network },
 			});
 
-			form.register("type");
+			form.register("importOption");
 			form.register("network");
 
 			return (
@@ -1282,7 +1289,7 @@ describe("ImportWallet", () => {
 				shouldUnregister: false,
 			});
 
-			form.register("type");
+			form.register("importOption");
 			form.register("network");
 			form.register("wif");
 			form.register("value");
@@ -1316,7 +1323,14 @@ describe("ImportWallet", () => {
 		fireEvent.input(passphraseInput, { target: { value: wif } });
 
 		await waitFor(() => {
-			expect(form.getValues()).toMatchObject({ type: OptionsValue.WIF, value: wif });
+			expect(form.getValues()).toMatchObject({
+				importOption: {
+					canBeEncrypted: true,
+					label: "WIF",
+					value: OptionsValue.WIF,
+				},
+				value: wif,
+			});
 		});
 		await waitFor(() => {
 			expect(getByTestId("ImportWallet__wif-input")).toHaveValue(wif);

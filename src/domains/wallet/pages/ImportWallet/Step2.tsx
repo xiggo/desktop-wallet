@@ -294,8 +294,8 @@ export const SecondStep = ({ profile }: { profile: Contracts.IProfile }) => {
 
 	const { options, defaultOption } = useImportOptions(network.importMethods());
 
-	const type = watch("type", defaultOption);
-	assertString(type);
+	const importOption = watch("importOption") || defaultOption;
+	assertString(importOption.value);
 
 	return (
 		<section data-testid="ImportWallet__second-step">
@@ -310,17 +310,17 @@ export const SecondStep = ({ profile }: { profile: Contracts.IProfile }) => {
 					<Select
 						id="ImportWallet__select"
 						data-testid="ImportWallet__type"
-						defaultValue={type}
+						defaultValue={importOption.value}
 						options={options}
 						onChange={(option: any) => {
-							setValue("type", option?.value, { shouldDirty: true, shouldValidate: true });
+							setValue("importOption", option, { shouldDirty: true, shouldValidate: true });
 							setValue("value", undefined);
 							clearErrors("value");
 						}}
 					/>
 				</FormField>
 
-				<ImportInputField type={type} coin={coin} profile={profile} />
+				<ImportInputField type={importOption.value} coin={coin} profile={profile} />
 			</div>
 		</section>
 	);
