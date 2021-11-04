@@ -31,7 +31,7 @@ describe("SideBar", () => {
 			<SideBar handleActiveItem={jest.fn()} activeItem={items[0].itemKey} items={items} />,
 		);
 
-		expect(screen.getAllByRole("listitem").length).toEqual(3);
+		expect(screen.getAllByRole("listitem")).toHaveLength(3);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

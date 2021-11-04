@@ -2179,7 +2179,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		fireEvent.click(getByTestId("AddRecipient__add-button"));
-		await waitFor(() => expect(getAllByTestId("recipient-list__recipient-list-item").length).toEqual(1));
+		await waitFor(() => expect(getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
 
 		// Select recipient #2
 		fireEvent.click(within(getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"));
@@ -2195,7 +2195,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		fireEvent.click(getByTestId("AddRecipient__add-button"));
-		await waitFor(() => expect(getAllByTestId("recipient-list__recipient-list-item").length).toEqual(2));
+		await waitFor(() => expect(getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
 
 		// Memo
 		fireEvent.input(getByTestId("Input__memo"), { target: { value: "test memo" } });

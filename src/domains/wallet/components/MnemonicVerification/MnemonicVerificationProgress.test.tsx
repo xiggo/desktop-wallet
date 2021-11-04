@@ -11,7 +11,7 @@ describe("MnemonicVerificationProgress", () => {
 		);
 		const tabs = getAllByTestId("MnemonicVerificationProgress__Tab");
 
-		expect(tabs.length).toBe(positions.length);
+		expect(tabs).toHaveLength(positions.length);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

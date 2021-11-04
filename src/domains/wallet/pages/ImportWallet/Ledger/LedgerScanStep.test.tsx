@@ -128,11 +128,11 @@ describe("LedgerScanStep", () => {
 
 		fireEvent.click(screen.getAllByRole("checkbox")[1]);
 
-		await waitFor(() => expect(formReference.getValues("wallets").length).toBe(1));
+		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(1));
 
 		fireEvent.click(screen.getAllByRole("checkbox")[1]);
 
-		await waitFor(() => expect(formReference.getValues("wallets").length).toBe(0));
+		await waitFor(() => expect(formReference.getValues("wallets")).toHaveLength(0));
 	});
 
 	it("should render", async () => {

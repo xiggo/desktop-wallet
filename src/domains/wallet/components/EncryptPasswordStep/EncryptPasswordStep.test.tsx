@@ -15,7 +15,7 @@ describe("EncryptPasswordStep", () => {
 	it("should change password", async () => {
 		const { getAllByTestId, asFragment } = renderWithForm(<EncryptPasswordStep />);
 
-		expect(getAllByTestId("InputPassword").length).toEqual(2);
+		expect(getAllByTestId("InputPassword")).toHaveLength(2);
 
 		const passwordField = getAllByTestId("InputPassword")[0];
 
@@ -35,7 +35,7 @@ describe("EncryptPasswordStep", () => {
 			defaultValues: { confirmEncryptionPassword: "password" },
 		});
 
-		expect(getAllByTestId("InputPassword").length).toEqual(2);
+		expect(getAllByTestId("InputPassword")).toHaveLength(2);
 
 		const passwordField = getAllByTestId("InputPassword")[0];
 		const confirmPasswordField = getAllByTestId("InputPassword")[1];

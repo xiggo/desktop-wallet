@@ -59,6 +59,6 @@ describe("WalletsGrid", () => {
 
 		expect(getByTestId("WalletsGrid")).toBeInTheDocument();
 
-		await waitFor(() => expect(getAllByTestId("Card").length).toBe(2));
+		await waitFor(() => expect(getAllByTestId("Card")).toHaveLength(2));
 	});
 });

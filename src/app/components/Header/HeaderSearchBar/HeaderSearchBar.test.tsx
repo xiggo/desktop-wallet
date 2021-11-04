@@ -35,7 +35,7 @@ describe("HeaderSearchBar", () => {
 		fireEvent.change(input, text + "!");
 
 		expect(input.value).toBe(text.repeat(100));
-		expect(input.value.length).toBe(1000);
+		expect(input.value).toHaveLength(1000);
 	});
 
 	it("should reset fields by prop", async () => {

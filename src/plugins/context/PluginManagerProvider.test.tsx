@@ -179,7 +179,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(3));
+		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(3));
 
 		manager.plugins().removeById(plugin.config().id(), profile);
 	});
@@ -234,7 +234,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByText("Fetch"));
 
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(2));
+		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(2));
 
 		fireEvent.click(screen.getAllByText("Install")[0]);
 
@@ -435,7 +435,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByText("Fetch Package"));
 
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(1));
+		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(1));
 	});
 
 	it("should render properly for remote package in subdirectory", async () => {
@@ -475,7 +475,7 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByText("Fetch Package"));
 
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(1));
+		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(1));
 	});
 
 	it("should map config to plugin data", () => {
@@ -834,10 +834,10 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(3));
+		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(3));
 
 		fireEvent.click(screen.getByTestId("QueryByText"));
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(1));
+		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(1));
 
 		manager.plugins().removeById(plugin.config().id(), profile);
 	});
@@ -888,13 +888,13 @@ describe("PluginManagerProvider", () => {
 
 		fireEvent.click(screen.getByRole("button"));
 
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(3));
+		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(3));
 
 		fireEvent.click(screen.getByTestId("QueryByText"));
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(1));
+		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(1));
 
 		fireEvent.click(screen.getByTestId("ResetFilters"));
-		await waitFor(() => expect(screen.getAllByRole("listitem").length).toBe(3));
+		await waitFor(() => expect(screen.getAllByRole("listitem")).toHaveLength(3));
 
 		manager.plugins().removeById(plugin.config().id(), profile);
 	});

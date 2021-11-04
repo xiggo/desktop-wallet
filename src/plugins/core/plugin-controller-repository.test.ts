@@ -23,18 +23,18 @@ describe("Plugin Controller subject", () => {
 	it("should return all", () => {
 		subject.push(new PluginController({ name: "plugin-test" }, () => void 0));
 
-		expect(subject.all().length).toBe(1);
+		expect(subject.all()).toHaveLength(1);
 	});
 
 	it("should remove by id", () => {
 		const plugin = new PluginController({ name: "plugin-test" }, () => void 0);
 		subject.push(plugin);
 
-		expect(subject.all().length).toBe(1);
+		expect(subject.all()).toHaveLength(1);
 
 		subject.removeById(plugin.config().id(), profile);
 
-		expect(subject.all().length).toBe(0);
+		expect(subject.all()).toHaveLength(0);
 	});
 
 	it("should filter by category", () => {
@@ -47,7 +47,7 @@ describe("Plugin Controller subject", () => {
 		/* eslint-disable unicorn/no-array-push-push */
 		subject.push(plugin2);
 
-		expect(subject.filterByCategory("gaming").length).toBe(1);
+		expect(subject.filterByCategory("gaming")).toHaveLength(1);
 	});
 
 	it("should check if plugin has filters", () => {
@@ -104,6 +104,6 @@ describe("Plugin Controller subject", () => {
 			`Failed to parse the plugin from "/plugin2".`,
 			"name is a required field",
 		);
-		expect(subject.all().length).toBe(1);
+		expect(subject.all()).toHaveLength(1);
 	});
 });

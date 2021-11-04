@@ -35,7 +35,7 @@ describe("useTransaction", () => {
 		const transactions = await result.current.fetchWalletUnconfirmedTransactions(wallet);
 
 		expect(Array.isArray(transactions)).toBe(true);
-		expect(transactions.length).toBe(1);
+		expect(transactions).toHaveLength(1);
 	});
 
 	it("should return an empty list if lookup fails", async () => {
@@ -46,7 +46,7 @@ describe("useTransaction", () => {
 		const transactions = await result.current.fetchWalletUnconfirmedTransactions(wallet);
 
 		expect(Array.isArray(transactions)).toBe(true);
-		expect(transactions.length).toBe(0);
+		expect(transactions).toHaveLength(0);
 
 		walletSpy.mockRestore();
 	});

@@ -37,7 +37,7 @@ describe("Notifications", () => {
 				</tbody>
 			</table>,
 		);
-		await waitFor(() => expect(getAllByTestId("TransactionRowMode").length).toEqual(1));
+		await waitFor(() => expect(getAllByTestId("TransactionRowMode")).toHaveLength(1));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -56,7 +56,7 @@ describe("Notifications", () => {
 				</tbody>
 			</table>,
 		);
-		await waitFor(() => expect(getAllByTestId("TransactionRowMode").length).toEqual(1));
+		await waitFor(() => expect(getAllByTestId("TransactionRowMode")).toHaveLength(1));
 		await waitFor(() => expect(onVisibilityChange).toHaveBeenCalled());
 	});
 
@@ -74,7 +74,7 @@ describe("Notifications", () => {
 				</tbody>
 			</table>,
 		);
-		await waitFor(() => expect(getAllByTestId("TransactionRowMode").length).toEqual(1));
+		await waitFor(() => expect(getAllByTestId("TransactionRowMode")).toHaveLength(1));
 
 		fireEvent.click(getByTestId("TransactionRowMode"));
 

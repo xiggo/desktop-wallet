@@ -21,7 +21,7 @@ describe("MnemonicVerificationOptions", () => {
 		);
 		const buttons = getAllByTestId("MnemonicVerificationOptions__button");
 
-		expect(buttons.length).toEqual(limit);
+		expect(buttons).toHaveLength(limit);
 	});
 
 	it("should call handle on click", () => {
