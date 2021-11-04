@@ -95,7 +95,7 @@ describe("CreateProfile", () => {
 	});
 
 	it("should store profile", async () => {
-		const { container } = await renderComponent();
+		await renderComponent();
 
 		// Upload avatar image
 		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
@@ -114,7 +114,7 @@ describe("CreateProfile", () => {
 
 		fireEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
-		fireEvent.click(container.querySelector("input[name=isDarkMode]"));
+		fireEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
@@ -339,9 +339,9 @@ describe("CreateProfile", () => {
 	it.each([true, false])("should set dark mode toggle based on system preferences", async (shouldUseDarkColors) => {
 		const shouldUseDarkColorsSpy = jest.spyOn(utils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
 
-		const { container } = await renderComponent();
+		await renderComponent();
 
-		const toggle = container.querySelector("input[name=isDarkMode]");
+		const toggle = screen.getByRole("checkbox");
 
 		if (shouldUseDarkColors) {
 			expect(toggle).toBeChecked();

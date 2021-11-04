@@ -7,7 +7,7 @@ import { createMemoryHistory } from "history";
 import os from "os";
 import React from "react";
 import * as utils from "utils/electron-utils";
-import { act, env, fireEvent, render, waitFor } from "utils/testing-library";
+import { act, env, fireEvent, render, screen, waitFor } from "utils/testing-library";
 let profile: Contracts.IProfile;
 
 let showOpenDialogMock: jest.SpyInstance;
@@ -81,7 +81,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 	it("should store profile", async () => {
 		const emptyProfile = env.profiles().create("test3");
-		const { asFragment, container, getAllByTestId, getByTestId } = render(
+		const { asFragment, getAllByTestId, getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} profile={emptyProfile} />
 			</EnvironmentProvider>,
@@ -110,7 +110,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "test profile 2" } });
 
-		fireEvent.click(container.querySelector("input[name=isDarkMode]")!);
+		fireEvent.click(screen.getByRole("checkbox"));
 
 		fireEvent.click(getByTestId("CreateProfile__submit-button"));
 
@@ -125,7 +125,7 @@ describe("Import Profile - Profile Form Step", () => {
 	it("should store new profile with password", async () => {
 		const profilesCount = env.profiles().count();
 
-		const { asFragment, container, getAllByTestId, getByTestId } = render(
+		const { asFragment, getAllByTestId, getByTestId } = render(
 			<EnvironmentProvider env={env}>
 				<ImportProfileForm env={env} />
 			</EnvironmentProvider>,
@@ -149,7 +149,7 @@ describe("Import Profile - Profile Form Step", () => {
 		fireEvent.click(getByTestId("CreateProfile__submit-button"));
 
 		fireEvent.input(getAllByTestId("Input")[0], { target: { value: "profile2" } });
-		fireEvent.click(container.querySelector("input[name=isDarkMode]")!);
+		fireEvent.click(screen.getByRole("checkbox"));
 
 		fireEvent.change(getAllByTestId("InputPassword")[0], { target: { value: "S3cUrePa$sword" } });
 		fireEvent.change(getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword" } });

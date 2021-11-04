@@ -113,7 +113,7 @@ describe("Dropdown", () => {
 	});
 
 	it("should ignore triggering onSelect callback if not exists", () => {
-		const { getByTestId, container } = render(<Dropdown options={options} />);
+		const { getByTestId } = render(<Dropdown options={options} />);
 		const toggle = getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
@@ -126,12 +126,12 @@ describe("Dropdown", () => {
 
 		fireEvent.click(firstOption);
 
-		expect(container.querySelectorAll("ul").length).toEqual(0);
+		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
 
 	it("should close dropdown content when click outside", () => {
 		const onSelect = () => ({});
-		const { getByTestId, container } = render(
+		const { getByTestId } = render(
 			<div>
 				<div data-testid="dropdown__outside" className="mt-16">
 					outside elememt to be clicked
@@ -157,11 +157,11 @@ describe("Dropdown", () => {
 
 		fireEvent.mouseDown(outsideElement);
 
-		expect(container.querySelectorAll("ul").length).toEqual(0);
+		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
 
 	it("should close dropdown with escape key", () => {
-		const { getByTestId, container } = render(<Dropdown options={options} />);
+		const { getByTestId } = render(<Dropdown options={options} />);
 		const toggle = getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
@@ -170,7 +170,7 @@ describe("Dropdown", () => {
 
 		fireEvent.keyDown(toggle, { key: "Escape", keyCode: 27 });
 
-		expect(container.querySelectorAll("ul").length).toEqual(0);
+		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
 
 	it("should render with custom toggle content as react element", () => {

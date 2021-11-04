@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/profiles";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render } from "utils/testing-library";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
 import { ProfileCard } from "./ProfileCard";
 
@@ -77,7 +77,7 @@ describe("ProfileCard", () => {
 	});
 
 	it("should ignore triggering onSelect callback if not exists", () => {
-		const { container, getByTestId } = render(<ProfileCard profile={profile} actions={options} />);
+		const { getByTestId } = render(<ProfileCard profile={profile} actions={options} />);
 		const toggle = getByTestId("dropdown__toggle");
 
 		fireEvent.click(toggle);
@@ -90,6 +90,6 @@ describe("ProfileCard", () => {
 
 		fireEvent.click(firstOption);
 
-		expect(container.querySelectorAll("ul").length).toEqual(0);
+		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
 });

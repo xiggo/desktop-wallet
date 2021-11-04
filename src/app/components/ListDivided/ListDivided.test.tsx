@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "utils/testing-library";
+import { render, screen } from "utils/testing-library";
 
 import { ListDivided } from "./ListDivided";
 
@@ -34,9 +34,9 @@ describe("ListDivided", () => {
 			labelDescription: "Select Profile Image",
 			value: "",
 		};
-		const { container, asFragment } = render(<ListDivided items={[item]} />);
+		const { asFragment } = render(<ListDivided items={[item]} />);
 
-		expect(container.querySelectorAll("li").length).toEqual(1);
+		expect(screen.getAllByRole("listitem")).toHaveLength(1);
 		expect(asFragment()).toMatchSnapshot();
 	});
 });

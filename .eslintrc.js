@@ -141,7 +141,7 @@ module.exports = {
 		"testing-library/consistent-data-testid": "off", // @TODO: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/consistent-data-testid.md
 		"testing-library/no-await-sync-events": "warn", // @TODO: set to error and fix
 		"testing-library/no-await-sync-query": "warn", // @TODO: set to error and fix
-		"testing-library/no-container": "warn", // @TODO: set to error and fix
+		"testing-library/no-container": "error",
 		"testing-library/no-debugging-utils": "error",
 		"testing-library/no-dom-import": "warn", // @TODO: set to error and fix
 		"testing-library/no-manual-cleanup": "warn", // @TODO: set to error and fix
