@@ -19,17 +19,17 @@ exports[`FeeField should render 1`] = `
           Simple
         </span>
         <label
-          class="flex"
+          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-0 lktEK"
+            class="Toggle__Input-sc-6s3wfu-1 utRNX"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
             />
           </div>
         </label>

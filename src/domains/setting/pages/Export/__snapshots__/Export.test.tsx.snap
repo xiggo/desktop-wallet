@@ -456,19 +456,19 @@ exports[`Export Settings should render export settings 1`] = `
                             </span>
                             <span>
                               <label
-                                class="flex"
+                                class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                               >
                                 <input
-                                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                  class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                   data-testid="Plugin-settings__toggle--exclude-empty-wallets"
                                   name="excludeEmptyWallets"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                  class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                   />
                                 </div>
                               </label>
@@ -505,19 +505,19 @@ exports[`Export Settings should render export settings 1`] = `
                             </span>
                             <span>
                               <label
-                                class="flex"
+                                class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                               >
                                 <input
-                                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                  class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                   data-testid="Plugin-settings__toggle--exclude-ledger-wallets"
                                   name="excludeLedgerWallets"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                  class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                   />
                                 </div>
                               </label>

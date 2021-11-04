@@ -1,20 +1,26 @@
 import React from "react";
 import tw, { css, styled } from "twin.macro";
 
+const Wrapper = styled.label<{ disabled?: boolean; small?: boolean }>`
+	${tw`flex items-center`}
+
+	${({ disabled }) => (disabled ? tw`cursor-not-allowed` : tw`cursor-pointer`)}
+
+	${({ small }) => (small ? tw`h-3` : tw`h-4`)}
+`;
+
 const Input = styled.input`
 	${tw`sr-only`}
 `;
 
-const Handle = styled.div<{ disabled?: boolean; small?: boolean }>`
+const Handle = styled.div<{ small?: boolean }>`
 	${tw`inline-flex height[5px] rounded-full relative bg-theme-primary-100 dark:bg-theme-secondary-800`}
-
-	${({ disabled }) => (disabled ? tw`cursor-not-allowed` : tw`cursor-pointer`)}
 
 	${({ small }) => (small ? tw`w-6` : tw`width[30px]`)}
 `;
 
 const HandleInner = styled.span<{ alwaysOn?: boolean; disabled?: boolean; small?: boolean }>`
-	${tw`margin-top[2px] absolute rounded-full transform -translate-y-1/2 transition transition-colors transition-transform ease-in-out duration-200`}
+	${tw`absolute rounded-full transform top-1/2 -translate-y-1/2 transition transition-colors transition-transform ease-in-out duration-200`}
 
 	${({ alwaysOn, disabled }) =>
 		disabled
@@ -42,12 +48,12 @@ type ToggleProperties = { alwaysOn?: boolean; disabled?: boolean; small?: boolea
 
 export const Toggle = React.forwardRef<HTMLInputElement, ToggleProperties>(
 	({ alwaysOn, disabled, small, ...properties }: ToggleProperties, reference) => (
-		<label className="flex">
+		<Wrapper disabled={disabled} small={small}>
 			<Input type="checkbox" disabled={disabled} ref={reference} {...properties} />
-			<Handle disabled={disabled} small={small}>
+			<Handle small={small}>
 				<HandleInner alwaysOn={alwaysOn} disabled={disabled} small={small} />
 			</Handle>
-		</label>
+		</Wrapper>
 	),
 );
 

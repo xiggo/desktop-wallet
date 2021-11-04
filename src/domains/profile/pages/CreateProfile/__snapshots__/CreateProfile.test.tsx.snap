@@ -398,18 +398,18 @@ exports[`CreateProfile should render 1`] = `
                           </span>
                           <span>
                             <label
-                              class="flex"
+                              class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                  class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                 />
                               </div>
                             </label>
@@ -870,18 +870,18 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           </span>
                           <span>
                             <label
-                              class="flex"
+                              class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                  class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                 />
                               </div>
                             </label>
@@ -1353,18 +1353,18 @@ exports[`CreateProfile should update the avatar when removing focus from name in
                           </span>
                           <span>
                             <label
-                              class="flex"
+                              class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                             >
                               <input
-                                class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                 name="isDarkMode"
                                 type="checkbox"
                               />
                               <div
-                                class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                               >
                                 <span
-                                  class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                  class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                 />
                               </div>
                             </label>

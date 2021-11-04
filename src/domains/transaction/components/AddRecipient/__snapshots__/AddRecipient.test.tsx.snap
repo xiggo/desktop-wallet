@@ -27,17 +27,17 @@ exports[`AddRecipient should render 1`] = `
               Single
             </span>
             <label
-              class="flex"
+              class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
             >
               <input
-                class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                class="Toggle__Input-sc-6s3wfu-1 utRNX"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                class="Toggle__Handle-sc-6s3wfu-2 giHppe"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                 />
               </div>
             </label>
@@ -272,17 +272,17 @@ exports[`AddRecipient should render with multiple recipients switch 1`] = `
               Single
             </span>
             <label
-              class="flex"
+              class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
             >
               <input
-                class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                class="Toggle__Input-sc-6s3wfu-1 utRNX"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                class="Toggle__Handle-sc-6s3wfu-2 giHppe"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                 />
               </div>
             </label>
@@ -517,17 +517,17 @@ exports[`AddRecipient should render with single recipient data 1`] = `
               Single
             </span>
             <label
-              class="flex"
+              class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
             >
               <input
-                class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                class="Toggle__Input-sc-6s3wfu-1 utRNX"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                class="Toggle__Handle-sc-6s3wfu-2 giHppe"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                 />
               </div>
             </label>
@@ -773,17 +773,17 @@ exports[`AddRecipient should render without recipients 1`] = `
               Single
             </span>
             <label
-              class="flex"
+              class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
             >
               <input
-                class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                class="Toggle__Input-sc-6s3wfu-1 utRNX"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                class="Toggle__Handle-sc-6s3wfu-2 giHppe"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                 />
               </div>
             </label>
@@ -1213,17 +1213,17 @@ exports[`AddRecipient should set available amount 1`] = `
               Single
             </span>
             <label
-              class="flex"
+              class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
             >
               <input
-                class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                class="Toggle__Input-sc-6s3wfu-1 utRNX"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                class="Toggle__Handle-sc-6s3wfu-2 giHppe"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                 />
               </div>
             </label>
@@ -1458,17 +1458,17 @@ exports[`AddRecipient should show zero amount if wallet has zero or insufficient
               Single
             </span>
             <label
-              class="flex"
+              class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
             >
               <input
-                class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                class="Toggle__Input-sc-6s3wfu-1 utRNX"
                 type="checkbox"
               />
               <div
-                class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                class="Toggle__Handle-sc-6s3wfu-2 giHppe"
               >
                 <span
-                  class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                  class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                 />
               </div>
             </label>

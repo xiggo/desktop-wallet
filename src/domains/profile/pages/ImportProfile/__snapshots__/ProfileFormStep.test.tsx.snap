@@ -665,18 +665,18 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                         </span>
                         <span>
                           <label
-                            class="flex"
+                            class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                           >
                             <input
-                              class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                              class="Toggle__Input-sc-6s3wfu-1 utRNX"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                              class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                               />
                             </div>
                           </label>
@@ -1106,18 +1106,18 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                         </span>
                         <span>
                           <label
-                            class="flex"
+                            class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                           >
                             <input
-                              class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                              class="Toggle__Input-sc-6s3wfu-1 utRNX"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                              class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                               />
                             </div>
                           </label>
@@ -1548,18 +1548,18 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                         </span>
                         <span>
                           <label
-                            class="flex"
+                            class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                           >
                             <input
-                              class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                              class="Toggle__Input-sc-6s3wfu-1 utRNX"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                              class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                               />
                             </div>
                           </label>
@@ -1990,18 +1990,18 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                         </span>
                         <span>
                           <label
-                            class="flex"
+                            class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                           >
                             <input
-                              class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                              class="Toggle__Input-sc-6s3wfu-1 utRNX"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                              class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                               />
                             </div>
                           </label>
@@ -2715,18 +2715,18 @@ exports[`Import Profile - Profile Form Step should store new profile with passwo
                         </span>
                         <span>
                           <label
-                            class="flex"
+                            class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                           >
                             <input
-                              class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                              class="Toggle__Input-sc-6s3wfu-1 utRNX"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                              class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                               />
                             </div>
                           </label>
@@ -3458,18 +3458,18 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                         </span>
                         <span>
                           <label
-                            class="flex"
+                            class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                           >
                             <input
-                              class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                              class="Toggle__Input-sc-6s3wfu-1 utRNX"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                              class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                               />
                             </div>
                           </label>
@@ -3898,18 +3898,18 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                         </span>
                         <span>
                           <label
-                            class="flex"
+                            class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                           >
                             <input
-                              class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                              class="Toggle__Input-sc-6s3wfu-1 utRNX"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                              class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                               />
                             </div>
                           </label>
@@ -4338,18 +4338,18 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                         </span>
                         <span>
                           <label
-                            class="flex"
+                            class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                           >
                             <input
-                              class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                              class="Toggle__Input-sc-6s3wfu-1 utRNX"
                               name="isDarkMode"
                               type="checkbox"
                             />
                             <div
-                              class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                              class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                             >
                               <span
-                                class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                               />
                             </div>
                           </label>

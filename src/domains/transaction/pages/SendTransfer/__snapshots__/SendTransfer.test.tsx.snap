@@ -1607,17 +1607,17 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                     Single
                   </span>
                   <label
-                    class="flex"
+                    class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
                   >
                     <input
-                      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                      class="Toggle__Input-sc-6s3wfu-1 utRNX"
                       type="checkbox"
                     />
                     <div
-                      class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                      class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                       />
                     </div>
                   </label>
@@ -1906,17 +1906,17 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                 Simple
               </span>
               <label
-                class="flex"
+                class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
               >
                 <input
-                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                  class="Toggle__Input-sc-6s3wfu-1 utRNX"
                   type="checkbox"
                 />
                 <div
-                  class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                  class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                    class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                   />
                 </div>
               </label>
@@ -2568,17 +2568,17 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                     Single
                                   </span>
                                   <label
-                                    class="flex"
+                                    class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
                                   >
                                     <input
-                                      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                      class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                       type="checkbox"
                                     />
                                     <div
-                                      class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                                      class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                                     >
                                       <span
-                                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                                        class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                                       />
                                     </div>
                                   </label>
@@ -2867,17 +2867,17 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                 Simple
                               </span>
                               <label
-                                class="flex"
+                                class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
                               >
                                 <input
-                                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                  class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                                  class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                                   />
                                 </div>
                               </label>
@@ -3564,17 +3564,17 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                     Single
                                   </span>
                                   <label
-                                    class="flex"
+                                    class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
                                   >
                                     <input
-                                      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                      class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                       type="checkbox"
                                     />
                                     <div
-                                      class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                                      class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                                     >
                                       <span
-                                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                                        class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                                       />
                                     </div>
                                   </label>
@@ -3852,17 +3852,17 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                 Simple
                               </span>
                               <label
-                                class="flex"
+                                class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
                               >
                                 <input
-                                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                  class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                                  class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                                   />
                                 </div>
                               </label>
@@ -4198,17 +4198,17 @@ exports[`SendTransfer should render form step 1`] = `
                     Single
                   </span>
                   <label
-                    class="flex"
+                    class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
                   >
                     <input
-                      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                      class="Toggle__Input-sc-6s3wfu-1 utRNX"
                       type="checkbox"
                     />
                     <div
-                      class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                      class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                       />
                     </div>
                   </label>
@@ -4479,17 +4479,17 @@ exports[`SendTransfer should render form step 1`] = `
                 Simple
               </span>
               <label
-                class="flex"
+                class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
               >
                 <input
-                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                  class="Toggle__Input-sc-6s3wfu-1 utRNX"
                   type="checkbox"
                 />
                 <div
-                  class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                  class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                    class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                   />
                 </div>
               </label>
@@ -4819,17 +4819,17 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                     Single
                   </span>
                   <label
-                    class="flex"
+                    class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
                   >
                     <input
-                      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                      class="Toggle__Input-sc-6s3wfu-1 utRNX"
                       type="checkbox"
                     />
                     <div
-                      class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                      class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                       />
                     </div>
                   </label>
@@ -5118,17 +5118,17 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                 Simple
               </span>
               <label
-                class="flex"
+                class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
               >
                 <input
-                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                  class="Toggle__Input-sc-6s3wfu-1 utRNX"
                   type="checkbox"
                 />
                 <div
-                  class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                  class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                    class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                   />
                 </div>
               </label>
@@ -5451,18 +5451,18 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                   data-testid="SelectNetwork__developmentNetworks"
                 >
                   <label
-                    class="flex"
+                    class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                   >
                     <input
-                      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                      class="Toggle__Input-sc-6s3wfu-1 utRNX"
                       data-testid="SelectNetwork__developmentNetworks-toggle"
                       type="checkbox"
                     />
                     <div
-                      class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                      class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                       />
                     </div>
                   </label>
@@ -5658,17 +5658,17 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                     Single
                   </span>
                   <label
-                    class="flex"
+                    class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
                   >
                     <input
-                      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                      class="Toggle__Input-sc-6s3wfu-1 utRNX"
                       type="checkbox"
                     />
                     <div
-                      class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                      class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                     >
                       <span
-                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                        class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                       />
                     </div>
                   </label>
@@ -5939,17 +5939,17 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                 Simple
               </span>
               <label
-                class="flex"
+                class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
               >
                 <input
-                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                  class="Toggle__Input-sc-6s3wfu-1 utRNX"
                   type="checkbox"
                 />
                 <div
-                  class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                  class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                 >
                   <span
-                    class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                    class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                   />
                 </div>
               </label>
@@ -6722,18 +6722,18 @@ exports[`SendTransfer should render network step without test networks 1`] = `
                 data-testid="SelectNetwork__developmentNetworks"
               >
                 <label
-                  class="flex"
+                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                 >
                   <input
-                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                     data-testid="SelectNetwork__developmentNetworks-toggle"
                     type="checkbox"
                   />
                   <div
-                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                   >
                     <span
-                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                     />
                   </div>
                 </label>
@@ -8987,17 +8987,17 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                     Single
                                   </span>
                                   <label
-                                    class="flex"
+                                    class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
                                   >
                                     <input
-                                      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                      class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                       type="checkbox"
                                     />
                                     <div
-                                      class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                                      class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                                     >
                                       <span
-                                        class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                                        class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                                       />
                                     </div>
                                   </label>
@@ -9279,17 +9279,17 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                 Simple
                               </span>
                               <label
-                                class="flex"
+                                class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
                               >
                                 <input
-                                  class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                  class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                   type="checkbox"
                                 />
                                 <div
-                                  class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+                                  class="Toggle__Handle-sc-6s3wfu-2 giHppe"
                                 >
                                   <span
-                                    class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+                                    class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
                                   />
                                 </div>
                               </label>

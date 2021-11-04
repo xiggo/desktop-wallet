@@ -3,17 +3,17 @@
 exports[`Toggle should render 1`] = `
 <DocumentFragment>
   <label
-    class="flex"
+    class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
   >
     <input
-      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+      class="Toggle__Input-sc-6s3wfu-1 utRNX"
       type="checkbox"
     />
     <div
-      class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+      class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+        class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
       />
     </div>
   </label>
@@ -23,17 +23,17 @@ exports[`Toggle should render 1`] = `
 exports[`Toggle should render always on 1`] = `
 <DocumentFragment>
   <label
-    class="flex"
+    class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
   >
     <input
-      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+      class="Toggle__Input-sc-6s3wfu-1 utRNX"
       type="checkbox"
     />
     <div
-      class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+      class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-2 fIKATV"
+        class="Toggle__HandleInner-sc-6s3wfu-3 fnHdfL"
       />
     </div>
   </label>
@@ -43,19 +43,19 @@ exports[`Toggle should render always on 1`] = `
 exports[`Toggle should render disabled 1`] = `
 <DocumentFragment>
   <label
-    class="flex"
+    class="Toggle__Wrapper-sc-6s3wfu-0 crAizE"
+    disabled=""
   >
     <input
-      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+      class="Toggle__Input-sc-6s3wfu-1 utRNX"
       disabled=""
       type="checkbox"
     />
     <div
-      class="Toggle__Handle-sc-6s3wfu-1 bIoSPE"
-      disabled=""
+      class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-2 bceDMq"
+        class="Toggle__HandleInner-sc-6s3wfu-3 jCMKNe"
         disabled=""
       />
     </div>
@@ -66,17 +66,17 @@ exports[`Toggle should render disabled 1`] = `
 exports[`Toggle should render small 1`] = `
 <DocumentFragment>
   <label
-    class="flex"
+    class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
   >
     <input
-      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+      class="Toggle__Input-sc-6s3wfu-1 utRNX"
       type="checkbox"
     />
     <div
-      class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+      class="Toggle__Handle-sc-6s3wfu-2 giHppe"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-2 gUbgIr"
+        class="Toggle__HandleInner-sc-6s3wfu-3 fitNOJ"
       />
     </div>
   </label>
@@ -86,17 +86,17 @@ exports[`Toggle should render small 1`] = `
 exports[`Toggle should toggle checked 1`] = `
 <DocumentFragment>
   <label
-    class="flex"
+    class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
   >
     <input
-      class="Toggle__Input-sc-6s3wfu-0 lktEK"
+      class="Toggle__Input-sc-6s3wfu-1 utRNX"
       type="checkbox"
     />
     <div
-      class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+      class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
     >
       <span
-        class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+        class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
       />
     </div>
   </label>

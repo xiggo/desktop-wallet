@@ -1100,19 +1100,19 @@ exports[`General Settings should disable submit button when profile is not resto
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--screenshotProtection"
                                     name="screenshotProtection"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -1300,19 +1300,19 @@ exports[`General Settings should disable submit button when profile is not resto
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
                                     checked=""
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--useTestNetworks"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -1349,19 +1349,19 @@ exports[`General Settings should disable submit button when profile is not resto
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--errorReporting"
                                     name="errorReporting"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -2559,19 +2559,19 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--screenshotProtection"
                                     name="screenshotProtection"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -2759,19 +2759,19 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
                                     checked=""
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--useTestNetworks"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -2808,19 +2808,19 @@ exports[`General Settings should not update the uploaded avatar when removing fo
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--errorReporting"
                                     name="errorReporting"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -3999,19 +3999,19 @@ exports[`General Settings should render 1`] = `
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--screenshotProtection"
                                     name="screenshotProtection"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -4199,19 +4199,19 @@ exports[`General Settings should render 1`] = `
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
                                     checked=""
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--useTestNetworks"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -4248,19 +4248,19 @@ exports[`General Settings should render 1`] = `
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--errorReporting"
                                     name="errorReporting"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -5439,19 +5439,19 @@ exports[`General Settings should show identicon when removing image if name is s
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--screenshotProtection"
                                     name="screenshotProtection"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -5639,19 +5639,19 @@ exports[`General Settings should show identicon when removing image if name is s
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
                                     checked=""
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--useTestNetworks"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -5688,19 +5688,19 @@ exports[`General Settings should show identicon when removing image if name is s
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--errorReporting"
                                     name="errorReporting"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -6879,20 +6879,20 @@ exports[`General Settings should update profile 1`] = `
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
                                     checked=""
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--screenshotProtection"
                                     name="screenshotProtection"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -7080,19 +7080,19 @@ exports[`General Settings should update profile 1`] = `
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
                                     checked=""
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--useTestNetworks"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -7129,19 +7129,19 @@ exports[`General Settings should update profile 1`] = `
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--errorReporting"
                                     name="errorReporting"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -8320,19 +8320,19 @@ exports[`General Settings should update the avatar when removing focus from name
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--screenshotProtection"
                                     name="screenshotProtection"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -8520,19 +8520,19 @@ exports[`General Settings should update the avatar when removing focus from name
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
                                     checked=""
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--useTestNetworks"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -8569,19 +8569,19 @@ exports[`General Settings should update the avatar when removing focus from name
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--errorReporting"
                                     name="errorReporting"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -9772,19 +9772,19 @@ exports[`General Settings should update the avatar when removing focus from name
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--screenshotProtection"
                                     name="screenshotProtection"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -9972,19 +9972,19 @@ exports[`General Settings should update the avatar when removing focus from name
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
                                     checked=""
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--useTestNetworks"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -10021,19 +10021,19 @@ exports[`General Settings should update the avatar when removing focus from name
                               </span>
                               <span>
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="General-settings__toggle--errorReporting"
                                     name="errorReporting"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>

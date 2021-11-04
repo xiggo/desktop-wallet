@@ -19,18 +19,18 @@ exports[`should allow to input a value 1`] = `
           Simple
         </span>
         <label
-          class="flex"
+          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
         >
           <input
             checked=""
-            class="Toggle__Input-sc-6s3wfu-0 lktEK"
+            class="Toggle__Input-sc-6s3wfu-1 utRNX"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
             />
           </div>
         </label>
@@ -129,18 +129,18 @@ exports[`should display converted value when on live net 1`] = `
           Simple
         </span>
         <label
-          class="flex"
+          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
         >
           <input
             checked=""
-            class="Toggle__Input-sc-6s3wfu-0 lktEK"
+            class="Toggle__Input-sc-6s3wfu-1 utRNX"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
             />
           </div>
         </label>
@@ -249,17 +249,17 @@ exports[`should display converted values when on live net 1`] = `
           Simple
         </span>
         <label
-          class="flex"
+          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-0 lktEK"
+            class="Toggle__Input-sc-6s3wfu-1 utRNX"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
             />
           </div>
         </label>
@@ -384,17 +384,17 @@ exports[`should keep different values for simple and advanced view types 1`] = `
           Simple
         </span>
         <label
-          class="flex"
+          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-0 lktEK"
+            class="Toggle__Input-sc-6s3wfu-1 utRNX"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
             />
           </div>
         </label>
@@ -493,17 +493,17 @@ exports[`should keep different values for simple and advanced view types 2`] = `
           Simple
         </span>
         <label
-          class="flex"
+          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-0 lktEK"
+            class="Toggle__Input-sc-6s3wfu-1 utRNX"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
             />
           </div>
         </label>
@@ -610,17 +610,17 @@ exports[`should render 1`] = `
           Simple
         </span>
         <label
-          class="flex"
+          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-0 lktEK"
+            class="Toggle__Input-sc-6s3wfu-1 utRNX"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
             />
           </div>
         </label>
@@ -800,17 +800,17 @@ exports[`should update value when clicking button Average 1`] = `
           Simple
         </span>
         <label
-          class="flex"
+          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-0 lktEK"
+            class="Toggle__Input-sc-6s3wfu-1 utRNX"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
             />
           </div>
         </label>
@@ -917,17 +917,17 @@ exports[`should update value when clicking button Fast 1`] = `
           Simple
         </span>
         <label
-          class="flex"
+          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-0 lktEK"
+            class="Toggle__Input-sc-6s3wfu-1 utRNX"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
             />
           </div>
         </label>
@@ -1034,17 +1034,17 @@ exports[`should update value when clicking button Slow 1`] = `
           Simple
         </span>
         <label
-          class="flex"
+          class="Toggle__Wrapper-sc-6s3wfu-0 emWhNO"
         >
           <input
-            class="Toggle__Input-sc-6s3wfu-0 lktEK"
+            class="Toggle__Input-sc-6s3wfu-1 utRNX"
             type="checkbox"
           />
           <div
-            class="Toggle__Handle-sc-6s3wfu-1 gIZJpw"
+            class="Toggle__Handle-sc-6s3wfu-2 giHppe"
           >
             <span
-              class="Toggle__HandleInner-sc-6s3wfu-2 dOCfNx"
+              class="Toggle__HandleInner-sc-6s3wfu-3 gKIbRT"
             />
           </div>
         </label>

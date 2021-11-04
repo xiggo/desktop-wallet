@@ -1263,18 +1263,18 @@ exports[`ImportWallet should render as ledger import 1`] = `
                                 data-testid="SelectNetwork__developmentNetworks"
                               >
                                 <label
-                                  class="flex"
+                                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                                 >
                                   <input
-                                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                                     data-testid="SelectNetwork__developmentNetworks-toggle"
                                     type="checkbox"
                                   />
                                   <div
-                                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                                   >
                                     <span
-                                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                                     />
                                   </div>
                                 </label>
@@ -1549,18 +1549,18 @@ exports[`ImportWallet should render network step 1`] = `
                 data-testid="SelectNetwork__developmentNetworks"
               >
                 <label
-                  class="flex"
+                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                 >
                   <input
-                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                     data-testid="SelectNetwork__developmentNetworks-toggle"
                     type="checkbox"
                   />
                   <div
-                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                   >
                     <span
-                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                     />
                   </div>
                 </label>
@@ -1829,18 +1829,18 @@ exports[`ImportWallet should render network step without test networks 1`] = `
                 data-testid="SelectNetwork__developmentNetworks"
               >
                 <label
-                  class="flex"
+                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                 >
                   <input
-                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                     data-testid="SelectNetwork__developmentNetworks-toggle"
                     type="checkbox"
                   />
                   <div
-                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                   >
                     <span
-                      class="Toggle__HandleInner-sc-6s3wfu-2 poMob"
+                      class="Toggle__HandleInner-sc-6s3wfu-3 fCjUWZ"
                     />
                   </div>
                 </label>

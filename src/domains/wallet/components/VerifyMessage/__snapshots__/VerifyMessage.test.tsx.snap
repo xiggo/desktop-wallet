@@ -76,18 +76,18 @@ exports[`VerifyMessage should render 1`] = `
                   JSON
                 </span>
                 <label
-                  class="flex"
+                  class="Toggle__Wrapper-sc-6s3wfu-0 kIsRpT"
                 >
                   <input
                     checked=""
-                    class="Toggle__Input-sc-6s3wfu-0 lktEK"
+                    class="Toggle__Input-sc-6s3wfu-1 utRNX"
                     type="checkbox"
                   />
                   <div
-                    class="Toggle__Handle-sc-6s3wfu-1 beOBjf"
+                    class="Toggle__Handle-sc-6s3wfu-2 cAxMdF"
                   >
                     <span
-                      class="Toggle__HandleInner-sc-6s3wfu-2 fIKATV"
+                      class="Toggle__HandleInner-sc-6s3wfu-3 fnHdfL"
                     />
                   </div>
                 </label>
