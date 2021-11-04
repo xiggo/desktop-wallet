@@ -98,6 +98,7 @@ module.exports = {
 		"jest/no-conditional-expect": "off",
 		"jest/no-done-callback": "off",
 		"jest/no-identical-title": "error",
+		"jest/max-nested-describe": "error",
 		"jest/prefer-hooks-on-top": "error",
 		"jest/prefer-to-contain": "error",
 		"jest/prefer-todo": "error",
