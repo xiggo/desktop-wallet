@@ -17,7 +17,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		expect(await passwordValidation.password().validate("")).toEqual(true);
+		await expect(passwordValidation.password().validate("")).resolves.toEqual(true);
 	});
 
 	it("should require at least 1 lowercase character", async () => {
@@ -25,7 +25,9 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		expect(await passwordValidation.password().validate("NO_LOWER")).toEqual(t("COMMON.VALIDATION.PASSWORD_WEAK"));
+		await expect(passwordValidation.password().validate("NO_LOWER")).resolves.toEqual(
+			t("COMMON.VALIDATION.PASSWORD_WEAK"),
+		);
 		expect(pwnd).not.toHaveBeenCalled();
 	});
 
@@ -34,7 +36,9 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		expect(await passwordValidation.password().validate("no_upper")).toEqual(t("COMMON.VALIDATION.PASSWORD_WEAK"));
+		await expect(passwordValidation.password().validate("no_upper")).resolves.toEqual(
+			t("COMMON.VALIDATION.PASSWORD_WEAK"),
+		);
 		expect(pwnd).not.toHaveBeenCalled();
 	});
 
@@ -43,7 +47,9 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		expect(await passwordValidation.password().validate("NoNumeric")).toEqual(t("COMMON.VALIDATION.PASSWORD_WEAK"));
+		await expect(passwordValidation.password().validate("NoNumeric")).resolves.toEqual(
+			t("COMMON.VALIDATION.PASSWORD_WEAK"),
+		);
 		expect(pwnd).not.toHaveBeenCalled();
 	});
 
@@ -52,7 +58,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		expect(await passwordValidation.password().validate("N0SpecialChar5")).toEqual(
+		await expect(passwordValidation.password().validate("N0SpecialChar5")).resolves.toEqual(
 			t("COMMON.VALIDATION.PASSWORD_WEAK"),
 		);
 		expect(pwnd).not.toHaveBeenCalled();
@@ -63,7 +69,9 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		expect(await passwordValidation.password().validate("shortpw")).toEqual(t("COMMON.VALIDATION.PASSWORD_WEAK"));
+		await expect(passwordValidation.password().validate("shortpw")).resolves.toEqual(
+			t("COMMON.VALIDATION.PASSWORD_WEAK"),
+		);
 		expect(pwnd).not.toHaveBeenCalled();
 	});
 
@@ -74,14 +82,14 @@ describe("Password Validation", () => {
 
 		pwnd.mockImplementation(() => Promise.resolve(1));
 
-		expect(await passwordValidation.password().validate("S3cUr3!Pas#w0rd")).toEqual(
+		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toEqual(
 			t("COMMON.VALIDATION.PASSWORD_LEAKED"),
 		);
 		expect(pwnd).toHaveBeenCalledWith("S3cUr3!Pas#w0rd");
 
 		pwnd.mockImplementation(() => Promise.resolve(0));
 
-		expect(await passwordValidation.password().validate("S3cUr3!Pas#w0rd")).toEqual(true);
+		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toEqual(true);
 		expect(pwnd).toHaveBeenCalledWith("S3cUr3!Pas#w0rd");
 	});
 
@@ -92,7 +100,7 @@ describe("Password Validation", () => {
 
 		pwnd.mockImplementation(() => Promise.reject());
 
-		expect(await passwordValidation.password().validate("S3cUr3!Pas#w0rd")).toEqual(true);
+		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toEqual(true);
 	});
 
 	it("should require different password than the old password", async () => {
@@ -101,8 +109,10 @@ describe("Password Validation", () => {
 
 		const passwordRule = password(t).password("S3cUr3!Pas#w0rd");
 
-		expect(await passwordRule.validate("S3cUr3!Pas#w0rd")).toEqual(t("COMMON.VALIDATION.PASSWORD_SAME_AS_OLD"));
-		expect(await passwordRule.validate("S3cUr3!Pas#w0rd2different")).toEqual(true);
+		await expect(passwordRule.validate("S3cUr3!Pas#w0rd")).resolves.toEqual(
+			t("COMMON.VALIDATION.PASSWORD_SAME_AS_OLD"),
+		);
+		await expect(passwordRule.validate("S3cUr3!Pas#w0rd2different")).resolves.toEqual(true);
 	});
 
 	it("should match password and confirm password", () => {

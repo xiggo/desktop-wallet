@@ -8,49 +8,49 @@ describe("StubStorage", () => {
 	});
 
 	it("should return current storage", async () => {
-		expect(await stubStorage.all()).toEqual({});
+		await expect(stubStorage.all()).resolves.toEqual({});
 	});
 
 	it("should return set and get an entry into storage", async () => {
 		await stubStorage.set("item", "bleh");
 
-		expect(await stubStorage.get("item")).toEqual("bleh");
+		await expect(stubStorage.get("item")).resolves.toEqual("bleh");
 	});
 
 	it("should return set and get an entry into storage", async () => {
 		await stubStorage.set("item", "bleh");
 
-		expect(await stubStorage.get("item")).toEqual("bleh");
+		await expect(stubStorage.get("item")).tresolves.oEqual("bleh");
 	});
 
 	it("should check if the storage has a key", async () => {
 		await stubStorage.set("item", "bleh");
 
-		expect(await stubStorage.has("item")).toEqual(true);
+		await expect(stubStorage.has("item")).resolves.toEqual(true);
 	});
 
 	it("should forget a key", async () => {
 		await stubStorage.set("item", "bleh");
 		await stubStorage.forget("item");
 
-		expect(await stubStorage.has("item")).toEqual(false);
+		await expect(stubStorage.has("item")).resolves.toEqual(false);
 	});
 
 	it("should flush the storage", async () => {
 		await stubStorage.set("item", "bleh");
 		await stubStorage.flush();
 
-		expect(await stubStorage.all()).toEqual({});
+		await expect(stubStorage.all()).resolves.toEqual({});
 	});
 
 	it("should return count", async () => {
-		expect(await stubStorage.count()).toEqual(0);
+		await expect(stubStorage.count()).resolves.toEqual(0);
 	});
 
 	it("should restore", async () => {
-		expect(await stubStorage.restore()).toEqual(undefined);
+		await expect(stubStorage.restore()).resolves.toEqual(undefined);
 	});
 	it("should snapshot", async () => {
-		expect(await stubStorage.snapshot()).toEqual(undefined);
+		await expect(stubStorage.snapshot()).resolves.toEqual(undefined);
 	});
 });

@@ -95,6 +95,7 @@ module.exports = {
 		"import/no-useless-path-segments": "error",
 		"import/no-webpack-loader-syntax": "error",
 		"import/order": "warn",
+		"jest/consistent-test-it": "error",
 		"jest/no-conditional-expect": "off",
 		"jest/no-done-callback": "off",
 		"jest/no-identical-title": "error",

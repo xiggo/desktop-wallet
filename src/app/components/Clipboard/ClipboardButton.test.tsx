@@ -26,7 +26,7 @@ describe("ClipboardButton", () => {
 
 		fireEvent.click(screen.getByTestId("clipboard-button__wrapper"));
 
-		expect(await screen.findByTestId("clipboard-button__checkmark")).toBeInTheDocument();
+		await expect(screen.findByTestId("clipboard-button__checkmark")).resolves.toBeInTheDocument();
 	});
 
 	it("should hide checkmark", async () => {
@@ -40,7 +40,7 @@ describe("ClipboardButton", () => {
 
 		fireEvent.click(screen.getByTestId("clipboard-button__wrapper"));
 
-		expect(await screen.findByTestId("clipboard-button__checkmark")).toBeInTheDocument();
+		await expect(screen.findByTestId("clipboard-button__checkmark")).resolves.toBeInTheDocument();
 
 		await waitFor(() => expect(screen.queryByTestId("clipboard-button__checkmark")).not.toBeInTheDocument(), {
 			timeout: 2000,

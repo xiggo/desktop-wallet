@@ -42,7 +42,7 @@ describe("PluginSpecs", () => {
 		await findByText("Payvo");
 		await findByText("Utility");
 
-		expect(await findAllByText("N/A")).toHaveLength(2);
+		await expect(findAllByText("N/A")).resolves.toHaveLength(2);
 		expect(asFragment()).toMatchSnapshot();
 	});
 

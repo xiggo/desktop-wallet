@@ -133,7 +133,7 @@ describe("NavigationBar", () => {
 
 		fireEvent.click(getByTestId("navbar__buttons--receive"));
 
-		expect(await findByTestId("modal__inner")).toHaveTextContent("Select Account");
+		await expect(findByTestId("modal__inner")).resolves.toHaveTextContent("Select Account");
 
 		fireEvent.click(getAllByText("Select")[0]);
 
@@ -161,7 +161,7 @@ describe("NavigationBar", () => {
 
 		fireEvent.click(receiveFundsButton);
 
-		expect(await findByTestId("modal__inner")).toHaveTextContent("Select Account");
+		await expect(findByTestId("modal__inner")).resolves.toHaveTextContent("Select Account");
 
 		fireEvent.click(getByTestId("modal__close-btn"));
 
