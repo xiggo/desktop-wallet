@@ -6,13 +6,13 @@ import { env, getDefaultProfileId } from "utils/testing-library";
 describe("useTheme", () => {
 	describe("theme", () => {
 		it("should run with shouldUseDarkColors", () => {
-			utils.shouldUseDarkColors = jest.fn(() => true);
+			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => true);
 
 			expect(useTheme().theme).toBe("dark");
 		});
 
 		it("should run without shouldUseDarkColors", () => {
-			utils.shouldUseDarkColors = jest.fn();
+			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation();
 
 			expect(useTheme().theme).toBe("light");
 		});
@@ -20,13 +20,13 @@ describe("useTheme", () => {
 
 	describe("isDarkMode", () => {
 		it("should return true if dark mode", () => {
-			utils.shouldUseDarkColors = jest.fn(() => true);
+			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => true);
 
 			expect(useTheme().isDarkMode).toBe(true);
 		});
 
 		it("should return false if not dark mode", () => {
-			utils.shouldUseDarkColors = jest.fn(() => false);
+			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => false);
 
 			expect(useTheme().isDarkMode).toBe(false);
 		});
@@ -34,7 +34,7 @@ describe("useTheme", () => {
 
 	describe("setTheme", () => {
 		it("should set light theme", () => {
-			utils.shouldUseDarkColors = jest.fn(() => true);
+			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => true);
 
 			expect(electron.remote.nativeTheme.themeSource).toBe("system");
 
@@ -44,7 +44,7 @@ describe("useTheme", () => {
 		});
 
 		it("should set dark theme", () => {
-			utils.shouldUseDarkColors = jest.fn(() => true);
+			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => true);
 			useTheme().setTheme("dark");
 
 			expect(electron.remote.nativeTheme.themeSource).toBe("dark");
@@ -56,7 +56,7 @@ describe("useTheme", () => {
 			const profile = env.profiles().findById(getDefaultProfileId());
 			await env.profiles().restore(profile);
 
-			utils.shouldUseDarkColors = jest.fn(() => true);
+			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => true);
 			useTheme().setTheme("dark");
 
 			expect(electron.remote.nativeTheme.themeSource).toBe("dark");
@@ -70,7 +70,7 @@ describe("useTheme", () => {
 			const profile = env.profiles().findById(getDefaultProfileId());
 			await env.profiles().restore(profile);
 
-			utils.shouldUseDarkColors = jest.fn(() => false);
+			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => false);
 			useTheme().setTheme("dark");
 
 			expect(electron.remote.nativeTheme.themeSource).toBe("dark");
@@ -83,7 +83,7 @@ describe("useTheme", () => {
 
 	describe("resetTheme", () => {
 		it("should reset theme to defaults", () => {
-			utils.shouldUseDarkColors = jest.fn(() => true);
+			jest.spyOn(utils, "shouldUseDarkColors").mockImplementation(() => true);
 			useTheme().setTheme("dark");
 
 			expect(electron.remote.nativeTheme.themeSource).toBe("dark");

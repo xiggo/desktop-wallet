@@ -20,13 +20,13 @@ describe("useNetworkStatus", () => {
 
 		eventMap = {};
 
-		window.addEventListener = jest.fn((eventName, callback) => {
+		jest.spyOn(window, "addEventListener").mockImplementation((eventName, callback) => {
 			eventMap[eventName] = callback;
 		});
 	});
 
 	afterEach(() => {
-		window.removeEventListener = jest.fn((eventName) => {
+		jest.spyOn(window, "removeEventListener").mockImplementation((eventName) => {
 			delete eventMap[eventName];
 		});
 	});

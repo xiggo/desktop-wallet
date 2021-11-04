@@ -71,7 +71,7 @@ describe("News", () => {
 				};
 			});
 
-		window.scrollTo = jest.fn();
+		jest.spyOn(window, "scrollTo").mockImplementation();
 	});
 
 	beforeEach(() => {
