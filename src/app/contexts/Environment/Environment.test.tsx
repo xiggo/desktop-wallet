@@ -22,7 +22,9 @@ describe("Environment Context", () => {
 			return <p>{env.profiles().count()}</p>;
 		};
 
-		expect(() => render(<Test />, { withProviders: false })).toThrow();
+		expect(() => render(<Test />, { withProviders: false })).toThrow(
+			"[useEnvironment] Component not wrapped within a Provider",
+		);
 
 		console.error.mockRestore();
 	});

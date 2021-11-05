@@ -385,6 +385,6 @@ describe("TransactionDetailModal", () => {
 					routes: [dashboardURL],
 				},
 			),
-		).toThrow();
+		).toThrow("Transaction type [unknown] is not supported.");
 	});
 });

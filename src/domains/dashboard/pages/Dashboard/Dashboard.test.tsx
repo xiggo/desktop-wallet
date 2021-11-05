@@ -284,7 +284,7 @@ describe("Dashboard", () => {
 			{ timeout: 4000 },
 		);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow();
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
@@ -292,6 +292,6 @@ describe("Dashboard", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow();
+		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
 });

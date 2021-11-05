@@ -63,11 +63,13 @@ describe("Plugin Controller subject", () => {
 		subject.push(plugin);
 		subject.runAllEnabled(profile);
 
-		expect(() => subject.runAllEnabled(profile)).toThrow();
+		expect(() => subject.runAllEnabled(profile)).toThrow(
+			`Profile ${profile.id()} has the plugins running, call #dispose to close them first.`,
+		);
 	});
 
 	it("should fail to dispose if not running", () => {
-		expect(() => subject.dispose()).toThrow();
+		expect(() => subject.dispose()).toThrow("No plugins running, call #boot to run them.");
 	});
 
 	it("should dispose", () => {

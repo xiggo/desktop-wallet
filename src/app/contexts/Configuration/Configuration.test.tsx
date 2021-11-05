@@ -25,7 +25,9 @@ describe("Configuration Context", () => {
 			return <p>Configuration content</p>;
 		};
 
-		expect(() => render(<Test />, { withProviders: false })).toThrow();
+		expect(() => render(<Test />, { withProviders: false })).toThrow(
+			"[useConfiguration] Component not wrapped within a Provider",
+		);
 
 		console.error.mockRestore();
 	});

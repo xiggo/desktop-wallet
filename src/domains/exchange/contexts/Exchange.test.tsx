@@ -17,7 +17,7 @@ describe("Exchange Context", () => {
 			return <span>provider counts: {exchangeProviders.length}</span>;
 		};
 
-		expect(() => render(<Test />)).toThrow();
+		expect(() => render(<Test />)).toThrow("[useExchangeContext] Component not wrapped within a Provider");
 
 		console.error.mockRestore();
 	});

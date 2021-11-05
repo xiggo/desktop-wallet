@@ -643,7 +643,7 @@ describe("Registration", () => {
 
 		fireEvent.click(within(getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.SIMPLE));
 
-		expect(() => getByTestId("InputCurrency")).toThrow();
+		expect(() => getByTestId("InputCurrency")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should return to form step by cancelling fee warning", async () => {

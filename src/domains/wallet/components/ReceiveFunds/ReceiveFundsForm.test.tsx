@@ -62,7 +62,7 @@ describe("ReceiveFundsForm", () => {
 			defaultValues: { memo },
 		});
 
-		expect(() => getByTestId("ReceiveFundsForm__memo")).toThrow();
+		expect(() => getByTestId("ReceiveFundsForm__memo")).toThrow(/Unable to find an element by/);
 
 		expect(asFragment()).toMatchSnapshot();
 

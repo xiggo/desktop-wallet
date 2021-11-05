@@ -49,7 +49,7 @@ describe("PaginationSearch", () => {
 
 		fireEvent.click(getByTestId("PaginationSearch__cancel"));
 
-		await waitFor(() => expect(() => getByTestId("PaginationSearchForm")).toThrow());
+		await waitFor(() => expect(() => getByTestId("PaginationSearchForm")).toThrow(/Unable to find an element by/));
 	});
 
 	it("should type page and emit onSelectPage event", async () => {
@@ -227,6 +227,6 @@ describe("PaginationSearch", () => {
 
 		fireEvent.mouseDown(getByTestId("somewhere-outside"));
 
-		await waitFor(() => expect(() => getByTestId("PaginationSearchForm")).toThrow());
+		await waitFor(() => expect(() => getByTestId("PaginationSearchForm")).toThrow(/Unable to find an element by/));
 	});
 });

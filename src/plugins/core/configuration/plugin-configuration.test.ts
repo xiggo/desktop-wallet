@@ -15,7 +15,7 @@ describe("Plugin Configuration", () => {
 	it("should fail to validate", () => {
 		const subject = PluginConfigurationData.make({ version: 1 });
 
-		expect(() => subject.validate()).toThrow();
+		expect(() => subject.validate()).toThrow("name is a required field");
 	});
 
 	it("should format title with scope", () => {

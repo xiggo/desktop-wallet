@@ -84,7 +84,7 @@ describe("ExchangeStatus", () => {
 		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Confirming);
 		const { rerender } = render(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
 
-		expect(() => screen.getAllByTestId("StatusIcon__check-mark")).toThrow();
+		expect(() => screen.getAllByTestId("StatusIcon__check-mark")).toThrow(/Unable to find an element by/);
 		expect(screen.getAllByTestId("StatusIcon__spinner")).toHaveLength(1);
 		expect(screen.getAllByTestId("StatusIcon__empty")).toHaveLength(2);
 
@@ -100,13 +100,13 @@ describe("ExchangeStatus", () => {
 
 		expect(screen.getAllByTestId("StatusIcon__check-mark")).toHaveLength(2);
 		expect(screen.getAllByTestId("StatusIcon__spinner")).toHaveLength(1);
-		expect(() => screen.getAllByTestId("StatusIcon__empty")).toThrow();
+		expect(() => screen.getAllByTestId("StatusIcon__empty")).toThrow(/Unable to find an element by/);
 
 		exchangeTransaction.setStatus(Contracts.ExchangeTransactionStatus.Finished);
 		rerender(<ExchangeStatus exchangeTransaction={exchangeTransaction} />);
 
 		expect(screen.getAllByTestId("StatusIcon__check-mark")).toHaveLength(3);
-		expect(() => screen.getAllByTestId("StatusIcon__spinner")).toThrow();
-		expect(() => screen.getAllByTestId("StatusIcon__empty")).toThrow();
+		expect(() => screen.getAllByTestId("StatusIcon__spinner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getAllByTestId("StatusIcon__empty")).toThrow(/Unable to find an element by/);
 	});
 });

@@ -29,7 +29,7 @@ describe("WalletsGrid", () => {
 	it("should not render if visible prop is falsy", () => {
 		const { getByTestId } = render(<WalletsGrid wallets={[]} isVisible={false} />);
 
-		expect(() => getByTestId("WalletsGrid")).toThrow();
+		expect(() => getByTestId("WalletsGrid")).toThrow(/Unable to find an element by/);
 	});
 
 	it("should render loading state", async () => {

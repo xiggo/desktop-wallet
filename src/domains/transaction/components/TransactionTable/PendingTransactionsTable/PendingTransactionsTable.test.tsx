@@ -627,7 +627,7 @@ describe("Signed Transaction Table", () => {
 
 		fireEvent.click(getByTestId("ConfirmRemovePendingTransaction__cancel"));
 
-		expect(() => getByTestId("modal__inner")).toThrow();
+		expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
 		canBeSignedMock.mockReset();
 		isMultiSignatureReadyMock.mockRestore();

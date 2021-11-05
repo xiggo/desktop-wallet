@@ -104,7 +104,9 @@ describe("MultiSignatureSuccessful", () => {
 			</MultiSignatureSuccessful>,
 		);
 
-		await waitFor(() => expect(() => getByTestId("MultiSignatureSuccessful__publicKeys")).toThrow());
+		await waitFor(() =>
+			expect(() => getByTestId("MultiSignatureSuccessful__publicKeys")).toThrow(/Unable to find an element by/),
+		);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

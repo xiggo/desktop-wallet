@@ -335,7 +335,7 @@ describe("ExchangeForm", () => {
 		fireEvent.click(screen.getByTestId("ExchangeForm__remove-refund-address"));
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("ExchangeForm__refund-address")).toThrow();
+			expect(() => screen.getByTestId("ExchangeForm__refund-address")).toThrow(/Unable to find an element by/);
 		});
 	});
 
@@ -757,7 +757,7 @@ describe("ExchangeForm", () => {
 		await waitFor(() => {
 			expect(() =>
 				within(screen.getByTestId("ExchangeForm__recipient-address")).getAllByTestId("Input__error"),
-			).toThrow();
+			).toThrow(/Unable to find an element by/);
 		});
 	});
 
@@ -810,7 +810,7 @@ describe("ExchangeForm", () => {
 		await waitFor(() => {
 			expect(() =>
 				within(screen.getByTestId("ExchangeForm__refund-address")).getAllByTestId("Input__error"),
-			).toThrow();
+			).toThrow(/Unable to find an element by/);
 		});
 	});
 
@@ -1199,7 +1199,7 @@ describe("ExchangeForm", () => {
 
 		// status: awaiting confirmation
 		await waitFor(() => {
-			expect(() => screen.getAllByTestId("StatusIcon__check-mark")).toThrow();
+			expect(() => screen.getAllByTestId("StatusIcon__check-mark")).toThrow(/Unable to find an element by/);
 		});
 
 		expect(screen.getAllByTestId("StatusIcon__spinner")).toHaveLength(1);
@@ -1213,8 +1213,8 @@ describe("ExchangeForm", () => {
 			{ timeout: 5000 },
 		);
 
-		expect(() => screen.getAllByTestId("StatusIcon__spinner")).toThrow();
-		expect(() => screen.getAllByTestId("StatusIcon__empty")).toThrow();
+		expect(() => screen.getAllByTestId("StatusIcon__spinner")).toThrow(/Unable to find an element by/);
+		expect(() => screen.getAllByTestId("StatusIcon__empty")).toThrow(/Unable to find an element by/);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
@@ -1394,7 +1394,7 @@ describe("StatusStep", () => {
 
 		// status: awaiting confirmation
 		await waitFor(() => {
-			expect(() => screen.getAllByTestId("StatusIcon__check-mark")).toThrow();
+			expect(() => screen.getAllByTestId("StatusIcon__check-mark")).toThrow(/Unable to find an element by/);
 		});
 
 		expect(screen.getAllByTestId("StatusIcon__spinner")).toHaveLength(1);

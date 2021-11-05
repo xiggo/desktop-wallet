@@ -29,7 +29,7 @@ describe("PluginInfo", () => {
 
 		const { asFragment } = render(<PluginInfo description={description} permissions={[]} />);
 
-		expect(() => screen.getByTestId("PluginInfo__permissions")).toThrow();
+		expect(() => screen.getByTestId("PluginInfo__permissions")).toThrow(/Unable to find an element by/);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -38,7 +38,9 @@ describe("PluginInfo", () => {
 
 		const { asFragment } = render(<PluginInfo permissions={permissions} />);
 
-		expect(() => within(screen.getByTestId("PluginInfo__permissions")).getByRole("button")).toThrow();
+		expect(() => within(screen.getByTestId("PluginInfo__permissions")).getByRole("button")).toThrow(
+			/Unable to find/,
+		);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -53,7 +55,7 @@ describe("PluginInfo", () => {
 
 		fireEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(() => screen.getByTestId("PluginPermissionsModal")).toThrow();
+		expect(() => screen.getByTestId("PluginPermissionsModal")).toThrow(/Unable to find an element by/);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -478,7 +478,7 @@ describe("SelectDropdown", () => {
 
 			fireEvent.change(selectDropdown, { target: { value: "Unmatched" } });
 
-			expect(() => screen.getByTestId("SelectDropdown__option--0")).toThrow();
+			expect(() => screen.getByTestId("SelectDropdown__option--0")).toThrow(/Unable to find an element by/);
 		},
 	);
 

@@ -153,7 +153,9 @@ describe("FilterNetworks", () => {
 
 		fireEvent.click(within(getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
-		await waitFor(() => expect(() => getByTestId("FilterNetwork__select-all-checkbox")).toThrow());
+		await waitFor(() =>
+			expect(() => getByTestId("FilterNetwork__select-all-checkbox")).toThrow(/Unable to find an element by/),
+		);
 
 		expect(container).toMatchSnapshot();
 	});

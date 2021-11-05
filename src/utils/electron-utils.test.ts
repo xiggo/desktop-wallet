@@ -173,7 +173,9 @@ describe("Electron utils", () => {
 					filePath: "/home/bar/foo",
 				}));
 
-				await expect(saveFile(null, null, { restrictToPath: "/home/foo" })).rejects.toThrow();
+				await expect(saveFile(null, null, { restrictToPath: "/home/foo" })).rejects.toThrow(
+					`Writing to "/home/bar/foo" is not allowed`,
+				);
 			});
 		});
 	});
@@ -198,7 +200,7 @@ describe("Electron utils", () => {
 		it.each(["ftp://foo.bar/", "smb://foo.bar/", "file://foo/bar", "\\\\\\\\foo\\bar"])(
 			"should not open links with an invalid protocol (%s)",
 			(link) => {
-				expect(() => openExternal(link)).toThrow();
+				expect(() => openExternal(link)).toThrow("");
 				expect(ipcRendererMock).not.toHaveBeenCalled();
 			},
 		);

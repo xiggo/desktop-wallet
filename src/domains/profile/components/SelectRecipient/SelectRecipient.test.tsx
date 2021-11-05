@@ -196,7 +196,9 @@ describe("SelectRecipient", () => {
 
 		fireEvent.click(getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => expect(() => getAllByTestId("RecipientListItem__select-button")).toThrow());
+		await waitFor(() =>
+			expect(() => getAllByTestId("RecipientListItem__select-button")).toThrow(/Unable to find an element by/),
+		);
 	});
 
 	it("should filter recipients list by MultiSignature type", async () => {

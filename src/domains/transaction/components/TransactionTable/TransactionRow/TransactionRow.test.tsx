@@ -99,7 +99,7 @@ describe("TransactionRow", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getAllByTestId("AmountCrypto")).toHaveLength(2);
-		expect(() => screen.getByText(commonTranslations.NOT_AVAILABLE)).toThrow();
+		expect(() => screen.getByText(commonTranslations.NOT_AVAILABLE)).toThrow(/Unable to find an element/);
 	});
 
 	it("should omit the currency for transactions from test networks", () => {

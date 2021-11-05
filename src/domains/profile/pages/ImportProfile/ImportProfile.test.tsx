@@ -77,7 +77,9 @@ describe("ImportProfile", () => {
 
 		fireEvent.click(getByTestId("SelectFileStep__change-file"));
 
-		await waitFor(() => expect(() => getByTestId("SelectFileStep__change-file")).toThrow());
+		await waitFor(() =>
+			expect(() => getByTestId("SelectFileStep__change-file")).toThrow(/Unable to find an element by/),
+		);
 	});
 
 	it("should select file and go to step 2", async () => {
@@ -193,7 +195,7 @@ describe("ImportProfile", () => {
 		await findByTestId("ProcessingImport");
 		await findByTestId("CreateProfile__form");
 
-		expect(() => getByTestId("InputPassword")).toThrow();
+		expect(() => getByTestId("InputPassword")).toThrow(/Unable to find an element by/);
 
 		fireEvent.click(getByTestId("CreateProfile__submit-button"));
 

@@ -92,7 +92,7 @@ describe("WalletHeader", () => {
 				within(getByTestId("dropdown__content")).getByText(
 					walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE,
 				),
-			).toThrow(),
+			).toThrow(/Unable to find an element/),
 		);
 
 		mockIsSecondSignature.mockRestore();
@@ -410,7 +410,7 @@ describe("WalletHeader", () => {
 		const { getByTestId, findByText } = render(<WalletHeader profile={profile} wallet={wallet} />);
 		await findByText(wallet.address());
 
-		expect(() => getByTestId("WalletIcon__Multisignature")).toThrow();
+		expect(() => getByTestId("WalletIcon__Multisignature")).toThrow(/Unable to find an element by/);
 
 		multisigSpy.mockRestore();
 	});
@@ -439,7 +439,9 @@ describe("WalletHeader", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		await waitFor(() => expect(() => screen.getByTestId("UnlockTokensModal")).toThrow());
+		await waitFor(() =>
+			expect(() => screen.getByTestId("UnlockTokensModal")).toThrow(/Unable to find an element by/),
+		);
 
 		usesLockedBalance.mockRestore();
 		balance.mockRestore();

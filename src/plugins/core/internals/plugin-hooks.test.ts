@@ -32,7 +32,9 @@ describe("Plugin Hooks", () => {
 	});
 
 	it("should fail to register an invalid command", () => {
-		expect(() => subject.registerCommand("test.plus", 1)).toThrow();
+		expect(() => subject.registerCommand("test.plus", 1)).toThrow(
+			"Expected handler to be a function, but found type 'number'",
+		);
 	});
 
 	it("should fail to register a duplicate handler", () => {
@@ -50,7 +52,9 @@ describe("Plugin Hooks", () => {
 	});
 
 	it("should fail to add an invalid filter", () => {
-		expect(() => subject.addFilter("test", "log", 1)).toThrow();
+		expect(() => subject.addFilter("test", "log", 1)).toThrow(
+			"Expected handler to be a function, but found type 'number'",
+		);
 	});
 
 	it("should return undefined if no filter is applied", () => {

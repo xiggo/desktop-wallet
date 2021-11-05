@@ -79,7 +79,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await waitFor(() => expect(() => getByTestId("StatusIcon__icon")).toThrow());
+		await waitFor(() => expect(() => getByTestId("StatusIcon__icon")).toThrow(/Unable to find an element by/));
 
 		expect(asFragment()).toMatchSnapshot();
 

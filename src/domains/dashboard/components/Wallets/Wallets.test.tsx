@@ -354,7 +354,7 @@ describe("Wallets", () => {
 			expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
 		});
 
-		expect(() => within(screen.getAllByTestId("Card")[0]).getByText(name)).toThrow();
+		expect(() => within(screen.getAllByTestId("Card")[0]).getByText(name)).toThrow(/Unable to find an element/);
 
 		fireEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));
 

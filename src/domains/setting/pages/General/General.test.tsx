@@ -629,7 +629,7 @@ describe("General Settings", () => {
 
 		await screen.findByText("EUR (€)");
 
-		expect(() => screen.getByText("VND (₫)")).toThrow();
+		expect(() => screen.getByText("VND (₫)")).toThrow(/Unable to find an element/);
 
 		fireEvent.click(screen.getByText("EUR (€)"));
 

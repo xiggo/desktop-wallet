@@ -1756,7 +1756,7 @@ describe("SendTransfer", () => {
 		fireEvent.change(getByTestId("InputCurrency"), { target: { value: "1" } });
 		await waitFor(() => expect(getByTestId("InputCurrency")).toHaveValue("1"));
 
-		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow());
+		await waitFor(() => expect(() => getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
 		// Step 2
 		await waitFor(() => expect(getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
@@ -2416,13 +2416,13 @@ describe("SendTransfer", () => {
 
 		await findByTestId("modal__inner");
 		fireEvent.click(getByTestId("ConfirmSendTransaction__cancel"));
-		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
 		fireEvent.click(getByTestId("StepNavigation__send-button"));
 		await findByTestId("modal__inner");
 
 		fireEvent.click(getByTestId("ConfirmSendTransaction__confirm"));
-		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
 		await findByTestId("TransactionSuccessful");
 		await waitFor(() =>
@@ -2546,7 +2546,7 @@ describe("SendTransfer", () => {
 
 		// confirm within the modal
 		fireEvent.click(getByTestId("ConfirmSendTransaction__confirm"));
-		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow());
+		await waitFor(() => expect(() => getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
 		await findByTestId("TransactionSuccessful");
 		await waitFor(() =>

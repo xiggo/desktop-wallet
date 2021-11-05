@@ -161,13 +161,13 @@ describe("PluginGrid", () => {
 
 		await findByText(plugins[0].title);
 
-		await expect(findByText(plugins[1].title)).rejects.toThrow();
+		await expect(findByText(plugins[1].title)).rejects.toThrow(/Unable to find an element/);
 
 		fireEvent.click(getByTestId("Pagination__next"));
 
 		await findByText(plugins[1].title);
 
-		await expect(findByText(plugins[0].title)).rejects.toThrow();
+		await expect(findByText(plugins[0].title)).rejects.toThrow(/Unable to find an element/);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

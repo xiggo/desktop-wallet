@@ -145,7 +145,9 @@ describe("App", () => {
 			jest.runAllTimers();
 		});
 
-		await waitFor(() => expect(() => getByTestId("SyncErrorMessage__retry")).toThrow());
+		await waitFor(() =>
+			expect(() => getByTestId("SyncErrorMessage__retry")).toThrow(/Unable to find an element by/),
+		);
 		await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
 
 		walletRestoreErrorMock.mockRestore();
