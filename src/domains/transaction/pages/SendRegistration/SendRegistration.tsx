@@ -21,7 +21,7 @@ import {
 	SecondSignatureRegistrationForm,
 	signSecondSignatureRegistration,
 } from "domains/transaction/components/SecondSignatureRegistrationForm";
-import { useFeeConfirmation, useMultiSignatureRegistration, useWalletSignatory } from "domains/transaction/hooks";
+import { useFeeConfirmation, useMultiSignatureRegistration } from "domains/transaction/hooks";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
@@ -42,7 +42,6 @@ export const SendRegistration = () => {
 	const { env } = useEnvironmentContext();
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWallet();
-	const { sign } = useWalletSignatory(activeWallet);
 	const { sendMultiSignature, abortReference } = useMultiSignatureRegistration();
 	const { common } = useValidation();
 
@@ -150,7 +149,7 @@ export const SendRegistration = () => {
 				await activeWallet.ledger().connect(transport);
 			}
 
-			const signatory = await sign({
+			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
 				privateKey,

@@ -10,7 +10,7 @@ import { useKeydown } from "app/hooks/use-keydown";
 import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
 import { ErrorStep } from "domains/transaction/components/ErrorStep";
 import { FeeWarning } from "domains/transaction/components/FeeWarning";
-import { useFeeConfirmation, useWalletSignatory } from "domains/transaction/hooks";
+import { useFeeConfirmation } from "domains/transaction/hooks";
 import { handleBroadcastError } from "domains/transaction/utils";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -45,7 +45,6 @@ export const SendDelegateResignation = () => {
 
 	const activeProfile = useActiveProfile();
 	const activeWallet = useActiveWallet();
-	const { sign } = useWalletSignatory(activeWallet);
 
 	useEffect(() => {
 		register("fees");
@@ -95,7 +94,7 @@ export const SendDelegateResignation = () => {
 		const { fee, mnemonic, secondMnemonic, encryptionPassword, wif, privateKey, secret } = getValues();
 
 		try {
-			const signatory = await sign({
+			const signatory = await activeWallet.signatoryFactory().make({
 				encryptionPassword,
 				mnemonic,
 				privateKey,
