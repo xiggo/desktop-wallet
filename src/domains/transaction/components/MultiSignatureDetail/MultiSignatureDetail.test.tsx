@@ -34,180 +34,180 @@ const fixtures: Record<string, any> = {
 	vote: undefined,
 };
 
-beforeEach(async () => {
-	profile = env.profiles().findById(getDefaultProfileId());
-
-	await env.profiles().restore(profile);
-	await profile.sync();
-
-	await syncDelegates(profile);
-
-	wallet = profile.wallets().first();
-
-	getVersionSpy = jest
-		.spyOn(wallet.coin().ledger(), "getVersion")
-		.mockResolvedValue(minVersionList[wallet.network().coin()]);
-
-	await wallet.synchroniser().identity();
-
-	fixtures.transfer = new DTO.ExtendedSignedTransactionData(
-		await wallet
-			.coin()
-			.transaction()
-			.transfer({
-				data: {
-					amount: 1,
-					to: wallet.address(),
-				},
-				fee: 1,
-				nonce: "1",
-				signatory: await wallet
-					.coin()
-					.signatory()
-					.multiSignature({
-						min: 2,
-						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-					}),
-			}),
-		wallet,
-	);
-
-	fixtures.multiSignature = new DTO.ExtendedSignedTransactionData(
-		await wallet
-			.coin()
-			.transaction()
-			.multiSignature({
-				data: {
-					min: 2,
-					publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-					senderPublicKey: wallet.publicKey()!,
-				},
-				fee: 1,
-				nonce: "1",
-				signatory: await wallet
-					.coin()
-					.signatory()
-					.multiSignature({
-						min: 2,
-						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-					}),
-			}),
-		wallet,
-	);
-
-	fixtures.multiPayment = new DTO.ExtendedSignedTransactionData(
-		await wallet
-			.coin()
-			.transaction()
-			.multiPayment({
-				data: {
-					payments: [
-						{
-							amount: 1,
-							to: wallet.address(),
-						},
-						{
-							amount: 2,
-							to: wallet.address(),
-						},
-					],
-				},
-				fee: 1,
-				nonce: "1",
-				signatory: await wallet
-					.coin()
-					.signatory()
-					.multiSignature({
-						min: 2,
-						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-					}),
-			}),
-		wallet,
-	);
-
-	fixtures.vote = new DTO.ExtendedSignedTransactionData(
-		await wallet
-			.coin()
-			.transaction()
-			.vote({
-				data: {
-					unvotes: [],
-					votes: [
-						{
-							amount: 0,
-							id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-						},
-					],
-				},
-				fee: 1,
-				nonce: "1",
-				signatory: await wallet
-					.coin()
-					.signatory()
-					.multiSignature({
-						min: 2,
-						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-					}),
-			}),
-		wallet,
-	);
-
-	fixtures.unvote = new DTO.ExtendedSignedTransactionData(
-		await wallet
-			.coin()
-			.transaction()
-			.vote({
-				data: {
-					unvotes: [
-						{
-							amount: 0,
-							id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
-						},
-					],
-					votes: [],
-				},
-				fee: 1,
-				nonce: "1",
-				signatory: await wallet
-					.coin()
-					.signatory()
-					.multiSignature({
-						min: 2,
-						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-					}),
-			}),
-		wallet,
-	);
-
-	fixtures.ipfs = new DTO.ExtendedSignedTransactionData(
-		await wallet
-			.coin()
-			.transaction()
-			.ipfs({
-				data: {
-					hash: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco",
-				},
-				fee: 1,
-				nonce: "1",
-				signatory: await wallet
-					.coin()
-					.signatory()
-					.multiSignature({
-						min: 2,
-						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
-					}),
-			}),
-		wallet,
-	);
-
-	jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
-});
-
-afterAll(() => {
-	getVersionSpy.mockRestore();
-});
-
 describe("MultiSignatureDetail", () => {
+	beforeEach(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
+
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		await syncDelegates(profile);
+
+		wallet = profile.wallets().first();
+
+		getVersionSpy = jest
+			.spyOn(wallet.coin().ledger(), "getVersion")
+			.mockResolvedValue(minVersionList[wallet.network().coin()]);
+
+		await wallet.synchroniser().identity();
+
+		fixtures.transfer = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.transfer({
+					data: {
+						amount: 1,
+						to: wallet.address(),
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
+		fixtures.multiSignature = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.multiSignature({
+					data: {
+						min: 2,
+						publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						senderPublicKey: wallet.publicKey()!,
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
+		fixtures.multiPayment = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.multiPayment({
+					data: {
+						payments: [
+							{
+								amount: 1,
+								to: wallet.address(),
+							},
+							{
+								amount: 2,
+								to: wallet.address(),
+							},
+						],
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
+		fixtures.vote = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.vote({
+					data: {
+						unvotes: [],
+						votes: [
+							{
+								amount: 0,
+								id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+							},
+						],
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
+		fixtures.unvote = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.vote({
+					data: {
+						unvotes: [
+							{
+								amount: 0,
+								id: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+							},
+						],
+						votes: [],
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
+		fixtures.ipfs = new DTO.ExtendedSignedTransactionData(
+			await wallet
+				.coin()
+				.transaction()
+				.ipfs({
+					data: {
+						hash: "QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco",
+					},
+					fee: 1,
+					nonce: "1",
+					signatory: await wallet
+						.coin()
+						.signatory()
+						.multiSignature({
+							min: 2,
+							publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()!],
+						}),
+				}),
+			wallet,
+		);
+
+		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
+	});
+
+	afterAll(() => {
+		getVersionSpy.mockRestore();
+	});
+
 	const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
 		jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
 			[fixtures.transfer.id()]: fixtures.transfer,

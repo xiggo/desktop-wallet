@@ -9,15 +9,15 @@ let subject: ExchangeService;
 
 const provider = "changenow";
 
-beforeAll(() => nock.disableNetConnect());
-
-beforeEach(() => {
-	subject = new ExchangeService(provider, httpClient);
-});
-
-afterEach(() => nock.cleanAll());
-
 describe("ExchangeService", () => {
+	beforeAll(() => nock.disableNetConnect());
+
+	beforeEach(() => {
+		subject = new ExchangeService(provider, httpClient);
+	});
+
+	afterEach(() => nock.cleanAll());
+
 	describe("#currency", () => {
 		it("should retrieve an available currencies by its ticker", async () => {
 			nock(exchangeHost)

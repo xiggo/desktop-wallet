@@ -35,51 +35,51 @@ let dashboardURL: string;
 
 const transport: typeof Transport = createTransportReplayer(RecordStore.fromString(""));
 
-beforeAll(async () => {
-	useDefaultNetMocks();
-
-	nock("https://ark-test.payvo.com")
-		.get("/api/transactions")
-		.query(true)
-		.reply(200, () => {
-			const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
-			return {
-				data: data.slice(0, 2),
-				meta,
-			};
-		})
-		.persist();
-
-	nock("https://neoscan.io/api/main_net/v1/")
-		.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
-		.reply(200, []);
-
-	profile = env.profiles().findById(fixtureProfileId);
-	await env.profiles().restore(profile);
-	await profile.sync();
-
-	const wallet = await profile.walletFactory().fromAddress({
-		address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
-		coin: "ARK",
-		network: "ark.mainnet",
-	});
-	profile.wallets().push(wallet);
-
-	await syncDelegates(profile);
-
-	jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
-});
-
-afterAll(() => {
-	useRandomNumberHook.useRandomNumber.mockRestore();
-});
-
-beforeEach(() => {
-	dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
-	history.push(dashboardURL);
-});
-
 describe("Dashboard", () => {
+	beforeAll(async () => {
+		useDefaultNetMocks();
+
+		nock("https://ark-test.payvo.com")
+			.get("/api/transactions")
+			.query(true)
+			.reply(200, () => {
+				const { meta, data } = require("tests/fixtures/coins/ark/devnet/transactions.json");
+				return {
+					data: data.slice(0, 2),
+					meta,
+				};
+			})
+			.persist();
+
+		nock("https://neoscan.io/api/main_net/v1/")
+			.get("/get_last_transactions_by_address/AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX/1")
+			.reply(200, []);
+
+		profile = env.profiles().findById(fixtureProfileId);
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		const wallet = await profile.walletFactory().fromAddress({
+			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
+			coin: "ARK",
+			network: "ark.mainnet",
+		});
+		profile.wallets().push(wallet);
+
+		await syncDelegates(profile);
+
+		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+	});
+
+	afterAll(() => {
+		useRandomNumberHook.useRandomNumber.mockRestore();
+	});
+
+	beforeEach(() => {
+		dashboardURL = `/profiles/${fixtureProfileId}/dashboard`;
+		history.push(dashboardURL);
+	});
+
 	it("should render", async () => {
 		const { asFragment, getByTestId } = render(
 			<Route path="/profiles/:profileId/dashboard">

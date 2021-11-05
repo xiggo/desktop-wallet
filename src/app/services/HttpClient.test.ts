@@ -4,13 +4,13 @@ import { HttpClient } from "./HttpClient";
 
 let subject: HttpClient;
 
-beforeAll(() => {
-	nock.disableNetConnect();
-
-	subject = new HttpClient(0);
-});
-
 describe("HttpClient", () => {
+	beforeAll(() => {
+		nock.disableNetConnect();
+
+		subject = new HttpClient(0);
+	});
+
 	it("should get with params", async () => {
 		const responseBody = {
 			args: { key: "value" },

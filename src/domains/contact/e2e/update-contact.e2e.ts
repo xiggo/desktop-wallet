@@ -1,3 +1,4 @@
+/* eslint-disable jest/require-top-level-describe */
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";

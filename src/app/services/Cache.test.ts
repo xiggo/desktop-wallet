@@ -2,9 +2,9 @@ import { Cache } from "./Cache";
 
 let subject: Cache;
 
-beforeAll(() => (subject = new Cache(10)));
-
 describe("Cache", () => {
+	beforeAll(() => (subject = new Cache(10)));
+
 	it("should remember a value if it is a string", async () => {
 		subject.flush();
 

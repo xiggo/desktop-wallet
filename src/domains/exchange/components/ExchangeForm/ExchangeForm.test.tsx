@@ -47,16 +47,12 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 
 jest.setTimeout(10_000);
 
-beforeAll(() => {
-	profile = env.profiles().findById(getDefaultProfileId());
-});
-
-afterEach(() => {
-	profile.exchangeTransactions().flush();
-});
-
 describe("ExchangeForm", () => {
-	beforeAll(() => nock.disableNetConnect());
+	beforeAll(() => {
+		nock.disableNetConnect();
+
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
 
 	beforeEach(() => {
 		history = createMemoryHistory();
@@ -64,6 +60,8 @@ describe("ExchangeForm", () => {
 	});
 
 	afterEach(() => {
+		profile.exchangeTransactions().flush();
+
 		httpClient.clearCache();
 		jest.clearAllTimers();
 		jest.useRealTimers();
@@ -1232,6 +1230,14 @@ describe("ExchangeForm", () => {
 });
 
 describe("FormStep", () => {
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
+
+	afterEach(() => {
+		profile.exchangeTransactions().flush();
+	});
+
 	it("should render", async () => {
 		const Component = () => {
 			const form = useForm({
@@ -1262,6 +1268,14 @@ describe("FormStep", () => {
 });
 
 describe("ReviewStep", () => {
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
+
+	afterEach(() => {
+		profile.exchangeTransactions().flush();
+	});
+
 	it("should render", async () => {
 		const { result: form } = renderHook(() =>
 			useForm({
@@ -1310,7 +1324,13 @@ describe("ReviewStep", () => {
 });
 
 describe("StatusStep", () => {
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
+
 	afterEach(() => {
+		profile.exchangeTransactions().flush();
+
 		jest.clearAllTimers();
 		jest.useRealTimers();
 	});
@@ -1407,6 +1427,14 @@ describe("StatusStep", () => {
 });
 
 describe("ConfirmationStep", () => {
+	beforeAll(() => {
+		profile = env.profiles().findById(getDefaultProfileId());
+	});
+
+	afterEach(() => {
+		profile.exchangeTransactions().flush();
+	});
+
 	it("should render", async () => {
 		const { result: form } = renderHook(() =>
 			useForm({

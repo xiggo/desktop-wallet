@@ -8,20 +8,20 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let wallets: Contracts.IReadWriteWallet[];
 
-beforeAll(async () => {
-	profile = env.profiles().findById(getDefaultProfileId());
+describe("SelectAddress", () => {
+	beforeAll(async () => {
+		profile = env.profiles().findById(getDefaultProfileId());
 
-	wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-		coin: "ARK",
-		mnemonic: MNEMONICS[0],
-		network: "ark.devnet",
+		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: MNEMONICS[0],
+			network: "ark.devnet",
+		});
+
+		profile.wallets().push(wallet);
+		wallets = profile.wallets().values();
 	});
 
-	profile.wallets().push(wallet);
-	wallets = profile.wallets().values();
-});
-
-describe("SelectAddress", () => {
 	it("should render empty", () => {
 		const { container } = render(<SelectAddress wallets={wallets} profile={profile} />);
 
