@@ -59,6 +59,7 @@ module.exports = {
 		"@typescript-eslint/no-floating-promises": "warn",
 		"@typescript-eslint/no-misused-promises": "warn",
 		"@typescript-eslint/no-non-null-assertion": "warn",
+		"@typescript-eslint/no-unnecessary-condition": "warn", // @TODO: set to error and resolve issues
 		"@typescript-eslint/no-unsafe-assignment": "warn",
 		"@typescript-eslint/no-unsafe-call": "warn",
 		"@typescript-eslint/no-unsafe-member-access": "warn",
