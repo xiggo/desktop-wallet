@@ -269,6 +269,7 @@ export const SendTransfer = () => {
 			wif,
 			privateKey,
 			secret,
+			secondSecret,
 		} = getValues();
 		const isMultiPayment = recipients.length > 1;
 		const transactionType = isMultiPayment ? "multiPayment" : "transfer";
@@ -279,6 +280,7 @@ export const SendTransfer = () => {
 				mnemonic,
 				privateKey,
 				secondMnemonic,
+				secondSecret,
 				secret,
 				wif,
 			});

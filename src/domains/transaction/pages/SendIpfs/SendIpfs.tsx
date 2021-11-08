@@ -96,13 +96,24 @@ export const SendIpfs = () => {
 	const submitForm = async () => {
 		clearErrors("mnemonic");
 
-		const { fee, mnemonic, secondMnemonic, hash, encryptionPassword, wif, privateKey, secret } = getValues();
+		const {
+			fee,
+			mnemonic,
+			secondMnemonic,
+			hash,
+			encryptionPassword,
+			wif,
+			privateKey,
+			secret,
+			secondSecret,
+		} = getValues();
 
 		const signatory = await activeWallet.signatoryFactory().make({
 			encryptionPassword,
 			mnemonic,
 			privateKey,
 			secondMnemonic,
+			secondSecret,
 			secret,
 			wif,
 		});

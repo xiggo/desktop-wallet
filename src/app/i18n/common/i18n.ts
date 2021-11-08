@@ -146,6 +146,11 @@ export const translations = {
 			WIF_NOT_MATCH_WALLET: "This WIF does not correspond to your wallet",
 		},
 	},
+	INPUT_PUBLIC_KEY: {
+		VALIDATION: {
+			PUBLIC_KEY_ALREADY_EXISTS: "Public Key {{publicKey}} already exists",
+		},
+	},
 	INSTALL: "Install",
 	IS_MARKET_CHART_ENABLED: "Price chart on the dashboard",
 	I_ACCEPT: "I Accept",
@@ -258,6 +263,7 @@ export const translations = {
 		PLACEHOLDER: "What would you like to search for?",
 	},
 	SECOND_MNEMONIC: "2nd Mnemonic",
+	SECOND_SECRET: "2nd Secret",
 	SECOND_SIGNATURE: "Second Signature",
 	SECRET: "Secret",
 	SECURITY: "Security",

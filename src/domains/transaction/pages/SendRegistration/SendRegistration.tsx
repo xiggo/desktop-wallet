@@ -139,6 +139,7 @@ export const SendRegistration = () => {
 				wif,
 				privateKey,
 				secret,
+				secondSecret,
 				participants,
 				minParticipants,
 				fee,
@@ -155,6 +156,7 @@ export const SendRegistration = () => {
 				privateKey,
 				/* istanbul ignore next */
 				secondMnemonic: registrationType === "secondSignature" ? undefined : secondMnemonic,
+				secondSecret,
 				secret,
 				wif,
 			});

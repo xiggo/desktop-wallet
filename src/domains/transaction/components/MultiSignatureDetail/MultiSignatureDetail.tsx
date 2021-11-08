@@ -66,7 +66,15 @@ export const MultiSignatureDetail = ({
 	}, [wallet, transaction, persist, broadcast]);
 
 	const sendSignature = useCallback(
-		async ({ encryptionPassword, mnemonic, privateKey, secondMnemonic, secret, wif }: Contracts.SignatoryInput) => {
+		async ({
+			encryptionPassword,
+			mnemonic,
+			privateKey,
+			secondMnemonic,
+			secondSecret,
+			secret,
+			wif,
+		}: Contracts.SignatoryInput) => {
 			try {
 				if (wallet.isLedger()) {
 					await connect(profile, wallet.coinId(), wallet.networkId());
@@ -78,6 +86,7 @@ export const MultiSignatureDetail = ({
 					mnemonic,
 					privateKey,
 					secondMnemonic,
+					secondSecret,
 					secret,
 					wif,
 				});
