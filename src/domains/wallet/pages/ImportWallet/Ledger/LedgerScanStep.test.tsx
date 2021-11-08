@@ -10,8 +10,6 @@ import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "ut
 
 import { LedgerScanStep } from "./LedgerScanStep";
 
-jest.setTimeout(10_000);
-
 describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -79,15 +77,8 @@ describe("LedgerScanStep", () => {
 		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
 			Promise.resolve(publicKeyPaths.get(path)!),
 		);
+
 		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
-
-		jest.useFakeTimers();
-	});
-
-	afterEach(() => {
-		jest.clearAllMocks();
-		jest.runOnlyPendingTimers();
-		jest.useRealTimers();
 	});
 
 	it("should handle select", async () => {
@@ -112,7 +103,7 @@ describe("LedgerScanStep", () => {
 
 		render(<Component />);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6), { timeout: 5000 });
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
 
 		fireEvent.click(screen.getByTestId("LedgerScanStep__select-all"));
 
@@ -156,7 +147,7 @@ describe("LedgerScanStep", () => {
 
 		const { container } = render(<Component />);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6), { timeout: 6000 });
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
 		await screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG");
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));

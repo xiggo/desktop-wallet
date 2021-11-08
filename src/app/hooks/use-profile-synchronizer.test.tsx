@@ -16,7 +16,6 @@ import {
 	pluginManager,
 	render,
 	screen,
-	syncDelegates,
 	waitFor,
 } from "utils/testing-library";
 
@@ -171,20 +170,13 @@ describe("useProfileSyncStatus", () => {
 
 describe("useProfileSynchronizer", () => {
 	beforeEach(async () => {
-		jest.useFakeTimers();
-
-		const profile = env.profiles().findById(getDefaultProfileId());
-		await env.profiles().restore(profile);
-		await profile.sync();
-
-		await syncDelegates(profile);
-
 		jest.spyOn(toasts, "success").mockImplementation();
 		jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 	});
 
 	afterEach(() => {
 		jest.clearAllTimers();
+		jest.useRealTimers();
 	});
 
 	it("should clear last profile sync jobs", async () => {
@@ -606,6 +598,7 @@ describe("useProfileRestore", () => {
 		jest.useFakeTimers();
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
 		process.env.REACT_APP_IS_E2E = undefined;
+
 		const profile = env.profiles().findById(getDefaultProfileId());
 		profile.status().reset();
 
@@ -628,7 +621,7 @@ describe("useProfileRestore", () => {
 
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
-		await findByTestId("ProfileRestored");
+		await findByTestId("ProfileRestored", undefined, { timeout: 4000 });
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalled(), { timeout: 4000 });
 

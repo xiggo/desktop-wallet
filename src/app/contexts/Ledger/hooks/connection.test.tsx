@@ -266,11 +266,12 @@ describe("Use Ledger Connection", () => {
 			await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR);
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
 
-			expect(getPublicKeySpy).toHaveBeenCalledTimes(3);
+			await waitFor(() => expect(getPublicKeySpy).toHaveBeenCalledTimes(3));
 
 			getPublicKeySpy.mockReset();
 		});
 
+		//
 		it("should fail to connect with retries", async () => {
 			const getPublicKeySpy = jest
 				.spyOn(wallet.coin().ledger(), "getPublicKey")
@@ -284,11 +285,13 @@ describe("Use Ledger Connection", () => {
 
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
-			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
+			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument(), {
+				timeout: 4000,
+			});
 
 			await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR);
 
-			expect(getPublicKeySpy).toHaveBeenCalledTimes(9);
+			await waitFor(() => () => expect(getPublicKeySpy).toHaveBeenCalledTimes(9));
 
 			getPublicKeySpy.mockReset();
 		});

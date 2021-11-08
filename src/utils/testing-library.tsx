@@ -1,4 +1,5 @@
 // @ts-ignore
+import Transport, { Observer } from "@ledgerhq/hw-transport";
 import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts, Environment } from "@payvo/profiles";
 import { ARK } from "@payvo/sdk-ark";
@@ -128,6 +129,30 @@ export const getPasswordProtectedProfileId = () => Object.keys(fixtureData.profi
 export const getDefaultWalletId = () => Object.keys(Object.values(fixtureData.profiles)[0].wallets)[0];
 export const getDefaultWalletMnemonic = () => "master dizzy era math peanut crew run manage better flame tree prevent";
 export const getDefaultLedgerTransport = () => createTransportReplayer(RecordStore.fromString(""));
+
+// Ledger observer spy helper
+export const ledgerObserverSpy = () => {
+	//@ts-ignore
+	let observer: Observer<any> = undefined;
+	const unsubscribe = jest.fn();
+
+	const mockTransportListen = (transport: typeof Transport) =>
+		jest.spyOn(transport, "listen").mockImplementationOnce((obv) => {
+			observer = obv;
+			return { unsubscribe };
+		});
+
+	return {
+		mockTransportListen,
+		observer: {
+			complete: () => observer.complete(),
+			error: (e: any) => observer.error(e),
+			next: (property: { descriptor: string; deviceModel: { id: string }; type: string }) =>
+				observer.error(property),
+		},
+		unsubscribe,
+	};
+};
 
 //@ts-ignore
 export const getDefaultPassword = () => TestingPasswords?.profiles[getPasswordProtectedProfileId()]?.password;
