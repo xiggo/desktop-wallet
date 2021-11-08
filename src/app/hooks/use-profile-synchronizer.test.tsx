@@ -16,6 +16,7 @@ import {
 	pluginManager,
 	render,
 	screen,
+	syncDelegates,
 	waitFor,
 } from "utils/testing-library";
 
@@ -170,6 +171,12 @@ describe("useProfileSyncStatus", () => {
 
 describe("useProfileSynchronizer", () => {
 	beforeEach(async () => {
+		const profile = env.profiles().findById(getDefaultProfileId());
+		await env.profiles().restore(profile);
+		await profile.sync();
+
+		await syncDelegates(profile);
+
 		jest.spyOn(toasts, "success").mockImplementation();
 		jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 	});
@@ -360,7 +367,7 @@ describe("useProfileSynchronizer", () => {
 		await renderAct(async () => {
 			configuration.setConfiguration({ profileIsSyncingWallets: true });
 		});
-		await waitFor(() => expect(configuration.profileIsSyncingWallets).toBe(true));
+		await waitFor(() => expect(configuration.profileIsSyncingWallets).toBe(true), { timeout: 2000 });
 
 		await renderAct(async () => {
 			configuration.setConfiguration({ profileIsSyncingWallets: false });
@@ -370,6 +377,42 @@ describe("useProfileSynchronizer", () => {
 		await waitFor(() => expect(profileErroredNetworks).toHaveLength(1));
 
 		mockWalletSyncStatus.mockRestore();
+	});
+
+	it("should not start syncing for empty profile", async () => {
+		let configuration: any;
+		const onProfileSyncStart = jest.fn();
+
+		const emptyProfile = env.profiles().create("empty profile");
+
+		const dashboardURL = `/profiles/${emptyProfile.id()}/dashboard`;
+		history.push(dashboardURL);
+
+		const Component = () => {
+			configuration = useConfiguration();
+
+			useProfileSynchronizer({
+				onProfileSyncStart,
+			});
+
+			return <div data-testid="Dashboard">test</div>;
+		};
+
+		const { findByTestId } = render(
+			<Route path="/profiles/:profileId/dashboard">
+				<Component />
+			</Route>,
+			{
+				history,
+				routes: [dashboardURL],
+			},
+		);
+
+		await findByTestId("Dashboard");
+
+		await waitFor(() => expect(configuration.profileHasSyncedOnce).toBe(true));
+
+		expect(onProfileSyncStart).not.toHaveBeenCalled();
 	});
 
 	it("should reset sync profile wallets", async () => {

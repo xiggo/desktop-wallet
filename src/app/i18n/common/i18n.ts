@@ -108,6 +108,7 @@ export const translations = {
 	EXPORT: "Export",
 	FAILED_FETCH: "Failed to fetch {{name}}. Reason: {{reason}}",
 	FAILED_UPDATE: "Failed to update {{name}}. Reason: {{reason}}",
+	FAILED_UPDATE_CHECK: "Checking for updates failed.",
 	FEE: "Fee",
 	FETCH: "Fetch",
 	FIAT: "Fiat",

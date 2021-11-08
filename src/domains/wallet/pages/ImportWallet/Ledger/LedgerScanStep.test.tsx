@@ -1,12 +1,19 @@
 import Transport from "@ledgerhq/hw-transport";
-import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import {
+	env,
+	fireEvent,
+	getDefaultLedgerTransport,
+	getDefaultProfileId,
+	render,
+	screen,
+	waitFor,
+} from "utils/testing-library";
 
 import { LedgerScanStep } from "./LedgerScanStep";
 
@@ -56,7 +63,8 @@ describe("LedgerScanStep", () => {
 		wallet = profile.wallets().first();
 		await wallet.synchroniser().identity();
 
-		transport = createTransportReplayer(RecordStore.fromString(""));
+		transport = getDefaultLedgerTransport();
+		jest.spyOn(transport, "listen").mockImplementationOnce(() => ({ unsubscribe: jest.fn() }));
 
 		publicKeyPaths = new Map([
 			["m/44'/1'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
@@ -71,8 +79,6 @@ describe("LedgerScanStep", () => {
 			["m/44'/1'/3'/0/0", "033a5474f68f92f254691e93c06a2f22efaf7d66b543a53efcece021819653a200"],
 			["m/44'/1'/4'/0/0", "03d3c6889608074b44155ad2e6577c3368e27e6e129c457418eb3e5ed029544e8d"],
 		]);
-
-		jest.spyOn(transport, "listen").mockImplementationOnce(() => ({ unsubscribe: jest.fn() }));
 
 		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockImplementation((path) =>
 			Promise.resolve(publicKeyPaths.get(path)!),

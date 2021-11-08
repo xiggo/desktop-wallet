@@ -1,5 +1,4 @@
 import Transport from "@ledgerhq/hw-transport";
-import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import { EnvironmentProvider, minVersionList } from "app/contexts";
@@ -10,17 +9,24 @@ import { act } from "react-dom/test-utils";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, ledgerObserverSpy, render, screen, waitFor } from "utils/testing-library";
+import {
+	env,
+	getDefaultLedgerTransport,
+	getDefaultProfileId,
+	ledgerObserverSpy,
+	render,
+	screen,
+	waitFor,
+} from "utils/testing-library";
 
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
 
 const history = createMemoryHistory();
 
-let transport: typeof Transport;
-
 describe("LedgerConnectionStep", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
+	let transport: typeof Transport;
 	let getVersionSpy: jest.SpyInstance;
 
 	beforeAll(async () => {
@@ -33,7 +39,7 @@ describe("LedgerConnectionStep", () => {
 			.spyOn(wallet.coin().ledger(), "getVersion")
 			.mockResolvedValue(minVersionList[wallet.network().coin()]);
 
-		transport = createTransportReplayer(RecordStore.fromString(""));
+		transport = getDefaultLedgerTransport();
 	});
 
 	afterAll(() => {

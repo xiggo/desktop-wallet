@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/require-await */
-import Transport from "@ledgerhq/hw-transport";
-import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
 import { Contracts } from "@payvo/profiles";
 import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { toasts } from "app/services";
@@ -13,6 +11,7 @@ import {
 	act,
 	env,
 	fireEvent,
+	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	ledgerObserverSpy,
 	MNEMONICS,
@@ -31,9 +30,8 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 
+const transport = getDefaultLedgerTransport();
 const mnemonic = MNEMONICS[0];
-
-let transport: typeof Transport;
 
 describe("SignMessage", () => {
 	beforeAll(async () => {
@@ -55,8 +53,6 @@ describe("SignMessage", () => {
 
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 		history.push(walletUrl);
-
-		transport = createTransportReplayer(RecordStore.fromString(""));
 	});
 
 	it("should render", async () => {

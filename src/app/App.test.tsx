@@ -4,8 +4,6 @@ import { Contracts, Environment } from "@payvo/profiles";
 import { toasts } from "app/services";
 import { translations as errorTranslations } from "domains/error/i18n";
 import { translations as profileTranslations } from "domains/profile/i18n";
-import electron from "electron";
-import nock from "nock";
 import React from "react";
 import * as utils from "utils/electron-utils";
 import {
@@ -17,7 +15,6 @@ import {
 	getPasswordProtectedProfileId,
 	MNEMONICS,
 	render,
-	useDefaultNetMocks,
 	waitFor,
 } from "utils/testing-library";
 
@@ -28,34 +25,11 @@ let passwordProtectedProfile: Contracts.IProfile;
 
 describe("App", () => {
 	beforeAll(async () => {
-		useDefaultNetMocks();
 		profile = env.profiles().findById(getDefaultProfileId());
 		passwordProtectedProfile = env.profiles().findById(getPasswordProtectedProfileId());
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		nock("https://ark-test.payvo.com")
-			.get("/api/transactions")
-			.query({ limit: 20 })
-			.reply(200, require("tests/fixtures/coins/ark/devnet/notification-transactions.json"))
-			.persist();
-
-		jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation(async (event: string) => {
-			let isUpdateCalled = false;
-			if (event === "updater:check-for-updates") {
-				const response = {
-					cancellationToken: isUpdateCalled ? null : "1",
-					updateInfo: { version: "3.0.0" },
-				};
-				isUpdateCalled = true;
-				return response;
-			}
-
-			return true;
-		});
-
-		jest.spyOn(toasts, "success").mockImplementation();
 	});
 
 	afterAll(() => {
@@ -227,7 +201,6 @@ describe("App", () => {
 
 		await findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE);
 		await findByText("John Doe");
-		await findByText("Jane Doe");
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -290,10 +263,7 @@ describe("App", () => {
 		const warningToast = jest.spyOn(toasts, "warning").mockImplementation();
 		const toastDismiss = jest.spyOn(toasts, "dismiss").mockImplementation();
 
-		const { getAllByTestId, findByText, history } = render(<App />, {
-			withPluginProvider: false,
-			withProviders: true,
-		});
+		const { getAllByTestId, findByText, history } = render(<App />, { withProviders: false });
 
 		await findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
 
@@ -324,6 +294,11 @@ describe("App", () => {
 		const profileDashboardUrl = `/profiles/${profile.id()}/dashboard`;
 
 		await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
+
+		await act(async () => {
+			await new Promise((resolve) => setTimeout(resolve, 500));
+		});
+
 		await waitFor(() => expect(warningToast).toHaveBeenCalled());
 		await waitFor(() => expect(toastDismiss).toHaveBeenCalled());
 		await waitFor(() => expect(successToast).toHaveBeenCalled());
@@ -332,6 +307,25 @@ describe("App", () => {
 		warningToast.mockRestore();
 		toastDismiss.mockRestore();
 	});
+
+	it.each([false, true])(
+		"should set the theme based on system preferences (dark = %s)",
+		async (shouldUseDarkColors) => {
+			process.env.REACT_APP_IS_UNIT = "1";
+
+			const toastSpy = jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
+			const utilsSpy = jest.spyOn(utils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
+
+			const { findByText } = render(<App />, { withProviders: false });
+
+			await findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
+
+			expect(document.body).toHaveClass(`theme-${shouldUseDarkColors ? "dark" : "light"}`);
+
+			toastSpy.mockRestore();
+			utilsSpy.mockRestore();
+		},
+	);
 
 	it("should enter profile", async () => {
 		process.env.REACT_APP_IS_UNIT = "1";
@@ -363,23 +357,4 @@ describe("App", () => {
 		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
 		await waitFor(() => expect(history.location.pathname).toMatch(profileDashboardUrl));
 	});
-
-	it.each([false, true])(
-		"should set the theme based on system preferences (dark = %s)",
-		async (shouldUseDarkColors) => {
-			process.env.REACT_APP_IS_UNIT = "1";
-
-			const toastSpy = jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
-			const utilsSpy = jest.spyOn(utils, "shouldUseDarkColors").mockReturnValue(shouldUseDarkColors);
-
-			const { findByText } = render(<App />, { withProviders: false });
-
-			await findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
-
-			expect(document.body).toHaveClass(`theme-${shouldUseDarkColors ? "dark" : "light"}`);
-
-			toastSpy.mockRestore();
-			utilsSpy.mockRestore();
-		},
-	);
 });

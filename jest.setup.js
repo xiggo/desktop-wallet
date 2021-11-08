@@ -9,8 +9,8 @@ jest.mock("async-retry", () => {
 });
 
 jest.mock("@ledgerhq/hw-transport-node-hid-singleton", () => {
-	const { createTransportReplayer } = require("@ledgerhq/hw-transport-mocker");
-	return createTransportReplayer();
+	const { TransportReplayer } = require("@ledgerhq/hw-transport-mocker/lib/openTransportReplayer");
+	return TransportReplayer;
 });
 
 jest.mock("electron", () => {

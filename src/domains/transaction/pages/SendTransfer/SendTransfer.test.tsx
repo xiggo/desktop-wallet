@@ -733,7 +733,7 @@ describe("SendTransfer", () => {
 		// Change network
 		// Unselect
 		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
-		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toBeEmptyDOMElement());
+		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).not.toHaveValue());
 		// Select
 		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
@@ -745,7 +745,7 @@ describe("SendTransfer", () => {
 		await screen.findByTestId("SendTransfer__form-step");
 
 		// Memo
-		expect(screen.getByTestId("Input__memo")).toBeEmptyDOMElement();
+		expect(screen.getByTestId("Input__memo")).not.toHaveValue();
 
 		// Fee
 		expect(screen.getAllByRole("radio")[0]).not.toBeChecked();
@@ -1052,7 +1052,7 @@ describe("SendTransfer", () => {
 		goSpy.mockRestore();
 	});
 
-	it.each(["with keyboard", "without keyboard"])("should send a single transfer", async (inputMethod) => {
+	it.each(["with keyboard", "without keyboard"])("should send a single transfer %s", async (inputMethod) => {
 		const transferURL = `/profiles/${fixtureProfileId}/wallets/${wallet.id()}/send-transfer`;
 
 		const history = createMemoryHistory();

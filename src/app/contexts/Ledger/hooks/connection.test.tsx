@@ -1,5 +1,4 @@
-import Transport, { Observer } from "@ledgerhq/hw-transport";
-import { createTransportReplayer, RecordStore } from "@ledgerhq/hw-transport-mocker";
+import { Observer } from "@ledgerhq/hw-transport";
 import { Contracts } from "@payvo/profiles";
 import { WalletData, WalletLedgerModel } from "@payvo/profiles/distribution/contracts";
 import { LSK } from "@payvo/sdk-lsk";
@@ -9,20 +8,29 @@ import { translations as walletTranslations } from "domains/wallet/i18n";
 import nock from "nock";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+import {
+	act,
+	env,
+	fireEvent,
+	getDefaultLedgerTransport,
+	getDefaultProfileId,
+	render,
+	screen,
+	waitFor,
+} from "utils/testing-library";
 
 import { minVersionList } from "../contracts";
 import { useLedgerConnection } from "./connection";
 
+const transport = getDefaultLedgerTransport();
+
 describe("Use Ledger Connection", () => {
-	let transport: typeof Transport;
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let publicKeyPaths = new Map();
 	let getVersionSpy: jest.SpyInstance;
 
 	beforeEach(async () => {
-		transport = createTransportReplayer(RecordStore.fromString(""));
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		await env.profiles().restore(profile);
