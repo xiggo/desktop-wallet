@@ -141,7 +141,7 @@ describe("General Settings", () => {
 
 		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
 
-		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(""));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).not.toHaveValue());
 
 		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
@@ -149,7 +149,7 @@ describe("General Settings", () => {
 
 		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
 
-		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(""));
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).not.toHaveValue());
 
 		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
@@ -214,7 +214,7 @@ describe("General Settings", () => {
 		fireEvent.input(screen.getByTestId("General-settings__input--name"), { target: { value: "" } });
 
 		await waitFor(() => {
-			expect(screen.getByTestId("General-settings__input--name")).toHaveValue("");
+			expect(screen.getByTestId("General-settings__input--name")).not.toHaveValue();
 		});
 
 		fireEvent.blur(screen.getByTestId("General-settings__input--name"));
