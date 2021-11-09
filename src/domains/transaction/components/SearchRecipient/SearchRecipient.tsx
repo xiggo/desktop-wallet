@@ -11,12 +11,17 @@ import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
 import {
-	RecipientListItemProperties,
 	RecipientProperties,
+	SearchRecipientListItemProperties,
 	SearchRecipientProperties,
 } from "./SearchRecipient.contracts";
 
-const RecipientListItem: FC<RecipientListItemProperties> = ({ index, recipient, onAction, selectedAddress }) => {
+const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
+	index,
+	recipient,
+	onAction,
+	selectedAddress,
+}) => {
 	const { t } = useTranslation();
 
 	const renderButton = () => {
@@ -109,7 +114,7 @@ export const SearchRecipient: FC<SearchRecipientProperties> = ({
 
 	const renderTableRow = useCallback(
 		(recipient: RecipientProperties, index: number) => (
-			<RecipientListItem
+			<SearchRecipientListItem
 				index={index}
 				selectedAddress={selectedAddress}
 				recipient={recipient}

@@ -180,7 +180,7 @@ export const SearchWallet: FC<SearchWalletProperties> = ({
 				disabled={disableAction?.(wallet)}
 				exchangeCurrency={
 					wallet.exchangeCurrency() ||
-					(profile?.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string)
+					(profile.settings().get(Contracts.ProfileSetting.ExchangeCurrency) as string)
 				}
 				showConvertedValue={showConvertedValue}
 				showNetwork={showNetwork}
