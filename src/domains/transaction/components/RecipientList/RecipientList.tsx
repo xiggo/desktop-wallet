@@ -5,8 +5,9 @@ import { OriginalButton as Button } from "app/components/Button/OriginalButton";
 import { Icon } from "app/components/Icon";
 import { Table } from "app/components/Table";
 import { Tooltip } from "app/components/Tooltip";
-import React from "react";
+import React, { useCallback, useMemo, VFC } from "react";
 import { useTranslation } from "react-i18next";
+import { Column } from "react-table";
 import tw, { styled } from "twin.macro";
 
 import {
@@ -117,7 +118,7 @@ const defaultProps = {
 	recipients: [],
 };
 
-export const RecipientList = ({
+export const RecipientList: VFC<RecipientListProperties> = ({
 	assetSymbol,
 	isEditable = false,
 	recipients = defaultProps.recipients,
@@ -127,40 +128,48 @@ export const RecipientList = ({
 	tooltipDisabled,
 	disableButton,
 	onRemove,
-}: RecipientListProperties) => {
-	const columns = [
-		{ Header: "Avatar", className: "hidden" },
-		{ Header: "Address", className: "hidden" },
-	];
+}) => {
+	const columns = useMemo<Column<RecipientListItemProperties>[]>(() => {
+		const templateColumns = [
+			{ Header: "Avatar", className: "hidden" },
+			{ Header: "Address", className: "hidden" },
+		];
+		if (showAmount) {
+			templateColumns.push({ Header: "Amount", className: "hidden" });
+		}
 
-	if (showAmount) {
-		columns.push({ Header: "Amount", className: "hidden" });
-	}
-	if (isEditable) {
-		columns.push({ Header: "Action", className: "hidden" });
-	}
+		if (isEditable) {
+			templateColumns.push({ Header: "Action", className: "hidden" });
+		}
+		return templateColumns;
+	}, [showAmount, isEditable]);
+
+	const renderTableRow = useCallback(
+		(recipient: RecipientListItemProperties, index: number) => (
+			<RecipientListItem
+				showAmount={showAmount}
+				address={recipient.address}
+				amount={recipient.amount}
+				exchangeAmount={recipient.exchangeAmount}
+				exchangeTicker={recipient.exchangeTicker}
+				assetSymbol={assetSymbol}
+				isEditable={isEditable}
+				label={label}
+				listIndex={index}
+				variant={variant}
+				alias={recipient.alias}
+				tooltipDisabled={tooltipDisabled}
+				disableButton={disableButton}
+				onRemove={onRemove}
+			/>
+		),
+		[showAmount, assetSymbol, isEditable, label, variant, tooltipDisabled, disableButton, onRemove],
+	);
 
 	return (
 		<RecipientListWrapper>
 			<Table columns={columns} data={recipients}>
-				{(recipient: RecipientListItemProperties, index: number) => (
-					<RecipientListItem
-						showAmount={showAmount}
-						address={recipient.address}
-						amount={recipient.amount}
-						exchangeAmount={recipient.exchangeAmount}
-						exchangeTicker={recipient.exchangeTicker}
-						assetSymbol={assetSymbol}
-						isEditable={isEditable}
-						label={label}
-						listIndex={index}
-						variant={variant}
-						alias={recipient.alias}
-						tooltipDisabled={tooltipDisabled}
-						disableButton={disableButton}
-						onRemove={onRemove}
-					/>
-				)}
+				{renderTableRow}
 			</Table>
 		</RecipientListWrapper>
 	);
