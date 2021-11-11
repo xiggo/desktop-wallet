@@ -75,7 +75,7 @@ describe("Appearance Settings", () => {
 			expect(profile.settings().get(Contracts.ProfileSetting.AccentColor)).toBe("blue");
 		});
 
-		expect(toastSuccess).toHaveBeenCalled();
+		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
 	});
 
 	it("should allow to change the viewing mode", async () => {
@@ -111,7 +111,7 @@ describe("Appearance Settings", () => {
 			expect(profile.settings().get(Contracts.ProfileSetting.Theme)).toBe("dark");
 		});
 
-		expect(toastSuccess).toHaveBeenCalled();
+		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
 	});
 
 	it.each([
@@ -146,6 +146,6 @@ describe("Appearance Settings", () => {
 			expect(profile.settings().get(key)).toBe(false);
 		});
 
-		expect(toastSuccess).toHaveBeenCalled();
+		expect(toastSuccess).toHaveBeenCalledWith(translations.GENERAL.SUCCESS);
 	});
 });

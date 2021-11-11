@@ -307,7 +307,7 @@ describe("General Settings", () => {
 		fireEvent.click(screen.getByTestId("General-settings__submit-button"));
 
 		await waitFor(() => {
-			expect(toastSpy).toHaveBeenCalled();
+			expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.GENERAL.SUCCESS);
 		});
 
 		// Upload and remove avatar image
@@ -595,7 +595,7 @@ describe("General Settings", () => {
 		fireEvent.click(screen.getByTestId("ResetProfile__submit-button"));
 
 		await waitFor(() => {
-			expect(toastSpy).toHaveBeenCalled();
+			expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.GENERAL.SUCCESS);
 		});
 
 		toastSpy.mockRestore();
