@@ -30,7 +30,7 @@ import {
 	within,
 } from "utils/testing-library";
 
-import { SendRegistration } from ".";
+import { SendRegistration } from "./SendRegistration";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
