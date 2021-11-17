@@ -6,7 +6,8 @@ import { act, env, fireEvent, render, screen, waitFor } from "utils/testing-libr
 import { useSynchronizer } from "./use-synchronizer";
 
 describe("Synchronizer Hook", () => {
-	let onCall = jest.fn();
+	let onCall: jest.Mock;
+
 	const job1 = jest.fn(() => Promise.resolve(onCall(1)));
 	const job2 = jest.fn(() => Promise.resolve(onCall(2)));
 	const jobs = [

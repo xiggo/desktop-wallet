@@ -114,6 +114,7 @@ module.exports = {
 		"jest/prefer-to-contain": "error",
 		"jest/prefer-to-have-length": "error",
 		"jest/prefer-todo": "error",
+		"jest/require-hook": "error",
 		"jest/require-to-throw-message": "error",
 		"jest/require-top-level-describe": "error",
 		"jest/valid-expect-in-promise": "off",
@@ -201,6 +202,15 @@ module.exports = {
 			files: ["**/e2e/*.ts", "**/cucumber/*.ts", "**/cucumber/*.feature"],
 			rules: {
 				"import/no-relative-parent-imports": "off",
+				"sort-keys-fix/sort-keys-fix": "off",
+			},
+		},
+		{
+			files: ["!**/*.test.{ts,tsx}"],
+			plugins: ["jest"],
+			rules: {
+				"jest/require-hook": "off",
+				"jest/require-top-level-describe": "off",
 			},
 		},
 	],
