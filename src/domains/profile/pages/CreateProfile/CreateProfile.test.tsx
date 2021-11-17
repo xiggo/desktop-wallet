@@ -48,9 +48,11 @@ const baseSettings = {
 };
 
 const renderComponent = async () => {
-	const result = render(<CreateProfile />);
-	await waitFor(() => expect(result.getByTestId("CreateProfile__submit-button")).toBeDisabled());
-	return result;
+	const utils = render(<CreateProfile />);
+
+	await waitFor(() => expect(utils.getByTestId("CreateProfile__submit-button")).toBeDisabled());
+
+	return utils;
 };
 
 jest.mock("fs", () => ({

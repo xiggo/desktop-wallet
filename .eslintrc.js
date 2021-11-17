@@ -166,7 +166,7 @@ module.exports = {
 		"testing-library/prefer-screen-queries": "warn", // @TODO: set to error and fix
 		"testing-library/prefer-user-event": "warn", // @TODO: set to error and fix
 		"testing-library/prefer-wait-for": "error",
-		"testing-library/render-result-naming-convention": "warn", // @TODO: set to error and fix
+		"testing-library/render-result-naming-convention": "error",
 		"unicorn/consistent-destructuring": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/consistent-function-scoping": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/error-message": "warn", // @TODO: set to error and fix resulting issues

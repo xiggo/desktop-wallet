@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+import { cleanup, fireEvent, render, screen } from "utils/testing-library";
 
 import { MnemonicVerification } from "./MnemonicVerification";
 
@@ -76,17 +76,17 @@ describe("MnemonicVerification", () => {
 	});
 
 	it("should ask for random words", () => {
-		const firstElement = render(
-			<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />,
-		);
-		const firstOptions = firstElement
+		render(<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />);
+
+		const firstOptions = screen
 			.getAllByTestId("MnemonicVerificationProgress__Tab")
 			.map((element: any) => element.innerHTML);
 
-		const secondElement = render(
-			<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />,
-		);
-		const secondOptions = secondElement
+		cleanup();
+
+		render(<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />);
+
+		const secondOptions = screen
 			.getAllByTestId("MnemonicVerificationProgress__Tab")
 			.map((element: any) => element.innerHTML);
 

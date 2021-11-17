@@ -63,7 +63,7 @@ describe("MultiSignature Registration Form", () => {
 			);
 		};
 
-		const renderResult: RenderResult = render(
+		const utils: RenderResult = render(
 			<Route path="/profiles/:profileId">
 				<Component />
 			</Route>,
@@ -72,7 +72,7 @@ describe("MultiSignature Registration Form", () => {
 			},
 		);
 
-		return { ...renderResult, form };
+		return { ...utils, form };
 	};
 
 	it("should render form step", async () => {
