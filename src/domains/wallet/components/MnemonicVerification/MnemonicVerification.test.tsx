@@ -59,12 +59,12 @@ describe("MnemonicVerification", () => {
 		const wrongButton = getByText(mnemonicWords[4]);
 		fireEvent.click(wrongButton);
 
-		expect(firstTab).toEqual(asFragment());
+		expect(firstTab).toStrictEqual(asFragment());
 
 		const firstButton = getByText(mnemonicWords[wordPositions[0] - 1]);
 		fireEvent.click(firstButton);
 
-		expect(firstTab).not.toEqual(asFragment());
+		expect(firstTab).not.toStrictEqual(asFragment());
 
 		const secondButton = getByText(mnemonicWords[wordPositions[1] - 1]);
 		fireEvent.click(secondButton);
@@ -90,7 +90,7 @@ describe("MnemonicVerification", () => {
 			.getAllByTestId("MnemonicVerificationProgress__Tab")
 			.map((element: any) => element.innerHTML);
 
-		expect(firstOptions).not.toEqual(secondOptions);
+		expect(firstOptions).not.toStrictEqual(secondOptions);
 	});
 
 	it("should ask for unique words", () => {

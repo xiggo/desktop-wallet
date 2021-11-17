@@ -129,7 +129,7 @@ describe("MultiSignature Registration Form", () => {
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 		await waitFor(() =>
-			expect(form?.getValues("participants")).toEqual([
+			expect(form?.getValues("participants")).toStrictEqual([
 				{
 					address: wallet.address(),
 					alias: wallet.alias(),

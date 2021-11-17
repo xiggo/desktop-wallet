@@ -33,7 +33,7 @@ describe("StorePluginService", () => {
 		manager.plugins().push(ctrl);
 		manager.plugins().runAllEnabled(profile);
 
-		expect(profile.data().get(`plugins.${ctrl.config().id()}.store`)).toEqual({ theme: "dark" });
+		expect(profile.data().get(`plugins.${ctrl.config().id()}.store`)).toStrictEqual({ theme: "dark" });
 	});
 
 	it("should restore values", () => {

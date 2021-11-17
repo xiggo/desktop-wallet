@@ -116,7 +116,7 @@ describe("Synchronizer Hook", () => {
 		await waitForNextUpdate();
 
 		await waitFor(() =>
-			expect(result.current.error).toEqual({ error: "Some error", timestamp: expect.any(Number) }),
+			expect(result.current.error).toStrictEqual({ error: "Some error", timestamp: expect.any(Number) }),
 		);
 	});
 
@@ -144,7 +144,7 @@ describe("Synchronizer Hook", () => {
 
 		await waitForNextUpdate();
 
-		expect(result.current.error).toEqual({ error: "Some error", timestamp: expect.any(Number) });
+		expect(result.current.error).toStrictEqual({ error: "Some error", timestamp: expect.any(Number) });
 
 		hookAct(() => {
 			result.current.clearError();
