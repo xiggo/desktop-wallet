@@ -1,5 +1,4 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { ContactAddress } from "@payvo/sdk-profiles/distribution/contact-address";
 import React from "react";
 import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
 
@@ -281,6 +280,6 @@ describe("ContactListItem", () => {
 
 		fireEvent.click(screen.getAllByTestId("ContactListItem__send-button")[0]);
 
-		expect(onSend).toHaveBeenCalledWith(expect.any(ContactAddress));
+		expect(onSend).toHaveBeenCalledWith(contact);
 	});
 });
