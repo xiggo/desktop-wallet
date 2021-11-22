@@ -52,60 +52,51 @@ describe("FileSystemPluginService", () => {
 		expect(content).toBe("test mnemonic");
 	});
 
-	describe("save file", async () => {
+	it("should return true if the dialog has been finished", async () => {
+		const content = "test";
 
-		describe("successfully", async () => {
+		const saveSpy = jest
+			.spyOn(electron.remote.dialog, "showSaveDialog")
+			.mockResolvedValue({ canceled: false, filePath: "filePath" });
 
-			it("returns true", async () => {
-				const content = "test";
+		let result = false;
+		const fixture = async (api: PluginAPI) => {
+			result = await api.filesystem().askUserToSaveFile(content);
+		};
 
-				const saveSpy = jest
-					.spyOn(electron.remote.dialog, "showSaveDialog")
-					.mockResolvedValue({ canceled: false, filePath: "filePath" });
+		ctrl = new PluginController(config, fixture);
+		ctrl.enable(profile);
 
-				let result = null
-				const fixture = async (api: PluginAPI) => {
-					result = await api.filesystem().askUserToSaveFile(content);
-				};
+		manager.plugins().push(ctrl);
+		manager.plugins().runAllEnabled(profile);
 
-				ctrl = new PluginController(config, fixture);
-				ctrl.enable(profile);
+		await new Promise((r) => setTimeout(r, 200));
 
-				manager.plugins().push(ctrl);
-				manager.plugins().runAllEnabled(profile);
+		expect(saveSpy).toHaveBeenCalledWith(expect.any(Object));
+		expect(result).toBe(true);
+	});
 
-				await new Promise((r) => setTimeout(r, 200));
+	it("should return false if the dialog has been cancelld", async () => {
+		const content = "test";
 
-				expect(saveSpy).toHaveBeenCalledWith(expect.any(Object));
-				expect(result).toBe(true);
-			});
-		});
+		const saveSpy = jest
+			.spyOn(electron.remote.dialog, "showSaveDialog")
+			.mockResolvedValue({ canceled: true, filePath: "filePath" });
 
-		describe("cancel dialog", () => {
+		let result = false;
+		const fixture = async (api: PluginAPI) => {
+			result = await api.filesystem().askUserToSaveFile(content);
+		};
 
-			it("returns false", async () => {
-				const content = "test";
+		ctrl = new PluginController(config, fixture);
+		ctrl.enable(profile);
 
-				const saveSpy = jest
-					.spyOn(electron.remote.dialog, "showSaveDialog")
-					.mockResolvedValue({ canceled: true, filePath: "filePath" });
+		manager.plugins().push(ctrl);
+		manager.plugins().runAllEnabled(profile);
 
-				let result = null
-				const fixture = async (api: PluginAPI) => {
-					result = await api.filesystem().askUserToSaveFile(content);
-				};
+		await new Promise((r) => setTimeout(r, 200));
 
-				ctrl = new PluginController(config, fixture);
-				ctrl.enable(profile);
-
-				manager.plugins().push(ctrl);
-				manager.plugins().runAllEnabled(profile);
-
-				await new Promise((r) => setTimeout(r, 200));
-
-				expect(saveSpy).toHaveBeenCalledWith(expect.any(Object));
-				expect(result).toBe(false);
-			});
-		});
+		expect(saveSpy).toHaveBeenCalledWith(expect.any(Object));
+		expect(result).toBe(false);
 	});
 });

@@ -28,11 +28,9 @@ import {
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
 	render,
-	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
-	within,
 } from "utils/testing-library";
 
 import { SendVote } from "./SendVote";

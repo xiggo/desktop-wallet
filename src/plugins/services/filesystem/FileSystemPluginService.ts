@@ -19,10 +19,10 @@ export class FileSystemPluginService implements PluginService {
 	}
 
 	private async askUserToSaveFile(content: string, suggestedFileName?: string): Promise<boolean> {
-		const { canceled, filePath } = await electron.remote.dialog.showSaveDialog({defaultPath: suggestedFileName});
+		const { canceled, filePath } = await electron.remote.dialog.showSaveDialog({ defaultPath: suggestedFileName });
 
 		if (canceled || !filePath) {
-			return false
+			return false;
 		}
 
 		fs.writeFileSync(filePath, content, "utf-8");

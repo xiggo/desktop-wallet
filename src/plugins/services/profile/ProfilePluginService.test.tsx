@@ -59,10 +59,10 @@ describe("ProfilePluginService", () => {
 	});
 
 	it("should get exchangeCurrency from settings", () => {
-		const desireExchangeCurrency = 'BTC'
-		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, desireExchangeCurrency)
+		const desireExchangeCurrency = "BTC";
+		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, desireExchangeCurrency);
 
-		let currency
+		let currency;
 		const fixture = (api: PluginAPI) => {
 			currency = api.profile().exchangeCurrency();
 		};
@@ -73,15 +73,14 @@ describe("ProfilePluginService", () => {
 		manager.plugins().push(ctrl);
 		manager.plugins().runAllEnabled(profile);
 
-		expect(currency).toBe(desireExchangeCurrency)
+		expect(currency).toBe(desireExchangeCurrency);
 	});
 
 	it("should get locale from settings", () => {
-		const desireLocale = 'en-EN'
-		profile.settings().set(Contracts.ProfileSetting.Locale, desireLocale)
+		const desireLocale = "en-EN";
+		profile.settings().set(Contracts.ProfileSetting.Locale, desireLocale);
 
-
-		let locale
+		let locale;
 		const fixture = (api: PluginAPI) => {
 			locale = api.profile().locale();
 		};
@@ -92,6 +91,6 @@ describe("ProfilePluginService", () => {
 		manager.plugins().push(ctrl);
 		manager.plugins().runAllEnabled(profile);
 
-		expect(locale).toBe(desireLocale)
+		expect(locale).toBe(desireLocale);
 	});
 });
