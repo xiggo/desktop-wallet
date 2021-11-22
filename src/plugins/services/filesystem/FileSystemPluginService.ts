@@ -18,15 +18,15 @@ export class FileSystemPluginService implements PluginService {
 		};
 	}
 
-	private async askUserToSaveFile(content: string) {
-		const { filePath } = await electron.remote.dialog.showSaveDialog({});
+	private async askUserToSaveFile(content: string, suggestedFileName?: string): Promise<boolean> {
+		const { canceled, filePath } = await electron.remote.dialog.showSaveDialog({defaultPath: suggestedFileName});
 
-		/* istanbul ignore next */
-		if (!filePath) {
-			return;
+		if (canceled || !filePath) {
+			return false
 		}
 
-		return fs.writeFileSync(filePath, content, "utf-8");
+		fs.writeFileSync(filePath, content, "utf-8");
+		return true;
 	}
 
 	private async askUserToOpenFile() {
