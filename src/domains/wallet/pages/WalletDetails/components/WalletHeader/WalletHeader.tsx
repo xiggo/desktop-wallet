@@ -19,6 +19,7 @@ import { ReceiveFunds } from "domains/wallet/components/ReceiveFunds";
 import { SignMessage } from "domains/wallet/components/SignMessage";
 import { UpdateWalletName } from "domains/wallet/components/UpdateWalletName";
 import { VerifyMessage } from "domains/wallet/components/VerifyMessage";
+import { WalletEncryptionWarning } from "domains/wallet/components/WalletEncryptionWarning";
 import { useWalletSync } from "domains/wallet/hooks/use-wallet-sync";
 import { useWalletOptions } from "domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import React, { useEffect, useMemo, useState } from "react";
@@ -106,7 +107,7 @@ export const WalletHeader = ({
 			history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/multiSignature`);
 		}
 
-		if (option.value === "second-signature") {
+		if (option.value === "second-signature" && !wallet.usesPassword()) {
 			history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`);
 		}
 
@@ -147,6 +148,10 @@ export const WalletHeader = ({
 			onUpdate?.(false);
 		}
 	}, [isSyncing, previousIsUpdatingTransactions, isUpdatingTransactions, onUpdate]);
+
+	const handleConfirmEncryptionWarning = () => {
+		history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`);
+	};
 
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 	assertString(exchangeCurrency);
@@ -391,12 +396,21 @@ export const WalletHeader = ({
 				/>
 			)}
 
-			<DeleteWallet
-				isOpen={modal === "delete-wallet"}
-				onClose={() => setModal(undefined)}
-				onCancel={() => setModal(undefined)}
-				onDelete={handleDeleteWallet}
-			/>
+			{modal === "delete-wallet" && (
+				<DeleteWallet
+					onClose={() => setModal(undefined)}
+					onCancel={() => setModal(undefined)}
+					onDelete={handleDeleteWallet}
+				/>
+			)}
+
+			{modal === "second-signature" && (
+				<WalletEncryptionWarning
+					importType={wallet.actsWithMnemonicWithEncryption() ? "mnemonic" : "secret"}
+					onCancel={() => setModal(undefined)}
+					onConfirm={handleConfirmEncryptionWarning}
+				/>
+			)}
 
 			{modal === "unlockable-balances" && (
 				<UnlockTokensModal profile={profile} wallet={wallet} onClose={() => setModal(undefined)} />

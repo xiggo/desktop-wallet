@@ -4,7 +4,6 @@ import { Signatories } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
-import { screen, within } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import { LedgerProvider } from "app/contexts";
@@ -28,9 +27,11 @@ import {
 	getDefaultWalletId,
 	getDefaultWalletMnemonic,
 	render,
+	screen,
 	syncDelegates,
 	syncFees,
 	waitFor,
+	within,
 } from "utils/testing-library";
 
 import { SendVote } from "./SendVote";

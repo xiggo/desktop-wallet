@@ -18,6 +18,8 @@ import { WalletsProperties } from "./Wallets.contracts";
 import { WalletsGrid } from "./WalletsGrid";
 import { WalletsList } from "./WalletsList";
 
+type WalletActionType = "delete" | "rename";
+
 export const Wallets: FC<WalletsProperties> = ({
 	title,
 	onCreateWallet,
@@ -30,7 +32,7 @@ export const Wallets: FC<WalletsProperties> = ({
 	const [viewMore, setViewMore] = useState(false);
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
-	const [modal, setModal] = useState<string | undefined>();
+	const [modal, setModal] = useState<WalletActionType | undefined>();
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet>();
 
 	const history = useHistory();
@@ -69,7 +71,7 @@ export const Wallets: FC<WalletsProperties> = ({
 
 	const handleWalletAction = (action: string, wallet: Contracts.IReadWriteWallet) => {
 		setSelectedWallet(wallet);
-		setModal(action);
+		setModal(action as WalletActionType);
 	};
 
 	const resetWalletAction = () => {
@@ -146,12 +148,9 @@ export const Wallets: FC<WalletsProperties> = ({
 				/>
 			)}
 
-			<DeleteWallet
-				isOpen={modal === "delete"}
-				onClose={resetWalletAction}
-				onCancel={resetWalletAction}
-				onDelete={handleDeleteWallet}
-			/>
+			{modal === "delete" && (
+				<DeleteWallet onClose={resetWalletAction} onCancel={resetWalletAction} onDelete={handleDeleteWallet} />
+			)}
 
 			{modal === "rename" && !!selectedWallet && (
 				<UpdateWalletName

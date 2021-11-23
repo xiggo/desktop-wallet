@@ -405,6 +405,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			setError: jest.fn(),
 			setValue: jest.fn(),
 		};
+
 		const signMock = jest
 			.spyOn(wallet.transaction(), "signSecondSignature")
 			.mockReturnValue(Promise.resolve(secondSignatureFixture.data.id));
@@ -414,6 +415,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			rejected: [],
 		});
 		const transactionMock = createTransactionMock(wallet);
+		const mutatorMock = jest.spyOn(wallet.mutator(), "removeEncryption").mockImplementation();
 
 		await signSecondSignatureRegistration({
 			env,
@@ -424,10 +426,12 @@ describe("SecondSignatureRegistrationForm", () => {
 		expect(signMock).toHaveBeenCalledWith({ data: {}, fee: 1 });
 		expect(broadcastMock).toHaveBeenCalledWith(secondSignatureFixture.data.id);
 		expect(transactionMock).toHaveBeenCalledWith(secondSignatureFixture.data.id);
+		expect(mutatorMock).toHaveBeenCalledWith("password");
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
+		mutatorMock.mockRestore();
 		walletUsesWIFMock.mockRestore();
 		walletWifMock.mockRestore();
 	});
