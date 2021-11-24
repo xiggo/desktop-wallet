@@ -24,7 +24,7 @@ import { Prompt } from "react-router-dom";
 import { setScreenshotProtection } from "utils/electron-utils";
 
 interface GeneralSettingsState {
-	automaticSignOutPeriod: number;
+	automaticSignOutPeriod: string;
 	avatar: string;
 	bip39Locale: string;
 	errorReporting: boolean;
@@ -57,7 +57,7 @@ export const GeneralSettings: React.FC = () => {
 		const name = profile.settings().get<string>(Contracts.ProfileSetting.Name) || "";
 
 		return {
-			automaticSignOutPeriod: settings.get<number>(Contracts.ProfileSetting.AutomaticSignOutPeriod),
+			automaticSignOutPeriod: settings.get<number>(Contracts.ProfileSetting.AutomaticSignOutPeriod)?.toString(),
 			avatar: settings.get(Contracts.ProfileSetting.Avatar) || Helpers.Avatar.make(name),
 			bip39Locale: settings.get(Contracts.ProfileSetting.Bip39Locale),
 			errorReporting: settings.get(Contracts.ProfileSetting.ErrorReporting),
@@ -179,6 +179,9 @@ export const GeneralSettings: React.FC = () => {
 							label: t("COMMON.DATETIME.MINUTES", { count }),
 							value: `${count}`,
 						}))}
+						onChange={(signOutPeriod: any) => {
+							setValue("automaticSignOutPeriod", signOutPeriod?.value, { shouldDirty: true });
+						}}
 						defaultValue={`${getDefaultValues().automaticSignOutPeriod}`}
 					/>
 				</FormField>
@@ -228,7 +231,7 @@ export const GeneralSettings: React.FC = () => {
 		timeFormat,
 		useTestNetworks,
 	}: GeneralSettingsState) => {
-		profile.settings().set(Contracts.ProfileSetting.AutomaticSignOutPeriod, +automaticSignOutPeriod);
+		profile.settings().set(Contracts.ProfileSetting.AutomaticSignOutPeriod, automaticSignOutPeriod);
 		profile.settings().set(Contracts.ProfileSetting.Bip39Locale, bip39Locale);
 		profile.settings().set(Contracts.ProfileSetting.ErrorReporting, errorReporting);
 		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, exchangeCurrency);

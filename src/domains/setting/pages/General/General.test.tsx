@@ -7,7 +7,7 @@ import { buildTranslations } from "app/i18n/helpers";
 import { toasts } from "app/services";
 import { GeneralSettings } from "domains/setting/pages";
 import electron from "electron";
-import { createHashHistory } from "history";
+import { createHashHistory, createMemoryHistory } from "history";
 import os from "os";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -728,5 +728,52 @@ describe("General Settings", () => {
 		expect(getSelectInput("CURRENCY")).toHaveValue("USD ($)");
 
 		toastSpy.mockRestore();
+	});
+
+	it("should show confirmation modal when auto logoff field is changed", async () => {
+		const settingsURL = `/profiles/${profile.id()}/settings`;
+
+		profile.flushSettings();
+
+		const history = createMemoryHistory();
+		history.push(settingsURL);
+
+		render(
+			<Route path="/profiles/:profileId/settings">
+				<GeneralSettings />
+			</Route>,
+			{
+				history,
+				routes: [`/profiles/${profile.id()}/settings`],
+			},
+		);
+
+		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
+
+		// change auto signout period
+		expect(
+			within(screen.getByTestId("General-settings__auto-signout")).getByTestId("select-list__input"),
+		).toHaveValue("15");
+
+		userEvent.click(
+			within(screen.getByTestId("General-settings__auto-signout")).getByTestId("SelectDropdown__caret"),
+		);
+
+		const firstOption = within(screen.getByTestId("General-settings__auto-signout")).getByTestId(
+			"SelectDropdown__option--0",
+		);
+
+		expect(firstOption).toBeInTheDocument();
+
+		userEvent.click(firstOption);
+
+		expect(
+			within(screen.getByTestId("General-settings__auto-signout")).getByTestId("select-list__input"),
+		).toHaveValue("1");
+
+		// change navigation
+		history.push(`/profiles/${profile.id()}/dashboard`);
+
+		await waitFor(() => expect(history.location.pathname).toBe(settingsURL));
 	});
 });
