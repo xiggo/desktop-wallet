@@ -12,16 +12,7 @@ import { toasts } from "@/app/services";
 import { translations } from "@/domains/transaction/i18n";
 import secondSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import * as utils from "@/utils/electron-utils";
-import {
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	MNEMONICS,
-	render,
-	renderWithForm,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, renderWithForm, screen, waitFor } from "@/utils/testing-library";
 
 import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
 
@@ -144,11 +135,8 @@ describe("SecondSignatureRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 
-		fireEvent.change(screen.getByTestId("InputCurrency"), {
-			target: {
-				value: "9",
-			},
-		});
+		userEvent.clear(screen.getByTestId("InputCurrency"));
+		userEvent.paste(screen.getByTestId("InputCurrency"), "9");
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("9"));
 	});
@@ -175,7 +163,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			const clipboardOriginal = navigator.clipboard;
 			(navigator as any).clipboard = { writeText: writeTextMock };
 
-			fireEvent.click(screen.getByTestId("SecondSignature__copy"));
+			userEvent.click(screen.getByTestId("SecondSignature__copy"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith("test mnemonic"));
 
@@ -205,7 +193,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = jest.spyOn(toasts, "success");
 
-			fireEvent.click(screen.getByTestId("SecondSignature__download"));
+			userEvent.click(screen.getByTestId("SecondSignature__download"));
 
 			await waitFor(() =>
 				expect(toastSpy).toHaveBeenCalledWith(
@@ -241,7 +229,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = jest.spyOn(toasts, "success");
 
-			fireEvent.click(screen.getByTestId("SecondSignature__download"));
+			userEvent.click(screen.getByTestId("SecondSignature__download"));
 
 			await waitFor(() => expect(toastSpy).not.toHaveBeenCalled());
 
@@ -269,7 +257,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			const toastSpy = jest.spyOn(toasts, "error");
 
-			fireEvent.click(screen.getByTestId("SecondSignature__download"));
+			userEvent.click(screen.getByTestId("SecondSignature__download"));
 
 			await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save file/)));
 
@@ -298,7 +286,7 @@ describe("SecondSignatureRegistrationForm", () => {
 		for (let index = 0; index < 3; index++) {
 			const wordNumber = Number.parseInt(screen.getByText(/Select the/).innerHTML.replace(/Select the/, ""));
 
-			fireEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
+			userEvent.click(screen.getByText(walletMnemonic[wordNumber - 1]));
 
 			if (index < 2) {
 				await waitFor(() => expect(screen.queryAllByText(/The (\d+)/).length === 2 - index));

@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { RecipientList } from "./RecipientList";
 
@@ -167,7 +168,7 @@ describe("RecipientList", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		fireEvent.click(removeButton[0]);
+		userEvent.click(removeButton[0]);
 
 		expect(onRemove).toHaveBeenCalledWith(0);
 	});
@@ -194,7 +195,7 @@ describe("RecipientList", () => {
 
 		expect(removeButton[0]).toBeInTheDocument();
 
-		fireEvent.click(removeButton[0]);
+		userEvent.click(removeButton[0]);
 
 		expect(onRemove).not.toHaveBeenCalled();
 	});

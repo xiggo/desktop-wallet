@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { TruncateMiddle } from "./TruncateMiddle";
 
@@ -26,7 +27,7 @@ describe("TruncateMiddle", () => {
 	it("should show tooltip", () => {
 		const { baseElement } = render(<TruncateMiddle text="ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT" />);
 
-		fireEvent.mouseEnter(screen.getByTestId("TruncateMiddle"));
+		userEvent.hover(screen.getByTestId("TruncateMiddle"));
 
 		expect(baseElement).toHaveTextContent("ASuusXSW9kfWnicScSgUTjttP6T9GQ3kqT");
 	});

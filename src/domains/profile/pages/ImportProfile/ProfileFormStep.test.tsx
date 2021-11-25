@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import os from "os";
@@ -115,29 +116,32 @@ describe("Import Profile - Profile Form Step", () => {
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters);
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 1" } });
+		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0];
 
-		fireEvent.focus(screen.getByTestId("SelectDropdown__input"));
+		userEvent.paste(inputElement, "test profile 1");
 
-		fireEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
+
+		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		expect(emptyProfile.usesPassword()).toBe(false);
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 2" } });
+		inputElement.select();
+		userEvent.paste(inputElement, "test profile 2");
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		const newProfile = env.profiles().findById(emptyProfile.id());
 
@@ -161,28 +165,36 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "asdasdas" } });
+		userEvent.paste(screen.getAllByTestId("Input")[0], "asdasdas");
 
-		const selectDropdown = screen.getByTestId("SelectDropdown__input");
-		fireEvent.focus(selectDropdown);
-		fireEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
-		fireEvent.change(screen.getAllByTestId("InputPassword")[0], { target: { value: "753lk6JD!&" } });
-		fireEvent.change(screen.getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!" } });
+		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		const passwordInput: HTMLInputElement = screen.getAllByTestId("InputPassword")[0] as HTMLInputElement;
+		const passwordConfirmationInput: HTMLInputElement = screen.getAllByTestId(
+			"InputPassword",
+		)[1] as HTMLInputElement;
 
-		fireEvent.input(screen.getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!&" } });
+		userEvent.paste(passwordInput, "753lk6JD!&");
+		userEvent.paste(passwordConfirmationInput, "753lk6JD!");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeDisabled());
 
-		fireEvent.input(screen.getAllByTestId("InputPassword")[0], { target: { value: "753lk6JD!" } });
+		passwordConfirmationInput.select();
+		userEvent.paste(passwordConfirmationInput, "753lk6JD!&");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		fireEvent.input(screen.getAllByTestId("InputPassword")[1], { target: { value: "753lk6JD!" } });
+		passwordInput.select();
+		userEvent.paste(passwordInput, "753lk6JD!");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeDisabled());
+
+		passwordConfirmationInput.select();
+		userEvent.paste(passwordConfirmationInput, "753lk6JD!");
+
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -205,27 +217,33 @@ describe("Import Profile - Profile Form Step", () => {
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
-		act(() => screen.getAllByTestId("Input")[0].focus());
-		fireEvent.blur(screen.getAllByTestId("Input")[0]);
+		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0] as HTMLInputElement;
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "t" } });
+		act(() => inputElement.focus());
+
+		fireEvent.blur(inputElement);
+
+		inputElement.select();
+		userEvent.paste(inputElement, "t");
 
 		act(() => screen.getAllByTestId("InputPassword")[1].focus());
 
 		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "te" } });
+		inputElement.select();
+		userEvent.paste(inputElement, "te");
 
 		act(() => screen.getAllByTestId("InputPassword")[0].focus());
 
 		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 
-		act(() => screen.getAllByTestId("Input")[0].focus());
+		act(() => inputElement.focus());
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile" } });
+		inputElement.select();
+		userEvent.paste(inputElement, "test profile");
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("Input")[0]).toHaveValue("test profile");
+			expect(inputElement).toHaveValue("test profile");
 		});
 
 		act(() => screen.getAllByTestId("InputPassword")[0].focus());
@@ -234,12 +252,12 @@ describe("Import Profile - Profile Form Step", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		act(() => screen.getAllByTestId("Input")[0].focus());
+		act(() => inputElement.focus());
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "" } });
+		userEvent.clear(inputElement);
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("Input")[0]).not.toHaveValue();
+			expect(inputElement).not.toHaveValue();
 		});
 
 		act(() => screen.getAllByTestId("InputPassword")[0].focus());
@@ -247,19 +265,20 @@ describe("Import Profile - Profile Form Step", () => {
 		expect(() => screen.getByTestId("SelectProfileImage__avatar")).toThrow(/^Unable to find an element by/);
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		expect(() => screen.getByTestId("SelectProfileImage__avatar")).toBeTruthy();
 
-		act(() => screen.getAllByTestId("Input")[0].focus());
+		act(() => inputElement.focus());
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "t" } });
+		inputElement.select();
+		userEvent.paste(inputElement, "t");
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("Input")[0]).toHaveValue("t");
+			expect(inputElement).toHaveValue("t");
 		});
 
-		fireEvent.blur(screen.getAllByTestId("Input")[0]);
+		fireEvent.blur(inputElement);
 
 		expect(asFragment()).toMatchSnapshot();
 

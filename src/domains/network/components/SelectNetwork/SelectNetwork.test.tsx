@@ -1,7 +1,8 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { availableNetworksMock } from "@/tests/mocks/networks";
-import { fireEvent, render, screen, within } from "@/utils/testing-library";
+import { render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { itemToString, SelectNetwork } from "./SelectNetwork";
 
@@ -29,7 +30,7 @@ describe("SelectNetwork", () => {
 		render(<SelectNetwork networks={availableNetworksMock} />);
 		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		fireEvent.focus(input);
+		userEvent.click(input);
 
 		const availableNetworksLength = availableNetworksMock.filter((network) => network).length;
 
@@ -37,14 +38,14 @@ describe("SelectNetwork", () => {
 
 		const value = "Ar";
 
-		fireEvent.change(input, { target: { value } });
+		userEvent.paste(input, value);
 
 		expect(input).toHaveValue(value);
 
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toBeInTheDocument();
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
-		fireEvent.change(input, { target: { value: "" } });
+		userEvent.clear(input);
 
 		expect(input).not.toHaveValue();
 
@@ -55,7 +56,7 @@ describe("SelectNetwork", () => {
 		render(<SelectNetwork networks={availableNetworksMock} />);
 		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		fireEvent.change(input, { target: { value: "ar" } });
+		userEvent.paste(input, "ar");
 
 		expect(input).toHaveValue("ar");
 
@@ -68,19 +69,20 @@ describe("SelectNetwork", () => {
 		render(<SelectNetwork networks={availableNetworksMock} onInputChange={onInputChange} />);
 		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		fireEvent.change(input, { target: { value: "ark" } });
+		userEvent.paste(input, "ark");
 
 		expect(input).toHaveValue("ark");
 
 		expect(onInputChange).toHaveBeenCalledWith("ark", "ark");
 
-		fireEvent.change(input, { target: { value: "no-match" } });
+		userEvent.clear(input);
+		userEvent.paste(input, "no-match");
 
 		expect(input).toHaveValue("no-match");
 
 		expect(onInputChange).toHaveBeenCalledWith("no-match", "");
 
-		fireEvent.change(input, { target: { value: "" } });
+		userEvent.clear(input);
 
 		expect(input).not.toHaveValue();
 
@@ -91,11 +93,11 @@ describe("SelectNetwork", () => {
 		render(<SelectNetwork networks={availableNetworksMock} />);
 		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		fireEvent.change(input, { target: { value: "ark" } });
+		userEvent.paste(input, "ark");
 
 		expect(input).toHaveValue("ark");
 
-		fireEvent.keyDown(input, { code: 13, key: "Enter" });
+		userEvent.keyboard("{enter}");
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 	});
@@ -104,11 +106,11 @@ describe("SelectNetwork", () => {
 		render(<SelectNetwork networks={availableNetworksMock} />);
 		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		fireEvent.change(input, { target: { value: "Bot" } });
+		userEvent.paste(input, "Bot");
 
 		expect(input).toHaveValue("Bot");
 
-		fireEvent.keyDown(input, { code: 13, key: "Enter" });
+		userEvent.keyboard("{enter}");
 
 		expect(within(screen.getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
 	});
@@ -117,61 +119,58 @@ describe("SelectNetwork", () => {
 		render(<SelectNetwork networks={availableNetworksMock} />);
 		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		fireEvent.change(input, { target: { value: "Bitco" } });
+		userEvent.paste(input, "Bitco");
 
 		expect(input).toHaveValue("Bitco");
 
-		fireEvent.keyDown(input, { code: 65, key: "A" });
+		// userEvent.click(input);
+		userEvent.keyboard("A");
 
 		expect(within(screen.getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
 	});
 
-	it("should clear selection when changing input", () => {
+	it("should clear selection when changing input", async () => {
 		render(<SelectNetwork networks={availableNetworksMock} />);
 		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		fireEvent.change(input, { target: { value: "ark" } });
+		userEvent.paste(input, "ark");
 
-		expect(input).toHaveValue("ark");
+		await waitFor(() => {
+			expect(input).toHaveValue("ark");
+		});
 
-		fireEvent.keyDown(input, { code: 13, key: "Enter" });
+		userEvent.keyboard("{enter}");
+
+		await within(screen.getByTestId("SelectNetworkInput__network")).findByTestId("NetworkIcon__icon");
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 
-		fireEvent.change(input, { target: { value: "test" } });
+		userEvent.paste(input, "A");
 
-		expect(input).not.toHaveValue();
+		expect(() =>
+			within(screen.getByTestId("SelectNetworkInput__network")).getByTestId("NetworkIcon__icon"),
+		).toThrow(/Unable to find an element by/);
 
-		fireEvent.keyDown(input, { code: 65, key: "A" });
-
-		expect(input).not.toHaveValue();
-
-		fireEvent.keyDown(input, { code: 65, key: "B" });
-
-		expect(input).not.toHaveValue();
-
-		expect(within(screen.getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
+		expect(screen.getByTestId("SelectNetworkInput__network")).not.toHaveAttribute("aria-label");
 	});
 
 	it("should select an item by clicking on it", () => {
 		render(<SelectNetwork networks={availableNetworksMock} />);
 		const input = screen.getByTestId("SelectNetworkInput__input");
 
-		fireEvent.focus(input);
-
-		fireEvent.change(input, { target: { value: "ARK" } });
+		userEvent.paste(input, "ARK");
 
 		expect(input).toHaveValue("ARK");
 		expect(screen.getByTestId("Input__suggestion")).toBeInTheDocument();
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
 		expect(screen.queryByTestId("Input__suggestion")).not.toBeInTheDocument();
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 	});
@@ -179,19 +178,19 @@ describe("SelectNetwork", () => {
 	it("should toggle selection by clicking on network icon", () => {
 		render(<SelectNetwork networks={availableNetworksMock} />);
 
-		fireEvent.focus(screen.getByTestId("SelectNetworkInput__input"));
+		userEvent.click(screen.getByTestId("SelectNetworkInput__input"));
 
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 
-		fireEvent.focus(screen.getByTestId("SelectNetworkInput__input"));
+		userEvent.click(screen.getByTestId("SelectNetworkInput__input"));
 
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).not.toHaveAttribute("aria-label");
 	});
@@ -201,11 +200,11 @@ describe("SelectNetwork", () => {
 
 		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
 
-		fireEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks-toggle"));
+		userEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks-toggle"));
 
 		expect(screen.getAllByRole("listbox")[1]).not.toHaveClass("hidden");
 
-		fireEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks-toggle"));
+		userEvent.click(screen.getByTestId("SelectNetwork__developmentNetworks-toggle"));
 
 		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
 	});
@@ -216,11 +215,11 @@ describe("SelectNetwork", () => {
 
 		expect(screen.getAllByRole("listbox")[1]).toHaveClass("hidden");
 
-		fireEvent.change(input, { target: { value: "ARK D" } });
+		userEvent.paste(input, "ARK D");
 
 		expect(input).toHaveValue("ARK D");
 
-		fireEvent.keyDown(input, { code: 13, key: "Enter" });
+		userEvent.keyboard("{enter}");
 
 		expect(screen.getAllByRole("listbox")[1]).not.toHaveClass("hidden");
 	});

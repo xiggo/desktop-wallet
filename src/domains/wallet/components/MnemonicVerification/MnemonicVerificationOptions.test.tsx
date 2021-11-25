@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { MnemonicVerificationOptions } from "./MnemonicVerificationOptions";
 
@@ -36,7 +37,7 @@ describe("MnemonicVerificationOptions", () => {
 				position={1}
 			/>,
 		);
-		fireEvent.click(screen.getByText(answer));
+		userEvent.click(screen.getByText(answer));
 
 		expect(handleChange).toHaveBeenCalledWith(answer);
 	});

@@ -1,8 +1,9 @@
 import { waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations } from "@/app/i18n/common/i18n";
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { Clipboard } from "./Clipboard";
 
@@ -24,7 +25,7 @@ describe("ClipboardIcon", () => {
 			</Clipboard>,
 		);
 
-		fireEvent.mouseEnter(screen.getByTestId("clipboard-icon__wrapper"));
+		userEvent.hover(screen.getByTestId("clipboard-icon__wrapper"));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 	});
@@ -36,12 +37,12 @@ describe("ClipboardIcon", () => {
 			</Clipboard>,
 		);
 
-		fireEvent.mouseEnter(screen.getByTestId("clipboard-icon__wrapper"));
+		userEvent.hover(screen.getByTestId("clipboard-icon__wrapper"));
 
 		expect(baseElement).toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT);
 		expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.SUCCESS);
 
-		fireEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
+		userEvent.click(screen.getByTestId("clipboard-icon__wrapper"));
 
 		await waitFor(() => expect(baseElement).not.toHaveTextContent(translations.CLIPBOARD.TOOLTIP_TEXT));
 

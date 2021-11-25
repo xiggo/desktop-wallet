@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
 
 import { VerifyMessage } from "./VerifyMessage";
 
@@ -58,11 +59,11 @@ describe("VerifyMessage", () => {
 
 		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("VerifyMessage__json")).toBeInTheDocument();
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("VerifyMessage__manual")).toBeInTheDocument();
 	});
@@ -74,7 +75,7 @@ describe("VerifyMessage", () => {
 
 		const cancelButton = screen.getByTestId("VerifyMessage__cancel");
 
-		fireEvent.click(cancelButton);
+		userEvent.click(cancelButton);
 
 		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -86,7 +87,7 @@ describe("VerifyMessage", () => {
 
 		const closeButton = screen.getByTestId("modal__close-btn");
 
-		fireEvent.click(closeButton);
+		userEvent.click(closeButton);
 
 		expect(onClose).toHaveBeenCalledWith();
 	});
@@ -100,9 +101,9 @@ describe("VerifyMessage", () => {
 		const messageInput = screen.getByTestId("VerifyMessage__manual-message");
 		const signatureInput = screen.getByTestId("VerifyMessage__manual-signature");
 
-		fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
-		fireEvent.input(messageInput, { target: { value: signedMessage.message } });
-		fireEvent.input(signatureInput, { target: { value: signedMessage.signature } });
+		userEvent.paste(signatoryInput, signedMessage.signatory);
+		userEvent.paste(messageInput, signedMessage.message);
+		userEvent.paste(signatureInput, signedMessage.signature);
 
 		const submitButton = screen.getByTestId("VerifyMessage__submit");
 
@@ -110,7 +111,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).not.toBeDisabled();
 		});
 
-		fireEvent.click(submitButton);
+		userEvent.click(submitButton);
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(true);
@@ -128,11 +129,11 @@ describe("VerifyMessage", () => {
 
 		const toggle = screen.getByRole("checkbox");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		const jsonStringInput = screen.getByTestId("VerifyMessage__json-jsonString");
 
-		fireEvent.input(jsonStringInput, { target: { value: JSON.stringify(signedMessage) } });
+		userEvent.paste(jsonStringInput, JSON.stringify(signedMessage));
 
 		expect(jsonStringInput).toHaveValue(JSON.stringify(signedMessage));
 
@@ -142,7 +143,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).not.toBeDisabled();
 		});
 
-		fireEvent.click(submitButton);
+		userEvent.click(submitButton);
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(true);
@@ -163,15 +164,15 @@ describe("VerifyMessage", () => {
 		const messageInput = screen.getByTestId("VerifyMessage__manual-message");
 		const signatureInput = screen.getByTestId("VerifyMessage__manual-signature");
 
-		fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
-		fireEvent.input(messageInput, { target: { value: signedMessage.message } });
-		fireEvent.input(signatureInput, { target: { value: "fake-signature" } });
+		userEvent.paste(signatoryInput, signedMessage.signatory);
+		userEvent.paste(messageInput, signedMessage.message);
+		userEvent.paste(signatureInput, "fake-signature");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("VerifyMessage__submit")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("VerifyMessage__submit"));
+		userEvent.click(screen.getByTestId("VerifyMessage__submit"));
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(false);
@@ -181,7 +182,7 @@ describe("VerifyMessage", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent("error-banner-dark-green.svg");
 		});
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => {
 			expect(onClose).toHaveBeenCalledWith();
@@ -200,9 +201,9 @@ describe("VerifyMessage", () => {
 
 		const messageSpy = jest.spyOn(wallet.message(), "verify").mockRejectedValue(new Error());
 
-		fireEvent.input(signatoryInput, { target: { value: signedMessage.signatory } });
-		fireEvent.input(messageInput, { target: { value: signedMessage.message } });
-		fireEvent.input(signatureInput, { target: { value: "fake-signature" } });
+		userEvent.paste(signatoryInput, signedMessage.signatory);
+		userEvent.paste(messageInput, signedMessage.message);
+		userEvent.paste(signatureInput, "fake-signature");
 
 		const submitButton = screen.getByTestId("VerifyMessage__submit");
 
@@ -210,7 +211,7 @@ describe("VerifyMessage", () => {
 			expect(submitButton).not.toBeDisabled();
 		});
 
-		fireEvent.click(submitButton);
+		userEvent.click(submitButton);
 
 		await waitFor(() => {
 			expect(onSubmit).toHaveBeenCalledWith(false);
@@ -220,7 +221,7 @@ describe("VerifyMessage", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent("error-banner-dark-green.svg");
 		});
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => {
 			expect(onClose).toHaveBeenCalledWith();

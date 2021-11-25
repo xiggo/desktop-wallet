@@ -1,7 +1,8 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { SyncErrorMessage } from "./ProfileSyncStatusMessage";
 
@@ -70,7 +71,7 @@ describe("SyncErrorMessage", () => {
 		await screen.findByText(failedNetworkNames[1]);
 		await screen.findByText(failedNetworkNames[2]);
 
-		fireEvent.click(screen.getByTestId("SyncErrorMessage__retry"));
+		userEvent.click(screen.getByTestId("SyncErrorMessage__retry"));
 
 		await waitFor(() => expect(onRetry).toHaveBeenCalledWith());
 

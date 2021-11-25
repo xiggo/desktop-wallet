@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { act, renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
@@ -11,7 +12,6 @@ import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
 import {
 	act as renderAct,
 	env,
-	fireEvent,
 	getDefaultProfileId,
 	MNEMONICS,
 	pluginManager,
@@ -444,7 +444,7 @@ describe("useProfileSynchronizer", () => {
 
 		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(false));
 
-		fireEvent.click(screen.getByTestId("ResetSyncProfile"));
+		userEvent.click(screen.getByTestId("ResetSyncProfile"));
 
 		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(true));
 	});

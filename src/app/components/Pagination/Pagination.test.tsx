@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { Pagination } from "./Pagination";
 
@@ -29,7 +30,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={12} itemsPerPage={4} onSelectPage={handleSelectPage} currentPage={1} />,
 		);
 
-		fireEvent.click(screen.getByText("2"));
+		userEvent.click(screen.getByText("2"));
 
 		expect(handleSelectPage).toHaveBeenCalledWith(2);
 		expect(asFragment()).toMatchSnapshot();
@@ -98,7 +99,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={150} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={101} />,
 		);
 
-		fireEvent.click(screen.getByTestId("Pagination__first"));
+		userEvent.click(screen.getByTestId("Pagination__first"));
 
 		expect(handleSelectPage).toHaveBeenCalledWith(1);
 		expect(asFragment()).toMatchSnapshot();
@@ -109,7 +110,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={40} itemsPerPage={4} onSelectPage={handleSelectPage} currentPage={9} />,
 		);
 
-		fireEvent.click(screen.getByTestId("Pagination__previous"));
+		userEvent.click(screen.getByTestId("Pagination__previous"));
 
 		expect(handleSelectPage).toHaveBeenCalledWith(8);
 		expect(asFragment()).toMatchSnapshot();
@@ -120,7 +121,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={12} itemsPerPage={4} onSelectPage={handleSelectPage} currentPage={2} />,
 		);
 
-		fireEvent.click(screen.getByTestId("Pagination__next"));
+		userEvent.click(screen.getByTestId("Pagination__next"));
 
 		expect(handleSelectPage).toHaveBeenCalledWith(3);
 		expect(asFragment()).toMatchSnapshot();
@@ -131,7 +132,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={30} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />,
 		);
 
-		fireEvent.click(screen.getByTestId("Pagination__last"));
+		userEvent.click(screen.getByTestId("Pagination__last"));
 
 		expect(handleSelectPage).toHaveBeenCalledWith(30);
 		expect(asFragment()).toMatchSnapshot();
@@ -142,7 +143,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={30} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={15} />,
 		);
 
-		fireEvent.click(screen.getAllByTestId("PaginationSearchButton")[0]);
+		userEvent.click(screen.getAllByTestId("PaginationSearchButton")[0]);
 
 		expect(screen.getByTestId("PaginationSearch__input")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -153,7 +154,7 @@ describe("Pagination", () => {
 			<Pagination totalCount={30} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={15} />,
 		);
 
-		fireEvent.click(screen.getAllByTestId("PaginationSearchButton")[1]);
+		userEvent.click(screen.getAllByTestId("PaginationSearchButton")[1]);
 
 		expect(screen.getByTestId("PaginationSearch__input")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -162,17 +163,13 @@ describe("Pagination", () => {
 	it("should handle page selection from pagination search properly", async () => {
 		render(<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />);
 
-		fireEvent.click(screen.getByTestId("PaginationSearchButton"));
+		userEvent.click(screen.getByTestId("PaginationSearchButton"));
 
-		fireEvent.input(screen.getByTestId("PaginationSearch__input"), {
-			target: {
-				value: "5",
-			},
-		});
+		userEvent.type(screen.getByTestId("PaginationSearch__input"), "5");
 
 		await waitFor(() => expect(screen.getByTestId("PaginationSearch__input")).toHaveValue(5));
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(handleSelectPage).toHaveBeenCalledWith(5));
 	});
@@ -180,11 +177,11 @@ describe("Pagination", () => {
 	it("should handle close button from pagination search properly", async () => {
 		render(<Pagination totalCount={10} itemsPerPage={1} onSelectPage={handleSelectPage} currentPage={1} />);
 
-		fireEvent.click(screen.getByTestId("PaginationSearchButton"));
+		userEvent.click(screen.getByTestId("PaginationSearchButton"));
 
 		expect(screen.getByTestId("PaginationSearch__input")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__cancel"));
+		userEvent.click(screen.getByTestId("PaginationSearch__cancel"));
 		await waitFor(() => expect(handleSelectPage).not.toHaveBeenCalled());
 	});
 });

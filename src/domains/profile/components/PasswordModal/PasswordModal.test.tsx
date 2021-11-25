@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { PasswordModal } from "./PasswordModal";
 
@@ -36,12 +37,12 @@ describe("PasswordModal", () => {
 
 		render(<PasswordModal isOpen={true} onSubmit={onSuccess} />);
 
-		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "password" } });
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), "password");
 
 		// wait for formState.isValid to be updated
 		await screen.findByTestId("PasswordModal__submit-button");
 
-		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await waitFor(() => {
 			expect(onSuccess).toHaveBeenCalledWith("password");

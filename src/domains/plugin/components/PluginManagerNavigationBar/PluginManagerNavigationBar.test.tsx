@@ -1,7 +1,8 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations as pluginTranslations } from "@/domains/plugin/i18n";
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { PluginManagerNavigationBar } from "./PluginManagerNavigationBar";
 
@@ -41,7 +42,7 @@ describe("PluginManagerNavigationBar", () => {
 		for (const navId of navIds) {
 			const navItem = screen.getByTestId(`tabs__tab-button-${navId}`);
 
-			fireEvent.click(navItem);
+			userEvent.click(navItem);
 
 			expect(screen.getByTestId("currentView")).toHaveTextContent(navId);
 			expect(screen.getByTestId(`tabs__tab-button-${navId}`)).toHaveAttribute("aria-selected", "true");

@@ -1,17 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
 import { LedgerProvider, useLedgerContext } from "@/app/contexts/Ledger";
-import {
-	env,
-	fireEvent,
-	getDefaultLedgerTransport,
-	getDefaultProfileId,
-	render,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { useLedgerScanner } from "./scanner";
 
@@ -119,7 +112,7 @@ describe("Use Ledger Scanner", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.queryAllByRole("listitem")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByText("Balance: Loading")).toHaveLength(0));
@@ -165,12 +158,12 @@ describe("Use Ledger Scanner", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(screen.getByTestId("scan"));
+		userEvent.click(screen.getByTestId("scan"));
 
 		await waitFor(() => expect(screen.queryAllByRole("listitem")).toHaveLength(1));
 		await waitFor(() => expect(screen.queryAllByText("Balance: Loading")).toHaveLength(0));
 
-		fireEvent.click(screen.getByTestId("input--0"));
+		userEvent.click(screen.getByTestId("input--0"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
 
@@ -212,11 +205,11 @@ describe("Use Ledger Scanner", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Scan"));
+		userEvent.click(screen.getByText("Scan"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: true")).toHaveLength(1));
 
-		fireEvent.click(screen.getByText("Toggle All"));
+		userEvent.click(screen.getByText("Toggle All"));
 
 		await waitFor(() => expect(screen.queryAllByText("Selected: false")).toHaveLength(1));
 
@@ -255,7 +248,7 @@ describe("Use Ledger Scanner", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(screen.getByText("Scan"));
+		userEvent.click(screen.getByText("Scan"));
 
 		await screen.findByText("Retry");
 
@@ -291,8 +284,8 @@ describe("Use Ledger Scanner", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(screen.getByTestId("scan"));
-		fireEvent.click(screen.getByTestId("abort"));
+		userEvent.click(screen.getByTestId("scan"));
+		userEvent.click(screen.getByTestId("abort"));
 
 		await screen.findByText("Idle");
 		await new Promise((resolve) => setTimeout(resolve, 3000));

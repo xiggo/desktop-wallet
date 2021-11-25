@@ -1,12 +1,13 @@
 import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { DelegateRow } from "./DelegateRow";
 
@@ -73,7 +74,7 @@ describe("DelegateRow", () => {
 		);
 		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		fireEvent.click(selectButton);
+		userEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
 		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());

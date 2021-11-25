@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import fs from "fs";
 import { createMemoryHistory } from "history";
 import React from "react";
@@ -57,7 +58,7 @@ describe("ImportProfile", () => {
 		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("SelectFileStep__back"));
+		userEvent.click(screen.getByTestId("SelectFileStep__back"));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 		historyMock.mockRestore();
@@ -75,7 +76,7 @@ describe("ImportProfile", () => {
 
 		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("SelectFileStep__change-file"));
+		userEvent.click(screen.getByTestId("SelectFileStep__change-file"));
 
 		await waitFor(() =>
 			expect(() => screen.getByTestId("SelectFileStep__change-file")).toThrow(/Unable to find an element by/),
@@ -126,12 +127,12 @@ describe("ImportProfile", () => {
 		await screen.findByTestId("ProcessingImport");
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
 
 		// wait for formState.isValid to be updated
 		await screen.findByTestId("PasswordModal__submit-button");
 
-		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await screen.findByTestId("ProcessingImport");
 	});
@@ -158,7 +159,7 @@ describe("ImportProfile", () => {
 		await screen.findByTestId("ProcessingImport");
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await screen.findByTestId("SelectFileStep__change-file");
 	});
@@ -187,17 +188,17 @@ describe("ImportProfile", () => {
 		await screen.findByTestId("ProcessingImport");
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
 		await waitFor(() => expect(screen.getByTestId("PasswordModal__input")).toHaveValue("S3cUrePa$sword"));
 
-		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await screen.findByTestId("ProcessingImport");
 		await screen.findByTestId("CreateProfile__form");
 
 		expect(() => screen.getByTestId("InputPassword")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 	});
@@ -217,7 +218,7 @@ describe("ImportProfile", () => {
 		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("SelectFileStep__change-file"));
+		userEvent.click(screen.getByTestId("SelectFileStep__change-file"));
 
 		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
 			dataTransfer: {
@@ -228,10 +229,10 @@ describe("ImportProfile", () => {
 		await screen.findByTestId("ProcessingImport");
 		await screen.findByTestId("CreateProfile__form");
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "legacy profile" } });
+		userEvent.paste(screen.getAllByTestId("Input")[0], "legacy profile");
 		await waitFor(() => expect(screen.getAllByTestId("Input")[0]).toHaveValue("legacy profile"));
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));
 	});
@@ -295,18 +296,18 @@ describe("ImportProfile", () => {
 		await screen.findByTestId("ProcessingImport");
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "S3cUrePa$sword" } });
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("S3cUrePa$sword");
 		});
 
-		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await screen.findByTestId("ProcessingImport");
 		await screen.findByTestId("CreateProfile__form");
 
-		fireEvent.click(screen.getByTestId("CreateProfile__back-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__back-button"));
 
 		await screen.findByTestId("SelectFileStep__change-file");
 	});
@@ -334,13 +335,13 @@ describe("ImportProfile", () => {
 		await screen.findByTestId("ProcessingImport");
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), "wrong password");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("wrong password");
 		});
 
-		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await screen.findByTestId("ImportError");
 
@@ -370,17 +371,17 @@ describe("ImportProfile", () => {
 		await screen.findByTestId("ProcessingImport");
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), "wrong password");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("wrong password");
 		});
 
-		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await screen.findByTestId("ImportError");
 
-		fireEvent.click(screen.getByTestId("ImportError__retry"));
+		userEvent.click(screen.getByTestId("ImportError__retry"));
 
 		await screen.findByTestId("ImportError");
 		corruptedDweMock.mockRestore();
@@ -410,17 +411,17 @@ describe("ImportProfile", () => {
 		await screen.findByTestId("ProcessingImport");
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.input(screen.getByTestId("PasswordModal__input"), { target: { value: "wrong password" } });
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), "wrong password");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("wrong password");
 		});
 
-		fireEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
 		await screen.findByTestId("ImportError");
 
-		fireEvent.click(screen.getByTestId("ImportError__back"));
+		userEvent.click(screen.getByTestId("ImportError__back"));
 
 		await screen.findByTestId("ImportError");
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"));

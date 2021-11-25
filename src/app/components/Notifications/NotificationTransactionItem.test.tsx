@@ -1,10 +1,11 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
 import { httpClient } from "@/app/services";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { NotificationTransactionItem } from "./NotificationTransactionItem";
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
@@ -77,7 +78,7 @@ describe("Notifications", () => {
 		);
 		await waitFor(() => expect(screen.getAllByTestId("TransactionRowMode")).toHaveLength(1));
 
-		fireEvent.click(screen.getByTestId("TransactionRowMode"));
+		userEvent.click(screen.getByTestId("TransactionRowMode"));
 
 		await waitFor(() => expect(onTransactionClick).toHaveBeenCalledWith(notificationTransaction));
 	});

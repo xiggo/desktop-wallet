@@ -8,7 +8,7 @@ import { Route } from "react-router-dom";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import { PasswordSettings } from "@/domains/setting/pages";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 const translations = buildTranslations();
 const history = createMemoryHistory();
 
@@ -65,18 +65,14 @@ describe("Password Settings", () => {
 
 		expect(() => screen.getByTestId(currentPasswordInput)).toThrow(/Unable to find an element by/);
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--password_1"), {
-			target: { value: password },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), password);
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--password_2"), {
-			target: { value: password },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--password_2"), password);
 
 		// wait for formState.isValid to be updated
 		await screen.findByTestId("Password-settings__submit-button");
 
-		fireEvent.click(screen.getByTestId("Password-settings__submit-button"));
+		userEvent.click(screen.getByTestId("Password-settings__submit-button"));
 
 		await screen.findByTestId(currentPasswordInput);
 
@@ -100,23 +96,17 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--currentPassword"), {
-			target: { value: password },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--currentPassword"), password);
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--password_1"), {
-			target: { value: "S3cUrePa$sword2different" },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), "S3cUrePa$sword2different");
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--password_2"), {
-			target: { value: "S3cUrePa$sword2different" },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--password_2"), "S3cUrePa$sword2different");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Password-settings__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(screen.getByTestId("Password-settings__submit-button"));
+		userEvent.click(screen.getByTestId("Password-settings__submit-button"));
 
 		await screen.findByTestId("Password-settings__input--currentPassword");
 	});
@@ -143,31 +133,27 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
 
-		fireEvent.click(await screen.findByTestId("side-menu__item--password"));
+		userEvent.click(await screen.findByTestId("side-menu__item--password"));
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
 		await screen.findByTestId(currentPasswordInput);
 
-		fireEvent.input(screen.getByTestId(currentPasswordInput), { target: { value: "wrong!" } });
+		userEvent.paste(screen.getByTestId(currentPasswordInput), "wrong!");
 
 		await waitFor(() => {
 			expect(screen.getByTestId(currentPasswordInput)).toHaveValue("wrong!");
 		});
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--password_1"), {
-			target: { value: "AnotherS3cUrePa$swordNew" },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), "AnotherS3cUrePa$swordNew");
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--password_2"), {
-			target: { value: "AnotherS3cUrePa$swordNew" },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--password_2"), "AnotherS3cUrePa$swordNew");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Password-settings__submit-button")).toBeEnabled();
 		});
 
-		fireEvent.click(screen.getByTestId("Password-settings__submit-button"));
+		userEvent.click(screen.getByTestId("Password-settings__submit-button"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Password-settings__submit-button")).toBeEnabled();
@@ -197,37 +183,31 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
 
-		fireEvent.click(screen.getByTestId("side-menu__item--password"));
+		userEvent.click(screen.getByTestId("side-menu__item--password"));
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
 		await screen.findByTestId(currentPasswordInput);
 
-		fireEvent.input(screen.getByTestId(currentPasswordInput), { target: { value: password } });
+		userEvent.paste(screen.getByTestId(currentPasswordInput), password);
 
 		await waitFor(() => {
 			expect(screen.getByTestId(currentPasswordInput)).toHaveValue(password);
 		});
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--password_1"), {
-			target: { value: "S3cUrePa$sword2different" },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), "S3cUrePa$sword2different");
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Password-settings__input--password_1")).toHaveValue("S3cUrePa$sword2different"),
 		);
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--password_2"), {
-			target: { value: "S3cUrePa$sword2different1" },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--password_2"), "S3cUrePa$sword2different1");
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Password-settings__input--password_2")).toHaveValue("S3cUrePa$sword2different1"),
 		);
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--password_1"), {
-			target: { value: "new password 2" },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), "new password 2");
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Password-settings__input--password_2")).toHaveAttribute("aria-invalid"),
@@ -254,21 +234,17 @@ describe("Password Settings", () => {
 			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();
 		});
 
-		fireEvent.click(screen.getByTestId("side-menu__item--password"));
+		userEvent.click(screen.getByTestId("side-menu__item--password"));
 
 		await screen.findByTestId("Password-settings__input--currentPassword");
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--currentPassword"), {
-			target: { value: password },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--currentPassword"), password);
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Password-settings__input--currentPassword")).toHaveValue(password),
 		);
 
-		fireEvent.input(screen.getByTestId("Password-settings__input--password_1"), {
-			target: { value: password },
-		});
+		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), password);
 
 		await waitFor(() => expect(screen.getByTestId("Password-settings__input--password_1")).toHaveValue(password));
 
@@ -318,9 +294,7 @@ describe("Password Settings", () => {
 
 		// Fill in current password and confirm.
 
-		fireEvent.input(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), {
-			target: { value: password },
-		});
+		userEvent.paste(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), password);
 
 		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeEnabled());
 
@@ -367,9 +341,7 @@ describe("Password Settings", () => {
 
 		// Fill in wrong current password and confirm.
 
-		fireEvent.input(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), {
-			target: { value: "S3cUrePa$swordWrong" },
-		});
+		userEvent.paste(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), "S3cUrePa$swordWrong");
 
 		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeEnabled());
 

@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { Clipboard } from "./Clipboard";
 
@@ -25,7 +26,7 @@ describe("ClipboardButton", () => {
 
 		expect(screen.queryByTestId("clipboard-button__checkmark")).not.toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("clipboard-button__wrapper"));
+		userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
 
 		await expect(screen.findByTestId("clipboard-button__checkmark")).resolves.toBeInTheDocument();
 	});
@@ -39,7 +40,7 @@ describe("ClipboardButton", () => {
 
 		expect(screen.queryByTestId("clipboard-button__checkmark")).not.toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("clipboard-button__wrapper"));
+		userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
 
 		await expect(screen.findByTestId("clipboard-button__checkmark")).resolves.toBeInTheDocument();
 

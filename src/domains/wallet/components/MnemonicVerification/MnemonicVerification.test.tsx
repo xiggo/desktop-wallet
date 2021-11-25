@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { cleanup, fireEvent, render, screen } from "@/utils/testing-library";
+import { cleanup, render, screen } from "@/utils/testing-library";
 
 import { MnemonicVerification } from "./MnemonicVerification";
 
@@ -58,20 +59,20 @@ describe("MnemonicVerification", () => {
 
 		const firstTab = asFragment();
 		const wrongButton = screen.getByText(mnemonicWords[4]);
-		fireEvent.click(wrongButton);
+		userEvent.click(wrongButton);
 
 		expect(firstTab).toStrictEqual(asFragment());
 
 		const firstButton = screen.getByText(mnemonicWords[wordPositions[0] - 1]);
-		fireEvent.click(firstButton);
+		userEvent.click(firstButton);
 
 		expect(firstTab).not.toStrictEqual(asFragment());
 
 		const secondButton = screen.getByText(mnemonicWords[wordPositions[1] - 1]);
-		fireEvent.click(secondButton);
+		userEvent.click(secondButton);
 
 		const thirdButton = screen.getByText(mnemonicWords[wordPositions[2] - 1]);
-		fireEvent.click(thirdButton);
+		userEvent.click(thirdButton);
 
 		expect(handleComplete).toHaveBeenCalledWith();
 	});

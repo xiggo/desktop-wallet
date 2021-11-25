@@ -2,15 +2,15 @@
 import { act, renderHook } from "@testing-library/react-hooks";
 import fs from "fs";
 
+import { ReadableFile } from "@/app/hooks/use-files";
 import { useProfileImport } from "@/domains/profile/hooks/use-profile-import";
-import { ImportFile } from "@/domains/profile/pages/ImportProfile/models";
 import { env } from "@/utils/testing-library";
 
-let dwe: ImportFile;
-let passwordProtectedDwe: ImportFile;
-let json: ImportFile;
-let jsonCorrupted: ImportFile;
-let jsonEmpty: ImportFile;
+let dwe: ReadableFile;
+let passwordProtectedDwe: ReadableFile;
+let json: ReadableFile;
+let jsonCorrupted: ReadableFile;
+let jsonEmpty: ReadableFile;
 
 describe("useProfileImport", () => {
 	beforeAll(() => {

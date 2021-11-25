@@ -1,7 +1,8 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { PluginDropdown } from "./PluginDropdown";
 
@@ -20,8 +21,8 @@ describe("PluginDropdown", () => {
 
 		expect(screen.getByTestId("PluginDropdown__update-badge")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.UPDATE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.UPDATE));
 
 		expect(onUpdate).toHaveBeenCalledWith(plugin);
 	});
@@ -36,8 +37,8 @@ describe("PluginDropdown", () => {
 
 		render(<PluginDropdown plugin={plugin} onDelete={onDelete} />);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.DELETE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.DELETE));
 
 		expect(onDelete).toHaveBeenCalledWith(plugin);
 	});
@@ -53,8 +54,8 @@ describe("PluginDropdown", () => {
 
 		render(<PluginDropdown plugin={plugin} onEnable={onEnable} />);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.ENABLE));
 
 		expect(onEnable).toHaveBeenCalledWith(plugin);
 	});
@@ -70,8 +71,8 @@ describe("PluginDropdown", () => {
 
 		render(<PluginDropdown plugin={plugin} onDisable={onDisable} />);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.DISABLE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.DISABLE));
 
 		expect(onDisable).toHaveBeenCalledWith(plugin);
 	});

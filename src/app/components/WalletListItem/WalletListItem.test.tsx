@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { WalletListItem } from "./WalletListItem";
 
@@ -134,7 +135,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText(wallet.alias()!));
+		userEvent.click(screen.getByText(wallet.alias()!));
 
 		expect(onClick).toHaveBeenCalledWith(wallet.id());
 	});
@@ -158,7 +159,7 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText(wallet.alias()!));
+		userEvent.click(screen.getByText(wallet.alias()!));
 
 		expect(onClick).not.toHaveBeenCalled();
 

@@ -1,8 +1,9 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations } from "@/domains/transaction/i18n";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
 
@@ -127,7 +128,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 			),
 		).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__cancel"));
+		userEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__cancel"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -148,7 +149,7 @@ describe("ConfirmRemovePendingTransaction", () => {
 			),
 		).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__remove"));
+		userEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__remove"));
 
 		expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
 	});

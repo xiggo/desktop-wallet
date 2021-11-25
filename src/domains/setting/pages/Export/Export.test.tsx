@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { ExportSettings } from "@/domains/setting/pages";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 const history = createMemoryHistory();
 let profile: Contracts.IProfile;
@@ -61,7 +62,7 @@ describe("Export Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		fireEvent.click(await screen.findByTestId("Export-settings__submit-button"));
+		userEvent.click(await screen.findByTestId("Export-settings__submit-button"));
 
 		await waitFor(() =>
 			expect(dialogMock).toHaveBeenCalledWith({

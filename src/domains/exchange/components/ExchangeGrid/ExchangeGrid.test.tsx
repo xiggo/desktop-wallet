@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { ExchangeGrid } from "./ExchangeGrid";
 
@@ -38,7 +39,7 @@ describe("ExchangeGrid", () => {
 
 		render(<ExchangeGrid exchanges={[exchange]} onClick={onClick} />);
 
-		fireEvent.click(screen.getByTestId("Card"));
+		userEvent.click(screen.getByTestId("Card"));
 
 		expect(onClick).toHaveBeenCalledWith(exchange.slug);
 	});

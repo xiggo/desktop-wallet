@@ -1,11 +1,12 @@
 import { ARK } from "@payvo/sdk-ark";
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import React from "react";
 
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
-import { env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { env, render, screen, waitFor } from "@/utils/testing-library";
 
 import { EnvironmentProvider, useEnvironmentContext } from "./Environment";
 
@@ -74,7 +75,7 @@ describe("Environment Context", () => {
 
 		render(<App />, { withProviders: false });
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.getByRole("heading")).toHaveTextContent("Counter 1"));
 
@@ -107,7 +108,7 @@ describe("Environment Context", () => {
 
 		render(<App />, { history });
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(profile.settings().get(Contracts.ProfileSetting.Name)).toBe("bar"));
 	});
@@ -144,7 +145,7 @@ describe("Environment Context", () => {
 
 		render(<App />, { withProviders: false });
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(screen.getByRole("heading")).toHaveTextContent("Counter 1"));
 

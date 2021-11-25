@@ -9780,6 +9780,7 @@ exports[`SendTransfer should select cryptoasset 1`] = `
                                 data-testid="SelectNetworkInput__input"
                                 id="SendTransfer__network-step__select-input"
                                 placeholder="Enter a cryptoasset name"
+                                type="text"
                                 value="ARK Devnet"
                               />
                             </div>

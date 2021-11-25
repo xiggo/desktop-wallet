@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { ConfirmSendTransaction } from "./ConfirmSendTransaction";
 
@@ -43,7 +44,7 @@ describe("ConfirmSendTransaction", () => {
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
+		userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 
 		expect(onConfirm).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -56,7 +57,7 @@ describe("ConfirmSendTransaction", () => {
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
+		userEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
 
 		expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

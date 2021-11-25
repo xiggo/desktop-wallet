@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk";
 import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { RenderResult } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -9,7 +10,7 @@ import { Route } from "react-router-dom";
 import { translations } from "@/domains/transaction/i18n";
 import multiSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import { TransactionFees } from "@/types";
-import { env, fireEvent, getDefaultProfileId, render, screen, syncFees, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncFees, waitFor } from "@/utils/testing-library";
 
 import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
 
@@ -93,40 +94,29 @@ describe("MultiSignature Registration Form", () => {
 	it("should set fee if dynamic", async () => {
 		renderComponent();
 
-		fireEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
+		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toBeVisible());
 
-		fireEvent.change(screen.getByTestId("InputCurrency"), {
-			target: {
-				value: "9",
-			},
-		});
-
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("9"));
+		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 	});
 
 	it("should fill form", async () => {
 		const { form } = renderComponent();
 
-		fireEvent.click(screen.getByText(translations.FEES.AVERAGE));
+		userEvent.click(screen.getByText(translations.FEES.AVERAGE));
 
-		fireEvent.input(screen.getByTestId("MultiSignatureRegistrationForm__min-participants"), {
-			target: {
-				value: 3,
-			},
-		});
+		const inputElement: HTMLInputElement = screen.getByTestId("MultiSignatureRegistrationForm__min-participants");
+
+		userEvent.clear(inputElement);
+		userEvent.paste(inputElement, "3");
 
 		await waitFor(() => expect(form?.getValues("fee")).toBe(String(fees.avg)));
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: wallet2.address(),
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		fireEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe("3"));
 		await waitFor(() =>
@@ -150,13 +140,9 @@ describe("MultiSignature Registration Form", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("Address__alias")).toHaveLength(1));
 
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: {
-				value: wallet2.address(),
-			},
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
-		fireEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
+		userEvent.click(screen.getByText(translations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(form?.getValues("participants")).toHaveLength(2));
 
@@ -294,7 +280,7 @@ describe("MultiSignature Registration Form", () => {
 		expect(removeButton).toBeInTheDocument();
 		expect(removeButton).toBeEnabled();
 
-		fireEvent.click(removeButton);
+		userEvent.click(removeButton);
 
 		await waitFor(() => expect(form?.getValues("minParticipants")).toBe(2));
 	});

@@ -1,7 +1,8 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { PluginHeader } from "./PluginHeader";
 
@@ -25,7 +26,7 @@ describe("PluginHeader", () => {
 		expect(screen.getByTestId("PluginHeader__button--install")).toBeInTheDocument();
 		expect(screen.getByText("Test Plugin")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("PluginHeader__button--install"));
+		userEvent.click(screen.getByTestId("PluginHeader__button--install"));
 
 		expect(onInstall).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 		expect(container).toMatchSnapshot();
@@ -64,8 +65,8 @@ describe("PluginHeader", () => {
 			/>,
 		);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.UPDATE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.UPDATE));
 
 		expect(onUpdate).toHaveBeenCalledWith({
 			...pluginDataFixture,
@@ -82,8 +83,8 @@ describe("PluginHeader", () => {
 
 		render(<PluginHeader {...pluginDataFixture} isInstalled onDelete={onDelete} />);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.DELETE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.DELETE));
 
 		expect(onDelete).toHaveBeenCalledWith({
 			...pluginDataFixture,
@@ -96,8 +97,8 @@ describe("PluginHeader", () => {
 
 		render(<PluginHeader {...pluginDataFixture} isInstalled onEnable={onEnable} />);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.ENABLE));
 
 		expect(onEnable).toHaveBeenCalledWith({
 			...pluginDataFixture,
@@ -110,8 +111,8 @@ describe("PluginHeader", () => {
 
 		render(<PluginHeader {...pluginDataFixture} isInstalled isEnabled onDisable={onDisable} />);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.DISABLE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.DISABLE));
 
 		expect(onDisable).toHaveBeenCalledWith({
 			...pluginDataFixture,

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { ARK } from "@payvo/sdk-ark";
+import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import { getCurrency } from "locale-currency";
 import os from "os";
@@ -76,7 +77,7 @@ describe("CreateProfile", () => {
 	it("should render", async () => {
 		const { asFragment } = await renderComponent();
 
-		fireEvent.click(screen.getByText("Back"));
+		userEvent.click(screen.getByText("Back"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -101,27 +102,27 @@ describe("CreateProfile", () => {
 		await renderComponent();
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 1" } });
+		userEvent.paste(screen.getAllByTestId("Input")[0], "test profile 1");
 
 		const selectDropdown = screen.getByTestId("SelectDropdown__input");
 
-		fireEvent.change(selectDropdown, { target: { value: "" } });
+		userEvent.clear(selectDropdown);
 		await waitFor(() => expect(selectDropdown).not.toHaveValue());
 
-		fireEvent.change(selectDropdown, { target: { value: "BTC" } });
+		userEvent.paste(selectDropdown, "BTC");
 		await waitFor(() => expect(selectDropdown).toHaveValue("BTC"));
 
-		fireEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(env.profiles().count()).toBe(1));
 
@@ -143,13 +144,17 @@ describe("CreateProfile", () => {
 
 		await renderComponent();
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "t" } });
+		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0] as HTMLInputElement;
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
+		inputElement.select();
+		userEvent.paste(inputElement, "t");
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: name } });
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		inputElement.select();
+		userEvent.paste(inputElement, name);
+
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeDisabled());
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 
@@ -159,15 +164,17 @@ describe("CreateProfile", () => {
 	it("should not be able to create new profile if name consists only of whitespace", async () => {
 		await renderComponent();
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "t" } });
+		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0] as HTMLInputElement;
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
+		inputElement.select();
+		userEvent.paste(inputElement, "t");
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "     " } });
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "     " } });
+		inputElement.select();
+		userEvent.paste(inputElement, "     ");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeDisabled());
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 	});
@@ -175,11 +182,11 @@ describe("CreateProfile", () => {
 	it("should not be able to create new profile if name is too long", async () => {
 		await renderComponent();
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "t" } });
+		userEvent.paste(screen.getAllByTestId("Input")[0], "t");
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile".repeat(10) } });
+		userEvent.paste(screen.getAllByTestId("Input")[0], "test profile".repeat(10));
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
@@ -189,13 +196,13 @@ describe("CreateProfile", () => {
 	it("should store profile with password", async () => {
 		await renderComponent();
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 3" } });
-		fireEvent.input(screen.getAllByTestId("InputPassword")[0], { target: { value: "S3cUrePa$sword.test" } });
-		fireEvent.input(screen.getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword.test" } });
+		userEvent.paste(screen.getAllByTestId("Input")[0], "test profile 3");
+		userEvent.paste(screen.getAllByTestId("InputPassword")[0], "S3cUrePa$sword.test");
+		userEvent.paste(screen.getAllByTestId("InputPassword")[1], "S3cUrePa$sword.test");
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(env.profiles().last().usesPassword()).toBe(true));
 	});
@@ -203,20 +210,31 @@ describe("CreateProfile", () => {
 	it("should fail password confirmation", async () => {
 		await renderComponent();
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "asdasdas" } });
+		userEvent.paste(screen.getAllByTestId("Input")[0], "asdasdas");
 
-		fireEvent.change(screen.getAllByTestId("InputPassword")[0], { target: { value: "S3cUrePa$sword.test" } });
-		fireEvent.change(screen.getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword.wrong" } });
+		const passwordInput: HTMLInputElement = screen.getAllByTestId("InputPassword")[0] as HTMLInputElement;
+		const passwordConfirmationInput: HTMLInputElement = screen.getAllByTestId(
+			"InputPassword",
+		)[1] as HTMLInputElement;
+
+		userEvent.paste(passwordInput, "S3cUrePa$sword.test");
+		userEvent.paste(passwordConfirmationInput, "S3cUrePa$sword.wrong");
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
-		fireEvent.input(screen.getAllByTestId("InputPassword")[0], { target: { value: "S3cUrePa$sword" } });
-		fireEvent.input(screen.getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword" } });
+		passwordInput.select();
+		userEvent.paste(passwordInput, "S3cUrePa$sword");
+
+		passwordConfirmationInput.select();
+		userEvent.paste(passwordConfirmationInput, "S3cUrePa$sword");
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
 
-		fireEvent.input(screen.getAllByTestId("InputPassword")[1], { target: { value: "S3cUrePa$sword.test" } });
-		fireEvent.input(screen.getAllByTestId("InputPassword")[0], { target: { value: "S3cUrePa$sword.wrong" } });
+		passwordConfirmationInput.select();
+		userEvent.paste(passwordConfirmationInput, "S3cUrePa$sword.test");
+
+		passwordInput.select();
+		userEvent.paste(passwordInput, "S3cUrePa$sword.wrong");
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
 
@@ -224,57 +242,56 @@ describe("CreateProfile", () => {
 	});
 
 	it("should update the avatar when removing focus from name input", async () => {
-		const { asFragment } = await renderComponent();
+		await renderComponent();
 
 		expect(() => screen.getByTestId("SelectProfileImage__avatar-identicon")).toThrow(
 			/^Unable to find an element by/,
 		);
 
-		act(() => screen.getAllByTestId("Input")[0].focus());
+		const inputElement: HTMLInputElement = screen.getByTestId("Input");
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "t" } });
-		await waitFor(() => expect(screen.getAllByTestId("Input")[0]).toHaveValue("t"));
+		userEvent.type(inputElement, "t");
+		await waitFor(() => expect(inputElement).toHaveValue("t"));
 
-		fireEvent.blur(screen.getAllByTestId("Input")[0]);
+		expect(inputElement).toHaveFocus();
 
-		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
+		fireEvent.blur(inputElement);
 
-		act(() => screen.getAllByTestId("Input")[0].focus());
+		await screen.findByTestId("SelectProfileImage__avatar-identicon");
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile" } });
-		await waitFor(() => expect(screen.getAllByTestId("Input")[0]).toHaveValue("test profile"));
+		inputElement.select();
+		userEvent.paste(inputElement, "test profile");
+		await waitFor(() => expect(inputElement).toHaveValue("test profile"));
 
-		fireEvent.blur(screen.getAllByTestId("Input")[0]);
+		expect(inputElement).toHaveFocus();
 
-		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
+		fireEvent.blur(inputElement);
 
-		expect(asFragment()).toMatchSnapshot();
+		await screen.findByTestId("SelectProfileImage__avatar-identicon");
 
-		act(() => screen.getAllByTestId("Input")[0].focus());
+		userEvent.clear(inputElement);
+		await waitFor(() => expect(inputElement).not.toHaveValue());
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "" } });
-		await waitFor(() => expect(screen.getAllByTestId("Input")[0]).not.toHaveValue());
+		expect(inputElement).toHaveFocus();
 
-		fireEvent.blur(screen.getAllByTestId("Input")[0]);
+		fireEvent.blur(inputElement);
 
 		expect(() => screen.getByTestId("SelectProfileImage__avatar-identicon")).toThrow(
 			/^Unable to find an element by/,
 		);
-
-		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should not update the uploaded avatar when removing focus from name input", async () => {
 		await renderComponent();
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
 		act(() => screen.getAllByTestId("Input")[0].focus());
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "" } });
+		userEvent.clear(screen.getAllByTestId("Input")[0]);
 
 		await waitFor(() => expect(screen.getAllByTestId("Input")[0]).not.toHaveValue());
 
@@ -289,17 +306,17 @@ describe("CreateProfile", () => {
 		const profileCount = env.profiles().count();
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
-		fireEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 4" } });
+		userEvent.paste(screen.getAllByTestId("Input")[0], "test profile 4");
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
 	});
@@ -307,14 +324,14 @@ describe("CreateProfile", () => {
 	it("should show identicon when removing image if name is set", async () => {
 		await renderComponent();
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 1" } });
+		userEvent.paste(screen.getAllByTestId("Input")[0], "test profile 1");
 
 		// Upload avatar image
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
-		fireEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
 		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
 	});
@@ -329,14 +346,14 @@ describe("CreateProfile", () => {
 			filePaths: undefined,
 		}));
 
-		fireEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
-		fireEvent.input(screen.getAllByTestId("Input")[0], { target: { value: "test profile 5" } });
+		userEvent.paste(screen.getAllByTestId("Input")[0], "test profile 5");
 
 		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 
 		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
 	});

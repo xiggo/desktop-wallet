@@ -1,8 +1,9 @@
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
-import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { act, env, render, screen, waitFor } from "@/utils/testing-library";
 
 import { useSynchronizer } from "./use-synchronizer";
 
@@ -66,7 +67,7 @@ describe("Synchronizer Hook", () => {
 
 		await waitFor(() => expect(onCall).toHaveBeenCalledTimes(6));
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(clearInterval).toHaveBeenCalledTimes(2));
 	});
@@ -88,7 +89,7 @@ describe("Synchronizer Hook", () => {
 
 		await waitFor(() => expect(onCall).toHaveBeenCalledTimes(6));
 
-		fireEvent.click(screen.getByRole("button"));
+		userEvent.click(screen.getByRole("button"));
 
 		await waitFor(() => expect(clearInterval).toHaveBeenCalledTimes(2));
 	});

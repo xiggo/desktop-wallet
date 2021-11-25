@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { LedgerWaitingApp } from "./LedgerWaitingApp";
 
@@ -10,7 +11,7 @@ describe("LedgerWaitingApp", () => {
 
 		render(<LedgerWaitingApp isOpen={true} coinName="ARK" onClose={onClose} />);
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});

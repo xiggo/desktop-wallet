@@ -1,5 +1,6 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory, MemoryHistory } from "history";
 import nock from "nock";
 import React, { useEffect } from "react";
@@ -9,7 +10,7 @@ import { Route } from "react-router-dom";
 
 import { httpClient, toasts } from "@/app/services";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";
@@ -89,10 +90,10 @@ describe("ExchangeForm", () => {
 			});
 
 			await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toBeInTheDocument());
-			fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[0], { target: { value: from.name } });
+			userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[0], from.name);
 
 			await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
-			fireEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
+			userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
 
 			await waitFor(() => {
 				expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(from.name);
@@ -109,10 +110,10 @@ describe("ExchangeForm", () => {
 			});
 
 			await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toBeInTheDocument());
-			fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[1], { target: { value: to.name } });
+			userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], to.name);
 
 			await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
-			fireEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
+			userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
 
 			await waitFor(() => {
 				expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(to.name);
@@ -262,7 +263,7 @@ describe("ExchangeForm", () => {
 		});
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
-		fireEvent.click(screen.getByTestId("ExchangeForm__back-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/exchange`);
@@ -329,7 +330,7 @@ describe("ExchangeForm", () => {
 			expect(toCurrencyDropdown).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
 		});
@@ -338,7 +339,7 @@ describe("ExchangeForm", () => {
 			expect(screen.getByTestId("ExchangeForm__remove-refund-address")).toBeInTheDocument();
 		});
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__remove-refund-address"));
+		userEvent.click(screen.getByTestId("ExchangeForm__remove-refund-address"));
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("ExchangeForm__refund-address")).toThrow(/Unable to find an element by/);
@@ -375,7 +376,7 @@ describe("ExchangeForm", () => {
 		});
 
 		const externalInput = within(screen.getByTestId("ExchangeForm__external-id")).getByRole("textbox");
-		fireEvent.change(externalInput, { target: { value: "external-id" } });
+		userEvent.paste(externalInput, "external-id");
 
 		await waitFor(() => {
 			expect(externalInput).toHaveValue("external-id");
@@ -411,14 +412,14 @@ describe("ExchangeForm", () => {
 			to: { name: "Bitcoin", ticker: "BTC" },
 		});
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
 		});
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
-		fireEvent.change(refundDropdown, { target: { value: "payoutAddress" } });
+		userEvent.paste(refundDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(refundDropdown).toHaveValue("payoutAddress");
@@ -427,7 +428,7 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__refund-external-id")).toBeInTheDocument();
 
 		const refundExternalInput = within(screen.getByTestId("ExchangeForm__refund-external-id")).getByRole("textbox");
-		fireEvent.change(refundExternalInput, { target: { value: "refund-external-id" } });
+		userEvent.paste(refundExternalInput, "refund-external-id");
 
 		await waitFor(() => {
 			expect(refundExternalInput).toHaveValue("refund-external-id");
@@ -455,7 +456,7 @@ describe("ExchangeForm", () => {
 		const fromCurrencyDropdown = screen.getAllByTestId("SelectDropdown__input")[0];
 		const toCurrencyDropdown = screen.getAllByTestId("SelectDropdown__input")[1];
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__swap-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__swap-button"));
 
 		await waitFor(() => {
 			expect(fromCurrencyDropdown).toHaveValue("Ark");
@@ -482,11 +483,11 @@ describe("ExchangeForm", () => {
 			to: { name: "Ark", ticker: "ARK" },
 		});
 
-		const payinInput = screen.getAllByTestId("InputCurrency")[0];
-		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
+		const payinInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[0] as HTMLInputElement;
+		const payoutInput: HTMLInputElement = screen.getAllByTestId("InputCurrency")[1] as HTMLInputElement;
 
 		// amount input
-		fireEvent.input(payinInput, { target: { value: "1" } });
+		userEvent.paste(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -497,14 +498,15 @@ describe("ExchangeForm", () => {
 		});
 
 		// update amount output
-		fireEvent.input(payoutInput, { target: { value: "1" } });
+		payoutInput.select();
+		userEvent.paste(payoutInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("37042.3588384");
 		});
 
 		// remove from currency
-		fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[0], { target: { value: "" } });
+		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 		await waitFor(() => {
 			expect(screen.getAllByTestId("SelectDropdown__input")[0]).not.toHaveValue();
 		});
@@ -540,21 +542,21 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		fireEvent.input(payinInput, { target: { value: "1" } });
+		userEvent.paste(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payoutInput).toHaveValue("37042.3588384");
 		});
 
 		// remove from currency
-		fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[0], { target: { value: "" } });
+		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 
 		await waitFor(() => {
 			expect(payinInput).not.toHaveValue();
 		});
 
 		// remove to currency
-		fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[1], { target: { value: "" } });
+		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
 
 		await waitFor(() => {
 			expect(payoutInput).not.toHaveValue();
@@ -583,7 +585,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		fireEvent.input(payinInput, { target: { value: "1" } });
+		userEvent.paste(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -594,7 +596,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove payin amount
-		fireEvent.change(payinInput, { target: { value: "" } });
+		userEvent.clear(payinInput);
 
 		await waitFor(() => {
 			expect(payoutInput).not.toHaveValue();
@@ -623,7 +625,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		fireEvent.input(payinInput, { target: { value: "1" } });
+		userEvent.paste(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -634,7 +636,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove payout amount
-		fireEvent.change(payoutInput, { target: { value: "" } });
+		userEvent.clear(payoutInput);
 
 		await waitFor(() => {
 			expect(payinInput).not.toHaveValue();
@@ -660,7 +662,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove from currency
-		fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[0], { target: { value: "" } });
+		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 		await waitFor(() => {
 			expect(screen.getAllByTestId("SelectDropdown__input")[0]).not.toHaveValue();
 		});
@@ -669,7 +671,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		fireEvent.input(payoutInput, { target: { value: "1" } });
+		userEvent.paste(payoutInput, "1");
 
 		await waitFor(() => {
 			expect(payoutInput).toHaveValue("1");
@@ -699,7 +701,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove to currency
-		fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[1], { target: { value: "" } });
+		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
 		await waitFor(() => {
 			expect(screen.getAllByTestId("SelectDropdown__input")[1]).not.toHaveValue();
 		});
@@ -708,7 +710,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		fireEvent.input(payinInput, { target: { value: "1" } });
+		userEvent.paste(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -745,7 +747,7 @@ describe("ExchangeForm", () => {
 
 		const recipientDropdown = screen.getAllByTestId("SelectDropdown__input")[2];
 
-		fireEvent.change(recipientDropdown, { target: { value: "payoutAddress" } });
+		userEvent.paste(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -758,7 +760,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove to currency
-		fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[1], { target: { value: "" } });
+		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
 
 		await waitFor(() => {
 			expect(() =>
@@ -791,14 +793,14 @@ describe("ExchangeForm", () => {
 			to: { name: "Bitcoin", ticker: "BTC" },
 		});
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
 		});
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
-		fireEvent.change(refundDropdown, { target: { value: "payoutAddress" } });
+		userEvent.paste(refundDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(refundDropdown).toHaveValue("payoutAddress");
@@ -811,7 +813,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// remove from currency
-		fireEvent.change(screen.getAllByTestId("SelectDropdown__input")[0], { target: { value: "" } });
+		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 
 		await waitFor(() => {
 			expect(() =>
@@ -847,7 +849,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		fireEvent.change(recipientDropdown, { target: { value: "payoutAddress" } });
+		userEvent.paste(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -857,7 +859,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		fireEvent.input(payinInput, { target: { value: "1" } });
+		userEvent.paste(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -872,13 +874,13 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		// back to form step
-		fireEvent.click(screen.getByTestId("ExchangeForm__back-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__form-step")).toBeInTheDocument();
 		});
@@ -888,14 +890,14 @@ describe("ExchangeForm", () => {
 		});
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
@@ -904,7 +906,7 @@ describe("ExchangeForm", () => {
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.GENERIC"));
@@ -942,7 +944,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		fireEvent.change(recipientDropdown, { target: { value: "payoutAddress" } });
+		userEvent.paste(recipientDropdown, "payoutAddress");
 
 		const payinInput = screen.getAllByTestId("InputCurrency")[0];
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
@@ -952,7 +954,7 @@ describe("ExchangeForm", () => {
 		});
 
 		// amount input
-		fireEvent.input(payinInput, { target: { value: "1" } });
+		userEvent.paste(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -967,14 +969,14 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
@@ -983,7 +985,7 @@ describe("ExchangeForm", () => {
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.INVALID_ADDRESS", { ticker: "ARK" }));
@@ -1021,7 +1023,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		fireEvent.change(recipientDropdown, { target: { value: "payoutAddress" } });
+		userEvent.paste(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1031,7 +1033,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		fireEvent.input(payinInput, { target: { value: "1" } });
+		userEvent.paste(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -1043,7 +1045,7 @@ describe("ExchangeForm", () => {
 
 		expect(screen.getByTestId("FormDivider__exchange-rate")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
+		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
 		});
@@ -1051,7 +1053,7 @@ describe("ExchangeForm", () => {
 		const refundInput = within(screen.getByTestId("ExchangeForm__refund-address")).getByTestId(
 			"SelectDropdown__input",
 		);
-		fireEvent.change(refundInput, { target: { value: "refundAddress" } });
+		userEvent.paste(refundInput, "refundAddress");
 
 		await waitFor(() => {
 			expect(refundInput).toHaveValue("refundAddress");
@@ -1060,14 +1062,14 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
@@ -1076,7 +1078,7 @@ describe("ExchangeForm", () => {
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.INVALID_REFUND_ADDRESS", { ticker: "BTC" }));
@@ -1141,7 +1143,7 @@ describe("ExchangeForm", () => {
 
 		expect(recipientDropdown).not.toBeDisabled();
 
-		fireEvent.change(recipientDropdown, { target: { value: "payoutAddress" } });
+		userEvent.paste(recipientDropdown, "payoutAddress");
 
 		await waitFor(() => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
@@ -1151,7 +1153,7 @@ describe("ExchangeForm", () => {
 		const payoutInput = screen.getAllByTestId("InputCurrency")[1];
 
 		// amount input
-		fireEvent.input(payinInput, { target: { value: "1" } });
+		userEvent.paste(payinInput, "1");
 
 		await waitFor(() => {
 			expect(payinInput).toHaveValue("1");
@@ -1166,13 +1168,13 @@ describe("ExchangeForm", () => {
 		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		// back to form step
-		fireEvent.click(screen.getByTestId("ExchangeForm__back-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__back-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__form-step")).toBeInTheDocument();
 		});
@@ -1182,21 +1184,21 @@ describe("ExchangeForm", () => {
 		});
 
 		// go to review step
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
 		});
 
 		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
 		});
 
 		// submit form
-		fireEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
@@ -1227,7 +1229,7 @@ describe("ExchangeForm", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 		await screen.findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 });
-		fireEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
+		userEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(`/profiles/${getDefaultProfileId()}/dashboard`);

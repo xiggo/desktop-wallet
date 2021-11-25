@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Trans } from "react-i18next";
 
 import { toasts } from "@/app/services";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
 
 import { WalletOverviewStep } from "./WalletOverviewStep";
 
@@ -52,7 +53,7 @@ describe("WalletOverviewStep", () => {
 			// @ts-ignore
 			navigator.clipboard = { writeText: writeTextMock };
 
-			fireEvent.click(screen.getByTestId("CreateWallet__copy"));
+			userEvent.click(screen.getByTestId("CreateWallet__copy"));
 
 			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(MNEMONICS[0]));
 
@@ -84,7 +85,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			fireEvent.click(screen.getByTestId("CreateWallet__download"));
+			userEvent.click(screen.getByTestId("CreateWallet__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).toHaveBeenCalledWith(
@@ -123,7 +124,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			fireEvent.click(screen.getByTestId("CreateWallet__download"));
+			userEvent.click(screen.getByTestId("CreateWallet__download"));
 
 			expect(toastSpy).not.toHaveBeenCalled();
 
@@ -154,7 +155,7 @@ describe("WalletOverviewStep", () => {
 				</FormProvider>,
 			);
 
-			fireEvent.click(screen.getByTestId("CreateWallet__download"));
+			userEvent.click(screen.getByTestId("CreateWallet__download"));
 
 			await waitFor(() => {
 				expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Could not save/));

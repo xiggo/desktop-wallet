@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { Select } from "./Select";
 
@@ -25,7 +26,7 @@ describe("Select", () => {
 			</Select>,
 		);
 
-		fireEvent.change(screen.getByTestId("Select"), { target: { value: 2 } });
+		userEvent.selectOptions(screen.getByTestId("Select"), ["2"]);
 		const options = screen.getAllByTestId("select-option");
 
 		expect((options[0] as HTMLOptionElement).selected).toBeFalsy();

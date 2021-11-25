@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { DotNavigation } from "./DotNavigation";
 
@@ -16,7 +17,7 @@ describe("DotNavigation", () => {
 		const clickMock = jest.fn();
 		render(<DotNavigation onClick={clickMock} />);
 
-		fireEvent.click(screen.getByTestId("DotNavigation-Step-1"));
+		userEvent.click(screen.getByTestId("DotNavigation-Step-1"));
 
 		expect(clickMock).toHaveBeenCalledWith(1);
 	});

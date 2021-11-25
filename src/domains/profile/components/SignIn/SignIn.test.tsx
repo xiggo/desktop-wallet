@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations } from "@/domains/profile/i18n";
 import {
 	act,
 	env,
-	fireEvent,
 	getDefaultPassword,
 	getPasswordProtectedProfileId,
 	render,
@@ -55,7 +55,7 @@ describe("SignIn", () => {
 
 		render(<SignIn isOpen={true} profile={profile} onCancel={onCancel} />);
 
-		fireEvent.click(screen.getByTestId("SignIn__cancel-button"));
+		userEvent.click(screen.getByTestId("SignIn__cancel-button"));
 
 		await waitFor(() => {
 			expect(onCancel).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
@@ -67,12 +67,12 @@ describe("SignIn", () => {
 
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
-		fireEvent.input(screen.getByTestId("SignIn__input--password"), { target: { value: getDefaultPassword() } });
+		userEvent.paste(screen.getByTestId("SignIn__input--password"), getDefaultPassword());
 
 		// wait for formState.isValid to be updated
 		await screen.findByTestId("SignIn__submit-button");
 
-		fireEvent.click(screen.getByTestId("SignIn__submit-button"));
+		userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => {
 			expect(onSuccess).toHaveBeenCalledWith(getDefaultPassword());
@@ -84,12 +84,12 @@ describe("SignIn", () => {
 
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
-		fireEvent.input(screen.getByTestId("SignIn__input--password"), { target: { value: "wrong password" } });
+		userEvent.paste(screen.getByTestId("SignIn__input--password"), "wrong password");
 
 		// wait for formState.isValid to be updated
 		await screen.findByTestId("SignIn__submit-button");
 
-		fireEvent.click(screen.getByTestId("SignIn__submit-button"));
+		userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		// wait for formState.isValid to be updated
 		await screen.findByTestId("SignIn__submit-button");
@@ -104,14 +104,12 @@ describe("SignIn", () => {
 		render(<SignIn isOpen={true} profile={profile} onSuccess={onSuccess} />);
 
 		for (const index of [1, 2, 3]) {
-			fireEvent.input(screen.getByTestId("SignIn__input--password"), {
-				target: { value: `wrong password ${index}` },
-			});
+			userEvent.paste(screen.getByTestId("SignIn__input--password"), `wrong password ${index}`);
 
 			// wait for form to be updated
 			await screen.findByTestId("SignIn__submit-button");
 
-			fireEvent.click(screen.getByTestId("SignIn__submit-button"));
+			userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 			// wait for form to be updated
 			await screen.findByTestId("SignIn__submit-button");

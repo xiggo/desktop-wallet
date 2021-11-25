@@ -1,8 +1,9 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as pluginTranslations } from "@/domains/plugin/i18n";
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { BlankPluginCard, PluginCard } from "./PluginCard";
 
@@ -51,7 +52,7 @@ describe("PluginCard", () => {
 
 		const { asFragment } = render(<PluginCard plugin={plugin} onClick={onClick} />);
 
-		fireEvent.click(screen.getByTestId("Card"));
+		userEvent.click(screen.getByTestId("Card"));
 
 		expect(onClick).toHaveBeenCalledTimes(1);
 		expect(asFragment()).toMatchSnapshot();
@@ -116,14 +117,14 @@ describe("PluginCard", () => {
 
 		render(<PluginCard plugin={plugin} onSelect={onSelect} />);
 
-		fireEvent.click(screen.getByText("arrows-rotate.svg"));
+		userEvent.click(screen.getByText("arrows-rotate.svg"));
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Update", value: "update" });
 	});
 
 	it.each([
-		["space", { key: " ", keyCode: 32 }],
-		["enter", { key: "Enter", keyCode: 13 }],
+		["space", "{space}"],
+		["enter", "{enter}"],
 	])("should call onSelect callback on update icon keypress (%s)", (_, key) => {
 		const onSelect = jest.fn();
 
@@ -138,12 +139,13 @@ describe("PluginCard", () => {
 
 		render(<PluginCard plugin={plugin} onSelect={onSelect} />);
 
-		fireEvent.keyDown(screen.getByText("arrows-rotate.svg"), key);
+		screen.getByTestId("PluginCard__update-available").focus();
+		userEvent.keyboard(key);
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Update", value: "update" });
 	});
 
-	it("should not call onSelect callback on update icon keypress", () => {
+	it("should not call onSelect callback on update icon keypress (escape)", () => {
 		const onSelect = jest.fn();
 
 		const plugin = {
@@ -157,7 +159,8 @@ describe("PluginCard", () => {
 
 		render(<PluginCard plugin={plugin} onSelect={onSelect} />);
 
-		fireEvent.keyDown(screen.getByText("arrows-rotate.svg"), { key: "Escape", keyCode: 27 });
+		screen.getByTestId("PluginCard__update-available").focus();
+		userEvent.keyboard("{esc}");
 
 		expect(onSelect).not.toHaveBeenCalled();
 	});

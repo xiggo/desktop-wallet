@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
@@ -7,7 +8,6 @@ import { IPluginController, PluginController, PluginManager } from "@/plugins/co
 import { PluginAPI } from "@/plugins/types";
 import {
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	getDefaultWalletId,
@@ -75,23 +75,19 @@ describe("MessagePluginService", () => {
 		manager.plugins().push(ctrl);
 		manager.plugins().runAllEnabled(profile);
 
-		fireEvent.click(screen.getByText("Open Modal"));
+		userEvent.click(screen.getByText("Open Modal"));
 
 		await screen.findByTestId("SignMessage");
 
-		fireEvent.input(screen.getByTestId("SignMessage__mnemonic-input"), {
-			target: {
-				value: getDefaultWalletMnemonic(),
-			},
-		});
+		userEvent.paste(screen.getByTestId("SignMessage__mnemonic-input"), getDefaultWalletMnemonic());
 
 		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
 
-		fireEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
 		await screen.findByText("My Plugin Message");
 
-		fireEvent.click(screen.getByText("Close Modal"));
+		userEvent.click(screen.getByText("Close Modal"));
 
 		await waitFor(() => expect(screen.queryByTestId("SignMessage")).not.toBeInTheDocument());
 

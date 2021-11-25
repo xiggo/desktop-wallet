@@ -1,8 +1,9 @@
 import { Networks } from "@payvo/sdk";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { availableNetworksMock } from "@/tests/mocks/networks";
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { NetworkIcon } from "./NetworkIcon";
 
@@ -28,7 +29,7 @@ describe("NetworkIcon", () => {
 	it("should render with tooltip in the dark mode", () => {
 		render(<NetworkIcon network={network} size="lg" tooltipDarkTheme />, {});
 
-		fireEvent.mouseEnter(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
+		userEvent.hover(screen.getByTestId(`NetworkIcon-${network.coin()}-${network.id()}`));
 
 		expect(screen.getByRole("tooltip")).toHaveAttribute("data-theme", "dark");
 	});

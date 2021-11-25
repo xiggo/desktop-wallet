@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { PaginationSearch } from "./PaginationSearch";
 
@@ -28,7 +29,7 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await screen.findByTestId("PaginationSearchForm");
 	});
@@ -44,11 +45,11 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await screen.findByTestId("PaginationSearchForm");
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__cancel"));
+		userEvent.click(screen.getByTestId("PaginationSearch__cancel"));
 
 		await waitFor(() =>
 			expect(() => screen.getByTestId("PaginationSearchForm")).toThrow(/Unable to find an element by/),
@@ -68,21 +69,17 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await screen.findByTestId("PaginationSearchForm");
 
-		fireEvent.input(screen.getByTestId("PaginationSearch__input"), {
-			target: {
-				value: "1",
-			},
-		});
+		userEvent.type(screen.getByTestId("PaginationSearch__input"), "1");
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(screen.getByTestId("PaginationSearch__input")).toHaveValue(1));
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(1));
 	});
@@ -100,21 +97,17 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await screen.findByTestId("PaginationSearchForm");
 
-		fireEvent.input(screen.getByTestId("PaginationSearch__input"), {
-			target: {
-				value: "6",
-			},
-		});
+		userEvent.type(screen.getByTestId("PaginationSearch__input"), "6");
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(screen.getByTestId("PaginationSearch__input")).toHaveValue(5));
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(5));
 	});
@@ -132,11 +125,11 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await screen.findByTestId("PaginationSearchForm");
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).not.toHaveBeenCalled());
 	});
@@ -154,21 +147,17 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await screen.findByTestId("PaginationSearchForm");
 
-		fireEvent.input(screen.getByTestId("PaginationSearch__input"), {
-			target: {
-				value: "0",
-			},
-		});
+		userEvent.type(screen.getByTestId("PaginationSearch__input"), "0");
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(screen.getByTestId("PaginationSearch__input")).toHaveValue(0));
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).not.toHaveBeenCalled());
 	});
@@ -186,21 +175,17 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await screen.findByTestId("PaginationSearchForm");
 
-		fireEvent.input(screen.getByTestId("PaginationSearch__input"), {
-			target: {
-				value: "100000000",
-			},
-		});
+		userEvent.paste(screen.getByTestId("PaginationSearch__input"), "100000000");
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(screen.getByTestId("PaginationSearch__input")).toHaveValue(100_000_000));
 
-		fireEvent.click(screen.getByTestId("PaginationSearch__submit"));
+		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
 		await waitFor(() => expect(onSelect).toHaveBeenCalledWith(100_000_000));
 	});
@@ -224,11 +209,11 @@ describe("PaginationSearch", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("PaginationSearchToggle"));
+		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
 		await screen.findByTestId("PaginationSearchForm");
 
-		fireEvent.mouseDown(screen.getByTestId("somewhere-outside"));
+		userEvent.click(screen.getByTestId("somewhere-outside"));
 
 		await waitFor(() =>
 			expect(() => screen.getByTestId("PaginationSearchForm")).toThrow(/Unable to find an element by/),

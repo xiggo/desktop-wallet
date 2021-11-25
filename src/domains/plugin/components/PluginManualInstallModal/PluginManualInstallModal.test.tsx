@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import { PluginManager } from "plugins";
 import React from "react";
@@ -6,7 +7,7 @@ import React from "react";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
-import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { PluginManualInstallModal } from "./PluginManualInstallModal";
 
@@ -30,7 +31,7 @@ describe("PluginManualInstallModal", () => {
 
 		const onSuccess = jest.fn();
 
-		const { container } = render(
+		render(
 			<PluginManagerProvider manager={manager} services={[]}>
 				<PluginManualInstallModal onSuccess={onSuccess} isOpen />
 			</PluginManagerProvider>,
@@ -40,35 +41,29 @@ describe("PluginManualInstallModal", () => {
 			expect(screen.getByTestId("PluginManualInstallModal__submit-button")).toBeDisabled();
 		});
 
-		fireEvent.input(screen.getByRole("textbox"), { target: { value: "https://" } });
+		const inputElement: HTMLInputElement = screen.getByRole("textbox");
+
+		userEvent.paste(inputElement, "https://");
 
 		await waitFor(async () => {
-			expect(screen.getByRole("textbox")).toHaveAttribute("aria-invalid", "true");
+			expect(inputElement).toHaveAttribute("aria-invalid", "true");
 		});
 
-		fireEvent.input(screen.getByRole("textbox"), {
-			target: { value: "https://github.com/arkecosystem/fail-plugin" },
-		});
+		inputElement.select();
+		userEvent.paste(inputElement, "https://github.com/arkecosystem/fail-plugin");
 
-		await waitFor(async () => {
-			expect(screen.getByRole("textbox")).not.toHaveAttribute("aria-invalid", "true");
-		});
+		await waitFor(async () => expect(screen.getByTestId("PluginManualInstallModal__submit-button")).toBeEnabled());
 
-		await waitFor(async () => {
-			expect(screen.getByTestId("PluginManualInstallModal__submit-button")).not.toBeDisabled();
-		});
-
-		fireEvent.click(screen.getByTestId("PluginManualInstallModal__submit-button"));
+		userEvent.click(screen.getByTestId("PluginManualInstallModal__submit-button"));
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(translations.PLUGINS.MODAL_MANUAL_INSTALL_PLUGIN.ERROR),
 		);
 
-		fireEvent.input(screen.getByRole("textbox"), {
-			target: { value: "https://github.com/arkecosystem/test-plugin" },
-		});
+		inputElement.select();
+		userEvent.paste(inputElement, "https://github.com/arkecosystem/test-plugin");
 
-		fireEvent.click(screen.getByTestId("PluginManualInstallModal__submit-button"));
+		userEvent.click(screen.getByTestId("PluginManualInstallModal__submit-button"));
 
 		await waitFor(() =>
 			expect(onSuccess).toHaveBeenCalledWith({
@@ -76,7 +71,5 @@ describe("PluginManualInstallModal", () => {
 				repositoryURL: "https://github.com/arkecosystem/test-plugin",
 			}),
 		);
-
-		expect(container).toMatchSnapshot();
 	});
 });

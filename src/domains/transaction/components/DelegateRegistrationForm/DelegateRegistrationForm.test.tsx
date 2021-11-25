@@ -11,7 +11,6 @@ import { translations } from "@/domains/transaction/i18n";
 import delegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
 import {
 	env,
-	fireEvent,
 	getDefaultProfileId,
 	MNEMONICS,
 	render,
@@ -114,7 +113,7 @@ describe("DelegateRegistrationForm", () => {
 
 		await screen.findByTestId("DelegateRegistrationForm__form-step");
 
-		fireEvent.change(screen.getByTestId("Input__username"), { target: { value: "test_delegate" } });
+		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
 
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
 		await waitFor(() => expect(form?.getValues("username")).toBe("test_delegate"));
@@ -132,15 +131,14 @@ describe("DelegateRegistrationForm", () => {
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
-		fireEvent.change(screen.getByTestId("InputCurrency"), {
-			target: {
-				value: "11",
-			},
-		});
+		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("11"));
+		inputElement.select();
+		userEvent.paste(inputElement, "11");
+
+		await waitFor(() => expect(inputElement).toHaveValue("11"));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -150,7 +148,7 @@ describe("DelegateRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")));
 
-		fireEvent.change(screen.getByTestId("Input__username"), { target: { value: "<invalid>" } });
+		userEvent.paste(screen.getByTestId("Input__username"), "<invalid>");
 
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
 
@@ -163,9 +161,7 @@ describe("DelegateRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")));
 
-		fireEvent.change(screen.getByTestId("Input__username"), {
-			target: { value: "thisisaveryveryverylongdelegatename" },
-		});
+		userEvent.paste(screen.getByTestId("Input__username"), "thisisaveryveryverylongdelegatename");
 
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
 
@@ -178,7 +174,7 @@ describe("DelegateRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")));
 
-		fireEvent.change(screen.getByTestId("Input__username"), { target: { value: "arkx" } });
+		userEvent.paste(screen.getByTestId("Input__username"), "arkx");
 
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveAttribute("aria-invalid"));
 

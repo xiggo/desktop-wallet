@@ -1,16 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Networks } from "@payvo/sdk";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import {
-	env,
-	fireEvent,
-	getDefaultProfileId,
-	getDefaultWalletId,
-	renderWithForm,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletId, renderWithForm, screen, waitFor } from "@/utils/testing-library";
 
 import { ReceiveFundsForm } from "./ReceiveFundsForm";
 
@@ -37,7 +30,7 @@ describe("ReceiveFundsForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__amount")).not.toHaveValue());
 
-		fireEvent.input(screen.getByTestId("ReceiveFundsForm__amount"), { target: { value: "10" } });
+		userEvent.paste(screen.getByTestId("ReceiveFundsForm__amount"), "10");
 
 		await waitFor(() => expect(form()?.getValues("amount")).toBe("10"));
 
@@ -48,7 +41,7 @@ describe("ReceiveFundsForm", () => {
 		const { asFragment, form } = renderWithForm(<ReceiveFundsForm network={network} />);
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).not.toHaveValue());
 
-		fireEvent.input(screen.getByTestId("ReceiveFundsForm__memo"), { target: { value: "test" } });
+		userEvent.paste(screen.getByTestId("ReceiveFundsForm__memo"), "test");
 		await waitFor(() => expect(form()?.getValues("memo")).toBe("test"));
 		await waitFor(() => expect(screen.getByTestId("ReceiveFundsForm__memo")).toHaveValue("test"));
 

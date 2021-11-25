@@ -1,10 +1,11 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { Page } from "./Page";
 
@@ -56,11 +57,11 @@ describe("Page", () => {
 
 			const toggle = screen.getByTestId("navbar__useractions");
 
-			fireEvent.click(toggle);
+			userEvent.click(toggle);
 
 			await screen.findByText(label);
 
-			fireEvent.click(await screen.findByText(label));
+			userEvent.click(await screen.findByText(label));
 
 			if (label === "Support") {
 				expect(ipcRendererSpy).toHaveBeenCalledWith("open-external", "https://payvo.com/contact");
@@ -90,11 +91,11 @@ describe("Page", () => {
 
 		const toggle = screen.getByTestId("navbar__useractions");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		await screen.findByText("Sign Out");
 
-		fireEvent.click(await screen.findByText("Sign Out"));
+		userEvent.click(await screen.findByText("Sign Out"));
 
 		expect(historySpy).toHaveBeenCalledWith("/");
 

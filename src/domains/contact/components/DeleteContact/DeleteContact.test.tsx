@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations } from "@/domains/contact/i18n";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { DeleteContact } from "./DeleteContact";
 
@@ -44,7 +45,7 @@ describe("DeleteContact", () => {
 		render(<DeleteContact isOpen={true} onDelete={onDelete} profile={profile} contact={contact} />);
 		const deleteButton = screen.getByTestId("DeleteResource__submit-button");
 
-		fireEvent.click(deleteButton);
+		userEvent.click(deleteButton);
 
 		await waitFor(() => expect(onDelete).toHaveBeenCalledWith(contact.id()));
 

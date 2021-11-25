@@ -1,6 +1,7 @@
 import "jest-extended";
 
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory, MemoryHistory } from "history";
 import nock from "nock";
 import React, { useEffect } from "react";
@@ -10,7 +11,7 @@ import { Route } from "react-router-dom";
 import { httpClient, toasts } from "@/app/services";
 import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { translations } from "@/domains/exchange/i18n";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { Exchange } from "./Exchange";
 
@@ -157,7 +158,7 @@ describe("Exchange", () => {
 
 		const historyMock = jest.spyOn(history, "push").mockImplementation();
 
-		fireEvent.click(screen.getByText("ChangeNOW"));
+		userEvent.click(screen.getByText("ChangeNOW"));
 
 		await waitFor(() => {
 			expect(historyMock).toHaveBeenCalledWith(expect.stringContaining("exchange/view"));
@@ -191,7 +192,7 @@ describe("Exchange", () => {
 			expect(screen.getAllByTestId("Card")).toHaveLength(2);
 		});
 
-		fireEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
+		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
 
 		expect(screen.getByTestId("ExchangeTransactionsTable__empty-message")).toBeInTheDocument();
 	});
@@ -221,7 +222,7 @@ describe("Exchange", () => {
 
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
 
-		fireEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
+		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
 
 		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
@@ -258,7 +259,7 @@ describe("Exchange", () => {
 
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
 
-		fireEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
+		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
 
 		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
@@ -303,14 +304,14 @@ describe("Exchange", () => {
 
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
 
-		fireEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
+		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
 
 		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
 		const historyMock = jest.spyOn(history, "push").mockImplementation();
 
-		fireEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
+		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[0]);
 
 		await waitFor(() => {
 			expect(historyMock).toHaveBeenCalledWith(expect.stringContaining("exchange/view"));
@@ -349,18 +350,18 @@ describe("Exchange", () => {
 
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
 
-		fireEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
+		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
 
 		expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
-		fireEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
+		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
-		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => {
 			expect(() => screen.getAllByTestId("TableRow")).toThrow(/Unable to find an element by/);
@@ -408,7 +409,7 @@ describe("Exchange", () => {
 
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_EXCHANGES.SUBTITLE);
 
-		fireEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
+		userEvent.click(screen.getByText(translations.NAVIGATION.TRANSACTIONS));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeTransactionsTable")).toBeInTheDocument();
@@ -416,13 +417,13 @@ describe("Exchange", () => {
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(profile.exchangeTransactions().count());
 
-		fireEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
+		userEvent.click(within(screen.getAllByTestId("TableRow")[0]).getAllByRole("button")[1]);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		});
 
-		fireEvent.click(screen.getByTestId(buttonId));
+		userEvent.click(screen.getByTestId(buttonId));
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);

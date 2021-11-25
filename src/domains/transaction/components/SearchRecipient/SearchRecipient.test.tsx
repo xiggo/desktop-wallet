@@ -1,9 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { fireEvent, waitFor, within } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations } from "@/domains/transaction/i18n";
-import { act, env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { act, env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { SearchRecipient } from "./SearchRecipient";
 import { RecipientProperties } from "./SearchRecipient.contracts";
@@ -45,7 +45,7 @@ describe("SearchRecipient", () => {
 
 		render(<SearchRecipient isOpen={true} recipients={recipients} onClose={onClose} onAction={jest.fn} />);
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -82,7 +82,7 @@ describe("SearchRecipient", () => {
 
 		expect(screen.getByTestId("RecipientListItem__selected-button-0")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__selected-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__selected-button-0"));
 
 		expect(onAction).toHaveBeenCalledWith(recipients[0].address);
 
@@ -105,13 +105,13 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "D8rr7B1d6TL6pf1" } });
+		userEvent.paste(searchInput, "D8rr7B1d6TL6pf1");
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -137,13 +137,13 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "Ark Wallet 1" } });
+		userEvent.paste(searchInput, "Ark Wallet 1");
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -169,13 +169,13 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "Ark Wallet 1" } });
+		userEvent.paste(searchInput, "Ark Wallet 1");
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -184,7 +184,7 @@ describe("SearchRecipient", () => {
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(1));
 
 		// Reset search
-		fireEvent.click(screen.getByTestId("header-search-bar__reset"));
+		userEvent.click(screen.getByTestId("header-search-bar__reset"));
 
 		await waitFor(() => expect(searchInput).not.toHaveValue());
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
@@ -208,13 +208,13 @@ describe("SearchRecipient", () => {
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
-		fireEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
+		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
 		await screen.findByTestId("HeaderSearchBar__input");
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		fireEvent.change(searchInput, { target: { value: "non-existent recipient address" } });
+		userEvent.paste(searchInput, "non-existent recipient address");
 
 		act(() => {
 			jest.advanceTimersByTime(100);

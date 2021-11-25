@@ -238,4 +238,12 @@ describe("Authentication", () => {
 			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
 		);
 	});
+
+	it("should fail second mnemonic validation if a secret is used", async () => {
+		const secondMnemonic = authentication(translationMock).secondMnemonic(wallet.coin(), wallet.address());
+
+		await expect(secondMnemonic.validate.matchSenderPublicKey("secret")).resolves.toBe(
+			"COMMON.INPUT_PASSPHRASE.VALIDATION.MNEMONIC_NOT_MATCH_WALLET",
+		);
+	});
 });

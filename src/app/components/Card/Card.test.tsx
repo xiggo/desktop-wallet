@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { Card } from "./Card";
 
@@ -18,7 +19,7 @@ describe("Card", () => {
 
 		expect(container).toBeInTheDocument();
 
-		fireEvent.click(screen.getByText("Test"));
+		userEvent.click(screen.getByText("Test"));
 
 		expect(handleClick).toHaveBeenCalledWith();
 		expect(asFragment()).toMatchSnapshot();

@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { LayoutControls } from "./LayoutControls";
 
@@ -21,7 +22,7 @@ describe("LayoutControls", () => {
 
 		render(<LayoutControls {...{ [callback]: function_ }} />);
 
-		fireEvent.click(screen.getByTestId(element));
+		userEvent.click(screen.getByTestId(element));
 
 		expect(function_).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -34,7 +35,7 @@ describe("LayoutControls", () => {
 
 		render(<LayoutControls />);
 
-		fireEvent.click(screen.getByTestId(element));
+		userEvent.click(screen.getByTestId(element));
 
 		expect(function_).not.toHaveBeenCalled();
 	});

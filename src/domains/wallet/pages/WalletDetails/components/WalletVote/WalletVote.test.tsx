@@ -2,10 +2,11 @@ import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { env, fireEvent, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
 
 import { WalletVote } from "./WalletVote";
 
@@ -522,7 +523,7 @@ describe("WalletVote", () => {
 		render(<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />);
 
 		await screen.findByTestId("WalletVote");
-		fireEvent.click(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
+		userEvent.click(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
 
 		expect(onButtonClick).toHaveBeenCalledWith("current");
 
@@ -542,7 +543,7 @@ describe("WalletVote", () => {
 		await screen.findByTestId("WalletVote");
 		await waitFor(() => expect(screen.getByTestId("WalletVote")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByText(t("COMMON.VOTE")));
+		userEvent.click(screen.getByText(t("COMMON.VOTE")));
 
 		expect(onButtonClick).toHaveBeenCalledWith();
 

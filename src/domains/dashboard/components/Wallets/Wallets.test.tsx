@@ -1,5 +1,6 @@
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
@@ -12,7 +13,6 @@ import { translations as dashboardTranslations } from "@/domains/dashboard/i18n"
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	render,
@@ -108,7 +108,7 @@ describe("Wallets", () => {
 		);
 
 		const toggle = screen.getByTestId("LayoutControls__list--icon");
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		await screen.findByTestId("WalletsList");
 
@@ -126,11 +126,11 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
 		await screen.findByTestId("WalletsList");
 
-		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
+		userEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 
 		await screen.findByTestId("WalletsGrid");
 
@@ -168,12 +168,12 @@ describe("Wallets", () => {
 		);
 
 		const toggle = screen.getByTestId("LayoutControls__list--icon");
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		await screen.findByTestId("WalletsList");
 		await screen.findByTestId("WalletsList__ViewMore");
 
-		fireEvent.click(screen.getByTestId("WalletsList__ViewMore"));
+		userEvent.click(screen.getByTestId("WalletsList__ViewMore"));
 
 		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(3));
 
@@ -192,7 +192,7 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByTestId("WalletControls__create-wallet"));
+		userEvent.click(screen.getByTestId("WalletControls__create-wallet"));
 
 		expect(onCreateWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -209,7 +209,7 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByTestId("WalletControls__import-wallet"));
+		userEvent.click(screen.getByTestId("WalletControls__import-wallet"));
 
 		expect(onImportWallet).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -225,16 +225,16 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByTestId("filter-wallets__wallets"));
-		fireEvent.click(screen.getByTestId("dropdown__option--1"));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		userEvent.click(screen.getByTestId("dropdown__option--1"));
 
 		await waitFor(() =>
 			expect(screen.getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.STARRED),
 		);
 
-		fireEvent.click(screen.getByTestId("filter-wallets__wallets"));
-		fireEvent.click(screen.getByTestId("dropdown__option--0"));
+		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		await waitFor(() =>
 			expect(screen.getByTestId("filter-wallets__wallets")).toHaveTextContent(commonTranslations.ALL),
@@ -275,7 +275,7 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(within(screen.getByTestId("WalletControls")).getByTestId("dropdown__toggle"));
+		userEvent.click(within(screen.getByTestId("WalletControls")).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
 		expect(screen.getByTestId("NetworkOptions").firstChild).toHaveTextContent("ark.svg");
@@ -298,17 +298,17 @@ describe("Wallets", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() =>
 			expect(screen.queryByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).not.toBeInTheDocument(),
 		);
 
-		fireEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
+		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
 		await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
 
@@ -330,8 +330,8 @@ describe("Wallets", () => {
 
 		const toggle = screen.getByTestId("LayoutControls__list--icon");
 
-		fireEvent.click(toggle);
-		fireEvent.click(screen.getByText(wallets[0].alias()!));
+		userEvent.click(toggle);
+		userEvent.click(screen.getByText(wallets[0].alias()!));
 
 		expect(history.location.pathname).toBe(`/profiles/${profile.id()}/wallets/${wallets[0].id()}`);
 	});
@@ -349,7 +349,7 @@ describe("Wallets", () => {
 
 		const name = "New Name";
 
-		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
+		userEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
@@ -357,24 +357,27 @@ describe("Wallets", () => {
 
 		expect(() => within(screen.getAllByTestId("Card")[0]).getByText(name)).toThrow(/Unable to find an element/);
 
-		fireEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));
+		userEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		expect(screen.getByText(commonTranslations.RENAME)).toBeInTheDocument();
 
-		fireEvent.click(screen.getByText(commonTranslations.RENAME));
+		userEvent.click(screen.getByText(commonTranslations.RENAME));
 
 		await screen.findByTestId("modal__inner");
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_NAME_WALLET.TITLE);
 
-		fireEvent.input(screen.getByTestId("UpdateWalletName__input"), { target: { value: name } });
+		const inputElement: HTMLInputElement = screen.getByTestId("UpdateWalletName__input");
 
-		await waitFor(() => expect(screen.getByTestId("UpdateWalletName__input")).toHaveValue(name));
+		inputElement.select();
+		userEvent.paste(inputElement, name);
+
+		await waitFor(() => expect(inputElement).toHaveValue(name));
 
 		expect(screen.getByTestId("UpdateWalletName__submit")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("UpdateWalletName__submit"));
+		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
 		await waitFor(() => expect(profile.wallets().first().alias()).toBe(name));
 
@@ -394,24 +397,24 @@ describe("Wallets", () => {
 
 		const count = profile.wallets().count();
 
-		fireEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
+		userEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
 		});
 
-		fireEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));
+		userEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		expect(screen.getByText(commonTranslations.DELETE)).toBeInTheDocument();
 
-		fireEvent.click(screen.getByText(commonTranslations.DELETE));
+		userEvent.click(screen.getByText(commonTranslations.DELETE));
 
 		await screen.findByTestId("modal__inner");
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE);
 
-		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(profile.wallets().count()).toBe(count - 1));
 	});
@@ -430,7 +433,7 @@ describe("Wallets", () => {
 		);
 
 		const toggle = screen.getByTestId("LayoutControls__list--icon");
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		await screen.findByTestId("WalletsList");
 

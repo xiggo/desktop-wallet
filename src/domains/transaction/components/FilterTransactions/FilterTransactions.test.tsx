@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { FilterTransactions } from "./FilterTransactions";
 
@@ -32,7 +33,7 @@ describe("FilterTransactions", () => {
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		fireEvent.click(screen.getByRole("button", { name: /Type/ }));
+		userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
 		await screen.findByTestId("dropdown__option--core-0");
 
@@ -46,11 +47,11 @@ describe("FilterTransactions", () => {
 
 		expect(screen.getByRole("button", { name: /Type/ })).toBeInTheDocument();
 
-		fireEvent.click(screen.getByRole("button", { name: /Type/ }));
+		userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
 		await screen.findByTestId("dropdown__option--core-0");
 
-		fireEvent.click(screen.getByTestId("dropdown__option--core-0"));
+		userEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
 		expect(onSelect).toHaveBeenCalledWith(
 			{

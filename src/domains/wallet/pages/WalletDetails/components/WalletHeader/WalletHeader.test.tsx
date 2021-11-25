@@ -10,7 +10,6 @@ import * as useQRCodeHook from "@/domains/wallet/components/ReceiveFunds/hooks";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	render,
@@ -29,8 +28,8 @@ let wallet: Contracts.IReadWriteWallet;
 let walletUrl: string;
 
 const clickItem = (label: string) => {
-	fireEvent.click(screen.getByTestId("dropdown__toggle"));
-	fireEvent.click(within(screen.getByTestId("dropdown__content")).getByText(label));
+	userEvent.click(screen.getByTestId("dropdown__toggle"));
+	userEvent.click(within(screen.getByTestId("dropdown__content")).getByText(label));
 };
 
 describe("WalletHeader", () => {
@@ -85,7 +84,7 @@ describe("WalletHeader", () => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 		await screen.findByText(wallet.address());
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
 
 		await waitFor(() =>
 			expect(() =>
@@ -107,7 +106,7 @@ describe("WalletHeader", () => {
 
 		expect(screen.getByTestId("WalletHeader__send-button")).toBeEnabled();
 
-		fireEvent.click(screen.getByTestId("WalletHeader__send-button"));
+		userEvent.click(screen.getByTestId("WalletHeader__send-button"));
 
 		expect(onSend).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
@@ -191,9 +190,9 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			fireEvent.click(screen.getByTestId("modal__close-btn"));
+			userEvent.click(screen.getByTestId("modal__close-btn"));
 		} else {
-			fireEvent.click(screen.getByText(commonTranslations.CANCEL));
+			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -209,9 +208,9 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			fireEvent.click(screen.getByTestId("modal__close-btn"));
+			userEvent.click(screen.getByTestId("modal__close-btn"));
 		} else {
-			fireEvent.click(screen.getByText(commonTranslations.CANCEL));
+			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -227,9 +226,9 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			fireEvent.click(screen.getByTestId("modal__close-btn"));
+			userEvent.click(screen.getByTestId("modal__close-btn"));
 		} else {
-			fireEvent.click(screen.getByText(commonTranslations.CANCEL));
+			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -245,9 +244,9 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			fireEvent.click(screen.getByTestId("modal__close-btn"));
+			userEvent.click(screen.getByTestId("modal__close-btn"));
 		} else {
-			fireEvent.click(screen.getByText(commonTranslations.CANCEL));
+			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -263,7 +262,7 @@ describe("WalletHeader", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_RECEIVE_FUNDS.TITLE),
 		);
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
@@ -271,7 +270,7 @@ describe("WalletHeader", () => {
 	it("should manually sync wallet data", async () => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
 
-		fireEvent.click(screen.getByTestId("WalletHeader__refresh"));
+		userEvent.click(screen.getByTestId("WalletHeader__refresh"));
 
 		expect(screen.getByTestId("WalletHeader__refresh")).toHaveAttribute("aria-busy", "true");
 

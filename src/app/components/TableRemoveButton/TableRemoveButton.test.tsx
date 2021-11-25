@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { TableRemoveButton } from "./TableRemoveButton";
@@ -25,7 +26,7 @@ describe("TableRemoveButton", () => {
 
 		render(<TableRemoveButton onClick={onClick} />);
 
-		fireEvent.click(screen.getByTestId("TableRemoveButton"));
+		userEvent.click(screen.getByTestId("TableRemoveButton"));
 
 		expect(onClick).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});

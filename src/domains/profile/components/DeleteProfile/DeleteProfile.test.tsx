@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { DeleteProfile } from "./DeleteProfile";
 
@@ -26,7 +27,7 @@ describe("DeleteProfile", () => {
 
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(screen.getByTestId("DeleteResource__submit-button"));
+		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(env.profiles().values()).toHaveLength(1));
 	});

@@ -1,11 +1,12 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
 import { buildTranslations } from "@/app/i18n/helpers";
 import { PendingTransactions } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable";
 import * as utils from "@/utils/electron-utils";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { PendingTransaction } from "./PendingTransactionsTable.contracts";
 
@@ -309,7 +310,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		fireEvent.click(screen.getAllByTestId("TableRow")[0]);
+		userEvent.click(screen.getAllByTestId("TableRow")[0]);
 
 		await waitFor(() => expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
@@ -508,7 +509,7 @@ describe("Signed Transaction Table", () => {
 			/>,
 		);
 
-		fireEvent.click(screen.getAllByTestId("TransactionRow__sign")[0]);
+		userEvent.click(screen.getAllByTestId("TransactionRow__sign")[0]);
 
 		expect(onClick).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData));
 		expect(asFragment()).toMatchSnapshot();
@@ -524,11 +525,11 @@ describe("Signed Transaction Table", () => {
 
 		const canBeSignedMock = jest.spyOn(wallet.transaction(), "canBeSigned").mockReturnValue(true);
 		render(<PendingTransactions isCompact={false} wallet={wallet} pendingTransactions={pendingTransactions} />);
-		fireEvent.mouseEnter(screen.getAllByRole("row")[1]);
+		userEvent.hover(screen.getAllByRole("row")[1]);
 
 		await waitFor(() => expect(screen.getAllByRole("row")[1]).toBeInTheDocument());
 
-		fireEvent.mouseLeave(screen.getAllByRole("row")[1]);
+		userEvent.unhover(screen.getAllByRole("row")[1]);
 
 		await waitFor(() => expect(screen.getAllByRole("row")[1]).toBeInTheDocument());
 		canBeSignedMock.mockRestore();
@@ -590,13 +591,13 @@ describe("Signed Transaction Table", () => {
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		fireEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
+		userEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		expect(screen.getByTestId("ConfirmRemovePendingTransaction__remove")).toBeInTheDocument();
 		expect(screen.getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__remove"));
+		userEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__remove"));
 
 		await waitFor(() => expect(onRemove).toHaveBeenCalledWith(expect.any(DTO.ExtendedSignedTransactionData)));
 
@@ -627,12 +628,12 @@ describe("Signed Transaction Table", () => {
 			translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,
 		);
 
-		fireEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
+		userEvent.click(screen.getAllByTestId("TableRemoveButton")[0]);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 		expect(screen.getByTestId("ConfirmRemovePendingTransaction__cancel")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__cancel"));
+		userEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__cancel"));
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 

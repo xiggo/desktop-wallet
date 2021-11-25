@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { Tab, TabList, TabPanel, Tabs } from "./Tabs";
 
@@ -83,7 +84,7 @@ describe("Tabs", () => {
 			</Tabs>,
 		);
 
-		fireEvent.click(screen.getByTestId("tabs__tab-button-1"));
+		userEvent.click(screen.getByTestId("tabs__tab-button-1"));
 
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
@@ -114,12 +115,12 @@ describe("Tabs", () => {
 		expect(firstTab).toHaveFocus();
 
 		// got right to second tab
-		fireEvent.keyDown(document.activeElement, { code: "ArrowRight", key: "ArrowRight" });
+		userEvent.keyboard("{arrowright}");
 
 		expect(firstTab).not.toHaveFocus();
 		expect(secondTab).toHaveFocus();
 
-		fireEvent.keyDown(document.activeElement, { code: "Enter", key: "Enter" });
+		userEvent.keyboard("{enter}");
 
 		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("2");
 
@@ -127,36 +128,36 @@ describe("Tabs", () => {
 		expect(secondTab).toHaveAttribute("aria-selected", "true");
 
 		// go right to first tab
-		fireEvent.keyDown(document.activeElement, { code: "ArrowRight", key: "ArrowRight" });
+		userEvent.keyboard("{arrowright}");
 
 		expect(firstTab).toHaveFocus();
 		expect(secondTab).not.toHaveFocus();
 
-		fireEvent.keyDown(document.activeElement, { code: "Space", key: " " });
+		userEvent.keyboard("{space}");
 
 		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
 
 		// go left to second tab
-		fireEvent.keyDown(document.activeElement, { code: "ArrowLeft", key: "ArrowLeft" });
+		userEvent.keyboard("{arrowleft}");
 
 		expect(firstTab).not.toHaveFocus();
 		expect(secondTab).toHaveFocus();
 
-		fireEvent.keyDown(document.activeElement, { code: "Enter", key: "Enter" });
+		userEvent.keyboard("{enter}");
 
 		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("2");
 
 		// go left to first tab
-		fireEvent.keyDown(document.activeElement, { code: "ArrowLeft", key: "ArrowLeft" });
+		userEvent.keyboard("{arrowleft}");
 
 		expect(firstTab).toHaveFocus();
 		expect(secondTab).not.toHaveFocus();
 
-		fireEvent.keyDown(document.activeElement, { code: "Space", key: " " });
+		userEvent.keyboard("{space}");
 
 		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
 
 		// tab away
-		fireEvent.keyDown(document.activeElement, { code: "Tab", key: "Tab" });
+		userEvent.tab();
 	});
 });

@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { Dropdown, DropdownOptionGroup } from "@/app/components/Dropdown";
@@ -45,7 +46,7 @@ describe("Dropdown", () => {
 		render(<Dropdown options={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 	});
@@ -54,7 +55,7 @@ describe("Dropdown", () => {
 		render(<Dropdown options={options} disableToggle={true} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.queryByTestId("dropdown__content")).not.toBeInTheDocument();
 	});
@@ -64,7 +65,7 @@ describe("Dropdown", () => {
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -72,7 +73,7 @@ describe("Dropdown", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		fireEvent.click(firstOption);
+		userEvent.click(firstOption);
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
@@ -82,15 +83,12 @@ describe("Dropdown", () => {
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		const firstOption = screen.getByTestId("dropdown__option--0");
-
-		expect(firstOption).toBeInTheDocument();
-
-		fireEvent.keyDown(firstOption, { code: 13, key: "Enter" });
+		userEvent.tab();
+		userEvent.keyboard("{enter}");
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
@@ -100,15 +98,12 @@ describe("Dropdown", () => {
 		render(<Dropdown options={options} onSelect={onSelect} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		const firstOption = screen.getByTestId("dropdown__option--0");
-
-		expect(firstOption).toBeInTheDocument();
-
-		fireEvent.keyDown(firstOption, { key: " ", keyCode: 32 });
+		userEvent.tab();
+		userEvent.keyboard("{space}");
 
 		expect(onSelect).toHaveBeenCalledWith({ label: "Option 1", value: "1" });
 	});
@@ -117,7 +112,7 @@ describe("Dropdown", () => {
 		render(<Dropdown options={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -125,7 +120,7 @@ describe("Dropdown", () => {
 
 		expect(firstOption).toBeInTheDocument();
 
-		fireEvent.click(firstOption);
+		userEvent.click(firstOption);
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
@@ -144,7 +139,7 @@ describe("Dropdown", () => {
 		);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
@@ -156,7 +151,7 @@ describe("Dropdown", () => {
 
 		expect(outsideElement).toBeInTheDocument();
 
-		fireEvent.mouseDown(outsideElement);
+		userEvent.click(outsideElement);
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
@@ -165,11 +160,11 @@ describe("Dropdown", () => {
 		render(<Dropdown options={options} />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 
-		fireEvent.keyDown(toggle, { key: "Escape", keyCode: 27 });
+		userEvent.keyboard("{esc}");
 
 		expect(screen.queryAllByRole("listbox")).toHaveLength(0);
 	});
@@ -192,7 +187,7 @@ describe("Dropdown", () => {
 		const { container } = render(<Dropdown options={options} position="bottom" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -201,7 +196,7 @@ describe("Dropdown", () => {
 		const { container } = render(<Dropdown options={options} position="bottom-left" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -210,7 +205,7 @@ describe("Dropdown", () => {
 		const { container } = render(<Dropdown options={options} position="left" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -219,7 +214,7 @@ describe("Dropdown", () => {
 		const { container } = render(<Dropdown options={options} position="top-left" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -228,7 +223,7 @@ describe("Dropdown", () => {
 		const { container } = render(<Dropdown options={options} position="top" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -237,7 +232,7 @@ describe("Dropdown", () => {
 		const { container } = render(<Dropdown options={options} position="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -281,7 +276,7 @@ describe("Dropdown", () => {
 		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -302,7 +297,7 @@ describe("Dropdown", () => {
 		const { container } = render(<Dropdown options={[primaryOptions, secondaryOptions]} position="top-right" />);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -314,9 +309,9 @@ describe("Dropdown", () => {
 
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
-		fireEvent.click(screen.getByTestId("dropdown__option--0"));
+		userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		// Keep it open
 		expect(toggle).toBeInTheDocument();
@@ -332,7 +327,7 @@ describe("Dropdown ClickOutside Hook", () => {
 		const callback = jest.fn();
 		clickOutsideHandler(reference, callback);
 
-		fireEvent.mouseDown(element);
+		userEvent.click(element.body);
 
 		expect(callback).not.toHaveBeenCalled();
 	});
@@ -344,7 +339,7 @@ describe("Dropdown ClickOutside Hook", () => {
 		const callback = jest.fn();
 		clickOutsideHandler(reference, callback);
 
-		fireEvent.mouseDown(document);
+		userEvent.click(document.body);
 
 		expect(callback).toHaveBeenCalledWith();
 	});
@@ -355,7 +350,7 @@ describe("Dropdown ClickOutside Hook", () => {
 
 		clickOutsideHandler(reference, null);
 
-		fireEvent.mouseDown(document);
+		userEvent.click(document.body);
 	});
 });
 
@@ -371,7 +366,7 @@ describe("Dropdown positioning", () => {
 		);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toHaveAttribute("style", "opacity: 1;");
 
@@ -395,7 +390,7 @@ describe("Dropdown positioning", () => {
 		);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByTestId("dropdown__content")).toHaveAttribute(
 			"style",
@@ -423,7 +418,9 @@ describe("Dropdown positioning", () => {
 		);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
+
+		fireEvent.resize(window);
 
 		expect(screen.getByTestId("dropdown__content")).toHaveAttribute("style", "margin-top: -100px; opacity: 1;");
 
@@ -449,7 +446,7 @@ describe("Dropdown positioning", () => {
 		);
 		const toggle = screen.getByTestId("dropdown__toggle");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(getBoundingClientRectSpy).not.toHaveBeenCalled();
 

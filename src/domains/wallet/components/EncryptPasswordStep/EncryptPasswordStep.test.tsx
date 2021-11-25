@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, renderWithForm, screen, waitFor } from "@/utils/testing-library";
+import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
 
 import { EncryptPasswordStep } from "./EncryptPasswordStep";
 
@@ -20,11 +21,7 @@ describe("EncryptPasswordStep", () => {
 
 		const passwordField = screen.getAllByTestId("InputPassword")[0];
 
-		fireEvent.input(passwordField, {
-			target: {
-				value: "password",
-			},
-		});
+		userEvent.paste(passwordField, "password");
 
 		await waitFor(() => expect(passwordField).toHaveValue("password"));
 
@@ -41,11 +38,7 @@ describe("EncryptPasswordStep", () => {
 		const passwordField = screen.getAllByTestId("InputPassword")[0];
 		const confirmPasswordField = screen.getAllByTestId("InputPassword")[1];
 
-		fireEvent.input(passwordField, {
-			target: {
-				value: "password",
-			},
-		});
+		userEvent.paste(passwordField, "password");
 
 		await waitFor(() => expect(passwordField).toHaveValue("password"));
 		await waitFor(() => expect(confirmPasswordField).toHaveValue("password"));

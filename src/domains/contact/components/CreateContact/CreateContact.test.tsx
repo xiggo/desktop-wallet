@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations } from "@/domains/contact/i18n";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { CreateContact } from "./CreateContact";
 
@@ -37,9 +38,7 @@ describe("CreateContact", () => {
 	it("should not create new contact if contact name exists", async () => {
 		render(<CreateContact profile={profile} isOpen={true} onSave={onSave} />);
 
-		fireEvent.input(screen.getByTestId("contact-form__name-input"), {
-			target: { value: contact.name() },
-		});
+		userEvent.paste(screen.getByTestId("contact-form__name-input"), contact.name());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
@@ -49,28 +48,24 @@ describe("CreateContact", () => {
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
 
-		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK D");
+		userEvent.keyboard("{enter}");
 
-		await waitFor(() => {
-			expect(selectNetworkInput).toHaveValue("ARK Devnet");
-		});
+		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
 
-		fireEvent.change(screen.getByTestId("contact-form__address-input"), {
-			target: { value: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" },
-		});
+		userEvent.type(screen.getByTestId("contact-form__address-input"), "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__save-btn"));
+		userEvent.click(screen.getByTestId("contact-form__save-btn"));
 
 		expect(onSave).not.toHaveBeenCalled();
 	});

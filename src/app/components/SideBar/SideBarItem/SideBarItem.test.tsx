@@ -1,6 +1,7 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { SideBarItem } from "./SideBarItem";
 
@@ -33,7 +34,7 @@ describe("SideBarItem", () => {
 		render(<SideBarItem {...item} handleActiveItem={handleActiveItem} />);
 		const menuItem = screen.getByTestId("side-menu__item--plugin");
 
-		fireEvent.click(menuItem);
+		userEvent.click(menuItem);
 
 		expect(handleActiveItem).toHaveBeenCalledWith("plugin");
 	});

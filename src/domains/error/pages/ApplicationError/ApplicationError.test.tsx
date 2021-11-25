@@ -1,7 +1,8 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations } from "@/domains/error/i18n";
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { ApplicationError } from "./ApplicationError";
 
@@ -14,7 +15,7 @@ describe("ApplicationError", () => {
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.TITLE);
 		expect(screen.getByTestId("ApplicationError__text")).toHaveTextContent(translations.APPLICATION.DESCRIPTION);
 
-		fireEvent.click(screen.getByTestId("ApplicationError__button--reload"));
+		userEvent.click(screen.getByTestId("ApplicationError__button--reload"));
 
 		expect(onResetErrorBoundary).toHaveBeenCalledWith(
 			expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),

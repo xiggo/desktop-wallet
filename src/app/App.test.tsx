@@ -2,6 +2,7 @@
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 import { Bcrypt } from "@payvo/sdk-cryptography";
 import { Contracts, Environment } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { buildTranslations } from "@/app/i18n/helpers";
@@ -12,7 +13,6 @@ import * as utils from "@/utils/electron-utils";
 import {
 	act,
 	env,
-	fireEvent,
 	getDefaultPassword,
 	getDefaultProfileId,
 	getPasswordProtectedProfileId,
@@ -105,7 +105,7 @@ describe("App", () => {
 			throw new Error("sync test");
 		});
 
-		fireEvent.click(screen.getAllByTestId("Card")[0]);
+		userEvent.click(screen.getAllByTestId("Card")[0]);
 
 		const profileDashboardUrl = `/profiles/${profile.id()}/dashboard`;
 		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl));
@@ -117,7 +117,7 @@ describe("App", () => {
 		await screen.findByTestId("SyncErrorMessage__retry");
 
 		profileSyncMock.mockRestore();
-		fireEvent.click(screen.getByTestId("SyncErrorMessage__retry"));
+		userEvent.click(screen.getByTestId("SyncErrorMessage__retry"));
 
 		act(() => {
 			jest.runAllTimers();
@@ -234,13 +234,13 @@ describe("App", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		fireEvent.click(screen.getAllByTestId("Card")[1]);
+		userEvent.click(screen.getAllByTestId("Card")[1]);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SignIn__input--password")).toBeInTheDocument();
 		});
 
-		fireEvent.input(screen.getByTestId("SignIn__input--password"), { target: { value: "password" } });
+		userEvent.type(screen.getByTestId("SignIn__input--password"), "password");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SignIn__input--password")).toHaveValue("password");
@@ -253,7 +253,7 @@ describe("App", () => {
 
 		const profilePasswordSetMock = jest.spyOn(env.profiles().last().password(), "set").mockImplementation();
 
-		fireEvent.click(screen.getByTestId("SignIn__submit-button"));
+		userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		await waitFor(() => expect(profilePasswordSetMock).toHaveBeenCalledWith("password"));
 		await waitFor(() => expect(memoryPasswordMock).toHaveBeenCalledWith());
@@ -297,7 +297,7 @@ describe("App", () => {
 
 		env.profiles().persist(profile);
 
-		fireEvent.click(screen.getAllByTestId("Card")[0]);
+		userEvent.click(screen.getAllByTestId("Card")[0]);
 
 		const profileDashboardUrl = `/profiles/${profile.id()}/dashboard`;
 
@@ -348,13 +348,13 @@ describe("App", () => {
 
 		expect(history.location.pathname).toBe("/");
 
-		fireEvent.click(screen.getAllByTestId("Card")[1]);
+		userEvent.click(screen.getAllByTestId("Card")[1]);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SignIn__input--password")).toBeInTheDocument();
 		});
 
-		fireEvent.input(screen.getByTestId("SignIn__input--password"), { target: { value: "password" } });
+		userEvent.type(screen.getByTestId("SignIn__input--password"), "password");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SignIn__input--password")).toHaveValue("password");
@@ -362,7 +362,7 @@ describe("App", () => {
 
 		jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
 
-		fireEvent.click(screen.getByTestId("SignIn__submit-button"));
+		userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		const profileDashboardUrl = `/profiles/${passwordProtectedProfile.id()}/dashboard`;
 		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl));

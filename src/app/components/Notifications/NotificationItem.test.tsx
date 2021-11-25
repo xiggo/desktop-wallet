@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { NotificationItem } from "./NotificationItem";
 
@@ -44,7 +45,7 @@ describe("Notifications", () => {
 			</table>,
 		);
 
-		fireEvent.click(screen.getByTestId("NotificationItem__action"));
+		userEvent.click(screen.getByTestId("NotificationItem__action"));
 
 		await waitFor(() => expect(onAction).toHaveBeenCalledWith("29fdd62d-1c28-4d2c-b46f-667868c5afe1"));
 	});

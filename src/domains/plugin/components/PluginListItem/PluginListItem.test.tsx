@@ -1,7 +1,8 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { PluginListItem } from "./PluginListItem";
 
@@ -57,7 +58,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(screen.getByTestId("PluginListItem__install"));
+		userEvent.click(screen.getByTestId("PluginListItem__install"));
 
 		expect(onInstall).toHaveBeenCalledTimes(1);
 		expect(asFragment()).toMatchSnapshot();
@@ -88,8 +89,8 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.UPDATE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.UPDATE));
 
 		expect(screen.getByTestId("PluginDropdown__update-badge")).toBeInTheDocument();
 
@@ -120,8 +121,8 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.DELETE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.DELETE));
 
 		expect(onDelete).toHaveBeenCalledTimes(1);
 	});
@@ -150,8 +151,8 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.ENABLE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.ENABLE));
 
 		expect(onEnable).toHaveBeenCalledTimes(1);
 	});
@@ -179,7 +180,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(screen.getByTestId("PluginListItem__link"));
+		userEvent.click(screen.getByTestId("PluginListItem__link"));
 
 		expect(onClick).toHaveBeenCalledTimes(1);
 	});
@@ -209,8 +210,8 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(screen.getByTestId("dropdown__toggle"));
-		fireEvent.click(screen.getByText(commonTranslations.DISABLE));
+		userEvent.click(screen.getByTestId("dropdown__toggle"));
+		userEvent.click(screen.getByText(commonTranslations.DISABLE));
 
 		expect(onDisable).toHaveBeenCalledTimes(1);
 	});
@@ -241,7 +242,7 @@ describe("PluginListItem", () => {
 			</table>,
 		);
 
-		fireEvent.click(screen.getByTestId("PluginListItem__launch"));
+		userEvent.click(screen.getByTestId("PluginListItem__launch"));
 
 		expect(onLaunch).toHaveBeenCalledTimes(1);
 	});

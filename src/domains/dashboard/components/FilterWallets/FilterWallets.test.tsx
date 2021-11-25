@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { FilterOption } from "@/app/components/FilterNetwork";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { FilterWallets } from "./FilterWallets";
 
@@ -62,7 +63,7 @@ describe("FilterWallets", () => {
 			/>,
 		);
 
-		fireEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
+		userEvent.click(screen.getByTestId(`NetworkOption__${networkOptions[0].network.id()}`));
 
 		expect(onChange).toHaveBeenCalledWith("selectedNetworkIds", [networkOptions[0].network.id()]);
 	});
@@ -74,9 +75,9 @@ describe("FilterWallets", () => {
 			<FilterWallets networks={networkOptions} onChange={onChange} defaultConfiguration={defaultConfiguration} />,
 		);
 
-		fireEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
 
-		fireEvent.click(screen.getByTestId("dropdown__option--0"));
+		userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onChange).toHaveBeenCalledWith("walletsDisplayType", "all");
 	});
@@ -86,9 +87,9 @@ describe("FilterWallets", () => {
 
 		render(<FilterWallets networks={networkOptions} defaultConfiguration={defaultConfiguration} />);
 
-		fireEvent.click(screen.getByTestId("filter-wallets__wallets"));
+		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
 
-		fireEvent.click(screen.getByTestId("dropdown__option--0"));
+		userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onChange).not.toHaveBeenCalled();
 	});

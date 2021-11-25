@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { UpdateContact } from "./UpdateContact";
 
@@ -41,7 +42,7 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__cancel-btn"));
+		userEvent.click(screen.getByTestId("contact-form__cancel-btn"));
 
 		expect(onCancel).toHaveBeenCalledWith();
 	});
@@ -65,16 +66,12 @@ describe("UpdateContact", () => {
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
 
-		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK D");
+		userEvent.tab();
 
-		await waitFor(() => {
-			expect(selectNetworkInput).toHaveValue("ARK Devnet");
-		});
+		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
 
-		fireEvent.change(screen.getByTestId("contact-form__address-input"), {
-			target: { value: "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax" },
-		});
+		userEvent.paste(screen.getByTestId("contact-form__address-input"), "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__address-input")).toHaveValue("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
@@ -84,9 +81,10 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
-		fireEvent.input(screen.getByTestId("contact-form__name-input"), { target: { value: contact.name() } });
+		userEvent.clear(screen.getByTestId("contact-form__name-input"));
+		userEvent.paste(screen.getByTestId("contact-form__name-input"), contact.name());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
@@ -98,7 +96,7 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__save-btn"));
+		userEvent.click(screen.getByTestId("contact-form__save-btn"));
 
 		expect(onSave).not.toHaveBeenCalled();
 	});
@@ -114,7 +112,7 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__delete-btn"));
+		userEvent.click(screen.getByTestId("contact-form__delete-btn"));
 
 		await waitFor(() => {
 			expect(onDelete).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
@@ -136,17 +134,20 @@ describe("UpdateContact", () => {
 
 		render(<UpdateContact isOpen={true} onSave={onSave} profile={profile} contact={contact} />);
 
+		const inputElement: HTMLInputElement = screen.getByTestId("contact-form__name-input");
+
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
+			expect(inputElement).toHaveValue(contact.name());
 		});
 
-		fireEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
+		userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
 		});
 
-		fireEvent.input(screen.getByTestId("contact-form__name-input"), { target: { value: newName } });
+		inputElement.select();
+		userEvent.paste(inputElement, newName);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(newName);
@@ -154,16 +155,12 @@ describe("UpdateContact", () => {
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
 
-		fireEvent.change(selectNetworkInput, { target: { value: "ARK D" } });
-		fireEvent.keyDown(selectNetworkInput, { code: 13, key: "Enter" });
+		userEvent.paste(selectNetworkInput, "ARK D");
+		userEvent.tab();
 
-		await waitFor(() => {
-			expect(selectNetworkInput).toHaveValue("ARK Devnet");
-		});
+		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
 
-		fireEvent.input(screen.getByTestId("contact-form__address-input"), {
-			target: { value: newAddress.address },
-		});
+		userEvent.paste(screen.getByTestId("contact-form__address-input"), newAddress.address);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(newAddress.address);
@@ -173,13 +170,13 @@ describe("UpdateContact", () => {
 			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__save-btn")).not.toBeDisabled();
 		});
 
-		fireEvent.click(screen.getByTestId("contact-form__save-btn"));
+		userEvent.click(screen.getByTestId("contact-form__save-btn"));
 
 		await waitFor(() => {
 			expect(onSave).toHaveBeenCalledWith(contact.id());

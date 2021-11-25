@@ -1,7 +1,8 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { AvailableNewsCategories } from "@/domains/news/news.contracts";
-import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { NewsOptions } from "./NewsOptions";
 
@@ -19,14 +20,14 @@ describe("NewsOptions", () => {
 	it("should select category", () => {
 		render(<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={jest.fn()} />);
 
-		fireEvent.click(screen.getByTestId("NewsOptions__category-Technical"));
+		userEvent.click(screen.getByTestId("NewsOptions__category-Technical"));
 	});
 
 	it("should select asset", () => {
 		render(<NewsOptions selectedCategories={categories} selectedCoins={coins} />);
 
 		const arkOption = screen.getByTestId("NetworkOption__ark.mainnet");
-		fireEvent.click(arkOption);
+		userEvent.click(arkOption);
 	});
 
 	it("should emit onSubmit with all selected filters", async () => {
@@ -34,8 +35,8 @@ describe("NewsOptions", () => {
 
 		render(<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={onSubmit} />);
 
-		fireEvent.click(screen.getByTestId("NewsOptions__category-Technical"));
-		fireEvent.click(screen.getByTestId("NetworkOption__ark.mainnet"));
+		userEvent.click(screen.getByTestId("NewsOptions__category-Technical"));
+		userEvent.click(screen.getByTestId("NetworkOption__ark.mainnet"));
 
 		await waitFor(() =>
 			expect(onSubmit).toHaveBeenCalledWith({

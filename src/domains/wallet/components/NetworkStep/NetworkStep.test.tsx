@@ -4,7 +4,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
-import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { NetworkStep } from "./NetworkStep";
 
@@ -52,8 +52,6 @@ describe("SelectNetworkStep", () => {
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 
 		expect(selectNetworkInput).toBeInTheDocument();
-
-		fireEvent.focus(selectNetworkInput);
 
 		expect(screen.queryByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 		expect(screen.queryByTestId("NetworkIcon-ARK-ark.devnet")).toBeNull();

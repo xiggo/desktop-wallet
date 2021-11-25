@@ -1,4 +1,5 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { ipcRenderer } from "electron";
 import { PluginManager } from "plugins";
 import React from "react";
@@ -6,7 +7,7 @@ import React from "react";
 import { toasts } from "@/app/services";
 import { translations as pluginTranslations } from "@/domains/plugin/i18n";
 import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
-import { env, fireEvent, getDefaultProfileId, pluginManager, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, pluginManager, render, screen, waitFor } from "@/utils/testing-library";
 
 import { InstallPlugin } from "./InstallPlugin";
 import { FirstStep } from "./Step1";
@@ -135,12 +136,12 @@ describe("InstallPlugin", () => {
 			</PluginManagerProvider>,
 		);
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalledWith();
 
 		const downloadAndInstallPlugin = async () => {
-			fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
+			userEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
 			await screen.findByTestId("InstallPlugin__step--second");
 
@@ -162,7 +163,7 @@ describe("InstallPlugin", () => {
 
 		// Cancel: do not go ahead with enable
 
-		fireEvent.click(screen.getByTestId("InstallPlugin__cancel-button"));
+		userEvent.click(screen.getByTestId("InstallPlugin__cancel-button"));
 
 		await waitFor(() =>
 			expect(cancelInstall).toHaveBeenCalledWith({
@@ -176,7 +177,7 @@ describe("InstallPlugin", () => {
 
 		// Close: do not go ahead with enable
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() =>
 			expect(cancelInstall).toHaveBeenCalledWith({
@@ -192,7 +193,7 @@ describe("InstallPlugin", () => {
 
 		expect(screen.getByText(pluginTranslations.MODAL_ENABLE_PLUGIN.DESCRIPTION)).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("InstallPlugin__enable-button"));
+		userEvent.click(screen.getByTestId("InstallPlugin__enable-button"));
 
 		expect(onClose).toHaveBeenCalledTimes(3);
 
@@ -255,13 +256,13 @@ describe("InstallPlugin", () => {
 			</PluginManagerProvider>,
 		);
 
-		fireEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
+		userEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
 		await screen.findByTestId("InstallPlugin__step--second");
 
 		await screen.findByTestId("InstallPlugin__step--third");
 
-		fireEvent.click(screen.getByTestId("InstallPlugin__enable-button"));
+		userEvent.click(screen.getByTestId("InstallPlugin__enable-button"));
 
 		expect(pluginManager.plugins().findById(plugin.id)?.isEnabled(profile)).toBeFalsy();
 

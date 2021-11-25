@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -7,14 +8,7 @@ import { Route } from "react-router-dom";
 import * as navigation from "@/app/constants/navigation";
 import * as environmentHooks from "@/app/hooks/env";
 import * as useScrollHook from "@/app/hooks/use-scroll";
-import {
-	env as mockedTestEnvironment,
-	fireEvent,
-	getDefaultProfileId,
-	render,
-	screen,
-	waitFor,
-} from "@/utils/testing-library";
+import { env as mockedTestEnvironment, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { NavigationBar } from "./NavigationBar";
 
@@ -92,7 +86,7 @@ describe("NavigationBar", () => {
 	it("should handle menu click", () => {
 		const { history } = render(<NavigationBar />);
 
-		fireEvent.click(screen.getByText("test"));
+		userEvent.click(screen.getByText("test"));
 
 		expect(history.location.pathname).toBe("/test");
 	});
@@ -106,11 +100,11 @@ describe("NavigationBar", () => {
 		const { history } = render(<NavigationBar />);
 		const toggle = screen.getByTestId("navbar__useractions");
 
-		fireEvent.click(toggle);
+		userEvent.click(toggle);
 
 		expect(screen.getByText("Option 1")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByText("Option 1"));
+		userEvent.click(screen.getByText("Option 1"));
 
 		expect(history.location.pathname).toBe("/test");
 
@@ -123,7 +117,7 @@ describe("NavigationBar", () => {
 
 		const sendButton = screen.getByTestId("navbar__buttons--send");
 
-		fireEvent.click(sendButton);
+		userEvent.click(sendButton);
 
 		expect(history.location.pathname).toBe(`/profiles/${mockProfile.id()}/send-transfer`);
 	});
@@ -139,17 +133,17 @@ describe("NavigationBar", () => {
 			},
 		);
 
-		fireEvent.click(screen.getByTestId("navbar__buttons--receive"));
+		userEvent.click(screen.getByTestId("navbar__buttons--receive"));
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toHaveTextContent("Select Account");
 
-		fireEvent.click(screen.getAllByText("Select")[0]);
+		userEvent.click(screen.getAllByText("Select")[0]);
 
 		await screen.findByTestId("ReceiveFunds__name");
 		await screen.findByTestId("ReceiveFunds__address");
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
@@ -167,11 +161,11 @@ describe("NavigationBar", () => {
 
 		const receiveFundsButton = screen.getByTestId("navbar__buttons--receive");
 
-		fireEvent.click(receiveFundsButton);
+		userEvent.click(receiveFundsButton);
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toHaveTextContent("Select Account");
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});

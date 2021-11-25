@@ -18,7 +18,6 @@ import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/t
 import transactionMultipleFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer-multiple.json";
 import {
 	env,
-	fireEvent,
 	getDefaultLedgerTransport,
 	getDefaultProfileId,
 	getDefaultWalletId,
@@ -588,20 +587,20 @@ describe("SendTransfer", () => {
 
 		await screen.findByTestId("SendTransfer__network-step");
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet"),
 		);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__form-step");
 
-		fireEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
+		userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(profile.wallets().first().address()),
 		);
@@ -632,26 +631,27 @@ describe("SendTransfer", () => {
 
 		await screen.findByTestId("SendTransfer__network-step");
 
-		const input = screen.getByTestId("SelectNetworkInput__input");
+		const input: HTMLInputElement = screen.getByTestId("SelectNetworkInput__input");
 
-		fireEvent.change(input, { target: { value: "no match" } });
+		userEvent.paste(input, "no match");
 		await waitFor(() => expect(input).toHaveValue("no match"));
 
 		expect(input).toHaveAttribute("aria-invalid", "true");
 
-		fireEvent.change(input, { target: { value: "ARK Dev" } });
+		input.select();
+		userEvent.paste(input, "ARK Dev");
 		await waitFor(() => expect(input).toHaveValue("ARK Dev"));
 
 		expect(input).not.toHaveAttribute("aria-invalid");
 
-		fireEvent.change(input, { target: { value: "" } });
+		userEvent.clear(input);
 		await waitFor(() => expect(input).not.toHaveValue());
 
 		expect(input).toHaveAttribute("aria-invalid", "true");
 
 		await screen.findByTestId("NetworkIcon-ARK-ark.devnet");
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(input).toHaveValue("ARK Devnet"));
 
 		expect(input).not.toHaveAttribute("aria-invalid");
@@ -679,42 +679,42 @@ describe("SendTransfer", () => {
 
 		await screen.findByTestId("SendTransfer__network-step");
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__form-step");
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
 		// Previous step
-		fireEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 		await screen.findByTestId("SendTransfer__network-step");
 
 		// Change network
 		// Unselect
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).not.toHaveValue());
 		// Select
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		// Next step
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__form-step");
 
 		// Memo
@@ -744,23 +744,23 @@ describe("SendTransfer", () => {
 
 		await screen.findByTestId("SendTransfer__network-step");
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__form-step");
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 
 		// Select sender
-		fireEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 		await screen.findByTestId("modal__inner");
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-1");
 
-		fireEvent.click(firstAddress);
+		userEvent.click(firstAddress);
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -789,35 +789,35 @@ describe("SendTransfer", () => {
 
 		await screen.findByTestId("SendTransfer__network-step");
 
-		fireEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
+		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__form-step");
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 
 		// Select sender
-		fireEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 		await screen.findByTestId("modal__inner");
 
 		const secondAddress = screen.getByTestId("SearchWalletListItem__select-1");
-		fireEvent.click(secondAddress);
+		userEvent.click(secondAddress);
 
 		expect(screen.getByText("57.60679402")).toBeInTheDocument();
 
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "55" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "55");
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
 		// Select sender
-		fireEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
+		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
 		await screen.findByTestId("modal__inner");
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
-		fireEvent.click(firstAddress);
+		userEvent.click(firstAddress);
 
 		expect(screen.getByText("33.67769203")).toBeInTheDocument();
 
@@ -849,38 +849,38 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.click(screen.getByTestId("AddRecipient__send-all"));
+		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"));
 
 		expect(screen.getByTestId("AddRecipient__send-all")).toHaveClass("active");
 
-		fireEvent.click(screen.getByTestId("AddRecipient__send-all"));
+		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 
 		expect(screen.getByTestId("AddRecipient__send-all")).not.toHaveClass("active");
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.07320598");
 
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.1");
@@ -911,36 +911,36 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "12" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "12");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("12"));
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		const backButton = screen.getByTestId("StepNavigation__back-button");
 
 		expect(backButton).not.toHaveAttribute("disabled");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		// Step 1 again
 		await screen.findByTestId("SendTransfer__form-step");
@@ -951,7 +951,7 @@ describe("SendTransfer", () => {
 		// Go back to step 2 (the fast fee should still be the one used)
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		await screen.findAllByTestId("Amount");
@@ -989,46 +989,50 @@ describe("SendTransfer", () => {
 
 		expect(backButton).not.toHaveAttribute("disabled");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 		await screen.findByTestId("modal__inner");
 
 		// Amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.AVERAGE));
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.07320598");
 
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.FAST));
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[2]).toHaveTextContent("0.1");
 
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
 
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "1000000000" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("1000000000"));
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "1000000000");
+
+		await waitFor(() => expect(inputElement).toHaveValue("1000000000"));
 
 		goSpy.mockRestore();
 	});
@@ -1063,33 +1067,37 @@ describe("SendTransfer", () => {
 
 		expect(backButton).not.toHaveAttribute("disabled");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
+
+		// remove focus from fee button
+		userEvent.click(document.body);
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
@@ -1099,7 +1107,7 @@ describe("SendTransfer", () => {
 		if (inputMethod === "with keyboard") {
 			userEvent.keyboard("{enter}");
 		} else {
-			fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		}
 
 		await screen.findByTestId("SendTransfer__review-step");
@@ -1110,11 +1118,11 @@ describe("SendTransfer", () => {
 		if (inputMethod === "with keyboard") {
 			userEvent.keyboard("{enter}");
 		} else {
-			fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		}
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -1130,7 +1138,7 @@ describe("SendTransfer", () => {
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		userEvent.keyboard("{enter}");
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
 		await screen.findByTestId("TransactionSuccessful");
 		await waitFor(() =>
@@ -1147,7 +1155,7 @@ describe("SendTransfer", () => {
 
 		// Go back to wallet
 		const pushSpy = jest.spyOn(history, "push");
-		fireEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -1196,14 +1204,12 @@ describe("SendTransfer", () => {
 
 		expect(backButton).not.toHaveAttribute("disabled");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.input(screen.getByTestId("SelectDropdown__input"), {
-			target: { value: "lsksktujwqbak4azhj57sd8rtc58y7tjb5tgq8oyk" },
-		});
+		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "lsksktujwqbak4azhj57sd8rtc58y7tjb5tgq8oyk");
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(
 				"lsksktujwqbak4azhj57sd8rtc58y7tjb5tgq8oyk",
@@ -1211,7 +1217,7 @@ describe("SendTransfer", () => {
 		);
 
 		// Set amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Assert that fee initial value is 0 and then it changes to 0.1 when loaded
@@ -1221,7 +1227,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		// Continue to review step
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		await screen.findByTestId("SendTransfer__review-step");
 
@@ -1238,7 +1244,7 @@ describe("SendTransfer", () => {
 		expect(backButton).not.toHaveAttribute("disabled");
 
 		// Go back to form step
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		await screen.findByTestId("SendTransfer__form-step");
 
@@ -1248,7 +1254,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
 
 		// Continue to review step
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		await screen.findByTestId("SendTransfer__review-step");
 
@@ -1298,32 +1304,32 @@ describe("SendTransfer", () => {
 
 		expect(backButton).not.toHaveAttribute("disabled");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -1331,26 +1337,26 @@ describe("SendTransfer", () => {
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		// Back to Step 1
-		fireEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 		await screen.findByTestId("SendTransfer__form-step");
 
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -1367,7 +1373,7 @@ describe("SendTransfer", () => {
 		const transactionMock = createTransactionMock(wallet);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
 		await screen.findByTestId("ErrorStep");
 
@@ -1406,32 +1412,32 @@ describe("SendTransfer", () => {
 
 		expect(backButton).not.toHaveAttribute("disabled");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -1439,16 +1445,16 @@ describe("SendTransfer", () => {
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -1466,7 +1472,7 @@ describe("SendTransfer", () => {
 			.mockResolvedValue(undefined);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
 		await screen.findByTestId("TransactionSuccessful");
 		await waitFor(() =>
@@ -1483,7 +1489,7 @@ describe("SendTransfer", () => {
 
 		// Go back to wallet
 		const pushSpy = jest.spyOn(history, "push");
-		fireEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -1522,30 +1528,30 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
 		await screen.findByTestId("AddRecipient__send-all");
-		fireEvent.click(screen.getByTestId("AddRecipient__send-all"));
+		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
 		// Step 2
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -1559,7 +1565,7 @@ describe("SendTransfer", () => {
 		});
 		const transactionMock = createTransactionMock(wallet);
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		await screen.findByTestId("TransactionSuccessful");
 
@@ -1625,28 +1631,28 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.click(screen.getByTestId("AddRecipient__send-all"));
+		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -1669,13 +1675,13 @@ describe("SendTransfer", () => {
 		});
 
 		// Step 2
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Auto broadcast
 		await screen.findByTestId("TransactionSuccessful");
@@ -1708,54 +1714,58 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "" } });
+		userEvent.clear(screen.getByTestId("InputCurrency"));
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "1" } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("1"));
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, "1");
+
+		await waitFor(() => expect(inputElement).toHaveValue("1"));
 
 		await waitFor(() => expect(() => screen.getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Fee warning
 		await screen.findByTestId("FeeWarning__cancel-button");
 
-		fireEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
+		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 	});
 
@@ -1786,50 +1796,54 @@ describe("SendTransfer", () => {
 			await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 			// Select recipient
-			fireEvent.click(
+			userEvent.click(
 				within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 			);
 
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-			fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+			userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 			await waitFor(() =>
 				expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 			);
 
 			// Amount
-			fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+			userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 			await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 			// Memo
-			fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+			userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 			await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 			// Fee
-			fireEvent.click(
+			userEvent.click(
 				within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 			);
 
-			fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: "1" } });
-			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("1"));
+			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+			inputElement.select();
+			userEvent.paste(inputElement, "1");
+
+			await waitFor(() => expect(inputElement).toHaveValue("1"));
 
 			await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
-			fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 			// Review Step
 			await screen.findByTestId("SendTransfer__review-step");
 
 			expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-			fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 			const profileSpy = jest.spyOn(profile.settings(), "set").mockImplementation();
 
 			// Fee warning
 			await screen.findByTestId("FeeWarning__suppressWarning-toggle");
-			fireEvent.click(screen.getByTestId("FeeWarning__suppressWarning-toggle"));
-			fireEvent.click(screen.getByTestId(`FeeWarning__${action}-button`));
+			userEvent.click(screen.getByTestId("FeeWarning__suppressWarning-toggle"));
+			userEvent.click(screen.getByTestId(`FeeWarning__${action}-button`));
 
 			expect(profileSpy).toHaveBeenCalledWith(Contracts.ProfileSetting.DoNotShowFeeWarning, true);
 
@@ -1867,50 +1881,55 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
 		);
-		fireEvent.change(screen.getByTestId("InputCurrency"), { target: { value: fee } });
-		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue(fee));
+
+		const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
+
+		inputElement.select();
+		userEvent.paste(inputElement, fee);
+
+		await waitFor(() => expect(inputElement).toHaveValue(fee));
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		await screen.findByTestId("SendTransfer__review-step");
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Fee warning
 		await screen.findByTestId("FeeWarning__continue-button");
-		fireEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+		userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 
 		// Auth Step
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Summary Step (skip ledger confirmation for now)
@@ -1925,7 +1944,7 @@ describe("SendTransfer", () => {
 		const transactionMock = createTransactionMock(wallet);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
 		await screen.findByTestId("TransactionSuccessful");
 		await waitFor(() =>
@@ -1942,7 +1961,7 @@ describe("SendTransfer", () => {
 
 		// Go back to wallet
 		const pushSpy = jest.spyOn(history, "push");
-		fireEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -1974,52 +1993,55 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
 		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address());
 
 		// Amount
-		fireEvent.click(screen.getByTestId("AddRecipient__send-all"));
+		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
 		await screen.findByTestId("SendTransfer__review-step");
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Auth Step
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
+		const inputElement: HTMLInputElement = screen.getByTestId("AuthenticationStep__mnemonic");
+
+		userEvent.paste(inputElement, passphrase);
+		await waitFor(() => expect(inputElement).toHaveValue(passphrase));
 
 		expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled();
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: MNEMONICS[0] } });
-		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(MNEMONICS[0]));
+		inputElement.select();
+		userEvent.paste(inputElement, MNEMONICS[0]);
+		await waitFor(() => expect(inputElement).toHaveValue(MNEMONICS[0]));
 
 		expect(screen.getByTestId("StepNavigation__send-button")).toBeDisabled();
 
@@ -2057,27 +2079,27 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
 		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address());
 
 		// Amount
-		fireEvent.click(screen.getByTestId("AddRecipient__send-all"));
+		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 
 		expect(screen.getByTestId("Input__memo")).toHaveValue("test memo");
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -2085,16 +2107,16 @@ describe("SendTransfer", () => {
 		// Step 2
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -2104,7 +2126,7 @@ describe("SendTransfer", () => {
 
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
 		await screen.findByTestId("ErrorStep");
 
@@ -2113,7 +2135,7 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("clipboard-button__wrapper")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
-		fireEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
+		userEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith(walletDetailPage));
@@ -2156,49 +2178,49 @@ describe("SendTransfer", () => {
 		});
 
 		// Select multiple type
-		fireEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
+		userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
-		fireEvent.change(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
-		fireEvent.click(screen.getByTestId("AddRecipient__add-button"));
+		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
 
 		// Select recipient #2
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
-		fireEvent.click(screen.getByTestId("AddRecipient__add-button"));
+		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.1");
@@ -2206,17 +2228,17 @@ describe("SendTransfer", () => {
 		// Step 2
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("AuthenticationStep");
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
-		fireEvent.input(passwordInput, { target: { value: passphrase } });
+		userEvent.paste(passwordInput, passphrase);
 		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -2234,7 +2256,7 @@ describe("SendTransfer", () => {
 		const transactionMock = createTransactionMultipleMock(wallet);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
 		await screen.findByTestId("TransactionSuccessful");
 
@@ -2269,22 +2291,22 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: " " } });
+		userEvent.clear(screen.getByTestId("AddRecipient__amount"));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveAttribute("aria-invalid"));
 	});
 
@@ -2356,48 +2378,48 @@ describe("SendTransfer", () => {
 
 		expect(backButton).not.toHaveAttribute("disabled");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
@@ -2412,16 +2434,16 @@ describe("SendTransfer", () => {
 		const transactionMock = createTransactionMock(wallet);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
 		await screen.findByTestId("modal__inner");
-		fireEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
+		userEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
 		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 		await screen.findByTestId("modal__inner");
 
-		fireEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
+		userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
 		await screen.findByTestId("TransactionSuccessful");
@@ -2439,7 +2461,7 @@ describe("SendTransfer", () => {
 
 		// Go back to wallet
 		const pushSpy = jest.spyOn(history, "push");
-		fireEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
@@ -2505,23 +2527,23 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address()));
 
 		// select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// enter amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
@@ -2529,25 +2551,25 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		// proceed to step 2
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		// proceed to step 3
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("AuthenticationStep");
 
 		// enter mnemonic
-		fireEvent.input(screen.getByTestId("AuthenticationStep__mnemonic"), { target: { value: passphrase } });
+		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
 		// submit form
-		fireEvent.submit(screen.getByTestId("Form"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 		await screen.findByTestId("modal__inner");
 
 		// confirm within the modal
-		fireEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
+		userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
 		await screen.findByTestId("TransactionSuccessful");
@@ -2598,50 +2620,48 @@ describe("SendTransfer", () => {
 
 		expect(backButton).not.toHaveAttribute("disabled");
 
-		fireEvent.click(backButton);
+		userEvent.click(backButton);
 
 		expect(goSpy).toHaveBeenCalledWith(-1);
 
 		// Select recipient
-		fireEvent.click(
+		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(profile.wallets().first().address()),
 		);
 
 		// Amount
-		fireEvent.input(screen.getByTestId("AddRecipient__amount"), { target: { value: "1" } });
+		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1"));
 
 		// Memo
-		fireEvent.input(screen.getByTestId("Input__memo"), { target: { value: "test memo" } });
+		userEvent.paste(screen.getByTestId("Input__memo"), "test memo");
 		await waitFor(() => expect(screen.getByTestId("Input__memo")).toHaveValue("test memo"));
 
 		// Fee
-		fireEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
+		userEvent.click(within(screen.getByTestId("InputFee")).getByText(transactionTranslations.FEES.SLOW));
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toBeChecked());
 
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357"));
 
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("SendTransfer__review-step");
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
-		fireEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		await screen.findByTestId("AuthenticationStep");
 
-		fireEvent.input(screen.getByTestId("AuthenticationStep__encryption-password"), {
-			target: { value: "password" },
-		});
+		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 		await waitFor(() =>
 			expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
 		);
@@ -2658,7 +2678,7 @@ describe("SendTransfer", () => {
 		const transactionMock = createTransactionMock(wallet);
 
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
-		fireEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
 		await screen.findByTestId("TransactionSuccessful");
 		await waitFor(() =>
@@ -2678,7 +2698,7 @@ describe("SendTransfer", () => {
 
 		// Go back to wallet
 		const pushSpy = jest.spyOn(history, "push");
-		fireEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
+		userEvent.click(screen.getByTestId("StepNavigation__back-to-wallet-button"));
 
 		expect(pushSpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 

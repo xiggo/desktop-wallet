@@ -2,13 +2,14 @@
 import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
+import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 
 import { AddressRow } from "./AddressRow";
 
@@ -381,7 +382,7 @@ describe("AddressRow", () => {
 
 		await screen.findByTestId("StatusIcon__icon");
 
-		fireEvent.click(selectButton);
+		userEvent.click(selectButton);
 
 		expect(container).toBeInTheDocument();
 		expect(onSelect).toHaveBeenCalledWith(wallet.address(), wallet.networkId());

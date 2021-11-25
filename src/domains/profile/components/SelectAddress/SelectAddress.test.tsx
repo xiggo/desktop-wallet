@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
 
 import { SelectAddress } from "./SelectAddress";
 
@@ -67,11 +68,11 @@ describe("SelectAddress", () => {
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -90,7 +91,7 @@ describe("SelectAddress", () => {
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 	});
@@ -106,7 +107,7 @@ describe("SelectAddress", () => {
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
@@ -114,7 +115,7 @@ describe("SelectAddress", () => {
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 
-		fireEvent.click(firstAddress);
+		userEvent.click(firstAddress);
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -137,7 +138,7 @@ describe("SelectAddress", () => {
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
@@ -158,7 +159,7 @@ describe("SelectAddress", () => {
 
 		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
 
-		fireEvent.click(screen.getByTestId("SelectAddress__wrapper"));
+		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
@@ -166,7 +167,7 @@ describe("SelectAddress", () => {
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 
-		fireEvent.click(firstAddress);
+		userEvent.click(firstAddress);
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);

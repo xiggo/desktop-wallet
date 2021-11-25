@@ -1,8 +1,9 @@
 import { renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { fireEvent, render, screen, within } from "@/utils/testing-library";
+import { render, screen, within } from "@/utils/testing-library";
 
 import { PluginInfo } from "./PluginInfo";
 
@@ -50,11 +51,11 @@ describe("PluginInfo", () => {
 
 		const { asFragment } = render(<PluginInfo permissions={permissions} />);
 
-		fireEvent.click(within(screen.getByTestId("PluginInfo__permissions")).getByRole("button"));
+		userEvent.click(within(screen.getByTestId("PluginInfo__permissions")).getByRole("button"));
 
 		expect(screen.getByTestId("PluginPermissionsModal")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(() => screen.getByTestId("PluginPermissionsModal")).toThrow(/Unable to find an element by/);
 

@@ -1,8 +1,9 @@
 import { Observer } from "@ledgerhq/hw-transport";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
-import { act, fireEvent, getDefaultLedgerTransport, render, screen } from "@/utils/testing-library";
+import { act, getDefaultLedgerTransport, render, screen } from "@/utils/testing-library";
 
 import { LedgerWaitingDevice } from "./LedgerWaitingDevice";
 
@@ -18,7 +19,7 @@ describe("LedgerWaitingDevice", () => {
 			</LedgerProvider>,
 		);
 
-		fireEvent.click(screen.getByTestId("modal__close-btn"));
+		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		expect(onClose).toHaveBeenCalledWith();
 	});

@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 
 import { Switch, SwitchOption } from "./Switch";
@@ -62,12 +63,12 @@ describe("Switch", () => {
 	it("should allow changing the selected option by clicking the handle", () => {
 		render(<Wrapper />);
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		expect(onChange).toHaveBeenCalledWith("b");
 		expect(screen.getByRole("checkbox")).toBeChecked();
 
-		fireEvent.click(screen.getByRole("checkbox"));
+		userEvent.click(screen.getByRole("checkbox"));
 
 		expect(onChange).toHaveBeenCalledWith("a");
 		expect(screen.getByRole("checkbox")).not.toBeChecked();
@@ -76,12 +77,12 @@ describe("Switch", () => {
 	it("should allow changing the selected option by clicking the option text", () => {
 		render(<Wrapper />);
 
-		fireEvent.click(screen.getByText("Option B"));
+		userEvent.click(screen.getByText("Option B"));
 
 		expect(onChange).toHaveBeenCalledWith("b");
 		expect(screen.getByRole("checkbox")).toBeChecked();
 
-		fireEvent.click(screen.getByText("Option A"));
+		userEvent.click(screen.getByText("Option A"));
 
 		expect(onChange).toHaveBeenCalledWith("a");
 		expect(screen.getByRole("checkbox")).not.toBeChecked();
@@ -92,7 +93,7 @@ describe("Switch", () => {
 
 		expect(screen.getByRole("checkbox")).not.toBeChecked();
 
-		fireEvent.click(screen.getByText("Option B"));
+		userEvent.click(screen.getByText("Option B"));
 
 		expect(onChange).not.toHaveBeenCalled();
 		expect(screen.getByRole("checkbox")).not.toBeChecked();

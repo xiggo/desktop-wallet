@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations } from "@/app/i18n/common/i18n";
-import { fireEvent, render, screen } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { SearchBar } from "./SearchBar";
 
@@ -26,13 +26,9 @@ describe("SearchBar", () => {
 
 		render(<SearchBar onSearch={onSearch} />);
 
-		fireEvent.change(screen.getByTestId("Input"), {
-			target: {
-				value: "test query",
-			},
-		});
+		userEvent.type(screen.getByTestId("Input"), "test query");
 
-		fireEvent.click(screen.getByTestId("SearchBar__button"));
+		userEvent.click(screen.getByTestId("SearchBar__button"));
 
 		await waitFor(() => expect(onSearch).toHaveBeenCalledWith("test query"));
 	});

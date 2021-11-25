@@ -1,6 +1,6 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { fireEvent, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe } from "jest-circus";
 import React, { useState } from "react";
@@ -168,11 +168,12 @@ describe("InputFee", () => {
 			defaultProps.viewType = InputFeeViewType.Advanced;
 			const { asFragment } = render(<Wrapper />);
 
-			const inputElement = screen.getByTestId("InputCurrency");
+			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 			expect(inputElement).toBeInTheDocument();
 
-			fireEvent.input(inputElement, { target: { value: "0.447" } });
+			inputElement.select();
+			userEvent.paste(inputElement, "0.447");
 
 			expect(defaultProps.onChange).toHaveBeenCalledWith("0.447");
 			expect(inputElement).toHaveValue("0.447");
@@ -232,9 +233,12 @@ describe("InputFee", () => {
 
 			render(<InputFee {...defaultProps} />);
 
-			fireEvent.input(screen.getByTestId("InputCurrency"), { target: { value: "-1.4" } });
+			const inputElement: HTMLInputElement = screen.getByTestId("InputCurrency");
 
-			expect(screen.getByTestId("InputCurrency")).toHaveValue("1.4");
+			inputElement.select();
+			userEvent.paste(inputElement, "-1.4");
+
+			expect(inputElement).toHaveValue("1.4");
 		});
 
 		it("should not allow to set a negative value with down button", () => {

@@ -1,7 +1,8 @@
 import { Networks } from "@payvo/sdk";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, MNEMONICS, render, screen } from "@/utils/testing-library";
 
 import { NetworkOption } from "./NetworkOption";
 
@@ -39,7 +40,7 @@ describe("NetworkIcon", () => {
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("SelectNetwork__NetworkIcon--container"));
+		userEvent.click(screen.getByTestId("SelectNetwork__NetworkIcon--container"));
 
 		expect(onClick).toHaveBeenCalledWith();
 	});
@@ -52,7 +53,7 @@ describe("NetworkIcon", () => {
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toHaveAttribute("aria-label", network.displayName());
 		expect(screen.getByTestId("NetworkIcon__icon")).toBeInTheDocument();
 
-		fireEvent.click(screen.getByTestId("SelectNetwork__NetworkIcon--container"));
+		userEvent.click(screen.getByTestId("SelectNetwork__NetworkIcon--container"));
 
 		expect(onClick).not.toHaveBeenCalled();
 	});

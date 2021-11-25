@@ -97,7 +97,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                         <span
                           class="absolute text-2xl font-semibold text-theme-background"
                         >
-                          AS
+                          TE
                         </span>
                         <button
                           class="overflow-hidden absolute z-10 p-1 w-full h-full opacity-0 transition-opacity duration-200 focus:outline-none upload-button-overlay"
@@ -2704,6 +2704,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                           class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
                           data-testid="Input"
                           name="name"
+                          type="text"
                           value=""
                         />
                       </div>
