@@ -762,9 +762,11 @@ describe("SendTransfer", () => {
 
 		fireEvent.click(firstAddress);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		await waitFor(() => {
+			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		});
 
-		await waitFor(() => expect(container).toMatchSnapshot());
+		expect(container).toMatchSnapshot();
 	});
 
 	it("should update available amount after sender address changed", async () => {
@@ -1141,7 +1143,7 @@ describe("SendTransfer", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 
-		await waitFor(() => expect(container).toMatchSnapshot());
+		expect(container).toMatchSnapshot();
 
 		// Go back to wallet
 		const pushSpy = jest.spyOn(history, "push");
@@ -1477,7 +1479,7 @@ describe("SendTransfer", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 
-		await waitFor(() => expect(container).toMatchSnapshot());
+		expect(container).toMatchSnapshot();
 
 		// Go back to wallet
 		const pushSpy = jest.spyOn(history, "push");
@@ -1936,7 +1938,7 @@ describe("SendTransfer", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 
-		await waitFor(() => expect(container).toMatchSnapshot());
+		expect(container).toMatchSnapshot();
 
 		// Go back to wallet
 		const pushSpy = jest.spyOn(history, "push");
@@ -2433,7 +2435,7 @@ describe("SendTransfer", () => {
 		broadcastMock.mockRestore();
 		transactionMock.mockRestore();
 
-		await waitFor(() => expect(container).toMatchSnapshot());
+		expect(container).toMatchSnapshot();
 
 		// Go back to wallet
 		const pushSpy = jest.spyOn(history, "push");
@@ -2560,7 +2562,7 @@ describe("SendTransfer", () => {
 		transactionMock.mockRestore();
 		sentTransactionsMock.mockRestore();
 
-		await waitFor(() => expect(container).toMatchSnapshot());
+		expect(container).toMatchSnapshot();
 	});
 
 	it("should send a single transfer using wallet with encryption password", async () => {
@@ -2672,7 +2674,7 @@ describe("SendTransfer", () => {
 		actsWithWifWithEncryptionMock.mockRestore();
 		wifGetMock.mockRestore();
 
-		await waitFor(() => expect(container).toMatchSnapshot());
+		expect(container).toMatchSnapshot();
 
 		// Go back to wallet
 		const pushSpy = jest.spyOn(history, "push");

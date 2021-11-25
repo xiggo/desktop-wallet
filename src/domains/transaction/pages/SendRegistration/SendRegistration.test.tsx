@@ -298,7 +298,8 @@ describe("Registration", () => {
 		expect(historySpy).toHaveBeenCalledWith(`/profiles/${profile.id()}/wallets/${wallet.id()}`);
 
 		historySpy.mockRestore();
-		await waitFor(() => expect(asFragment()).toMatchSnapshot());
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should register second signature", async () => {

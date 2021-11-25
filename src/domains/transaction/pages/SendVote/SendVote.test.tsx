@@ -665,7 +665,8 @@ describe("SendVote", () => {
 		});
 
 		await screen.findByTestId("TransactionSuccessful");
-		await waitFor(() => expect(container).toMatchSnapshot());
+
+		expect(container).toMatchSnapshot();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -886,7 +887,8 @@ describe("SendVote", () => {
 		});
 
 		await screen.findByTestId("TransactionSuccessful");
-		await waitFor(() => expect(container).toMatchSnapshot());
+
+		expect(container).toMatchSnapshot();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -1076,7 +1078,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("Input__error")).toBeInTheDocument();
 
-		await waitFor(() => expect(container).toMatchSnapshot());
+		expect(container).toMatchSnapshot();
 	});
 
 	it("should show error step and go back", async () => {

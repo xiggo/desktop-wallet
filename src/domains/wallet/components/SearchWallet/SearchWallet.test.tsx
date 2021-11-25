@@ -50,10 +50,12 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
 		);
+
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
 		);
-		await waitFor(() => expect(asFragment()).toMatchSnapshot());
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with the default exchange currency enabled from profile settings", async () => {
@@ -81,10 +83,12 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.TITLE),
 		);
+
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SELECT_ACCOUNT.DESCRIPTION),
 		);
-		await waitFor(() => expect(asFragment()).toMatchSnapshot());
+
+		expect(asFragment()).toMatchSnapshot();
 
 		walletWithExchangeCurrencyMock.mockRestore();
 	});

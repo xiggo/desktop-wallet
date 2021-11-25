@@ -96,14 +96,17 @@ describe("DelegateRegistrationForm", () => {
 	it("should render form step", async () => {
 		const { asFragment } = renderComponent();
 
-		await waitFor(() => expect(asFragment()).toMatchSnapshot());
+		await screen.findByTestId("DelegateRegistrationForm__form-step");
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render review step", async () => {
 		const { asFragment } = renderComponent({ activeTab: 2 });
 
 		await screen.findByTestId("DelegateRegistrationForm__review-step");
-		await waitFor(() => expect(asFragment()).toMatchSnapshot());
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should set username", async () => {
@@ -138,7 +141,8 @@ describe("DelegateRegistrationForm", () => {
 		});
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("11"));
-		await waitFor(() => expect(asFragment()).toMatchSnapshot());
+
+		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should show error if username contains illegal characters", async () => {

@@ -161,7 +161,7 @@ module.exports = {
 		"testing-library/no-wait-for-empty-callback": "warn", // @TODO: set to error and fix
 		"testing-library/no-wait-for-multiple-assertions": "warn", // @TODO: set to error and fix
 		"testing-library/no-wait-for-side-effects": "warn", // @TODO: set to error and fix
-		"testing-library/no-wait-for-snapshot": "warn", // @TODO: set to error and fix
+		"testing-library/no-wait-for-snapshot": "error",
 		"testing-library/prefer-explicit-assert": "warn", // @TODO: set to error and fix
 		"testing-library/prefer-find-by": "error",
 		"testing-library/prefer-presence-queries": "warn", // @TODO: set to error and fix
