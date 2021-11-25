@@ -146,7 +146,6 @@ module.exports = {
 		"sort-keys-fix/sort-keys-fix": ["error", "asc", { caseSensitive: true }],
 		"testing-library/await-async-query": "warn", // @TODO: set to error and fix
 		"testing-library/await-async-utils": "warn", // @TODO: set to error and fix
-		"testing-library/await-fire-event": "warn", // @TODO: set to error and fix
 		"testing-library/consistent-data-testid": "off", // @TODO: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/consistent-data-testid.md
 		"testing-library/no-await-sync-events": "error",
 		"testing-library/no-await-sync-query": "warn", // @TODO: set to error and fix
