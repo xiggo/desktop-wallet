@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { SerializedPluginConfigurationData } from "plugins/types";
 import { Asserts } from "yup";
+
+import { SerializedPluginConfigurationData } from "@/plugins/types";
 
 import { schema } from "./schema";
 

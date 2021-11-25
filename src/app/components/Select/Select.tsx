@@ -1,6 +1,7 @@
-import { Icon } from "app/components/Icon";
-import { Input } from "app/components/Input";
 import React from "react";
+
+import { Icon } from "@/app/components/Icon";
+import { Input } from "@/app/components/Input";
 
 type SelectProperties = { isInvalid?: boolean } & React.SelectHTMLAttributes<any>;
 

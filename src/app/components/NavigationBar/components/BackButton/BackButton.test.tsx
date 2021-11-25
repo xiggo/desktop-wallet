@@ -1,6 +1,7 @@
 import { createMemoryHistory } from "history";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { BackButton } from "./BackButton";
 const history = createMemoryHistory();

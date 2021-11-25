@@ -1,9 +1,10 @@
-import { useFormField } from "app/components/Form/useFormField";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import React, { useEffect, useRef } from "react";
 import tw, { styled } from "twin.macro";
+
+import { useFormField } from "@/app/components/Form/useFormField";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
 
 interface AddonProperties {
 	wrapperClassName?: string;

@@ -1,7 +1,8 @@
 import React from "react";
-import { Size } from "types";
-import * as utils from "utils/electron-utils";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { Size } from "@/types";
+import * as utils from "@/utils/electron-utils";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { PluginImage } from "./PluginImage";
 

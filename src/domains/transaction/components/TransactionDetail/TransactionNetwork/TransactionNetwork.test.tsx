@@ -1,7 +1,8 @@
-import { translations } from "domains/transaction/i18n";
 import React from "react";
-import { availableNetworksMock } from "tests/mocks/networks";
-import { render } from "utils/testing-library";
+
+import { translations } from "@/domains/transaction/i18n";
+import { availableNetworksMock } from "@/tests/mocks/networks";
+import { render } from "@/utils/testing-library";
 
 import { TransactionNetwork } from "./TransactionNetwork";
 

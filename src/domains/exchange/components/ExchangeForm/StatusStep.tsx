@@ -1,14 +1,15 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Amount } from "app/components/Amount";
-import { Clipboard } from "app/components/Clipboard";
-import { Icon } from "app/components/Icon";
-import { Link } from "app/components/Link";
-import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
-import { useExchangeContext } from "domains/exchange/contexts/Exchange";
-import { useOrderStatus } from "domains/exchange/hooks/use-order-status";
 import React, { useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { delay } from "utils/delay";
+
+import { Amount } from "@/app/components/Amount";
+import { Clipboard } from "@/app/components/Clipboard";
+import { Icon } from "@/app/components/Icon";
+import { Link } from "@/app/components/Link";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
+import { delay } from "@/utils/delay";
 
 import { ExchangeStatus } from "./StatusStep.blocks";
 

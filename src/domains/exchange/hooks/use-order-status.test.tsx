@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import nock from "nock";
 import React, { useEffect, useState } from "react";
-import { env, getDefaultProfileId, render, waitFor } from "utils/testing-library";
+
+import { env, getDefaultProfileId, render, waitFor } from "@/utils/testing-library";
 
 import { useOrderStatus } from "./use-order-status";
 

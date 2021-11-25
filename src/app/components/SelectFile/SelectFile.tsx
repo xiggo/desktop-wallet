@@ -1,10 +1,11 @@
-import { OriginalButton } from "app/components/Button/OriginalButton";
-import { Icon } from "app/components/Icon";
-import { ReadableFile, useFiles } from "app/hooks/use-files";
 import cn from "classnames";
 import path from "path";
 import React, { useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+
+import { OriginalButton } from "@/app/components/Button/OriginalButton";
+import { Icon } from "@/app/components/Icon";
+import { ReadableFile, useFiles } from "@/app/hooks/use-files";
 
 interface SelectFileProperties {
 	fileFormat: string;

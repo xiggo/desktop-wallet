@@ -1,6 +1,7 @@
-import { translations } from "domains/transaction/i18n";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { translations } from "@/domains/transaction/i18n";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { TransactionAmount } from "./TransactionAmount";
 

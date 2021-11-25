@@ -1,7 +1,8 @@
-import { TruncateEnd } from "app/components/TruncateEnd";
-import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
 import React from "react";
-import { Size } from "types";
+
+import { TruncateEnd } from "@/app/components/TruncateEnd";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { Size } from "@/types";
 
 interface Properties {
 	walletName?: string;

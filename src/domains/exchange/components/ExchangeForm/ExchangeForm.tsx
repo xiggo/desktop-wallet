@@ -1,25 +1,26 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Form } from "app/components/Form";
-import { StepIndicator } from "app/components/StepIndicator";
-import { TabPanel, Tabs } from "app/components/Tabs";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile, useValidation } from "app/hooks";
-import { toasts } from "app/services";
-import { useExchangeContext } from "domains/exchange/contexts/Exchange";
-import { ExchangeFormState, Order } from "domains/exchange/contracts";
+import React, { useCallback, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
+
+import { Button } from "@/app/components/Button";
+import { Form } from "@/app/components/Form";
+import { StepIndicator } from "@/app/components/StepIndicator";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile, useValidation } from "@/app/hooks";
+import { toasts } from "@/app/services";
+import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { ExchangeFormState, Order } from "@/domains/exchange/contracts";
 import {
 	assertCurrency,
 	assertExchangeService,
 	assertExchangeTransaction,
 	isInvalidAddressError,
 	isInvalidRefundAddressError,
-} from "domains/exchange/utils";
-import React, { useCallback, useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
-import { delay } from "utils/delay";
+} from "@/domains/exchange/utils";
+import { delay } from "@/utils/delay";
 
 import { ConfirmationStep } from "./ConfirmationStep";
 import { FormStep } from "./FormStep";

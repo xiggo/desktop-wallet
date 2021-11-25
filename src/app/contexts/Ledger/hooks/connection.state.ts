@@ -1,4 +1,4 @@
-import { LedgerModel } from "app/hooks";
+import { LedgerModel } from "@/app/hooks";
 
 import { Handlers, OfUnion } from "./reducer.contracts";
 

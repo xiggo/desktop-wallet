@@ -1,17 +1,18 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Form } from "app/components/Form";
-import { ListDivided } from "app/components/ListDivided";
-import { useEnvironmentContext } from "app/contexts";
-import { useAccentColor, useTheme } from "app/hooks";
-import { toasts } from "app/services";
-import { useSettingsPrompt } from "domains/setting/hooks/use-settings-prompt";
-import { AppearanceSettingsState } from "domains/setting/pages/Appearance/Appearance.contracts";
-import { useAppearanceItems, useAppearanceSettings } from "domains/setting/pages/Appearance/Appearance.helpers";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Prompt } from "react-router-dom";
+
+import { Button } from "@/app/components/Button";
+import { Form } from "@/app/components/Form";
+import { ListDivided } from "@/app/components/ListDivided";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useAccentColor, useTheme } from "@/app/hooks";
+import { toasts } from "@/app/services";
+import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
+import { AppearanceSettingsState } from "@/domains/setting/pages/Appearance/Appearance.contracts";
+import { useAppearanceItems, useAppearanceSettings } from "@/domains/setting/pages/Appearance/Appearance.helpers";
 
 interface Properties {
 	profile: Contracts.IProfile;

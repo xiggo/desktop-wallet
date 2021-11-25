@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
-import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { TransactionRowSender } from "./TransactionRowSender";
 

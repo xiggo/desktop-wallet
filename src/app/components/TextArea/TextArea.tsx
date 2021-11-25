@@ -1,6 +1,7 @@
-import { Input } from "app/components/Input";
 import cn from "classnames";
 import React, { useEffect } from "react";
+
+import { Input } from "@/app/components/Input";
 
 type TextareaProperties = {
 	isInvalid?: boolean;

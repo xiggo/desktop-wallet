@@ -1,7 +1,8 @@
 import { Coins } from "@payvo/sdk";
 import { BIP39 } from "@payvo/sdk-cryptography";
 import { Contracts } from "@payvo/sdk-profiles";
-import { debounceAsync } from "utils/debounce";
+
+import { debounceAsync } from "@/utils/debounce";
 
 export const authentication = (t: any) => {
 	// @TODO: extract this into the SDK/Profiles

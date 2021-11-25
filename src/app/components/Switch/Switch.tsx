@@ -1,8 +1,9 @@
-import { Toggle } from "app/components/Toggle";
 import cn from "classnames";
 import React, { PropsWithChildren } from "react";
 import { styled } from "twin.macro";
-import { Size } from "types";
+
+import { Toggle } from "@/app/components/Toggle";
+import { Size } from "@/types";
 
 import { getSwitchTextStyles, SwitchTextType } from "./SwitchText.style";
 

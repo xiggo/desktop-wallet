@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { AccentColorType, ViewingModeType } from "app/hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { AccentColorType, ViewingModeType } from "@/app/hooks";
 
 import { AppearanceSettingsState, UseAppearanceSettings } from "./Appearance.contracts";
 import { AppearanceAccentColor } from "./blocks/AppearanceAccentColor";

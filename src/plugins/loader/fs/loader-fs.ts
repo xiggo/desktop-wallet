@@ -2,8 +2,9 @@ import resolve from "enhanced-resolve";
 import fs from "fs";
 import { glob, IOptions } from "glob";
 import path from "path";
-import { PluginRawInstance } from "plugins/types";
-import { validatePath } from "utils/validate-path";
+
+import { PluginRawInstance } from "@/plugins/types";
+import { validatePath } from "@/utils/validate-path";
 
 import * as loaderIpc from "./loader-fs-ipc";
 

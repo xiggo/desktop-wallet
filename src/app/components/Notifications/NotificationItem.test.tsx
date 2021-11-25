@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import nock from "nock";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { NotificationItem } from "./NotificationItem";
 

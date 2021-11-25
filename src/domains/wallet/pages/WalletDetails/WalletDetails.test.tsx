@@ -2,15 +2,16 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
-import { LedgerProvider } from "app/contexts";
-import { buildTranslations } from "app/i18n/helpers";
-import { toasts } from "app/services";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import walletMock from "tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
+
+import { LedgerProvider } from "@/app/contexts";
+import { buildTranslations } from "@/app/i18n/helpers";
+import { toasts } from "@/app/services";
+import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import {
 	defaultNetMocks,
 	env,
@@ -24,7 +25,7 @@ import {
 	syncDelegates,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { WalletDetails } from "./WalletDetails";
 

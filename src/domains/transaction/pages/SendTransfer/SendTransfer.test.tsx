@@ -4,17 +4,18 @@ import { LSK } from "@payvo/sdk-lsk";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import { LedgerProvider, minVersionList } from "app/contexts";
-import { useProfileStatusWatcher } from "app/hooks";
-import * as useFeesHook from "app/hooks/use-fees";
-import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route, Router } from "react-router-dom";
-import transactionFixture from "tests/fixtures/coins/ark/devnet/transactions/transfer.json";
-import transactionMultipleFixture from "tests/fixtures/coins/ark/devnet/transactions/transfer-multiple.json";
+
+import { LedgerProvider, minVersionList } from "@/app/contexts";
+import { useProfileStatusWatcher } from "@/app/hooks";
+import * as useFeesHook from "@/app/hooks/use-fees";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+import transactionMultipleFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer-multiple.json";
 import {
 	env,
 	fireEvent,
@@ -29,7 +30,7 @@ import {
 	syncFees,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { FormStep } from "./FormStep";
 import { NetworkStep } from "./NetworkStep";

@@ -1,6 +1,7 @@
 import cn from "classnames";
 import React from "react";
-import { Size } from "types";
+
+import { Size } from "@/types";
 
 type EmptyBlockProperties = {
 	className?: string;

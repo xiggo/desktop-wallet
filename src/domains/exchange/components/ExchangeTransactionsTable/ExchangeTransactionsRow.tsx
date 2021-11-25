@@ -1,16 +1,17 @@
 import { DateTime } from "@payvo/sdk-intl";
 import { Contracts } from "@payvo/sdk-profiles";
-import { AmountLabel } from "app/components/Amount";
-import { Circle } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
-import { TableCell, TableRow } from "app/components/Table";
-import { TableRemoveButton } from "app/components/TableRemoveButton";
-import { Tooltip } from "app/components/Tooltip";
-import { useTimeFormat } from "app/hooks/use-time-format";
 import cn from "classnames";
-import { useExchangeContext } from "domains/exchange/contexts/Exchange";
 import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
+
+import { AmountLabel } from "@/app/components/Amount";
+import { Circle } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
+import { TableCell, TableRow } from "@/app/components/Table";
+import { TableRemoveButton } from "@/app/components/TableRemoveButton";
+import { Tooltip } from "@/app/components/Tooltip";
+import { useTimeFormat } from "@/app/hooks/use-time-format";
+import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 
 const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
 	const { exchangeProviders } = useExchangeContext();

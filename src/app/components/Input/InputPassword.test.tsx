@@ -1,6 +1,7 @@
-import { FormFieldProvider } from "app/components/Form/useFormField";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { FormFieldProvider } from "@/app/components/Form/useFormField";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { InputPassword } from "./InputPassword";
 

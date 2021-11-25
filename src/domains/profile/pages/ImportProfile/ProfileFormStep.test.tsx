@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
-import { EnvironmentProvider } from "app/contexts";
-import { ImportProfileForm } from "domains/profile/pages/ImportProfile/ProfileFormStep";
 import electron from "electron";
 import { createMemoryHistory } from "history";
 import os from "os";
 import React from "react";
-import * as utils from "utils/electron-utils";
-import { act, env, fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import { EnvironmentProvider } from "@/app/contexts";
+import { ImportProfileForm } from "@/domains/profile/pages/ImportProfile/ProfileFormStep";
+import * as utils from "@/utils/electron-utils";
+import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 let profile: Contracts.IProfile;
 
 let showOpenDialogMock: jest.SpyInstance;

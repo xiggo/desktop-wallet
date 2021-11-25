@@ -1,12 +1,13 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Avatar } from "app/components/Avatar";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { Input, InputDefault, InputPassword } from "app/components/Input";
-import { useValidation } from "app/hooks";
 import React, { ChangeEvent } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Avatar } from "@/app/components/Avatar";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { Input, InputDefault, InputPassword } from "@/app/components/Input";
+import { useValidation } from "@/app/hooks";
 
 export const FormStep = ({
 	wallet,

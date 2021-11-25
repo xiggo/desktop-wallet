@@ -18,18 +18,19 @@ import { LSK } from "@payvo/sdk-lsk";
 // import { NANO } from "@payvo/sdk-nano";
 // import { NEO } from "@payvo/sdk-neo";
 import { Environment } from "@payvo/sdk-profiles";
-import { Offline } from "domains/error/pages";
-import { ExchangeProvider } from "domains/exchange/contexts/Exchange";
-import { Splash } from "domains/splash/pages";
 import React, { useLayoutEffect, useState } from "react";
 import { useErrorHandler } from "react-error-boundary";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { middlewares, RouterView, routes } from "router";
-import { StubStorage } from "tests/mocks";
-import { setThemeSource, shouldUseDarkColors } from "utils/electron-utils";
-import { bootEnvWithProfileFixtures, isE2E, isUnit } from "utils/test-helpers";
+
+import { Offline } from "@/domains/error/pages";
+import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
+import { Splash } from "@/domains/splash/pages";
+import { StubStorage } from "@/tests/mocks";
+import { setThemeSource, shouldUseDarkColors } from "@/utils/electron-utils";
+import { bootEnvWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
 
 import { SyncErrorMessage } from "./components/ProfileSyncStatusMessage";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, useEnvironmentContext } from "./contexts";

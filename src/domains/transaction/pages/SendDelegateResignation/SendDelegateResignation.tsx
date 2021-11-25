@@ -1,20 +1,21 @@
 import { DTO } from "@payvo/sdk-profiles";
-import { Form } from "app/components/Form";
-import { Page, Section } from "app/components/Layout";
-import { StepIndicator } from "app/components/StepIndicator";
-import { StepNavigation } from "app/components/StepNavigation";
-import { TabPanel, Tabs } from "app/components/Tabs";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useValidation } from "app/hooks";
-import { useKeydown } from "app/hooks/use-keydown";
-import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
-import { ErrorStep } from "domains/transaction/components/ErrorStep";
-import { FeeWarning } from "domains/transaction/components/FeeWarning";
-import { useFeeConfirmation } from "domains/transaction/hooks";
-import { handleBroadcastError } from "domains/transaction/utils";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
+
+import { Form } from "@/app/components/Form";
+import { Page, Section } from "@/app/components/Layout";
+import { StepIndicator } from "@/app/components/StepIndicator";
+import { StepNavigation } from "@/app/components/StepNavigation";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile, useActiveWallet, useValidation } from "@/app/hooks";
+import { useKeydown } from "@/app/hooks/use-keydown";
+import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
+import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
+import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
+import { useFeeConfirmation } from "@/domains/transaction/hooks";
+import { handleBroadcastError } from "@/domains/transaction/utils";
 
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";

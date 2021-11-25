@@ -1,12 +1,13 @@
-import { Button } from "app/components/Button";
-import { Icon } from "app/components/Icon";
-import { useFiles } from "app/hooks/use-files";
-import { toasts } from "app/services";
 import cn from "classnames";
 import { fromBuffer } from "file-type";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
+
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
+import { useFiles } from "@/app/hooks/use-files";
+import { toasts } from "@/app/services";
 
 interface SelectProfileImageProperties {
 	className?: string;

@@ -1,20 +1,21 @@
 import { Coins, Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { Avatar } from "app/components/Avatar";
-import { Button } from "app/components/Button";
-import { Form, FormField, FormLabel, SubForm } from "app/components/Form";
-import { Icon } from "app/components/Icon";
-import { InputAddress, InputDefault } from "app/components/Input";
-import { OptionProperties, Select } from "app/components/SelectDropdown";
-import { Tooltip } from "app/components/Tooltip";
-import { useEnvironmentContext } from "app/contexts";
-import { useNetworkOptions } from "app/hooks";
-import { contactForm } from "domains/contact/validations/ContactForm";
-import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
+import { Form, FormField, FormLabel, SubForm } from "@/app/components/Form";
+import { Icon } from "@/app/components/Icon";
+import { InputAddress, InputDefault } from "@/app/components/Input";
+import { OptionProperties, Select } from "@/app/components/SelectDropdown";
+import { Tooltip } from "@/app/components/Tooltip";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useNetworkOptions } from "@/app/hooks";
+import { contactForm } from "@/domains/contact/validations/ContactForm";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 interface AddressListItemProperties {
 	address: any;

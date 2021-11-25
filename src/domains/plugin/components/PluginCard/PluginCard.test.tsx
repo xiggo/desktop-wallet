@@ -1,7 +1,8 @@
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { translations as pluginTranslations } from "domains/plugin/i18n";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { translations as pluginTranslations } from "@/domains/plugin/i18n";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { BlankPluginCard, PluginCard } from "./PluginCard";
 

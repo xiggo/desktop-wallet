@@ -1,15 +1,16 @@
-import { Address } from "app/components/Address";
-import { Avatar } from "app/components/Avatar";
-import { Circle } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
-import { RecipientList } from "domains/transaction/components/RecipientList";
-import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
+import React from "react";
+import { useTranslation } from "react-i18next";
+
+import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { Circle } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
+import { RecipientList } from "@/domains/transaction/components/RecipientList";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
-} from "domains/transaction/components/TransactionDetail/TransactionDetail";
-import React from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 
 type TransactionRecipientsProperties = {
 	currency: string;

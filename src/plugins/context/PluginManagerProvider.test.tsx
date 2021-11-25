@@ -1,12 +1,13 @@
 import { Contracts, Profile } from "@payvo/sdk-profiles";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { EnvironmentProvider } from "app/contexts";
 import electron from "electron";
 import nock from "nock";
-import { PluginController, PluginManager } from "plugins/core";
-import { PluginConfigurationData } from "plugins/core/configuration";
 import React, { useState } from "react";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { EnvironmentProvider } from "@/app/contexts";
+import { PluginController, PluginManager } from "@/plugins/core";
+import { PluginConfigurationData } from "@/plugins/core/configuration";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { PluginManagerProvider, usePluginManagerContext } from "./PluginManagerProvider";
 

@@ -1,9 +1,10 @@
-import { Alert, AlertVariant } from "app/components/Alert";
-import { OriginalButton } from "app/components/Button/OriginalButton";
-import { Icon } from "app/components/Icon";
 import cn from "classnames";
 import React from "react";
 import { Id as ToastId, toast, ToastContent, ToastContentProps, ToastOptions, TypeOptions } from "react-toastify";
+
+import { Alert, AlertVariant } from "@/app/components/Alert";
+import { OriginalButton } from "@/app/components/Button/OriginalButton";
+import { Icon } from "@/app/components/Icon";
 
 const { TYPE } = toast;
 

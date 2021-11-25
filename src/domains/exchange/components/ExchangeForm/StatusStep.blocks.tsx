@@ -1,10 +1,11 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Alert } from "app/components/Alert";
-import { Icon } from "app/components/Icon";
-import { Spinner } from "app/components/Spinner";
 import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Alert } from "@/app/components/Alert";
+import { Icon } from "@/app/components/Icon";
+import { Spinner } from "@/app/components/Spinner";
 
 interface StatusIconProperties {
 	label?: string;

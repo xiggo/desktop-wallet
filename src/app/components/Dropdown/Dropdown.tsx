@@ -1,10 +1,11 @@
-import { Divider } from "app/components/Divider";
-import { Icon } from "app/components/Icon";
-import { clickOutsideHandler } from "app/hooks";
 import cn from "classnames";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { styled } from "twin.macro";
-import { Position } from "types";
+
+import { Divider } from "@/app/components/Divider";
+import { Icon } from "@/app/components/Icon";
+import { clickOutsideHandler } from "@/app/hooks";
+import { Position } from "@/types";
 
 import { DropdownOption, DropdownOptionGroup, DropdownProperties, DropdownVariantType } from "./Dropdown.contracts";
 import { defaultClasses, getStyles } from "./Dropdown.styles";

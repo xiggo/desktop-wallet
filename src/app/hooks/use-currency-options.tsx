@@ -1,7 +1,8 @@
-import { OptionGroupProperties } from "app/components/SelectDropdown/SelectDropdown.models";
-import { PlatformSdkChoices } from "data";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+
+import { OptionGroupProperties } from "@/app/components/SelectDropdown/SelectDropdown.models";
+import { PlatformSdkChoices } from "@/data";
 
 type UseCurrencyOptionsHook = (marketProvider?: string) => OptionGroupProperties[];
 

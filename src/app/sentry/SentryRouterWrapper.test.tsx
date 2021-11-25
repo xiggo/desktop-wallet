@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import * as Sentry from "@sentry/react";
-import { LedgerProvider } from "app/contexts";
 import React from "react";
 import { Route } from "react-router-dom";
+
+import { LedgerProvider } from "@/app/contexts";
 import {
 	env,
 	getDefaultLedgerTransport,
@@ -10,7 +11,7 @@ import {
 	getDefaultWalletId,
 	render,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { SentryProvider } from "./SentryProvider";
 import { SentryRouterWrapper } from "./SentryRouterWrapper";

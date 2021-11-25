@@ -1,6 +1,6 @@
 import MockDate from "mockdate";
-import { bootEnvWithProfileFixtures } from "utils/test-helpers";
-import { env } from "utils/testing-library";
+import { bootEnvWithProfileFixtures } from "@/utils/test-helpers";
+import { env } from "@/utils/testing-library";
 
 // Reduce retries to 2 in all tests
 jest.mock("async-retry", () => {

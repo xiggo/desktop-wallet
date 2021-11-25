@@ -3,7 +3,8 @@ import { Contracts, DTO, Profile, Wallet } from "@payvo/sdk-profiles";
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
 import { AssertionError } from "assert";
 import { PluginController } from "plugins";
-import { IPluginController } from "plugins/core";
+
+import { IPluginController } from "@/plugins/core";
 
 export function assertProfile(profile?: Contracts.IProfile): asserts profile is Profile {
 	if (!(profile instanceof Profile)) {

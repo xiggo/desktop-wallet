@@ -1,13 +1,14 @@
-import { Amount } from "app/components/Amount";
-import { Checkbox } from "app/components/Checkbox";
-import { FormField } from "app/components/Form";
-import { Icon } from "app/components/Icon";
-import { Link } from "app/components/Link";
-import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
-import { useExchangeContext } from "domains/exchange/contexts/Exchange";
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
+
+import { Amount } from "@/app/components/Amount";
+import { Checkbox } from "@/app/components/Checkbox";
+import { FormField } from "@/app/components/Form";
+import { Icon } from "@/app/components/Icon";
+import { Link } from "@/app/components/Link";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 
 export const ReviewStep = () => {
 	const { t } = useTranslation();

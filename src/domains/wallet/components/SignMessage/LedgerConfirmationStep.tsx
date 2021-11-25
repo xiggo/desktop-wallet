@@ -1,8 +1,9 @@
-import { Header } from "app/components/Header";
-import { LedgerConfirmation } from "domains/transaction/components/LedgerConfirmation";
-import { TransactionDetail } from "domains/transaction/components/TransactionDetail";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Header } from "@/app/components/Header";
+import { LedgerConfirmation } from "@/domains/transaction/components/LedgerConfirmation";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 
 export const LedgerConfirmationStep = ({ message }: { message: string }) => {
 	const { t } = useTranslation();

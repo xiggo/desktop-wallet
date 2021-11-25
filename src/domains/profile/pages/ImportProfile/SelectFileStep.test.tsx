@@ -1,6 +1,7 @@
-import { SelectFileStep } from "domains/profile/pages/ImportProfile/SelectFileStep";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { SelectFileStep } from "@/domains/profile/pages/ImportProfile/SelectFileStep";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 jest.mock("fs", () => ({
 	readFileSync: jest.fn().mockReturnValue({ toString: () => "{test:'test'}" }),

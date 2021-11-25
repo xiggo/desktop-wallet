@@ -1,8 +1,9 @@
-import { Circle } from "app/components/Circle";
-import { TableCell, TableRow } from "app/components/Table";
 import cn from "classnames";
 import React from "react";
 import Skeleton from "react-loading-skeleton";
+
+import { Circle } from "@/app/components/Circle";
+import { TableCell, TableRow } from "@/app/components/Table";
 
 interface WalletListItemSkeletonProperties {
 	isCompact?: boolean;

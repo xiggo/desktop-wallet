@@ -1,10 +1,11 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import transactionFixture from "tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import {
 	env,
 	fireEvent,
@@ -16,7 +17,7 @@ import {
 	syncFees,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { SendDelegateResignation } from "./SendDelegateResignation";
 

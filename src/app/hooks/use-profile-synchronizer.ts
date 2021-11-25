@@ -1,12 +1,13 @@
 import { isEqual, uniq } from "@payvo/sdk-helpers";
 import { Contracts, Environment } from "@payvo/sdk-profiles";
-import { useConfiguration, useEnvironmentContext } from "app/contexts";
-import { useAccentColor } from "app/hooks/use-accent-color";
-import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
-import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import { useEffect, useMemo, useRef } from "react";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
-import { isIdle } from "utils/electron-utils";
+
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { useAccentColor } from "@/app/hooks/use-accent-color";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
+import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
+import { isIdle } from "@/utils/electron-utils";
 
 import { usePrevious } from "./use-previous";
 import { useProfileUtils } from "./use-profile-utils";

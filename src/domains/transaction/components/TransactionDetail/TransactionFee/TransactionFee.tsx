@@ -1,10 +1,11 @@
-import { Amount } from "app/components/Amount";
+import React from "react";
+import { useTranslation } from "react-i18next";
+
+import { Amount } from "@/app/components/Amount";
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
-} from "domains/transaction/components/TransactionDetail/TransactionDetail";
-import React from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 
 type TransactionFeeProperties = {
 	currency: string;

@@ -1,8 +1,9 @@
-import { Amount } from "app/components/Amount";
-import { Icon } from "app/components/Icon";
 import cn from "classnames";
 import React from "react";
 import tw, { styled } from "twin.macro";
+
+import { Amount } from "@/app/components/Amount";
+import { Icon } from "@/app/components/Icon";
 
 interface Properties {
 	convertedValue: number;

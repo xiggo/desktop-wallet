@@ -2,7 +2,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded } from "./env";
 

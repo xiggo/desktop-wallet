@@ -1,10 +1,11 @@
 import "./styles/app.css";
 
 import { App } from "app";
-import { ConfirmationModal } from "app/components/ConfirmationModal";
 import React, { useCallback, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import { HashRouter } from "react-router-dom";
+
+import { ConfirmationModal } from "@/app/components/ConfirmationModal";
 
 // Based on https://github.com/fvilers/disable-react-devtools.
 if (process.env.NODE_ENV && ["development", "production"].includes(process.env.NODE_ENV)) {

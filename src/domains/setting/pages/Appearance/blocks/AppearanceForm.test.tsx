@@ -1,6 +1,7 @@
 import { screen } from "@testing-library/react";
 import React from "react";
-import { env, render } from "utils/testing-library";
+
+import { env, render } from "@/utils/testing-library";
 
 import { AppearanceForm } from "./AppearanceForm";
 

@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { LedgerProvider, minVersionList } from "app/contexts";
-import { translations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route, Router } from "react-router-dom";
-import ipfsFixture from "tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
+
+import { LedgerProvider, minVersionList } from "@/app/contexts";
+import { translations } from "@/domains/transaction/i18n";
+import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
 import {
 	env,
 	fireEvent,
@@ -22,7 +23,7 @@ import {
 	syncFees,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";

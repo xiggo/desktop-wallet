@@ -1,14 +1,15 @@
 import { Contracts } from "@payvo/sdk";
 import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { RenderResult } from "@testing-library/react";
-import { translations } from "domains/transaction/i18n";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
-import multiSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
-import { TransactionFees } from "types";
-import { env, fireEvent, getDefaultProfileId, render, screen, syncFees, waitFor } from "utils/testing-library";
+
+import { translations } from "@/domains/transaction/i18n";
+import multiSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+import { TransactionFees } from "@/types";
+import { env, fireEvent, getDefaultProfileId, render, screen, syncFees, waitFor } from "@/utils/testing-library";
 
 import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
 

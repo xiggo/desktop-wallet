@@ -1,7 +1,10 @@
 import { Enums } from "@payvo/sdk";
-import { Modal } from "app/components/Modal";
-import { RecipientList } from "domains/transaction/components/RecipientList";
-import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
+import { Modal } from "@/app/components/Modal";
+import { RecipientList } from "@/domains/transaction/components/RecipientList";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
 	TransactionDetail,
 	TransactionExplorerLink,
@@ -9,10 +12,8 @@ import {
 	TransactionSender,
 	TransactionStatus,
 	TransactionTimestamp,
-} from "domains/transaction/components/TransactionDetail";
-import { TransactionDetailProperties } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
-import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
 
 export const MultiSignatureRegistrationDetail: React.FC<TransactionDetailProperties> = ({
 	isOpen,

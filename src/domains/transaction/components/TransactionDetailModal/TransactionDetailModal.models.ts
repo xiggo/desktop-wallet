@@ -1,5 +1,6 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { WalletAliasResult } from "app/hooks";
+
+import { WalletAliasResult } from "@/app/hooks";
 
 export interface TransactionAliases {
 	sender: WalletAliasResult;

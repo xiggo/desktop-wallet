@@ -1,13 +1,14 @@
-import { Alert } from "app/components/Alert";
-import { Button } from "app/components/Button";
-import { Form, FormField, FormLabel } from "app/components/Form";
-import { Input } from "app/components/Input";
-import { Modal } from "app/components/Modal";
-import { toasts } from "app/services";
-import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Alert } from "@/app/components/Alert";
+import { Button } from "@/app/components/Button";
+import { Form, FormField, FormLabel } from "@/app/components/Form";
+import { Input } from "@/app/components/Input";
+import { Modal } from "@/app/components/Modal";
+import { toasts } from "@/app/services";
+import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
 
 interface Properties {
 	isOpen: boolean;

@@ -1,19 +1,20 @@
 import { Enums, Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { InputCounter } from "app/components/Input";
-import { useProfileJobs } from "app/hooks";
-import { SelectNetwork } from "domains/network/components/SelectNetwork";
-import { SelectAddress } from "domains/profile/components/SelectAddress";
-import { AddRecipient } from "domains/transaction/components/AddRecipient";
-import { FeeField } from "domains/transaction/components/FeeField";
-import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
-import { buildTransferData } from "domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import React, { ChangeEvent, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { assertNetwork } from "utils/assertions";
+
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { InputCounter } from "@/app/components/Input";
+import { useProfileJobs } from "@/app/hooks";
+import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
+import { SelectAddress } from "@/domains/profile/components/SelectAddress";
+import { AddRecipient } from "@/domains/transaction/components/AddRecipient";
+import { FeeField } from "@/domains/transaction/components/FeeField";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
+import { buildTransferData } from "@/domains/transaction/pages/SendTransfer/SendTransfer.helpers";
+import { assertNetwork } from "@/utils/assertions";
 
 export const FormStep = ({
 	networks,

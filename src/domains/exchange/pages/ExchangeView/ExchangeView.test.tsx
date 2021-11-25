@@ -1,8 +1,9 @@
-import { ExchangeProvider, useExchangeContext } from "domains/exchange/contexts/Exchange";
 import { createMemoryHistory } from "history";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-import { getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+
+import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { ExchangeView } from "./ExchangeView";
 

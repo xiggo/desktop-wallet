@@ -1,6 +1,7 @@
-import { PluginManager } from "plugins/core";
 import React from "react";
 import { ErrorBoundary } from "react-error-boundary";
+
+import { PluginManager } from "@/plugins/core";
 
 export const withThemeDecorator = <T extends {}>(
 	hookName: string,

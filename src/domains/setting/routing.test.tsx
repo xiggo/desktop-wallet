@@ -1,4 +1,4 @@
-import { SettingRoutes } from "domains/setting/routing";
+import { SettingRoutes } from "@/domains/setting/routing";
 
 describe("Setting routing", () => {
 	it("should return setting route object", () => {

@@ -1,4 +1,4 @@
-import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 
 interface BaseProperties {
 	networks?: any;

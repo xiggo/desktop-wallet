@@ -1,19 +1,20 @@
 import { Coins, Networks } from "@payvo/sdk";
 import { truncate } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Divider } from "app/components/Divider";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { Input, InputAddress, InputPassword } from "app/components/Input";
-import { Select } from "app/components/SelectDropdown";
-import { Toggle } from "app/components/Toggle";
-import { Tooltip } from "app/components/Tooltip";
-import { OptionsValue, useImportOptions } from "domains/wallet/hooks/use-import-options";
 import { TFunction } from "i18next";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { assertNetwork, assertString } from "utils/assertions";
+
+import { Divider } from "@/app/components/Divider";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { Input, InputAddress, InputPassword } from "@/app/components/Input";
+import { Select } from "@/app/components/SelectDropdown";
+import { Toggle } from "@/app/components/Toggle";
+import { Tooltip } from "@/app/components/Tooltip";
+import { OptionsValue, useImportOptions } from "@/domains/wallet/hooks/use-import-options";
+import { assertNetwork, assertString } from "@/utils/assertions";
 
 const validateAddress = async ({
 	findAddress,

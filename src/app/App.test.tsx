@@ -2,12 +2,13 @@
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 import { Bcrypt } from "@payvo/sdk-cryptography";
 import { Contracts, Environment } from "@payvo/sdk-profiles";
-import { buildTranslations } from "app/i18n/helpers";
-import { toasts } from "app/services";
-import { translations as errorTranslations } from "domains/error/i18n";
-import { translations as profileTranslations } from "domains/profile/i18n";
 import React from "react";
-import * as utils from "utils/electron-utils";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import { toasts } from "@/app/services";
+import { translations as errorTranslations } from "@/domains/error/i18n";
+import { translations as profileTranslations } from "@/domains/profile/i18n";
+import * as utils from "@/utils/electron-utils";
 import {
 	act,
 	env,
@@ -19,7 +20,7 @@ import {
 	render,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { App, initializeEnvironment } from "./App";
 

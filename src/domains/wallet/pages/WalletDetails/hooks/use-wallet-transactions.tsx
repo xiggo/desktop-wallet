@@ -1,7 +1,8 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { useSynchronizer } from "app/hooks";
-import { useTransaction } from "domains/transaction/hooks";
 import { useCallback, useMemo, useState } from "react";
+
+import { useSynchronizer } from "@/app/hooks";
+import { useTransaction } from "@/domains/transaction/hooks";
 
 export const useWalletTransactions = (wallet: Contracts.IReadWriteWallet) => {
 	const { fetchWalletUnconfirmedTransactions } = useTransaction();

@@ -1,4 +1,4 @@
-import { TransactionRoutes } from "domains/transaction/routing";
+import { TransactionRoutes } from "@/domains/transaction/routing";
 
 describe("Transaction routing", () => {
 	it("should return transaction route object", () => {

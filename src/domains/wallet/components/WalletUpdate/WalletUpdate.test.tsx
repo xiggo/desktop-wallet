@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
-import * as updaterHook from "app/hooks/use-updater";
 import React from "react";
-import { fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import * as updaterHook from "@/app/hooks/use-updater";
+import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 import { FirstStep } from "./Step1";
 import { SecondStep } from "./Step2";

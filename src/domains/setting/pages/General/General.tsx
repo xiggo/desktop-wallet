@@ -1,27 +1,28 @@
 import { Contracts, Helpers } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Form, FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { Icon } from "app/components/Icon";
-import { InputDefault } from "app/components/Input";
-import { ListDivided } from "app/components/ListDivided";
-import { Select } from "app/components/SelectDropdown";
-import { SelectProfileImage } from "app/components/SelectProfileImage";
-import { Toggle } from "app/components/Toggle";
-import { useEnvironmentContext } from "app/contexts";
-import { useAccentColor, useActiveProfile, useProfileJobs, useTheme, useValidation } from "app/hooks";
-import { useCurrencyOptions } from "app/hooks/use-currency-options";
-import { toasts } from "app/services";
-import { PlatformSdkChoices } from "data";
-import { ResetProfile } from "domains/profile/components/ResetProfile";
-import { DevelopmentNetwork } from "domains/setting/components/DevelopmentNetwork";
-import { SettingsWrapper } from "domains/setting/components/SettingsPageWrapper";
-import { useSettingsPrompt } from "domains/setting/hooks/use-settings-prompt";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Prompt } from "react-router-dom";
-import { setScreenshotProtection } from "utils/electron-utils";
+
+import { Button } from "@/app/components/Button";
+import { Form, FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { Icon } from "@/app/components/Icon";
+import { InputDefault } from "@/app/components/Input";
+import { ListDivided } from "@/app/components/ListDivided";
+import { Select } from "@/app/components/SelectDropdown";
+import { SelectProfileImage } from "@/app/components/SelectProfileImage";
+import { Toggle } from "@/app/components/Toggle";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useAccentColor, useActiveProfile, useProfileJobs, useTheme, useValidation } from "@/app/hooks";
+import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
+import { toasts } from "@/app/services";
+import { PlatformSdkChoices } from "@/data";
+import { ResetProfile } from "@/domains/profile/components/ResetProfile";
+import { DevelopmentNetwork } from "@/domains/setting/components/DevelopmentNetwork";
+import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
+import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
+import { setScreenshotProtection } from "@/utils/electron-utils";
 
 interface GeneralSettingsState {
 	automaticSignOutPeriod: string;

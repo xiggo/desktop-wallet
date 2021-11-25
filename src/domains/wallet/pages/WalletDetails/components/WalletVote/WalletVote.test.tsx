@@ -4,7 +4,8 @@ import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-w
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { env, fireEvent, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "utils/testing-library";
+
+import { env, fireEvent, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
 
 import { WalletVote } from "./WalletVote";
 

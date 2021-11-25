@@ -1,13 +1,14 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { EmptyBlock } from "app/components/EmptyBlock";
-import { Tab, TabList, Tabs } from "app/components/Tabs";
-import { FilterTransactions } from "domains/transaction/components/FilterTransactions";
-import { TransactionDetailModal } from "domains/transaction/components/TransactionDetailModal";
-import { TransactionTable } from "domains/transaction/components/TransactionTable";
-import { useProfileTransactions } from "domains/transaction/hooks/use-profile-transactions";
 import React, { memo, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Tab, TabList, Tabs } from "@/app/components/Tabs";
+import { FilterTransactions } from "@/domains/transaction/components/FilterTransactions";
+import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
+import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
+import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
 
 interface TransactionsProperties {
 	emptyText?: string;

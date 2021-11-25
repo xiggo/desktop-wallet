@@ -1,12 +1,13 @@
 import { BigNumber } from "@payvo/sdk-helpers";
-import { Button } from "app/components/Button";
-import { Form } from "app/components/Form";
-import { Icon } from "app/components/Icon";
-import { clickOutsideHandler } from "app/hooks";
 import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { styled } from "twin.macro";
+
+import { Button } from "@/app/components/Button";
+import { Form } from "@/app/components/Form";
+import { Icon } from "@/app/components/Icon";
+import { clickOutsideHandler } from "@/app/hooks";
 
 import { PaginationSearchFormProperties, PaginationSearchProperties } from "./Pagination.models";
 import { PaginationSearchToggleButton, PaginationSearchWrapper, SearchInput } from "./Pagination.styles";

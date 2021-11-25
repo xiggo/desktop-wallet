@@ -1,8 +1,9 @@
-import { buildTranslations } from "app/i18n/helpers";
-import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import { toasts } from "@/app/services";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { Link } from "./Link";
 

@@ -1,10 +1,11 @@
-import { Button } from "app/components/Button";
-import { Form, FormField, FormLabel } from "app/components/Form";
-import { InputPassword } from "app/components/Input";
-import { Modal } from "app/components/Modal";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Form, FormField, FormLabel } from "@/app/components/Form";
+import { InputPassword } from "@/app/components/Input";
+import { Modal } from "@/app/components/Modal";
 
 interface PasswordModalProperties {
 	title: string;

@@ -1,5 +1,6 @@
 import tw from "twin.macro";
-import { Size } from "types";
+
+import { Size } from "@/types";
 
 const baseStyle = tw`flex flex-col space-y-3 items-center justify-center transition-all duration-200 overflow-hidden`;
 

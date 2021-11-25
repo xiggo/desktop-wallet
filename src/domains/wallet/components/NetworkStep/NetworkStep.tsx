@@ -1,13 +1,14 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Alert } from "app/components/Alert";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { useEnvironmentContext } from "app/contexts";
-import { SelectNetwork } from "domains/network/components/SelectNetwork";
 import React, { useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Alert } from "@/app/components/Alert";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { useEnvironmentContext } from "@/app/contexts";
+import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 
 interface NetworkStepProperties {
 	profile: Contracts.IProfile;

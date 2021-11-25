@@ -1,21 +1,22 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { EmptyBlock } from "app/components/EmptyBlock";
-import { Header } from "app/components/Header";
-import { HeaderSearchBar } from "app/components/Header/HeaderSearchBar";
-import { Page, Section } from "app/components/Layout";
-import { Table } from "app/components/Table";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile, useNetworkOptions } from "app/hooks";
-import { CreateContact, DeleteContact, UpdateContact } from "domains/contact/components";
-import { ContactListItem } from "domains/contact/components/ContactListItem";
-import { ContactListItemOption } from "domains/contact/components/ContactListItem/ContactListItem.models";
 import querystring from "querystring";
 import React, { FC, useCallback, useEffect, useMemo, useState, VFC } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { Column } from "react-table";
-import { assertNetwork } from "utils/assertions";
+
+import { Button } from "@/app/components/Button";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Header } from "@/app/components/Header";
+import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
+import { Page, Section } from "@/app/components/Layout";
+import { Table } from "@/app/components/Table";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile, useNetworkOptions } from "@/app/hooks";
+import { CreateContact, DeleteContact, UpdateContact } from "@/domains/contact/components";
+import { ContactListItem } from "@/domains/contact/components/ContactListItem";
+import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.models";
+import { assertNetwork } from "@/utils/assertions";
 
 import { ContactsHeaderExtraProperties } from "./Contacts.contracts";
 

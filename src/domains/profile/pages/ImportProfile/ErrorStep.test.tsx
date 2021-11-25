@@ -1,6 +1,7 @@
-import { ImportError } from "domains/profile/pages/ImportProfile/ErrorStep";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { ImportError } from "@/domains/profile/pages/ImportProfile/ErrorStep";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 jest.mock("fs", () => ({
 	readFileSync: jest.fn().mockReturnValue({ toString: () => "{test:'test'}" }),

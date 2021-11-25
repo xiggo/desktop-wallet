@@ -1,6 +1,7 @@
-import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import React, { useCallback, useState } from "react";
+
+import { Tooltip } from "@/app/components/Tooltip";
 
 import { useTextTruncate } from "./use-text-truncate";
 

@@ -1,5 +1,6 @@
-import { SvgCollection } from "app/assets/svg";
 import React from "react";
+
+import { SvgCollection } from "@/app/assets/svg";
 
 interface ReviewRatingProperties {
 	rating: number;

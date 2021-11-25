@@ -1,18 +1,19 @@
-import { Button } from "app/components/Button";
-import { Form, FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { Icon } from "app/components/Icon";
-import { InputPassword } from "app/components/Input";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile, useValidation } from "app/hooks";
-import { toasts } from "app/services";
-import { PasswordRemovalConfirmModal } from "domains/setting/components/PasswordRemovalConfirmModal";
-import { SettingsWrapper } from "domains/setting/components/SettingsPageWrapper";
-import { useSettingsPrompt } from "domains/setting/hooks/use-settings-prompt";
 import React, { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Prompt } from "react-router-dom";
+
+import { Button } from "@/app/components/Button";
+import { Form, FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { Icon } from "@/app/components/Icon";
+import { InputPassword } from "@/app/components/Input";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile, useValidation } from "@/app/hooks";
+import { toasts } from "@/app/services";
+import { PasswordRemovalConfirmModal } from "@/domains/setting/components/PasswordRemovalConfirmModal";
+import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
+import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 
 interface PasswordSettingsState {
 	currentPassword: string;

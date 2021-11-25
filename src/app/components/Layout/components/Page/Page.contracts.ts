@@ -1,5 +1,6 @@
 import React from "react";
-import { NavbarVariant } from "types";
+
+import { NavbarVariant } from "@/types";
 
 export interface PageProperties {
 	navbarVariant?: NavbarVariant;

@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
-import { translations } from "domains/contact/i18n";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+
+import { translations } from "@/domains/contact/i18n";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { CreateContact } from "./CreateContact";
 

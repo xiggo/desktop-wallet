@@ -1,7 +1,8 @@
 import { act, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { render, screen } from "utils/testing-library";
+
+import { render, screen } from "@/utils/testing-library";
 
 import { FormField } from "./FormField";
 import { FormFieldConsumer } from "./useFormField";

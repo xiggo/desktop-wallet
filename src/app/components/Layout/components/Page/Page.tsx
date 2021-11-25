@@ -1,5 +1,6 @@
-import { NavigationBar } from "app/components/NavigationBar";
 import React, { FC } from "react";
+
+import { NavigationBar } from "@/app/components/NavigationBar";
 
 import { PageProperties } from "./Page.contracts";
 

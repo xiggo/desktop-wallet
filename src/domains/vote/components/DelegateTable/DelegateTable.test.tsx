@@ -1,11 +1,12 @@
 import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
-import * as useRandomNumberHook from "app/hooks/use-random-number";
-import { translations } from "app/i18n/common/i18n";
 import React from "react";
-import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+
+import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+import { translations } from "@/app/i18n/common/i18n";
+import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { DelegateTable } from "./DelegateTable";
 import { VoteDelegateProperties } from "./DelegateTable.models";

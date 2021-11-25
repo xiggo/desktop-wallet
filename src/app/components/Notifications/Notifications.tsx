@@ -1,10 +1,11 @@
-import { EmptyBlock } from "app/components/EmptyBlock";
-import { Image } from "app/components/Image";
-import { Table } from "app/components/Table";
-import { useEnvironmentContext } from "app/contexts";
-import { NotificationTransactionsTable } from "domains/transaction/components/TransactionTable/NotificationTransactionsTable";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
+
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Image } from "@/app/components/Image";
+import { Table } from "@/app/components/Table";
+import { useEnvironmentContext } from "@/app/contexts";
+import { NotificationTransactionsTable } from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
 
 import { NotificationItemProperties, NotificationsProperties } from "./contracts";
 import { useNotifications } from "./hooks/use-notifications";

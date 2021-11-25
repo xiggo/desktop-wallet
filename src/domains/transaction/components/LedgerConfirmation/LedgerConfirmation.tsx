@@ -1,8 +1,9 @@
-import { Divider } from "app/components/Divider";
-import { Image } from "app/components/Image";
-import { Spinner } from "app/components/Spinner";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Divider } from "@/app/components/Divider";
+import { Image } from "@/app/components/Image";
+import { Spinner } from "@/app/components/Spinner";
 
 interface LedgerConfirmationProperties {
 	children?: React.ReactNode;

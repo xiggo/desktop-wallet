@@ -1,8 +1,9 @@
-import { Icon } from "app/components//Icon";
-import { Button } from "app/components/Button";
-import { EmptyBlock } from "app/components/EmptyBlock";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
+
+import { Icon } from "@/app/components//Icon";
+import { Button } from "@/app/components/Button";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
 
 interface VotesEmptyProperties {
 	onCreateWallet?: () => void;

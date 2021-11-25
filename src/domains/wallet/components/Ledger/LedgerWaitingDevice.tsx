@@ -1,10 +1,11 @@
-import { Header } from "app/components/Header";
-import { Image } from "app/components/Image";
-import { Modal } from "app/components/Modal";
-import { Spinner } from "app/components/Spinner";
-import { useLedgerContext } from "app/contexts/Ledger/Ledger";
 import React, { useLayoutEffect } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Header } from "@/app/components/Header";
+import { Image } from "@/app/components/Image";
+import { Modal } from "@/app/components/Modal";
+import { Spinner } from "@/app/components/Spinner";
+import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 
 export const LedgerWaitingDeviceContent = ({ subtitle }: { subtitle?: string }) => {
 	const { t } = useTranslation();

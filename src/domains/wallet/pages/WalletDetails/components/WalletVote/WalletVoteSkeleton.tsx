@@ -1,6 +1,7 @@
-import { Circle } from "app/components/Circle";
-import { Skeleton } from "app/components/Skeleton";
 import React from "react";
+
+import { Circle } from "@/app/components/Circle";
+import { Skeleton } from "@/app/components/Skeleton";
 
 export const WalletVoteSkeleton = () => (
 	<div data-testid="WalletVote__skeleton" className="flex items-center w-full">

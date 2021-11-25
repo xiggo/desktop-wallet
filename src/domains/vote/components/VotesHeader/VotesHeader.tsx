@@ -1,13 +1,14 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Icon } from "app/components//Icon";
-import { ControlButton } from "app/components/ControlButton";
-import { Dropdown } from "app/components/Dropdown";
-import { Header } from "app/components/Header";
-import { HeaderSearchBar } from "app/components/Header/HeaderSearchBar";
-import { FilterWallets } from "domains/dashboard/components/FilterWallets";
-import { FilterOption, VotesFilter } from "domains/vote/components/VotesFilter";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Icon } from "@/app/components//Icon";
+import { ControlButton } from "@/app/components/ControlButton";
+import { Dropdown } from "@/app/components/Dropdown";
+import { Header } from "@/app/components/Header";
+import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
+import { FilterWallets } from "@/domains/dashboard/components/FilterWallets";
+import { FilterOption, VotesFilter } from "@/domains/vote/components/VotesFilter";
 
 interface VotesHeaderProperties {
 	profile: Contracts.IProfile;

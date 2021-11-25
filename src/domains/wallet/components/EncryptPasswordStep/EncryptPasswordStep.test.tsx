@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import React from "react";
-import { fireEvent, renderWithForm, screen, waitFor } from "utils/testing-library";
+
+import { fireEvent, renderWithForm, screen, waitFor } from "@/utils/testing-library";
 
 import { EncryptPasswordStep } from "./EncryptPasswordStep";
 

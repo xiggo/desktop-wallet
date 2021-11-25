@@ -1,6 +1,7 @@
-import { translations } from "domains/error/i18n";
 import React from "react";
-import { render, screen } from "utils/testing-library";
+
+import { translations } from "@/domains/error/i18n";
+import { render, screen } from "@/utils/testing-library";
 
 import { Offline } from "./Offline";
 

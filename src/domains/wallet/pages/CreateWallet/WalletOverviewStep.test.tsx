@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Trans } from "react-i18next";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "utils/testing-library";
+
+import { toasts } from "@/app/services";
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
 
 import { WalletOverviewStep } from "./WalletOverviewStep";
 

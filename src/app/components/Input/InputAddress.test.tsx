@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { EnvironmentProvider } from "app/contexts";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import { EnvironmentProvider } from "@/app/contexts";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { InputAddress, InputAddressProperties } from "./InputAddress";
 

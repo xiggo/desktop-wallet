@@ -1,7 +1,7 @@
-import { httpClient } from "app/services";
-import { HttpClient } from "app/services/HttpClient";
-import { IPluginController, PluginService } from "plugins/core";
-import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
+import { httpClient } from "@/app/services";
+import { HttpClient } from "@/app/services/HttpClient";
+import { IPluginController, PluginService } from "@/plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "@/plugins/types";
 
 export class HttpPluginService implements PluginService {
 	config(): PluginServiceConfig {

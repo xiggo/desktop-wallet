@@ -1,12 +1,13 @@
 import Transport from "@ledgerhq/hw-transport";
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { LedgerData } from "app/contexts";
-import { LedgerProvider } from "app/contexts/Ledger/Ledger";
-import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+
+import { LedgerData } from "@/app/contexts";
+import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
+import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
+import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { LedgerImportStep } from "./LedgerImportStep";
 

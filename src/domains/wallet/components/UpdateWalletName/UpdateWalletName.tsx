@@ -1,13 +1,14 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Form, FormField, FormLabel } from "app/components/Form";
-import { Input } from "app/components/Input";
-import { Modal } from "app/components/Modal";
-import { useEnvironmentContext } from "app/contexts";
-import { alias } from "domains/wallet/validations";
 import React, { useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Form, FormField, FormLabel } from "@/app/components/Form";
+import { Input } from "@/app/components/Input";
+import { Modal } from "@/app/components/Modal";
+import { useEnvironmentContext } from "@/app/contexts";
+import { alias } from "@/domains/wallet/validations";
 
 interface UpdateWalletNameProperties {
 	onAfterSave: () => void;

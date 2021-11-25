@@ -1,6 +1,7 @@
 import { renderHook } from "@testing-library/react-hooks";
-import { PlatformSdkChoices } from "data";
-import { WithProviders } from "utils/testing-library";
+
+import { PlatformSdkChoices } from "@/data";
+import { WithProviders } from "@/utils/testing-library";
 
 import { useCurrencyOptions } from "./use-currency-options";
 

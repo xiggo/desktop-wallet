@@ -1,21 +1,22 @@
 import * as PayvoIntl from "@payvo/sdk-intl";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Alert } from "app/components/Alert";
-import { OriginalButton } from "app/components/Button/OriginalButton";
-import { Card } from "app/components/Card";
-import { Checkbox } from "app/components/Checkbox";
-import { Clipboard } from "app/components/Clipboard";
-import { Icon } from "app/components/Icon";
-import { Input, InputCurrency } from "app/components/Input";
-import { Link } from "app/components/Link";
-import { Modal } from "app/components/Modal";
-import { Spinner } from "app/components/Spinner";
-import { Table, TableCell, TableRow } from "app/components/Table";
-import { TabPanel, Tabs } from "app/components/Tabs";
-import { Tooltip } from "app/components/Tooltip";
-import { Box } from "plugins/components/shared/Box";
-import { runUnknownCode } from "plugins/loader/vm";
-import { PluginRawInstance } from "plugins/types";
+
+import { Alert } from "@/app/components/Alert";
+import { OriginalButton } from "@/app/components/Button/OriginalButton";
+import { Card } from "@/app/components/Card";
+import { Checkbox } from "@/app/components/Checkbox";
+import { Clipboard } from "@/app/components/Clipboard";
+import { Icon } from "@/app/components/Icon";
+import { Input, InputCurrency } from "@/app/components/Input";
+import { Link } from "@/app/components/Link";
+import { Modal } from "@/app/components/Modal";
+import { Spinner } from "@/app/components/Spinner";
+import { Table, TableCell, TableRow } from "@/app/components/Table";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { Tooltip } from "@/app/components/Tooltip";
+import { Box } from "@/plugins/components/shared/Box";
+import { runUnknownCode } from "@/plugins/loader/vm";
+import { PluginRawInstance } from "@/plugins/types";
 
 import { IPluginController } from "./plugin.contracts";
 import { container } from "./plugin-container";

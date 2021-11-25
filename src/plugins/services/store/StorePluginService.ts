@@ -1,7 +1,8 @@
 import { Contracts, Repositories } from "@payvo/sdk-profiles";
-import { IPluginController, PluginService } from "plugins/core";
-import { PluginHooks } from "plugins/core/internals";
-import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
+
+import { IPluginController, PluginService } from "@/plugins/core";
+import { PluginHooks } from "@/plugins/core/internals";
+import { PluginServiceConfig, PluginServiceIdentifier } from "@/plugins/types";
 
 export class StorePluginService implements PluginService {
 	#profile: Contracts.IProfile | undefined;

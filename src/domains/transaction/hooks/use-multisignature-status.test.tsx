@@ -1,6 +1,7 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { useMultiSignatureStatus } from "./use-multisignature-status";
 

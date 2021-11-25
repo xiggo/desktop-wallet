@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { useTheme } from "app/hooks/use-theme";
 import electron from "electron";
-import { Theme } from "types";
-import * as utils from "utils/electron-utils";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { useTheme } from "@/app/hooks/use-theme";
+import { Theme } from "@/types";
+import * as utils from "@/utils/electron-utils";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("useTheme", () => {
 	describe("theme", () => {

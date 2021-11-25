@@ -1,14 +1,15 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Amount } from "app/components/Amount";
-import { Clipboard } from "app/components/Clipboard";
-import { Icon } from "app/components/Icon";
-import { Image } from "app/components/Image";
-import { Label } from "app/components/Label";
-import { Link } from "app/components/Link";
-import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
 import React, { useRef } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Amount } from "@/app/components/Amount";
+import { Clipboard } from "@/app/components/Clipboard";
+import { Icon } from "@/app/components/Icon";
+import { Image } from "@/app/components/Image";
+import { Label } from "@/app/components/Label";
+import { Link } from "@/app/components/Link";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 
 interface ConfirmationStepProperties {
 	exchangeTransaction?: Contracts.IExchangeTransaction;

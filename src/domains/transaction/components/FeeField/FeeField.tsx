@@ -1,12 +1,13 @@
 import { Networks } from "@payvo/sdk";
 import { isEqual } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { useDebounce, useFees } from "app/hooks";
-import { toasts } from "app/services";
-import { InputFee } from "domains/transaction/components/InputFee";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { useDebounce, useFees } from "@/app/hooks";
+import { toasts } from "@/app/services";
+import { InputFee } from "@/domains/transaction/components/InputFee";
 
 interface Properties {
 	type: string;

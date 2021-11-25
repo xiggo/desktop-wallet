@@ -1,8 +1,9 @@
 import { act, renderHook } from "@testing-library/react-hooks";
-import { translations as errorTranslations } from "domains/error/i18n";
-import { Offline } from "domains/error/pages";
 import React from "react";
-import { render, screen } from "utils/testing-library";
+
+import { translations as errorTranslations } from "@/domains/error/i18n";
+import { Offline } from "@/domains/error/pages";
+import { render, screen } from "@/utils/testing-library";
 
 import { useNetworkStatus } from "./network-status";
 

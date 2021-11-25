@@ -2,16 +2,17 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { useAccentColor, useTheme } from "app/hooks";
-import { buildTranslations } from "app/i18n/helpers";
-import { toasts } from "app/services";
-import { GeneralSettings } from "domains/setting/pages";
 import electron from "electron";
 import { createHashHistory, createMemoryHistory } from "history";
 import os from "os";
 import React from "react";
 import { Route } from "react-router-dom";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+
+import { useAccentColor, useTheme } from "@/app/hooks";
+import { buildTranslations } from "@/app/i18n/helpers";
+import { toasts } from "@/app/services";
+import { GeneralSettings } from "@/domains/setting/pages";
+import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 const translations = buildTranslations();
 

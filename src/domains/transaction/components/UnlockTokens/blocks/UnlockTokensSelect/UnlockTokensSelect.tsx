@@ -1,16 +1,17 @@
-import { Button } from "app/components/Button";
-import { EmptyBlock } from "app/components/EmptyBlock";
-import { Header } from "app/components/Header";
-import { Table } from "app/components/Table";
-import { useFees } from "app/hooks";
-import {
-	UnlockableBalance,
-	UnlockTokensFormState,
-} from "domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
-import { useUnlockTokensSelectTableColumns } from "domains/transaction/components/UnlockTokens/UnlockTokens.helpers";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Header } from "@/app/components/Header";
+import { Table } from "@/app/components/Table";
+import { useFees } from "@/app/hooks";
+import {
+	UnlockableBalance,
+	UnlockTokensFormState,
+} from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
+import { useUnlockTokensSelectTableColumns } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.helpers";
 
 import { UnlockTokensRow } from "./UnlockTokensRow";
 import { UnlockTokensSelectProperties } from "./UnlockTokensSelect.contracts";

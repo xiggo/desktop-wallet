@@ -1,9 +1,10 @@
-import { OriginalButton } from "app/components/Button/OriginalButton";
-import { Icon } from "app/components/Icon";
 import cs from "classnames";
 import React, { useRef } from "react";
 import tw, { styled } from "twin.macro";
-import { Size } from "types";
+
+import { OriginalButton } from "@/app/components/Button/OriginalButton";
+import { Icon } from "@/app/components/Icon";
+import { Size } from "@/types";
 
 import { useModal } from "./hooks";
 

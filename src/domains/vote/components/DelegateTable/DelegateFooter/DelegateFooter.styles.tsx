@@ -1,5 +1,6 @@
-import { Circle } from "app/components/Circle";
 import tw, { styled } from "twin.macro";
+
+import { Circle } from "@/app/components/Circle";
 
 const disabledColor = tw`text-theme-secondary-500 dark:text-theme-secondary-700`;
 

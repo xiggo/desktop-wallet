@@ -1,9 +1,10 @@
-import { TotalAmountBox } from "domains/transaction/components/TotalAmountBox";
-import { TransactionDetail } from "domains/transaction/components/TransactionDetail";
-import { VoteList } from "domains/vote/components/VoteList";
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
+import { VoteList } from "@/domains/vote/components/VoteList";
 
 import { SendVoteStepProperties } from "./SendVote.models";
 

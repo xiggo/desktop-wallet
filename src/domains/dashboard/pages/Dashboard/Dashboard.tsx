@@ -1,16 +1,17 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { EmptyBlock } from "app/components/EmptyBlock";
-import { Page, Section } from "app/components/Layout";
-import { useConfiguration, useEnvironmentContext } from "app/contexts";
-import { useActiveProfile } from "app/hooks";
-import { Wallets } from "domains/dashboard/components/Wallets";
-import { useLatestTransactions } from "domains/dashboard/hooks/use-latest-transactions";
-import { WelcomeModal } from "domains/profile/components/WelcomeModal";
-import { TransactionDetailModal } from "domains/transaction/components/TransactionDetailModal";
-import { TransactionTable } from "domains/transaction/components/TransactionTable";
 import React, { FC, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Page, Section } from "@/app/components/Layout";
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile } from "@/app/hooks";
+import { Wallets } from "@/domains/dashboard/components/Wallets";
+import { useLatestTransactions } from "@/domains/dashboard/hooks/use-latest-transactions";
+import { WelcomeModal } from "@/domains/profile/components/WelcomeModal";
+import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
+import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
 
 export const Dashboard: FC = () => {
 	const history = useHistory();

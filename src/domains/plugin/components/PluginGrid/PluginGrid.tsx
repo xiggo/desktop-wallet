@@ -1,15 +1,16 @@
 import { chunk } from "@payvo/sdk-helpers";
-import { DropdownOption } from "app/components/Dropdown";
-import { EmptyBlock } from "app/components/EmptyBlock";
-import { Pagination } from "app/components/Pagination";
 import cn from "classnames";
-import { BlankPluginCard, PluginCard } from "domains/plugin/components/PluginCard";
-import { PluginCardSkeleton } from "domains/plugin/components/PluginCard/PluginCardSkeleton";
-import { PluginActionsProperties } from "domains/plugin/pages";
-import { PluginCategories } from "domains/plugin/plugin.contracts";
 import { ExtendedSerializedPluginConfigurationData, SerializedPluginConfigurationData } from "plugins";
 import React, { useCallback } from "react";
 import { Trans, useTranslation } from "react-i18next";
+
+import { DropdownOption } from "@/app/components/Dropdown";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Pagination } from "@/app/components/Pagination";
+import { BlankPluginCard, PluginCard } from "@/domains/plugin/components/PluginCard";
+import { PluginCardSkeleton } from "@/domains/plugin/components/PluginCard/PluginCardSkeleton";
+import { PluginActionsProperties } from "@/domains/plugin/pages";
+import { PluginCategories } from "@/domains/plugin/plugin.contracts";
 
 type PluginGridProperties = {
 	category?: PluginCategories;

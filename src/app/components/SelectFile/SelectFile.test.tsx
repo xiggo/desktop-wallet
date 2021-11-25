@@ -3,7 +3,8 @@ import electron from "electron";
 import os from "os";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 import { SelectFile } from "./SelectFile";
 

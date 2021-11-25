@@ -1,8 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { translations } from "domains/setting/i18n";
 import React from "react";
 import * as reactHookForm from "react-hook-form";
+
+import { translations } from "@/domains/setting/i18n";
 
 import { AppearanceAccentColor } from "./AppearanceAccentColor";
 

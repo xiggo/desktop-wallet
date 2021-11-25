@@ -1,7 +1,8 @@
-import { translations } from "domains/transaction/i18n";
 import React from "react";
-import { TransactionFixture } from "tests/fixtures/transactions";
-import { render, screen } from "utils/testing-library";
+
+import { translations } from "@/domains/transaction/i18n";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { render, screen } from "@/utils/testing-library";
 
 import { MultiPaymentRecipients } from "./MultiPaymentRecipients";
 

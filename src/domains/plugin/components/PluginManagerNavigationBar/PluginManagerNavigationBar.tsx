@@ -1,10 +1,11 @@
-import { Badge } from "app/components/Badge";
-import { LayoutControls } from "app/components/LayoutControls";
-import { Tab, TabList, Tabs } from "app/components/Tabs";
-import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { styled } from "twin.macro";
+
+import { Badge } from "@/app/components/Badge";
+import { LayoutControls } from "@/app/components/LayoutControls";
+import { Tab, TabList, Tabs } from "@/app/components/Tabs";
+import { Tooltip } from "@/app/components/Tooltip";
 
 import { defaultStyle } from "./styles";
 

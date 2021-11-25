@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
-import { EnvironmentProvider } from "app/contexts/Environment";
-import { RecipientProperties } from "domains/transaction/components/SearchRecipient/SearchRecipient.contracts";
 import React from "react";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { EnvironmentProvider } from "@/app/contexts/Environment";
+import { RecipientProperties } from "@/domains/transaction/components/SearchRecipient/SearchRecipient.contracts";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { useSearchWallet } from "./use-search-wallet";
 

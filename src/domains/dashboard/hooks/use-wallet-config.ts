@@ -1,8 +1,9 @@
 import { uniq } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { useConfiguration, useEnvironmentContext } from "app/contexts";
-import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
 import { useMemo } from "react";
+
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 
 export const useWalletConfig = ({
 	profile,

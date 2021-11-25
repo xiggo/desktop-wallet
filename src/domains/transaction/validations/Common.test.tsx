@@ -3,7 +3,8 @@ import { Networks } from "@payvo/sdk";
 import { LSK } from "@payvo/sdk-lsk";
 import { renderHook } from "@testing-library/react-hooks";
 import { useTranslation } from "react-i18next";
-import { env } from "utils/testing-library";
+
+import { env } from "@/utils/testing-library";
 
 import { common } from "./Common";
 

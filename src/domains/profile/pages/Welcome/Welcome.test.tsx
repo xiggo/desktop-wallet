@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
-import { EnvironmentProvider } from "app/contexts";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { httpClient } from "app/services";
-import { translations as profileTranslations } from "domains/profile/i18n";
 import React from "react";
-import { StubStorage } from "tests/mocks";
+
+import { EnvironmentProvider } from "@/app/contexts";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { httpClient } from "@/app/services";
+import { translations as profileTranslations } from "@/domains/profile/i18n";
+import { StubStorage } from "@/tests/mocks";
 import {
 	act,
 	env,
@@ -16,7 +17,7 @@ import {
 	render,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { Welcome } from "./Welcome";
 

@@ -1,15 +1,16 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Modal } from "app/components/Modal";
-import { TabPanel, Tabs } from "app/components/Tabs";
-import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import { ExtendedSerializedPluginConfigurationData, SerializedPluginConfigurationData } from "plugins";
-import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
-import { assertString } from "utils/assertions";
+
+import { Button } from "@/app/components/Button";
+import { Modal } from "@/app/components/Modal";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { toasts } from "@/app/services";
+import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
+import { assertString } from "@/utils/assertions";
 
 import { FirstStep } from "./Step1";
 import { SecondStep } from "./Step2";

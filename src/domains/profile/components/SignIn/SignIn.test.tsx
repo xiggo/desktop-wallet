@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
-import { translations } from "domains/profile/i18n";
 import React from "react";
+
+import { translations } from "@/domains/profile/i18n";
 import {
 	act,
 	env,
@@ -11,7 +12,7 @@ import {
 	render,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { SignIn } from "./SignIn";
 

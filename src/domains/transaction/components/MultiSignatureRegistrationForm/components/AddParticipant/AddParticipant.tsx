@@ -1,12 +1,13 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { FormField, FormLabel, SubForm } from "app/components/Form";
-import { useWalletAlias } from "app/hooks";
-import { SelectRecipient } from "domains/profile/components/SelectRecipient";
-import { RecipientList } from "domains/transaction/components/RecipientList";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { FormField, FormLabel, SubForm } from "@/app/components/Form";
+import { useWalletAlias } from "@/app/hooks";
+import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
+import { RecipientList } from "@/domains/transaction/components/RecipientList";
 
 export interface Participant {
 	address: string;

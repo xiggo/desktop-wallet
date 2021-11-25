@@ -1,4 +1,4 @@
-import { VoteRoutes } from "domains/vote/routing";
+import { VoteRoutes } from "@/domains/vote/routing";
 
 describe("Vote routing", () => {
 	it("should return vote route object", () => {

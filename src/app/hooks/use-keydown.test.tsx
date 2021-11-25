@@ -1,7 +1,8 @@
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { useKeydown } from "app/hooks/use-keydown";
 import React from "react";
+
+import { useKeydown } from "@/app/hooks/use-keydown";
 
 describe("useKeydown", () => {
 	const Component = (properties: { keyName: string; callback: () => void }) => {

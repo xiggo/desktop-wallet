@@ -1,6 +1,7 @@
 import { DateTime } from "@payvo/sdk-intl";
 import React from "react";
-import { render } from "utils/testing-library";
+
+import { render } from "@/utils/testing-library";
 
 import { TransactionTimestamp } from "./TransactionTimestamp";
 

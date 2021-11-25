@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { LedgerProvider } from "app/contexts";
-import { IPluginController, PluginController, PluginManager } from "plugins/core";
-import { PluginAPI } from "plugins/types";
 import React from "react";
 import { Route } from "react-router-dom";
+
+import { LedgerProvider } from "@/app/contexts";
+import { IPluginController, PluginController, PluginManager } from "@/plugins/core";
+import { PluginAPI } from "@/plugins/types";
 import {
 	env,
 	fireEvent,
@@ -14,7 +15,7 @@ import {
 	render,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { MessagePluginService } from "./MessagePluginService";
 

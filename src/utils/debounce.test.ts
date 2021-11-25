@@ -1,5 +1,5 @@
-import { debounceAsync } from "utils/debounce";
-import { waitFor } from "utils/testing-library";
+import { debounceAsync } from "@/utils/debounce";
+import { waitFor } from "@/utils/testing-library";
 
 describe("debounce", () => {
 	it("debounceAsync", async () => {

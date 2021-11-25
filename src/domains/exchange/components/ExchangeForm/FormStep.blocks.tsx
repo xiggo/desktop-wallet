@@ -1,10 +1,11 @@
-import { Amount } from "app/components/Amount";
-import { Button } from "app/components/Button";
-import { Circle } from "app/components/Circle";
-import { Skeleton } from "app/components/Skeleton";
-import { CurrencyData } from "domains/exchange/contracts";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Amount } from "@/app/components/Amount";
+import { Button } from "@/app/components/Button";
+import { Circle } from "@/app/components/Circle";
+import { Skeleton } from "@/app/components/Skeleton";
+import { CurrencyData } from "@/domains/exchange/contracts";
 
 interface CurrencyIconProperties {
 	image?: string;

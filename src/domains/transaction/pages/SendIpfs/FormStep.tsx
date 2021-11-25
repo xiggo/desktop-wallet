@@ -1,13 +1,14 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { InputDefault } from "app/components/Input";
-import { useFees } from "app/hooks";
-import { FeeField } from "domains/transaction/components/FeeField";
-import { TransactionNetwork, TransactionSender } from "domains/transaction/components/TransactionDetail";
 import React, { useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { InputDefault } from "@/app/components/Input";
+import { useFees } from "@/app/hooks";
+import { FeeField } from "@/domains/transaction/components/FeeField";
+import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 
 const FormStep = ({ profile, wallet }: { profile: Contracts.IProfile; wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();

@@ -1,12 +1,13 @@
-import { Circle } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
+import React from "react";
+import { useTranslation } from "react-i18next";
+
+import { Circle } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
-} from "domains/transaction/components/TransactionDetail/TransactionDetail";
-import { useTransactionTypes } from "domains/transaction/hooks/use-transaction-types";
-import React from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
+import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 
 type TransactionSenderProperties = {
 	type: string;

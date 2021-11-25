@@ -1,6 +1,7 @@
-import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { styled } from "twin.macro";
+
+import { Tooltip } from "@/app/components/Tooltip";
 
 type Properties = {
 	text: string;

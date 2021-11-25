@@ -1,5 +1,6 @@
-import { LayoutControls } from "app/components/LayoutControls";
 import React from "react";
+
+import { LayoutControls } from "@/app/components/LayoutControls";
 
 interface PluginManagerControlsProperties {
 	onSelectGridView: any;

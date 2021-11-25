@@ -2,7 +2,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "utils/testing-library";
+
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
 
 import { AddressTable } from "./AddressTable";
 

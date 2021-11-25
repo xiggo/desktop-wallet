@@ -1,7 +1,8 @@
 import { DTO } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
 
 export enum MultiSignatureDetailStep {
 	SummaryStep = 1,

@@ -1,7 +1,8 @@
-import { Image } from "app/components/Image";
-import { Page, Section } from "app/components/Layout";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Image } from "@/app/components/Image";
+import { Page, Section } from "@/app/components/Layout";
 
 export const Offline = () => {
 	const { t } = useTranslation();

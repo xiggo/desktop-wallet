@@ -1,5 +1,6 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
+
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export interface AddRecipientProperties {
 	disableMultiPaymentOption?: boolean;

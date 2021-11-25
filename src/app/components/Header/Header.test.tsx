@@ -1,6 +1,7 @@
-import { Button } from "app/components/Button";
 import React from "react";
-import { render, screen } from "utils/testing-library";
+
+import { Button } from "@/app/components/Button";
+import { render, screen } from "@/utils/testing-library";
 
 import { Header } from "./Header";
 

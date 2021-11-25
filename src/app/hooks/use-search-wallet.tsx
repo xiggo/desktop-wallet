@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { RecipientProperties } from "domains/transaction/components/SearchRecipient/SearchRecipient.contracts";
 import { useCallback, useMemo, useState } from "react";
+
+import { RecipientProperties } from "@/domains/transaction/components/SearchRecipient/SearchRecipient.contracts";
 
 import { useWalletAlias } from "./use-wallet-alias";
 

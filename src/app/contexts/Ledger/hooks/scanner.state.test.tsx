@@ -1,6 +1,7 @@
 import { act, renderHook } from "@testing-library/react-hooks";
 import { useReducer } from "react";
-import { waitFor } from "utils/testing-library";
+
+import { waitFor } from "@/utils/testing-library";
 
 import { scannerReducer } from "./scanner.state";
 

@@ -1,14 +1,15 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Header } from "app/components/Header";
-import { Image } from "app/components/Image";
+import React from "react";
+import { useTranslation } from "react-i18next";
+
+import { Header } from "@/app/components/Header";
+import { Image } from "@/app/components/Image";
 import {
 	TransactionExplorerLink,
 	TransactionNetwork,
 	TransactionSender,
 	TransactionType,
-} from "domains/transaction/components/TransactionDetail";
-import React from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail";
 
 import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 

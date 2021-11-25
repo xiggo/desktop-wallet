@@ -1,17 +1,18 @@
 import { Networks } from "@payvo/sdk";
 import { BlockfolioSignal as FTXSignal } from "@payvo/sdk-news";
-import { Card } from "app/components/Card";
-import { Divider } from "app/components/Divider";
-import { Label } from "app/components/Label";
-import { Link } from "app/components/Link";
-import { TimeAgo } from "app/components/TimeAgo";
-import { useEnvironmentContext } from "app/contexts";
-import { NetworkIcon } from "domains/network/components/NetworkIcon";
-import { AvailableNewsCategories } from "domains/news/news.contracts";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import Linkify from "react-linkify";
-import { assertNetwork } from "utils/assertions";
+
+import { Card } from "@/app/components/Card";
+import { Divider } from "@/app/components/Divider";
+import { Label } from "@/app/components/Label";
+import { Link } from "@/app/components/Link";
+import { TimeAgo } from "@/app/components/TimeAgo";
+import { useEnvironmentContext } from "@/app/contexts";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { AvailableNewsCategories } from "@/domains/news/news.contracts";
+import { assertNetwork } from "@/utils/assertions";
 
 type Properties = {
 	coverImage?: string;

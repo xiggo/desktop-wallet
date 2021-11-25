@@ -1,10 +1,11 @@
 import { ARK } from "@payvo/sdk-ark";
 import { Contracts } from "@payvo/sdk-profiles";
-import { httpClient } from "app/services";
 import { createMemoryHistory } from "history";
 import React from "react";
-import { StubStorage } from "tests/mocks";
-import { env, fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import { httpClient } from "@/app/services";
+import { StubStorage } from "@/tests/mocks";
+import { env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 import { EnvironmentProvider, useEnvironmentContext } from "./Environment";
 

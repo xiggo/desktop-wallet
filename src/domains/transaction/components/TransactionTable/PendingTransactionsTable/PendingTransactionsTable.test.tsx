@@ -1,10 +1,11 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { buildTranslations } from "app/i18n/helpers";
-import { PendingTransactions } from "domains/transaction/components/TransactionTable/PendingTransactionsTable";
 import nock from "nock";
 import React from "react";
-import * as utils from "utils/electron-utils";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import { PendingTransactions } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable";
+import * as utils from "@/utils/electron-utils";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { PendingTransaction } from "./PendingTransactionsTable.contracts";
 

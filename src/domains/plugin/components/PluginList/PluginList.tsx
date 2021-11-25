@@ -1,10 +1,11 @@
 import { chunk } from "@payvo/sdk-helpers";
-import { EmptyBlock } from "app/components/EmptyBlock";
-import { Pagination } from "app/components/Pagination";
-import { Table } from "app/components/Table";
-import { PluginListItem } from "domains/plugin/components/PluginListItem";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
+
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Pagination } from "@/app/components/Pagination";
+import { Table } from "@/app/components/Table";
+import { PluginListItem } from "@/domains/plugin/components/PluginListItem";
 
 interface PluginListProperties {
 	className?: string;

@@ -1,12 +1,13 @@
 import { DTO } from "@payvo/sdk-profiles";
+import React, { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+
 import {
 	TransactionAmount,
 	TransactionFee,
 	TransactionTimestamp,
-} from "domains/transaction/components/TransactionDetail";
-import { TransactionSuccessful } from "domains/transaction/components/TransactionSuccessful";
-import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 interface UnlockTokensSummaryProperties {
 	transaction: DTO.ExtendedSignedTransactionData;

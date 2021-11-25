@@ -1,9 +1,10 @@
-import { Button } from "app/components/Button";
-import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { ButtonVariant } from "types";
+
+import { Button } from "@/app/components/Button";
+import { Tooltip } from "@/app/components/Tooltip";
+import { ButtonVariant } from "@/types";
 
 interface VoteButtonProperties {
 	index: number;

@@ -1,15 +1,16 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { buildTranslations } from "app/i18n/helpers";
-import { toasts } from "app/services";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import filteredFixture from "tests/fixtures/news/filtered.json";
-import page1Fixture from "tests/fixtures/news/page-1.json";
-import page2Fixture from "tests/fixtures/news/page-2.json";
-import { fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
+
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { buildTranslations } from "@/app/i18n/helpers";
+import { toasts } from "@/app/services";
+import filteredFixture from "@/tests/fixtures/news/filtered.json";
+import page1Fixture from "@/tests/fixtures/news/page-1.json";
+import page2Fixture from "@/tests/fixtures/news/page-2.json";
+import { fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { News } from "./News";
 

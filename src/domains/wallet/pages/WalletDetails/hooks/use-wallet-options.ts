@@ -1,8 +1,9 @@
 import { Enums } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { DropdownOptionGroup } from "app/components/Dropdown";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+
+import { DropdownOptionGroup } from "@/app/components/Dropdown";
 
 export const useWalletOptions = (wallet: Contracts.IReadWriteWallet) => {
 	const { t } = useTranslation();

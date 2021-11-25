@@ -5,22 +5,23 @@ import { TransportReplayer } from "@ledgerhq/hw-transport-mocker/lib/openTranspo
 import { ARK } from "@payvo/sdk-ark";
 import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { render, RenderResult } from "@testing-library/react";
-import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
-import { useProfileSynchronizer } from "app/hooks/use-profile-synchronizer";
-import { i18n } from "app/i18n";
-import { httpClient } from "app/services";
 import { createMemoryHistory } from "history";
 import nock from "nock";
-import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
-import { PluginManager } from "plugins/core/plugin-manager";
 import React from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { I18nextProvider } from "react-i18next";
 import { Router } from "react-router-dom";
-import delegate from "tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
-import fixtureData from "tests/fixtures/env/storage.json";
-import TestingPasswords from "tests/fixtures/env/testing-passwords.json";
-import { StubStorage } from "tests/mocks";
+
+import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
+import { useProfileSynchronizer } from "@/app/hooks/use-profile-synchronizer";
+import { i18n } from "@/app/i18n";
+import { httpClient } from "@/app/services";
+import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
+import { PluginManager } from "@/plugins/core/plugin-manager";
+import delegate from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib.json";
+import fixtureData from "@/tests/fixtures/env/storage.json";
+import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
+import { StubStorage } from "@/tests/mocks";
 
 const ProfileSynchronizer = ({ children }: { children?: React.ReactNode }) => {
 	const { profile, profileIsSyncing } = useProfileSynchronizer();

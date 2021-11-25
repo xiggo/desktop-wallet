@@ -1,11 +1,12 @@
-import { Badge } from "app/components/Badge";
-import { Button } from "app/components/Button";
-import { Dropdown, DropdownOption } from "app/components/Dropdown";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Badge } from "@/app/components/Badge";
+import { Button } from "@/app/components/Button";
+import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
 
 interface PluginDropdownProperties {
 	plugin: any;

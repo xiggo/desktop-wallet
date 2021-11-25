@@ -1,4 +1,4 @@
-import { PluginServiceConfig } from "plugins/types";
+import { PluginServiceConfig } from "@/plugins/types";
 
 import { IPluginController, IPluginServiceData, PluginService } from "./plugin.contracts";
 

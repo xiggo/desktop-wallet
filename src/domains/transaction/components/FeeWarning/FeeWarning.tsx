@@ -1,11 +1,12 @@
-import { Button } from "app/components/Button";
-import { Checkbox } from "app/components/Checkbox";
-import { FormField } from "app/components/Form";
-import { Image } from "app/components/Image";
-import { Modal } from "app/components/Modal";
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Checkbox } from "@/app/components/Checkbox";
+import { FormField } from "@/app/components/Form";
+import { Image } from "@/app/components/Image";
+import { Modal } from "@/app/components/Modal";
 
 export enum FeeWarningVariant {
 	Low = "LOW",

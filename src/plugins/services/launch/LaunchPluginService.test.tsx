@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { IPluginController, PluginController, PluginManager } from "plugins/core";
-import { PluginAPI } from "plugins/types";
 import React from "react";
-import { env, render } from "utils/testing-library";
+
+import { IPluginController, PluginController, PluginManager } from "@/plugins/core";
+import { PluginAPI } from "@/plugins/types";
+import { env, render } from "@/utils/testing-library";
 
 import { LaunchRender } from "./LaunchPluginComponent";
 import { LaunchPluginService } from "./LaunchPluginService";

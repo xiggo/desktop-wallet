@@ -1,18 +1,19 @@
 import { Services } from "@payvo/sdk";
 import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
-import { OriginalButton as Button } from "app/components/Button/OriginalButton";
-import { Clipboard } from "app/components/Clipboard";
-import { Form } from "app/components/Form";
-import { Icon } from "app/components/Icon";
-import { Modal } from "app/components/Modal";
-import { TabPanel, Tabs } from "app/components/Tabs";
-import { useLedgerContext } from "app/contexts";
-import { toasts } from "app/services";
-import { isNoDeviceError, isRejectionError } from "domains/transaction/utils";
-import { LedgerWaitingApp, LedgerWaitingDevice } from "domains/wallet/components/Ledger";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { OriginalButton as Button } from "@/app/components/Button/OriginalButton";
+import { Clipboard } from "@/app/components/Clipboard";
+import { Form } from "@/app/components/Form";
+import { Icon } from "@/app/components/Icon";
+import { Modal } from "@/app/components/Modal";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { useLedgerContext } from "@/app/contexts";
+import { toasts } from "@/app/services";
+import { isNoDeviceError, isRejectionError } from "@/domains/transaction/utils";
+import { LedgerWaitingApp, LedgerWaitingDevice } from "@/domains/wallet/components/Ledger";
 
 import { FormStep } from "./FormStep";
 import { useMessageSigner } from "./hooks/use-message-signer";

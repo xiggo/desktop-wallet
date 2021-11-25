@@ -1,8 +1,9 @@
-import { Circle } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
-import { PluginImage } from "domains/plugin/components/PluginImage";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Circle } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
+import { PluginImage } from "@/domains/plugin/components/PluginImage";
 
 interface Properties {
 	plugin: any;

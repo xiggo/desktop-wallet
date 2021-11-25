@@ -1,6 +1,7 @@
-import { Table } from "app/components/Table";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Table } from "@/app/components/Table";
 
 import { NotificationTransactionSkeletonRow } from "./NotificationTransactionSkeletonRow";
 

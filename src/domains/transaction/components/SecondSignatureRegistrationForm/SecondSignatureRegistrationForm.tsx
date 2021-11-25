@@ -1,9 +1,10 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { TabPanel, Tabs } from "app/components/Tabs";
-import { TransactionFee } from "domains/transaction/components/TransactionDetail";
-import { SendRegistrationForm } from "domains/transaction/pages/SendRegistration/SendRegistration.models";
-import { handleBroadcastError } from "domains/transaction/utils";
 import React from "react";
+
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { TransactionFee } from "@/domains/transaction/components/TransactionDetail";
+import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.models";
+import { handleBroadcastError } from "@/domains/transaction/utils";
 
 import { BackupStep } from "./BackupStep";
 import { GenerationStep } from "./GenerationStep";

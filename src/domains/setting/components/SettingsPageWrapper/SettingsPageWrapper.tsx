@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Page, Section } from "app/components/Layout";
-import { SideBar } from "app/components/SideBar";
-import { useSettingsMenu } from "domains/setting/hooks/use-settings-menu";
 import React from "react";
 import { useHistory } from "react-router-dom";
+
+import { Page, Section } from "@/app/components/Layout";
+import { SideBar } from "@/app/components/SideBar";
+import { useSettingsMenu } from "@/domains/setting/hooks/use-settings-menu";
 
 type ActiveSettings = "general" | "export" | "password" | "appearance";
 

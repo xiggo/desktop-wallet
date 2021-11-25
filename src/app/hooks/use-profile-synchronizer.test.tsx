@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { act, renderHook } from "@testing-library/react-hooks";
-import { ConfigurationProvider, EnvironmentProvider, useConfiguration } from "app/contexts";
-import { toasts } from "app/services";
 import electron from "electron";
 import { createMemoryHistory } from "history";
-import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
 import { Route } from "react-router-dom";
+
+import { ConfigurationProvider, EnvironmentProvider, useConfiguration } from "@/app/contexts";
+import { toasts } from "@/app/services";
+import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
 import {
 	act as renderAct,
 	env,
@@ -18,7 +19,7 @@ import {
 	screen,
 	syncDelegates,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import {
 	useProfileJobs,

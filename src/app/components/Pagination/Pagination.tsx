@@ -1,9 +1,10 @@
-import { Button } from "app/components/Button";
-import { Icon } from "app/components/Icon";
 import cn from "classnames";
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { styled } from "twin.macro";
+
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
 
 import { PaginationProperties } from "./Pagination.models";
 import { PaginationButton, PaginationWrapper } from "./Pagination.styles";

@@ -1,7 +1,8 @@
-import { Card } from "app/components/Card";
 import cn from "classnames";
-import { Exchange } from "domains/exchange/contracts";
 import React from "react";
+
+import { Card } from "@/app/components/Card";
+import { Exchange } from "@/domains/exchange/contracts";
 
 interface ExchangeCardProperties {
 	exchange: Exchange;

@@ -1,6 +1,7 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { useWalletAlias } from "app/hooks/use-wallet-alias";
 import React, { useMemo } from "react";
+
+import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
 
 import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";

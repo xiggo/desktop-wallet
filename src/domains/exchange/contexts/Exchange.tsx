@@ -1,8 +1,9 @@
 import { camelCase } from "@payvo/sdk-helpers";
-import { httpClient } from "app/services";
-import { Exchange } from "domains/exchange/contracts";
-import { exchangeHost, ExchangeService } from "domains/exchange/services/exchange.service";
 import React, { useCallback, useMemo, useState } from "react";
+
+import { httpClient } from "@/app/services";
+import { Exchange } from "@/domains/exchange/contracts";
+import { exchangeHost, ExchangeService } from "@/domains/exchange/services/exchange.service";
 
 interface Properties {
 	children: React.ReactNode;

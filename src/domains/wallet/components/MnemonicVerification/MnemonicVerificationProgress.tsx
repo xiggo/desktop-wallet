@@ -1,7 +1,8 @@
-import { Icon } from "app/components/Icon";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
+
+import { Icon } from "@/app/components/Icon";
 
 import { OptionButton } from "./MnemonicVerificationOptions";
 import { getOrdinalIndicator } from "./utils/evaluateOrdinalIndicator";

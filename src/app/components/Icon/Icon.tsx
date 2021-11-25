@@ -1,8 +1,9 @@
 // Assets
-import { SvgCollection } from "app/assets/svg";
 import React from "react";
 import styled from "styled-components";
-import { Size } from "types";
+
+import { SvgCollection } from "@/app/assets/svg";
+import { Size } from "@/types";
 
 type Properties = {
 	name: string;

@@ -1,15 +1,16 @@
 import { Networks } from "@payvo/sdk";
-import { Alert } from "app/components/Alert";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { Image } from "app/components/Image";
-import { Spinner } from "app/components/Spinner";
-import { useLedgerContext } from "app/contexts/Ledger";
-import { useActiveProfile } from "app/hooks";
-import { SelectNetwork } from "domains/network/components/SelectNetwork";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Alert } from "@/app/components/Alert";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { Image } from "@/app/components/Image";
+import { Spinner } from "@/app/components/Spinner";
+import { useLedgerContext } from "@/app/contexts/Ledger";
+import { useActiveProfile } from "@/app/hooks";
+import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 
 const ConnectionContent = ({
 	error,

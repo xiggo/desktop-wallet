@@ -1,14 +1,15 @@
-import { Button } from "app/components/Button";
-import { Divider } from "app/components/Divider";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
-import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
-import { PluginDropdown } from "domains/plugin/components/PluginDropdown";
-import { PluginImage } from "domains/plugin/components/PluginImage";
-import { PluginCategories } from "domains/plugin/plugin.contracts";
-import { PluginUpdateStatus } from "plugins/types";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Divider } from "@/app/components/Divider";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
+import { OfficialPluginIcon } from "@/domains/plugin/components/OfficialPluginIcon";
+import { PluginDropdown } from "@/domains/plugin/components/PluginDropdown";
+import { PluginImage } from "@/domains/plugin/components/PluginImage";
+import { PluginCategories } from "@/domains/plugin/plugin.contracts";
+import { PluginUpdateStatus } from "@/plugins/types";
 
 import { PluginSpecs } from "./components/PluginSpecs";
 

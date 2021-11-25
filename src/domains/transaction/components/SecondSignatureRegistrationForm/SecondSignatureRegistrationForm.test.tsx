@@ -3,14 +3,15 @@ import { BIP39 } from "@payvo/sdk-cryptography";
 import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import { within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { toasts } from "app/services";
-import { translations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Route, Router } from "react-router-dom";
-import secondSignatureFixture from "tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
-import * as utils from "utils/electron-utils";
+
+import { toasts } from "@/app/services";
+import { translations } from "@/domains/transaction/i18n";
+import secondSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
+import * as utils from "@/utils/electron-utils";
 import {
 	env,
 	fireEvent,
@@ -20,7 +21,7 @@ import {
 	renderWithForm,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
 

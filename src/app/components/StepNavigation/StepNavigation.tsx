@@ -1,7 +1,8 @@
-import { Button } from "app/components/Button";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
+
+import { Button } from "@/app/components/Button";
 
 interface StepNavigationProperties {
 	onBackClick: () => void;

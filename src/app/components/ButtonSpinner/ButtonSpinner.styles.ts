@@ -1,7 +1,8 @@
 import { FlattenSimpleInterpolation } from "styled-components";
 import tw, { css, TwStyle } from "twin.macro";
-import { ButtonVariant } from "types";
-import { shouldUseDarkColors } from "utils/electron-utils";
+
+import { ButtonVariant } from "@/types";
+import { shouldUseDarkColors } from "@/utils/electron-utils";
 
 const baseStyle = tw`w-6 h-6 border border-4 rounded-full animate-spin`;
 

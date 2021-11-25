@@ -1,7 +1,8 @@
-import { ControlButton } from "app/components/ControlButton";
-import { Icon } from "app/components/Icon";
 import cn from "classnames";
 import React from "react";
+
+import { ControlButton } from "@/app/components/ControlButton";
+import { Icon } from "@/app/components/Icon";
 
 interface LayoutControlsProperties {
 	onSelectGridView: () => void;

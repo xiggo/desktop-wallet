@@ -1,9 +1,10 @@
-import { Avatar } from "app/components/Avatar";
-import { Circle } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
 import cn from "classnames";
-import { useTransactionTypes } from "domains/transaction/hooks/use-transaction-types";
 import React from "react";
+
+import { Avatar } from "@/app/components/Avatar";
+import { Circle } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
+import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
 
 interface Properties {
 	type: string;

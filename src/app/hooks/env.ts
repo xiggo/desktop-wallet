@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { useEnvironmentContext } from "app/contexts/Environment";
 import { useMemo } from "react";
 import { useHistory, useParams } from "react-router-dom";
+
+import { useEnvironmentContext } from "@/app/contexts/Environment";
 
 export const useActiveProfile = (): Contracts.IProfile => {
 	const history = useHistory();

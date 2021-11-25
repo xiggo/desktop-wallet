@@ -1,10 +1,11 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { Amount } from "app/components/Amount";
-import { Avatar } from "app/components/Avatar";
 import React from "react";
 import tw, { styled } from "twin.macro";
-import { assertReadOnlyWallet } from "utils/assertions";
+
+import { Address } from "@/app/components/Address";
+import { Amount } from "@/app/components/Amount";
+import { Avatar } from "@/app/components/Avatar";
+import { assertReadOnlyWallet } from "@/utils/assertions";
 
 interface VoteListProperties {
 	votes: Contracts.VoteRegistryItem[] | Contracts.IReadOnlyWallet[];

@@ -1,12 +1,13 @@
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
-import { toasts } from "app/services";
 import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink, LinkProps } from "react-router-dom";
 import tw, { styled } from "twin.macro";
-import { openExternal } from "utils/electron-utils";
+
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
+import { toasts } from "@/app/services";
+import { openExternal } from "@/utils/electron-utils";
 
 const AnchorStyled = styled.a(() => [
 	tw`relative inline-block space-x-2 font-semibold text-theme-primary-600`,

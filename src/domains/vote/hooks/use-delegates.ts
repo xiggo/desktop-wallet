@@ -1,7 +1,8 @@
 import { Contracts, Environment } from "@payvo/sdk-profiles";
-import { FilterOption } from "domains/vote/components/VotesFilter";
 import { useCallback, useMemo, useState } from "react";
-import { assertWallet } from "utils/assertions";
+
+import { FilterOption } from "@/domains/vote/components/VotesFilter";
+import { assertWallet } from "@/utils/assertions";
 
 export const useDelegates = ({
 	env,

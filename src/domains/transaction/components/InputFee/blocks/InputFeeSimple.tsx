@@ -1,11 +1,12 @@
-import { Amount } from "app/components/Amount";
-import { ButtonGroup, ButtonGroupOption } from "app/components/ButtonGroup";
-import { Skeleton } from "app/components/Skeleton";
+import React from "react";
+
+import { Amount } from "@/app/components/Amount";
+import { ButtonGroup, ButtonGroupOption } from "@/app/components/ButtonGroup";
+import { Skeleton } from "@/app/components/Skeleton";
 import {
 	InputFeeSimpleProperties,
 	InputFeeSimpleValue,
-} from "domains/transaction/components/InputFee/InputFee.contracts";
-import React from "react";
+} from "@/domains/transaction/components/InputFee/InputFee.contracts";
 
 export const InputFeeSimple: React.FC<InputFeeSimpleProperties> = ({
 	options,

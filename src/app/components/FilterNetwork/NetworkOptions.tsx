@@ -1,8 +1,9 @@
-import { Badge } from "app/components/Badge";
-import { Circle } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
 import React from "react";
+
+import { Badge } from "@/app/components/Badge";
+import { Circle } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
 
 import { FilterOption } from "./models";
 

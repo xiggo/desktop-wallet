@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Theme } from "types";
-import { setThemeSource, shouldUseDarkColors } from "utils/electron-utils";
+
+import { Theme } from "@/types";
+import { setThemeSource, shouldUseDarkColors } from "@/utils/electron-utils";
 
 export type ViewingModeType = "light" | "dark";
 

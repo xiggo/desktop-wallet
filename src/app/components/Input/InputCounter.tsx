@@ -1,7 +1,8 @@
-import { useFormField } from "app/components/Form/useFormField";
-import { Input } from "app/components/Input";
 import cn from "classnames";
 import React, { useState } from "react";
+
+import { useFormField } from "@/app/components/Form/useFormField";
+import { Input } from "@/app/components/Input";
 
 type Properties = {
 	maxLength?: number;

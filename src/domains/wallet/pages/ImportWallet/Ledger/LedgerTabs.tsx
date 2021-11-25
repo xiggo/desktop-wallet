@@ -1,19 +1,20 @@
 import { Enums } from "@payvo/sdk";
 import { uniq } from "@payvo/sdk-helpers";
-import { Button } from "app/components/Button";
-import { Icon } from "app/components/Icon";
-import { StepIndicator } from "app/components/StepIndicator";
-import { TabPanel, Tabs } from "app/components/Tabs";
-import { LedgerData, useLedgerContext } from "app/contexts";
-import { useActiveProfile } from "app/hooks";
-import { useKeydown } from "app/hooks/use-keydown";
-import { useWalletConfig } from "domains/dashboard/hooks";
-import { NetworkStep } from "domains/wallet/components/NetworkStep";
 import React, { useCallback, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { assertWallet } from "utils/assertions";
+
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
+import { StepIndicator } from "@/app/components/StepIndicator";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { LedgerData, useLedgerContext } from "@/app/contexts";
+import { useActiveProfile } from "@/app/hooks";
+import { useKeydown } from "@/app/hooks/use-keydown";
+import { useWalletConfig } from "@/domains/dashboard/hooks";
+import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
+import { assertWallet } from "@/utils/assertions";
 
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
 import { LedgerImportStep } from "./LedgerImportStep";

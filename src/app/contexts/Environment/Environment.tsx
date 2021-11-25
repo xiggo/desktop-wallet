@@ -1,6 +1,7 @@
 import { Environment } from "@payvo/sdk-profiles";
 import React from "react";
-import { isE2E } from "utils/test-helpers";
+
+import { isE2E } from "@/utils/test-helpers";
 
 interface Context {
 	env: Environment;

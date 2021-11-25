@@ -1,9 +1,10 @@
 import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile } from "app/hooks";
-import { FeeWarningVariant } from "domains/transaction/components/FeeWarning";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { TransactionFees } from "types";
+
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile } from "@/app/hooks";
+import { FeeWarningVariant } from "@/domains/transaction/components/FeeWarning";
+import { TransactionFees } from "@/types";
 
 type CallbackFunction = () => void;
 

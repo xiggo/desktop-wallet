@@ -1,10 +1,11 @@
 import { Networks } from "@payvo/sdk";
-import { Circle, CircleProps } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import React from "react";
-import { Size } from "types";
+
+import { Circle, CircleProps } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
+import { Size } from "@/types";
 
 interface NetworkIconProperties {
 	network?: Networks.Network;

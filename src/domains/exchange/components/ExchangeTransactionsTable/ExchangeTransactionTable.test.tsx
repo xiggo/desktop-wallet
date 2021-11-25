@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { ExchangeProvider } from "domains/exchange/contexts/Exchange";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, screen, within } from "utils/testing-library";
+
+import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
+import { env, fireEvent, getDefaultProfileId, render, screen, within } from "@/utils/testing-library";
 
 import { ExchangeTransactionsTable } from "./ExchangeTransactionsTable";
 

@@ -2,11 +2,12 @@ import { ARK } from "@payvo/sdk-ark";
 import { BigNumber } from "@payvo/sdk-helpers";
 import { LSK } from "@payvo/sdk-lsk";
 import { renderHook } from "@testing-library/react-hooks";
-import { EnvironmentProvider } from "app/contexts";
-import { httpClient } from "app/services";
 import React from "react";
-import { StubStorage } from "tests/mocks";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { EnvironmentProvider } from "@/app/contexts";
+import { httpClient } from "@/app/services";
+import { StubStorage } from "@/tests/mocks";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { useFees } from "./use-fees";
 

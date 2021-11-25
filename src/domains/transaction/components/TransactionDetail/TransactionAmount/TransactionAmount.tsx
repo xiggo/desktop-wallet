@@ -1,13 +1,14 @@
-import { Amount, AmountLabel } from "app/components/Amount";
-import { Circle } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
+import React from "react";
+import { useTranslation } from "react-i18next";
+
+import { Amount, AmountLabel } from "@/app/components/Amount";
+import { Circle } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
-} from "domains/transaction/components/TransactionDetail/TransactionDetail";
-import React from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 
 type TransactionAmountProperties = {
 	amount: number;

@@ -1,4 +1,4 @@
-import { ExchangeView } from "domains/exchange/pages/ExchangeView";
+import { ExchangeView } from "@/domains/exchange/pages/ExchangeView";
 
 import { Exchange } from "./pages";
 

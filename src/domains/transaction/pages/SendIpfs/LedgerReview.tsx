@@ -1,11 +1,12 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Circle } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
-import { TotalAmountBox } from "domains/transaction/components/TotalAmountBox";
-import { TransactionDetail } from "domains/transaction/components/TransactionDetail";
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Circle } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
+import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 
 export const IpfsLedgerReview = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { getValues } = useFormContext();

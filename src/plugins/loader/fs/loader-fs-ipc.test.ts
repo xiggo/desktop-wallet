@@ -1,5 +1,6 @@
 import { ipcRenderer } from "electron";
-import * as ipcFunctions from "plugins/loader/fs/loader-fs-ipc";
+
+import * as ipcFunctions from "@/plugins/loader/fs/loader-fs-ipc";
 
 describe("loader-fs-ipc", () => {
 	let ipcRendererInvoke: jest.SpyInstance;

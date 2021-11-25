@@ -1,21 +1,22 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Amount } from "app/components/Amount";
-import { Button } from "app/components/Button";
-import { FormField, FormLabel, SubForm } from "app/components/Form";
-import { Icon } from "app/components/Icon";
-import { InputCurrency } from "app/components/Input";
-import { Switch } from "app/components/Switch";
-import { Tooltip } from "app/components/Tooltip";
-import { useValidation, WalletAliasResult } from "app/hooks";
-import { useExchangeRate } from "app/hooks/use-exchange-rate";
 import cn from "classnames";
-import { SelectRecipient } from "domains/profile/components/SelectRecipient";
-import { RecipientList } from "domains/transaction/components/RecipientList";
-import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import tw, { css, styled } from "twin.macro";
+
+import { Amount } from "@/app/components/Amount";
+import { Button } from "@/app/components/Button";
+import { FormField, FormLabel, SubForm } from "@/app/components/Form";
+import { Icon } from "@/app/components/Icon";
+import { InputCurrency } from "@/app/components/Input";
+import { Switch } from "@/app/components/Switch";
+import { Tooltip } from "@/app/components/Tooltip";
+import { useValidation, WalletAliasResult } from "@/app/hooks";
+import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
+import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
+import { RecipientList } from "@/domains/transaction/components/RecipientList";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.models";
 import { AddRecipientWrapper } from "./AddRecipient.styles";

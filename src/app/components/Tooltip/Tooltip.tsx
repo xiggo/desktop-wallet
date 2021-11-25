@@ -1,8 +1,9 @@
 import Tippy, { TippyProps } from "@tippyjs/react";
-import { useTheme } from "app/hooks";
 import cn from "classnames";
 import React from "react";
-import { Size } from "types";
+
+import { useTheme } from "@/app/hooks";
+import { Size } from "@/types";
 
 import { getStyles } from "./Tooltip.styles";
 

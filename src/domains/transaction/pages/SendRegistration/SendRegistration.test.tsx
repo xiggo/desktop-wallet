@@ -4,15 +4,16 @@ import { Signatories } from "@payvo/sdk";
 import { BIP39 } from "@payvo/sdk-cryptography";
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { LedgerProvider, minVersionList } from "app/contexts";
-import { translations as transactionTranslations } from "domains/transaction/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import DelegateRegistrationFixture from "tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
-import MultisignatureRegistrationFixture from "tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
-import SecondSignatureRegistrationFixture from "tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
+
+import { LedgerProvider, minVersionList } from "@/app/contexts";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import DelegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
+import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
+import SecondSignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import {
 	act,
 	defaultNetMocks,
@@ -28,7 +29,7 @@ import {
 	syncFees,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { SendRegistration } from "./SendRegistration";
 

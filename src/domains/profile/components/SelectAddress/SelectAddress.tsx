@@ -1,15 +1,16 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { Avatar } from "app/components/Avatar";
-import { Circle } from "app/components/Circle";
-import { useFormField } from "app/components/Form/useFormField";
-import { Icon } from "app/components/Icon";
-import { Input } from "app/components/Input";
-import { useWalletAlias } from "app/hooks";
-import { SearchWallet } from "domains/wallet/components/SearchWallet";
-import { SelectedWallet } from "domains/wallet/components/SearchWallet/SearchWallet.models";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { Circle } from "@/app/components/Circle";
+import { useFormField } from "@/app/components/Form/useFormField";
+import { Icon } from "@/app/components/Icon";
+import { Input } from "@/app/components/Input";
+import { useWalletAlias } from "@/app/hooks";
+import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
+import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.models";
 
 type SelectAddressProperties = {
 	wallet?: SelectedWallet;

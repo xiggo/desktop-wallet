@@ -1,7 +1,8 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Table } from "app/components/Table";
 import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Table } from "@/app/components/Table";
 
 import { UnconfirmedTransactionRow } from "./UnconfirmedTransactionRow";
 

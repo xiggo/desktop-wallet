@@ -1,13 +1,14 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Divider } from "app/components/Divider";
-import { Form, FormField, FormLabel } from "app/components/Form";
-import { InputPassword } from "app/components/Input";
-import { Modal } from "app/components/Modal";
-import { ProfileAvatar } from "domains/profile/components/ProfileAvatar";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Divider } from "@/app/components/Divider";
+import { Form, FormField, FormLabel } from "@/app/components/Form";
+import { InputPassword } from "@/app/components/Input";
+import { Modal } from "@/app/components/Modal";
+import { ProfileAvatar } from "@/domains/profile/components/ProfileAvatar";
 
 interface SignInProperties {
 	isOpen: boolean;

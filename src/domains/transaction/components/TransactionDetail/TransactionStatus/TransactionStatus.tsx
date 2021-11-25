@@ -1,10 +1,11 @@
 import { BigNumber } from "@payvo/sdk-helpers";
 import { DTO } from "@payvo/sdk-profiles";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
-import { TransactionDetail } from "domains/transaction/components/TransactionDetail/TransactionDetail";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 
 interface TransactionStatusProperties {
 	transaction: DTO.ExtendedConfirmedTransactionData;

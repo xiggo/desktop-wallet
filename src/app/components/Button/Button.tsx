@@ -1,5 +1,6 @@
-import { pluginManager } from "app/PluginProviders";
 import { withThemeDecorator } from "plugins";
+
+import { pluginManager } from "@/app/PluginProviders";
 
 import { OriginalButton } from "./OriginalButton";
 

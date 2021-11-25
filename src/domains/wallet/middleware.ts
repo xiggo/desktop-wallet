@@ -1,5 +1,6 @@
 import { matchPath } from "react-router-dom";
-import { Middleware, MiddlewareParameters } from "router/interfaces";
+
+import { Middleware, MiddlewareParameters } from "@/router/interfaces";
 
 export class WalletMiddleware implements Middleware {
 	handler({ location, redirect, env }: MiddlewareParameters) {

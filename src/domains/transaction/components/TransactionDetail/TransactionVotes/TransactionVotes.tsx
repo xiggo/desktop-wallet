@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { TransactionDetail } from "domains/transaction/components/TransactionDetail";
-import { VoteList } from "domains/vote/components/VoteList";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Skeleton from "react-loading-skeleton";
+
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
+import { VoteList } from "@/domains/vote/components/VoteList";
 
 interface TransactionVotesProperties {
 	isLoading?: boolean;

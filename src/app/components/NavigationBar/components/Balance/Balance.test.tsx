@@ -1,5 +1,6 @@
 import React from "react";
-import { env, render } from "utils/testing-library";
+
+import { env, render } from "@/utils/testing-library";
 
 import { Balance } from "./Balance";
 

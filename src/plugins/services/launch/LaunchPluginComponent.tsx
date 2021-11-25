@@ -1,6 +1,7 @@
-import { WithPluginManager } from "plugins/types";
 import React, { useMemo } from "react";
 import { ErrorBoundary, FallbackProps } from "react-error-boundary";
+
+import { WithPluginManager } from "@/plugins/types";
 
 interface Properties {
 	pluginId: string;

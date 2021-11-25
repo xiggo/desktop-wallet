@@ -1,6 +1,7 @@
 import { Networks } from "@payvo/sdk";
 import React from "react";
-import { env, fireEvent, render, screen, waitFor, within } from "utils/testing-library";
+
+import { env, fireEvent, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { FilterNetwork, FilterNetworks } from "./FilterNetwork";
 import { FilterOption } from "./models";

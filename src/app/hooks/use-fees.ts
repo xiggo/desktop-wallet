@@ -1,9 +1,10 @@
 import { Coins, Services } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { useEnvironmentContext } from "app/contexts";
 import { useCallback } from "react";
-import { TransactionFees } from "types";
-import { assertString } from "utils/assertions";
+
+import { useEnvironmentContext } from "@/app/contexts";
+import { TransactionFees } from "@/types";
+import { assertString } from "@/utils/assertions";
 
 interface CreateStubTransactionProperties {
 	coin: Coins.Coin;

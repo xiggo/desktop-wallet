@@ -1,6 +1,7 @@
 import React from "react";
-import { Color } from "types";
-import { render } from "utils/testing-library";
+
+import { Color } from "@/types";
+import { render } from "@/utils/testing-library";
 
 import { Checkbox } from "./Checkbox";
 

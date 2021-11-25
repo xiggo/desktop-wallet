@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk";
 import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
-import { LedgerProvider } from "app/contexts";
 import React from "react";
+
+import { LedgerProvider } from "@/app/contexts";
 import {
 	defaultNetMocks,
 	env,
@@ -10,7 +11,7 @@ import {
 	getDefaultProfileId,
 	getDefaultWalletMnemonic,
 	WithProviders,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { useTransactionBuilder } from "./use-transaction-builder";
 

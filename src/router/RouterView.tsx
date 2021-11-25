@@ -1,8 +1,9 @@
-import { useEnvironmentContext } from "app/contexts";
 import React, { useEffect, useMemo, useRef } from "react";
 import { RouteConfig } from "react-router-config";
 import { Redirect, Route, Switch, useHistory, useLocation } from "react-router-dom";
 import { styled } from "twin.macro";
+
+import { useEnvironmentContext } from "@/app/contexts";
 
 import { Middleware } from "./interfaces";
 

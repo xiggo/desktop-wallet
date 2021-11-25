@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { ConfigurationProvider } from "app/contexts";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { translations } from "domains/profile/i18n";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import { ConfigurationProvider } from "@/app/contexts";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { translations } from "@/domains/profile/i18n";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { WelcomeModal } from "./WelcomeModal";
 

@@ -1,12 +1,13 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Alert } from "app/components/Alert";
-import { Header } from "app/components/Header";
-import { Image } from "app/components/Image";
-import { Modal } from "app/components/Modal";
-import { Spinner } from "app/components/Spinner";
-import { LedgerModel } from "app/hooks";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
+
+import { Alert } from "@/app/components/Alert";
+import { Header } from "@/app/components/Header";
+import { Image } from "@/app/components/Image";
+import { Modal } from "@/app/components/Modal";
+import { Spinner } from "@/app/components/Spinner";
+import { LedgerModel } from "@/app/hooks";
 
 export const LedgerDeviceErrorContent = ({
 	subtitle,

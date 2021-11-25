@@ -1,7 +1,8 @@
 import { sortByDesc } from "@payvo/sdk-helpers";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { useProfileTransactions } from "domains/transaction/hooks/use-profile-transactions";
 import { useEffect, useState } from "react";
+
+import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
 
 import { useWalletConfig } from "./use-wallet-config";
 

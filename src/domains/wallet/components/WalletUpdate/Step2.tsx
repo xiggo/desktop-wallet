@@ -1,9 +1,10 @@
-import { CircularProgressBar } from "app/components/CircularProgressBar";
-import { DownloadProgress } from "app/hooks";
 import cn from "classnames";
 import prettyBytes from "pretty-bytes";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { CircularProgressBar } from "@/app/components/CircularProgressBar";
+import { DownloadProgress } from "@/app/hooks";
 
 export const SecondStep = ({ transferred = 0, total = 0, percent = 0 }: DownloadProgress) => {
 	const { t } = useTranslation();

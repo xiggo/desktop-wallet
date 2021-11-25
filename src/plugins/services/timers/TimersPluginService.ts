@@ -1,5 +1,5 @@
-import { PluginService } from "plugins/core";
-import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
+import { PluginService } from "@/plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "@/plugins/types";
 
 export class TimersPluginService implements PluginService {
 	config(): PluginServiceConfig {

@@ -1,8 +1,11 @@
-import { useEnvironmentContext } from "app/contexts";
-import { password } from "app/validations/password";
-import { exchangeOrder } from "domains/exchange/validations";
-import { createProfile } from "domains/profile/validations";
-import { settings } from "domains/setting/validations";
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+
+import { useEnvironmentContext } from "@/app/contexts";
+import { password } from "@/app/validations/password";
+import { exchangeOrder } from "@/domains/exchange/validations";
+import { createProfile } from "@/domains/profile/validations";
+import { settings } from "@/domains/setting/validations";
 import {
 	authentication,
 	common,
@@ -11,10 +14,8 @@ import {
 	sendIpfs,
 	sendTransfer,
 	sendVote,
-} from "domains/transaction/validations";
-import { receiveFunds, verifyMessage } from "domains/wallet/validations";
-import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/validations";
+import { receiveFunds, verifyMessage } from "@/domains/wallet/validations";
 
 export const useValidation = () => {
 	const { t } = useTranslation();

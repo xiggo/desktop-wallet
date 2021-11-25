@@ -1,10 +1,11 @@
-import { Alert } from "app/components/Alert";
-import { Button } from "app/components/Button";
-import { Header } from "app/components/Header";
-import { SelectFile } from "app/components/SelectFile";
-import { ReadableFile } from "app/hooks/use-files";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Alert } from "@/app/components/Alert";
+import { Button } from "@/app/components/Button";
+import { Header } from "@/app/components/Header";
+import { SelectFile } from "@/app/components/SelectFile";
+import { ReadableFile } from "@/app/hooks/use-files";
 
 interface SelectFileStepProperties {
 	fileFormat: string;

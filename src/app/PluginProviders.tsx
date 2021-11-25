@@ -10,9 +10,10 @@ import {
 	ThemePluginService,
 	TimersPluginService,
 } from "plugins";
-import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
-import { MessagePluginService } from "plugins/services/message/MessagePluginService";
 import React from "react";
+
+import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
+import { MessagePluginService } from "@/plugins/services/message/MessagePluginService";
 
 interface Properties {
 	children: React.ReactNode;

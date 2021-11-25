@@ -1,8 +1,9 @@
 import { DateTime } from "@payvo/sdk-intl";
-import { translations } from "domains/splash/i18n";
 import React from "react";
-import * as utils from "utils/electron-utils";
-import { render, screen } from "utils/testing-library";
+
+import { translations } from "@/domains/splash/i18n";
+import * as utils from "@/utils/electron-utils";
+import { render, screen } from "@/utils/testing-library";
 
 import { Splash } from "./Splash";
 

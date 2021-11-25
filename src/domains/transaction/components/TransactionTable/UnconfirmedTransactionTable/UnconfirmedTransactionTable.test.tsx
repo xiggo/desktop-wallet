@@ -2,7 +2,8 @@ import { BigNumber } from "@payvo/sdk-helpers";
 import { DateTime } from "@payvo/sdk-intl";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React from "react";
-import { env, getDefaultProfileId, render } from "utils/testing-library";
+
+import { env, getDefaultProfileId, render } from "@/utils/testing-library";
 
 import { UnconfirmedTransactionTable } from "./UnconfirmedTransactionTable";
 

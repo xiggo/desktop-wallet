@@ -2,10 +2,11 @@ import { prettyBytes, startCase, uniq } from "@payvo/sdk-helpers";
 import { Contracts, Repositories } from "@payvo/sdk-profiles";
 import du from "du";
 import parseAuthor from "parse-author";
-import { SerializedPluginConfigurationData } from "plugins/types";
 import semver from "semver";
-import { assertString } from "utils/assertions";
 import { Asserts } from "yup";
+
+import { SerializedPluginConfigurationData } from "@/plugins/types";
+import { assertString } from "@/utils/assertions";
 
 // eslint-disable-next-line import/no-relative-parent-imports
 import appPackage from "../../../../package.json";

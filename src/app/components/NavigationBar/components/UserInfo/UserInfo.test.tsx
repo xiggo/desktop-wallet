@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { UserInfo } from "app/components/NavigationBar/components/UserInfo/UserInfo";
 import React from "react";
-import { env, getDefaultProfileId, render } from "utils/testing-library";
+
+import { UserInfo } from "@/app/components/NavigationBar/components/UserInfo/UserInfo";
+import { env, getDefaultProfileId, render } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 

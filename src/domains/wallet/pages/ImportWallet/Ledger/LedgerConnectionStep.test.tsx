@@ -1,14 +1,15 @@
 import Transport from "@ledgerhq/hw-transport";
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { EnvironmentProvider, minVersionList } from "app/contexts";
-import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { act } from "react-dom/test-utils";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
+
+import { EnvironmentProvider, minVersionList } from "@/app/contexts";
+import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import {
 	env,
 	getDefaultLedgerTransport,
@@ -17,7 +18,7 @@ import {
 	render,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { LedgerConnectionStep } from "./LedgerConnectionStep";
 

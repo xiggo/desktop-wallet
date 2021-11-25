@@ -1,6 +1,6 @@
-import { screen } from "@testing-library/react";
 import React from "react";
-import { fireEvent, render } from "utils/testing-library";
+
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { ButtonGroup, ButtonGroupOption } from "./ButtonGroup";
 import { useSelectionState } from "./useSelectionState";

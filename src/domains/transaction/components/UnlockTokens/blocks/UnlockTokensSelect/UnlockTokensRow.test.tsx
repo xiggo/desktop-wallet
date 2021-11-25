@@ -2,9 +2,10 @@ import { BigNumber } from "@payvo/sdk-helpers";
 import { DateTime } from "@payvo/sdk-intl";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { buildTranslations } from "app/i18n/helpers";
-import { UnlockableBalance } from "domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import React from "react";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import { UnlockableBalance } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 
 import { UnlockTokensRow } from "./UnlockTokensRow";
 

@@ -1,13 +1,14 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Divider } from "app/components/Divider";
-import { InputCurrency } from "app/components/Input";
-import { TableCell } from "app/components/Table";
 import cn from "classnames";
-import { delegateExistsInVotes } from "domains/vote/components/DelegateTable/DelegateTable.helpers";
-import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
-import { VoteAmount } from "domains/vote/validations/VoteAmount";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Divider } from "@/app/components/Divider";
+import { InputCurrency } from "@/app/components/Input";
+import { TableCell } from "@/app/components/Table";
+import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
+import { VoteAmount } from "@/domains/vote/validations/VoteAmount";
 
 interface DelegateVoteAmountProperties {
 	rowColor?: string;

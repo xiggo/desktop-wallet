@@ -1,7 +1,8 @@
-import { Tooltip } from "app/components/Tooltip";
-import { useClipboard } from "app/hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Tooltip } from "@/app/components/Tooltip";
+import { useClipboard } from "@/app/hooks";
 
 import { ClipboardIconProperties } from "./Clipboard.contracts";
 

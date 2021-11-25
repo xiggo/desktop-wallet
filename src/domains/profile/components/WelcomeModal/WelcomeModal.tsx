@@ -1,13 +1,14 @@
 /* eslint-disable max-lines-per-function */
 import { Contracts, Environment } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Checkbox } from "app/components/Checkbox";
-import { DotNavigation } from "app/components/DotNavigation";
-import { Image } from "app/components/Image";
-import { Modal } from "app/components/Modal";
-import { useWelcomeModal } from "domains/profile/hooks/use-welcome-modal";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Checkbox } from "@/app/components/Checkbox";
+import { DotNavigation } from "@/app/components/DotNavigation";
+import { Image } from "@/app/components/Image";
+import { Modal } from "@/app/components/Modal";
+import { useWelcomeModal } from "@/domains/profile/hooks/use-welcome-modal";
 
 import { WelcomeModalStep } from "./WelcomeModal.models";
 

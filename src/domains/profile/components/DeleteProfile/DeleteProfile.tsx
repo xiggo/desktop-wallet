@@ -1,7 +1,8 @@
-import { DeleteResource } from "app/components/DeleteResource";
-import { useEnvironmentContext } from "app/contexts";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { DeleteResource } from "@/app/components/DeleteResource";
+import { useEnvironmentContext } from "@/app/contexts";
 
 interface DeleteProfileProperties {
 	isOpen: boolean;

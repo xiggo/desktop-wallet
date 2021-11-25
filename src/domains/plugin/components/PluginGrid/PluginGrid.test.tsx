@@ -1,8 +1,9 @@
-import * as useRandomNumberHook from "app/hooks/use-random-number";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { translations as pluginTranslations } from "domains/plugin/i18n";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { translations as pluginTranslations } from "@/domains/plugin/i18n";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { PluginGrid } from "./PluginGrid";
 

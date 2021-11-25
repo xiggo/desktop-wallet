@@ -1,6 +1,7 @@
-import { DeleteResource } from "app/components/DeleteResource";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { DeleteResource } from "@/app/components/DeleteResource";
 
 interface DeleteWalletProperties {
 	onClose?: any;

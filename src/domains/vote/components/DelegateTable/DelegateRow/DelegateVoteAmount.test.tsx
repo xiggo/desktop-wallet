@@ -2,12 +2,13 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
 import { fireEvent } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
-import { translations as transactionTranslations } from "domains/transaction/i18n";
-import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
+import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { DelegateVoteAmount } from "./DelegateVoteAmount";
 

@@ -1,13 +1,14 @@
-import { Address } from "app/components/Address";
-import { Avatar } from "app/components/Avatar";
-import { Button } from "app/components/Button";
-import { Header } from "app/components/Header";
-import { Icon } from "app/components/Icon";
-import { TransactionDetail, TransactionNetwork } from "domains/transaction/components/TransactionDetail";
 import React, { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { assertNetwork, assertWallet } from "utils/assertions";
+
+import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
+import { Header } from "@/app/components/Header";
+import { Icon } from "@/app/components/Icon";
+import { TransactionDetail, TransactionNetwork } from "@/domains/transaction/components/TransactionDetail";
+import { assertNetwork, assertWallet } from "@/utils/assertions";
 
 export const SuccessStep = ({ onClickEditAlias }: { onClickEditAlias: () => void }) => {
 	const { t } = useTranslation();

@@ -1,5 +1,6 @@
 import tw from "twin.macro";
-import { Size } from "types";
+
+import { Size } from "@/types";
 
 const baseStyle = tw`font-semibold select-none text-theme-secondary-500 dark:text-theme-secondary-700`;
 

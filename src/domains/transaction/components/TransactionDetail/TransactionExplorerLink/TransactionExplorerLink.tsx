@@ -1,14 +1,15 @@
 import { DTO } from "@payvo/sdk-profiles";
-import { Clipboard } from "app/components/Clipboard";
-import { Icon } from "app/components/Icon";
-import { Link } from "app/components/Link";
-import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
+import React, { useRef } from "react";
+import { useTranslation } from "react-i18next";
+
+import { Clipboard } from "@/app/components/Clipboard";
+import { Icon } from "@/app/components/Icon";
+import { Link } from "@/app/components/Link";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
 import {
 	TransactionDetail,
 	TransactionDetailProperties,
-} from "domains/transaction/components/TransactionDetail/TransactionDetail";
-import React, { useRef } from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail/TransactionDetail";
 
 type TransactionExplorerLinkProperties = {
 	transaction: DTO.ExtendedConfirmedTransactionData | DTO.ExtendedSignedTransactionData;

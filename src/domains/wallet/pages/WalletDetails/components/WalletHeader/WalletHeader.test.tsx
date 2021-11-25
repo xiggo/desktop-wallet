@@ -1,12 +1,13 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { LedgerProvider } from "app/contexts/Ledger/Ledger";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import * as useQRCodeHook from "domains/wallet/components/ReceiveFunds/hooks";
-import { translations as walletTranslations } from "domains/wallet/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
+
+import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import * as useQRCodeHook from "@/domains/wallet/components/ReceiveFunds/hooks";
+import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
 	fireEvent,
@@ -16,7 +17,7 @@ import {
 	screen,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { WalletHeader } from "./WalletHeader";
 

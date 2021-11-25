@@ -1,14 +1,15 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { httpClient, toasts } from "app/services";
-import { ExchangeProvider, useExchangeContext } from "domains/exchange/contexts/Exchange";
 import { createMemoryHistory, MemoryHistory } from "history";
 import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "utils/testing-library";
+
+import { httpClient, toasts } from "@/app/services";
+import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";

@@ -1,7 +1,8 @@
-import { Badge } from "app/components/Badge";
-import { Circle } from "app/components/Circle";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Badge } from "@/app/components/Badge";
+import { Circle } from "@/app/components/Circle";
 
 import { ToggleAllOptionProperties } from "./models";
 

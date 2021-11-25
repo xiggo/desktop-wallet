@@ -1,5 +1,6 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React from "react";
+
 import {
 	env,
 	getDefaultProfileId,
@@ -7,7 +8,7 @@ import {
 	render,
 	screen,
 	syncDelegates,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
 

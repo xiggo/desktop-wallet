@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { useScreenshotProtection } from "./use-screenshot-protection";
 

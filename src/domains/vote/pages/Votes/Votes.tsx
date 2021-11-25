@@ -1,20 +1,21 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Alert } from "app/components/Alert";
-import { Page, Section } from "app/components/Layout";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs, useProfileUtils } from "app/hooks";
-import { DelegateTable } from "domains/vote/components/DelegateTable";
-import { VotesEmpty } from "domains/vote/components/VotesEmpty";
-import { VotesHeader } from "domains/vote/components/VotesHeader";
-import { VotingWallets } from "domains/vote/components/VotingWallets/VotingWallets";
-import { useDelegates } from "domains/vote/hooks/use-delegates";
-import { useVoteActions } from "domains/vote/hooks/use-vote-actions";
-import { useVoteFilters } from "domains/vote/hooks/use-vote-filters";
-import { useVoteQueryParameters } from "domains/vote/hooks/use-vote-query-parameters";
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { Trans } from "react-i18next";
 import { useHistory, useParams } from "react-router-dom";
-import { assertWallet } from "utils/assertions";
+
+import { Alert } from "@/app/components/Alert";
+import { Page, Section } from "@/app/components/Layout";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile, useActiveWalletWhenNeeded, useProfileJobs, useProfileUtils } from "@/app/hooks";
+import { DelegateTable } from "@/domains/vote/components/DelegateTable";
+import { VotesEmpty } from "@/domains/vote/components/VotesEmpty";
+import { VotesHeader } from "@/domains/vote/components/VotesHeader";
+import { VotingWallets } from "@/domains/vote/components/VotingWallets/VotingWallets";
+import { useDelegates } from "@/domains/vote/hooks/use-delegates";
+import { useVoteActions } from "@/domains/vote/hooks/use-vote-actions";
+import { useVoteFilters } from "@/domains/vote/hooks/use-vote-filters";
+import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
+import { assertWallet } from "@/utils/assertions";
 
 export const Votes: FC = () => {
 	const history = useHistory();

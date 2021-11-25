@@ -1,6 +1,7 @@
-import { PluginPermissions } from "domains/plugin/plugin.contracts";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { PluginPermissions } from "@/domains/plugin/plugin.contracts";
 
 interface Properties {
 	plugin: any;

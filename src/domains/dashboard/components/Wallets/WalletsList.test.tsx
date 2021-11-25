@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { translations } from "domains/dashboard/i18n";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import { translations } from "@/domains/dashboard/i18n";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { GridWallet } from "./Wallets.contracts";
 import { WalletsList } from "./WalletsList";

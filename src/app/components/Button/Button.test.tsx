@@ -1,6 +1,7 @@
 import React from "react";
-import { ButtonVariant } from "types";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { ButtonVariant } from "@/types";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { Button } from "./Button";
 

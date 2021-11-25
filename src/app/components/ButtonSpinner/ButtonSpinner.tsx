@@ -1,5 +1,6 @@
 import { styled } from "twin.macro";
-import { ButtonVariant } from "types";
+
+import { ButtonVariant } from "@/types";
 
 import { getStyles } from "./ButtonSpinner.styles";
 

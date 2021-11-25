@@ -1,9 +1,10 @@
-import { Circle } from "app/components/Circle";
-import { Skeleton } from "app/components/Skeleton";
-import { TableCell, TableRow } from "app/components/Table";
-import { useRandomNumber } from "app/hooks";
 import cn from "classnames";
 import React from "react";
+
+import { Circle } from "@/app/components/Circle";
+import { Skeleton } from "@/app/components/Skeleton";
+import { TableCell, TableRow } from "@/app/components/Table";
+import { useRandomNumber } from "@/app/hooks";
 
 type Properties = {
 	isCompact: boolean;

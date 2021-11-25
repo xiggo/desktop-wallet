@@ -1,11 +1,12 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Amount } from "app/components/Amount";
-import { Circle } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
-import { Link } from "app/components/Link";
-import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Amount } from "@/app/components/Amount";
+import { Circle } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
+import { Link } from "@/app/components/Link";
+import { Tooltip } from "@/app/components/Tooltip";
 
 const votesHelpLink = "https://ark.dev/docs/desktop-wallet/user-guides/how-to-vote-unvote";
 

@@ -1,8 +1,9 @@
 import { Profile } from "@payvo/sdk-profiles";
-import { ProcessingImport } from "domains/profile/pages/ImportProfile/ProcessingImportStep";
 import fs from "fs";
 import React from "react";
-import { env, fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import { ProcessingImport } from "@/domains/profile/pages/ImportProfile/ProcessingImportStep";
+import { env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 let dwe: any;
 let passwordProtectedDwe: any;

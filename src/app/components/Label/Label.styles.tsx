@@ -1,5 +1,6 @@
 import tw from "twin.macro";
-import { Size } from "types";
+
+import { Size } from "@/types";
 
 import { LabelProperties } from "./Label";
 

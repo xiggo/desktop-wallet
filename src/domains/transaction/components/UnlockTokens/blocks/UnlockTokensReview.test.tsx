@@ -2,12 +2,13 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { screen } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import { buildTranslations } from "app/i18n/helpers";
-import { UnlockTokensFormState } from "domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render } from "utils/testing-library";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import { UnlockTokensFormState } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
+import { env, getDefaultProfileId, render } from "@/utils/testing-library";
 
 import { UnlockTokensReview } from "./UnlockTokensReview";
 

@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { ExchangeTransaction } from "@payvo/sdk-profiles/distribution/cjs/exchange-transaction";
 import { AssertionError } from "assert";
-import { CurrencyData } from "domains/exchange/contracts";
-import { ExchangeService } from "domains/exchange/services/exchange.service";
+
+import { CurrencyData } from "@/domains/exchange/contracts";
+import { ExchangeService } from "@/domains/exchange/services/exchange.service";
 
 export function assertExchangeService(exchangeService?: ExchangeService): asserts exchangeService is ExchangeService {
 	if (!(exchangeService instanceof ExchangeService)) {

@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { renderHook } from "@testing-library/react-hooks";
-import { ConfigurationProvider } from "app/contexts";
 import React from "react";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { ConfigurationProvider } from "@/app/contexts";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { useProfileBalance } from "./use-profile-balance";
 

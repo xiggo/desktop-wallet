@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { EnvironmentProvider } from "app/contexts";
-import { ImportProfile } from "domains/profile/pages/ImportProfile/ImportProfile";
 import fs from "fs";
 import { createMemoryHistory } from "history";
 import React from "react";
-import { env, fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import { EnvironmentProvider } from "@/app/contexts";
+import { ImportProfile } from "@/domains/profile/pages/ImportProfile/ImportProfile";
+import { env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 const passwordProtectedDwe = fs.readFileSync("src/tests/fixtures/profile/import/password-protected-profile.dwe");
 const corruptedDwe = fs.readFileSync("src/tests/fixtures/profile/import/corrupted-profile.dwe");

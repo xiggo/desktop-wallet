@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { images } from "app/assets/images";
-import { useActiveProfile } from "app/hooks";
-import { useAccentColor } from "app/hooks/use-accent-color";
 import React from "react";
-import { shouldUseDarkColors } from "utils/electron-utils";
+
+import { images } from "@/app/assets/images";
+import { useActiveProfile } from "@/app/hooks";
+import { useAccentColor } from "@/app/hooks/use-accent-color";
+import { shouldUseDarkColors } from "@/utils/electron-utils";
 
 type Properties = {
 	name: string;

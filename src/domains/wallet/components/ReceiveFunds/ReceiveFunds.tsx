@@ -1,17 +1,18 @@
 import { Networks } from "@payvo/sdk";
-import { Address } from "app/components/Address";
-import { Avatar } from "app/components/Avatar";
-import { Button } from "app/components/Button";
-import { Clipboard } from "app/components/Clipboard";
-import { Form } from "app/components/Form";
-import { Icon } from "app/components/Icon";
-import { Modal } from "app/components/Modal";
-import { NetworkIcon } from "domains/network/components/NetworkIcon";
-import { TransactionDetail } from "domains/transaction/components/TransactionDetail";
-import { ReceiveFundsForm, useQRCode } from "domains/wallet/components/ReceiveFunds";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
+import { Clipboard } from "@/app/components/Clipboard";
+import { Form } from "@/app/components/Form";
+import { Icon } from "@/app/components/Icon";
+import { Modal } from "@/app/components/Modal";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
+import { ReceiveFundsForm, useQRCode } from "@/domains/wallet/components/ReceiveFunds";
 
 interface ReceiveFundsProperties {
 	address: string;

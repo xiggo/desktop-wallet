@@ -1,6 +1,7 @@
-import { translations as pluginTranslations } from "domains/plugin/i18n";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { translations as pluginTranslations } from "@/domains/plugin/i18n";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { PluginManagerNavigationBar } from "./PluginManagerNavigationBar";
 

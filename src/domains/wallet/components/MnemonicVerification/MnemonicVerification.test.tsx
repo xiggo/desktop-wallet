@@ -1,5 +1,6 @@
 import React from "react";
-import { cleanup, fireEvent, render, screen } from "utils/testing-library";
+
+import { cleanup, fireEvent, render, screen } from "@/utils/testing-library";
 
 import { MnemonicVerification } from "./MnemonicVerification";
 

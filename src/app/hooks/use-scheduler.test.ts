@@ -1,5 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks";
-import { useScheduler } from "app/hooks/use-scheduler";
+
+import { useScheduler } from "@/app/hooks/use-scheduler";
 
 describe("useScheduler", () => {
 	let handler: jest.Mock;

@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { useAccentColor } from "app/hooks/use-accent-color";
-import { env } from "utils/testing-library";
+
+import { useAccentColor } from "@/app/hooks/use-accent-color";
+import { env } from "@/utils/testing-library";
 
 describe("useAccentColor", () => {
 	beforeEach(() => {

@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { act, renderHook } from "@testing-library/react-hooks";
-import { useProfileImport } from "domains/profile/hooks/use-profile-import";
-import { ImportFile } from "domains/profile/pages/ImportProfile/models";
 import fs from "fs";
-import { env } from "utils/testing-library";
+
+import { useProfileImport } from "@/domains/profile/hooks/use-profile-import";
+import { ImportFile } from "@/domains/profile/pages/ImportProfile/models";
+import { env } from "@/utils/testing-library";
 
 let dwe: ImportFile;
 let passwordProtectedDwe: ImportFile;

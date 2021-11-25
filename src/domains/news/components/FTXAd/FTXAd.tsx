@@ -1,9 +1,10 @@
-import { images } from "app/assets/images";
-import { SvgCollection } from "app/assets/svg";
-import { Link } from "app/components/Link";
-import FTXBanner from "domains/news/images/ftx-banner.png";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { images } from "@/app/assets/images";
+import { SvgCollection } from "@/app/assets/svg";
+import { Link } from "@/app/components/Link";
+import FTXBanner from "@/domains/news/images/ftx-banner.png";
 
 const { DownloadAppStoreButton, DownloadGooglePlayButton } = images.news.common;
 

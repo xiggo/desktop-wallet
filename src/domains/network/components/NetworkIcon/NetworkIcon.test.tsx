@@ -1,7 +1,8 @@
 import { Networks } from "@payvo/sdk";
 import React from "react";
-import { availableNetworksMock } from "tests/mocks/networks";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { availableNetworksMock } from "@/tests/mocks/networks";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { NetworkIcon } from "./NetworkIcon";
 

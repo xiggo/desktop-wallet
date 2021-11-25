@@ -1,6 +1,7 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Size } from "types";
+
+import { Size } from "@/types";
 
 export interface SelectedWallet {
 	address: string;

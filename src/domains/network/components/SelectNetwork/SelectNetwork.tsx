@@ -1,11 +1,12 @@
 import { Networks } from "@payvo/sdk";
-import { Divider } from "app/components/Divider";
-import { Toggle } from "app/components/Toggle";
 import cn from "classnames";
-import { NetworkOption } from "domains/network/components/NetworkOption";
 import { useCombobox } from "downshift";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Divider } from "@/app/components/Divider";
+import { Toggle } from "@/app/components/Toggle";
+import { NetworkOption } from "@/domains/network/components/NetworkOption";
 
 import { SelectNetworkInput } from "./SelectNetworkInput";
 

@@ -1,10 +1,11 @@
 import { DTO } from "@payvo/sdk-profiles";
-import { Circle } from "app/components/Circle";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Circle } from "@/app/components/Circle";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
 
 import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 

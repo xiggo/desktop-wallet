@@ -46,6 +46,7 @@ module.exports = override(
 	addNodeExternals(),
 	copyFiles(),
 	addWebpackAlias({
+		"@": path.resolve(__dirname, "./src"),
 		"@arkecosystem/crypto": "@arkecosystem/crypto/dist/index.esm.js",
 	}),
 );

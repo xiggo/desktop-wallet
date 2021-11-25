@@ -1,8 +1,9 @@
-import { Header } from "app/components/Header";
-import { useActiveProfile } from "app/hooks";
-import { SettingsWrapper } from "domains/setting/components/SettingsPageWrapper";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Header } from "@/app/components/Header";
+import { useActiveProfile } from "@/app/hooks";
+import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 
 import { AppearanceForm } from "./blocks/AppearanceForm";
 

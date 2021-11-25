@@ -2,7 +2,8 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts, Wallet } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { env, MNEMONICS } from "utils/testing-library";
+
+import { env, MNEMONICS } from "@/utils/testing-library";
 
 import { OptionsValue } from "./use-import-options";
 import { useWalletImport } from "./use-wallet-import";

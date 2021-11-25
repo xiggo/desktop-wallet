@@ -1,8 +1,9 @@
-import { Icon } from "app/components/Icon";
-import { Spinner } from "app/components/Spinner";
-import { TruncateMiddle } from "app/components/TruncateMiddle";
-import { ReadableFile } from "app/hooks/use-files";
 import React from "react";
+
+import { Icon } from "@/app/components/Icon";
+import { Spinner } from "@/app/components/Spinner";
+import { TruncateMiddle } from "@/app/components/TruncateMiddle";
+import { ReadableFile } from "@/app/hooks/use-files";
 
 type FilePreviewVariant = "success" | "loading" | "danger";
 

@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { translations } from "domains/transaction/i18n";
 import React from "react";
-import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import { translations } from "@/domains/transaction/i18n";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { MultiSignatureStatus } from "./MultiSignatureStatus";
 

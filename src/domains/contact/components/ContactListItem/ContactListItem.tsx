@@ -1,18 +1,19 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { Avatar } from "app/components/Avatar";
-import { Button } from "app/components/Button";
-import { Clipboard } from "app/components/Clipboard";
-import { Dropdown } from "app/components/Dropdown";
-import { Icon } from "app/components/Icon";
-import { TableCell, TableRow } from "app/components/Table";
-import { useEnvironmentContext } from "app/contexts";
-import { useNetworkOptions } from "app/hooks";
-import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React, { FC, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { assertNetwork } from "utils/assertions";
+
+import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
+import { Clipboard } from "@/app/components/Clipboard";
+import { Dropdown } from "@/app/components/Dropdown";
+import { Icon } from "@/app/components/Icon";
+import { TableCell, TableRow } from "@/app/components/Table";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useNetworkOptions } from "@/app/hooks";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { assertNetwork } from "@/utils/assertions";
 
 import { ContactListItemOption, ContactListItemProperties } from "./ContactListItem.models";
 

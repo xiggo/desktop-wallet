@@ -1,4 +1,4 @@
-import { AccentColorType, ViewingModeType } from "app/hooks";
+import { AccentColorType, ViewingModeType } from "@/app/hooks";
 
 export interface AppearanceSettingsState {
 	accentColor: AccentColorType;

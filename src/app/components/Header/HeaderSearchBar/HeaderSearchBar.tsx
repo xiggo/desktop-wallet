@@ -1,11 +1,12 @@
-import { ControlButton } from "app/components/ControlButton";
-import { Icon } from "app/components/Icon";
-import { Input } from "app/components/Input";
-import { clickOutsideHandler, useDebounce } from "app/hooks";
 import cn from "classnames";
 import React, { ChangeEvent, FC, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
+
+import { ControlButton } from "@/app/components/ControlButton";
+import { Icon } from "@/app/components/Icon";
+import { Input } from "@/app/components/Input";
+import { clickOutsideHandler, useDebounce } from "@/app/hooks";
 
 import { HeaderSearchBarProperties } from "./HeaderSearchBar.contracts";
 

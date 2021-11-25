@@ -1,5 +1,6 @@
 import { styled } from "twin.macro";
-import { Size } from "types";
+
+import { Size } from "@/types";
 
 import { ColorType, getStyles } from "./Label.styles";
 

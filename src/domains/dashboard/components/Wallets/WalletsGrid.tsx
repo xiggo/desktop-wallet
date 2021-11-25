@@ -1,6 +1,7 @@
-import { Slider } from "app/components/Slider";
-import { WalletCard } from "app/components/WalletCard";
 import React, { memo } from "react";
+
+import { Slider } from "@/app/components/Slider";
+import { WalletCard } from "@/app/components/WalletCard";
 
 import { WalletGridProperties } from "./Wallets.contracts";
 

@@ -1,24 +1,25 @@
 import { Contracts, Helpers } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Divider } from "app/components/Divider";
-import { Form, FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { InputDefault, InputPassword } from "app/components/Input";
-import { Page, Section } from "app/components/Layout";
-import { ListDivided } from "app/components/ListDivided";
-import { Select } from "app/components/SelectDropdown";
-import { SelectProfileImage } from "app/components/SelectProfileImage";
-import { Toggle } from "app/components/Toggle";
-import { useEnvironmentContext } from "app/contexts";
-import { useProfileRestore, useTheme, useValidation } from "app/hooks";
-import { useCurrencyOptions } from "app/hooks/use-currency-options";
-import { DEFAULT_MARKET_PROVIDER } from "domains/profile/data";
 import LocaleCurrency from "locale-currency";
 import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { setThemeSource } from "utils/electron-utils";
+
+import { Button } from "@/app/components/Button";
+import { Divider } from "@/app/components/Divider";
+import { Form, FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { InputDefault, InputPassword } from "@/app/components/Input";
+import { Page, Section } from "@/app/components/Layout";
+import { ListDivided } from "@/app/components/ListDivided";
+import { Select } from "@/app/components/SelectDropdown";
+import { SelectProfileImage } from "@/app/components/SelectProfileImage";
+import { Toggle } from "@/app/components/Toggle";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useProfileRestore, useTheme, useValidation } from "@/app/hooks";
+import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
+import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
+import { setThemeSource } from "@/utils/electron-utils";
 
 export const CreateProfile = () => {
 	const { env, persist } = useEnvironmentContext();

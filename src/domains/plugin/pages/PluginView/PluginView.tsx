@@ -1,11 +1,12 @@
-import { Page } from "app/components/Layout";
-import { TextArea } from "app/components/TextArea";
-import { useQueryParams } from "app/hooks";
-import { PluginImage } from "domains/plugin/components/PluginImage";
 import { LaunchRender } from "plugins";
-import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useRef } from "react";
 import { FallbackProps } from "react-error-boundary";
+
+import { Page } from "@/app/components/Layout";
+import { TextArea } from "@/app/components/TextArea";
+import { useQueryParams } from "@/app/hooks";
+import { PluginImage } from "@/domains/plugin/components/PluginImage";
+import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
 
 const ErrorFallback = ({ error }: FallbackProps) => {
 	const errorMessageReference = useRef();

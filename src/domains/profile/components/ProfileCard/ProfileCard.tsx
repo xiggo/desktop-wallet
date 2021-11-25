@@ -1,10 +1,11 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Badge } from "app/components/Badge";
-import { Card } from "app/components/Card";
-import { DropdownOption } from "app/components/Dropdown";
 import cn from "classnames";
-import { ProfileAvatar } from "domains/profile/components/ProfileAvatar";
 import React from "react";
+
+import { Badge } from "@/app/components/Badge";
+import { Card } from "@/app/components/Card";
+import { DropdownOption } from "@/app/components/Dropdown";
+import { ProfileAvatar } from "@/domains/profile/components/ProfileAvatar";
 
 interface ProfileCardProperties {
 	actions?: DropdownOption[];

@@ -1,4 +1,4 @@
-import { WalletRoutes } from "domains/wallet/routing";
+import { WalletRoutes } from "@/domains/wallet/routing";
 
 describe("Wallet routing", () => {
 	it("should have 3 routes", () => {

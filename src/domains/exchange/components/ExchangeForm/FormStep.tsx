@@ -1,17 +1,18 @@
 import { Networks } from "@payvo/sdk";
 import { startCase } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Alert } from "app/components/Alert";
-import { FormField, FormLabel } from "app/components/Form";
-import { InputCurrency, InputDefault } from "app/components/Input";
-import { OptionProperties, Select } from "app/components/SelectDropdown";
-import { Spinner } from "app/components/Spinner";
-import { useExchangeContext } from "domains/exchange/contexts/Exchange";
-import { assertExchangeService, isUnavailablePairError } from "domains/exchange/utils";
-import { SelectRecipient } from "domains/profile/components/SelectRecipient";
 import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
+
+import { Alert } from "@/app/components/Alert";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { InputCurrency, InputDefault } from "@/app/components/Input";
+import { OptionProperties, Select } from "@/app/components/SelectDropdown";
+import { Spinner } from "@/app/components/Spinner";
+import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { assertExchangeService, isUnavailablePairError } from "@/domains/exchange/utils";
+import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 
 import { CurrencyIcon, FormDivider } from "./FormStep.blocks";
 

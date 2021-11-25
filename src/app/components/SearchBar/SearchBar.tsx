@@ -1,9 +1,10 @@
-import { Button } from "app/components/Button";
-import { Icon } from "app/components/Icon";
-import { Input } from "app/components/Input";
 import cn from "classnames";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
+import { Input } from "@/app/components/Input";
 
 interface SearchBarProperties {
 	placeholder?: string;

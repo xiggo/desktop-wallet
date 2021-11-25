@@ -1,5 +1,6 @@
 import React from "react";
-import { Position, Size } from "types";
+
+import { Position, Size } from "@/types";
 
 export interface DropdownOption {
 	icon?: string;

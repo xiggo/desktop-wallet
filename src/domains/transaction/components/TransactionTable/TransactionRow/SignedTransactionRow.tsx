@@ -1,13 +1,14 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Icon } from "app/components/Icon";
-import { TableCell, TableRow } from "app/components/Table";
-import { TableRemoveButton } from "app/components/TableRemoveButton";
-import { Tooltip } from "app/components/Tooltip";
-import { useTimeFormat } from "app/hooks/use-time-format";
-import { useMultiSignatureStatus } from "domains/transaction/hooks";
 import React, { MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
+import { TableCell, TableRow } from "@/app/components/Table";
+import { TableRemoveButton } from "@/app/components/TableRemoveButton";
+import { Tooltip } from "@/app/components/Tooltip";
+import { useTimeFormat } from "@/app/hooks/use-time-format";
+import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";

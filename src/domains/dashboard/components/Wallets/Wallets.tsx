@@ -1,17 +1,18 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { DropdownOption } from "app/components/Dropdown";
-import { Section } from "app/components/Layout";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile } from "app/hooks";
-import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
-import { WalletsControls } from "domains/dashboard/components/WalletsControls";
-import { DeleteWallet } from "domains/wallet/components/DeleteWallet";
-import { LedgerWaitingDevice } from "domains/wallet/components/Ledger/LedgerWaitingDevice";
-import { UpdateWalletName } from "domains/wallet/components/UpdateWalletName";
 import React, { FC, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { assertWallet } from "utils/assertions";
+
+import { DropdownOption } from "@/app/components/Dropdown";
+import { Section } from "@/app/components/Layout";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile } from "@/app/hooks";
+import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
+import { WalletsControls } from "@/domains/dashboard/components/WalletsControls";
+import { DeleteWallet } from "@/domains/wallet/components/DeleteWallet";
+import { LedgerWaitingDevice } from "@/domains/wallet/components/Ledger/LedgerWaitingDevice";
+import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
+import { assertWallet } from "@/utils/assertions";
 
 import { useWalletDisplay } from "./hooks";
 import { WalletsProperties } from "./Wallets.contracts";

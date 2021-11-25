@@ -1,16 +1,17 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Icon } from "app/components/Icon";
-import { Skeleton } from "app/components/Skeleton";
-import { Tooltip } from "app/components/Tooltip";
-import { TotalAmountBox } from "domains/transaction/components/TotalAmountBox";
+import React from "react";
+import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+
+import { Icon } from "@/app/components/Icon";
+import { Skeleton } from "@/app/components/Skeleton";
+import { Tooltip } from "@/app/components/Tooltip";
+import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import {
 	TransactionDetail,
 	TransactionMemo,
 	TransactionRecipients,
-} from "domains/transaction/components/TransactionDetail";
-import React from "react";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail";
 
 export const TransferLedgerReview = ({
 	wallet,

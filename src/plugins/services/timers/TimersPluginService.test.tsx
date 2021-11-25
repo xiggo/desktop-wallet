@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { IPluginController, PluginController, PluginManager } from "plugins/core";
-import { PluginAPI } from "plugins/types";
 import { act } from "react-dom/test-utils";
-import { env, waitFor } from "utils/testing-library";
+
+import { IPluginController, PluginController, PluginManager } from "@/plugins/core";
+import { PluginAPI } from "@/plugins/types";
+import { env, waitFor } from "@/utils/testing-library";
 
 import { TimersPluginService } from "./TimersPluginService";
 

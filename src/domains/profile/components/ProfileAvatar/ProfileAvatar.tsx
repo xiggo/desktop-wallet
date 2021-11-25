@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Avatar } from "app/components/Avatar";
 import React from "react";
-import { Size } from "types";
+
+import { Avatar } from "@/app/components/Avatar";
+import { Size } from "@/types";
 
 interface ProfileAvatarProperties {
 	profile: Contracts.IProfile;

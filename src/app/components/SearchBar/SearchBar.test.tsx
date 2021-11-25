@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { waitFor } from "@testing-library/react";
-import { translations } from "app/i18n/common/i18n";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { translations } from "@/app/i18n/common/i18n";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { SearchBar } from "./SearchBar";
 

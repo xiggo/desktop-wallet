@@ -1,7 +1,8 @@
-import { Toggle } from "app/components/Toggle";
-import { AppearanceSettingsState } from "domains/setting/pages/Appearance/Appearance.contracts";
 import React from "react";
 import { useFormContext } from "react-hook-form";
+
+import { Toggle } from "@/app/components/Toggle";
+import { AppearanceSettingsState } from "@/domains/setting/pages/Appearance/Appearance.contracts";
 
 interface Properties {
 	name: string;

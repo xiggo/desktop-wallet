@@ -1,18 +1,19 @@
-import { Button } from "app/components/Button";
-import { Form } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { ListDivided } from "app/components/ListDivided";
-import { Toggle } from "app/components/Toggle";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile } from "app/hooks";
-import { toasts } from "app/services";
-import { SettingsWrapper } from "domains/setting/components/SettingsPageWrapper";
-import { useProfileExport } from "domains/setting/hooks/use-profile-export";
 import electron from "electron";
 import fs from "fs";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Form } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { ListDivided } from "@/app/components/ListDivided";
+import { Toggle } from "@/app/components/Toggle";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile } from "@/app/hooks";
+import { toasts } from "@/app/services";
+import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
+import { useProfileExport } from "@/domains/setting/hooks/use-profile-export";
 
 const EXTENSION = "dwe";
 

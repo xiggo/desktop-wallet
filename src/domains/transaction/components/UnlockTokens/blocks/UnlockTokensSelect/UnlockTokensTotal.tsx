@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { AmountLabel } from "app/components/Amount";
-import { Skeleton } from "app/components/Skeleton";
 import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { AmountLabel } from "@/app/components/Amount";
+import { Skeleton } from "@/app/components/Skeleton";
 
 interface Properties {
 	isLoading: boolean;

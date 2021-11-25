@@ -1,8 +1,9 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Header } from "app/components/Header";
-import { Image } from "app/components/Image";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Header } from "@/app/components/Header";
+import { Image } from "@/app/components/Image";
 
 import { Signatures } from "./Signatures";
 

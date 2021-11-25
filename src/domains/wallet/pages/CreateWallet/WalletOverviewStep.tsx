@@ -1,16 +1,17 @@
-import { Alert } from "app/components/Alert";
-import { Button } from "app/components/Button";
-import { Clipboard } from "app/components/Clipboard";
-import { Divider } from "app/components/Divider";
-import { Header } from "app/components/Header";
-import { Icon } from "app/components/Icon";
-import { Toggle } from "app/components/Toggle";
-import { toasts } from "app/services";
-import { MnemonicList } from "domains/wallet/components/MnemonicList";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
-import { saveFile } from "utils/electron-utils";
+
+import { Alert } from "@/app/components/Alert";
+import { Button } from "@/app/components/Button";
+import { Clipboard } from "@/app/components/Clipboard";
+import { Divider } from "@/app/components/Divider";
+import { Header } from "@/app/components/Header";
+import { Icon } from "@/app/components/Icon";
+import { Toggle } from "@/app/components/Toggle";
+import { toasts } from "@/app/services";
+import { MnemonicList } from "@/domains/wallet/components/MnemonicList";
+import { saveFile } from "@/utils/electron-utils";
 
 export const WalletOverviewStep = () => {
 	const { getValues, setValue, unregister, watch } = useFormContext();

@@ -1,6 +1,7 @@
 import { DateTime } from "@payvo/sdk-intl";
-import { useEnvironmentContext } from "app/contexts";
 import { useCallback } from "react";
+
+import { useEnvironmentContext } from "@/app/contexts";
 
 interface Input {
 	ticker?: string;

@@ -2,11 +2,12 @@
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
-import { useProfileStatusWatcher } from "app/hooks";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
+
+import { useProfileStatusWatcher } from "@/app/hooks";
 import {
 	env,
 	fireEvent,
@@ -16,7 +17,7 @@ import {
 	syncDelegates,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { Votes } from "./Votes";
 

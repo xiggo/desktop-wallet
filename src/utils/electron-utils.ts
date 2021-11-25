@@ -1,7 +1,8 @@
 import electron, { FileFilter, ipcRenderer } from "electron";
 import fs from "fs";
 import path from "path";
-import { Theme } from "types";
+
+import { Theme } from "@/types";
 
 import { validatePath } from "./validate-path";
 

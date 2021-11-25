@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { isFullySynced } from "domains/wallet/utils/is-fully-synced";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("isFullySynced", () => {
 	let wallet: Contracts.IReadWriteWallet;

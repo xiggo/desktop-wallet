@@ -1,6 +1,7 @@
 import React from "react";
-import { Position, Size } from "types";
-import { render } from "utils/testing-library";
+
+import { Position, Size } from "@/types";
+import { render } from "@/utils/testing-library";
 
 import { Badge } from "./Badge";
 

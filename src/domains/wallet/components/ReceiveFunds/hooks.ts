@@ -1,6 +1,7 @@
 import { QRCode, URI } from "@payvo/sdk-helpers";
 import { useCallback, useEffect, useState } from "react";
-import { shouldUseDarkColors } from "utils/electron-utils";
+
+import { shouldUseDarkColors } from "@/utils/electron-utils";
 
 interface QRCodeProperties {
 	network: string;

@@ -1,9 +1,10 @@
-import { TableCell, TableRow } from "app/components/Table";
-import { TransactionRowAmount } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowAmount";
-import { TransactionRowMode } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMode";
-import { TransactionRowRecipientLabel } from "domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipientLabel";
 import React, { useEffect, useState } from "react";
 import VisibilitySensor from "react-visibility-sensor";
+
+import { TableCell, TableRow } from "@/app/components/Table";
+import { TransactionRowAmount } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowAmount";
+import { TransactionRowMode } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMode";
+import { TransactionRowRecipientLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipientLabel";
 
 import { NotificationTransactionItemProperties } from "./contracts";
 

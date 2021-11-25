@@ -1,6 +1,7 @@
-import { PluginManager } from "plugins/core";
 import React from "react";
-import { render } from "utils/testing-library";
+
+import { PluginManager } from "@/plugins/core";
+import { render } from "@/utils/testing-library";
 
 import { HttpPluginProvider } from "./HttpPluginProvider";
 

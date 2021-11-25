@@ -1,15 +1,16 @@
 import LedgerTransportNodeHID from "@ledgerhq/hw-transport-node-hid-singleton";
 import { Coins } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { useEnvironmentContext } from "app/contexts/Environment";
-import { LedgerData, minVersionList } from "app/contexts/Ledger/contracts";
-import { formatLedgerDerivationPath } from "app/contexts/Ledger/utils/format-ledger-derivation-path";
-import { toasts } from "app/services";
 import retry from "async-retry";
-import { getDefaultAlias } from "domains/wallet/utils/get-default-alias";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import semver from "semver";
+
+import { useEnvironmentContext } from "@/app/contexts/Environment";
+import { LedgerData, minVersionList } from "@/app/contexts/Ledger/contracts";
+import { formatLedgerDerivationPath } from "@/app/contexts/Ledger/utils/format-ledger-derivation-path";
+import { toasts } from "@/app/services";
+import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 
 import { connectionReducer, defaultConnectionState } from "./connection.state";
 

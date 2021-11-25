@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import * as useRandomNumberHook from "app/hooks/use-random-number";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { WalletCard } from "./WalletCard";
 

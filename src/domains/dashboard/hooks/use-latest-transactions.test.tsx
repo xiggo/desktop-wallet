@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import nock from "nock";
 import React from "react";
-import { env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } from "utils/testing-library";
+
+import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
+import { env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } from "@/utils/testing-library";
 
 import { useLatestTransactions } from "./use-latest-transactions";
 

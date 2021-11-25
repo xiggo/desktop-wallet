@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { PluginService } from "plugins/core";
-import { PluginHooks } from "plugins/core/internals";
-import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
+
+import { PluginService } from "@/plugins/core";
+import { PluginHooks } from "@/plugins/core/internals";
+import { PluginServiceConfig, PluginServiceIdentifier } from "@/plugins/types";
 
 export class ProfilePluginService implements PluginService {
 	#profile: Contracts.IProfile | undefined;

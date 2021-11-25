@@ -1,11 +1,12 @@
-import { CircularProgressBar } from "app/components/CircularProgressBar";
-import { Image } from "app/components/Image";
-import { useTheme } from "app/hooks";
 import cn from "classnames";
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { styled } from "twin.macro";
-import { Size } from "types";
+
+import { CircularProgressBar } from "@/app/components/CircularProgressBar";
+import { Image } from "@/app/components/Image";
+import { useTheme } from "@/app/hooks";
+import { Size } from "@/types";
 
 import { getStyles } from "./PluginImage.styles";
 

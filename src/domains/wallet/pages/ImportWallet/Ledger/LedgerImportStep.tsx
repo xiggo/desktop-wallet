@@ -1,18 +1,19 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { Amount } from "app/components/Amount";
-import { Avatar } from "app/components/Avatar";
-import { Button } from "app/components/Button";
-import { Header } from "app/components/Header";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
-import { LedgerData } from "app/contexts/Ledger";
-import { TransactionDetail, TransactionNetwork } from "domains/transaction/components/TransactionDetail";
 import React, { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { assertNetwork, assertWallet } from "utils/assertions";
+
+import { Address } from "@/app/components/Address";
+import { Amount } from "@/app/components/Amount";
+import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
+import { Header } from "@/app/components/Header";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
+import { LedgerData } from "@/app/contexts/Ledger";
+import { TransactionDetail, TransactionNetwork } from "@/domains/transaction/components/TransactionDetail";
+import { assertNetwork, assertWallet } from "@/utils/assertions";
 
 const MultipleImport = ({
 	network,

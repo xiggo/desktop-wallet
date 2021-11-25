@@ -1,5 +1,6 @@
 import tw, { css } from "twin.macro";
-import { ButtonVariant, Size } from "types";
+
+import { ButtonVariant, Size } from "@/types";
 
 const baseStyle = [
 	tw`relative inline-flex items-center justify-center font-semibold leading-tight text-center transition-colors-shadow duration-100 ease-linear rounded outline-none`,

@@ -1,9 +1,10 @@
-import { translations } from "app/i18n/common/i18n";
-import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import React from "react";
 import { Route } from "react-router-dom";
-import { getDefaultProfileId, getDefaultWalletId, render, screen } from "utils/testing-library";
+
+import { translations } from "@/app/i18n/common/i18n";
+import { toasts } from "@/app/services";
+import { getDefaultProfileId, getDefaultWalletId, render, screen } from "@/utils/testing-library";
 
 import { useDeeplink } from "./use-deeplink";
 

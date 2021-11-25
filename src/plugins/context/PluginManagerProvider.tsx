@@ -1,20 +1,21 @@
 import { sortBy, uniqBy } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { useEnvironmentContext } from "app/contexts";
-import { httpClient, toasts } from "app/services";
 import electron from "electron";
-import { IPluginController, PluginManager, PluginService } from "plugins/core";
-import { IPluginConfigurationData, PluginConfigurationData } from "plugins/core/configuration";
-import { PluginLoaderFileSystem } from "plugins/loader/fs";
+import React, { useCallback, useMemo, useState } from "react";
+import semver from "semver";
+
+import { useEnvironmentContext } from "@/app/contexts";
+import { httpClient, toasts } from "@/app/services";
+import { IPluginController, PluginManager, PluginService } from "@/plugins/core";
+import { IPluginConfigurationData, PluginConfigurationData } from "@/plugins/core/configuration";
+import { PluginLoaderFileSystem } from "@/plugins/loader/fs";
 import {
 	ExtendedSerializedPluginConfigurationData,
 	PluginUpdateStatus,
 	SerializedPluginConfigurationData,
-} from "plugins/types";
-import React, { useCallback, useMemo, useState } from "react";
-import semver from "semver";
-import { assertArray, assertString } from "utils/assertions";
-import { appVersion, openExternal } from "utils/electron-utils";
+} from "@/plugins/types";
+import { assertArray, assertString } from "@/utils/assertions";
+import { appVersion, openExternal } from "@/utils/electron-utils";
 
 const PluginManagerContext = React.createContext<any>(undefined);
 

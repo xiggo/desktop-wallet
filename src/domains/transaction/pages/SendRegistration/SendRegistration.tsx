@@ -1,29 +1,30 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Form } from "app/components/Form";
-import { Page, Section } from "app/components/Layout";
-import { StepIndicator } from "app/components/StepIndicator";
-import { StepNavigation } from "app/components/StepNavigation";
-import { TabPanel, Tabs } from "app/components/Tabs";
-import { useEnvironmentContext, useLedgerContext } from "app/contexts";
-import { useActiveProfile, useActiveWallet, useLedgerModelStatus, useValidation } from "app/hooks";
-import { useKeydown } from "app/hooks/use-keydown";
-import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
-import {
-	DelegateRegistrationForm,
-	signDelegateRegistration,
-} from "domains/transaction/components/DelegateRegistrationForm";
-import { ErrorStep } from "domains/transaction/components/ErrorStep";
-import { FeeWarning } from "domains/transaction/components/FeeWarning";
-import { MultiSignatureRegistrationForm } from "domains/transaction/components/MultiSignatureRegistrationForm";
-import {
-	SecondSignatureRegistrationForm,
-	signSecondSignatureRegistration,
-} from "domains/transaction/components/SecondSignatureRegistrationForm";
-import { useFeeConfirmation, useMultiSignatureRegistration } from "domains/transaction/hooks";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory, useParams } from "react-router-dom";
+
+import { Form } from "@/app/components/Form";
+import { Page, Section } from "@/app/components/Layout";
+import { StepIndicator } from "@/app/components/StepIndicator";
+import { StepNavigation } from "@/app/components/StepNavigation";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
+import { useActiveProfile, useActiveWallet, useLedgerModelStatus, useValidation } from "@/app/hooks";
+import { useKeydown } from "@/app/hooks/use-keydown";
+import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
+import {
+	DelegateRegistrationForm,
+	signDelegateRegistration,
+} from "@/domains/transaction/components/DelegateRegistrationForm";
+import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
+import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
+import { MultiSignatureRegistrationForm } from "@/domains/transaction/components/MultiSignatureRegistrationForm";
+import {
+	SecondSignatureRegistrationForm,
+	signSecondSignatureRegistration,
+} from "@/domains/transaction/components/SecondSignatureRegistrationForm";
+import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 
 import { SendRegistrationForm } from "./SendRegistration.models";
 import { SummaryStep } from "./SummaryStep";

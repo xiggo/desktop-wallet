@@ -1,11 +1,12 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Icon } from "app/components/Icon";
-import { Link } from "app/components/Link";
-import { TableCell, TableRow } from "app/components/Table";
-import { useTimeFormat } from "app/hooks/use-time-format";
 import cn from "classnames";
 import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Icon } from "@/app/components/Icon";
+import { Link } from "@/app/components/Link";
+import { TableCell, TableRow } from "@/app/components/Table";
+import { useTimeFormat } from "@/app/hooks/use-time-format";
 
 import { TransactionRowAmount } from "./TransactionRowAmount";
 import { TransactionRowRecipient } from "./TransactionRowRecipient";

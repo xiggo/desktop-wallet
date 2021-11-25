@@ -1,10 +1,11 @@
 import { constantCase } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Size } from "types";
+
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
+import { Size } from "@/types";
 
 interface WalletIconsProperties {
 	exclude?: string[];

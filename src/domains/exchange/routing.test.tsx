@@ -1,4 +1,4 @@
-import { ExchangeRoutes } from "domains/exchange/routing";
+import { ExchangeRoutes } from "@/domains/exchange/routing";
 
 describe("Dashboard routing", () => {
 	it("should return exchange route object", () => {

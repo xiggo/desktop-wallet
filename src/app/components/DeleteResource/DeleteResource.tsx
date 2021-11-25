@@ -1,9 +1,10 @@
-import { Button } from "app/components/Button";
-import { Icon } from "app/components/Icon";
-import { Image } from "app/components/Image";
-import { Modal } from "app/components/Modal";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
+import { Image } from "@/app/components/Image";
+import { Modal } from "@/app/components/Modal";
 
 interface DeleteResourceProperties {
 	isOpen: boolean;

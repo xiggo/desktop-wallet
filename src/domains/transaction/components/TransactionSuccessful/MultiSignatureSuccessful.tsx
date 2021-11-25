@@ -1,24 +1,25 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { Avatar } from "app/components/Avatar";
-import { Clipboard } from "app/components/Clipboard";
-import { Header } from "app/components/Header";
-import { Icon } from "app/components/Icon";
-import { Image } from "app/components/Image";
-import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
-import { getMultiSignatureInfo } from "domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
-import { RecipientList } from "domains/transaction/components/RecipientList";
-import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
+import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+
+import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { Clipboard } from "@/app/components/Clipboard";
+import { Header } from "@/app/components/Header";
+import { Icon } from "@/app/components/Icon";
+import { Image } from "@/app/components/Image";
+import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
+import { getMultiSignatureInfo } from "@/domains/transaction/components/MultiSignatureDetail/MultiSignatureDetail.helpers";
+import { RecipientList } from "@/domains/transaction/components/RecipientList";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
 	TransactionDetail,
 	TransactionNetwork,
 	TransactionSender,
 	TransactionType,
-} from "domains/transaction/components/TransactionDetail";
-import { ExtendedSignedTransactionData } from "domains/transaction/pages/SendRegistration/SendRegistration.models";
-import React, { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { assertString } from "utils/assertions";
+} from "@/domains/transaction/components/TransactionDetail";
+import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendRegistration/SendRegistration.models";
+import { assertString } from "@/utils/assertions";
 
 interface TransactionSuccessfulProperties {
 	children?: React.ReactNode;

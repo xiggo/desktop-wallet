@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { TFunction } from "i18next";
-import { lowerCaseEquals } from "utils/equals";
+
+import { lowerCaseEquals } from "@/utils/equals";
 
 const nameMaxLength = 42;
 

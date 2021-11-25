@@ -1,5 +1,6 @@
 import React from "react";
-import { render, screen } from "utils/testing-library";
+
+import { render, screen } from "@/utils/testing-library";
 
 import { Input } from "./Input";
 

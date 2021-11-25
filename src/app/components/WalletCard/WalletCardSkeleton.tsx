@@ -1,8 +1,9 @@
-import { Card } from "app/components/Card";
-import { Circle } from "app/components/Circle";
-import { Skeleton } from "app/components/Skeleton";
-import { useRandomNumber } from "app/hooks";
 import React from "react";
+
+import { Card } from "@/app/components/Card";
+import { Circle } from "@/app/components/Circle";
+import { Skeleton } from "@/app/components/Skeleton";
+import { useRandomNumber } from "@/app/hooks";
 
 export const WalletCardSkeleton = () => {
 	const nameWidth = useRandomNumber(120, 150);

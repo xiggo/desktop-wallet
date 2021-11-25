@@ -1,5 +1,6 @@
 import tw, { css } from "twin.macro";
-import { Position, Size } from "types";
+
+import { Position, Size } from "@/types";
 
 const baseStyle = (size?: Size, noShadow?: boolean) => {
 	const base = tw`absolute transform`;

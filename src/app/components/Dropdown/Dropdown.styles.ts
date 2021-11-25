@@ -1,5 +1,6 @@
 import tw from "twin.macro";
-import { Position } from "types";
+
+import { Position } from "@/types";
 
 import { DropdownVariantType } from "./Dropdown.contracts";
 

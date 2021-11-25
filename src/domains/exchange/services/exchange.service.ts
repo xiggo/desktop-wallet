@@ -1,7 +1,14 @@
 import { upperFirst } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { HttpClient } from "app/services/HttpClient";
-import { CurrencyData, EstimateResponse, Order, OrderResponse, OrderStatusResponse } from "domains/exchange/contracts";
+
+import { HttpClient } from "@/app/services/HttpClient";
+import {
+	CurrencyData,
+	EstimateResponse,
+	Order,
+	OrderResponse,
+	OrderStatusResponse,
+} from "@/domains/exchange/contracts";
 
 // export const exchangeHost = "http://exchange-server.test/api";
 export const exchangeHost = "https://exchanges.payvo.com/api";

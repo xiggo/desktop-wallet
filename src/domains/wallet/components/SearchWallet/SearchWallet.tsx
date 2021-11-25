@@ -1,18 +1,19 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { Amount } from "app/components/Amount";
-import { Avatar } from "app/components/Avatar";
-import { Button } from "app/components/Button";
-import { EmptyResults } from "app/components/EmptyResults";
-import { HeaderSearchBar } from "app/components/Header/HeaderSearchBar";
-import { Modal } from "app/components/Modal";
-import { Table, TableCell, TableRow } from "app/components/Table";
-import { useWalletAlias } from "app/hooks";
-import { useSearchWallet } from "app/hooks/use-search-wallet";
-import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
+
+import { Address } from "@/app/components/Address";
+import { Amount } from "@/app/components/Amount";
+import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
+import { EmptyResults } from "@/app/components/EmptyResults";
+import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
+import { Modal } from "@/app/components/Modal";
+import { Table, TableCell, TableRow } from "@/app/components/Table";
+import { useWalletAlias } from "@/app/hooks";
+import { useSearchWallet } from "@/app/hooks/use-search-wallet";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 import { SearchWalletListItemProperties, SearchWalletProperties } from "./SearchWallet.models";
 

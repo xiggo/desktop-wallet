@@ -1,6 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Modal } from "app/components/Modal";
-import { useEnvironmentContext } from "app/contexts";
+import React, { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
+
+import { Modal } from "@/app/components/Modal";
+import { useEnvironmentContext } from "@/app/contexts";
 import {
 	TransactionExplorerLink,
 	TransactionFee,
@@ -8,10 +11,8 @@ import {
 	TransactionStatus,
 	TransactionTimestamp,
 	TransactionVotes,
-} from "domains/transaction/components/TransactionDetail";
-import { TransactionDetailProperties } from "domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
-import React, { useEffect, useMemo, useState } from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
 
 export const VoteDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();

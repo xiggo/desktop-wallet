@@ -1,6 +1,7 @@
 import { Networks } from "@payvo/sdk";
-import { useEnvironmentContext } from "app/contexts";
 import { useCallback, useMemo } from "react";
+
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const useNetworkOptions = (useTestNetworks?: boolean) => {
 	const { env } = useEnvironmentContext();

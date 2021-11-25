@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { env, getDefaultProfileId, getDefaultWalletMnemonic } from "utils/testing-library";
+
+import { env, getDefaultProfileId, getDefaultWalletMnemonic } from "@/utils/testing-library";
 
 import { useMessageSigner } from "./use-message-signer";
 

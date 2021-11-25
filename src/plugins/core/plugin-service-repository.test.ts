@@ -1,5 +1,5 @@
-import { EventsPluginService } from "plugins/services";
-import { PluginServiceIdentifier } from "plugins/types";
+import { EventsPluginService } from "@/plugins/services";
+import { PluginServiceIdentifier } from "@/plugins/types";
 
 import { PluginServiceRepository } from "./plugin-service-repository";
 

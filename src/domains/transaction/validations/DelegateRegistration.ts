@@ -1,4 +1,4 @@
-import { validatePattern } from "utils/validations";
+import { validatePattern } from "@/utils/validations";
 
 export const delegateRegistration = (t: any) => ({
 	username: (usernames: string[]) => ({

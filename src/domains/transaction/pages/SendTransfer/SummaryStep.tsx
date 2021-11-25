@@ -1,13 +1,14 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { useWalletAlias } from "app/hooks";
-import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
+import React from "react";
+
+import { useWalletAlias } from "@/app/hooks";
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 import {
 	TransactionAmount,
 	TransactionFee,
 	TransactionRecipients,
-} from "domains/transaction/components/TransactionDetail";
-import { TransactionSuccessful } from "domains/transaction/components/TransactionSuccessful";
-import React from "react";
+} from "@/domains/transaction/components/TransactionDetail";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 interface SummaryStepProperties {
 	profile: Contracts.IProfile;

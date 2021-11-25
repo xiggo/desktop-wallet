@@ -1,12 +1,13 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { buildTranslations } from "app/i18n/helpers";
-import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import nock from "nock";
 import { LaunchPluginService, PluginController } from "plugins";
-import { PluginManagerProvider, usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React from "react";
 import { Route } from "react-router-dom";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import { toasts } from "@/app/services";
+import { PluginManagerProvider, usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
 import {
 	env,
 	fireEvent,
@@ -16,7 +17,7 @@ import {
 	screen,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { PluginDetails } from "./PluginDetails";
 

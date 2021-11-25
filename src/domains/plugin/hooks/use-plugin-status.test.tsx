@@ -1,5 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks";
-import { translations } from "domains/plugin/i18n";
+
+import { translations } from "@/domains/plugin/i18n";
 
 import { usePluginStatus } from "./use-plugin-status";
 

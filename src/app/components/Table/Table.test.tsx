@@ -1,6 +1,7 @@
 import React from "react";
 import { Column } from "react-table";
-import { fireEvent, render, screen, within } from "utils/testing-library";
+
+import { fireEvent, render, screen, within } from "@/utils/testing-library";
 
 import { Table } from "./Table";
 

@@ -1,5 +1,6 @@
 import React from "react";
-import { renderWithoutRouter } from "utils/testing-library";
+
+import { renderWithoutRouter } from "@/utils/testing-library";
 
 import { Image } from "./Image";
 

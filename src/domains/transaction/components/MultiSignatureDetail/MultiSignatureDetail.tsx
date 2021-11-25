@@ -1,14 +1,15 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Form } from "app/components/Form";
-import { Modal } from "app/components/Modal";
-import { TabPanel, Tabs } from "app/components/Tabs";
-import { useEnvironmentContext, useLedgerContext } from "app/contexts";
-import { useLedgerModelStatus } from "app/hooks";
-import { AuthenticationStep } from "domains/transaction/components/AuthenticationStep";
-import { ErrorStep } from "domains/transaction/components/ErrorStep";
-import { useMultiSignatureRegistration, useMultiSignatureStatus } from "domains/transaction/hooks";
 import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+
+import { Form } from "@/app/components/Form";
+import { Modal } from "@/app/components/Modal";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
+import { useLedgerModelStatus } from "@/app/hooks";
+import { AuthenticationStep } from "@/domains/transaction/components/AuthenticationStep";
+import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
+import { useMultiSignatureRegistration, useMultiSignatureStatus } from "@/domains/transaction/hooks";
 
 import { MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
 import { SentStep } from "./SentStep";

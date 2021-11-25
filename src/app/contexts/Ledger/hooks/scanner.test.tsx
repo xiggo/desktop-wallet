@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { LedgerProvider, useLedgerContext } from "app/contexts/Ledger";
 import nock from "nock";
 import React from "react";
+
+import { LedgerProvider, useLedgerContext } from "@/app/contexts/Ledger";
 import {
 	env,
 	fireEvent,
@@ -10,7 +11,7 @@ import {
 	render,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { useLedgerScanner } from "./scanner";
 

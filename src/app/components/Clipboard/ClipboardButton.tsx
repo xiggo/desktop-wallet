@@ -1,10 +1,11 @@
-import { getStyles } from "app/components/Button/Button.styles";
-import { Icon } from "app/components/Icon";
-import { useClipboard } from "app/hooks";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { styled } from "twin.macro";
-import { ButtonVariant, Size } from "types";
+
+import { getStyles } from "@/app/components/Button/Button.styles";
+import { Icon } from "@/app/components/Icon";
+import { useClipboard } from "@/app/hooks";
+import { ButtonVariant, Size } from "@/types";
 
 import { ClipboardButtonProperties } from "./Clipboard.contracts";
 

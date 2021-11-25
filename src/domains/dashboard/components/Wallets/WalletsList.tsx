@@ -1,11 +1,12 @@
-import { Button } from "app/components/Button";
-import { EmptyBlock } from "app/components/EmptyBlock";
-import { Table } from "app/components/Table";
-import { WalletListItem } from "app/components/WalletListItem";
-import { WalletListItemSkeleton } from "app/components/WalletListItem/WalletListItemSkeleton";
 import React, { FC, useCallback, useMemo } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
+
+import { Button } from "@/app/components/Button";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Table } from "@/app/components/Table";
+import { WalletListItem } from "@/app/components/WalletListItem";
+import { WalletListItemSkeleton } from "@/app/components/WalletListItem/WalletListItemSkeleton";
 
 import { GridWallet, WalletListProperties } from "./Wallets.contracts";
 

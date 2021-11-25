@@ -1,4 +1,4 @@
-import { AppearanceSettings, ExportSettings, GeneralSettings, PasswordSettings } from "domains/setting/pages";
+import { AppearanceSettings, ExportSettings, GeneralSettings, PasswordSettings } from "@/domains/setting/pages";
 
 export const SettingRoutes = [
 	{

@@ -1,10 +1,11 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Header } from "app/components/Header";
-import { TotalAmountBox } from "domains/transaction/components/TotalAmountBox";
-import { TransactionNetwork, TransactionSender } from "domains/transaction/components/TransactionDetail";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Header } from "@/app/components/Header";
+import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
+import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
 
 export const ReviewStep = ({ wallet }: { wallet: Contracts.IReadWriteWallet }) => {
 	const { t } = useTranslation();

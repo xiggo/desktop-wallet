@@ -1,7 +1,8 @@
-import { Icon } from "app/components/Icon";
 import cn from "classnames";
 import React from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
+
+import { Icon } from "@/app/components/Icon";
 
 interface Properties {
 	handleActiveItem: (key: string) => void;

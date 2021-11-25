@@ -1,4 +1,4 @@
-import { Size } from "types";
+import { Size } from "@/types";
 
 export const getStyles = (size?: Size) => {
 	if (size === "sm") {

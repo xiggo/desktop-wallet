@@ -1,7 +1,8 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { TransactionSuccessful } from "domains/transaction/components/TransactionSuccessful";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 interface SummaryStepProperties {
 	transaction: DTO.ExtendedSignedTransactionData;

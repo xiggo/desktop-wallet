@@ -1,5 +1,5 @@
-import { Middleware } from "router/interfaces";
-import { env, getDefaultProfileId } from "utils/testing-library";
+import { Middleware } from "@/router/interfaces";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { WalletMiddleware } from "./middleware";
 

@@ -2,7 +2,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { ExchangeStatus } from "./StatusStep.blocks";
 

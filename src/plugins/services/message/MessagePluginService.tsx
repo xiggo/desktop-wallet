@@ -1,5 +1,5 @@
-import { PluginService } from "plugins/core";
-import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
+import { PluginService } from "@/plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "@/plugins/types";
 
 import { useSignMessageModal } from "./use-sign-message-modal";
 

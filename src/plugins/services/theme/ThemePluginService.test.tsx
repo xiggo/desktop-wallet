@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { PluginController, PluginManager } from "plugins/core";
-import { PluginAPI } from "plugins/types";
 import React from "react";
-import { env, render, screen } from "utils/testing-library";
+
+import { PluginController, PluginManager } from "@/plugins/core";
+import { PluginAPI } from "@/plugins/types";
+import { env, render, screen } from "@/utils/testing-library";
 
 import { ThemePluginService } from "./ThemePluginService";
 import { withThemeDecorator } from "./withThemeDecorator";

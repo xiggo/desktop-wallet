@@ -1,8 +1,9 @@
 import { BigNumber } from "@payvo/sdk-helpers";
 import { renderHook } from "@testing-library/react-hooks";
-import { EnvironmentProvider } from "app/contexts";
 import React from "react";
-import { env } from "utils/testing-library";
+
+import { EnvironmentProvider } from "@/app/contexts";
+import { env } from "@/utils/testing-library";
 
 import { useValidation } from "./use-validation";
 

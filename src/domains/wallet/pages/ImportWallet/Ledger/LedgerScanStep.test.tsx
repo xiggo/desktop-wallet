@@ -1,10 +1,11 @@
 import Transport from "@ledgerhq/hw-transport";
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { LedgerProvider } from "app/contexts/Ledger/Ledger";
 import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
+
+import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import {
 	env,
 	fireEvent,
@@ -13,7 +14,7 @@ import {
 	render,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { LedgerScanStep } from "./LedgerScanStep";
 

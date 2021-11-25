@@ -2,7 +2,8 @@
 import React from "react";
 import { MemoryRouter } from "react-router-dom";
 import { RouterView } from "router";
-import { render, screen } from "utils/testing-library";
+
+import { render, screen } from "@/utils/testing-library";
 
 describe("ContactRoutes", () => {
 	it("should render", () => {

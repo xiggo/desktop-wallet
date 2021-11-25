@@ -1,11 +1,12 @@
-import { TabPanel, Tabs } from "app/components/Tabs";
-import { TransactionFee } from "domains/transaction/components/TransactionDetail";
+import React from "react";
+
+import { TabPanel, Tabs } from "@/app/components/Tabs";
+import { TransactionFee } from "@/domains/transaction/components/TransactionDetail";
 import {
 	SendRegistrationComponent,
 	SendRegistrationDetailsOptions,
 	SendRegistrationForm,
-} from "domains/transaction/pages/SendRegistration/SendRegistration.models";
-import React from "react";
+} from "@/domains/transaction/pages/SendRegistration/SendRegistration.models";
 
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";

@@ -1,8 +1,9 @@
-import { Header } from "app/components/Header";
-import { MnemonicVerification } from "domains/wallet/components/MnemonicVerification";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Header } from "@/app/components/Header";
+import { MnemonicVerification } from "@/domains/wallet/components/MnemonicVerification";
 
 export const VerificationStep = () => {
 	const { getValues, register, setValue, watch } = useFormContext();

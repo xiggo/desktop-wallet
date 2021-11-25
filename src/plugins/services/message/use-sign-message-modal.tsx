@@ -1,7 +1,8 @@
 import { Services } from "@payvo/sdk";
-import { useActiveProfile } from "app/hooks";
-import { SignMessage } from "domains/wallet/components/SignMessage";
 import React, { useCallback, useState } from "react";
+
+import { useActiveProfile } from "@/app/hooks";
+import { SignMessage } from "@/domains/wallet/components/SignMessage";
 
 export const useSignMessageModal = ({ message, walletId }: { message: string; walletId: string }) => {
 	const [isOpen, setIsOpen] = useState(false);

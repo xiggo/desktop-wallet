@@ -1,8 +1,9 @@
-import { Dropdown } from "app/components/Dropdown/Dropdown";
-import { FilterNetworks } from "app/components/FilterNetwork";
-import { Icon } from "app/components/Icon";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Dropdown } from "@/app/components/Dropdown/Dropdown";
+import { FilterNetworks } from "@/app/components/FilterNetwork";
+import { Icon } from "@/app/components/Icon";
 
 import { FilterWalletsProperties } from "./models";
 

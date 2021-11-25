@@ -1,11 +1,12 @@
 import { Contracts, Environment } from "@payvo/sdk-profiles";
-import { Header } from "app/components/Header";
-import { ReadableFile } from "app/hooks/use-files";
-import { FilePreview } from "domains/profile/components/FilePreview";
-import { PasswordModal } from "domains/profile/components/PasswordModal";
-import { useProfileImport } from "domains/profile/hooks/use-profile-import";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Header } from "@/app/components/Header";
+import { ReadableFile } from "@/app/hooks/use-files";
+import { FilePreview } from "@/domains/profile/components/FilePreview";
+import { PasswordModal } from "@/domains/profile/components/PasswordModal";
+import { useProfileImport } from "@/domains/profile/hooks/use-profile-import";
 
 interface ProcessingImportProperties {
 	env: Environment;

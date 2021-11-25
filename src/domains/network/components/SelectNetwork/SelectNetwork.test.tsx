@@ -1,6 +1,7 @@
 import React from "react";
-import { availableNetworksMock } from "tests/mocks/networks";
-import { fireEvent, render, screen, within } from "utils/testing-library";
+
+import { availableNetworksMock } from "@/tests/mocks/networks";
+import { fireEvent, render, screen, within } from "@/utils/testing-library";
 
 import { itemToString, SelectNetwork } from "./SelectNetwork";
 

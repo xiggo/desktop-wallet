@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
-import { EnvironmentProvider } from "app/contexts";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { toasts } from "app/services";
 import electron from "electron";
 import React from "react";
-import { env, getDefaultProfileId, waitFor } from "utils/testing-library";
+
+import { EnvironmentProvider } from "@/app/contexts";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { toasts } from "@/app/services";
+import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
 
 import { useUpdater } from "./use-updater";
 

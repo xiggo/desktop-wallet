@@ -1,8 +1,9 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { TransactionDetail, TransactionFee } from "domains/transaction/components/TransactionDetail";
-import { TransactionSuccessful } from "domains/transaction/components/TransactionSuccessful";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { TransactionDetail, TransactionFee } from "@/domains/transaction/components/TransactionDetail";
+import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
 interface SummaryStepProperties {
 	senderWallet: Contracts.IReadWriteWallet;

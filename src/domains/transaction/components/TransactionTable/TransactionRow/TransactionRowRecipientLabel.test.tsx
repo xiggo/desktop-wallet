@@ -1,9 +1,10 @@
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
-import { translations } from "domains/transaction/i18n";
 import React from "react";
-import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, render, screen } from "utils/testing-library";
+
+import { translations } from "@/domains/transaction/i18n";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { env, render, screen } from "@/utils/testing-library";
 
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
 

@@ -1,10 +1,11 @@
-import { Button } from "app/components/Button";
-import { Checkbox } from "app/components/Checkbox";
-import { FormField } from "app/components/Form";
-import { Image } from "app/components/Image";
-import { Modal } from "app/components/Modal";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Checkbox } from "@/app/components/Checkbox";
+import { FormField } from "@/app/components/Form";
+import { Image } from "@/app/components/Image";
+import { Modal } from "@/app/components/Modal";
 
 interface ManualInstallationDisclaimerProperties {
 	isOpen: boolean;

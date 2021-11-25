@@ -5,9 +5,10 @@ import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-w
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
-import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
-import walletMock from "tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "utils/testing-library";
+
+import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
 
 import { AddressRow } from "./AddressRow";
 

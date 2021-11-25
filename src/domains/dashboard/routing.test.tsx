@@ -1,4 +1,4 @@
-import { DashboardRoutes } from "domains/dashboard/routing";
+import { DashboardRoutes } from "@/domains/dashboard/routing";
 
 describe("Dashboard routing", () => {
 	it("should return dashboard route object", () => {

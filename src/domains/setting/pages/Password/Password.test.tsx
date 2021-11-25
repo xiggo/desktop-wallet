@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { buildTranslations } from "app/i18n/helpers";
-import { toasts } from "app/services";
-import { PasswordSettings } from "domains/setting/pages";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import { toasts } from "@/app/services";
+import { PasswordSettings } from "@/domains/setting/pages";
+import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 const translations = buildTranslations();
 const history = createMemoryHistory();
 

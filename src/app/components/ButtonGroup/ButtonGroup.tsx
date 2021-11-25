@@ -1,6 +1,7 @@
-import { Tooltip } from "app/components/Tooltip";
 import React from "react";
 import tw, { css, styled } from "twin.macro";
+
+import { Tooltip } from "@/app/components/Tooltip";
 
 export const ButtonGroup = ({ children }: React.PropsWithChildren<{}>) => (
 	<div data-testid="ButtonGroup" role="radiogroup" className="inline-flex items-center space-x-3 w-full">

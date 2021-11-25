@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { ConfigurationProvider } from "app/contexts/Configuration";
 import React from "react";
 import { act } from "react-test-renderer";
-import { env, getDefaultProfileId, waitFor } from "utils/testing-library";
+
+import { ConfigurationProvider } from "@/app/contexts/Configuration";
+import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
 
 import { useWelcomeModal } from "./use-welcome-modal";
 

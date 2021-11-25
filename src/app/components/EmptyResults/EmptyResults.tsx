@@ -1,6 +1,7 @@
-import { Image } from "app/components/Image";
 import cn from "classnames";
 import React from "react";
+
+import { Image } from "@/app/components/Image";
 
 interface EmptyResultsProperties {
 	className?: string;

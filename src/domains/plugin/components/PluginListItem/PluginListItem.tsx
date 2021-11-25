@@ -1,14 +1,15 @@
-import { Button } from "app/components/Button";
-import { Icon } from "app/components/Icon";
-import { TableCell, TableRow } from "app/components/Table";
-import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
-import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
-import { PluginDropdown } from "domains/plugin/components/PluginDropdown";
-import { PluginImage, PluginImageProgressSize } from "domains/plugin/components/PluginImage";
-import { PluginCategories } from "domains/plugin/plugin.contracts";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
+import { TableCell, TableRow } from "@/app/components/Table";
+import { Tooltip } from "@/app/components/Tooltip";
+import { OfficialPluginIcon } from "@/domains/plugin/components/OfficialPluginIcon";
+import { PluginDropdown } from "@/domains/plugin/components/PluginDropdown";
+import { PluginImage, PluginImageProgressSize } from "@/domains/plugin/components/PluginImage";
+import { PluginCategories } from "@/domains/plugin/plugin.contracts";
 
 import { PluginLaunchButton } from "./PluginListItem.blocks";
 

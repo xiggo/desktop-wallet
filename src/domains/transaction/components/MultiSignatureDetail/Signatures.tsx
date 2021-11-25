@@ -1,9 +1,10 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Avatar } from "app/components/Avatar";
-import { Badge } from "app/components/Badge";
-import { Tooltip } from "app/components/Tooltip";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Avatar } from "@/app/components/Avatar";
+import { Badge } from "@/app/components/Badge";
+import { Tooltip } from "@/app/components/Tooltip";
 
 import { getMultiSignatureInfo } from "./MultiSignatureDetail.helpers";
 

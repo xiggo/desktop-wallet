@@ -1,6 +1,7 @@
-import { Input } from "app/components/Input";
 import cn from "classnames";
 import React from "react";
+
+import { Input } from "@/app/components/Input";
 
 type InputDefaultProperties = {
 	className?: string;

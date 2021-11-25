@@ -1,9 +1,10 @@
-import { Amount } from "app/components/Amount";
-import { Icon } from "app/components/Icon";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import tw from "twin.macro";
-import { assertNumber } from "utils/assertions";
+
+import { Amount } from "@/app/components/Amount";
+import { Icon } from "@/app/components/Icon";
+import { assertNumber } from "@/utils/assertions";
 
 interface Properties {
 	amount: number | string;

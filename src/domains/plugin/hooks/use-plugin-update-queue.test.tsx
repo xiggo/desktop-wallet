@@ -1,11 +1,12 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { waitFor } from "@testing-library/react";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
-import { EnvironmentProvider } from "app/contexts";
 import { PluginManager } from "plugins";
-import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { EnvironmentProvider } from "@/app/contexts";
+import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { usePluginUpdateQueue } from "./use-plugin-update-queue";
 

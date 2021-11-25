@@ -1,24 +1,25 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 import Tippy from "@tippyjs/react";
-import { Address } from "app/components/Address";
-import { Alert } from "app/components/Alert";
-import { Amount } from "app/components/Amount";
-import { Avatar } from "app/components/Avatar";
-import { Checkbox } from "app/components/Checkbox";
-import { Circle } from "app/components/Circle";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { Skeleton } from "app/components/Skeleton";
-import { Table, TableCell, TableRow } from "app/components/Table";
-import { useLedgerContext } from "app/contexts";
-import { LedgerData, useLedgerScanner } from "app/contexts/Ledger";
-import { useRandomNumber } from "app/hooks";
-import { SelectNetwork } from "domains/network/components/SelectNetwork";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
+
+import { Address } from "@/app/components/Address";
+import { Alert } from "@/app/components/Alert";
+import { Amount } from "@/app/components/Amount";
+import { Avatar } from "@/app/components/Avatar";
+import { Checkbox } from "@/app/components/Checkbox";
+import { Circle } from "@/app/components/Circle";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { Skeleton } from "@/app/components/Skeleton";
+import { Table, TableCell, TableRow } from "@/app/components/Table";
+import { useLedgerContext } from "@/app/contexts";
+import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
+import { useRandomNumber } from "@/app/hooks";
+import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
 
 import { LedgerTableProperties } from "./LedgerTabs.contracts";
 

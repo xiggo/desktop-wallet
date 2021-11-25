@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
 import React from "react";
-import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
-import { render } from "utils/testing-library";
+
+import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { render } from "@/utils/testing-library";
 
 import { VoteList } from "./VoteList";
 

@@ -1,14 +1,15 @@
-import { Card } from "app/components/Card";
-import { DropdownOption } from "app/components/Dropdown";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
-import { OfficialPluginIcon } from "domains/plugin/components/OfficialPluginIcon";
-import { PluginImage } from "domains/plugin/components/PluginImage";
-import { PluginCategories } from "domains/plugin/plugin.contracts";
 import { ExtendedSerializedPluginConfigurationData } from "plugins";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Card } from "@/app/components/Card";
+import { DropdownOption } from "@/app/components/Dropdown";
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
+import { OfficialPluginIcon } from "@/domains/plugin/components/OfficialPluginIcon";
+import { PluginImage } from "@/domains/plugin/components/PluginImage";
+import { PluginCategories } from "@/domains/plugin/plugin.contracts";
 
 interface PluginCardProperties {
 	actions?: DropdownOption[];

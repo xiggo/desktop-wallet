@@ -1,7 +1,8 @@
-import { Button } from "app/components/Button";
-import { Modal } from "app/components/Modal";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Modal } from "@/app/components/Modal";
 
 interface DevelopmentNetworkProperties {
 	isOpen: boolean;

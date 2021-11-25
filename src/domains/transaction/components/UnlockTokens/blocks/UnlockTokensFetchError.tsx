@@ -1,6 +1,7 @@
-import { Link } from "app/components/Link";
 import React, { MouseEvent } from "react";
 import { Trans, useTranslation } from "react-i18next";
+
+import { Link } from "@/app/components/Link";
 
 interface Properties {
 	onRetry: () => void;

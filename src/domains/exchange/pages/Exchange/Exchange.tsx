@@ -1,22 +1,23 @@
 import { upperFirst } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Header } from "app/components/Header";
-import { Page, Section } from "app/components/Layout";
-import { useActiveProfile } from "app/hooks";
-import { toasts } from "app/services";
-import { DeleteExchangeTransaction } from "domains/exchange/components/DeleteExchangeTransaction";
-import { ExchangeGrid } from "domains/exchange/components/ExchangeGrid";
-import { ExchangeNavigationBar } from "domains/exchange/components/ExchangeNavigationBar";
-import { ExchangeTransactionsTable } from "domains/exchange/components/ExchangeTransactionsTable";
-import { useExchangeContext } from "domains/exchange/contexts/Exchange";
-import { OrderStatusResponse } from "domains/exchange/contracts";
-import { useOrderStatus } from "domains/exchange/hooks/use-order-status";
-import { assertExchangeTransaction } from "domains/exchange/utils";
 import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { assertString } from "utils/assertions";
-import { delay } from "utils/delay";
+
+import { Header } from "@/app/components/Header";
+import { Page, Section } from "@/app/components/Layout";
+import { useActiveProfile } from "@/app/hooks";
+import { toasts } from "@/app/services";
+import { DeleteExchangeTransaction } from "@/domains/exchange/components/DeleteExchangeTransaction";
+import { ExchangeGrid } from "@/domains/exchange/components/ExchangeGrid";
+import { ExchangeNavigationBar } from "@/domains/exchange/components/ExchangeNavigationBar";
+import { ExchangeTransactionsTable } from "@/domains/exchange/components/ExchangeTransactionsTable";
+import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { OrderStatusResponse } from "@/domains/exchange/contracts";
+import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
+import { assertExchangeTransaction } from "@/domains/exchange/utils";
+import { assertString } from "@/utils/assertions";
+import { delay } from "@/utils/delay";
 
 enum ExchangeView {
 	Exchanges = "EXCHANGES",

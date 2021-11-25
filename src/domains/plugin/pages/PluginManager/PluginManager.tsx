@@ -1,34 +1,35 @@
 import { snakeCase } from "@payvo/sdk-helpers";
-import { Button } from "app/components/Button";
-import { EmptyBlock } from "app/components/EmptyBlock";
-import { Header } from "app/components/Header";
-import { HeaderSearchBar } from "app/components/Header/HeaderSearchBar";
-import { Icon } from "app/components/Icon";
-import { Page, Section } from "app/components/Layout";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile } from "app/hooks";
-import { toasts } from "app/services";
-import { InstallPlugin } from "domains/plugin/components/InstallPlugin";
-import { ManualInstallationDisclaimer } from "domains/plugin/components/ManualInstallationDisclaimer";
-import { PluginGrid } from "domains/plugin/components/PluginGrid";
-import { PluginList } from "domains/plugin/components/PluginList";
-import {
-	PluginManagerNavigationBar,
-	PluginManagerNavigationBarItem,
-} from "domains/plugin/components/PluginManagerNavigationBar";
-import { PluginManualInstallModal } from "domains/plugin/components/PluginManualInstallModal/PluginManualInstallModal";
-import { PluginUninstallConfirmation } from "domains/plugin/components/PluginUninstallConfirmation/PluginUninstallConfirmation";
-import { PluginUpdatesConfirmation } from "domains/plugin/components/PluginUpdatesConfirmation";
-import { usePluginUpdateQueue } from "domains/plugin/hooks/use-plugin-update-queue";
-import { PLUGIN_CATEGORIES } from "domains/plugin/plugin.constants";
-import { PluginCategories } from "domains/plugin/plugin.contracts";
 import { ExtendedSerializedPluginConfigurationData } from "plugins";
-import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
-import { IPluginController } from "plugins/core";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { assertPluginController } from "utils/assertions";
+
+import { Button } from "@/app/components/Button";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Header } from "@/app/components/Header";
+import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
+import { Icon } from "@/app/components/Icon";
+import { Page, Section } from "@/app/components/Layout";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile } from "@/app/hooks";
+import { toasts } from "@/app/services";
+import { InstallPlugin } from "@/domains/plugin/components/InstallPlugin";
+import { ManualInstallationDisclaimer } from "@/domains/plugin/components/ManualInstallationDisclaimer";
+import { PluginGrid } from "@/domains/plugin/components/PluginGrid";
+import { PluginList } from "@/domains/plugin/components/PluginList";
+import {
+	PluginManagerNavigationBar,
+	PluginManagerNavigationBarItem,
+} from "@/domains/plugin/components/PluginManagerNavigationBar";
+import { PluginManualInstallModal } from "@/domains/plugin/components/PluginManualInstallModal/PluginManualInstallModal";
+import { PluginUninstallConfirmation } from "@/domains/plugin/components/PluginUninstallConfirmation/PluginUninstallConfirmation";
+import { PluginUpdatesConfirmation } from "@/domains/plugin/components/PluginUpdatesConfirmation";
+import { usePluginUpdateQueue } from "@/domains/plugin/hooks/use-plugin-update-queue";
+import { PLUGIN_CATEGORIES } from "@/domains/plugin/plugin.constants";
+import { PluginCategories } from "@/domains/plugin/plugin.contracts";
+import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
+import { IPluginController } from "@/plugins/core";
+import { assertPluginController } from "@/utils/assertions";
 
 type PluginActionType = (plugin: ExtendedSerializedPluginConfigurationData) => void;
 export interface PluginActionsProperties {

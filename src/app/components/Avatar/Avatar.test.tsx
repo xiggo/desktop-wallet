@@ -1,6 +1,7 @@
 import React from "react";
-import { Size } from "types";
-import { render, screen } from "utils/testing-library";
+
+import { Size } from "@/types";
+import { render, screen } from "@/utils/testing-library";
 
 import { Avatar } from "./Avatar";
 

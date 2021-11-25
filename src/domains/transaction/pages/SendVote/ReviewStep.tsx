@@ -1,14 +1,15 @@
-import { Header } from "app/components/Header";
-import { TotalAmountBox } from "domains/transaction/components/TotalAmountBox";
+import React, { useEffect } from "react";
+import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+
+import { Header } from "@/app/components/Header";
+import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import {
 	TransactionDetail,
 	TransactionNetwork,
 	TransactionSender,
-} from "domains/transaction/components/TransactionDetail";
-import { VoteList } from "domains/vote/components/VoteList";
-import React, { useEffect } from "react";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail";
+import { VoteList } from "@/domains/vote/components/VoteList";
 
 import { SendVoteStepProperties } from "./SendVote.models";
 

@@ -2,11 +2,21 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { buildTranslations } from "app/i18n/helpers";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "utils/testing-library";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import {
+	env,
+	fireEvent,
+	getDefaultProfileId,
+	MNEMONICS,
+	render,
+	screen,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 
 import { AddRecipient } from "./AddRecipient";
 

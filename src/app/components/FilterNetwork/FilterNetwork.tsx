@@ -1,6 +1,7 @@
-import { Checkbox } from "app/components/Checkbox";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Checkbox } from "@/app/components/Checkbox";
 
 import { FilterNetworksProperties, FilterOption } from "./models";
 import { NetworkOptions } from "./NetworkOptions";

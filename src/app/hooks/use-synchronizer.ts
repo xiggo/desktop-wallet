@@ -1,6 +1,7 @@
 import { DateTime } from "@payvo/sdk-intl";
-import { useEnvironmentContext } from "app/contexts";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+
+import { useEnvironmentContext } from "@/app/contexts";
 
 type Callback = () => Promise<void | any>;
 

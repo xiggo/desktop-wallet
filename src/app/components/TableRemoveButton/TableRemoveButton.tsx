@@ -1,6 +1,7 @@
-import { Button } from "app/components/Button";
-import { Icon } from "app/components/Icon";
 import React, { MouseEvent } from "react";
+
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
 
 export const TableRemoveButton = ({
 	isCompact,

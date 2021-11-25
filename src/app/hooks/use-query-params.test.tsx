@@ -1,7 +1,8 @@
 import { fireEvent } from "@testing-library/react";
 import React from "react";
 import { Route } from "react-router-dom";
-import { render, screen } from "utils/testing-library";
+
+import { render, screen } from "@/utils/testing-library";
 
 import { useQueryParams as useQueryParameters } from "./use-query-params";
 

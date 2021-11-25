@@ -1,6 +1,7 @@
-import { Skeleton } from "app/components/Skeleton";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Skeleton } from "@/app/components/Skeleton";
 
 interface Properties {
 	width?: number;

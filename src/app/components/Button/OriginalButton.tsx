@@ -1,8 +1,9 @@
-import { ButtonSpinner } from "app/components/ButtonSpinner";
-import { Icon } from "app/components/Icon";
 import React from "react";
 import { styled } from "twin.macro";
-import { ButtonVariant, Size } from "types";
+
+import { ButtonSpinner } from "@/app/components/ButtonSpinner";
+import { Icon } from "@/app/components/Icon";
+import { ButtonVariant, Size } from "@/types";
 
 import { getStyles } from "./Button.styles";
 

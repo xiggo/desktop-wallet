@@ -1,5 +1,6 @@
 import React from "react";
-import { act, fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import { act, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 import { HeaderSearchBar } from "./HeaderSearchBar";
 

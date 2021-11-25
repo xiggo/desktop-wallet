@@ -1,11 +1,12 @@
 import { Networks } from "@payvo/sdk";
-import { Divider } from "app/components/Divider";
-import { FilterNetwork, FilterOption } from "app/components/FilterNetwork";
-import { useEnvironmentContext } from "app/contexts";
-import { AVAILABLE_CATEGORIES } from "domains/news/news.constants";
-import { AvailableNewsCategories } from "domains/news/news.contracts";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Divider } from "@/app/components/Divider";
+import { FilterNetwork, FilterOption } from "@/app/components/FilterNetwork";
+import { useEnvironmentContext } from "@/app/contexts";
+import { AVAILABLE_CATEGORIES } from "@/domains/news/news.constants";
+import { AvailableNewsCategories } from "@/domains/news/news.contracts";
 
 import { SelectCategory } from "./components/SelectCategory";
 

@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { LedgerDeviceError } from "./LedgerDeviceError";
 

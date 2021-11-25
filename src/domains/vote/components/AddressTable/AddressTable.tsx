@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Table } from "app/components/Table";
-import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
+
+import { Table } from "@/app/components/Table";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 import { AddressRow } from "./AddressRow";
 import { AddressTableProperties } from "./AddressTable.contracts";

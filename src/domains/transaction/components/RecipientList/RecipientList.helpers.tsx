@@ -1,5 +1,6 @@
-import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
 import { Column } from "react-table";
+
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 type UseColumnsHook = (input: { showAmount: boolean; isEditable: boolean }) => Column<RecipientItem>[];
 

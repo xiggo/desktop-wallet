@@ -1,7 +1,8 @@
 import electron from "electron";
 import fs from "fs";
-import { PluginService } from "plugins/core";
-import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
+
+import { PluginService } from "@/plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "@/plugins/types";
 
 export class FileSystemPluginService implements PluginService {
 	config(): PluginServiceConfig {

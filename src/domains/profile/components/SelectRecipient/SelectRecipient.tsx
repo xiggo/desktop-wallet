@@ -1,17 +1,18 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { Avatar } from "app/components/Avatar";
-import { Circle } from "app/components/Circle";
-import { useFormField } from "app/components/Form/useFormField";
-import { Icon } from "app/components/Icon";
-import { Select } from "app/components/SelectDropdown";
-import { TruncateEnd } from "app/components/TruncateEnd";
-import { useWalletAlias, WalletAliasResult } from "app/hooks/use-wallet-alias";
 import cn from "classnames";
-import { AddressProperties, useProfileAddresses } from "domains/profile/hooks/use-profile-addresses";
-import { SearchRecipient } from "domains/transaction/components/SearchRecipient";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+
+import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { Circle } from "@/app/components/Circle";
+import { useFormField } from "@/app/components/Form/useFormField";
+import { Icon } from "@/app/components/Icon";
+import { Select } from "@/app/components/SelectDropdown";
+import { TruncateEnd } from "@/app/components/TruncateEnd";
+import { useWalletAlias, WalletAliasResult } from "@/app/hooks/use-wallet-alias";
+import { AddressProperties, useProfileAddresses } from "@/domains/profile/hooks/use-profile-addresses";
+import { SearchRecipient } from "@/domains/transaction/components/SearchRecipient";
 
 type SelectRecipientProperties = {
 	network?: Networks.Network;

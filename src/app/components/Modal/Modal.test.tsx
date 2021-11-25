@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import React from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { Modal } from "./Modal";
 

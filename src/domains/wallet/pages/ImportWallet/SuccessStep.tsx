@@ -1,14 +1,15 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { Amount } from "app/components/Amount";
-import { Avatar } from "app/components/Avatar";
-import { Button } from "app/components/Button";
-import { Header } from "app/components/Header";
-import { Icon } from "app/components/Icon";
-import { TransactionDetail, TransactionNetwork } from "domains/transaction/components/TransactionDetail";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { assertWallet } from "utils/assertions";
+
+import { Address } from "@/app/components/Address";
+import { Amount } from "@/app/components/Amount";
+import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
+import { Header } from "@/app/components/Header";
+import { Icon } from "@/app/components/Icon";
+import { TransactionDetail, TransactionNetwork } from "@/domains/transaction/components/TransactionDetail";
+import { assertWallet } from "@/utils/assertions";
 
 export const SuccessStep = ({
 	importedWallet,

@@ -1,10 +1,11 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Icon } from "app/components/Icon";
-import { TableCell, TableRow } from "app/components/Table";
-import { Tooltip } from "app/components/Tooltip";
-import { useTimeFormat } from "app/hooks/use-time-format";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Icon } from "@/app/components/Icon";
+import { TableCell, TableRow } from "@/app/components/Table";
+import { Tooltip } from "@/app/components/Tooltip";
+import { useTimeFormat } from "@/app/hooks/use-time-format";
 
 import { BaseTransactionRowAmount } from "./TransactionRowAmount";
 import { BaseTransactionRowMode } from "./TransactionRowMode";

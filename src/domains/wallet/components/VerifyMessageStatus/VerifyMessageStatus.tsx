@@ -1,6 +1,7 @@
-import { Image } from "app/components/Image";
-import { Modal } from "app/components/Modal";
 import React from "react";
+
+import { Image } from "@/app/components/Image";
+import { Modal } from "@/app/components/Modal";
 
 interface Properties {
 	type?: "success" | "error";

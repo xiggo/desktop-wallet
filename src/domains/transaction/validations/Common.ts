@@ -1,5 +1,6 @@
 import { Networks } from "@payvo/sdk";
-import { TransactionFees } from "types";
+
+import { TransactionFees } from "@/types";
 
 export const common = (t: any) => ({
 	fee: (balance = 0, network?: Networks.Network, fees?: TransactionFees) => ({

@@ -1,5 +1,5 @@
-import { DropdownOption } from "app/components/Dropdown";
-import { NavbarVariant } from "types";
+import { DropdownOption } from "@/app/components/Dropdown";
+import { NavbarVariant } from "@/types";
 
 export interface NavigationBarMenuItem {
 	title: string;

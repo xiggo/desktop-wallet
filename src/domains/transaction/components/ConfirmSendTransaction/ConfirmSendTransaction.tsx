@@ -1,9 +1,10 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Modal } from "app/components/Modal";
-import { UnconfirmedTransactionTable } from "domains/transaction/components/TransactionTable/UnconfirmedTransactionTable/UnconfirmedTransactionTable";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Modal } from "@/app/components/Modal";
+import { UnconfirmedTransactionTable } from "@/domains/transaction/components/TransactionTable/UnconfirmedTransactionTable/UnconfirmedTransactionTable";
 
 interface ConfirmSendTransactionProperties {
 	profile: Contracts.IProfile;

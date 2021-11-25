@@ -1,15 +1,16 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { toasts } from "app/services";
-import { translations } from "domains/plugin/i18n";
 import { ipcRenderer } from "electron";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import { LaunchPluginService, PluginController } from "plugins";
-import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
+
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { toasts } from "@/app/services";
+import { translations } from "@/domains/plugin/i18n";
+import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
 import {
 	env,
 	fireEvent,
@@ -19,7 +20,7 @@ import {
 	screen,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { PluginManager } from "./PluginManager";
 

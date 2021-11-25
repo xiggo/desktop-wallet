@@ -1,5 +1,6 @@
 import React from "react";
-import { render } from "utils/testing-library";
+
+import { render } from "@/utils/testing-library";
 
 import { ButtonSpinner } from "./ButtonSpinner";
 

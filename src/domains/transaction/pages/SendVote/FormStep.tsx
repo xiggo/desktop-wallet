@@ -1,15 +1,16 @@
 import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { FeeField } from "domains/transaction/components/FeeField";
+import React, { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { FeeField } from "@/domains/transaction/components/FeeField";
 import {
 	TransactionDetail,
 	TransactionNetwork,
 	TransactionSender,
-} from "domains/transaction/components/TransactionDetail";
-import { VoteList } from "domains/vote/components/VoteList";
-import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+} from "@/domains/transaction/components/TransactionDetail";
+import { VoteList } from "@/domains/vote/components/VoteList";
 
 import { SendVoteStepProperties } from "./SendVote.models";
 

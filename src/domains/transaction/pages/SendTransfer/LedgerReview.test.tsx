@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
-import { env, getDefaultProfileId, renderWithForm, screen } from "utils/testing-library";
+
+import { env, getDefaultProfileId, renderWithForm, screen } from "@/utils/testing-library";
 
 import { TransferLedgerReview } from "./LedgerReview";
 

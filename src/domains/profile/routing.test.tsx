@@ -1,4 +1,4 @@
-import { ProfileRoutes } from "domains/profile/routing";
+import { ProfileRoutes } from "@/domains/profile/routing";
 
 describe("Profile routing", () => {
 	it("should return profile route object", () => {

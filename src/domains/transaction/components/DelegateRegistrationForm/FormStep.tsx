@@ -1,16 +1,17 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Alert } from "app/components/Alert";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { InputDefault } from "app/components/Input";
-import { useEnvironmentContext } from "app/contexts";
-import { useValidation } from "app/hooks";
-import { FeeField } from "domains/transaction/components/FeeField";
-import { TransactionNetwork, TransactionSender } from "domains/transaction/components/TransactionDetail";
-import { FormStepProperties } from "domains/transaction/pages/SendRegistration/SendRegistration.models";
 import React, { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Alert } from "@/app/components/Alert";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { InputDefault } from "@/app/components/Input";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useValidation } from "@/app/hooks";
+import { FeeField } from "@/domains/transaction/components/FeeField";
+import { TransactionNetwork, TransactionSender } from "@/domains/transaction/components/TransactionDetail";
+import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.models";
 
 export const FormStep: React.FC<FormStepProperties> = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();

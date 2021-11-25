@@ -1,6 +1,7 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React from "react";
-import { env, getDefaultProfileId, render, screen, waitFor } from "utils/testing-library";
+
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { Signatures } from "./Signatures";
 

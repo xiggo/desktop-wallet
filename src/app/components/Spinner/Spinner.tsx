@@ -1,5 +1,6 @@
 import { styled } from "twin.macro";
-import { Color, Size } from "types";
+
+import { Color, Size } from "@/types";
 
 import { getStyles } from "./Spinner.styles";
 

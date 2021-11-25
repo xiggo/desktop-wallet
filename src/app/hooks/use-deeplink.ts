@@ -1,12 +1,13 @@
 import { URI } from "@payvo/sdk-helpers";
-import { useEnvironmentContext } from "app/contexts";
-import { toasts } from "app/services";
 import { ipcRenderer } from "electron";
 import querystring from "querystring";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { matchPath, useHistory } from "react-router-dom";
-import { lowerCaseEquals } from "utils/equals";
+
+import { useEnvironmentContext } from "@/app/contexts";
+import { toasts } from "@/app/services";
+import { lowerCaseEquals } from "@/utils/equals";
 
 const useDeepLinkHandler = () => {
 	const { env } = useEnvironmentContext();

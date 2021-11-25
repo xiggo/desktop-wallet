@@ -1,9 +1,10 @@
 import { UUID } from "@payvo/sdk-cryptography";
 import { Contracts } from "@payvo/sdk-profiles";
-import { httpClient } from "app/services";
-import { OrderStatusResponse } from "domains/exchange/contracts";
-import { ExchangeService } from "domains/exchange/services/exchange.service";
 import { useCallback } from "react";
+
+import { httpClient } from "@/app/services";
+import { OrderStatusResponse } from "@/domains/exchange/contracts";
+import { ExchangeService } from "@/domains/exchange/services/exchange.service";
 
 export const useOrderStatus = () => {
 	const checkOrderStatus = useCallback(async (exchangeTransactions: Contracts.IExchangeTransaction[]) => {

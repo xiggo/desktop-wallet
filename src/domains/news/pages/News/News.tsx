@@ -1,21 +1,22 @@
 import { Blockfolio as FTX, BlockfolioResponse as FTXResponse, BlockfolioSignal as FTXSignal } from "@payvo/sdk-news";
 import { Contracts } from "@payvo/sdk-profiles";
-import { SvgCollection } from "app/assets/svg";
-import { EmptyResults } from "app/components/EmptyResults";
-import { Header } from "app/components/Header";
-import { HeaderSearchBar } from "app/components/Header/HeaderSearchBar";
-import { Page, Section } from "app/components/Layout";
-import { Pagination } from "app/components/Pagination";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile } from "app/hooks";
-import { httpClient, toasts } from "app/services";
-import { FTXAd } from "domains/news/components/FTXAd";
-import { NewsCard, NewsCardSkeleton } from "domains/news/components/NewsCard";
-import { NewsOptions } from "domains/news/components/NewsOptions";
-import { AVAILABLE_CATEGORIES } from "domains/news/news.constants";
-import { AvailableNewsCategories } from "domains/news/news.contracts";
 import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+
+import { SvgCollection } from "@/app/assets/svg";
+import { EmptyResults } from "@/app/components/EmptyResults";
+import { Header } from "@/app/components/Header";
+import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
+import { Page, Section } from "@/app/components/Layout";
+import { Pagination } from "@/app/components/Pagination";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile } from "@/app/hooks";
+import { httpClient, toasts } from "@/app/services";
+import { FTXAd } from "@/domains/news/components/FTXAd";
+import { NewsCard, NewsCardSkeleton } from "@/domains/news/components/NewsCard";
+import { NewsOptions } from "@/domains/news/components/NewsOptions";
+import { AVAILABLE_CATEGORIES } from "@/domains/news/news.constants";
+import { AvailableNewsCategories } from "@/domains/news/news.contracts";
 
 interface NewsFilters {
 	categories: AvailableNewsCategories[];

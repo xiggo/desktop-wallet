@@ -80,6 +80,9 @@
 			"node_modules",
 			"utils"
 		],
+		"moduleNameMapper": {
+			"@/(.*)$": "<rootDir>/src/$1"
+		},
 		"resetModules": true,
 		"setupFilesAfterEnv": [
 			"<rootDir>/jest.setup.js"

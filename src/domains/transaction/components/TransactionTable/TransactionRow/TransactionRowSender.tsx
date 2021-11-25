@@ -1,7 +1,8 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { useWalletAlias } from "app/hooks/use-wallet-alias";
 import React, { useMemo } from "react";
+
+import { Address } from "@/app/components/Address";
+import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
 
 import { TransactionRowMode } from "./TransactionRowMode";
 

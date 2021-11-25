@@ -1,20 +1,21 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Card } from "app/components/Card";
-import { Circle } from "app/components/Circle";
-import { DropdownOption } from "app/components/Dropdown";
-import { Icon } from "app/components/Icon";
-import { Image } from "app/components/Image";
-import { Page, Section } from "app/components/Layout";
-import { Link } from "app/components/Link";
-import { useEnvironmentContext } from "app/contexts";
-import { useTheme } from "app/hooks";
-import { DeleteProfile } from "domains/profile/components/DeleteProfile/DeleteProfile";
-import { ProfileCard } from "domains/profile/components/ProfileCard";
-import { SignIn } from "domains/profile/components/SignIn/SignIn";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import { setScreenshotProtection } from "utils/electron-utils";
+
+import { Card } from "@/app/components/Card";
+import { Circle } from "@/app/components/Circle";
+import { DropdownOption } from "@/app/components/Dropdown";
+import { Icon } from "@/app/components/Icon";
+import { Image } from "@/app/components/Image";
+import { Page, Section } from "@/app/components/Layout";
+import { Link } from "@/app/components/Link";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useTheme } from "@/app/hooks";
+import { DeleteProfile } from "@/domains/profile/components/DeleteProfile/DeleteProfile";
+import { ProfileCard } from "@/domains/profile/components/ProfileCard";
+import { SignIn } from "@/domains/profile/components/SignIn/SignIn";
+import { setScreenshotProtection } from "@/utils/electron-utils";
 
 export const Welcome = () => {
 	const context = useEnvironmentContext();

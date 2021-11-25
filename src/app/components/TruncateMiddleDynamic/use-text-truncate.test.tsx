@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import { act, render, screen } from "utils/testing-library";
+
+import { act, render, screen } from "@/utils/testing-library";
 
 import { useTextTruncate } from "./use-text-truncate";
 

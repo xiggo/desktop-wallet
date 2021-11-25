@@ -1,8 +1,9 @@
 import { fireEvent, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { buildTranslations } from "app/i18n/helpers";
 import React from "react";
-import { render } from "utils/testing-library";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import { render } from "@/utils/testing-library";
 
 import { PasswordRemovalConfirmModal } from "./PasswordRemovalConfirmModal";
 

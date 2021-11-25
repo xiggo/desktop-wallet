@@ -1,6 +1,7 @@
 import { PBKDF2 } from "@payvo/sdk-cryptography";
 import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
+
 import {
 	env,
 	fireEvent,
@@ -10,7 +11,7 @@ import {
 	renderWithForm,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { AuthenticationStep } from "./AuthenticationStep";
 

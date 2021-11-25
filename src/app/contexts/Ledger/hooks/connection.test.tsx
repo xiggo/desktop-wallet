@@ -2,12 +2,13 @@ import { Observer } from "@ledgerhq/hw-transport";
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { minVersionList } from "app/contexts/Ledger/contracts";
-import { toasts } from "app/services";
-import { translations as walletTranslations } from "domains/wallet/i18n";
 import nock from "nock";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import { minVersionList } from "@/app/contexts/Ledger/contracts";
+import { toasts } from "@/app/services";
+import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	act,
 	env,
@@ -17,7 +18,7 @@ import {
 	render,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { useLedgerConnection } from "./connection";
 

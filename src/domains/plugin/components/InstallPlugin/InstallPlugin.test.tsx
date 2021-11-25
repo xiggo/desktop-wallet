@@ -1,11 +1,12 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { toasts } from "app/services";
-import { translations as pluginTranslations } from "domains/plugin/i18n";
 import { ipcRenderer } from "electron";
 import { PluginManager } from "plugins";
-import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, pluginManager, render, screen, waitFor } from "utils/testing-library";
+
+import { toasts } from "@/app/services";
+import { translations as pluginTranslations } from "@/domains/plugin/i18n";
+import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
+import { env, fireEvent, getDefaultProfileId, pluginManager, render, screen, waitFor } from "@/utils/testing-library";
 
 import { InstallPlugin } from "./InstallPlugin";
 import { FirstStep } from "./Step1";

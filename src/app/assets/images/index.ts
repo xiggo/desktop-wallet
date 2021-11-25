@@ -1,10 +1,10 @@
-import { error } from "domains/error/images";
-import { exchange } from "domains/exchange/images";
-import { news } from "domains/news/images";
-import { plugin } from "domains/plugin/images";
-import { profile } from "domains/profile/images";
-import { transaction } from "domains/transaction/images";
-import { wallet } from "domains/wallet/images";
+import { error } from "@/domains/error/images";
+import { exchange } from "@/domains/exchange/images";
+import { news } from "@/domains/news/images";
+import { plugin } from "@/domains/plugin/images";
+import { profile } from "@/domains/profile/images";
+import { transaction } from "@/domains/transaction/images";
+import { wallet } from "@/domains/wallet/images";
 
 import { ReactComponent as DeleteBannerDarkBlue } from "./delete-banner-dark-blue.svg";
 import { ReactComponent as DeleteBannerDarkGreen } from "./delete-banner-dark-green.svg";

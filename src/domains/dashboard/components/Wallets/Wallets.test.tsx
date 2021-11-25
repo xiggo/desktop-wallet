@@ -1,14 +1,15 @@
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { LedgerProvider } from "app/contexts/Ledger/Ledger";
-import * as useRandomNumberHook from "app/hooks/use-random-number";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { translations as dashboardTranslations } from "domains/dashboard/i18n";
-import { translations as walletTranslations } from "domains/wallet/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
+
+import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
+import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { translations as dashboardTranslations } from "@/domains/dashboard/i18n";
+import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {
 	env,
 	fireEvent,
@@ -19,7 +20,7 @@ import {
 	syncDelegates,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { Wallets } from "./Wallets";
 

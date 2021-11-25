@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { renderHook } from "@testing-library/react-hooks";
-import * as utils from "utils/electron-utils";
-import { waitFor } from "utils/testing-library";
+
+import * as utils from "@/utils/electron-utils";
+import { waitFor } from "@/utils/testing-library";
 
 import { useQRCode } from "./hooks";
 

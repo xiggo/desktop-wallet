@@ -1,7 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { IPluginController, PluginController, PluginManager } from "plugins/core";
-import { PluginAPI } from "plugins/types";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { IPluginController, PluginController, PluginManager } from "@/plugins/core";
+import { PluginAPI } from "@/plugins/types";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { ProfilePluginService } from "./ProfilePluginService";
 

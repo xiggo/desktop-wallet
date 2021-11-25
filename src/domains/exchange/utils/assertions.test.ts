@@ -1,6 +1,7 @@
 import { ExchangeTransaction } from "@payvo/sdk-profiles/distribution/cjs/exchange-transaction";
-import { httpClient } from "app/services";
-import { ExchangeService } from "domains/exchange/services/exchange.service";
+
+import { httpClient } from "@/app/services";
+import { ExchangeService } from "@/domains/exchange/services/exchange.service";
 
 import { assertCurrency, assertExchangeService, assertExchangeTransaction } from "./assertions";
 

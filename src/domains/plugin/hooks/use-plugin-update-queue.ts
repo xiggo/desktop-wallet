@@ -1,7 +1,8 @@
 /* eslint-disable arrow-body-style */
 import { Contracts } from "@payvo/sdk-profiles";
-import { usePluginManagerContext } from "plugins/context/PluginManagerProvider";
 import { useCallback, useEffect, useRef, useState } from "react";
+
+import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
 
 export const usePluginUpdateQueue = (profile: Contracts.IProfile) => {
 	const [queue, setQueue] = useState<any[]>([]);

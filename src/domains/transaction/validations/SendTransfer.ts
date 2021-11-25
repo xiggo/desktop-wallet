@@ -1,6 +1,7 @@
 import { Coins, Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { RecipientItem } from "domains/transaction/components/RecipientList/RecipientList.contracts";
+
+import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
 export const sendTransfer = (t: any) => ({
 	amount: (network: Networks.Network, balance: number, recipients: RecipientItem[], isSingleRecipient: boolean) => ({

@@ -1,9 +1,10 @@
 import { Networks } from "@payvo/sdk";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
 import cn from "classnames";
 import React, { memo } from "react";
-import { Size } from "types";
+
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
+import { Size } from "@/types";
 
 interface Properties {
 	disabled?: boolean;

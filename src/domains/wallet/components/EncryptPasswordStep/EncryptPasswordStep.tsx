@@ -1,13 +1,14 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Alert } from "app/components/Alert";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { InputPassword } from "app/components/Input";
-import { useValidation } from "app/hooks";
 import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
-import { assertWallet } from "utils/assertions";
+
+import { Alert } from "@/app/components/Alert";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { InputPassword } from "@/app/components/Input";
+import { useValidation } from "@/app/hooks";
+import { assertWallet } from "@/utils/assertions";
 
 interface EncryptPasswordStepProperties {
 	importedWallet?: Contracts.IReadWriteWallet;

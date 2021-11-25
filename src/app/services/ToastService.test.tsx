@@ -1,6 +1,7 @@
 import React from "react";
 import { toast, ToastContainer } from "react-toastify";
-import { act, render, screen } from "utils/testing-library";
+
+import { act, render, screen } from "@/utils/testing-library";
 
 import { ToastService } from "./ToastService";
 let subject: ToastService;

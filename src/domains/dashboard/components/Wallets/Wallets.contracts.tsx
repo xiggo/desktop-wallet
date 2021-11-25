@@ -1,5 +1,6 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { DropdownOption } from "app/components/Dropdown";
+
+import { DropdownOption } from "@/app/components/Dropdown";
 
 export interface WalletsProperties {
 	title?: string;

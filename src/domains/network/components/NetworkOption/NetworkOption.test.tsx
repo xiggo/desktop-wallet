@@ -1,6 +1,7 @@
 import { Networks } from "@payvo/sdk";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen } from "utils/testing-library";
+
+import { env, fireEvent, getDefaultProfileId, MNEMONICS, render, screen } from "@/utils/testing-library";
 
 import { NetworkOption } from "./NetworkOption";
 

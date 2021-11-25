@@ -1,10 +1,11 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { AuthenticationStep, LedgerStates } from "domains/transaction/components/AuthenticationStep";
-import { UnlockTokensFormState } from "domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { AuthenticationStep, LedgerStates } from "@/domains/transaction/components/AuthenticationStep";
+import { UnlockTokensFormState } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 
 type Properties = LedgerStates & {
 	wallet: Contracts.IReadWriteWallet;

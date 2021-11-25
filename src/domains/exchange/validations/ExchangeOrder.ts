@@ -1,4 +1,4 @@
-import { ExchangeService } from "domains/exchange/services/exchange.service";
+import { ExchangeService } from "@/domains/exchange/services/exchange.service";
 
 export const exchangeOrder = (t: any) => ({
 	fromCurrency: () => ({

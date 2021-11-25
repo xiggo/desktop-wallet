@@ -1,5 +1,6 @@
 import tw, { css } from "twin.macro";
-import { Color, Size } from "types";
+
+import { Color, Size } from "@/types";
 
 const baseStyle = tw`animate-spin rounded-full border border-theme-secondary-200 dark:border-black border-width[5px]`;
 

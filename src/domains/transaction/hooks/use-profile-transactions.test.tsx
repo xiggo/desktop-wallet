@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { act as hookAct, renderHook } from "@testing-library/react-hooks";
-import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
 import nock from "nock";
 import React from "react";
-import { act, env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } from "utils/testing-library";
+
+import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
+import { act, env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } from "@/utils/testing-library";
 
 import { useProfileTransactions } from "./use-profile-transactions";
 

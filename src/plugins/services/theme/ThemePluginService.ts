@@ -1,5 +1,5 @@
-import { IPluginController, PluginService } from "plugins/core";
-import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
+import { IPluginController, PluginService } from "@/plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "@/plugins/types";
 
 export class ThemePluginService implements PluginService {
 	config(): PluginServiceConfig {

@@ -1,11 +1,12 @@
 import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
 import React from "react";
-import { data } from "tests/fixtures/coins/ark/devnet/delegates.json";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
+import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { DelegateRow } from "./DelegateRow";
 

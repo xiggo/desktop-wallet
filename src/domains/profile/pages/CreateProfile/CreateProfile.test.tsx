@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { ARK } from "@payvo/sdk-ark";
-import { httpClient } from "app/services";
 import electron from "electron";
 import { getCurrency } from "locale-currency";
 import os from "os";
 import React from "react";
-import { StubStorage } from "tests/mocks";
-import * as utils from "utils/electron-utils";
-import { act, env, fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import { httpClient } from "@/app/services";
+import { StubStorage } from "@/tests/mocks";
+import * as utils from "@/utils/electron-utils";
+import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 import { CreateProfile } from "./CreateProfile";
 

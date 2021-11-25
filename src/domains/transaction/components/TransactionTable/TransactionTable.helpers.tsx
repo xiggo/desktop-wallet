@@ -1,8 +1,9 @@
 import { DTO } from "@payvo/sdk-profiles";
-import { PendingTransaction } from "domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
+
+import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 
 export const useTransactionTableColumns = (exchangeCurrency?: string) => {
 	const { t } = useTranslation();

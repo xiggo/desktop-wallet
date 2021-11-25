@@ -1,11 +1,12 @@
 import { sortByDesc } from "@payvo/sdk-helpers";
-import { Checkbox } from "app/components/Checkbox";
-import { Tooltip } from "app/components/Tooltip";
-import { useScheduler } from "app/hooks/use-scheduler";
-import { toasts } from "app/services";
 import React, { useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
+
+import { Checkbox } from "@/app/components/Checkbox";
+import { Tooltip } from "@/app/components/Tooltip";
+import { useScheduler } from "@/app/hooks/use-scheduler";
+import { toasts } from "@/app/services";
 
 import { UnlockTokensFetchError } from "./blocks/UnlockTokensFetchError";
 import { POLLING_INTERVAL, UnlockableBalance, UseUnlockableBalancesHook } from "./UnlockTokens.contracts";

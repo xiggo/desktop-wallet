@@ -1,15 +1,16 @@
-import { Button } from "app/components/Button";
-import { Form, FormField, FormLabel } from "app/components/Form";
-import { InputDefault } from "app/components/Input";
-import { Modal } from "app/components/Modal";
-import { Switch } from "app/components/Switch";
-import { TextArea } from "app/components/TextArea";
-import { useEnvironmentContext } from "app/contexts";
-import { useValidation } from "app/hooks";
-import { VerifyMessageStatus } from "domains/wallet/components/VerifyMessageStatus";
 import React, { ChangeEvent, useEffect, useRef, useState } from "react";
 import { useForm, useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Form, FormField, FormLabel } from "@/app/components/Form";
+import { InputDefault } from "@/app/components/Input";
+import { Modal } from "@/app/components/Modal";
+import { Switch } from "@/app/components/Switch";
+import { TextArea } from "@/app/components/TextArea";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useValidation } from "@/app/hooks";
+import { VerifyMessageStatus } from "@/domains/wallet/components/VerifyMessageStatus";
 
 enum VerificationMethod {
 	Manual,

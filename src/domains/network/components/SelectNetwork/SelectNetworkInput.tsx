@@ -1,9 +1,10 @@
 import { Networks } from "@payvo/sdk";
-import { useFormField } from "app/components/Form/useFormField";
-import { Input } from "app/components/Input";
 import cn from "classnames";
-import { NetworkIcon } from "domains/network/components/NetworkIcon";
 import React from "react";
+
+import { useFormField } from "@/app/components/Form/useFormField";
+import { Input } from "@/app/components/Input";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 type Properties = {
 	network?: Networks.Network;

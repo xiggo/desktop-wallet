@@ -4,16 +4,17 @@ import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
 import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import * as useFeesHook from "app/hooks/use-fees";
-import { buildTranslations } from "app/i18n/helpers";
-import {
-	UnlockableBalance,
-	UnlockTokensFormState,
-} from "domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env } from "utils/testing-library";
+
+import * as useFeesHook from "@/app/hooks/use-fees";
+import { buildTranslations } from "@/app/i18n/helpers";
+import {
+	UnlockableBalance,
+	UnlockTokensFormState,
+} from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
+import { env } from "@/utils/testing-library";
 
 import { UnlockTokensSelect } from "./UnlockTokensSelect";
 

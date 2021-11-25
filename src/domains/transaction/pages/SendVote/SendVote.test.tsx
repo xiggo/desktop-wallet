@@ -6,18 +6,19 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
-import { LedgerProvider } from "app/contexts";
-import { translations as transactionTranslations } from "domains/transaction/i18n";
-import { VoteDelegateProperties } from "domains/vote/components/DelegateTable/DelegateTable.models";
-import { appendParameters } from "domains/vote/utils/url-parameters";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
-import { data as delegateData } from "tests/fixtures/coins/ark/devnet/delegates.json";
-import unvoteFixture from "tests/fixtures/coins/ark/devnet/transactions/unvote.json";
-import voteFixture from "tests/fixtures/coins/ark/devnet/transactions/vote.json";
+
+import { LedgerProvider } from "@/app/contexts";
+import { translations as transactionTranslations } from "@/domains/transaction/i18n";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
+import { appendParameters } from "@/domains/vote/utils/url-parameters";
+import { data as delegateData } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
+import unvoteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/unvote.json";
+import voteFixture from "@/tests/fixtures/coins/ark/devnet/transactions/vote.json";
 import {
 	act,
 	env,
@@ -32,7 +33,7 @@ import {
 	syncFees,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { SendVote } from "./SendVote";
 

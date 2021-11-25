@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 import { InputCurrency } from "./InputCurrency";
 

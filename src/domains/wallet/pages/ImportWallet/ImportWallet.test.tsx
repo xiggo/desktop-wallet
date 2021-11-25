@@ -2,19 +2,20 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts, Wallet } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { EnvironmentProvider, LedgerProvider } from "app/contexts";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
-import { toasts } from "app/services";
-import { NetworkStep } from "domains/wallet/components/NetworkStep";
-import { OptionsValue } from "domains/wallet/hooks/use-import-options";
-import { translations as walletTranslations } from "domains/wallet/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { assertNetwork } from "utils/assertions";
+
+import { EnvironmentProvider, LedgerProvider } from "@/app/contexts";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { toasts } from "@/app/services";
+import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
+import { OptionsValue } from "@/domains/wallet/hooks/use-import-options";
+import { translations as walletTranslations } from "@/domains/wallet/i18n";
+import { assertNetwork } from "@/utils/assertions";
 import {
 	env,
 	fireEvent,
@@ -25,7 +26,7 @@ import {
 	renderWithForm,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { ImportWallet } from "./ImportWallet";
 import { MethodStep } from "./MethodStep";

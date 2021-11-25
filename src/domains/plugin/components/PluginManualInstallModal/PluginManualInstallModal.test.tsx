@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { buildTranslations } from "app/i18n/helpers";
-import { toasts } from "app/services";
 import nock from "nock";
 import { PluginManager } from "plugins";
-import { PluginManagerProvider } from "plugins/context/PluginManagerProvider";
 import React from "react";
-import { fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import { buildTranslations } from "@/app/i18n/helpers";
+import { toasts } from "@/app/services";
+import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
+import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 import { PluginManualInstallModal } from "./PluginManualInstallModal";
 

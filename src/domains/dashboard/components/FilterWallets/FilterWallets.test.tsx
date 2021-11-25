@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { FilterOption } from "app/components/FilterNetwork";
-import { DashboardConfiguration } from "domains/dashboard/pages/Dashboard";
 import React from "react";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import { FilterOption } from "@/app/components/FilterNetwork";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
+import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { FilterWallets } from "./FilterWallets";
 

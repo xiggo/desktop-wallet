@@ -1,8 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { translations } from "domains/transaction/i18n";
 import React from "react";
 import { Route } from "react-router-dom";
-import { env, getDefaultProfileId, render } from "utils/testing-library";
+
+import { translations } from "@/domains/transaction/i18n";
+import { env, getDefaultProfileId, render } from "@/utils/testing-library";
 
 import { TransactionRecipients } from "./TransactionRecipients";
 

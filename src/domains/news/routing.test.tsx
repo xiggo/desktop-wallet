@@ -1,4 +1,4 @@
-import { NewsRoutes } from "domains/news/routing";
+import { NewsRoutes } from "@/domains/news/routing";
 
 describe("News routing", () => {
 	it("should return news route object", () => {

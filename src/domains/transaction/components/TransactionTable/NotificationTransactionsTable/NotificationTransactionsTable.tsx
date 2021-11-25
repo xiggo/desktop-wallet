@@ -1,13 +1,14 @@
 import { DTO } from "@payvo/sdk-profiles";
-import { NotificationTransactionItem } from "app/components/Notifications";
-import { Table } from "app/components/Table";
-import {
-	NotificationTransactionsProperties,
-	NotificationTransactionsSkeleton,
-} from "domains/transaction/components/TransactionTable/NotificationTransactionsTable";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import VisibilitySensor from "react-visibility-sensor";
+
+import { NotificationTransactionItem } from "@/app/components/Notifications";
+import { Table } from "@/app/components/Table";
+import {
+	NotificationTransactionsProperties,
+	NotificationTransactionsSkeleton,
+} from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
 
 export const NotificationTransactionsTable = ({
 	profile,

@@ -3,7 +3,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { env, fireEvent, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import { env, fireEvent, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { NetworkStep } from "./NetworkStep";
 

@@ -1,22 +1,23 @@
 import { Contracts, Environment, Helpers } from "@payvo/sdk-profiles";
-import { Button } from "app/components/Button";
-import { Divider } from "app/components/Divider";
-import { Form, FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { InputDefault, InputPassword } from "app/components/Input";
-import { ListDivided } from "app/components/ListDivided";
-import { Select } from "app/components/SelectDropdown";
-import { SelectProfileImage } from "app/components/SelectProfileImage";
-import { Toggle } from "app/components/Toggle";
-import { useTheme, useValidation } from "app/hooks";
-import { useCurrencyOptions } from "app/hooks/use-currency-options";
-import { ReadableFile } from "app/hooks/use-files";
-import { FilePreview } from "domains/profile/components/FilePreview";
-import { DEFAULT_MARKET_PROVIDER } from "domains/profile/data";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { setThemeSource } from "utils/electron-utils";
+
+import { Button } from "@/app/components/Button";
+import { Divider } from "@/app/components/Divider";
+import { Form, FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { InputDefault, InputPassword } from "@/app/components/Input";
+import { ListDivided } from "@/app/components/ListDivided";
+import { Select } from "@/app/components/SelectDropdown";
+import { SelectProfileImage } from "@/app/components/SelectProfileImage";
+import { Toggle } from "@/app/components/Toggle";
+import { useTheme, useValidation } from "@/app/hooks";
+import { useCurrencyOptions } from "@/app/hooks/use-currency-options";
+import { ReadableFile } from "@/app/hooks/use-files";
+import { FilePreview } from "@/domains/profile/components/FilePreview";
+import { DEFAULT_MARKET_PROVIDER } from "@/domains/profile/data";
+import { setThemeSource } from "@/utils/electron-utils";
 
 interface CreateProfileFormProperties {
 	file?: ReadableFile;

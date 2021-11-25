@@ -1,6 +1,7 @@
-import { AvailableNewsCategories } from "domains/news/news.contracts";
 import React from "react";
-import { fireEvent, render, screen, waitFor } from "utils/testing-library";
+
+import { AvailableNewsCategories } from "@/domains/news/news.contracts";
+import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 import { NewsOptions } from "./NewsOptions";
 

@@ -1,6 +1,7 @@
 import { renderHook, RenderHookResult } from "@testing-library/react-hooks";
 import React from "react";
-import { env, WithProviders } from "utils/testing-library";
+
+import { env, WithProviders } from "@/utils/testing-library";
 
 import { useExchangeRate } from "./use-exchange-rate";
 

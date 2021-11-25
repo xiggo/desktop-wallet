@@ -1,6 +1,7 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import nock from "nock";
 import React from "react";
+
 import {
 	env,
 	fireEvent,
@@ -9,7 +10,7 @@ import {
 	render,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 

@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Icon } from "app/components/Icon";
-import { Tooltip } from "app/components/Tooltip";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
+
+import { Icon } from "@/app/components/Icon";
+import { Tooltip } from "@/app/components/Tooltip";
 
 import { DelegateTableColumnsProperties, VoteDelegateProperties } from "./DelegateTable.models";
 

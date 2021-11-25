@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import * as useRandomNumberHook from "app/hooks/use-random-number";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
 import React from "react";
-import { TransactionFixture } from "tests/fixtures/transactions";
-import { env, getDefaultProfileId, render, screen } from "utils/testing-library";
+
+import * as useRandomNumberHook from "@/app/hooks/use-random-number";
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
+import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { TransactionRow } from "./TransactionRow";
 

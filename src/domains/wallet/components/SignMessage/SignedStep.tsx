@@ -1,13 +1,14 @@
 import { Services } from "@payvo/sdk";
 import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
-import { Address } from "app/components/Address";
-import { Avatar } from "app/components/Avatar";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { TextArea } from "app/components/TextArea";
-import { TransactionDetail } from "domains/transaction/components/TransactionDetail";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Address } from "@/app/components/Address";
+import { Avatar } from "@/app/components/Avatar";
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { TextArea } from "@/app/components/TextArea";
+import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 
 export const SignedStep = ({
 	signedMessage,

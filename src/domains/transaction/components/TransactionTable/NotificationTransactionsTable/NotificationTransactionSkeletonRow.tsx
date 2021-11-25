@@ -1,7 +1,8 @@
-import { Skeleton } from "app/components/Skeleton";
-import { TableCell, TableRow } from "app/components/Table";
-import { useRandomNumber } from "app/hooks";
 import React from "react";
+
+import { Skeleton } from "@/app/components/Skeleton";
+import { TableCell, TableRow } from "@/app/components/Table";
+import { useRandomNumber } from "@/app/hooks";
 
 export const NotificationTransactionSkeletonRow: React.FC = () => {
 	const recipientWidth = useRandomNumber(120, 150);

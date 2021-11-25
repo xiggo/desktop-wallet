@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import { fireEvent, render, screen } from "utils/testing-library";
+
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { TruncateMiddleDynamic } from "./TruncateMiddleDynamic";
 

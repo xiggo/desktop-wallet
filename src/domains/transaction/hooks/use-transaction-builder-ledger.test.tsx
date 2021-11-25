@@ -2,9 +2,10 @@ import { Contracts } from "@payvo/sdk";
 import { BigNumber } from "@payvo/sdk-helpers";
 import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
-import { LedgerProvider } from "app/contexts";
 import React from "react";
-import transactionFixture from "tests/fixtures/coins/ark/devnet/transactions/transfer.json";
+
+import { LedgerProvider } from "@/app/contexts";
+import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import {
 	defaultNetMocks,
 	env,
@@ -13,7 +14,7 @@ import {
 	getDefaultWalletMnemonic,
 	waitFor,
 	WithProviders,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { useTransactionBuilder } from "./use-transaction-builder";
 

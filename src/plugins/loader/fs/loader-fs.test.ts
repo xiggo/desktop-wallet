@@ -1,6 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import path from "path";
-import { env, getDefaultProfileId } from "utils/testing-library";
+
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 import { PluginLoaderFileSystem } from "./loader-fs";
 

@@ -1,5 +1,5 @@
-import { IPluginController, PluginService } from "plugins/core";
-import { PluginServiceConfig, PluginServiceIdentifier } from "plugins/types";
+import { IPluginController, PluginService } from "@/plugins/core";
+import { PluginServiceConfig, PluginServiceIdentifier } from "@/plugins/types";
 
 export class EventsPluginService implements PluginService {
 	config(): PluginServiceConfig {

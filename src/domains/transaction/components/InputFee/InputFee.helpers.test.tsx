@@ -1,4 +1,4 @@
-import { useStepMath } from "domains/transaction/components/InputFee/InputFee.helpers";
+import { useStepMath } from "@/domains/transaction/components/InputFee/InputFee.helpers";
 
 describe("InputFee.helpers", () => {
 	describe("useStepMath", () => {

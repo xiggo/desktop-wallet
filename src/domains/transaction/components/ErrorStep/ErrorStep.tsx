@@ -1,11 +1,12 @@
-import { Button } from "app/components/Button";
-import { Clipboard } from "app/components/Clipboard";
-import { Header } from "app/components/Header";
-import { Icon } from "app/components/Icon";
-import { Image } from "app/components/Image";
-import { TextArea } from "app/components/TextArea";
 import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
+
+import { Button } from "@/app/components/Button";
+import { Clipboard } from "@/app/components/Clipboard";
+import { Header } from "@/app/components/Header";
+import { Icon } from "@/app/components/Icon";
+import { Image } from "@/app/components/Image";
+import { TextArea } from "@/app/components/TextArea";
 
 interface Properties {
 	title?: string;

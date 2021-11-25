@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
-import { translations as commonTranslations } from "app/i18n/common/i18n";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
+
+import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
 	env,
 	fireEvent,
@@ -16,7 +17,7 @@ import {
 	useDefaultNetMocks,
 	waitFor,
 	within,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { Transactions } from "./Transactions";
 

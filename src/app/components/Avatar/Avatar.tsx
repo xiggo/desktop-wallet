@@ -2,7 +2,8 @@ import { Helpers } from "@payvo/sdk-profiles";
 import cn from "classnames";
 import React from "react";
 import tw, { styled } from "twin.macro";
-import { Size } from "types";
+
+import { Size } from "@/types";
 
 interface Properties {
 	address?: string;

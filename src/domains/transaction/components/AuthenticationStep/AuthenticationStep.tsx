@@ -1,17 +1,18 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { FormField, FormLabel } from "app/components/Form";
-import { Header } from "app/components/Header";
-import { InputPassword } from "app/components/Input";
-import { LedgerModel, useLedgerModelStatus, useValidation } from "app/hooks";
-import { LedgerConfirmation } from "domains/transaction/components/LedgerConfirmation";
+import React, { useMemo } from "react";
+import { useFormContext } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+
+import { FormField, FormLabel } from "@/app/components/Form";
+import { Header } from "@/app/components/Header";
+import { InputPassword } from "@/app/components/Input";
+import { LedgerModel, useLedgerModelStatus, useValidation } from "@/app/hooks";
+import { LedgerConfirmation } from "@/domains/transaction/components/LedgerConfirmation";
 import {
 	LedgerDeviceErrorContent,
 	LedgerWaitingAppContent,
 	LedgerWaitingDeviceContent,
-} from "domains/wallet/components/Ledger";
-import React, { useMemo } from "react";
-import { useFormContext } from "react-hook-form";
-import { useTranslation } from "react-i18next";
+} from "@/domains/wallet/components/Ledger";
 
 export interface LedgerStates {
 	ledgerIsAwaitingDevice?: boolean;

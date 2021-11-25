@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Networks } from "@payvo/sdk";
 import React from "react";
+
 import {
 	env,
 	fireEvent,
@@ -9,7 +10,7 @@ import {
 	render,
 	screen,
 	waitFor,
-} from "utils/testing-library";
+} from "@/utils/testing-library";
 
 import { ReceiveFunds } from "./ReceiveFunds";
 

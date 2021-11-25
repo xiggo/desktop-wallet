@@ -1,9 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Table } from "app/components/Table";
-import { useActiveProfile } from "app/hooks";
 import React, { useCallback } from "react";
 import tw, { styled } from "twin.macro";
-import { assertString } from "utils/assertions";
+
+import { Table } from "@/app/components/Table";
+import { useActiveProfile } from "@/app/hooks";
+import { assertString } from "@/utils/assertions";
 
 import { RecipientListItem } from "./RecipientList.blocks";
 import { RecipientItem, RecipientListProperties } from "./RecipientList.contracts";
