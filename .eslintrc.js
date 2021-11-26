@@ -152,7 +152,7 @@ module.exports = {
 		"testing-library/no-await-sync-query": "error",
 		"testing-library/no-container": "error",
 		"testing-library/no-debugging-utils": "error",
-		"testing-library/no-dom-import": "warn", // @TODO: set to error and fix
+		"testing-library/no-dom-import": "error",
 		"testing-library/no-manual-cleanup": "error",
 		"testing-library/no-node-access": "error",
 		"testing-library/no-promise-in-fire-event": "error",
