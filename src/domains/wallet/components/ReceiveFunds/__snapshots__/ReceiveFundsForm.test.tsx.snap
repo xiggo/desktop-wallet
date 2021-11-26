@@ -76,6 +76,7 @@ exports[`ReceiveFundsForm should emit amount onChange event 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -171,6 +172,7 @@ exports[`ReceiveFundsForm should emit memo onChange event 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -316,6 +318,7 @@ exports[`ReceiveFundsForm should render 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""

@@ -55,6 +55,7 @@ exports[`SelectDropdown should render disabled option base 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -143,6 +144,7 @@ exports[`SelectDropdown should render disabled option group 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -198,6 +200,7 @@ exports[`SelectDropdown should render invalid option base 1`] = `
       </div>
       <div
         class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+        data-testid="Input__addon-end"
       >
         <span
           data-testid="Input__error"
@@ -248,6 +251,7 @@ exports[`SelectDropdown should render invalid option base 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+            data-testid="Input__addon-end"
           >
             <span
               data-testid="Input__error"
@@ -316,6 +320,7 @@ exports[`SelectDropdown should render invalid option group 1`] = `
       </div>
       <div
         class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+        data-testid="Input__addon-end"
       >
         <span
           data-testid="Input__error"
@@ -366,6 +371,7 @@ exports[`SelectDropdown should render invalid option group 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+            data-testid="Input__addon-end"
           >
             <span
               data-testid="Input__error"
@@ -465,6 +471,7 @@ exports[`SelectDropdown should render option base 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -567,6 +574,7 @@ exports[`SelectDropdown should render option base with custom label 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -699,6 +707,7 @@ exports[`SelectDropdown should render option base with default value when free t
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -801,6 +810,7 @@ exports[`SelectDropdown should render option base with initial default value 1`]
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -887,6 +897,7 @@ exports[`SelectDropdown should render option base with wrong default value 1`] =
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -1037,6 +1048,7 @@ exports[`SelectDropdown should render option group 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -1139,6 +1151,7 @@ exports[`SelectDropdown should render option group with custom label 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -1270,6 +1283,7 @@ exports[`SelectDropdown should render option group with default value when free 
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -1372,6 +1386,7 @@ exports[`SelectDropdown should render option group with initial default value 1`
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -1458,6 +1473,7 @@ exports[`SelectDropdown should render option group with wrong default value 1`] 
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -1608,6 +1624,7 @@ exports[`SelectDropdown should render with empty options 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -1694,6 +1711,7 @@ exports[`SelectDropdown should render with options values as numbers 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""

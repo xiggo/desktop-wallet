@@ -358,6 +358,7 @@ exports[`Registration should register second signature 1`] = `
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
                         >
                           <div
                             class=""
@@ -1196,6 +1197,7 @@ exports[`Registration should show mnemonic error 1`] = `
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
                         >
                           <div
                             class=""
@@ -1247,6 +1249,7 @@ exports[`Registration should show mnemonic error 1`] = `
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                          data-testid="Input__addon-end"
                         >
                           <span
                             data-errortext="This mnemonic does not correspond to your wallet"

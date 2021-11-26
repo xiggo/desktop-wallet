@@ -42,6 +42,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                 </div>
                 <div
                   class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                  data-testid="Input__addon-end"
                 >
                   <span
                     data-errortext="The address could not be found"
@@ -112,6 +113,7 @@ exports[`Add Participant should fail if cannot find the address remotely 1`] = `
                     </div>
                     <div
                       class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                      data-testid="Input__addon-end"
                     >
                       <span
                         data-errortext="The address could not be found"
@@ -374,6 +376,7 @@ exports[`Add Participant should fail to find 1`] = `
                 </div>
                 <div
                   class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                  data-testid="Input__addon-end"
                 >
                   <span
                     data-errortext="The address could not be found"
@@ -444,6 +447,7 @@ exports[`Add Participant should fail to find 1`] = `
                     </div>
                     <div
                       class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                      data-testid="Input__addon-end"
                     >
                       <span
                         data-errortext="The address could not be found"
@@ -706,6 +710,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                 </div>
                 <div
                   class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                  data-testid="Input__addon-end"
                 >
                   <span
                     data-errortext="The address is already in the list"
@@ -797,6 +802,7 @@ exports[`Add Participant should fail with a duplicate address 1`] = `
                     </div>
                     <div
                       class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                      data-testid="Input__addon-end"
                     >
                       <span
                         data-errortext="The address is already in the list"
@@ -1048,6 +1054,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                 </div>
                 <div
                   class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                  data-testid="Input__addon-end"
                 >
                   <span
                     data-errortext="The public key could not be found"
@@ -1118,6 +1125,7 @@ exports[`Add Participant should fail with cold wallet 1`] = `
                     </div>
                     <div
                       class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                      data-testid="Input__addon-end"
                     >
                       <span
                         data-errortext="The public key could not be found"
@@ -1421,6 +1429,7 @@ exports[`Add Participant should render custom participants 1`] = `
                     </div>
                     <div
                       class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                      data-testid="Input__addon-end"
                     >
                       <div
                         class=""
@@ -1699,6 +1708,7 @@ exports[`Add Participant should work with an imported wallet 1`] = `
                     </div>
                     <div
                       class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                      data-testid="Input__addon-end"
                     >
                       <div
                         class=""

@@ -52,6 +52,7 @@ exports[`AuthenticationStep should request WIF if wallet was imported using WIF 
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+          data-testid="Input__addon-end"
         >
           <div
             class=""
@@ -132,6 +133,7 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+          data-testid="Input__addon-end"
         >
           <div
             class=""
@@ -183,6 +185,7 @@ exports[`AuthenticationStep should request mnemonic and second mnemonic 1`] = `
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+          data-testid="Input__addon-end"
         >
           <span
             data-errortext="This mnemonic does not correspond to your wallet"
@@ -278,6 +281,7 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+          data-testid="Input__addon-end"
         >
           <span
             data-errortext="This mnemonic does not correspond to your wallet"
@@ -373,6 +377,7 @@ exports[`AuthenticationStep should request mnemonic if wallet was imported using
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+          data-testid="Input__addon-end"
         >
           <span
             data-errortext="This mnemonic does not correspond to your wallet"
@@ -467,6 +472,7 @@ exports[`AuthenticationStep should request private key if wallet was imported us
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+          data-testid="Input__addon-end"
         >
           <div
             class=""
@@ -547,6 +553,7 @@ exports[`AuthenticationStep should request secret and second secret 1`] = `
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+          data-testid="Input__addon-end"
         >
           <div
             class=""
@@ -597,6 +604,7 @@ exports[`AuthenticationStep should request secret and second secret 1`] = `
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+          data-testid="Input__addon-end"
         >
           <div
             class=""
@@ -677,6 +685,7 @@ exports[`AuthenticationStep should request secret if wallet was imported using s
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+          data-testid="Input__addon-end"
         >
           <div
             class=""

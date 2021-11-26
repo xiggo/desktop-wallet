@@ -54,10 +54,14 @@ describe("Table", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render empty rows if template not provided", () => {
-		const { container } = render(<Table columns={columns} data={[]} />);
+	it("should render empty rows if template is not provided", async () => {
+		const { container } = render(<Table columns={columns} data={[data[0]]} />);
 
-		expect(screen.getAllByRole("rowgroup")[1].querySelectorAll("tr")).toHaveLength(0);
+		await expect(within(screen.getAllByRole("rowgroup")[1]).findAllByRole("row")).resolves.toHaveLength(1);
+		await expect(within(screen.getAllByRole("rowgroup")[1]).findByTestId("TableRow")).rejects.toThrow(
+			/Unable to find an element by/,
+		);
+
 		expect(container).toMatchSnapshot();
 	});
 
@@ -99,10 +103,12 @@ describe("Table", () => {
 		expect(screen.getByTestId("table__th--0")).toHaveClass("width");
 	});
 
-	it("should split rows", () => {
+	it("should split rows", async () => {
 		const { container } = render(<Table columns={columns} data={data} rowsPerPage={1} />);
 
-		expect(screen.getAllByRole("rowgroup")[1].querySelectorAll("tr")).toHaveLength(1);
+		// expect(screen.getAllByRole("rowgroup")[1].querySelectorAll("tr")).toHaveLength(1);
+		await expect(within(screen.getAllByRole("rowgroup")[1]).findAllByRole("row")).resolves.toHaveLength(1);
+
 		expect(container).toMatchSnapshot();
 	});
 });

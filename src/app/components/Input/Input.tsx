@@ -200,6 +200,7 @@ export const Input = React.forwardRef<InputElement, InputProperties>(
 
 					{(isInvalidValue || addons?.end) && (
 						<div
+							data-testid="Input__addon-end"
 							className={cn(
 								"flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800",
 								{

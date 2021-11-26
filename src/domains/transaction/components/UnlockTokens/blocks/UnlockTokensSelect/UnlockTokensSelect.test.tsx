@@ -143,7 +143,8 @@ describe("UnlockTokensSelect", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(3));
 
-		expect(screen.getAllByTestId("TableRow")[0].querySelector(".react-loading-skeleton")).not.toBeNull();
+		// eslint-disable-next-line testing-library/no-node-access
+		expect(screen.getAllByTestId("TableRow")[0].querySelector(".react-loading-skeleton")).toBeInTheDocument();
 	});
 
 	it("should render empty", async () => {

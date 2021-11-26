@@ -182,7 +182,7 @@ describe("Votes", () => {
 		userEvent.click(within(screen.getByTestId("Votes__FilterWallets")).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
-		expect(screen.getByTestId("NetworkOptions").firstChild).toHaveTextContent("ark.svg");
+		expect(screen.getByTestId("NetworkOption__ark.devnet")).toHaveTextContent("ark.svg");
 	});
 
 	it("should select starred option in the wallets display type", async () => {

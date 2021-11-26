@@ -675,17 +675,25 @@ describe("General Settings", () => {
 			},
 		);
 
-		const getSelectInput = (type: "MARKET_PROVIDER" | "CURRENCY") =>
-			screen.getByPlaceholderText(
-				translations.COMMON.SELECT_OPTION.replace(`{{option}}`, translations.SETTINGS.GENERAL.PERSONAL[type]),
-			);
+		const currencyContainer: HTMLElement = screen.getAllByRole("combobox")[1];
+		const marketPriceContainer: HTMLElement = screen.getAllByRole("combobox")[3];
+
+		const getSelectInput = (type: "MARKET_PROVIDER" | "CURRENCY") => {
+			let subject: any;
+
+			if (type === "MARKET_PROVIDER") {
+				subject = marketPriceContainer;
+			} else {
+				subject = currencyContainer;
+			}
+
+			return within(subject).getByRole("textbox");
+		};
 
 		expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CryptoCompare");
 		expect(getSelectInput("CURRENCY")).toHaveValue("BTC (Ƀ)");
 
-		userEvent.click(
-			within((getSelectInput("CURRENCY") as any).parentNode.parentNode).getByTestId("SelectDropdown__caret"),
-		);
+		userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText("EUR (€)")).resolves.toBeVisible();
 
@@ -695,19 +703,13 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(getSelectInput("CURRENCY")).toHaveValue("EUR (€)"));
 
-		userEvent.click(
-			within((getSelectInput("MARKET_PROVIDER") as any).parentNode.parentNode).getByTestId(
-				"SelectDropdown__caret",
-			),
-		);
+		userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
 
 		userEvent.click(screen.getByText("CoinGecko"));
 
 		await waitFor(() => expect(getSelectInput("MARKET_PROVIDER")).toHaveValue("CoinGecko"));
 
-		userEvent.click(
-			within((getSelectInput("CURRENCY") as any).parentNode.parentNode).getByTestId("SelectDropdown__caret"),
-		);
+		userEvent.click(within(currencyContainer).getByTestId("SelectDropdown__caret"));
 
 		await expect(screen.findByText("VND (₫)")).resolves.toBeVisible();
 
@@ -715,11 +717,7 @@ describe("General Settings", () => {
 
 		await waitFor(() => expect(getSelectInput("CURRENCY")).toHaveValue("VND (₫)"));
 
-		userEvent.click(
-			within((getSelectInput("MARKET_PROVIDER") as any).parentNode.parentNode).getByTestId(
-				"SelectDropdown__caret",
-			),
-		);
+		userEvent.click(within(marketPriceContainer).getByTestId("SelectDropdown__caret"));
 
 		userEvent.click(screen.getByText("CryptoCompare"));
 

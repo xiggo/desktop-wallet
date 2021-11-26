@@ -278,7 +278,7 @@ describe("Wallets", () => {
 		userEvent.click(within(screen.getByTestId("WalletControls")).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("NetworkOptions")).toBeInTheDocument();
-		expect(screen.getByTestId("NetworkOptions").firstChild).toHaveTextContent("ark.svg");
+		expect(screen.getByTestId("NetworkOption__ark.devnet")).toHaveTextContent("ark.svg");
 	});
 
 	it("should open and close ledger import modal", async () => {

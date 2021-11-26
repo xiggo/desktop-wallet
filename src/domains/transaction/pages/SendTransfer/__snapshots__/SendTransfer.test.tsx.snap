@@ -1280,6 +1280,7 @@ exports[`SendTransfer should error if wrong mnemonic 1`] = `
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                          data-testid="Input__addon-end"
                         >
                           <span
                             data-errortext="This mnemonic does not correspond to your wallet"
@@ -1556,6 +1557,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
               >
                 <div
                   class=""
@@ -1731,6 +1733,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                             </div>
                             <div
                               class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
                             >
                               <div
                                 class=""
@@ -1865,6 +1868,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -2517,6 +2521,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                               </div>
                               <div
                                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                data-testid="Input__addon-end"
                               >
                                 <div
                                   class=""
@@ -2692,6 +2697,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                             </div>
                                             <div
                                               class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                              data-testid="Input__addon-end"
                                             >
                                               <div
                                                 class=""
@@ -2826,6 +2832,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                           </div>
                           <div
                             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                            data-testid="Input__addon-end"
                           >
                             <div
                               class=""
@@ -3513,6 +3520,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                               </div>
                               <div
                                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                data-testid="Input__addon-end"
                               >
                                 <div
                                   class=""
@@ -3677,6 +3685,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                             </div>
                                             <div
                                               class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                              data-testid="Input__addon-end"
                                             >
                                               <div
                                                 class=""
@@ -3811,6 +3820,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                           </div>
                           <div
                             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                            data-testid="Input__addon-end"
                           >
                             <div
                               class=""
@@ -4147,6 +4157,7 @@ exports[`SendTransfer should render form step 1`] = `
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
               >
                 <div
                   class=""
@@ -4313,6 +4324,7 @@ exports[`SendTransfer should render form step 1`] = `
                             </div>
                             <div
                               class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
                             >
                               <div
                                 class=""
@@ -4438,6 +4450,7 @@ exports[`SendTransfer should render form step 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -4768,6 +4781,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
               >
                 <div
                   class=""
@@ -4943,6 +4957,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                             </div>
                             <div
                               class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
                             >
                               <div
                                 class=""
@@ -5077,6 +5092,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -5607,6 +5623,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
               >
                 <div
                   class=""
@@ -5773,6 +5790,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
                             </div>
                             <div
                               class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                              data-testid="Input__addon-end"
                             >
                               <div
                                 class=""
@@ -5898,6 +5916,7 @@ exports[`SendTransfer should render form step without test networks 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+            data-testid="Input__addon-end"
           >
             <div
               class=""
@@ -8924,6 +8943,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                               </div>
                               <div
                                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                data-testid="Input__addon-end"
                               >
                                 <div
                                   class=""
@@ -9088,6 +9108,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                             </div>
                                             <div
                                               class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                              data-testid="Input__addon-end"
                                             >
                                               <div
                                                 class=""
@@ -9224,6 +9245,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                           </div>
                           <div
                             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                            data-testid="Input__addon-end"
                           >
                             <div
                               class=""

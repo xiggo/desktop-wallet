@@ -149,6 +149,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -199,6 +200,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -301,6 +303,7 @@ exports[`Import Profile - Profile Form Step should fail password confirmation 1`
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
                         >
                           <div
                             class=""
@@ -583,6 +586,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -639,6 +643,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -742,6 +747,7 @@ exports[`Import Profile - Profile Form Step should render profile form 1`] = `
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
                         >
                           <div
                             class=""
@@ -1025,6 +1031,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -1081,6 +1088,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -1184,6 +1192,7 @@ exports[`Import Profile - Profile Form Step should render profile form with empt
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
                         >
                           <div
                             class=""
@@ -1467,6 +1476,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -1523,6 +1533,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -1626,6 +1637,7 @@ exports[`Import Profile - Profile Form Step should render profile form with hidd
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
                         >
                           <div
                             class=""
@@ -1909,6 +1921,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -1965,6 +1978,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -2067,6 +2081,7 @@ exports[`Import Profile - Profile Form Step should store profile 1`] = `
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
                         >
                           <div
                             class=""
@@ -2349,6 +2364,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -2405,6 +2421,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -2507,6 +2524,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
                         >
                           <div
                             class=""
@@ -2790,6 +2808,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -2846,6 +2865,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -2948,6 +2968,7 @@ exports[`Import Profile - Profile Form Step should update the avatar when removi
                         </div>
                         <div
                           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                          data-testid="Input__addon-end"
                         >
                           <div
                             class=""

@@ -176,6 +176,7 @@ exports[`DelegateRegistrationForm should error if username is too long 1`] = `
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                data-testid="Input__addon-end"
               >
                 <span
                   data-errortext="Delegate Name should have at most 20 characters"
@@ -1094,6 +1095,7 @@ exports[`DelegateRegistrationForm should set fee 1`] = `
                   </div>
                   <div
                     class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+                    data-testid="Input__addon-end"
                   >
                     <div
                       class=""
@@ -1325,6 +1327,7 @@ exports[`DelegateRegistrationForm should show error if username already exists 1
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                data-testid="Input__addon-end"
               >
                 <span
                   data-errortext="Delegate Name already exists"
@@ -1649,6 +1652,7 @@ exports[`DelegateRegistrationForm should show error if username contains illegal
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                data-testid="Input__addon-end"
               >
                 <span
                   data-errortext="The following characters are not allowed: '<', '>'"

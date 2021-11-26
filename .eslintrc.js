@@ -154,7 +154,7 @@ module.exports = {
 		"testing-library/no-debugging-utils": "error",
 		"testing-library/no-dom-import": "warn", // @TODO: set to error and fix
 		"testing-library/no-manual-cleanup": "error",
-		"testing-library/no-node-access": "warn", // @TODO: set to error and fix
+		"testing-library/no-node-access": "error",
 		"testing-library/no-promise-in-fire-event": "error",
 		"testing-library/no-render-in-setup": "error",
 		"testing-library/no-unnecessary-act": "error",

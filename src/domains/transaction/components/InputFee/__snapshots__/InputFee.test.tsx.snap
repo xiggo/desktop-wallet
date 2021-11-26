@@ -60,6 +60,7 @@ exports[`should allow to input a value 1`] = `
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+          data-testid="Input__addon-end"
         >
           <div
             class=""
@@ -170,6 +171,7 @@ exports[`should display converted value when on live net 1`] = `
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+          data-testid="Input__addon-end"
         >
           <div
             class=""
@@ -424,6 +426,7 @@ exports[`should keep different values for simple and advanced view types 1`] = `
         </div>
         <div
           class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+          data-testid="Input__addon-end"
         >
           <div
             class=""
@@ -730,6 +733,7 @@ exports[`should render disabled 1`] = `
       </div>
       <div
         class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600 divide-none"
+        data-testid="Input__addon-end"
       >
         <div
           class=""

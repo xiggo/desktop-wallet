@@ -132,7 +132,7 @@ exports[`Table should render 1`] = `
 </div>
 `;
 
-exports[`Table should render empty rows if template not provided 1`] = `
+exports[`Table should render empty rows if template is not provided 1`] = `
 <div>
   <div
     class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
@@ -241,7 +241,9 @@ exports[`Table should render empty rows if template not provided 1`] = `
       </thead>
       <tbody
         role="rowgroup"
-      />
+      >
+        <tr />
+      </tbody>
     </table>
   </div>
 </div>

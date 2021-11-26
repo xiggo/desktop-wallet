@@ -67,6 +67,7 @@ exports[`SelectRecipient should render disabled 1`] = `
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
               >
                 <div
                   class=""
@@ -167,6 +168,7 @@ exports[`SelectRecipient should render empty 1`] = `
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
               >
                 <div
                   class=""
@@ -229,6 +231,7 @@ exports[`SelectRecipient should render invalid 1`] = `
           </div>
           <div
             class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+            data-testid="Input__addon-end"
           >
             <span
               data-testid="Input__error"
@@ -286,6 +289,7 @@ exports[`SelectRecipient should render invalid 1`] = `
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-danger-500"
+                data-testid="Input__addon-end"
               >
                 <span
                   data-testid="Input__error"
@@ -399,6 +403,7 @@ exports[`SelectRecipient should render with preselected address 1`] = `
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
               >
                 <div
                   class=""
@@ -510,6 +515,7 @@ exports[`SelectRecipient should update internal state when prop changes 1`] = `
               </div>
               <div
                 class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                data-testid="Input__addon-end"
               >
                 <div
                   class=""

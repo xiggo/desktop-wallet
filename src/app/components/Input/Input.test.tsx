@@ -50,8 +50,11 @@ describe("Input", () => {
 			/>,
 		);
 
-		expect(screen.getByText("end")).toBeInTheDocument();
-		expect(screen.getByText("end").parentElement?.parentElement).toHaveClass("some-class-name");
+		const addonWrapper = screen.getByTestId("Input__addon-end");
+
+		expect(addonWrapper).toBeInTheDocument();
+		expect(addonWrapper).toHaveClass("some-class-name");
+		expect(addonWrapper).toHaveTextContent("end");
 
 		expect(screen.getByText("start")).toBeInTheDocument();
 
