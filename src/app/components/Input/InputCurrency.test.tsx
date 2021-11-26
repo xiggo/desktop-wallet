@@ -40,7 +40,7 @@ describe("InputCurrency", () => {
 		expect(input).toHaveValue("0.01");
 	});
 
-	it("should fallback on convert value", () => {
+	it("should fallback on convert value", async () => {
 		const { rerender } = render(<InputCurrency value=".01" />);
 		const input = screen.getByTestId("InputCurrency");
 
@@ -48,21 +48,24 @@ describe("InputCurrency", () => {
 
 		rerender(<InputCurrency value={undefined} />);
 
-		waitFor(() => expect(input).toHaveValue("0"));
+		await waitFor(() => expect(input).not.toHaveValue());
 	});
 
-	it("should work with a controlled value", () => {
+	it("should work with a controlled value", async () => {
 		const Component = () => {
 			const [value, setValue] = useState("0.04");
 			return <InputCurrency value={value} onChange={setValue} />;
 		};
+
 		render(<Component />);
-		const input = screen.getByTestId("InputCurrency");
+
+		const input: HTMLInputElement = screen.getByTestId("InputCurrency");
 
 		expect(input).toHaveValue("0.04");
 
+		input.select();
 		userEvent.paste(input, "1.23");
 
-		waitFor(() => expect(input).toHaveValue("1.23"));
+		await waitFor(() => expect(input).toHaveValue("1.23"));
 	});
 });
