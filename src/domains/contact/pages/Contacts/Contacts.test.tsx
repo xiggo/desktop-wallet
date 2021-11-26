@@ -397,7 +397,7 @@ describe("Contacts", () => {
 
 		await waitFor(() => expect(screen.getAllByTestId("ContactListItem__address")).toHaveLength(1));
 
-		expect(screen.queryByText(addressLive.address())).toBeInTheDocument();
+		expect(screen.getByText(addressLive.address())).toBeInTheDocument();
 
 		userEvent.paste(
 			within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"),

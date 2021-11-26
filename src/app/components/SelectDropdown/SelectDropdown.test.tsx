@@ -77,7 +77,7 @@ describe("SelectDropdown", () => {
 		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "Opt");
 
 		expect(container).toMatchSnapshot();
-		expect(screen.queryByText("Label Option 1")).toBeInTheDocument();
+		expect(screen.getByText("Label Option 1")).toBeInTheDocument();
 	});
 
 	it.each([OptionType.base, OptionType.group])("should render invalid option %s", (optType) => {

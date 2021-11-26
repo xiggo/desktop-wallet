@@ -92,7 +92,7 @@ describe("ImportWallet", () => {
 
 		expect(screen.getByTestId("SelectNetworkInput__input")).toBeInTheDocument();
 
-		expect(screen.queryByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 		expect(screen.queryByTestId("NetworkIcon-ARK-ark.devnet")).toBeNull();
 
 		expect(asFragment()).toMatchSnapshot();

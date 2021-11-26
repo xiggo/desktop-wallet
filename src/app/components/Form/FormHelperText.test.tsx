@@ -11,7 +11,7 @@ describe("FormHelperText", () => {
 		const errorMessage = "Error Message";
 		const { asFragment } = render(<FormHelperText errorMessage={errorMessage}>{hintMessage}</FormHelperText>);
 
-		expect(screen.queryByText(hintMessage)).toBeInTheDocument();
+		expect(screen.getByText(hintMessage)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -31,7 +31,7 @@ describe("FormHelperText", () => {
 			</FormHelperText>,
 		);
 
-		expect(screen.queryByText(errorMessage)).toBeInTheDocument();
+		expect(screen.getByText(errorMessage)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -54,6 +54,6 @@ describe("FormHelperText", () => {
 		);
 		render(tree);
 
-		expect(screen.queryByText(context.errorMessage)).toBeInTheDocument();
+		expect(screen.getByText(context.errorMessage)).toBeInTheDocument();
 	});
 });

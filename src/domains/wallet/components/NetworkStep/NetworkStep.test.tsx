@@ -53,7 +53,7 @@ describe("SelectNetworkStep", () => {
 
 		expect(selectNetworkInput).toBeInTheDocument();
 
-		expect(screen.queryByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
+		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
 		expect(screen.queryByTestId("NetworkIcon-ARK-ark.devnet")).toBeNull();
 
 		expect(asFragment()).toMatchSnapshot();

@@ -13,14 +13,14 @@ describe("FormLabel", () => {
 		const label = "Test Label";
 		render(<FormLabel>{label}</FormLabel>);
 
-		expect(screen.queryByText(label)).toBeInTheDocument();
+		expect(screen.getByText(label)).toBeInTheDocument();
 	});
 
 	it("should render from prop", () => {
 		const label = "Test Label";
 		render(<FormLabel label={label} />);
 
-		expect(screen.queryByText(label)).toBeInTheDocument();
+		expect(screen.getByText(label)).toBeInTheDocument();
 	});
 
 	it("should render with name from context", () => {
@@ -37,7 +37,7 @@ describe("FormLabel", () => {
 		);
 		const { asFragment } = render(tree);
 
-		expect(screen.queryByTestId("FormLabel")).toHaveAttribute("for", context.name);
+		expect(screen.getByTestId("FormLabel")).toHaveAttribute("for", context.name);
 		expect(asFragment()).toMatchSnapshot();
 	});
 

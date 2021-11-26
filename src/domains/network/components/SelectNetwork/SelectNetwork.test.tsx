@@ -112,7 +112,9 @@ describe("SelectNetwork", () => {
 
 		userEvent.keyboard("{enter}");
 
-		expect(within(screen.getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
+		const networkInput = screen.getByTestId("SelectNetworkInput__network");
+
+		expect(within(networkInput).queryByTestId("CoinIcon")).toBeNull();
 	});
 
 	it("should not select first matched asset after random key enter", () => {
@@ -123,10 +125,11 @@ describe("SelectNetwork", () => {
 
 		expect(input).toHaveValue("Bitco");
 
-		// userEvent.click(input);
 		userEvent.keyboard("A");
 
-		expect(within(screen.getByTestId("SelectNetworkInput__network")).queryByTestId("CoinIcon")).toBeNull();
+		const networkInput = screen.getByTestId("SelectNetworkInput__network");
+
+		expect(within(networkInput).queryByTestId("CoinIcon")).toBeNull();
 	});
 
 	it("should clear selection when changing input", async () => {

@@ -124,7 +124,7 @@ describe("AuthenticationStep", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
 
-		expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
+		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
@@ -150,7 +150,7 @@ describe("AuthenticationStep", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
 
-		expect(screen.queryByTestId("AuthenticationStep__secret")).toBeInTheDocument();
+		expect(screen.getByTestId("AuthenticationStep__secret")).toBeInTheDocument();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "secret");
 
@@ -176,7 +176,7 @@ describe("AuthenticationStep", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
 
-		expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
+		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
@@ -202,7 +202,7 @@ describe("AuthenticationStep", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
 
-		expect(screen.queryByTestId("AuthenticationStep__private-key")).toBeInTheDocument();
+		expect(screen.getByTestId("AuthenticationStep__private-key")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -221,7 +221,7 @@ describe("AuthenticationStep", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
 
-		expect(screen.queryByTestId("AuthenticationStep__wif")).toBeInTheDocument();
+		expect(screen.getByTestId("AuthenticationStep__wif")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -335,7 +335,7 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		expect(screen.queryByTestId("LedgerWaitingDevice-loading_message")).toBeInTheDocument();
+		expect(screen.getByTestId("LedgerWaitingDevice-loading_message")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -398,7 +398,7 @@ describe("AuthenticationStep", () => {
 			},
 		);
 
-		expect(screen.queryByTestId("LedgerWaitingApp-loading_message")).toBeInTheDocument();
+		expect(screen.getByTestId("LedgerWaitingApp-loading_message")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

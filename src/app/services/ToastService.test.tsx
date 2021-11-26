@@ -25,7 +25,7 @@ describe("ToastService", () => {
 			jest.runAllTimers();
 		});
 
-		expect(screen.queryByText(method)).toBeInTheDocument();
+		expect(screen.getByText(method)).toBeInTheDocument();
 	});
 
 	it.each(["info", "success", "warning", "error"])("should call toast %s method with options", (method) => {
@@ -36,7 +36,7 @@ describe("ToastService", () => {
 			jest.runAllTimers();
 		});
 
-		expect(screen.queryByText(method)).toBeInTheDocument();
+		expect(screen.getByText(method)).toBeInTheDocument();
 	});
 
 	it("should call the toast dismiss method", () => {
