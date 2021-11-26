@@ -149,7 +149,7 @@ module.exports = {
 		"testing-library/await-fire-event": "warn", // @TODO: set to error and fix
 		"testing-library/consistent-data-testid": "off", // @TODO: https://github.com/testing-library/eslint-plugin-testing-library/blob/main/docs/rules/consistent-data-testid.md
 		"testing-library/no-await-sync-events": "error",
-		"testing-library/no-await-sync-query": "warn", // @TODO: set to error and fix
+		"testing-library/no-await-sync-query": "error",
 		"testing-library/no-container": "error",
 		"testing-library/no-debugging-utils": "error",
 		"testing-library/no-dom-import": "warn", // @TODO: set to error and fix
