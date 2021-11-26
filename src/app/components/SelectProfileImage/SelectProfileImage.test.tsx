@@ -1,4 +1,3 @@
-import { screen, waitFor } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import electron from "electron";
@@ -7,7 +6,7 @@ import React from "react";
 import { useFiles } from "@/app/hooks/use-files";
 import { translations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
-import { render } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { SelectProfileImage } from "./SelectProfileImage";
 

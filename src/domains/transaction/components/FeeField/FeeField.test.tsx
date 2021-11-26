@@ -2,7 +2,6 @@ import { Networks } from "@payvo/sdk";
 import { ARK } from "@payvo/sdk-ark";
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
@@ -12,7 +11,7 @@ import * as useFeesHook from "@/app/hooks/use-fees";
 import { toasts } from "@/app/services";
 import { FeeField } from "@/domains/transaction/components/FeeField/FeeField";
 import { translations } from "@/domains/transaction/i18n";
-import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 describe("FeeField", () => {
 	let profile: Contracts.IProfile;

@@ -1,10 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { buildTranslations } from "@/app/i18n/helpers";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { UnlockTokensTotal } from "./UnlockTokensTotal";
 

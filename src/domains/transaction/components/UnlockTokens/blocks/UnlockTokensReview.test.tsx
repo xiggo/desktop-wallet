@@ -1,5 +1,4 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { screen } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import React from "react";
@@ -8,7 +7,7 @@ import { Route } from "react-router-dom";
 
 import { buildTranslations } from "@/app/i18n/helpers";
 import { UnlockTokensFormState } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
-import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { UnlockTokensReview } from "./UnlockTokensReview";
 

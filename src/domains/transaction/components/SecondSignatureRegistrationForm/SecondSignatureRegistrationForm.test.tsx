@@ -1,7 +1,6 @@
 import { Contracts } from "@payvo/sdk";
 import { BIP39 } from "@payvo/sdk-cryptography";
 import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
-import { within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import React from "react";
@@ -12,7 +11,16 @@ import { toasts } from "@/app/services";
 import { translations } from "@/domains/transaction/i18n";
 import secondSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
 import * as utils from "@/utils/electron-utils";
-import { env, getDefaultProfileId, MNEMONICS, render, renderWithForm, screen, waitFor } from "@/utils/testing-library";
+import {
+	env,
+	getDefaultProfileId,
+	MNEMONICS,
+	render,
+	renderWithForm,
+	screen,
+	waitFor,
+	within,
+} from "@/utils/testing-library";
 
 import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
 

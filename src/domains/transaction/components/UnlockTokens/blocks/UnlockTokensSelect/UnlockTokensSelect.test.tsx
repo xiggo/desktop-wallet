@@ -2,7 +2,6 @@ import { BigNumber } from "@payvo/sdk-helpers";
 import { DateTime } from "@payvo/sdk-intl";
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React, { useEffect } from "react";
@@ -14,7 +13,7 @@ import {
 	UnlockableBalance,
 	UnlockTokensFormState,
 } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
-import { env } from "@/utils/testing-library";
+import { env, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { UnlockTokensSelect } from "./UnlockTokensSelect";
 

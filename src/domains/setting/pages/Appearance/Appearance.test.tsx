@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { camelCase } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createMemoryHistory, MemoryHistory } from "history";
 import React from "react";
@@ -9,7 +8,7 @@ import { Route } from "react-router-dom";
 
 import { toasts } from "@/app/services";
 import { translations } from "@/domains/setting/i18n";
-import { env, getDefaultProfileId, render } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { AppearanceSettings } from "./Appearance";
 

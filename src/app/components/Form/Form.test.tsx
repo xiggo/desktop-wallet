@@ -1,9 +1,8 @@
-import { screen } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { useForm } from "react-hook-form";
 
-import { fireEvent, render } from "@/utils/testing-library";
+import { fireEvent, render, screen } from "@/utils/testing-library";
 
 import { Form } from "./Form";
 

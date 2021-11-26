@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
-import { within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import { createHashHistory, createMemoryHistory } from "history";
@@ -12,7 +11,7 @@ import { useAccentColor, useTheme } from "@/app/hooks";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import { GeneralSettings } from "@/domains/setting/pages";
-import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+import { act, env, fireEvent, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 
 const translations = buildTranslations();
 

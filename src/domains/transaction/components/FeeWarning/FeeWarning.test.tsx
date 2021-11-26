@@ -1,9 +1,8 @@
-import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations } from "@/domains/transaction/i18n";
-import { renderWithForm } from "@/utils/testing-library";
+import { renderWithForm, screen } from "@/utils/testing-library";
 
 import { FeeWarning, FeeWarningVariant } from "./FeeWarning";
 

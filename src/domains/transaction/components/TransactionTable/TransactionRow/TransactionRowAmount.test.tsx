@@ -1,7 +1,7 @@
-import { render, screen } from "@testing-library/react";
 import React from "react";
 
 import { TransactionFixture } from "@/tests/fixtures/transactions";
+import { render, screen } from "@/utils/testing-library";
 
 import { TransactionRowAmount } from "./TransactionRowAmount";
 

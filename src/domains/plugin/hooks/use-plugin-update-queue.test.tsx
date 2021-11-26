@@ -1,25 +1,18 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { waitFor } from "@testing-library/react";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
-import { PluginManager } from "plugins";
 import React from "react";
 
 import { EnvironmentProvider } from "@/app/contexts";
 import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { env, getDefaultProfileId, pluginManager } from "@/utils/testing-library";
 
 import { usePluginUpdateQueue } from "./use-plugin-update-queue";
 
 describe("Plugin Update Queue", () => {
 	let profile: Contracts.IProfile;
 
-	beforeEach(() => {
-		jest.useFakeTimers();
-		profile = env.profiles().findById(getDefaultProfileId());
-	});
-
 	beforeAll(() => {
-		jest.useRealTimers();
+		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
 	it("should work properly", async () => {
@@ -27,22 +20,26 @@ describe("Plugin Update Queue", () => {
 
 		const wrapper = ({ children }: any) => (
 			<EnvironmentProvider env={env}>
-				<PluginManagerProvider services={[]} manager={new PluginManager()}>
+				<PluginManagerProvider services={[]} manager={pluginManager}>
 					{children}
 				</PluginManagerProvider>
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => usePluginUpdateQueue(profile), { wrapper });
+		const { result, waitForValueToChange } = renderHook(() => usePluginUpdateQueue(profile), { wrapper });
 
-		await actHook(async () => {
+		actHook(() => {
 			result.current.startUpdate(ids);
-			await waitFor(() => expect(result.current.hasInUpdateQueue("plugin-3")).toBe(true));
-			await waitFor(() => expect(result.current.hasUpdateComplete("plugin-3")).toBe(false));
-			await waitFor(() => expect(result.current.isUpdating).toBe(true));
-			await waitFor(() => expect(result.current.isUpdateCompleted).toBe(true));
-			await waitFor(() => expect(result.current.hasUpdateComplete("plugin-3")).toBe(true));
 		});
+
+		expect(result.current.hasInUpdateQueue("plugin-3")).toBe(true);
+		expect(result.current.hasUpdateComplete("plugin-3")).toBe(false);
+		expect(result.current.isUpdating).toBe(true);
+
+		await waitForValueToChange(() => result.current.isUpdateCompleted);
+
+		expect(result.current.isUpdateCompleted).toBe(true);
+		expect(result.current.hasUpdateComplete("plugin-3")).toBe(true);
 
 		expect(result.current.isUpdating).toBe(false);
 		expect(result.current.hasInUpdateQueue("plugin-3")).toBe(false);

@@ -1,6 +1,5 @@
 import { Contracts } from "@payvo/sdk";
 import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
-import { RenderResult } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
@@ -10,7 +9,7 @@ import { Route } from "react-router-dom";
 import { translations } from "@/domains/transaction/i18n";
 import multiSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import { TransactionFees } from "@/types";
-import { env, getDefaultProfileId, render, screen, syncFees, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, RenderResult, screen, syncFees, waitFor } from "@/utils/testing-library";
 
 import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
 

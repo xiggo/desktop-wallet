@@ -1,12 +1,11 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe } from "jest-circus";
 import React, { useState } from "react";
 
 import { translations } from "@/domains/transaction/i18n";
-import { env, render } from "@/utils/testing-library";
+import { env, render, screen } from "@/utils/testing-library";
 
 import { InputFee } from "./InputFee";
 import { InputFeeProperties, InputFeeSimpleValue, InputFeeViewType } from "./InputFee.contracts";

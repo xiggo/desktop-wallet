@@ -1,12 +1,11 @@
 import { sortByDesc } from "@payvo/sdk-helpers";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
-import { env, getDefaultProfileId, getDefaultWalletId, render, waitFor } from "@/utils/testing-library";
+import { env, getDefaultProfileId, getDefaultWalletId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { TransactionTable } from "./TransactionTable";
 

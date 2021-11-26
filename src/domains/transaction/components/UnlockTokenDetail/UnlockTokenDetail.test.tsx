@@ -1,11 +1,10 @@
-import { screen } from "@testing-library/react";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
-import { getDefaultProfileId, render } from "@/utils/testing-library";
+import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 import { UnlockTokenDetail } from "./UnlockTokenDetail";
 

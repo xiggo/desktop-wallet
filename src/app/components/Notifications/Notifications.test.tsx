@@ -1,10 +1,9 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { Notifications } from "./Notifications";
 

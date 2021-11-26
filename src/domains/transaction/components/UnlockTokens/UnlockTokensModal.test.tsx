@@ -3,7 +3,6 @@ import { BigNumber } from "@payvo/sdk-helpers";
 import { DateTime } from "@payvo/sdk-intl";
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
@@ -13,7 +12,7 @@ import { LedgerProvider } from "@/app/contexts";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { buildTranslations } from "@/app/i18n/helpers";
 import transactionFixture from "@/tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
-import { env, getDefaultLedgerTransport, render } from "@/utils/testing-library";
+import { env, getDefaultLedgerTransport, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { UnlockTokensModal } from "./UnlockTokensModal";
 

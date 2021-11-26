@@ -1,9 +1,8 @@
-import { waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
 import { translations } from "@/app/i18n/common/i18n";
-import { render, screen } from "@/utils/testing-library";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 import { Clipboard } from "./Clipboard";
 
