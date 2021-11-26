@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { cleanup, render, screen } from "@/utils/testing-library";
+import { render, screen } from "@/utils/testing-library";
 
 import { MnemonicVerification } from "./MnemonicVerification";
 
@@ -78,19 +78,24 @@ describe("MnemonicVerification", () => {
 	});
 
 	it("should ask for random words", () => {
-		render(<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />);
+		render(
+			<>
+				<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />
+				<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />
+			</>,
+		);
 
-		const firstOptions = screen
+		const options = screen
 			.getAllByTestId("MnemonicVerificationProgress__Tab")
 			.map((element: any) => element.innerHTML);
 
-		cleanup();
+		const length = options.length / 2;
 
-		render(<MnemonicVerification mnemonic={mnemonic} optionsLimit={limit} handleComplete={handleComplete} />);
+		const firstOptions = options;
+		const secondOptions = firstOptions.splice(length);
 
-		const secondOptions = screen
-			.getAllByTestId("MnemonicVerificationProgress__Tab")
-			.map((element: any) => element.innerHTML);
+		expect(firstOptions).toHaveLength(length);
+		expect(secondOptions).toHaveLength(length);
 
 		expect(firstOptions).not.toStrictEqual(secondOptions);
 	});
