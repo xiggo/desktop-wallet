@@ -93,7 +93,7 @@ export const Votes: FC = () => {
 	}, [activeWallet, fetchDelegates, hasWalletId]);
 
 	useEffect(() => {
-		if (votes?.length === 0) {
+		if (votes.length === 0) {
 			setVoteFilter("all");
 		}
 	}, [votes, setVoteFilter]);
@@ -117,7 +117,7 @@ export const Votes: FC = () => {
 			setSelectedAddress(address);
 			setSelectedNetwork(network);
 			setSelectedWallet(wallet);
-			setMaxVotes(wallet?.network().maximumVotesPerWallet());
+			setMaxVotes(wallet.network().maximumVotesPerWallet());
 
 			await fetchDelegates(wallet);
 		},
@@ -137,7 +137,7 @@ export const Votes: FC = () => {
 					selectedAddress={selectedAddress}
 					isFilterChanged={isFilterChanged}
 					filterProperties={filterProperties}
-					totalCurrentVotes={currentVotes?.length || 0}
+					totalCurrentVotes={currentVotes.length}
 					selectedFilter={voteFilter}
 					setSelectedFilter={setVoteFilter}
 				/>
@@ -175,14 +175,14 @@ export const Votes: FC = () => {
 						onContinue={navigateToSendVote}
 						isCompact={useCompactTables}
 						subtitle={
-							resignedDelegateVotes?.length ? (
+							resignedDelegateVotes.length > 0 ? (
 								<Alert className="mb-6">
 									<div data-testid="Votes__resigned-vote">
 										<Trans
 											i18nKey="VOTE.VOTES_PAGE.RESIGNED_VOTE"
 											values={{
 												name: currentVotes
-													?.find(({ wallet }) => wallet!.isResignedDelegate())
+													.find(({ wallet }) => wallet!.isResignedDelegate())
 													?.wallet!.username(),
 											}}
 											components={{ bold: <strong /> }}

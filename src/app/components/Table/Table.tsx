@@ -1,3 +1,4 @@
+import { chunk } from "@payvo/sdk-helpers";
 import cn from "classnames";
 import React, { useMemo } from "react";
 import { HeaderGroup, useSortBy, useTable } from "react-table";
@@ -19,6 +20,8 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 	hideHeader = false,
 	className,
 	initialState,
+	rowsPerPage,
+	currentPage = 1,
 }: TableProperties<RowDataType>) => {
 	const tableData = useMemo(() => data, [data]);
 	const tableColumns = useMemo(() => columns, [columns]);
@@ -33,6 +36,14 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 		},
 		useSortBy,
 	);
+
+	const rowsList = useMemo(() => {
+		if (!rowsPerPage || rows.length === 0) {
+			return rows;
+		}
+
+		return chunk(rows, rowsPerPage)[currentPage - 1];
+	}, [currentPage, rows, rowsPerPage]);
 
 	const renderChildNode = (rowData: RowDataType, index: number) => {
 		if (typeof children === "function") {
@@ -102,7 +113,7 @@ export const Table = <RowDataType extends Record<never, unknown>>({
 				{!hideHeader && renderHeader}
 
 				<tbody {...getTableBodyProps()}>
-					{rows.map((row) => {
+					{rowsList.map((row) => {
 						prepareRow(row);
 						return { ...renderChildNode(row.original, row.index), ...row.getRowProps() };
 					})}

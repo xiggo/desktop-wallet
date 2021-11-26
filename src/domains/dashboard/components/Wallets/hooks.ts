@@ -8,8 +8,6 @@ export const useWalletDisplay = ({
 	wallets = [],
 	selectedNetworkIds,
 	displayType = "all",
-	viewMore = false,
-	listPagerLimit = 10,
 }: UseWalletDisplayProperties) => {
 	const sliderOptions = {
 		slideHeight: 192,
@@ -19,7 +17,7 @@ export const useWalletDisplay = ({
 		spaceBetween: 18,
 	};
 
-	const { listWallets, gridWallets, listHasMore, hasWalletsMatchingOtherNetworks } = useMemo(() => {
+	const { listWallets, gridWallets, hasWalletsMatchingOtherNetworks } = useMemo(() => {
 		const listWallets = wallets
 			.filter((wallet: Contracts.IReadWriteWallet) => {
 				if (!selectedNetworkIds?.includes(wallet.network().id())) {
@@ -83,10 +81,9 @@ export const useWalletDisplay = ({
 		return {
 			gridWallets: loadGridWallets(),
 			hasWalletsMatchingOtherNetworks,
-			listHasMore: wallets.length > 0 && listWallets.length > listPagerLimit && !viewMore,
-			listWallets: viewMore ? listWallets : listWallets.slice(0, listPagerLimit),
+			listWallets,
 		};
-	}, [wallets, selectedNetworkIds, displayType, viewMore, sliderOptions.slidesPerView, listPagerLimit]);
+	}, [wallets, selectedNetworkIds, displayType, sliderOptions.slidesPerView]);
 
-	return { gridWallets, hasWalletsMatchingOtherNetworks, listHasMore, listWallets, sliderOptions };
+	return { gridWallets, hasWalletsMatchingOtherNetworks, listWallets, sliderOptions };
 };

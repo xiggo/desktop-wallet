@@ -50,35 +50,14 @@ describe("useWalletDisplay", () => {
 		});
 
 		expect(result.current.listWallets).toHaveLength(2);
-		expect(result.current.listHasMore).toBe(false);
 	});
 
-	it("should limit list type wallets", async () => {
+	it("should return all list wallets", async () => {
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}> {children} </EnvironmentProvider>;
 		const { result } = renderHook(
 			() =>
 				useWalletDisplay({
-					listPagerLimit: 1,
 					selectedNetworkIds: ["ark.devnet", "ark.mainnet"],
-					viewMore: true,
-					wallets,
-				}),
-			{
-				wrapper,
-			},
-		);
-
-		expect(result.current.listWallets).toHaveLength(3);
-	});
-
-	it("should ignore list pager limit", async () => {
-		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}> {children} </EnvironmentProvider>;
-		const { result } = renderHook(
-			() =>
-				useWalletDisplay({
-					listPagerLimit: 1,
-					selectedNetworkIds: ["ark.devnet", "ark.mainnet"],
-					viewMore: true,
 					wallets,
 				}),
 			{
@@ -96,18 +75,6 @@ describe("useWalletDisplay", () => {
 		});
 
 		expect(result.current.listWallets).toHaveLength(0);
-	});
-
-	it("should return listHasMore boolean", async () => {
-		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}> {children} </EnvironmentProvider>;
-		const { result } = renderHook(
-			() => useWalletDisplay({ listPagerLimit: 1, selectedNetworkIds: ["ark.devnet"], viewMore: false, wallets }),
-			{
-				wrapper,
-			},
-		);
-
-		expect(result.current.listHasMore).toBe(true);
 	});
 
 	it("should filter wallet types", async () => {

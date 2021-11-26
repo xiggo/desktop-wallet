@@ -52,7 +52,7 @@ describe("WalletsList", () => {
 	it("should render with view more button", () => {
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
-				<WalletsList wallets={wallets} hasMore={true} />
+				<WalletsList wallets={wallets} walletsPerPage={1} />
 			</Route>,
 			{
 				history,
@@ -61,6 +61,7 @@ describe("WalletsList", () => {
 		);
 
 		expect(screen.getByTestId("WalletsList")).toBeInTheDocument();
+		expect(screen.getByTestId("WalletsList__ViewMore")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -96,6 +97,13 @@ describe("WalletsList", () => {
 	});
 
 	it("should render loading state", () => {
+		const { asFragment } = render(<WalletsList wallets={wallets} walletsPerPage={1} isLoading={true} />);
+
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
+	it("should render loading state for empty wallets", () => {
 		const { asFragment } = render(<WalletsList wallets={[]} isLoading={true} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(3);

@@ -1,4 +1,3 @@
-import { chunk } from "@payvo/sdk-helpers";
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -10,8 +9,8 @@ import { PluginListItem } from "@/domains/plugin/components/PluginListItem";
 interface PluginListProperties {
 	className?: string;
 	emptyMessage?: string;
-	itemsPerPage?: number;
 	plugins: any[];
+	pluginsPerPage?: number;
 	showCategory?: boolean;
 	showPagination?: boolean;
 	updatingStats?: any;
@@ -28,8 +27,8 @@ interface PluginListProperties {
 export const PluginList = ({
 	className,
 	emptyMessage,
-	itemsPerPage = 10,
 	plugins,
+	pluginsPerPage = 10,
 	showCategory,
 	showPagination = true,
 	updatingStats,
@@ -105,11 +104,15 @@ export const PluginList = ({
 		);
 	}
 
-	const pagePlugins = chunk(plugins, itemsPerPage)[currentPage - 1];
-
 	return (
 		<div data-testid="PluginList" className={className}>
-			<Table columns={columns} data={pagePlugins} initialState={initialState}>
+			<Table
+				columns={columns}
+				data={plugins}
+				initialState={initialState}
+				rowsPerPage={pluginsPerPage}
+				currentPage={currentPage}
+			>
 				{(plugin: any) => (
 					<PluginListItem
 						plugin={plugin}
@@ -132,7 +135,7 @@ export const PluginList = ({
 				<div className="flex justify-center mt-10 w-full">
 					<Pagination
 						currentPage={currentPage}
-						itemsPerPage={itemsPerPage}
+						itemsPerPage={pluginsPerPage}
 						totalCount={plugins.length}
 						onSelectPage={setCurrentPage}
 					/>

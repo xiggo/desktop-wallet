@@ -30,7 +30,6 @@ export const Wallets: FC<WalletsProperties> = ({
 	listPagerLimit = 10,
 	isLoading,
 }) => {
-	const [viewMore, setViewMore] = useState(false);
 	const [isWaitingLedger, setIsWaitingLedger] = useState(false);
 
 	const [modal, setModal] = useState<WalletActionType | undefined>();
@@ -57,11 +56,9 @@ export const Wallets: FC<WalletsProperties> = ({
 			.filter((wallet) => wallet.network().isLive());
 	}, [activeProfile, walletsCount, profileIsSyncedWithNetwork]); // eslint-disable-line react-hooks/exhaustive-deps
 
-	const { listWallets, listHasMore, gridWallets, sliderOptions, hasWalletsMatchingOtherNetworks } = useWalletDisplay({
+	const { listWallets, gridWallets, sliderOptions, hasWalletsMatchingOtherNetworks } = useWalletDisplay({
 		displayType: walletsDisplayType,
-		listPagerLimit,
 		selectedNetworkIds,
-		viewMore,
 		wallets,
 	});
 
@@ -130,13 +127,12 @@ export const Wallets: FC<WalletsProperties> = ({
 			/>
 
 			<WalletsList
-				hasMore={listHasMore}
 				hasWalletsMatchingOtherNetworks={hasWalletsMatchingOtherNetworks}
 				isLoading={isLoading && walletsCount === 0}
 				isVisible={viewType === "list"}
 				onRowClick={handleClick}
-				onViewMore={() => setViewMore(true)}
 				wallets={listWallets}
+				walletsPerPage={listPagerLimit}
 				walletsDisplayType={walletsDisplayType}
 				isCompact={useCompactTables}
 			/>

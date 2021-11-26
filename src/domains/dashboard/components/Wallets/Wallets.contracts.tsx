@@ -28,20 +28,17 @@ export interface WalletGridProperties {
 
 export interface WalletListProperties {
 	hasWalletsMatchingOtherNetworks: boolean;
-	hasMore?: boolean;
 	isLoading?: boolean;
 	isVisible?: boolean;
 	onRowClick?: (walletId: string) => void;
-	onViewMore?: () => void;
 	wallets: GridWallet[];
 	walletsDisplayType?: string;
 	isCompact?: boolean;
+	walletsPerPage: number;
 }
 
 export interface UseWalletDisplayProperties {
 	wallets?: Contracts.IReadWriteWallet[];
 	selectedNetworkIds?: string[];
 	displayType?: string;
-	viewMore?: boolean;
-	listPagerLimit?: number;
 }

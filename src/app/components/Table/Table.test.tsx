@@ -12,6 +12,11 @@ const data = [
 		col2: "column 2",
 		col3: "column 3",
 	},
+	{
+		col1: "column 1",
+		col2: "column 2",
+		col3: "column 3",
+	},
 ];
 
 const columns: Column<typeof data[number]>[] = [
@@ -50,8 +55,9 @@ describe("Table", () => {
 	});
 
 	it("should render empty rows if template not provided", () => {
-		const { container } = render(<Table columns={columns} data={data} />);
+		const { container } = render(<Table columns={columns} data={[]} />);
 
+		expect(screen.getAllByRole("rowgroup")[1].querySelectorAll("tr")).toHaveLength(0);
 		expect(container).toMatchSnapshot();
 	});
 
@@ -91,5 +97,12 @@ describe("Table", () => {
 		);
 
 		expect(screen.getByTestId("table__th--0")).toHaveClass("width");
+	});
+
+	it("should split rows", () => {
+		const { container } = render(<Table columns={columns} data={data} rowsPerPage={1} />);
+
+		expect(screen.getAllByRole("rowgroup")[1].querySelectorAll("tr")).toHaveLength(1);
+		expect(container).toMatchSnapshot();
 	});
 });

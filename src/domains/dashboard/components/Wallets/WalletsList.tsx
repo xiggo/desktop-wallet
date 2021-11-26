@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useMemo } from "react";
+import React, { useCallback, useMemo, useState, VFC } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
@@ -10,22 +10,28 @@ import { WalletListItemSkeleton } from "@/app/components/WalletListItem/WalletLi
 
 import { GridWallet, WalletListProperties } from "./Wallets.contracts";
 
-export const WalletsList: FC<WalletListProperties> = ({
-	hasMore,
+export const WalletsList: VFC<WalletListProperties> = ({
 	hasWalletsMatchingOtherNetworks,
 	isLoading = false,
 	isVisible = true,
 	onRowClick,
-	onViewMore,
 	wallets,
 	walletsDisplayType = "all",
 	isCompact = false,
+	walletsPerPage,
 }) => {
+	const [viewMore, setViewMore] = useState(false);
+	const hasMoreWallets = useMemo(
+		() => wallets.length > walletsPerPage && !viewMore,
+		[walletsPerPage, viewMore, wallets.length],
+	);
+
 	const { t } = useTranslation();
 
 	const columns: Column<GridWallet>[] = [
 		{
 			Header: t("COMMON.WALLET_ADDRESS"),
+			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 			accessor: ({ wallet }) => wallet?.alias() || wallet?.address(),
 		},
 		{
@@ -35,12 +41,14 @@ export const WalletsList: FC<WalletListProperties> = ({
 		},
 		{
 			Header: t("COMMON.BALANCE"),
+			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 			accessor: ({ wallet }) => wallet?.balance?.(),
 			cellWidth: "w-72",
 			className: "flex-row-reverse justify-end",
 		},
 		{
 			Header: t("COMMON.CURRENCY"),
+			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
 			accessor: ({ wallet }) => wallet?.convertedBalance?.(),
 			cellWidth: "w-44",
 			className: "flex-row-reverse justify-end",
@@ -48,9 +56,20 @@ export const WalletsList: FC<WalletListProperties> = ({
 	];
 
 	const tableRows = useMemo<GridWallet[]>(() => {
-		const skeletonRows = Array.from<GridWallet>({ length: 3 }).fill({} as GridWallet);
-		return isLoading ? skeletonRows : wallets;
-	}, [isLoading, wallets]);
+		if (!isLoading) {
+			return wallets;
+		}
+
+		const skeletonRowsCount = () => {
+			if (hasMoreWallets) {
+				return walletsPerPage;
+			}
+
+			return wallets.length || 3;
+		};
+
+		return Array.from<GridWallet>({ length: skeletonRowsCount() }).fill({} as GridWallet);
+	}, [hasMoreWallets, walletsPerPage, wallets, isLoading]);
 
 	const emptyBlockContent = () => {
 		if (walletsDisplayType !== "all") {
@@ -94,16 +113,16 @@ export const WalletsList: FC<WalletListProperties> = ({
 		<div data-testid="WalletsList">
 			{(wallets.length > 0 || isLoading) && (
 				<div data-testid="WalletTable">
-					<Table columns={columns} data={tableRows}>
+					<Table columns={columns} data={tableRows} rowsPerPage={viewMore ? undefined : walletsPerPage}>
 						{renderTableRow}
 					</Table>
 
-					{hasMore && (
+					{hasMoreWallets && (
 						<Button
 							variant="secondary"
 							className="mt-10 mb-5 w-full"
 							data-testid="WalletsList__ViewMore"
-							onClick={onViewMore}
+							onClick={() => setViewMore(true)}
 						>
 							{t("COMMON.VIEW_MORE")}
 						</Button>
@@ -111,7 +130,7 @@ export const WalletsList: FC<WalletListProperties> = ({
 				</div>
 			)}
 
-			{!isLoading && !hasMore && wallets.length === 0 && <EmptyBlock>{emptyBlockContent()}</EmptyBlock>}
+			{!isLoading && !hasMoreWallets && wallets.length === 0 && <EmptyBlock>{emptyBlockContent()}</EmptyBlock>}
 		</div>
 	);
 };

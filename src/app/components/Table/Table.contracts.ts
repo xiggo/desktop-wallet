@@ -8,6 +8,8 @@ export interface TableProperties<RowDataType extends Record<never, unknown>> {
 	columns: Column<RowDataType>[];
 	hideHeader?: boolean;
 	initialState?: Partial<TableState<RowDataType>>;
+	rowsPerPage?: number;
+	currentPage?: number;
 }
 
 export interface TableColumn {

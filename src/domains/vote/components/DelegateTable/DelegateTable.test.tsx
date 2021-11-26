@@ -617,7 +617,7 @@ describe("DelegateTable", () => {
 	});
 
 	it("should navigate to the next and previous pages", () => {
-		const delegatesList = Array.from({ length: 52 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
+		const delegatesList = Array.from({ length: 51 }).fill(delegates[0]) as Contracts.IReadOnlyWallet[];
 
 		render(
 			<DelegateTable
@@ -630,15 +630,15 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateRow__toggle-1")).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("Pagination__next"));
 
-		expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateRow__toggle-50")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("Pagination__previous"));
 
-		expect(screen.getByTestId("DelegateRow__toggle-1")).toBeInTheDocument();
+		expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
 	});
 
 	it("should not show pagination", () => {

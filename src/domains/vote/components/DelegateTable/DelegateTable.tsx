@@ -11,7 +11,7 @@ import { DelegateRow } from "./DelegateRow";
 import { delegateExistsInVotes, useDelegateTableColumns } from "./DelegateTable.helpers";
 import { DelegateTableProperties, VoteDelegateProperties } from "./DelegateTable.models";
 
-const ITEMS_PER_PAGE = 51;
+const DELEGATES_PER_PAGE = 50;
 
 export const DelegateTable: FC<DelegateTableProperties> = ({
 	delegates,
@@ -35,8 +35,8 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 
 	const columns = useDelegateTableColumns({ isLoading, network: selectedWallet.network() });
 
-	const totalDelegates = delegates.length;
-	const isPaginationDisabled = totalDelegates <= ITEMS_PER_PAGE;
+	const totalDelegates = useMemo(() => delegates.length, [delegates.length]);
+	const hasMoreDelegates = useMemo(() => totalDelegates > DELEGATES_PER_PAGE, [totalDelegates]);
 	const hasVotes = votes.length > 0;
 
 	useEffect(() => {
@@ -97,7 +97,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 				delegateAddress: address,
 			};
 
-			const delegate = votes?.find(({ wallet }) => wallet?.address() === address);
+			const delegate = votes.find(({ wallet }) => wallet?.address() === address);
 			if (delegate?.amount && voteAmount === undefined) {
 				voteDelegate.amount = delegate.amount;
 			}
@@ -162,25 +162,22 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 
 	const showSkeleton = useMemo(() => totalDelegates === 0 && isLoading, [totalDelegates, isLoading]);
 	const tableData = useMemo<Contracts.IReadOnlyWallet[]>(() => {
-		const paginator = () => {
-			if (isPaginationDisabled) {
-				return delegates;
-			}
+		if (!showSkeleton) {
+			return delegates;
+		}
 
-			const offset = (currentPage - 1) * ITEMS_PER_PAGE;
-			return delegates.slice(offset).slice(0, ITEMS_PER_PAGE);
-		};
-		const skeletonList = Array.from<Contracts.IReadOnlyWallet>({ length: 8 }).fill({} as Contracts.IReadOnlyWallet);
-
-		return showSkeleton ? skeletonList : paginator();
-	}, [isPaginationDisabled, currentPage, delegates, showSkeleton]);
+		return Array.from<Contracts.IReadOnlyWallet>({ length: DELEGATES_PER_PAGE }).fill(
+			{} as Contracts.IReadOnlyWallet,
+		);
+	}, [delegates, showSkeleton]);
 
 	const renderTableRow = useCallback(
 		(delegate: Contracts.IReadOnlyWallet, index: number) => {
 			let voted: Contracts.VoteRegistryItem | undefined;
 
 			if (hasVotes) {
-				voted = votes?.find(({ wallet }) => wallet?.address() === delegate?.address?.());
+				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+				voted = votes.find(({ wallet }) => wallet?.address() === delegate?.address?.());
 			}
 
 			return (
@@ -233,15 +230,15 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 
 			{subtitle && subtitle}
 
-			<Table columns={columns} data={tableData}>
+			<Table columns={columns} data={tableData} rowsPerPage={DELEGATES_PER_PAGE} currentPage={currentPage}>
 				{renderTableRow}
 			</Table>
 
 			<div className="flex justify-center mt-8 w-full">
-				{totalDelegates > ITEMS_PER_PAGE && !isPaginationDisabled && (
+				{hasMoreDelegates && (
 					<Pagination
 						totalCount={totalDelegates}
-						itemsPerPage={ITEMS_PER_PAGE}
+						itemsPerPage={DELEGATES_PER_PAGE}
 						currentPage={currentPage}
 						onSelectPage={handleSelectPage}
 					/>
