@@ -119,11 +119,9 @@ describe("SelectAddress", () => {
 
 		await waitFor(() => {
 			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
-
-			const selectedAddressValue = wallets[0].address();
-
-			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(selectedAddressValue);
 		});
+
+		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallets[0].address());
 	});
 
 	it("should not open wallets modal if disabled", async () => {

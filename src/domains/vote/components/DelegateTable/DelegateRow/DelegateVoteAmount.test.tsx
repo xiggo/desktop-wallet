@@ -176,16 +176,15 @@ describe("DelegateVoteAmount", () => {
 
 			userEvent.paste(screen.getByTestId("InputCurrency"), "3");
 
-			await waitFor(() => {
-				expect(screen.getByTestId("Input__error")).toBeVisible();
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
-					t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.MINIMUM_AMOUNT", {
-						coinId: wallet.network().coin(),
-						minimumAmount: wallet.network().votesAmountMinimum(),
-					}),
-				);
-			});
+			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
+
+			expect(screen.getByTestId("Input__error")).toHaveAttribute(
+				"data-errortext",
+				t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.MINIMUM_AMOUNT", {
+					coinId: wallet.network().coin(),
+					minimumAmount: wallet.network().votesAmountMinimum(),
+				}),
+			);
 		});
 
 		it("should show error if value isn't multiple of votesAmountStep", async () => {
@@ -198,16 +197,15 @@ describe("DelegateVoteAmount", () => {
 
 			userEvent.paste(screen.getByTestId("InputCurrency"), "12");
 
-			await waitFor(() => {
-				expect(screen.getByTestId("Input__error")).toBeVisible();
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
-					t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.AMOUNT_STEP", {
-						coinId: wallet.network().coin(),
-						step: wallet.network().votesAmountStep(),
-					}),
-				);
-			});
+			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
+
+			expect(screen.getByTestId("Input__error")).toHaveAttribute(
+				"data-errortext",
+				t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.AMOUNT_STEP", {
+					coinId: wallet.network().coin(),
+					step: wallet.network().votesAmountStep(),
+				}),
+			);
 		});
 
 		it("should show error if value is more than the available balance", async () => {
@@ -215,13 +213,12 @@ describe("DelegateVoteAmount", () => {
 
 			userEvent.paste(screen.getByTestId("InputCurrency"), "100");
 
-			await waitFor(() => {
-				expect(screen.getByTestId("Input__error")).toBeVisible();
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
-					transactionTranslations.VALIDATION.LOW_BALANCE,
-				);
-			});
+			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
+
+			expect(screen.getByTestId("Input__error")).toHaveAttribute(
+				"data-errortext",
+				transactionTranslations.VALIDATION.LOW_BALANCE,
+			);
 		});
 
 		it("should show error if value isn't number", async () => {
@@ -234,16 +231,15 @@ describe("DelegateVoteAmount", () => {
 
 			userEvent.paste(screen.getByTestId("InputCurrency"), "test");
 
-			await waitFor(() => {
-				expect(screen.getByTestId("Input__error")).toBeVisible();
-				expect(screen.getByTestId("Input__error")).toHaveAttribute(
-					"data-errortext",
-					t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.MINIMUM_AMOUNT", {
-						coinId: wallet.network().coin(),
-						minimumAmount: wallet.network().votesAmountMinimum(),
-					}),
-				);
-			});
+			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
+
+			expect(screen.getByTestId("Input__error")).toHaveAttribute(
+				"data-errortext",
+				t("VOTE.DELEGATE_TABLE.VOTE_AMOUNT.VALIDATION.MINIMUM_AMOUNT", {
+					coinId: wallet.network().coin(),
+					minimumAmount: wallet.network().votesAmountMinimum(),
+				}),
+			);
 		});
 	});
 
@@ -254,16 +250,12 @@ describe("DelegateVoteAmount", () => {
 
 		userEvent.paste(amountField, "3");
 
-		await waitFor(() => {
-			expect(screen.getByTestId("Input__error")).toBeVisible();
-		});
+		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
 		amountField.select();
 		userEvent.paste(amountField, "10");
 
-		await waitFor(() => {
-			expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument();
-		});
+		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 	});
 
 	describe("Rendering initial amount", () => {
@@ -292,9 +284,7 @@ describe("DelegateVoteAmount", () => {
 				</Wrapper>,
 			);
 
-			await waitFor(() => {
-				expect(screen.getByTestId("InputCurrency")).toHaveValue("10");
-			});
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 		});
 
 		it("should render with selectedUnvotes", async () => {
@@ -327,9 +317,7 @@ describe("DelegateVoteAmount", () => {
 				</Wrapper>,
 			);
 
-			await waitFor(() => {
-				expect(screen.getByTestId("InputCurrency")).toHaveValue("10");
-			});
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 		});
 
 		it("should render with voted delegate", async () => {
@@ -356,9 +344,7 @@ describe("DelegateVoteAmount", () => {
 				</Wrapper>,
 			);
 
-			await waitFor(() => {
-				expect(screen.getByTestId("InputCurrency")).toHaveValue("30");
-			});
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("30"));
 		});
 
 		it("should render with changed the amount voted when there is voted delegate", async () => {
@@ -399,9 +385,7 @@ describe("DelegateVoteAmount", () => {
 			];
 			const { rerender, unmount } = render(<VoteAmount selectedUnvotes={[]} selectedVotes={selectedVotes} />);
 
-			await waitFor(() => {
-				expect(screen.getByTestId("InputCurrency")).toHaveValue("50");
-			});
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("50"));
 
 			unmount();
 
@@ -410,9 +394,7 @@ describe("DelegateVoteAmount", () => {
 
 			rerender(<VoteAmount selectedUnvotes={[]} selectedVotes={selectedVotes} />);
 
-			await waitFor(() => {
-				expect(screen.getByTestId("InputCurrency")).not.toHaveValue();
-			});
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue());
 
 			unmount();
 
@@ -425,9 +407,7 @@ describe("DelegateVoteAmount", () => {
 
 			rerender(<VoteAmount selectedUnvotes={selectedUnvotes} selectedVotes={[]} />);
 
-			await waitFor(() => {
-				expect(screen.getByTestId("InputCurrency")).toHaveValue("10");
-			});
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("10"));
 
 			unmount();
 
@@ -436,9 +416,7 @@ describe("DelegateVoteAmount", () => {
 
 			rerender(<VoteAmount selectedUnvotes={selectedUnvotes} selectedVotes={[]} />);
 
-			await waitFor(() => {
-				expect(screen.getByTestId("InputCurrency")).not.toHaveValue();
-			});
+			await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue());
 		});
 	});
 
@@ -476,20 +454,18 @@ describe("DelegateVoteAmount", () => {
 
 		userEvent.paste(amountField, "10");
 
-		await waitFor(() => {
-			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10);
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
-		});
+		await waitFor(() => expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10));
+
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
 		userEvent.paste(amountField, "20");
 
-		await waitFor(() => {
-			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20);
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(70);
-		});
+		await waitFor(() => expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20));
+
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(70);
 	});
 
 	it("should calculate net amount", async () => {
@@ -519,27 +495,21 @@ describe("DelegateVoteAmount", () => {
 
 		userEvent.paste(amountField, "10");
 
-		await waitFor(() => {
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
-		});
+		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(80));
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
 		userEvent.paste(amountField, "20");
 
-		await waitFor(() => {
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(70);
-		});
+		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(70));
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
 		userEvent.paste(amountField, "10");
 
-		await waitFor(() => {
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
-		});
+		await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(80));
 	});
 
 	it("should calculate net amount when there is a voted delegate", async () => {
@@ -581,84 +551,76 @@ describe("DelegateVoteAmount", () => {
 		amountField.select();
 		userEvent.paste(amountField, "40");
 
-		await waitFor(() => {
-			expect(toggleUnvotesSelected).not.toHaveBeenCalled();
-			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10);
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
-		});
+		await waitFor(() => expect(toggleUnvotesSelected).not.toHaveBeenCalled());
+
+		expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10);
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
 		userEvent.paste(amountField, "50");
 
-		await waitFor(() => {
-			expect(toggleUnvotesSelected).not.toHaveBeenCalled();
-			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20);
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(70);
-		});
+		await waitFor(() => expect(toggleUnvotesSelected).not.toHaveBeenCalled());
+
+		expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20);
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(70);
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
 		userEvent.paste(amountField, "0");
 
-		await waitFor(() => {
-			expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 0);
-			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address());
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
-		});
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 0));
+
+		expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address());
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
 		userEvent.paste(amountField, "10");
 
-		await waitFor(() => {
-			expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20);
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
-		});
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 20));
+
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
 		userEvent.paste(amountField, "30");
 
-		await waitFor(() => {
-			expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address());
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
-		});
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address()));
+
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
 		userEvent.paste(amountField, "20");
 
-		await waitFor(() => {
-			expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10);
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
-		});
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address(), 10));
+
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
 		userEvent.paste(amountField, "60");
 
-		await waitFor(() => {
-			expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address());
-			expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 30);
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(60);
-		});
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address()));
+
+		expect(toggleVotesSelected).toHaveBeenLastCalledWith(delegate.address(), 30);
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(60);
 
 		rerender(<VoteAmount />);
 
 		amountField.select();
 		userEvent.paste(amountField, "30");
 
-		await waitFor(() => {
-			expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address());
-			expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
-		});
+		await waitFor(() => expect(toggleUnvotesSelected).toHaveBeenLastCalledWith(delegate.address()));
+
+		expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
 	});
 
 	describe("disabled", () => {
@@ -705,15 +667,11 @@ describe("DelegateVoteAmount", () => {
 
 			userEvent.paste(screen.getByTestId("InputCurrency"), "3");
 
-			await waitFor(() => {
-				expect(screen.getByTestId("Input__error")).toBeVisible();
-			});
+			await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
 			rerender(<VoteAmount isSelectedVote={false} />);
 
-			await waitFor(() => {
-				expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument();
-			});
+			await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 		});
 
 		it("should reset fields and calculate remaining balance", async () => {
@@ -742,9 +700,7 @@ describe("DelegateVoteAmount", () => {
 
 			userEvent.paste(screen.getByTestId("InputCurrency"), "10");
 
-			await waitFor(() => {
-				expect(setAvailableBalance).toHaveBeenLastCalledWith(80);
-			});
+			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(80));
 
 			expect(toggleVotesSelected).toHaveBeenCalledTimes(1);
 
@@ -752,9 +708,7 @@ describe("DelegateVoteAmount", () => {
 
 			expect(screen.getByTestId("InputCurrency")).not.toHaveValue();
 
-			await waitFor(() => {
-				expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
-			});
+			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(90));
 
 			expect(toggleVotesSelected).toHaveBeenCalledTimes(1);
 		});
@@ -794,34 +748,26 @@ describe("DelegateVoteAmount", () => {
 			amountField.select();
 			userEvent.paste(amountField, "20");
 
-			await waitFor(() => {
-				expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
-			});
+			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(90));
 
 			rerender(<VoteAmount isSelectedUnvote />);
 
 			expect(screen.getByTestId("InputCurrency")).not.toHaveValue();
 
-			await waitFor(() => {
-				expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
-			});
+			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(90));
 
 			rerender(<VoteAmount isSelectedUnvote={false} />);
 
 			userEvent.clear(amountField);
 			userEvent.paste(amountField, "50");
 
-			await waitFor(() => {
-				expect(setAvailableBalance).toHaveBeenLastCalledWith(70);
-			});
+			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(70));
 
 			rerender(<VoteAmount isSelectedUnvote />);
 
 			expect(screen.getByTestId("InputCurrency")).not.toHaveValue();
 
-			await waitFor(() => {
-				expect(setAvailableBalance).toHaveBeenLastCalledWith(90);
-			});
+			await waitFor(() => expect(setAvailableBalance).toHaveBeenLastCalledWith(90));
 		});
 	});
 });

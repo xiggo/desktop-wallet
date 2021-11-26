@@ -208,8 +208,9 @@ describe("SelectRecipient", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
-			expect(screen.getAllByTestId("TableRow")).toHaveLength(6);
 		});
+
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(6);
 
 		const isMultiSignatureSpy = jest
 			.spyOn(profile.wallets().first(), "isMultiSignature")

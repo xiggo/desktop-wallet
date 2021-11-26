@@ -2171,11 +2171,13 @@ describe("SendTransfer", () => {
 
 		await screen.findByTestId("SendTransfer__form-step");
 
-		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
-			expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel);
 		});
+
+		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
+
+		expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel);
 
 		// Select multiple type
 		userEvent.click(screen.getByText(transactionTranslations.MULTIPLE));

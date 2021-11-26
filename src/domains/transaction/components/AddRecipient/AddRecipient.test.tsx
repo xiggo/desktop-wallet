@@ -73,9 +73,9 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => {
 			expect(screen.getByTestId("AddRecipient__amount")).toHaveValue("1");
-			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
 		});
 
+		expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
 		expect(container).toMatchSnapshot();
 	});
 
@@ -279,9 +279,10 @@ describe("AddRecipient", () => {
 
 		await waitFor(() => {
 			expect(+form.getValues("amount")).toBe(values.amount);
-			expect(screen.getByTestId("AddRecipient__add-button")).toBeInTheDocument();
-			expect(screen.getByTestId("AddRecipient__add-button")).toBeDisabled();
 		});
+
+		expect(screen.getByTestId("AddRecipient__add-button")).toBeInTheDocument();
+		expect(screen.getByTestId("AddRecipient__add-button")).toBeDisabled();
 
 		// Valid address
 		userEvent.clear(screen.getByTestId("SelectDropdown__input"));

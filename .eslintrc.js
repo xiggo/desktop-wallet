@@ -158,7 +158,7 @@ module.exports = {
 		"testing-library/no-render-in-setup": "warn", // @TODO: set to error and fix
 		"testing-library/no-unnecessary-act": "error",
 		"testing-library/no-wait-for-empty-callback": "warn", // @TODO: set to error and fix
-		"testing-library/no-wait-for-multiple-assertions": "warn", // @TODO: set to error and fix
+		"testing-library/no-wait-for-multiple-assertions": "error",
 		"testing-library/no-wait-for-side-effects": "warn", // @TODO: set to error and fix
 		"testing-library/no-wait-for-snapshot": "error",
 		"testing-library/prefer-explicit-assert": "warn", // @TODO: set to error and fix
