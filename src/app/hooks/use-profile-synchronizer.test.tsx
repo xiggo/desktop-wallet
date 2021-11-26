@@ -207,7 +207,7 @@ describe("useProfileSynchronizer", () => {
 			jest.runOnlyPendingTimers();
 		});
 
-		await screen.findByTestId("ProfileSynced");
+		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		renderAct(() => {
 			history.push("/");
@@ -238,7 +238,8 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		await screen.findByTestId("RenderedContent");
+		await expect(screen.findByTestId("RenderedContent")).resolves.toBeVisible();
+
 		jest.runAllTimers();
 	});
 
@@ -256,7 +257,7 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		await screen.findByTestId("RenderedContent");
+		await expect(screen.findByTestId("RenderedContent")).resolves.toBeVisible();
 	});
 
 	it("should restore profile", async () => {
@@ -276,7 +277,8 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		await screen.findByTestId("ProfileRestored");
+		await expect(screen.findByTestId("ProfileRestored")).resolves.toBeVisible();
+
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 	});
 
@@ -326,7 +328,8 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		await screen.findByTestId("ProfileRestored");
+		await expect(screen.findByTestId("ProfileRestored")).resolves.toBeVisible();
+
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 	});
 
@@ -358,7 +361,7 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		await screen.findByTestId("ProfileSynced");
+		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 
 		const profile = env.profiles().findById(getDefaultProfileId());
 		const mockWalletSyncStatus = jest
@@ -409,7 +412,7 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		await screen.findByTestId("Dashboard");
+		await expect(screen.findByTestId("Dashboard")).resolves.toBeVisible();
 
 		await waitFor(() => expect(configuration.profileHasSyncedOnce).toBe(true));
 
@@ -440,7 +443,7 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		await screen.findByTestId("ResetSyncProfile");
+		await expect(screen.findByTestId("ResetSyncProfile")).resolves.toBeVisible();
 
 		await waitFor(() => expect(configuration.isProfileInitialSync).toBe(false));
 
@@ -463,7 +466,7 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		await screen.findByTestId("ProfileSynced");
+		await expect(screen.findByTestId("ProfileSynced")).resolves.toBeVisible();
 	});
 });
 
@@ -665,7 +668,7 @@ describe("useProfileRestore", () => {
 
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
-		await screen.findByTestId("ProfileRestored", undefined, { timeout: 4000 });
+		await expect(screen.findByTestId("ProfileRestored", undefined, { timeout: 4000 })).resolves.toBeVisible();
 
 		await waitFor(() => expect(historyMock).toHaveBeenCalledWith("/"), { timeout: 4000 });
 

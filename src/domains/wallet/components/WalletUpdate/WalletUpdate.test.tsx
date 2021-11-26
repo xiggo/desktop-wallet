@@ -48,7 +48,8 @@ describe("WalletUpdate", () => {
 
 	it("should render", async () => {
 		const { asFragment } = render(<WalletUpdate isOpen={true} />);
-		await screen.findByTestId("WalletUpdate__first-step");
+
+		await expect(screen.findByTestId("WalletUpdate__first-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -56,7 +57,9 @@ describe("WalletUpdate", () => {
 	it("should handle close", async () => {
 		const onClose = jest.fn();
 		render(<WalletUpdate isOpen={true} onClose={onClose} />);
-		await screen.findByTestId("WalletUpdate__first-step");
+
+		await expect(screen.findByTestId("WalletUpdate__first-step")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
 	});
@@ -64,16 +67,21 @@ describe("WalletUpdate", () => {
 	it("should handle cancel", async () => {
 		const onCancel = jest.fn();
 		render(<WalletUpdate isOpen={true} onCancel={onCancel} />);
-		await screen.findByTestId("WalletUpdate__first-step");
+
+		await expect(screen.findByTestId("WalletUpdate__first-step")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByTestId("WalletUpdate__cancel-button"));
 		await waitFor(() => expect(onCancel).toHaveBeenCalledWith());
 	});
 
 	it("should handle update", async () => {
 		render(<WalletUpdate isOpen={true} />);
-		await screen.findByTestId("WalletUpdate__first-step");
+
+		await expect(screen.findByTestId("WalletUpdate__first-step")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByTestId("WalletUpdate__update-button"));
-		await screen.findByTestId("WalletUpdate__second-step");
+
+		await expect(screen.findByTestId("WalletUpdate__second-step")).resolves.toBeVisible();
 	});
 
 	it("should handle install", async () => {

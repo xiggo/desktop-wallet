@@ -52,7 +52,8 @@ describe("WalletHeader", () => {
 
 	it("should render", async () => {
 		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -60,7 +61,8 @@ describe("WalletHeader", () => {
 	it("should use empty string in clipboard copy if publickey is undefined", async () => {
 		const mockpublicKey = jest.spyOn(wallet, "publicKey").mockReturnValue(undefined);
 		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -70,7 +72,8 @@ describe("WalletHeader", () => {
 	it("should render amount for wallet in live network", async () => {
 		const mockTestNetwork = jest.spyOn(wallet.network(), "isTest").mockReturnValue(false);
 		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -82,7 +85,8 @@ describe("WalletHeader", () => {
 		const mockAllowsSecondSignature = jest.spyOn(wallet.network(), "allows").mockReturnValue(false);
 
 		render(<WalletHeader profile={profile} wallet={wallet} />);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("dropdown__toggle"));
 
@@ -102,7 +106,8 @@ describe("WalletHeader", () => {
 		const onSend = jest.fn();
 
 		render(<WalletHeader profile={profile} wallet={wallet} onSend={onSend} />);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		expect(screen.getByTestId("WalletHeader__send-button")).toBeEnabled();
 
@@ -115,7 +120,8 @@ describe("WalletHeader", () => {
 		const balanceSpy = jest.spyOn(wallet, "balance").mockReturnValue(0);
 
 		render(<WalletHeader profile={profile} wallet={wallet} />);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		expect(screen.getByTestId("WalletHeader__send-button")).toBeDisabled();
 
@@ -127,7 +133,8 @@ describe("WalletHeader", () => {
 		const multisigSpy = jest.spyOn(wallet, "isMultiSignature").mockReturnValue(true);
 
 		const { asFragment } = render(<WalletHeader profile={profile} wallet={wallet} />);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		expect(screen.getByTestId("WalletIcon__Ledger")).toBeInTheDocument();
 		expect(screen.getByTestId("WalletIcon__Multisignature")).toBeInTheDocument();
@@ -141,7 +148,8 @@ describe("WalletHeader", () => {
 		const networkSpy = jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
 
 		render(<WalletHeader profile={profile} wallet={wallet} />);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		expect(() => screen.getByTestId("WalletHeader__currency-balance")).toThrow(/Unable to find/);
 
@@ -254,7 +262,8 @@ describe("WalletHeader", () => {
 
 	it("should open & close receive funds modal", async () => {
 		render(<WalletHeader profile={profile} wallet={wallet} />);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.RECEIVE_FUNDS);
 
@@ -405,7 +414,8 @@ describe("WalletHeader", () => {
 		});
 
 		render(<WalletHeader profile={profile} wallet={wallet} />);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		expect(() => screen.getByTestId("WalletIcon__Multisignature")).toThrow(/Unable to find an element by/);
 
@@ -425,14 +435,15 @@ describe("WalletHeader", () => {
 				<WalletHeader profile={profile} wallet={wallet} />
 			</LedgerProvider>,
 		);
-		await screen.findByText(wallet.address());
+
+		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
 		expect(screen.getByTestId("WalletHeader__balance-locked")).toHaveTextContent("10");
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("WalletHeader__locked-balance-button"));
 
-		await screen.findByTestId("UnlockTokensModal");
+		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 

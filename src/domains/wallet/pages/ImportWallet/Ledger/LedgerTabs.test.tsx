@@ -132,10 +132,11 @@ describe("LedgerTabs", () => {
 
 		render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
-		await screen.findByTestId("LedgerConnectionStep");
+		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 
 		// Auto redirect to next step
-		await screen.findByTestId("LedgerScanStep");
+		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6), { timeout: 3000 });
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2), { timeout: 4000 });
@@ -168,7 +169,8 @@ describe("LedgerTabs", () => {
 
 		const { container, history } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
-		await screen.findByTestId("SelectNetwork");
+		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
+
 		await waitFor(() => expect(nextSelector()).toBeDisabled());
 		await waitFor(() => expect(backSelector()).toBeEnabled());
 
@@ -188,11 +190,15 @@ describe("LedgerTabs", () => {
 
 		userEvent.click(nextSelector());
 
-		await screen.findByTestId("LedgerConnectionStep");
+		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
+
+		// Auto redirect to next step
+		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
 		userEvent.click(backSelector());
 
-		await screen.findByTestId("SelectNetwork");
+		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
+
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
 
 		getPublicKeySpy.mockReset();
@@ -226,14 +232,15 @@ describe("LedgerTabs", () => {
 
 		render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
-		await screen.findByTestId("LedgerConnectionStep");
+		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 
 		// Auto redirect to next step
-		await screen.findByTestId("LedgerScanStep");
+		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
 		userEvent.click(backSelector());
 
-		await screen.findByTestId("SelectNetwork");
+		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
+
 		await waitFor(() => expect(nextSelector()).toBeEnabled());
 
 		getPublicKeySpy.mockReset();
@@ -267,7 +274,8 @@ describe("LedgerTabs", () => {
 
 		const { history } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
-		await screen.findByTestId("LedgerScanStep");
+		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(2), { timeout: 3000 });
 
 		expect(profile.wallets().values()).toHaveLength(2);
@@ -276,7 +284,7 @@ describe("LedgerTabs", () => {
 
 		userEvent.click(nextSelector());
 
-		await screen.findByTestId("LedgerImportStep");
+		await expect(screen.findByTestId("LedgerImportStep")).resolves.toBeVisible();
 
 		// Import wallets before entering the last step
 		expect(profile.wallets().values()).toHaveLength(3);
@@ -338,7 +346,8 @@ describe("LedgerTabs", () => {
 
 		const { history } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
-		await screen.findByTestId("LedgerScanStep");
+		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(3), { timeout: 3000 });
 
 		const walletsCountBefore = profile.wallets().count();
@@ -349,7 +358,7 @@ describe("LedgerTabs", () => {
 
 		userEvent.keyboard("{enter}");
 
-		await screen.findByTestId("LedgerImportStep");
+		await expect(screen.findByTestId("LedgerImportStep")).resolves.toBeVisible();
 
 		expect(profile.wallets().count()).toBe(walletsCountBefore + 2);
 
@@ -394,24 +403,25 @@ describe("LedgerTabs", () => {
 
 		const { container } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
-		await screen.findByTestId("LedgerConnectionStep");
+		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 
 		// Auto redirect to next step
-		await screen.findByTestId("LedgerScanStep");
-		await screen.findByTestId("LedgerScanStep__error");
+		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
+		await expect(screen.findByTestId("LedgerScanStep__error")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("Paginator__retry-button"));
 
 		await waitFor(() => expect(screen.queryAllByTestId("LedgerScanStep__amount-skeleton")).toHaveLength(0), {
 			interval: 5,
 		});
-		await screen.findByTestId("LedgerScanStep__error");
+
+		await expect(screen.findByTestId("LedgerScanStep__error")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
 		userEvent.click(backSelector());
 
-		await screen.findByTestId("SelectNetwork");
+		await expect(screen.findByTestId("SelectNetwork")).resolves.toBeVisible();
 
 		getPublicKeySpy.mockReset();
 	});

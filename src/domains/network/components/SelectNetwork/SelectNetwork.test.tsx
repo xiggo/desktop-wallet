@@ -144,7 +144,9 @@ describe("SelectNetwork", () => {
 
 		userEvent.keyboard("{enter}");
 
-		await within(screen.getByTestId("SelectNetworkInput__network")).findByTestId("NetworkIcon__icon");
+		await expect(
+			within(screen.getByTestId("SelectNetworkInput__network")).findByTestId("NetworkIcon__icon"),
+		).resolves.toBeVisible();
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
 

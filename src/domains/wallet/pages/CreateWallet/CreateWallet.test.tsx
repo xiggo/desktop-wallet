@@ -57,7 +57,7 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await screen.findByTestId("NetworkStep");
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -97,23 +97,27 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
-
-		userEvent.click(backButton);
-		await screen.findByTestId("NetworkStep");
-
-		userEvent.click(continueButton);
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
-
-		userEvent.click(continueButton);
-		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(backButton);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		userEvent.click(continueButton);
-		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+
+		userEvent.click(continueButton);
+
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
+
+		userEvent.click(backButton);
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
+
+		userEvent.click(continueButton);
+
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		const walletMnemonic = passphrase.split(" ");
 		for (let index = 0; index < 3; index++) {
@@ -130,13 +134,13 @@ describe("CreateWallet", () => {
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__SuccessStep");
+		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 
 		expect(profile.wallets().values()).toHaveLength(1);
 
 		userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.clear(screen.getByTestId("UpdateWalletName__input"));
 		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), "test alias");
@@ -177,7 +181,7 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await screen.findByTestId("NetworkStep");
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -217,13 +221,15 @@ describe("CreateWallet", () => {
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(backButton);
-		await screen.findByTestId("NetworkStep");
+
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		userEvent.click(continueButton);
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		const steps = within(screen.getByTestId("Form")).getAllByRole("list")[0];
 
@@ -234,14 +240,16 @@ describe("CreateWallet", () => {
 		expect(within(steps).getAllByRole("listitem")).toHaveLength(5);
 
 		userEvent.click(continueButton);
-		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
+
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		userEvent.click(backButton);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(continueButton);
-		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
+
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		const walletMnemonic = passphrase.split(" ");
 		for (let index = 0; index < 3; index++) {
@@ -256,7 +264,7 @@ describe("CreateWallet", () => {
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("EncryptPassword");
+		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
 
 		expect(screen.getAllByTestId("InputPassword")).toHaveLength(2);
 
@@ -269,7 +277,7 @@ describe("CreateWallet", () => {
 
 		userEvent.click(continueEncryptionButton);
 
-		await screen.findByTestId("CreateWallet__SuccessStep");
+		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 
 		expect(profile.wallets().values()).toHaveLength(1);
 
@@ -302,7 +310,8 @@ describe("CreateWallet", () => {
 				routes: [createURL, "/"],
 			},
 		);
-		await screen.findByTestId("NetworkStep");
+
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		history.push("/");
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
@@ -324,7 +333,8 @@ describe("CreateWallet", () => {
 				routes: [createURL, "/"],
 			},
 		);
-		await screen.findByTestId("NetworkStep");
+
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
@@ -338,15 +348,15 @@ describe("CreateWallet", () => {
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("CreateWallet__back-button"));
 
-		await screen.findByTestId("NetworkStep");
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		history.push("/");
 
@@ -375,7 +385,7 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await screen.findByTestId("NetworkStep");
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 
@@ -392,7 +402,9 @@ describe("CreateWallet", () => {
 
 		userEvent.click(continueButton);
 
-		await screen.findByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR);
+		await expect(
+			screen.findByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR),
+		).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -423,7 +435,7 @@ describe("CreateWallet", () => {
 			},
 		);
 
-		await screen.findByTestId("NetworkStep");
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -446,11 +458,11 @@ describe("CreateWallet", () => {
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		const walletMnemonic = passphrase.split(" ");
 		for (let index = 0; index < 3; index++) {
@@ -465,11 +477,11 @@ describe("CreateWallet", () => {
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__SuccessStep");
+		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("CreateWallet__edit-alias"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("UpdateWalletName__input"), "Test");
 

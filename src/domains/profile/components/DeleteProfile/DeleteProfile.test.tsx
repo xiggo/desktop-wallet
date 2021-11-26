@@ -16,7 +16,7 @@ describe("DeleteProfile", () => {
 	it("should render", async () => {
 		const { asFragment } = render(<DeleteProfile isOpen profileId={profile.id()} />);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("DeleteResource__submit-button")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -25,7 +25,7 @@ describe("DeleteProfile", () => {
 	it("should delete", async () => {
 		render(<DeleteProfile isOpen profileId={profile.id()} />);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 

@@ -143,20 +143,24 @@ describe("InstallPlugin", () => {
 		const downloadAndInstallPlugin = async () => {
 			userEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
-			await screen.findByTestId("InstallPlugin__step--second");
+			expect(screen.getByTestId("InstallPlugin__step--second")).toBeVisible();
 
-			expect(invokeSpy).toHaveBeenCalledWith("plugin:download", {
-				name: plugin.id,
-				url: "https://github.com/author/plugin/archive/master.zip",
+			await waitFor(() => {
+				expect(invokeSpy).toHaveBeenCalledWith("plugin:download", {
+					name: plugin.id,
+					url: "https://github.com/author/plugin/archive/master.zip",
+				});
 			});
+
 			expect(invokeSpy).toHaveBeenCalledWith("plugin:install", {
 				name: plugin.id,
 				profileId: profile.id(),
 				savedPath: `/Users/plugins/temp/${plugin.id}`,
 			});
+
 			expect(invokeSpy).toHaveBeenLastCalledWith("plugin:loader-fs.find", `/Users/plugins/${plugin.id}`);
 
-			await screen.findByTestId("InstallPlugin__step--third");
+			await expect(screen.findByTestId("InstallPlugin__step--third")).resolves.toBeVisible();
 		};
 
 		await downloadAndInstallPlugin();
@@ -258,9 +262,9 @@ describe("InstallPlugin", () => {
 
 		userEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
-		await screen.findByTestId("InstallPlugin__step--second");
+		expect(screen.getByTestId("InstallPlugin__step--second")).toBeVisible();
 
-		await screen.findByTestId("InstallPlugin__step--third");
+		await expect(screen.findByTestId("InstallPlugin__step--third")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("InstallPlugin__enable-button"));
 

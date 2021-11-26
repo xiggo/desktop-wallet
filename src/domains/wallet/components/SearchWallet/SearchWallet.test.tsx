@@ -201,7 +201,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await screen.findByTestId("HeaderSearchBar__input");
+		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
+
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -247,7 +248,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await screen.findByTestId("HeaderSearchBar__input");
+		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
+
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -294,7 +296,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await screen.findByTestId("HeaderSearchBar__input");
+		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
+
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -348,7 +351,8 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 
 		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await screen.findByTestId("HeaderSearchBar__input");
+		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
+
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -361,7 +365,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(screen.getByTestId("Input")).toHaveValue("non existent wallet name"));
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
 
-		await screen.findByTestId("EmptyResults");
+		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 
 		jest.useRealTimers();
 	});

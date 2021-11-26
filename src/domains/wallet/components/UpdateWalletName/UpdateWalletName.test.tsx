@@ -92,7 +92,7 @@ describe("UpdateWalletName", () => {
 		userEvent.type(screen.getByTestId("UpdateWalletName__input"), "      ");
 
 		// wait for formState.isValid to be updated
-		await screen.findByTestId("UpdateWalletName__submit");
+		await expect(screen.findByTestId("UpdateWalletName__submit")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
@@ -109,7 +109,7 @@ describe("UpdateWalletName", () => {
 		);
 
 		// wait for formState.isValid to be updated
-		await screen.findByTestId("UpdateWalletName__submit");
+		await expect(screen.findByTestId("UpdateWalletName__submit")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("UpdateWalletName__submit")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();

@@ -333,7 +333,7 @@ describe("Contacts", () => {
 
 		userEvent.paste(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), "Unknown Name");
 
-		await screen.findByTestId("Contacts--empty-results");
+		await expect(screen.findByTestId("Contacts--empty-results")).resolves.toBeVisible();
 	});
 
 	it("should search for contact by address", async () => {
@@ -362,7 +362,7 @@ describe("Contacts", () => {
 
 		userEvent.paste(within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input"), "Unknown Address");
 
-		await screen.findByTestId("Contacts--empty-results");
+		await expect(screen.findByTestId("Contacts--empty-results")).resolves.toBeVisible();
 	});
 
 	it("should not include addresses of test networks in search if not enabled", async () => {
@@ -404,7 +404,7 @@ describe("Contacts", () => {
 			addressTest.address(),
 		);
 
-		await screen.findByTestId("Contacts--empty-results");
+		await expect(screen.findByTestId("Contacts--empty-results")).resolves.toBeVisible();
 
 		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, true);
 

@@ -162,7 +162,7 @@ module.exports = {
 		"testing-library/no-wait-for-multiple-assertions": "error",
 		"testing-library/no-wait-for-side-effects": "error",
 		"testing-library/no-wait-for-snapshot": "error",
-		"testing-library/prefer-explicit-assert": "warn", // @TODO: set to error and fix
+		"testing-library/prefer-explicit-assert": "error",
 		"testing-library/prefer-find-by": "error",
 		"testing-library/prefer-presence-queries": "error",
 		"testing-library/prefer-screen-queries": "error",

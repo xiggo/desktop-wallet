@@ -105,7 +105,7 @@ describe("SelectDropdown", () => {
 
 			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
-			await screen.findByTestId("SelectDropdown__option--0");
+			await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
 
 			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -398,7 +398,7 @@ describe("SelectDropdown", () => {
 
 			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
-			await screen.findByTestId("SelectDropdown__option--0");
+			await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
 
 			userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 

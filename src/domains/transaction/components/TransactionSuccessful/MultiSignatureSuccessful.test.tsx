@@ -50,7 +50,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await screen.findByTestId("MultiSignatureSuccessful__publicKeys");
+		await expect(screen.findByTestId("MultiSignatureSuccessful__publicKeys")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -91,7 +91,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await screen.findByTestId("MultiSignatureSuccessful__publicKeys");
+		await expect(screen.findByTestId("MultiSignatureSuccessful__publicKeys")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -147,7 +147,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await screen.findByTestId("MultiSignatureSuccessful__publicKeys");
+		await expect(screen.findByTestId("MultiSignatureSuccessful__publicKeys")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -203,7 +203,7 @@ describe("MultiSignatureSuccessful", () => {
 			},
 		);
 
-		await screen.findByTestId("MultiSignatureSuccessful__publicKeys");
+		await expect(screen.findByTestId("MultiSignatureSuccessful__publicKeys")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 

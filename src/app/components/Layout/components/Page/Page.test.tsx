@@ -53,13 +53,13 @@ describe("Page", () => {
 				},
 			);
 
-			await screen.findByTestId("navbar__useractions");
+			await expect(screen.findByTestId("navbar__useractions")).resolves.toBeVisible();
 
 			const toggle = screen.getByTestId("navbar__useractions");
 
 			userEvent.click(toggle);
 
-			await screen.findByText(label);
+			await expect(screen.findByText(label)).resolves.toBeVisible();
 
 			userEvent.click(await screen.findByText(label));
 
@@ -87,13 +87,13 @@ describe("Page", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		await screen.findByTestId("navbar__useractions");
+		await expect(screen.findByTestId("navbar__useractions")).resolves.toBeVisible();
 
 		const toggle = screen.getByTestId("navbar__useractions");
 
 		userEvent.click(toggle);
 
-		await screen.findByText("Sign Out");
+		await expect(screen.findByText("Sign Out")).resolves.toBeVisible();
 
 		userEvent.click(await screen.findByText("Sign Out"));
 

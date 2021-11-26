@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
+import "jest-extended";
+
 import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
 import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
@@ -97,7 +99,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await screen.findByTestId("StatusIcon__icon");
+		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -192,7 +194,7 @@ describe("AddressRow", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await screen.findByTestId("StatusIcon__icon");
+		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -214,9 +216,9 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await screen.findByTestId("StatusIcon__icon");
-		await screen.findByTestId("AddressRow__select-0");
-		await screen.findByTestId("AddressRow__select-1");
+		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__select-1")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -236,9 +238,10 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await screen.findAllByTestId("StatusIcon__icon");
-		await screen.findByTestId("AddressRow__select-0");
-		await screen.findByTestId("AddressRow__select-1");
+		await expect(screen.findAllByTestId("StatusIcon__icon")).resolves.toBeArray();
+
+		await expect(screen.findByTestId("AddressRow__select-0")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AddressRow__select-1")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -273,7 +276,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await screen.findAllByTestId("StatusIcon__icon");
+		await expect(screen.findAllByTestId("StatusIcon__icon")).resolves.toBeArray();
 
 		expect(container).toHaveTextContent("circle-check-mark.svg");
 
@@ -312,7 +315,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await screen.findAllByTestId("StatusIcon__icon");
+		await expect(screen.findAllByTestId("StatusIcon__icon")).resolves.toBeArray();
 
 		expect(container).toHaveTextContent("clock.svg");
 
@@ -351,7 +354,7 @@ describe("AddressRow", () => {
 			},
 		);
 
-		await screen.findAllByTestId("StatusIcon__icon");
+		await expect(screen.findAllByTestId("StatusIcon__icon")).resolves.toBeArray();
 
 		expect(container).toHaveTextContent("circle-cross.svg");
 
@@ -380,7 +383,7 @@ describe("AddressRow", () => {
 		);
 		const selectButton = screen.getByTestId("AddressRow__select-0");
 
-		await screen.findByTestId("StatusIcon__icon");
+		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
 
 		userEvent.click(selectButton);
 

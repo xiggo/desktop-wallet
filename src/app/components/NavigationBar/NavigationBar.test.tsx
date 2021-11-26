@@ -139,8 +139,9 @@ describe("NavigationBar", () => {
 
 		userEvent.click(screen.getAllByText("Select")[0]);
 
-		await screen.findByTestId("ReceiveFunds__name");
-		await screen.findByTestId("ReceiveFunds__address");
+		await expect(screen.findByTestId("ReceiveFunds__name")).resolves.toBeVisible();
+		await expect(screen.findByTestId("ReceiveFunds__address")).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.queryAllByTestId("ReceiveFunds__qrcode")).toHaveLength(1));
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));

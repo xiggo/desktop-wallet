@@ -53,7 +53,7 @@ describe("App", () => {
 			withProviders: false,
 		});
 
-		await screen.findByTestId("Splash__text");
+		expect(screen.getByTestId("Splash__text")).toBeVisible();
 
 		await act(async () => {
 			await new Promise((resolve) => setTimeout(resolve, 500));
@@ -71,7 +71,9 @@ describe("App", () => {
 			withProviders: false,
 		});
 
-		await screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
+		await expect(
+			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
+		).resolves.toBeVisible();
 
 		expect(history.location.pathname).toBe("/");
 
@@ -114,7 +116,7 @@ describe("App", () => {
 			jest.runAllTimers();
 		});
 
-		await screen.findByTestId("SyncErrorMessage__retry");
+		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
 
 		profileSyncMock.mockRestore();
 		userEvent.click(screen.getByTestId("SyncErrorMessage__retry"));
@@ -152,7 +154,7 @@ describe("App", () => {
 
 		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
 
-		await screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE);
+		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -207,8 +209,8 @@ describe("App", () => {
 
 		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
 
-		await screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE);
-		await screen.findByText("John Doe");
+		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
+		await expect(screen.findByText("John Doe")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -220,7 +222,7 @@ describe("App", () => {
 
 		expect(screen.getByTestId("Splash__text")).toBeInTheDocument();
 
-		await screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE);
+		await expect(screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -230,7 +232,9 @@ describe("App", () => {
 
 		const { history } = render(<App />, { withProviders: false });
 
-		await screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
+		await expect(
+			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
+		).resolves.toBeVisible();
 
 		expect(history.location.pathname).toBe("/");
 
@@ -273,7 +277,9 @@ describe("App", () => {
 
 		const { history } = render(<App />, { withProviders: false });
 
-		await screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
+		await expect(
+			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
+		).resolves.toBeVisible();
 
 		expect(history.location.pathname).toBe("/");
 
@@ -328,7 +334,9 @@ describe("App", () => {
 
 			render(<App />, { withProviders: false });
 
-			await screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
+			await expect(
+				screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
+			).resolves.toBeVisible();
 
 			expect(document.body).toHaveClass(`theme-${shouldUseDarkColors ? "dark" : "light"}`);
 
@@ -342,7 +350,9 @@ describe("App", () => {
 
 		const { history } = render(<App />, { withProviders: false });
 
-		await screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 });
+		await expect(
+			screen.findByText(profileTranslations.PAGE_WELCOME.WITH_PROFILES.TITLE, undefined, { timeout: 2000 }),
+		).resolves.toBeVisible();
 
 		await env.profiles().restore(passwordProtectedProfile, getDefaultPassword());
 

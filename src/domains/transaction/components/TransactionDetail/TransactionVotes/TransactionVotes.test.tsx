@@ -26,8 +26,8 @@ describe("TransactionVotes", () => {
 	it("should render with votes", async () => {
 		const { container } = render(<TransactionVotes votes={votes} />);
 
-		await screen.findByText("Votes (1)");
-		await screen.findByText("test-username");
+		await expect(screen.findByText("Votes (1)")).resolves.toBeVisible();
+		await expect(screen.findByText("test-username")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -35,8 +35,8 @@ describe("TransactionVotes", () => {
 	it("should render with unvotes", async () => {
 		const { container } = render(<TransactionVotes unvotes={votes} />);
 
-		await screen.findByText("Unvotes (1)");
-		await screen.findByText("test-username");
+		await expect(screen.findByText("Unvotes (1)")).resolves.toBeVisible();
+		await expect(screen.findByText("test-username")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -44,8 +44,9 @@ describe("TransactionVotes", () => {
 	it("should render with votes and unvotes", async () => {
 		const { container } = render(<TransactionVotes votes={votes} unvotes={votes} />);
 
-		await screen.findByText("Votes (1)");
-		await screen.findByText("Unvotes (1)");
+		await expect(screen.findByText("Votes (1)")).resolves.toBeVisible();
+		await expect(screen.findByText("Unvotes (1)")).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.getAllByText("test-username")).toHaveLength(2));
 
 		expect(container).toMatchSnapshot();

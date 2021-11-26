@@ -150,7 +150,7 @@ describe("FilterNetworks", () => {
 
 		userEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
-		await screen.findByTestId("FilterNetwork__select-all-checkbox");
+		await expect(screen.findByTestId("FilterNetwork__select-all-checkbox")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -165,7 +165,7 @@ describe("FilterNetworks", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should select all public networks", async () => {
+	it("should select all public networks", () => {
 		const onChange = jest.fn();
 		render(
 			<FilterNetworks useTestNetworks={true} options={networkOptions} onChange={onChange} hideViewAll={false} />,
@@ -175,9 +175,7 @@ describe("FilterNetworks", () => {
 
 		userEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
-		await screen.findAllByTestId("FilterNetwork__select-all-checkbox");
-
-		userEvent.click(screen.getAllByTestId("FilterNetwork__select-all-checkbox")[0]);
+		userEvent.click(screen.getByTestId("FilterNetwork__select-all-checkbox"));
 
 		expect(onChange).toHaveBeenCalledWith(expect.anything(), [
 			...networkOptions

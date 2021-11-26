@@ -45,7 +45,7 @@ describe("Plugin View", () => {
 			},
 		);
 
-		await screen.findByText("My Plugin View");
+		await expect(screen.findByText("My Plugin View")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 

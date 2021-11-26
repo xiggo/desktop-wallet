@@ -40,7 +40,7 @@ describe("PasswordModal", () => {
 		userEvent.paste(screen.getByTestId("PasswordModal__input"), "password");
 
 		// wait for formState.isValid to be updated
-		await screen.findByTestId("PasswordModal__submit-button");
+		await expect(screen.findByTestId("PasswordModal__submit-button")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 

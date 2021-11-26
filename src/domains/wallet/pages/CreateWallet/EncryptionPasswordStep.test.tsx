@@ -46,7 +46,7 @@ describe("EncryptionPasswordStep", () => {
 			},
 		);
 
-		await screen.findByTestId("NetworkStep");
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
@@ -78,29 +78,29 @@ describe("EncryptionPasswordStep", () => {
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(backButton);
 
-		await screen.findByTestId("NetworkStep");
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		userEvent.click(backButton);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		const walletMnemonic = passphrase.split(" ");
 		for (let index = 0; index < 3; index++) {
@@ -120,7 +120,7 @@ describe("EncryptionPasswordStep", () => {
 			fromMnemonicWithBIP39: () => Promise.reject(new Error("failed")),
 		}));
 
-		await screen.findByTestId("EncryptPassword");
+		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
 
 		const passwordInput = screen.getAllByTestId("InputPassword")[0];
 		const confirmPassword = screen.getAllByTestId("InputPassword")[1];
@@ -135,7 +135,7 @@ describe("EncryptionPasswordStep", () => {
 
 		userEvent.click(screen.getByTestId("CreateWallet__continue-encryption-button"));
 
-		await screen.findByTestId("CreateWallet__SuccessStep");
+		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("CreateWallet__finish-button"));
 
@@ -158,7 +158,7 @@ describe("EncryptionPasswordStep", () => {
 			},
 		);
 
-		await screen.findByTestId("NetworkStep");
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
 		const continueButton = screen.getByTestId("CreateWallet__continue-button");
@@ -188,29 +188,29 @@ describe("EncryptionPasswordStep", () => {
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(backButton);
 
-		await screen.findByTestId("NetworkStep");
+		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		userEvent.click(backButton);
 
-		await screen.findByTestId("CreateWallet__WalletOverviewStep");
+		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("CreateWallet__encryption-toggle"));
 
 		userEvent.click(continueButton);
 
-		await screen.findByTestId("CreateWallet__ConfirmPassphraseStep");
+		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
 		const walletMnemonic = passphrase.split(" ");
 		for (let index = 0; index < 3; index++) {
@@ -236,7 +236,7 @@ describe("EncryptionPasswordStep", () => {
 			fromMnemonicWithBIP39: () => Promise.resolve(sampleWallet),
 		}));
 
-		await screen.findByTestId("EncryptPassword");
+		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
 
 		const passwordInput = screen.getAllByTestId("InputPassword")[0];
 		const confirmPassword = screen.getAllByTestId("InputPassword")[1];
@@ -253,7 +253,7 @@ describe("EncryptionPasswordStep", () => {
 
 		userEvent.click(screen.getByTestId("CreateWallet__continue-encryption-button"));
 
-		await screen.findByTestId("CreateWallet__SuccessStep");
+		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 
 		expect(profile.wallets().values()).toHaveLength(1);
 		expect(walletSpy).toHaveBeenCalledWith();

@@ -132,12 +132,12 @@ describe("Welcome", () => {
 
 		userEvent.click(settingsOption);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("SignIn__input--password"), "password");
 
 		// wait for formState.isValid to be updated
-		await screen.findByTestId("SignIn__submit-button");
+		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
@@ -190,7 +190,7 @@ describe("Welcome", () => {
 
 		userEvent.click(deleteOption);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
@@ -216,12 +216,12 @@ describe("Welcome", () => {
 			userEvent.paste(screen.getByTestId("SignIn__input--password"), `wrong password ${index}`);
 
 			// wait for form to be updated
-			await screen.findByTestId("SignIn__submit-button");
+			await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
 
 			userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 			// wait for form to be updated
-			await screen.findByTestId("SignIn__submit-button");
+			await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
 		}
 
 		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
@@ -246,7 +246,7 @@ describe("Welcome", () => {
 		});
 
 		// wait for form to be updated
-		await screen.findByTestId("SignIn__submit-button");
+		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
 
 		await waitFor(
 			() => expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Password invalid"),

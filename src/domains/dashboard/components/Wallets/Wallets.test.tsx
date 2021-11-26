@@ -110,7 +110,7 @@ describe("Wallets", () => {
 		const toggle = screen.getByTestId("LayoutControls__list--icon");
 		userEvent.click(toggle);
 
-		await screen.findByTestId("WalletsList");
+		await expect(screen.findByTestId("WalletsList")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -128,11 +128,11 @@ describe("Wallets", () => {
 
 		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
-		await screen.findByTestId("WalletsList");
+		await expect(screen.findByTestId("WalletsList")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("LayoutControls__grid--icon"));
 
-		await screen.findByTestId("WalletsGrid");
+		await expect(screen.findByTestId("WalletsGrid")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -170,8 +170,8 @@ describe("Wallets", () => {
 		const toggle = screen.getByTestId("LayoutControls__list--icon");
 		userEvent.click(toggle);
 
-		await screen.findByTestId("WalletsList");
-		await screen.findByTestId("WalletsList__ViewMore");
+		await expect(screen.findByTestId("WalletsList")).resolves.toBeVisible();
+		await expect(screen.findByTestId("WalletsList__ViewMore")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("WalletsList__ViewMore"));
 
@@ -300,7 +300,7 @@ describe("Wallets", () => {
 
 		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
-		await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
+		await expect(screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
@@ -310,7 +310,7 @@ describe("Wallets", () => {
 
 		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
-		await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
+		await expect(screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -364,7 +364,7 @@ describe("Wallets", () => {
 
 		userEvent.click(screen.getByText(commonTranslations.RENAME));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_NAME_WALLET.TITLE);
 
@@ -410,7 +410,7 @@ describe("Wallets", () => {
 
 		userEvent.click(screen.getByText(commonTranslations.DELETE));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_DELETE_WALLET.TITLE);
 
@@ -435,7 +435,7 @@ describe("Wallets", () => {
 		const toggle = screen.getByTestId("LayoutControls__list--icon");
 		userEvent.click(toggle);
 
-		await screen.findByTestId("WalletsList");
+		await expect(screen.findByTestId("WalletsList")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

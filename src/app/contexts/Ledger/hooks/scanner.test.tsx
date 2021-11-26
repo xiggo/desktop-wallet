@@ -250,7 +250,7 @@ describe("Use Ledger Scanner", () => {
 
 		userEvent.click(screen.getByText("Scan"));
 
-		await screen.findByText("Retry");
+		await expect(screen.findByText("Retry")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -287,7 +287,8 @@ describe("Use Ledger Scanner", () => {
 		userEvent.click(screen.getByTestId("scan"));
 		userEvent.click(screen.getByTestId("abort"));
 
-		await screen.findByText("Idle");
+		await expect(screen.findByText("Idle")).resolves.toBeVisible();
+
 		await new Promise((resolve) => setTimeout(resolve, 3000));
 
 		expect(container).toMatchSnapshot();

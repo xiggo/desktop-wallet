@@ -49,7 +49,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch Packages"));
 
-		await screen.findByText("ARK Delegate Calculator");
+		await expect(screen.findByText("ARK Delegate Calculator")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.getByTestId("PluginSpecs__size")).toHaveTextContent("123 kB"));
 
@@ -84,7 +84,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch Packages"));
 
-		await screen.findByText("Test Plugin");
+		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -122,7 +122,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch Package"));
 
-		await screen.findByText("Remote Plugin");
+		await expect(screen.findByText("Remote Plugin")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -157,7 +157,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch Packages"));
 
-		await screen.findByText("Test Plugin");
+		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -202,7 +202,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch Packages"));
 
-		await screen.findByText("Test Plugin");
+		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PluginHeader__button--launch"));
 
@@ -242,7 +242,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch Packages"));
 
-		await screen.findByText("Test Plugin");
+		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 		userEvent.click(screen.getByText(translations.COMMON.ENABLE));
@@ -288,7 +288,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch Packages"));
 
-		await screen.findByText("Test Plugin");
+		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 		userEvent.click(screen.getByText(translations.COMMON.ENABLE));
@@ -329,7 +329,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch Packages"));
 
-		await screen.findByText("Test Plugin");
+		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 		userEvent.click(screen.getByText(translations.COMMON.DISABLE));
@@ -366,7 +366,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch Packages"));
 
-		await screen.findByText("Test Plugin");
+		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 		userEvent.click(screen.getByText(translations.COMMON.DELETE));
@@ -410,7 +410,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch Packages"));
 
-		await screen.findByText("Test Plugin");
+		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 		userEvent.click(screen.getByText(translations.COMMON.DELETE));
@@ -463,7 +463,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch"));
 
-		await screen.findByText("Remote Plugin");
+		await expect(screen.findByText("Remote Plugin")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PluginHeader__button--install"));
 
@@ -528,7 +528,7 @@ describe("PluginDetails", () => {
 
 		userEvent.click(screen.getByText("Fetch"));
 
-		await screen.findByText("Remote Plugin");
+		await expect(screen.findByText("Remote Plugin")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PluginHeader__button--install"));
 
@@ -581,7 +581,8 @@ describe("PluginDetails", () => {
 
 		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
 
-		await screen.findByText(translations.COMMON.UPDATE);
+		await expect(screen.findByText(translations.COMMON.UPDATE)).resolves.toBeVisible();
+
 		userEvent.click(screen.getByText(translations.COMMON.UPDATE));
 
 		await waitFor(() =>

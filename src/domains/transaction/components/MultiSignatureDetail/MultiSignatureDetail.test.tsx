@@ -419,7 +419,8 @@ describe("MultiSignatureDetail", () => {
 		userEvent.click(screen.getByTestId("MultiSignatureDetail__broadcast"));
 
 		await waitFor(() => expect(broadcastMock).toHaveBeenCalledWith(fixtures.transfer.id()));
-		await screen.findByText(translations.SUCCESS.TITLE);
+
+		await expect(screen.findByText(translations.SUCCESS.TITLE)).resolves.toBeVisible();
 
 		broadcastMock.mockRestore();
 	});
@@ -587,7 +588,7 @@ describe("MultiSignatureDetail", () => {
 
 		userEvent.click(screen.getByTestId("Paginator__sign"));
 
-		await screen.findByTestId("AuthenticationStep");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 	});
 
 	it("should sign transaction and broadcast in one action", async () => {
@@ -629,7 +630,7 @@ describe("MultiSignatureDetail", () => {
 
 		userEvent.click(screen.getByTestId("Paginator__sign"));
 
-		await screen.findByTestId("AuthenticationStep");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
 
@@ -686,7 +687,7 @@ describe("MultiSignatureDetail", () => {
 
 		userEvent.click(screen.getByTestId("Paginator__sign"));
 
-		await screen.findByTestId("AuthenticationStep");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
@@ -698,7 +699,8 @@ describe("MultiSignatureDetail", () => {
 			expect(addSignatureMock).toHaveBeenCalledWith(fixtures.transfer.id(), expect.any(Signatories.Signatory)),
 		);
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
-		await screen.findByText(translations.TRANSACTION_SIGNED);
+
+		await expect(screen.findByText(translations.TRANSACTION_SIGNED)).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -745,7 +747,7 @@ describe("MultiSignatureDetail", () => {
 
 		userEvent.click(screen.getByTestId("Paginator__sign"));
 
-		await screen.findByTestId("AuthenticationStep");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
@@ -804,7 +806,7 @@ describe("MultiSignatureDetail", () => {
 
 		userEvent.click(screen.getByTestId("Paginator__sign"));
 
-		await screen.findByTestId("AuthenticationStep");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 
@@ -877,7 +879,7 @@ describe("MultiSignatureDetail", () => {
 			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
 		});
 
-		await screen.findByTestId("Paginator__sign");
+		await expect(screen.findByTestId("Paginator__sign")).resolves.toBeVisible();
 
 		const address = wallet.address();
 		const balance = wallet.balance();
@@ -1025,7 +1027,7 @@ describe("MultiSignatureDetail", () => {
 
 		userEvent.click(screen.getByTestId("Paginator__sign"));
 
-		await screen.findByTestId("LedgerDeviceError");
+		await expect(screen.findByTestId("LedgerDeviceError")).resolves.toBeVisible();
 
 		act(() => {
 			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
@@ -1039,7 +1041,8 @@ describe("MultiSignatureDetail", () => {
 		);
 
 		await waitFor(() => expect(broadcastMock).not.toHaveBeenCalled());
-		await screen.findByText(translations.TRANSACTION_SIGNED);
+
+		await expect(screen.findByText(translations.TRANSACTION_SIGNED)).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 

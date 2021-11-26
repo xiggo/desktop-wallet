@@ -12,7 +12,7 @@ describe("PasswordRemovalConfirmModal", () => {
 	it("should render", async () => {
 		const { asFragment } = render(<PasswordRemovalConfirmModal onCancel={jest.fn()} onConfirm={jest.fn()} />);
 
-		await screen.findByText(translations.SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD);
+		await expect(screen.findByText(translations.SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -22,7 +22,7 @@ describe("PasswordRemovalConfirmModal", () => {
 
 		render(<PasswordRemovalConfirmModal onCancel={onCancel} onConfirm={jest.fn()} />);
 
-		await screen.findByText(translations.SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD);
+		await expect(screen.findByText(translations.SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__cancel"));
 
@@ -34,7 +34,7 @@ describe("PasswordRemovalConfirmModal", () => {
 
 		render(<PasswordRemovalConfirmModal onCancel={jest.fn()} onConfirm={onConfirm} />);
 
-		await screen.findByText(translations.SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD);
+		await expect(screen.findByText(translations.SETTINGS.PASSWORD.REMOVAL.PROFILE_PASSWORD)).resolves.toBeVisible();
 
 		expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeDisabled();
 

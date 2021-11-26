@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
+import "jest-extended";
+
 import { DateTime } from "@payvo/sdk-intl";
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
@@ -234,7 +236,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -288,7 +290,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -442,7 +444,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -465,7 +467,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__network-step");
+		await expect(screen.findByTestId("SendTransfer__network-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -505,7 +507,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__network-step");
+		await expect(screen.findByTestId("SendTransfer__network-step")).resolves.toBeVisible();
 
 		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")).toHaveLength(2);
 		expect(screen.getAllByTestId("SelectNetwork__NetworkIcon--container")[0]).toHaveTextContent("ark.svg");
@@ -529,7 +531,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -552,7 +554,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -585,7 +587,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__network-step");
+		await expect(screen.findByTestId("SendTransfer__network-step")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() =>
@@ -595,10 +597,12 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__form-step");
+
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("SearchWalletListItem__select-0"));
 		await waitFor(() =>
@@ -629,7 +633,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__network-step");
+		await expect(screen.findByTestId("SendTransfer__network-step")).resolves.toBeVisible();
 
 		const input: HTMLInputElement = screen.getByTestId("SelectNetworkInput__input");
 
@@ -649,7 +653,7 @@ describe("SendTransfer", () => {
 
 		expect(input).toHaveAttribute("aria-invalid", "true");
 
-		await screen.findByTestId("NetworkIcon-ARK-ark.devnet");
+		await expect(screen.findByTestId("NetworkIcon-ARK-ark.devnet")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(input).toHaveValue("ARK Devnet"));
@@ -677,7 +681,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__network-step");
+		await expect(screen.findByTestId("SendTransfer__network-step")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
@@ -685,7 +689,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__form-step");
+
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 
@@ -701,7 +706,8 @@ describe("SendTransfer", () => {
 
 		// Previous step
 		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
-		await screen.findByTestId("SendTransfer__network-step");
+
+		await expect(screen.findByTestId("SendTransfer__network-step")).resolves.toBeVisible();
 
 		// Change network
 		// Unselect
@@ -715,7 +721,8 @@ describe("SendTransfer", () => {
 
 		// Next step
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__form-step");
+
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		// Memo
 		expect(screen.getByTestId("Input__memo")).not.toHaveValue();
@@ -742,7 +749,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__network-step");
+		await expect(screen.findByTestId("SendTransfer__network-step")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
@@ -750,13 +757,15 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__form-step");
+
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 
 		// Select sender
 		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-1");
 
@@ -787,7 +796,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__network-step");
+		await expect(screen.findByTestId("SendTransfer__network-step")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue("ARK Devnet"));
@@ -795,13 +804,15 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__form-step");
+
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
 
 		// Select sender
 		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		const secondAddress = screen.getByTestId("SearchWalletListItem__select-1");
 		userEvent.click(secondAddress);
@@ -814,14 +825,15 @@ describe("SendTransfer", () => {
 
 		// Select sender
 		userEvent.click(within(screen.getByTestId("sender-address")).getByTestId("SelectAddress__wrapper"));
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		const firstAddress = screen.getByTestId("SearchWalletListItem__select-0");
 		userEvent.click(firstAddress);
 
 		expect(screen.getByText("33.67769203")).toBeInTheDocument();
 
-		await screen.findByTestId("Input__error");
+		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 	});
 
 	it("should recalculate amount when fee changes and send all is selected", async () => {
@@ -842,7 +854,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -852,7 +864,8 @@ describe("SendTransfer", () => {
 		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
@@ -904,7 +917,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -934,7 +947,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		const backButton = screen.getByTestId("StepNavigation__back-button");
 
@@ -943,7 +957,7 @@ describe("SendTransfer", () => {
 		userEvent.click(backButton);
 
 		// Step 1 again
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		// Thw fast fee should still be selected
 		await waitFor(() => expect(screen.getAllByRole("radio")[2]).toBeChecked());
@@ -952,9 +966,10 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
 
-		await screen.findAllByTestId("Amount");
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
+
+		await expect(screen.findAllByTestId("Amount")).resolves.toBeArray();
 
 		expect(screen.getAllByTestId("Amount")[2]).toHaveTextContent("0.1");
 	});
@@ -977,7 +992,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -997,7 +1012,8 @@ describe("SendTransfer", () => {
 		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		// Amount
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
@@ -1055,7 +1071,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1110,7 +1126,7 @@ describe("SendTransfer", () => {
 			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		}
 
-		await screen.findByTestId("SendTransfer__review-step");
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
@@ -1120,7 +1136,8 @@ describe("SendTransfer", () => {
 		} else {
 			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 		}
-		await screen.findByTestId("AuthenticationStep");
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -1140,7 +1157,8 @@ describe("SendTransfer", () => {
 		userEvent.keyboard("{enter}");
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
 		await waitFor(() =>
 			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -1229,7 +1247,7 @@ describe("SendTransfer", () => {
 		// Continue to review step
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
-		await screen.findByTestId("SendTransfer__review-step");
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		expect(within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("Amount")[0]).toHaveTextContent(
 			"1 LSK",
@@ -1246,7 +1264,7 @@ describe("SendTransfer", () => {
 		// Go back to form step
 		userEvent.click(backButton);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.getAllByRole("radio")[1]).toHaveTextContent("0.1 LSK"));
 
@@ -1256,7 +1274,7 @@ describe("SendTransfer", () => {
 		// Continue to review step
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
-		await screen.findByTestId("SendTransfer__review-step");
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		expect(within(screen.getByTestId("SendTransfer__review-step")).getAllByTestId("Amount")[0]).toHaveTextContent(
 			"1 LSK",
@@ -1292,7 +1310,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1338,23 +1356,27 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// Back to Step 1
 		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
-		await screen.findByTestId("SendTransfer__form-step");
+
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("AuthenticationStep");
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -1375,7 +1397,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
-		await screen.findByTestId("ErrorStep");
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -1400,7 +1422,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1446,13 +1468,15 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("AuthenticationStep");
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -1474,7 +1498,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
 		await waitFor(() =>
 			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -1521,7 +1546,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1540,7 +1565,8 @@ describe("SendTransfer", () => {
 		);
 
 		// Amount
-		await screen.findByTestId("AddRecipient__send-all");
+		await expect(screen.findByTestId("AddRecipient__send-all")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByTestId("AddRecipient__send-all"));
 		await waitFor(() => expect(screen.getByTestId("AddRecipient__amount")).not.toHaveValue("0"), { timeout: 4000 });
 
@@ -1552,7 +1578,8 @@ describe("SendTransfer", () => {
 
 		// Step 2
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// Step 5 (skip step 4 for now - ledger confirmation)
 		const signMock = jest
@@ -1567,7 +1594,7 @@ describe("SendTransfer", () => {
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
 			"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -1624,7 +1651,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1676,7 +1703,8 @@ describe("SendTransfer", () => {
 
 		// Step 2
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
@@ -1684,7 +1712,7 @@ describe("SendTransfer", () => {
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Auto broadcast
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		jest.restoreAllMocks();
 	});
@@ -1707,7 +1735,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1717,7 +1745,8 @@ describe("SendTransfer", () => {
 		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
@@ -1756,14 +1785,15 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Fee warning
-		await screen.findByTestId("FeeWarning__cancel-button");
+		await expect(screen.findByTestId("FeeWarning__cancel-button")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
@@ -1789,7 +1819,7 @@ describe("SendTransfer", () => {
 				},
 			);
 
-			await screen.findByTestId("SendTransfer__form-step");
+			await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 			const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 			await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1832,7 +1862,7 @@ describe("SendTransfer", () => {
 			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 			// Review Step
-			await screen.findByTestId("SendTransfer__review-step");
+			await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 			expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
@@ -1841,13 +1871,16 @@ describe("SendTransfer", () => {
 			const profileSpy = jest.spyOn(profile.settings(), "set").mockImplementation();
 
 			// Fee warning
-			await screen.findByTestId("FeeWarning__suppressWarning-toggle");
+			await expect(screen.findByTestId("FeeWarning__suppressWarning-toggle")).resolves.toBeVisible();
+
 			userEvent.click(screen.getByTestId("FeeWarning__suppressWarning-toggle"));
 			userEvent.click(screen.getByTestId(`FeeWarning__${action}-button`));
 
 			expect(profileSpy).toHaveBeenCalledWith(Contracts.ProfileSetting.DoNotShowFeeWarning, true);
 
-			await screen.findByTestId(action === "cancel" ? "SendTransfer__form-step" : "AuthenticationStep");
+			await expect(
+				screen.findByTestId(action === "cancel" ? "SendTransfer__form-step" : "AuthenticationStep"),
+			).resolves.toBeVisible();
 
 			profileSpy.mockRestore();
 		},
@@ -1874,7 +1907,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -1916,18 +1949,19 @@ describe("SendTransfer", () => {
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
-		await screen.findByTestId("SendTransfer__review-step");
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Fee warning
-		await screen.findByTestId("FeeWarning__continue-button");
+		await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 
 		// Auth Step
-		await screen.findByTestId("AuthenticationStep");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -1946,7 +1980,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
 		await waitFor(() =>
 			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -1986,7 +2021,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2023,14 +2058,14 @@ describe("SendTransfer", () => {
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
-		await screen.findByTestId("SendTransfer__review-step");
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Auth Step
-		await screen.findByTestId("AuthenticationStep");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const inputElement: HTMLInputElement = screen.getByTestId("AuthenticationStep__mnemonic");
 
@@ -2072,7 +2107,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2108,13 +2143,15 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("AuthenticationStep");
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -2128,7 +2165,7 @@ describe("SendTransfer", () => {
 
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
-		await screen.findByTestId("ErrorStep");
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 		expect(screen.getByTestId("ErrorStep__wallet-button")).toBeInTheDocument();
@@ -2169,7 +2206,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallet.address());
@@ -2186,7 +2223,8 @@ describe("SendTransfer", () => {
 		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 		await waitFor(() =>
@@ -2203,7 +2241,8 @@ describe("SendTransfer", () => {
 		userEvent.click(
 			within(screen.getByTestId("recipient-address")).getByTestId("SelectRecipient__select-recipient"),
 		);
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
@@ -2231,13 +2270,15 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("AuthenticationStep");
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const passwordInput = screen.getByTestId("AuthenticationStep__mnemonic");
 		userEvent.paste(passwordInput, passphrase);
@@ -2260,7 +2301,7 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		coinMock.mockRestore();
 		signMock.mockRestore();
@@ -2286,7 +2327,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2368,7 +2409,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2413,13 +2454,15 @@ describe("SendTransfer", () => {
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("AuthenticationStep");
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
@@ -2438,17 +2481,20 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
 		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
 		await waitFor(() =>
 			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -2522,7 +2568,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2554,11 +2600,13 @@ describe("SendTransfer", () => {
 
 		// proceed to step 2
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// proceed to step 3
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("AuthenticationStep");
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		// enter mnemonic
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
@@ -2568,13 +2616,15 @@ describe("SendTransfer", () => {
 
 		// submit form
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		// confirm within the modal
 		userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
 		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
 		await waitFor(() =>
 			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
@@ -2610,7 +2660,7 @@ describe("SendTransfer", () => {
 			},
 		);
 
-		await screen.findByTestId("SendTransfer__form-step");
+		await expect(screen.findByTestId("SendTransfer__form-step")).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("SelectNetworkInput__input")).toHaveValue(networkLabel));
@@ -2655,13 +2705,15 @@ describe("SendTransfer", () => {
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("SendTransfer__review-step");
+
+		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
 
 		// Step 3
 		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
-		await screen.findByTestId("AuthenticationStep");
+
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__encryption-password"), "password");
 		await waitFor(() =>
@@ -2682,7 +2734,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
 		await waitFor(() =>
 			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
 				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",

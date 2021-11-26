@@ -64,7 +64,7 @@ const renderPage = async ({
 	);
 
 	if (waitForTopSection) {
-		await screen.findByTestId("WalletVote");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 	}
 
 	if (waitForTransactions) {
@@ -205,11 +205,12 @@ describe("WalletDetails", () => {
 		mockPendingTransfers(wallet);
 
 		await renderPage();
-		await screen.findByTestId("PendingTransactions");
+
+		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
@@ -221,14 +222,18 @@ describe("WalletDetails", () => {
 		mockPendingTransfers(wallet);
 
 		await renderPage();
-		await screen.findByTestId("PendingTransactions");
+
+		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 
-		await screen.findByTestId("TableRemoveButton");
+		await expect(screen.findByTestId("TableRemoveButton")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByTestId("TableRemoveButton"));
 
-		await screen.findByTestId("ConfirmRemovePendingTransaction__Transfer-Transaction");
+		await expect(
+			screen.findByTestId("ConfirmRemovePendingTransaction__Transfer-Transaction"),
+		).resolves.toBeVisible();
 
 		jest.restoreAllMocks();
 		defaultNetMocks();
@@ -254,11 +259,12 @@ describe("WalletDetails", () => {
 		mockPendingTransfers(wallet);
 
 		await renderPage();
-		await screen.findByTestId("PendingTransactions");
+
+		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
@@ -271,7 +277,8 @@ describe("WalletDetails", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		await screen.findByTestId("WalletHeader__send-button");
+		await expect(screen.findByTestId("WalletHeader__send-button")).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.getByTestId("WalletHeader__send-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("WalletHeader__send-button"));
@@ -301,7 +308,7 @@ describe("WalletDetails", () => {
 
 		await renderPage({ waitForTopSection: true, waitForTransactions: false });
 
-		await screen.findByText(translations.COMMON.LEARN_MORE);
+		await expect(screen.findByText(translations.COMMON.LEARN_MORE)).resolves.toBeVisible();
 	});
 
 	it("should navigate to votes page when clicking on WalletVote button", async () => {
@@ -312,7 +319,8 @@ describe("WalletDetails", () => {
 
 		await renderPage();
 
-		await screen.findByText(translations.COMMON.LEARN_MORE);
+		await expect(screen.findByText(translations.COMMON.LEARN_MORE)).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.getByTestId("WalletVote__button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("WalletVote__button"));
@@ -370,7 +378,7 @@ describe("WalletDetails", () => {
 
 		userEvent.click(screen.getByTestId("dropdown__option--primary-0"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		const name = "Sample label name";
 
@@ -407,7 +415,7 @@ describe("WalletDetails", () => {
 
 		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
@@ -437,7 +445,7 @@ describe("WalletDetails", () => {
 
 		userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await screen.findByTestId("dropdown__option--core-0");
+		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
@@ -494,7 +502,7 @@ describe("WalletDetails", () => {
 		expect(profile.wallets().count()).toBe(4);
 		expect(profile.notifications().transactions().recent()).toHaveLength(2);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
@@ -523,7 +531,7 @@ describe("WalletDetails", () => {
 
 		await renderPage();
 
-		await screen.findByText(translations.COMMON.LEARN_MORE);
+		await expect(screen.findByText(translations.COMMON.LEARN_MORE)).resolves.toBeVisible();
 
 		syncVotesSpy.mockRestore();
 	});

@@ -38,7 +38,7 @@ describe("MultiSignatureRegistrationDetail", () => {
 			},
 		);
 
-		await screen.findByText(translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE);
+		await expect(screen.findByText(translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE)).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -63,7 +63,7 @@ describe("MultiSignatureRegistrationDetail", () => {
 			},
 		);
 
-		await screen.findByText(translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE);
+		await expect(screen.findByText(translations.MODAL_MULTISIGNATURE_DETAIL.STEP_1.TITLE)).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.getAllByText(wallet.address())).toHaveLength(3));
 

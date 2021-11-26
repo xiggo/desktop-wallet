@@ -70,7 +70,7 @@ describe("SignIn", () => {
 		userEvent.paste(screen.getByTestId("SignIn__input--password"), getDefaultPassword());
 
 		// wait for formState.isValid to be updated
-		await screen.findByTestId("SignIn__submit-button");
+		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
@@ -87,12 +87,12 @@ describe("SignIn", () => {
 		userEvent.paste(screen.getByTestId("SignIn__input--password"), "wrong password");
 
 		// wait for formState.isValid to be updated
-		await screen.findByTestId("SignIn__submit-button");
+		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 		// wait for formState.isValid to be updated
-		await screen.findByTestId("SignIn__submit-button");
+		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
@@ -107,12 +107,12 @@ describe("SignIn", () => {
 			userEvent.paste(screen.getByTestId("SignIn__input--password"), `wrong password ${index}`);
 
 			// wait for form to be updated
-			await screen.findByTestId("SignIn__submit-button");
+			await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
 
 			userEvent.click(screen.getByTestId("SignIn__submit-button"));
 
 			// wait for form to be updated
-			await screen.findByTestId("SignIn__submit-button");
+			await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
 		}
 
 		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
@@ -124,7 +124,7 @@ describe("SignIn", () => {
 		});
 
 		// wait for form to be updated
-		await screen.findByTestId("SignIn__submit-button");
+		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(

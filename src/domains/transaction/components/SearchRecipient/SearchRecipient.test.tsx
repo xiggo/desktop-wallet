@@ -107,7 +107,8 @@ describe("SearchRecipient", () => {
 
 		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await screen.findByTestId("HeaderSearchBar__input");
+		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
+
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -139,7 +140,8 @@ describe("SearchRecipient", () => {
 
 		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await screen.findByTestId("HeaderSearchBar__input");
+		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
+
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -171,7 +173,8 @@ describe("SearchRecipient", () => {
 
 		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await screen.findByTestId("HeaderSearchBar__input");
+		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
+
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -210,7 +213,8 @@ describe("SearchRecipient", () => {
 
 		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
-		await screen.findByTestId("HeaderSearchBar__input");
+		await expect(screen.findByTestId("HeaderSearchBar__input")).resolves.toBeVisible();
+
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
@@ -223,7 +227,7 @@ describe("SearchRecipient", () => {
 		await waitFor(() => expect(screen.getByTestId("Input")).toHaveValue("non-existent recipient address"));
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(0));
 
-		await screen.findByTestId("EmptyResults");
+		await expect(screen.findByTestId("EmptyResults")).resolves.toBeVisible();
 
 		jest.useRealTimers();
 	});

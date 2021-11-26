@@ -48,6 +48,9 @@ describe("LedgerConnectionStep", () => {
 	});
 
 	it("should emit event on connect", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const publicKeyPaths = new Map([
 			["m/44'/111'/0'/0/0", "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582"],
 			["m/44'/111'/1'/0/0", wallet.publicKey()!],
@@ -86,7 +89,8 @@ describe("LedgerConnectionStep", () => {
 			{ history, withProviders: false },
 		);
 
-		await screen.findByText("Successfully connected");
+		await expect(screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.CONNECT_SUCCESS"))).resolves.toBeVisible();
+
 		await waitFor(() => expect(onConnect).toHaveBeenCalledWith());
 
 		expect(container).toMatchSnapshot();
@@ -138,7 +142,9 @@ describe("LedgerConnectionStep", () => {
 			observer.error(new Error(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")));
 		});
 
-		await screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR"));
+		await expect(
+			screen.findByText(t("WALLETS.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR")),
+		).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -191,16 +197,24 @@ describe("LedgerConnectionStep", () => {
 			{ history, withProviders: false },
 		);
 
-		await screen.findByText("Open the ARK app on your device ...");
+		expect(
+			screen.getByText(
+				t("WALLETS.MODAL_LEDGER_WALLET.OPEN_APP", {
+					coin: wallet.network().coin(),
+				}),
+			),
+		).toBeInTheDocument();
 
 		await waitFor(() => expect(onFailed).toHaveBeenCalledWith(expect.any(Error)));
 
-		await screen.findByText(
-			t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
-				coin: wallet.network().coin(),
-				version: outdatedVersion,
-			}),
-		);
+		await expect(
+			screen.findByText(
+				t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
+					coin: wallet.network().coin(),
+					version: outdatedVersion,
+				}),
+			),
+		).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 

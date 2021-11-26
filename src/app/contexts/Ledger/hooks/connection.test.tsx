@@ -88,26 +88,26 @@ describe("Use Ledger Connection", () => {
 			observer!.next({ descriptor: "", type: "add" });
 		});
 
-		await screen.findByText("On");
+		await expect(screen.findByText("On")).resolves.toBeVisible();
 
 		act(() => {
 			observer!.next({ descriptor: "", type: "remove" });
 		});
 
-		await screen.findByText("Off");
+		await expect(screen.findByText("Off")).resolves.toBeVisible();
 
 		act(() => {
 			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
 		});
 
-		await screen.findByText("On");
+		await expect(screen.findByText("On")).resolves.toBeVisible();
 
 		act(() => {
 			observer.error(new Error("Test Error"));
 			observer.complete();
 		});
 
-		await screen.findByText("Test Error");
+		await expect(screen.findByText("Test Error")).resolves.toBeVisible();
 
 		listenSpy.mockReset();
 	});
@@ -231,7 +231,8 @@ describe("Use Ledger Connection", () => {
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
-			await screen.findByText("Connected");
+
+			await expect(screen.findByText("Connected")).resolves.toBeVisible();
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(1);
 
@@ -250,7 +251,8 @@ describe("Use Ledger Connection", () => {
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
-			await screen.findByText("Connected");
+
+			await expect(screen.findByText("Connected")).resolves.toBeVisible();
 
 			userEvent.click(screen.getByText("Disconnect"));
 
@@ -269,7 +271,10 @@ describe("Use Ledger Connection", () => {
 			userEvent.click(screen.getByText("Connect"));
 			userEvent.click(screen.getByText("Abort"));
 
-			await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR);
+			await expect(
+				screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
+			).resolves.toBeVisible();
+
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
 
 			await waitFor(() => expect(getPublicKeySpy).toHaveBeenCalledTimes(3));
@@ -294,7 +299,9 @@ describe("Use Ledger Connection", () => {
 				timeout: 4000,
 			});
 
-			await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR);
+			await expect(
+				screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
+			).resolves.toBeVisible();
 
 			await waitFor(() => () => expect(getPublicKeySpy).toHaveBeenCalledTimes(9));
 
@@ -322,12 +329,14 @@ describe("Use Ledger Connection", () => {
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
 
-			await screen.findByText(
-				t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
-					coin: wallet.network().coin(),
-					version: outdatedVersion,
-				}),
-			);
+			await expect(
+				screen.findByText(
+					t("WALLETS.MODAL_LEDGER_WALLET.UPDATE_ERROR", {
+						coin: wallet.network().coin(),
+						version: outdatedVersion,
+					}),
+				),
+			).resolves.toBeVisible();
 
 			getPublicKeySpy.mockReset();
 			getVersionSpy.mockReset();
@@ -357,7 +366,8 @@ describe("Use Ledger Connection", () => {
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
-			await screen.findByText("Connected");
+
+			await expect(screen.findByText("Connected")).resolves.toBeVisible();
 
 			expect(getPublicKeySpy).toHaveBeenCalledTimes(1);
 
@@ -417,7 +427,8 @@ describe("Use Ledger Connection", () => {
 			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
 
 			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
-			await screen.findByText("Connected");
+
+			await expect(screen.findByText("Connected")).resolves.toBeVisible();
 
 			expect(toastSpy).toHaveBeenCalledWith("Nano S connected");
 

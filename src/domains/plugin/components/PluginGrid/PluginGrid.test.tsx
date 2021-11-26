@@ -103,7 +103,7 @@ describe("PluginGrid", () => {
 		const { asFragment } = render(<PluginGrid itemsPerPage={4} plugins={[...plugins, ...morePlugins]} />);
 
 		for (const plugin of plugins) {
-			await screen.findByText(plugin.title);
+			await expect(screen.findByText(plugin.title)).resolves.toBeVisible();
 		}
 
 		expect(screen.getByTestId("Pagination")).toBeInTheDocument();
@@ -115,7 +115,9 @@ describe("PluginGrid", () => {
 
 		expect(screen.getByTestId("PluginGrid__empty-message")).toBeInTheDocument();
 
-		await screen.findByText(pluginTranslations.PAGE_PLUGIN_MANAGER.NO_PLUGINS_AVAILABLE);
+		await expect(
+			screen.findByText(pluginTranslations.PAGE_PLUGIN_MANAGER.NO_PLUGINS_AVAILABLE),
+		).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -124,7 +126,7 @@ describe("PluginGrid", () => {
 		const { asFragment } = render(<PluginGrid plugins={plugins} />);
 
 		for (const plugin of plugins) {
-			await screen.findByText(plugin.title);
+			await expect(screen.findByText(plugin.title)).resolves.toBeVisible();
 		}
 
 		expect(() => screen.getByTestId("Pagination")).toThrow(/Unable to find an element by/);
@@ -149,7 +151,7 @@ describe("PluginGrid", () => {
 		const { asFragment } = render(<PluginGrid plugins={plugins} showPagination={false} />);
 
 		for (const plugin of plugins) {
-			await screen.findByText(plugin.title);
+			await expect(screen.findByText(plugin.title)).resolves.toBeVisible();
 		}
 
 		expect(() => screen.getByTestId("Pagination")).toThrow(/Unable to find an element by/);
@@ -159,13 +161,13 @@ describe("PluginGrid", () => {
 	it("should split by page", async () => {
 		const { asFragment } = render(<PluginGrid plugins={plugins} itemsPerPage={1} />);
 
-		await screen.findByText(plugins[0].title);
+		await expect(screen.findByText(plugins[0].title)).resolves.toBeVisible();
 
 		await expect(screen.findByText(plugins[1].title)).rejects.toThrow(/Unable to find an element/);
 
 		userEvent.click(screen.getByTestId("Pagination__next"));
 
-		await screen.findByText(plugins[1].title);
+		await expect(screen.findByText(plugins[1].title)).resolves.toBeVisible();
 
 		await expect(screen.findByText(plugins[0].title)).rejects.toThrow(/Unable to find an element/);
 

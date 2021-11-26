@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 /* eslint-disable testing-library/no-unnecessary-act */ // @TODO remove and fix test
+import "jest-extended";
+
 import { Signatories } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 // @README: This import is fine in tests but should be avoided in production code.
@@ -376,7 +378,8 @@ describe("SendVote", () => {
 			jest.runOnlyPendingTimers();
 		});
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
+
 		await waitFor(() => expect(setInterval).toHaveBeenCalledTimes(1));
 
 		const historySpy = jest.spyOn(history, "push");
@@ -554,7 +557,7 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(broadcastMock).toHaveBeenNthCalledWith(2, voteFixture.data.id));
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -672,7 +675,7 @@ describe("SendVote", () => {
 			}
 		});
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -743,7 +746,7 @@ describe("SendVote", () => {
 
 		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
 
-		await screen.findAllByTestId("Amount");
+		await expect(screen.findAllByTestId("Amount")).resolves.toBeArray();
 
 		expect(screen.getAllByTestId("Amount")[3]).toHaveTextContent("0.02");
 	});
@@ -904,7 +907,7 @@ describe("SendVote", () => {
 			jest.advanceTimersByTime(1000);
 		});
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -974,7 +977,7 @@ describe("SendVote", () => {
 
 		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
-		await screen.findByTestId("SendVote__form-step");
+		await expect(screen.findByTestId("SendVote__form-step")).resolves.toBeVisible();
 	});
 
 	it("should proceed to authentication step by confirming fee warning", async () => {
@@ -1038,7 +1041,7 @@ describe("SendVote", () => {
 
 		userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
 
-		await screen.findByTestId("AuthenticationStep");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 	});
 
 	it("should show error if wrong mnemonic", async () => {
@@ -1157,12 +1160,12 @@ describe("SendVote", () => {
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// Review Step
-		await screen.findByTestId("SendVote__review-step");
+		await expect(screen.findByTestId("SendVote__review-step")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		// AuthenticationStep
-		await screen.findByTestId("AuthenticationStep");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockImplementation(() => {
 			throw new Error("broadcast error");
@@ -1176,7 +1179,8 @@ describe("SendVote", () => {
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
 
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
-		await screen.findByTestId("ErrorStep");
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ErrorStep__errorMessage")).toHaveTextContent("broadcast error");
 		expect(screen.getByTestId("ErrorStep__wallet-button")).toBeInTheDocument();
@@ -1259,7 +1263,7 @@ describe("SendVote", () => {
 			jest.advanceTimersByTime(1000);
 		});
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		expect(signMock).toHaveBeenCalledWith(
 			expect.objectContaining({
@@ -1382,7 +1386,7 @@ describe("SendVote", () => {
 			jest.advanceTimersByTime(1000);
 		});
 
-		await screen.findByTestId("TransactionSuccessful");
+		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
 		getPublicKeySpy.mockRestore();
 		signTransactionSpy.mockRestore();
@@ -1478,7 +1482,7 @@ describe("SendVote", () => {
 			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 		});
 
-		await screen.findByTestId("TransactionSuccessful", undefined, { timeout: 4000 });
+		await expect(screen.findByTestId("TransactionSuccessful", undefined, { timeout: 4000 })).resolves.toBeVisible();
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

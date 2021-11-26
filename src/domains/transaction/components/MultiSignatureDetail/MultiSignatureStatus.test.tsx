@@ -35,7 +35,7 @@ describe("MultiSignatureStatus", () => {
 			/>,
 		);
 
-		await screen.findByText(translations.MULTISIGNATURE.AWAITING_OUR_SIGNATURE);
+		await expect(screen.findByText(translations.MULTISIGNATURE.AWAITING_OUR_SIGNATURE)).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -60,7 +60,7 @@ describe("MultiSignatureStatus", () => {
 			/>,
 		);
 
-		await screen.findByText("Awaiting 1 other signature");
+		await expect(screen.findByText("Awaiting 1 other signature")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -85,7 +85,7 @@ describe("MultiSignatureStatus", () => {
 			/>,
 		);
 
-		await screen.findByText(translations.MULTISIGNATURE.AWAITING_CONFIRMATIONS);
+		await expect(screen.findByText(translations.MULTISIGNATURE.AWAITING_CONFIRMATIONS)).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -111,7 +111,7 @@ describe("MultiSignatureStatus", () => {
 			/>,
 		);
 
-		await screen.findByText(translations.MULTISIGNATURE.READY);
+		await expect(screen.findByText(translations.MULTISIGNATURE.READY)).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -139,7 +139,7 @@ describe("MultiSignatureStatus", () => {
 			/>,
 		);
 
-		await screen.findByText(translations.MULTISIGNATURE.AWAITING_FINAL_SIGNATURE);
+		await expect(screen.findByText(translations.MULTISIGNATURE.AWAITING_FINAL_SIGNATURE)).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 

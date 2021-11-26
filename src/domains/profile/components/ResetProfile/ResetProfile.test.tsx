@@ -18,7 +18,7 @@ describe("ResetProfile", () => {
 	it("should render", async () => {
 		const { asFragment } = render(<ResetProfile isOpen profile={profile} />);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		expect(screen.getByTestId("ResetProfile__submit-button")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -31,7 +31,7 @@ describe("ResetProfile", () => {
 
 		const theme = profile.settings().get(Contracts.ProfileSetting.Theme);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("ResetProfile__submit-button"));
 

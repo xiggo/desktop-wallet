@@ -25,7 +25,7 @@ describe("UnlockTokensAuthentication", () => {
 			withProviders: true,
 		});
 
-		await screen.findByTestId("AuthenticationStep");
+		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByText(translations.COMMON.BACK));
 

@@ -233,8 +233,8 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		await screen.findByTestId("AuthenticationStep__mnemonic");
-		await screen.findByTestId("AuthenticationStep__second-mnemonic");
+		await expect(screen.findByTestId("AuthenticationStep__mnemonic")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AuthenticationStep__second-mnemonic")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
@@ -267,8 +267,8 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		await screen.findByTestId("AuthenticationStep__secret");
-		await screen.findByTestId("AuthenticationStep__second-secret");
+		await expect(screen.findByTestId("AuthenticationStep__secret")).resolves.toBeVisible();
+		await expect(screen.findByTestId("AuthenticationStep__second-secret")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "abc");
 
@@ -295,7 +295,8 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		await screen.findByTestId("LedgerConfirmation-description");
+		await expect(screen.findByTestId("LedgerConfirmation-description")).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
 
@@ -354,7 +355,7 @@ describe("AuthenticationStep", () => {
 			},
 		);
 
-		await screen.findByTestId("LedgerConfirmation-description");
+		await expect(screen.findByTestId("LedgerConfirmation-description")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -376,7 +377,7 @@ describe("AuthenticationStep", () => {
 			},
 		);
 
-		await screen.findByTestId("LedgerConfirmation-description");
+		await expect(screen.findByTestId("LedgerConfirmation-description")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -410,7 +411,7 @@ describe("AuthenticationStep", () => {
 
 		renderWithForm(<AuthenticationStep wallet={wallet} />, { withProviders: true });
 
-		await screen.findByTestId("AuthenticationStep__encryption-password");
+		await expect(screen.findByTestId("AuthenticationStep__encryption-password")).resolves.toBeVisible();
 
 		jest.clearAllMocks();
 	});

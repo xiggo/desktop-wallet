@@ -24,11 +24,11 @@ describe("PluginSpecs", () => {
 
 		expect(ipcRendererMock).toHaveBeenLastCalledWith("open-external", "https://github.com/arkecosystem/explorer");
 
-		await screen.findByText("Payvo");
-		await screen.findByText("Utility");
-		await screen.findByText("View");
-		await screen.findByText("1.3.8");
-		await screen.findByText("4.2 Mb");
+		await expect(screen.findByText("Payvo")).resolves.toBeVisible();
+		await expect(screen.findByText("Utility")).resolves.toBeVisible();
+		await expect(screen.findByText("View")).resolves.toBeVisible();
+		await expect(screen.findByText("1.3.8")).resolves.toBeVisible();
+		await expect(screen.findByText("4.2 Mb")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -38,8 +38,8 @@ describe("PluginSpecs", () => {
 	it("should render without url and size", async () => {
 		const { asFragment } = render(<PluginSpecs author="Payvo" category="utility" version="1.3.8" />);
 
-		await screen.findByText("Payvo");
-		await screen.findByText("Utility");
+		await expect(screen.findByText("Payvo")).resolves.toBeVisible();
+		await expect(screen.findByText("Utility")).resolves.toBeVisible();
 
 		await expect(screen.findAllByText("N/A")).resolves.toHaveLength(2);
 		expect(asFragment()).toMatchSnapshot();

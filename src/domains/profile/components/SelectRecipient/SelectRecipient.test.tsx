@@ -53,7 +53,7 @@ describe("SelectRecipient", () => {
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
@@ -67,7 +67,7 @@ describe("SelectRecipient", () => {
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		const firstContactAddress = screen.getByTestId("RecipientListItem__select-button-2");
 

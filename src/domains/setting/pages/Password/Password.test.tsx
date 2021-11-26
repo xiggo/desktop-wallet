@@ -42,7 +42,7 @@ describe("Password Settings", () => {
 			},
 		);
 
-		await screen.findByTestId("Password-settings__input--password_1");
+		await expect(screen.findByTestId("Password-settings__input--password_1")).resolves.toBeVisible();
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -70,11 +70,11 @@ describe("Password Settings", () => {
 		userEvent.paste(screen.getByTestId("Password-settings__input--password_2"), password);
 
 		// wait for formState.isValid to be updated
-		await screen.findByTestId("Password-settings__submit-button");
+		await expect(screen.findByTestId("Password-settings__submit-button")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("Password-settings__submit-button"));
 
-		await screen.findByTestId(currentPasswordInput);
+		await expect(screen.findByTestId(currentPasswordInput)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -108,7 +108,7 @@ describe("Password Settings", () => {
 
 		userEvent.click(screen.getByTestId("Password-settings__submit-button"));
 
-		await screen.findByTestId("Password-settings__input--currentPassword");
+		await expect(screen.findByTestId("Password-settings__input--currentPassword")).resolves.toBeVisible();
 	});
 
 	it("should show an error toast if the current password does not match", async () => {
@@ -137,7 +137,7 @@ describe("Password Settings", () => {
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
-		await screen.findByTestId(currentPasswordInput);
+		await expect(screen.findByTestId(currentPasswordInput)).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId(currentPasswordInput), "wrong!");
 
@@ -187,7 +187,7 @@ describe("Password Settings", () => {
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
-		await screen.findByTestId(currentPasswordInput);
+		await expect(screen.findByTestId(currentPasswordInput)).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId(currentPasswordInput), password);
 
@@ -236,7 +236,7 @@ describe("Password Settings", () => {
 
 		userEvent.click(screen.getByTestId("side-menu__item--password"));
 
-		await screen.findByTestId("Password-settings__input--currentPassword");
+		await expect(screen.findByTestId("Password-settings__input--currentPassword")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("Password-settings__input--currentPassword"), password);
 
@@ -290,7 +290,7 @@ describe("Password Settings", () => {
 
 		userEvent.click(screen.getByTestId("Password-settings__remove-button"));
 
-		await screen.findByTestId("PasswordRemovalConfirmModal__input-password");
+		await expect(screen.findByTestId("PasswordRemovalConfirmModal__input-password")).resolves.toBeVisible();
 
 		// Fill in current password and confirm.
 

@@ -70,7 +70,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(screen.getByTestId("SignMessage__mnemonic-input")).toBeInTheDocument();
 
@@ -92,7 +92,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -116,7 +116,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(screen.getByTestId("SignMessage__mnemonic-input")).toBeInTheDocument();
 	});
@@ -160,7 +160,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
@@ -178,7 +178,7 @@ describe("SignMessage", () => {
 
 		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
 
 		const writeTextMock = jest.fn();
 		const clipboardOriginal = navigator.clipboard;
@@ -209,7 +209,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
@@ -223,11 +223,11 @@ describe("SignMessage", () => {
 
 		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("SignMessage__back-button"));
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 	});
 
 	it("should sign message with encryption password", async () => {
@@ -255,7 +255,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
@@ -273,7 +273,7 @@ describe("SignMessage", () => {
 
 		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(onSign).toHaveBeenCalledWith(signedMessage);
 
@@ -311,7 +311,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
@@ -329,7 +329,7 @@ describe("SignMessage", () => {
 
 		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(onSign).toHaveBeenCalledWith(signedMessage);
 
@@ -373,7 +373,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
 		expect(
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
@@ -431,7 +431,7 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 
@@ -483,7 +483,7 @@ describe("SignMessage", () => {
 			throw new Error("no device found");
 		});
 
-		await screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE);
+		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
 		const messageInput = screen.getByTestId("SignMessage__message-input");
 

@@ -88,8 +88,8 @@ describe("VoteDetail", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
 		);
 
-		await screen.findByText("Votes (1)");
-		await screen.findByText("delegate-0");
+		await expect(screen.findByText("Votes (1)")).resolves.toBeVisible();
+		await expect(screen.findByText("delegate-0")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -116,8 +116,8 @@ describe("VoteDetail", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
 		);
 
-		await screen.findByText("Unvotes (1)");
-		await screen.findByText("delegate-0");
+		await expect(screen.findByText("Unvotes (1)")).resolves.toBeVisible();
+		await expect(screen.findByText("delegate-0")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -144,8 +144,9 @@ describe("VoteDetail", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_VOTE_DETAIL.TITLE),
 		);
 
-		await screen.findByText("Votes (1)");
-		await screen.findByText("Unvotes (1)");
+		await expect(screen.findByText("Votes (1)")).resolves.toBeVisible();
+		await expect(screen.findByText("Unvotes (1)")).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.getAllByText("delegate-0")).toHaveLength(2));
 
 		expect(asFragment()).toMatchSnapshot();

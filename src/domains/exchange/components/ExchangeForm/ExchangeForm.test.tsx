@@ -1228,7 +1228,11 @@ describe("ExchangeForm", () => {
 		});
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
-		await screen.findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 });
+
+		await expect(
+			screen.findByTestId("ExchangeForm__finish-button", undefined, { timeout: 4000 }),
+		).resolves.toBeVisible();
+
 		userEvent.click(screen.getByTestId("ExchangeForm__finish-button"));
 
 		await waitFor(() => {

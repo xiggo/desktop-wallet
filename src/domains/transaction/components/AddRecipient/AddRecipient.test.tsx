@@ -151,7 +151,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
@@ -211,7 +211,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(multipleButton);
 
-		await screen.findByText(recipientLabel);
+		await expect(screen.findByText(recipientLabel)).resolves.toBeVisible();
 
 		userEvent.click(singleButton);
 
@@ -391,7 +391,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		const firstAddress = screen.getByTestId("RecipientListItem__select-button-0");
 
@@ -401,7 +401,7 @@ describe("AddRecipient", () => {
 
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "10000000000");
 
-		await screen.findByTestId("Input__error");
+		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 	});
 
 	it("should show error for zero balance", async () => {
@@ -413,7 +413,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		const firstAddress = screen.getByTestId("RecipientListItem__select-button-0");
 
@@ -423,7 +423,7 @@ describe("AddRecipient", () => {
 
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "0.1");
 
-		await screen.findByTestId("Input__error");
+		await expect(screen.findByTestId("Input__error")).resolves.toBeVisible();
 
 		mockWalletBalance.mockRestore();
 	});
@@ -435,7 +435,8 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
+
 		await waitFor(() => expect(() => screen.getByTestId("Input__error")).toThrow(/Unable to find an element by/));
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
@@ -608,11 +609,11 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
-		await screen.findByTestId("SelectRecipient__select-recipient");
+		await expect(screen.findByTestId("SelectRecipient__select-recipient")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 

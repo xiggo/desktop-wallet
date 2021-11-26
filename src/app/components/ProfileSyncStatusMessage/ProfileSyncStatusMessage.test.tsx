@@ -19,7 +19,7 @@ describe("SyncErrorMessage", () => {
 			},
 		);
 
-		await screen.findByText(failedNetworkNames[0]);
+		await expect(screen.findByText(failedNetworkNames[0])).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -34,8 +34,8 @@ describe("SyncErrorMessage", () => {
 			},
 		);
 
-		await screen.findByText(failedNetworkNames[0]);
-		await screen.findByText(failedNetworkNames[1]);
+		await expect(screen.findByText(failedNetworkNames[0])).resolves.toBeVisible();
+		await expect(screen.findByText(failedNetworkNames[1])).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -50,8 +50,8 @@ describe("SyncErrorMessage", () => {
 			},
 		);
 
-		await screen.findByText(failedNetworkNames[0]);
-		await screen.findByText(failedNetworkNames[1]);
+		await expect(screen.findByText(failedNetworkNames[0])).resolves.toBeVisible();
+		await expect(screen.findByText(failedNetworkNames[1])).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -67,9 +67,9 @@ describe("SyncErrorMessage", () => {
 			},
 		);
 
-		await screen.findByText(failedNetworkNames[0]);
-		await screen.findByText(failedNetworkNames[1]);
-		await screen.findByText(failedNetworkNames[2]);
+		await expect(screen.findByText(failedNetworkNames[0])).resolves.toBeVisible();
+		await expect(screen.findByText(failedNetworkNames[1])).resolves.toBeVisible();
+		await expect(screen.findByText(failedNetworkNames[2])).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("SyncErrorMessage__retry"));
 

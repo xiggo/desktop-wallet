@@ -13,7 +13,7 @@ describe("PaginationSearch", () => {
 			</PaginationSearch>,
 		);
 
-		await screen.findByTestId("PaginationSearchToggle");
+		await expect(screen.findByTestId("PaginationSearchToggle")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -25,13 +25,13 @@ describe("PaginationSearch", () => {
 			</PaginationSearch>,
 		);
 
-		await screen.findByTestId("PaginationSearchToggle");
+		await expect(screen.findByTestId("PaginationSearchToggle")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
-		await screen.findByTestId("PaginationSearchForm");
+		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 	});
 
 	it("should show search input and close", async () => {
@@ -41,13 +41,13 @@ describe("PaginationSearch", () => {
 			</PaginationSearch>,
 		);
 
-		await screen.findByTestId("PaginationSearchToggle");
+		await expect(screen.findByTestId("PaginationSearchToggle")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
-		await screen.findByTestId("PaginationSearchForm");
+		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PaginationSearch__cancel"));
 
@@ -65,13 +65,13 @@ describe("PaginationSearch", () => {
 			</PaginationSearch>,
 		);
 
-		await screen.findByTestId("PaginationSearchToggle");
+		await expect(screen.findByTestId("PaginationSearchToggle")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
-		await screen.findByTestId("PaginationSearchForm");
+		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
 		userEvent.type(screen.getByTestId("PaginationSearch__input"), "1");
 
@@ -93,13 +93,13 @@ describe("PaginationSearch", () => {
 			</PaginationSearch>,
 		);
 
-		await screen.findByTestId("PaginationSearchToggle");
+		await expect(screen.findByTestId("PaginationSearchToggle")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
-		await screen.findByTestId("PaginationSearchForm");
+		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
 		userEvent.type(screen.getByTestId("PaginationSearch__input"), "6");
 
@@ -121,13 +121,13 @@ describe("PaginationSearch", () => {
 			</PaginationSearch>,
 		);
 
-		await screen.findByTestId("PaginationSearchToggle");
+		await expect(screen.findByTestId("PaginationSearchToggle")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
-		await screen.findByTestId("PaginationSearchForm");
+		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PaginationSearch__submit"));
 
@@ -143,13 +143,13 @@ describe("PaginationSearch", () => {
 			</PaginationSearch>,
 		);
 
-		await screen.findByTestId("PaginationSearchToggle");
+		await expect(screen.findByTestId("PaginationSearchToggle")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
-		await screen.findByTestId("PaginationSearchForm");
+		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
 		userEvent.type(screen.getByTestId("PaginationSearch__input"), "0");
 
@@ -171,13 +171,13 @@ describe("PaginationSearch", () => {
 			</PaginationSearch>,
 		);
 
-		await screen.findByTestId("PaginationSearchToggle");
+		await expect(screen.findByTestId("PaginationSearchToggle")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
-		await screen.findByTestId("PaginationSearchForm");
+		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("PaginationSearch__input"), "100000000");
 
@@ -205,13 +205,13 @@ describe("PaginationSearch", () => {
 			</div>,
 		);
 
-		await screen.findByTestId("PaginationSearchToggle");
+		await expect(screen.findByTestId("PaginationSearchToggle")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.click(screen.getByTestId("PaginationSearchToggle"));
 
-		await screen.findByTestId("PaginationSearchForm");
+		await expect(screen.findByTestId("PaginationSearchForm")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("somewhere-outside"));
 

@@ -146,7 +146,7 @@ describe("PluginManagerProvider", () => {
 
 		expect(invokeMock).toHaveBeenLastCalledWith("plugin:loader-fs.remove", "/plugins/example");
 
-		await screen.findByRole("button");
+		await expect(screen.findByRole("button")).resolves.toBeVisible();
 	});
 
 	it("should fetch packages", async () => {
@@ -541,7 +541,7 @@ describe("PluginManagerProvider", () => {
 
 		userEvent.click(screen.getByText("Click"));
 
-		await screen.findByText("Update Available");
+		await expect(screen.findByText("Update Available")).resolves.toBeVisible();
 	});
 
 	it("should check if plugin update is available for plugin without minimum version", async () => {
@@ -582,7 +582,7 @@ describe("PluginManagerProvider", () => {
 
 		userEvent.click(screen.getByText("Click"));
 
-		await screen.findByText("Update Available");
+		await expect(screen.findByText("Update Available")).resolves.toBeVisible();
 	});
 
 	it("should update plugin", async () => {
@@ -679,7 +679,7 @@ describe("PluginManagerProvider", () => {
 
 		userEvent.click(screen.getByText("Fetch"));
 
-		await screen.findByText("Status: update available. Click to update");
+		await expect(screen.findByText("Status: update available. Click to update")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByText("Status: update available. Click to update"));
 
@@ -776,7 +776,7 @@ describe("PluginManagerProvider", () => {
 
 		userEvent.click(screen.getByText("Fetch"));
 
-		await screen.findByText("Update Available");
+		await expect(screen.findByText("Update Available")).resolves.toBeVisible();
 
 		userEvent.click(screen.getAllByText("Update")[0]);
 
@@ -923,9 +923,11 @@ describe("PluginManagerProvider", () => {
 		expect(screen.getByText("Size N/A")).toBeInTheDocument();
 
 		userEvent.click(screen.getByText("Fetch Plugins"));
-		await screen.findByText("Plugins 2");
+
+		await expect(screen.findByText("Plugins 2")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByText("Fetch Size"));
-		await screen.findByText("Size 122515");
+
+		await expect(screen.findByText("Size 122515")).resolves.toBeVisible();
 	});
 });

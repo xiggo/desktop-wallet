@@ -58,11 +58,12 @@ describe("Import Profile - Processing import", () => {
 		const { container } = render(
 			<ProcessingImport env={env} file={passwordProtectedDwe} onPasswordChange={onPasswordChange} />,
 		);
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
 
-		await screen.findByTestId("PasswordModal__submit-button");
+		await expect(screen.findByTestId("PasswordModal__submit-button")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
@@ -74,7 +75,8 @@ describe("Import Profile - Processing import", () => {
 	it("should call back when password modal is closed", async () => {
 		const onBack = jest.fn();
 		render(<ProcessingImport env={env} file={passwordProtectedDwe} onBack={onBack} password="test" />);
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
@@ -91,15 +93,17 @@ describe("Import Profile - Processing import", () => {
 				password="test"
 			/>,
 		);
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("PasswordModal__input"), "invalid");
 
-		await screen.findByTestId("PasswordModal__submit-button");
+		await expect(screen.findByTestId("PasswordModal__submit-button")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.getByTestId("PasswordModal__input")).toHaveValue("invalid"));
 		await waitFor(() => expect(onPasswordChange).not.toHaveBeenCalledWith("testtest2"));
 
@@ -117,15 +121,17 @@ describe("Import Profile - Processing import", () => {
 				shouldRequestPassword
 			/>,
 		);
-		await screen.findByTestId("modal__inner");
+
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("PasswordModal__input"), "invalid");
 
-		await screen.findByTestId("PasswordModal__submit-button");
+		await expect(screen.findByTestId("PasswordModal__submit-button")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
+
 		await waitFor(() => expect(onPasswordChange).not.toHaveBeenCalledWith("testtest2"));
 
 		expect(container).toMatchSnapshot();

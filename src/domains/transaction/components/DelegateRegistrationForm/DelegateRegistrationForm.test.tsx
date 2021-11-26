@@ -95,7 +95,7 @@ describe("DelegateRegistrationForm", () => {
 	it("should render form step", async () => {
 		const { asFragment } = renderComponent();
 
-		await screen.findByTestId("DelegateRegistrationForm__form-step");
+		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -103,7 +103,7 @@ describe("DelegateRegistrationForm", () => {
 	it("should render review step", async () => {
 		const { asFragment } = renderComponent({ activeTab: 2 });
 
-		await screen.findByTestId("DelegateRegistrationForm__review-step");
+		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -111,7 +111,7 @@ describe("DelegateRegistrationForm", () => {
 	it("should set username", async () => {
 		const { form } = renderComponent();
 
-		await screen.findByTestId("DelegateRegistrationForm__form-step");
+		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
 
@@ -126,8 +126,8 @@ describe("DelegateRegistrationForm", () => {
 			},
 		});
 
-		await screen.findByTestId("DelegateRegistrationForm__form-step");
-		await screen.findByTestId("InputFee");
+		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId("InputFee")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 

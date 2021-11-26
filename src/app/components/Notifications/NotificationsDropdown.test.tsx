@@ -72,7 +72,7 @@ describe("Notifications", () => {
 
 		userEvent.click(screen.getAllByTestId("TransactionRowMode")[0]);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
 
@@ -101,7 +101,7 @@ describe("Notifications", () => {
 
 		userEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
 
-		await screen.findByTestId("WalletUpdate__first-step");
+		await expect(screen.findByTestId("WalletUpdate__first-step")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -130,7 +130,7 @@ describe("Notifications", () => {
 
 		userEvent.click(screen.getAllByTestId("NotificationItem__action")[0]);
 
-		await screen.findByTestId("WalletUpdate__first-step");
+		await expect(screen.findByTestId("WalletUpdate__first-step")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 

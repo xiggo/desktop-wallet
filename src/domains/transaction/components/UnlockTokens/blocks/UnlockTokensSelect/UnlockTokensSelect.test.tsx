@@ -160,7 +160,7 @@ describe("UnlockTokensSelect", () => {
 			</Wrapper>,
 		);
 
-		await screen.findByTestId("EmptyBlock");
+		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -153,7 +153,7 @@ describe("Dashboard", () => {
 
 		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
-		await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
+		await expect(screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
@@ -163,7 +163,7 @@ describe("Dashboard", () => {
 
 		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
-		await screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE);
+		await expect(screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.CONNECT_DEVICE)).resolves.toBeVisible();
 
 		act(() => {
 			observer!.next({ descriptor: "", type: "add" });
@@ -260,7 +260,7 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await screen.findByTestId("EmptyBlock");
+		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -288,7 +288,7 @@ describe("Dashboard", () => {
 
 		userEvent.click(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")[0]);
 
-		await screen.findByTestId("modal__inner");
+		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 

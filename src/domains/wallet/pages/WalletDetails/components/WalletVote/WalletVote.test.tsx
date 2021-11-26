@@ -44,7 +44,7 @@ describe("WalletVote", () => {
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await screen.findByTestId("WalletVote");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -59,7 +59,7 @@ describe("WalletVote", () => {
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await screen.findByTestId("WalletVote");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 		expect(screen.getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -74,7 +74,7 @@ describe("WalletVote", () => {
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await screen.findByTestId("WalletVote");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 		expect(screen.getByRole("button")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
@@ -91,7 +91,7 @@ describe("WalletVote", () => {
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await screen.findByTestId("WalletVote");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 		expect(screen.getByRole("button")).toBeDisabled();
 		expect(asFragment()).toMatchSnapshot();
@@ -113,7 +113,7 @@ describe("WalletVote", () => {
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await screen.findByTestId("WalletVote");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 		expect(screen.getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -134,7 +134,7 @@ describe("WalletVote", () => {
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await screen.findByTestId("WalletVote");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 		expect(screen.getByText(t("COMMON.LEARN_MORE"))).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -151,8 +151,8 @@ describe("WalletVote", () => {
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await screen.findByTestId("WalletVote");
-		await screen.findByText("0/101");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+		await expect(screen.findByText("0/101")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -182,7 +182,7 @@ describe("WalletVote", () => {
 
 			const delegate = wallet.voting().current()[0];
 
-			await screen.findByTestId("WalletVote");
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 			expect(screen.getByText(delegate.wallet!.username()!)).toBeInTheDocument();
 			expect(screen.getByText(`#${delegate.wallet!.rank()}`)).toBeInTheDocument();
@@ -215,7 +215,7 @@ describe("WalletVote", () => {
 
 			const delegate = wallet.voting().current()[0];
 
-			await screen.findByTestId("WalletVote");
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 			expect(screen.getByText(delegate.wallet!.username()!)).toBeInTheDocument();
 			expect(screen.getByText(`#${delegate.wallet!.rank()}`)).toBeInTheDocument();
@@ -249,7 +249,7 @@ describe("WalletVote", () => {
 
 			const delegate = wallet.voting().current()[0];
 
-			await screen.findByTestId("WalletVote");
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 			expect(screen.getByText(delegate.wallet!.username()!)).toBeInTheDocument();
 			expect(screen.getByText(t("COMMON.NOT_AVAILABLE"))).toBeInTheDocument();
@@ -299,7 +299,7 @@ describe("WalletVote", () => {
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await screen.findByTestId("WalletVote");
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 			expect(
@@ -338,7 +338,7 @@ describe("WalletVote", () => {
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await screen.findByTestId("WalletVote");
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 			expect(
@@ -376,7 +376,7 @@ describe("WalletVote", () => {
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await screen.findByTestId("WalletVote");
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 			expect(
@@ -421,7 +421,7 @@ describe("WalletVote", () => {
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await screen.findByTestId("WalletVote");
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
@@ -462,7 +462,7 @@ describe("WalletVote", () => {
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await screen.findByTestId("WalletVote");
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
@@ -512,7 +512,7 @@ describe("WalletVote", () => {
 				<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 			);
 
-			await screen.findByTestId("WalletVote");
+			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
 
@@ -554,7 +554,8 @@ describe("WalletVote", () => {
 
 		render(<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />);
 
-		await screen.findByTestId("WalletVote");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
 
 		expect(onButtonClick).toHaveBeenCalledWith("current");
@@ -575,7 +576,8 @@ describe("WalletVote", () => {
 
 		render(<WalletVote profile={profile} wallet={wallet} onButtonClick={onButtonClick} env={env} />);
 
-		await screen.findByTestId("WalletVote");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
+
 		await waitFor(() => expect(screen.getByTestId("WalletVote")).not.toBeDisabled());
 
 		userEvent.click(screen.getByText(t("COMMON.VOTE")));
@@ -610,7 +612,7 @@ describe("WalletVote", () => {
 			<WalletVote profile={profile} wallet={wallet} onButtonClick={jest.fn()} env={env} />,
 		);
 
-		await screen.findByTestId("WalletVote");
+		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 

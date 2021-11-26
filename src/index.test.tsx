@@ -40,7 +40,8 @@ describe("Application root", () => {
 
 		userEvent.click(screen.getByText("Navigate"));
 
-		await screen.findByTestId("ConfirmationModal");
+		await expect(screen.findByTestId("ConfirmationModal")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByText(translations.NO));
 
 		// Same page without confirmation modal
@@ -49,7 +50,8 @@ describe("Application root", () => {
 
 		userEvent.click(screen.getByText("Navigate"));
 
-		await screen.findByTestId("ConfirmationModal");
+		await expect(screen.findByTestId("ConfirmationModal")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByText(translations.YES));
 
 		expect(screen.getByText("Second")).toBeInTheDocument();

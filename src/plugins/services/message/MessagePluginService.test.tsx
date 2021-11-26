@@ -77,7 +77,7 @@ describe("MessagePluginService", () => {
 
 		userEvent.click(screen.getByText("Open Modal"));
 
-		await screen.findByTestId("SignMessage");
+		await expect(screen.findByTestId("SignMessage")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("SignMessage__mnemonic-input"), getDefaultWalletMnemonic());
 
@@ -85,7 +85,7 @@ describe("MessagePluginService", () => {
 
 		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
 
-		await screen.findByText("My Plugin Message");
+		await expect(screen.findByText("My Plugin Message")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByText("Close Modal"));
 

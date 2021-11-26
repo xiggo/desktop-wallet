@@ -149,7 +149,8 @@ describe("LedgerScanStep", () => {
 		const { container } = render(<Component />);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
-		await screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG");
+
+		await expect(screen.findByText("DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.getAllByRole("checkbox")).toHaveLength(2));
 

@@ -63,7 +63,7 @@ describe("Configuration Context", () => {
 
 		userEvent.click(screen.getByTestId("Configuration__consumer"));
 
-		await screen.findByTestId("Configuration__list");
+		await expect(screen.findByTestId("Configuration__list")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

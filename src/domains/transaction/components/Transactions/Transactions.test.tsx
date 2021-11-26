@@ -155,7 +155,7 @@ describe("Transactions", () => {
 
 		userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await screen.findByTestId("dropdown__option--core-0");
+		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("dropdown__option--core-0"));
 
@@ -189,11 +189,11 @@ describe("Transactions", () => {
 
 		userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await screen.findByTestId("dropdown__option--core-9");
+		await expect(screen.findByTestId("dropdown__option--core-9")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("dropdown__option--core-9"));
 
-		await screen.findByTestId("EmptyBlock");
+		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 	});
 
 	it("should filter by type and see empty screen", async () => {
@@ -225,11 +225,12 @@ describe("Transactions", () => {
 
 		userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await screen.findByTestId("dropdown__option--magistrate-0");
+		await expect(screen.findByTestId("dropdown__option--magistrate-0")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("dropdown__option--magistrate-0"));
 
-		await screen.findByTestId("EmptyBlock");
+		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
+
 		transactionsAggregateMock.mockRestore();
 	});
 
@@ -450,7 +451,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await screen.findByTestId("EmptyBlock");
+		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 	});
 
 	it("should update wallet filters", async () => {
@@ -464,7 +465,7 @@ describe("Transactions", () => {
 			},
 		);
 
-		await screen.findByTestId("EmptyBlock");
+		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

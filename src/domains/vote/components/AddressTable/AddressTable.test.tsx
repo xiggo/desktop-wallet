@@ -42,7 +42,7 @@ describe("AddressTable", () => {
 
 		expect(container).toBeInTheDocument();
 
-		await screen.findByTestId("StatusIcon__icon");
+		await expect(screen.findByTestId("StatusIcon__icon")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

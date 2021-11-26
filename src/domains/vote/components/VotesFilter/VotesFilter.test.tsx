@@ -17,7 +17,7 @@ describe("VotesFilter", () => {
 
 		userEvent.click(screen.getByTestId("dropdown__toggle"));
 
-		await screen.findByTestId("dropdown__content");
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -27,7 +27,7 @@ describe("VotesFilter", () => {
 
 		userEvent.click(screen.getByTestId("dropdown__toggle"));
 
-		await screen.findByTestId("dropdown__content");
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -37,7 +37,7 @@ describe("VotesFilter", () => {
 
 		userEvent.click(screen.getByTestId("dropdown__toggle"));
 
-		await screen.findByTestId("dropdown__content");
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -48,7 +48,7 @@ describe("VotesFilter", () => {
 
 		userEvent.click(screen.getByTestId("dropdown__toggle"));
 
-		await screen.findByTestId("dropdown__content");
+		await expect(screen.findByTestId("dropdown__content")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 

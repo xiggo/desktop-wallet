@@ -35,7 +35,7 @@ describe("FilterTransactions", () => {
 
 		userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await screen.findByTestId("dropdown__option--core-0");
+		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 	});
@@ -49,7 +49,7 @@ describe("FilterTransactions", () => {
 
 		userEvent.click(screen.getByRole("button", { name: /Type/ }));
 
-		await screen.findByTestId("dropdown__option--core-0");
+		await expect(screen.findByTestId("dropdown__option--core-0")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("dropdown__option--core-0"));
 

@@ -257,7 +257,7 @@ describe("CreateProfile", () => {
 
 		fireEvent.blur(inputElement);
 
-		await screen.findByTestId("SelectProfileImage__avatar-identicon");
+		await expect(screen.findByTestId("SelectProfileImage__avatar-identicon")).resolves.toBeVisible();
 
 		inputElement.select();
 		userEvent.paste(inputElement, "test profile");
@@ -267,7 +267,7 @@ describe("CreateProfile", () => {
 
 		fireEvent.blur(inputElement);
 
-		await screen.findByTestId("SelectProfileImage__avatar-identicon");
+		await expect(screen.findByTestId("SelectProfileImage__avatar-identicon")).resolves.toBeVisible();
 
 		userEvent.clear(inputElement);
 		await waitFor(() => expect(inputElement).not.toHaveValue());

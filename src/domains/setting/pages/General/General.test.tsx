@@ -687,7 +687,7 @@ describe("General Settings", () => {
 			within((getSelectInput("CURRENCY") as any).parentNode.parentNode).getByTestId("SelectDropdown__caret"),
 		);
 
-		await screen.findByText("EUR (€)");
+		await expect(screen.findByText("EUR (€)")).resolves.toBeVisible();
 
 		expect(() => screen.getByText("VND (₫)")).toThrow(/Unable to find an element/);
 
@@ -709,7 +709,7 @@ describe("General Settings", () => {
 			within((getSelectInput("CURRENCY") as any).parentNode.parentNode).getByTestId("SelectDropdown__caret"),
 		);
 
-		await screen.findByText("VND (₫)");
+		await expect(screen.findByText("VND (₫)")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByText("VND (₫)"));
 
