@@ -8,18 +8,17 @@ import { env } from "@/utils/testing-library";
 
 import { common } from "./Common";
 
-let t: any;
 let network: Networks.Network;
 
 describe("Common", () => {
 	beforeAll(() => {
 		network = env.profiles().first().wallets().first().network();
-
-		const { result } = renderHook(() => useTranslation());
-		t = result.current.t;
 	});
 
 	it("should validate low balance", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const commonValidation = common(t).fee(1, network);
 
 		expect(commonValidation.validate.valid("1234")).toBe(
@@ -31,6 +30,9 @@ describe("Common", () => {
 	});
 
 	it("should validate zero balance", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const error = t("TRANSACTION.VALIDATION.LOW_BALANCE_AMOUNT", {
 			balance: "0",
 			coinId: network.coin(),
@@ -41,6 +43,9 @@ describe("Common", () => {
 	});
 
 	it("should require a fee", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		expect(common(t).fee(1, network).validate.valid("0")).toBe(
 			t("COMMON.VALIDATION.FIELD_REQUIRED", {
 				field: t("COMMON.FEE"),
@@ -49,12 +54,18 @@ describe("Common", () => {
 	});
 
 	it("should fail to validate negative fee", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const commonValidation = common(t).fee(1, network);
 
 		expect(commonValidation.validate.valid("-1")).toBe(t("TRANSACTION.VALIDATION.FEE_NEGATIVE"));
 	});
 
 	it("should validate minimum fee on network with size feeType", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const sizeFeeNetwork = new Networks.Network(LSK.manifest, LSK.manifest.networks["lsk.testnet"]);
 
 		const commonValidation = common(t).fee(100, sizeFeeNetwork, {

@@ -4,7 +4,7 @@ import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
-import { TFunction, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
@@ -14,17 +14,12 @@ import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testi
 
 import { AddParticipant } from "./AddParticipant";
 
-let t: TFunction;
-
 describe("Add Participant", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
 	let wallet2: Contracts.IReadWriteWallet;
 
 	beforeEach(async () => {
-		const { result } = renderHook(() => useTranslation());
-		t = result.current.t;
-
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 		wallet2 = profile.wallets().last();
@@ -33,6 +28,9 @@ describe("Add Participant", () => {
 	});
 
 	it("should fail to find", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		nock("https://ark-test.payvo.com")
 			.get("/api/wallets")
 			.query({ address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba" })
@@ -67,6 +65,9 @@ describe("Add Participant", () => {
 	});
 
 	it("should fail with cold wallet", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		nock("https://ark-test.payvo.com")
 			.get("/api/wallets")
 			.query({ address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P" })
@@ -104,6 +105,9 @@ describe("Add Participant", () => {
 	});
 
 	it("should fail with a duplicate address", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
 				<AddParticipant
@@ -142,6 +146,9 @@ describe("Add Participant", () => {
 	});
 
 	it("should fail if cannot find the address remotely", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		nock("https://ark-test.payvo.com")
 			.get("/api/wallets")
 			.query({ address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20" })

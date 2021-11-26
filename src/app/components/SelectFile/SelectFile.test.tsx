@@ -15,13 +15,6 @@ jest.mock("fs", () => ({
 }));
 
 describe("SelectFile", () => {
-	let t: any;
-
-	beforeAll(() => {
-		const { result } = renderHook(() => useTranslation());
-		t = result.current.t;
-	});
-
 	it("should render with dwe file format", () => {
 		const { container } = render(<SelectFile fileFormat=".dwe" />);
 
@@ -113,6 +106,9 @@ describe("SelectFile", () => {
 	});
 
 	it("should show error if the dropped file has wrong type", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const fileFormat = ".json";
 
 		const { container } = render(<SelectFile fileFormat={fileFormat} />);
@@ -133,6 +129,9 @@ describe("SelectFile", () => {
 	});
 
 	it("should show error if multiple files are dropped", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const { container } = render(<SelectFile fileFormat=".json" />);
 
 		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {

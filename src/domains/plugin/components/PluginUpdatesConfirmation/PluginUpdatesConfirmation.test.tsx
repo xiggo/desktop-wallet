@@ -1,14 +1,12 @@
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
-import { TFunction, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 import { render, screen } from "@/utils/testing-library";
 
 import { PluginUpdatesConfirmation } from "./PluginUpdatesConfirmation";
 
 describe("Plugin Updates Confirmation", () => {
-	let t: TFunction;
-
 	const plugins = [
 		{
 			isOfficial: true,
@@ -30,12 +28,10 @@ describe("Plugin Updates Confirmation", () => {
 		},
 	];
 
-	beforeAll(() => {
-		const { result } = renderHook(() => useTranslation());
-		t = result.current.t;
-	});
-
 	it("should render with compatible updates", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const { container } = render(<PluginUpdatesConfirmation isOpen plugins={[plugins[0]]} />);
 
 		expect(screen.getAllByRole("row")).toHaveLength(2);
@@ -47,6 +43,9 @@ describe("Plugin Updates Confirmation", () => {
 	});
 
 	it("should render with compatible and incompatible updates", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const { container } = render(<PluginUpdatesConfirmation isOpen plugins={plugins} />);
 
 		expect(screen.getAllByRole("row")).toHaveLength(3);

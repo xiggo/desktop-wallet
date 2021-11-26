@@ -21,14 +21,7 @@ let defaultDelegate: {
 	governanceIdentifier: string;
 };
 
-let t: any;
-
 describe("WalletVote", () => {
-	beforeAll(() => {
-		const { result } = renderHook(() => useTranslation());
-		t = result.current.t;
-	});
-
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
@@ -57,6 +50,9 @@ describe("WalletVote", () => {
 	});
 
 	it("should render without votes", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([]);
 
 		const { asFragment } = render(
@@ -106,6 +102,9 @@ describe("WalletVote", () => {
 	});
 
 	it("should handle wallet votes error", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockImplementation(() => {
 			throw new Error("delegate error");
 		});
@@ -123,6 +122,9 @@ describe("WalletVote", () => {
 	});
 
 	it("should handle delegate sync error", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const delegateSyncSpy = jest.spyOn(env.delegates(), "sync").mockImplementation(() => {
 			throw new Error("delegate error");
 		});
@@ -159,6 +161,9 @@ describe("WalletVote", () => {
 	});
 
 	describe("single vote networks", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		it("should render a vote for an active delegate", async () => {
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
 				{
@@ -190,6 +195,9 @@ describe("WalletVote", () => {
 		});
 
 		it("should render a vote for a standby delegate", async () => {
+			const { result } = renderHook(() => useTranslation());
+			const { t } = result.current;
+
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
 				{
 					amount: 0,
@@ -220,6 +228,9 @@ describe("WalletVote", () => {
 		});
 
 		it("should render a vote for a delegate without rank", async () => {
+			const { result } = renderHook(() => useTranslation());
+			const { t } = result.current;
+
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
 				{
 					amount: 0,
@@ -253,6 +264,9 @@ describe("WalletVote", () => {
 	});
 
 	describe("multi vote networks", () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		let maxVotesSpy: jest.SpyInstance;
 
 		beforeEach(() => (maxVotesSpy = jest.spyOn(wallet.network(), "maximumVotesPerWallet").mockReturnValue(101)));
@@ -298,6 +312,9 @@ describe("WalletVote", () => {
 		});
 
 		it("should render a vote for multiple standby delegates", async () => {
+			const { result } = renderHook(() => useTranslation());
+			const { t } = result.current;
+
 			const votes = [
 				{
 					amount: 0,
@@ -334,6 +351,9 @@ describe("WalletVote", () => {
 		});
 
 		it("should render a vote for multiple active and standby delegates", async () => {
+			const { result } = renderHook(() => useTranslation());
+			const { t } = result.current;
+
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
 				{
 					amount: 0,
@@ -373,6 +393,9 @@ describe("WalletVote", () => {
 		});
 
 		it("should render a vote for multiple active and resigned delegates", async () => {
+			const { result } = renderHook(() => useTranslation());
+			const { t } = result.current;
+
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
 				{
 					amount: 0,
@@ -412,6 +435,9 @@ describe("WalletVote", () => {
 		});
 
 		it("should render a vote for multiple standby and resigned delegates", async () => {
+			const { result } = renderHook(() => useTranslation());
+			const { t } = result.current;
+
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
 				{
 					amount: 0,
@@ -450,6 +476,9 @@ describe("WalletVote", () => {
 		});
 
 		it("should render a vote for multiple active, standby and resigned delegates", async () => {
+			const { result } = renderHook(() => useTranslation());
+			const { t } = result.current;
+
 			const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
 				{
 					amount: 0,
@@ -499,6 +528,9 @@ describe("WalletVote", () => {
 	});
 
 	it("should emit action on multivote click", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		const walletSpy = jest.spyOn(wallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
@@ -531,6 +563,9 @@ describe("WalletVote", () => {
 	});
 
 	it("should emit action on button click", async () => {
+		const { result } = renderHook(() => useTranslation());
+		const { t } = result.current;
+
 		await wallet.synchroniser().votes();
 		await wallet.synchroniser().identity();
 		await wallet.synchroniser().coin();
