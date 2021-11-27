@@ -4297,8 +4297,9 @@ exports[`General Settings should render 1`] = `
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="General-settings__submit-button"
+                      disabled=""
                       type="submit"
                     >
                       <div
@@ -5728,8 +5729,9 @@ exports[`General Settings should show identicon when removing image if name is s
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="General-settings__submit-button"
+                      disabled=""
                       type="submit"
                     >
                       <div
@@ -7161,8 +7163,9 @@ exports[`General Settings should update profile 1`] = `
                       </div>
                     </button>
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
                       data-testid="General-settings__submit-button"
+                      disabled=""
                       type="submit"
                     >
                       <div

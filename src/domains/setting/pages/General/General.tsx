@@ -261,6 +261,8 @@ export const GeneralSettings: React.FC = () => {
 		window.scrollTo({ behavior: "smooth", top: 0 });
 	};
 
+	const isSaveButtonDisabled = isSubmitting || !isProfileRestored || (isDirty ? !isValid : true);
+
 	return (
 		<SettingsWrapper profile={profile} activeSettings="general">
 			<Header title={t("SETTINGS.GENERAL.TITLE")} subtitle={t("SETTINGS.GENERAL.SUBTITLE")} />
@@ -279,11 +281,17 @@ export const GeneralSettings: React.FC = () => {
 						name={formattedName}
 						onSelect={(value) => {
 							if (!value) {
-								setValue("avatar", Helpers.Avatar.make(formattedName));
+								setValue("avatar", Helpers.Avatar.make(formattedName), {
+									shouldDirty: true,
+									shouldValidate: true,
+								});
 								return;
 							}
 
-							setValue("avatar", value);
+							setValue("avatar", value, {
+								shouldDirty: true,
+								shouldValidate: true,
+							});
 						}}
 					/>
 
@@ -451,11 +459,7 @@ export const GeneralSettings: React.FC = () => {
 						<span>{t("COMMON.RESET_SETTINGS")}</span>
 					</Button>
 
-					<Button
-						disabled={!isValid || isSubmitting || !isProfileRestored}
-						type="submit"
-						data-testid="General-settings__submit-button"
-					>
+					<Button disabled={isSaveButtonDisabled} type="submit" data-testid="General-settings__submit-button">
 						{t("COMMON.SAVE")}
 					</Button>
 				</div>

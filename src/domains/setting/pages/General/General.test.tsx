@@ -577,6 +577,12 @@ describe("General Settings", () => {
 		await waitFor(() => expect(screen.getByTestId("General-settings__input--name")).toHaveValue(profile.name()));
 
 		await waitFor(() => {
+			expect(screen.getByTestId("General-settings__submit-button")).toBeDisabled();
+		});
+
+		userEvent.type(screen.getByTestId("General-settings__input--name"), "new profile name");
+
+		await waitFor(() => {
 			expect(screen.getByTestId("General-settings__submit-button")).toBeEnabled();
 		});
 
