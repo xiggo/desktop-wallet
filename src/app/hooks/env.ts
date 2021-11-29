@@ -1,3 +1,5 @@
+import { Networks } from "@payvo/sdk";
+import { sortBy } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
 import { useMemo } from "react";
 import { useHistory, useParams } from "react-router-dom";
@@ -18,15 +20,31 @@ export const useActiveProfile = (): Contracts.IProfile => {
 		}
 
 		return context.env.profiles().findById(profileId);
-	}, [context, profileId]); // eslint-disable-line react-hooks/exhaustive-deps
+	}, [context.env, history.location.pathname, profileId]);
 };
 
-export const useActiveWallet = () => {
+export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 	const profile = useActiveProfile();
 	const { walletId } = useParams<{ walletId: string }>();
 
 	return useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
 };
+
+export const useNetworks = (profile: Contracts.IProfile) =>
+	useMemo<Networks.Network[]>(() => {
+		const results = profile
+			.wallets()
+			.values()
+			.reduce<Record<string, Networks.Network>>(
+				(accumulator, wallet) => ({
+					...accumulator,
+					[wallet.networkId()]: wallet.network(),
+				}),
+				{},
+			);
+
+		return sortBy(Object.values(results), (network) => network.displayName());
+	}, [profile]);
 
 export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
 	const profile = useActiveProfile();

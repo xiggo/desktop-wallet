@@ -1,6 +1,7 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
+import { Column } from "react-table";
 
 import { Table } from "@/app/components/Table";
 
@@ -14,10 +15,11 @@ interface Properties {
 export const UnconfirmedTransactionTable = memo(({ transactions, profile }: Properties) => {
 	const { t } = useTranslation();
 
-	const columns: any = [
+	const columns: Column<DTO.ExtendedConfirmedTransactionData>[] = [
 		{
 			Header: t("COMMON.DATE"),
-			accessor: (transaction: DTO.ExtendedConfirmedTransactionData) => transaction.timestamp?.()?.toUNIX(),
+			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+			accessor: (transaction) => transaction.timestamp?.()?.toUNIX(),
 			sortDescFirst: true,
 		},
 		{
@@ -26,7 +28,8 @@ export const UnconfirmedTransactionTable = memo(({ transactions, profile }: Prop
 		},
 		{
 			Header: t("COMMON.AMOUNT"),
-			accessor: (transaction: DTO.ExtendedConfirmedTransactionData) => transaction.total?.(),
+			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+			accessor: (transaction) => transaction.total?.(),
 			className: "justify-end",
 		},
 	];

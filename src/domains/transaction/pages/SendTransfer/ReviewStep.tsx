@@ -16,7 +16,7 @@ interface ReviewStepProperties {
 	wallet: Contracts.IReadWriteWallet;
 }
 
-export const ReviewStep: React.FC<ReviewStepProperties> = ({ wallet }: ReviewStepProperties) => {
+export const ReviewStep: React.VFC<ReviewStepProperties> = ({ wallet }) => {
 	const { t } = useTranslation();
 
 	const { unregister, watch } = useFormContext();

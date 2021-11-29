@@ -6,6 +6,7 @@ import { LSK } from "@payvo/sdk-lsk";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
+import { buildTransferData } from "domains/transaction/pages/SendTransfer/SendTransfer.helpers";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React, { useEffect } from "react";
@@ -2172,6 +2173,10 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("clipboard-button__wrapper")).toBeInTheDocument();
 		expect(container).toMatchSnapshot();
 
+		userEvent.click(screen.getByTestId("ErrorStep__repeat-button"));
+
+		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
+
 		userEvent.click(screen.getByTestId("ErrorStep__wallet-button"));
 
 		const walletDetailPage = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
@@ -2452,7 +2457,8 @@ describe("SendTransfer", () => {
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
 		// Step 2
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
@@ -2596,7 +2602,7 @@ describe("SendTransfer", () => {
 
 		expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357");
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
 
 		// proceed to step 2
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
@@ -2703,7 +2709,8 @@ describe("SendTransfer", () => {
 		await waitFor(() => expect(screen.getAllByRole("radio")[0]).toHaveTextContent("0.00357"));
 
 		// Step 2
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+
 		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
 
 		await expect(screen.findByTestId("SendTransfer__review-step")).resolves.toBeVisible();
@@ -2786,5 +2793,42 @@ describe("SendTransfer", () => {
 		expect(screen.getByTestId("SendTransfer__network-step")).toBeInTheDocument();
 
 		replaceSpy.mockRestore();
+	});
+
+	it("should buildTransferData return zero amount for empty multi recipients", async () => {
+		const addresses = [wallet.address(), secondWallet.address()];
+
+		const transferData = await buildTransferData({
+			coin: wallet.coin(),
+			memo: "any memo",
+			recipients: [
+				{
+					address: addresses[0],
+				},
+				{
+					address: addresses[1],
+				},
+			],
+		});
+
+		transferData.payments.map((payment, index) => {
+			expect(payment.amount).toBe(0);
+			expect(payment.to).toBe(addresses[index]);
+		});
+	});
+
+	it("should buildTransferData return zero amount for empty single recipient", async () => {
+		const transferData = await buildTransferData({
+			coin: wallet.coin(),
+			memo: "any memo",
+			recipients: [
+				{
+					address: wallet.address(),
+				},
+			],
+		});
+
+		expect(transferData.amount).toBe(0);
+		expect(transferData.to).toBe(wallet.address());
 	});
 });

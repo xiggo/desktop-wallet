@@ -37,11 +37,13 @@ export const FormStep = ({
 	const { recipients, memo = "" } = getValues();
 	const { network, senderAddress } = watch();
 
-	let senderWallet: Contracts.IReadWriteWallet | undefined;
-	if (network) {
+	const senderWallet = useMemo(() => {
+		if (!network) {
+			return undefined;
+		}
 		assertNetwork(network);
-		senderWallet = profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
-	}
+		return profile.wallets().findByAddressWithNetwork(senderAddress, network.id());
+	}, [network, profile, senderAddress]);
 
 	const [feeTransactionData, setFeeTransactionData] = useState<Record<string, any> | undefined>();
 
@@ -98,8 +100,9 @@ export const FormStep = ({
 	const handleSelectSender = (address: any) => {
 		setValue("senderAddress", address, { shouldDirty: true, shouldValidate: false });
 
-		const senderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
-		const isFullyRestoredAndSynced = senderWallet?.hasBeenFullyRestored() && senderWallet?.hasSyncedWithNetwork();
+		const newSenderWallet = profile.wallets().findByAddressWithNetwork(address, network.id());
+		const isFullyRestoredAndSynced =
+			newSenderWallet?.hasBeenFullyRestored() && newSenderWallet?.hasSyncedWithNetwork();
 
 		if (!isFullyRestoredAndSynced) {
 			syncProfileWallets(true);

@@ -1,9 +1,8 @@
-import { Networks } from "@payvo/sdk";
-import { isEmptyObject, sortBy, uniq } from "@payvo/sdk-helpers";
+import { isEmptyObject, uniq } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
 import { useMemo, useState } from "react";
 
-import { useWalletAlias } from "@/app/hooks";
+import { useNetworks, useWalletAlias } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
 import { FilterOption } from "@/domains/vote/components/VotesFilter";
 
@@ -19,6 +18,7 @@ export const useVoteFilters = ({
 	hasWalletId: boolean;
 }) => {
 	const { defaultConfiguration, useTestNetworks } = useWalletFilters({ profile });
+	const basicNetworks = useNetworks(profile);
 	const { getWalletAlias } = useWalletAlias();
 	const walletAddress = hasWalletId ? wallet.address() : "";
 	const walletNetwork = hasWalletId ? wallet.network().id() : "";
@@ -32,22 +32,14 @@ export const useVoteFilters = ({
 	const [searchQuery, setSearchQuery] = useState("");
 	const [maxVotes, setMaxVotes] = useState(walletMaxVotes);
 
-	const networks = useMemo(() => {
-		const networks: Record<string, { network: Networks.Network; isSelected: boolean }> = {};
-
-		for (const wallet of profile.wallets().values()) {
-			const networkId = wallet.networkId();
-
-			if (!networks[networkId]) {
-				networks[networkId] = {
-					isSelected: selectedNetworkIds.includes(networkId),
-					network: wallet.network(),
-				};
-			}
-		}
-
-		return sortBy(Object.values(networks), ({ network }) => network.displayName());
-	}, [profile, selectedNetworkIds]);
+	const networks = useMemo(
+		() =>
+			basicNetworks.map((network) => ({
+				isSelected: selectedNetworkIds.includes(network.id()),
+				network,
+			})),
+		[basicNetworks, selectedNetworkIds],
+	);
 
 	const isFilterChanged = useMemo(() => {
 		if (walletsDisplayType !== defaultConfiguration.walletsDisplayType) {

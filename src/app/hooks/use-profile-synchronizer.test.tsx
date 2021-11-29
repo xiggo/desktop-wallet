@@ -371,7 +371,7 @@ describe("useProfileSynchronizer", () => {
 		await renderAct(async () => {
 			configuration.setConfiguration({ profileIsSyncingWallets: true });
 		});
-		await waitFor(() => expect(configuration.profileIsSyncingWallets).toBe(true), { timeout: 4000 });
+		await waitFor(() => expect(configuration.profileIsSyncingWallets).toBe(true), { timeout: 5000 });
 
 		await renderAct(async () => {
 			configuration.setConfiguration({ profileIsSyncingWallets: false });
