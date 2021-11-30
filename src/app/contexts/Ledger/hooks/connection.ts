@@ -23,7 +23,7 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 
 	const [deviceName, setDeviceName] = useState<string | undefined>();
 
-	const { isBusy, isConnected, error } = state;
+	const { device, isBusy, isConnected, isWaiting, error } = state;
 
 	useEffect(() => {
 		if (deviceName) {
@@ -75,11 +75,11 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 					}),
 				);
 
-				wallet.data().set(Contracts.WalletData.LedgerModel, state.device?.id);
+				wallet.data().set(Contracts.WalletData.LedgerModel, device?.id);
 			}
 			await persist();
 		},
-		[persist, state],
+		[persist, device],
 	);
 
 	const connect = useCallback(
@@ -150,9 +150,9 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 	const setIdle = useCallback(() => dispatch({ type: "connected" }), []);
 
 	const abortConnectionRetry = useCallback(() => (abortRetryReference.current = true), []);
-	const isAwaitingConnection = useMemo(() => state.isWaiting && !state.isConnected, [state]);
-	const isAwaitingDeviceConfirmation = useMemo(() => state.isWaiting && state.isConnected, [state]);
-	const hasDeviceAvailable = useMemo(() => !!state.device, [state]);
+	const isAwaitingConnection = useMemo(() => isWaiting && !isConnected, [isConnected, isWaiting]);
+	const isAwaitingDeviceConfirmation = useMemo(() => isWaiting && isConnected, [isConnected, isWaiting]);
+	const hasDeviceAvailable = useMemo(() => !!device, [device]);
 
 	useEffect(() => {
 		const subscription = listenDevice();
@@ -173,7 +173,7 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 		isAwaitingDeviceConfirmation,
 		isBusy,
 		isConnected,
-		ledgerDevice: state.device,
+		ledgerDevice: device,
 		setBusy,
 		setIdle,
 		transport,
