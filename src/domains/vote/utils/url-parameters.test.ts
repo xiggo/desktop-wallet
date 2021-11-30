@@ -1,4 +1,4 @@
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 
 import { appendParameters, getParameters, ParameterNameProperties } from "./url-parameters";

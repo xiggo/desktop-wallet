@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Badge } from "@/app/components/Badge";
 import { Circle } from "@/app/components/Circle";
 
-import { ToggleAllOptionProperties } from "./models";
+import { ToggleAllOptionProperties } from "./FilterNetwork.contracts";
 
 export const ToggleAllOption = ({ onClick, isHidden = false, isSelected = false }: ToggleAllOptionProperties) => {
 	const { t } = useTranslation();

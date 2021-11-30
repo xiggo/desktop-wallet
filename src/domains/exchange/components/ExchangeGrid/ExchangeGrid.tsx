@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { ExchangeCard, ExchangeCardSkeleton } from "@/domains/exchange/components/ExchangeCard";
-import { Exchange } from "@/domains/exchange/contracts";
+import { Exchange } from "@/domains/exchange/exchange.contracts";
 
 interface ExchangeGridProperties {
 	exchanges: Exchange[];

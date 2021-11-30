@@ -6,7 +6,7 @@ import { styled } from "twin.macro";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 
-import { PaginationProperties } from "./Pagination.models";
+import { PaginationProperties } from "./Pagination.contracts";
 import { PaginationButton, PaginationWrapper } from "./Pagination.styles";
 import { PaginationSearch } from "./PaginationSearch";
 

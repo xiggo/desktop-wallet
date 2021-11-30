@@ -8,7 +8,7 @@ import { Header } from "@/app/components/Header";
 import { Input } from "@/app/components/Input";
 import { useValidation } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
-import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.models";
+import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 
 import { AddParticipant, Participant } from "./components/AddParticipant/AddParticipant";
 

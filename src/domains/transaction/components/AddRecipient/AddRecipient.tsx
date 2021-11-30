@@ -18,7 +18,7 @@ import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { RecipientList } from "@/domains/transaction/components/RecipientList";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
 
-import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.models";
+import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
 import { AddRecipientWrapper } from "./AddRecipient.styles";
 
 const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: ToggleButtonProperties) => {

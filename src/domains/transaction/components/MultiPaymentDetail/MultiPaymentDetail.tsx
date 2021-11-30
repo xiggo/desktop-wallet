@@ -11,7 +11,7 @@ import {
 	TransactionStatus,
 	TransactionTimestamp,
 } from "@/domains/transaction/components/TransactionDetail";
-import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
+import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 
 import { MultiPaymentRecipients } from "./components/MultiPaymentRecipients";
 

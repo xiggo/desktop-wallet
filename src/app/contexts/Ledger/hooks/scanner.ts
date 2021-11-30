@@ -2,8 +2,8 @@ import { uniqBy } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";
 
-import { LedgerData } from "@/app/contexts/Ledger/contracts";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
+import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
 
 import { scannerReducer } from "./scanner.state";
 

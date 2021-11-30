@@ -10,7 +10,7 @@ import { Header } from "@/app/components/Header";
 import { useValidation } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { TransactionSender } from "@/domains/transaction/components/TransactionDetail";
-import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.models";
+import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 
 export const GenerationStep = ({ wallet, profile }: FormStepProperties) => {
 	const { t } = useTranslation();

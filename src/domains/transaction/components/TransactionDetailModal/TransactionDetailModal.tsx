@@ -12,7 +12,7 @@ import { TransferDetail } from "@/domains/transaction/components/TransferDetail"
 import { UnlockTokenDetail } from "@/domains/transaction/components/UnlockTokenDetail";
 import { VoteDetail } from "@/domains/transaction/components/VoteDetail";
 
-import { TransactionAliases, TransactionDetailModalProperties } from "./TransactionDetailModal.models";
+import { TransactionAliases, TransactionDetailModalProperties } from "./TransactionDetailModal.contracts";
 
 export const TransactionDetailModal = ({
 	isOpen,

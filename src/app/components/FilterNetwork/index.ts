@@ -1,4 +1,4 @@
 export * from "./FilterNetwork";
-export * from "./models";
+export * from "./FilterNetwork.contracts";
 export * from "./NetworkOptions";
 export * from "./ToggleAllOption";

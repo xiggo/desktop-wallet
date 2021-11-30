@@ -6,8 +6,8 @@ import { useFormField } from "@/app/components/Form/useFormField";
 import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 
+import { OptionProperties, SelectDropdownProperties, SelectProperties } from "./SelectDropdown.contracts";
 import { getMainOptions, isMatch, matchOptions } from "./SelectDropdown.helpers";
-import { OptionProperties, SelectDropdownProperties, SelectProperties } from "./SelectDropdown.models";
 import { SelectDropdownRenderOptions as RenderOptions } from "./SelectDropdownRenderOptions";
 import { SelectOptionsList } from "./styles";
 

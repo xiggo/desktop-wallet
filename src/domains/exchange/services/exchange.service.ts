@@ -8,7 +8,7 @@ import {
 	Order,
 	OrderResponse,
 	OrderStatusResponse,
-} from "@/domains/exchange/contracts";
+} from "@/domains/exchange/exchange.contracts";
 
 // export const exchangeHost = "http://exchange-server.test/api";
 export const exchangeHost = "https://exchanges.payvo.com/api";

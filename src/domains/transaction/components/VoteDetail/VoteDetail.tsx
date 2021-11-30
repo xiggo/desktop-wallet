@@ -12,7 +12,7 @@ import {
 	TransactionTimestamp,
 	TransactionVotes,
 } from "@/domains/transaction/components/TransactionDetail";
-import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
+import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 
 export const VoteDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();

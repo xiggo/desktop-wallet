@@ -12,7 +12,7 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
 
-import { SendVoteStepProperties } from "./SendVote.models";
+import { SendVoteStepProperties } from "./SendVote.contracts";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;

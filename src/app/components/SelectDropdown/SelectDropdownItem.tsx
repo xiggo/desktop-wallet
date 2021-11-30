@@ -1,7 +1,7 @@
 import cn from "classnames";
 import React, { memo } from "react";
 
-import { SelectDropdownItemProperties } from "./SelectDropdown.models";
+import { SelectDropdownItemProperties } from "./SelectDropdown.contracts";
 
 export const SelectDropdownItem = memo(
 	({

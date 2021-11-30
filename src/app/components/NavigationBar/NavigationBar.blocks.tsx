@@ -18,7 +18,7 @@ import { useConfiguration } from "@/app/contexts";
 import { useActiveProfile, useScroll, useTheme } from "@/app/hooks";
 import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
-import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.models";
+import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
 import { assertString } from "@/utils/assertions";
 import { openExternal } from "@/utils/electron-utils";
 

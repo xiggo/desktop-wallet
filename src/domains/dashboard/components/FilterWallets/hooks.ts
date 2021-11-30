@@ -4,7 +4,7 @@ import { useMemo } from "react";
 
 import { useWalletConfig } from "@/domains/dashboard/hooks";
 
-import { FilterWalletsHookProperties } from "./models";
+import { FilterWalletsHookProperties } from "./FilterWallets.contracts";
 
 export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { defaultConfiguration, setValue, walletsDisplayType, selectedNetworkIds, viewType } = useWalletConfig({

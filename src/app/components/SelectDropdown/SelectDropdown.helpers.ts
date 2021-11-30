@@ -1,4 +1,4 @@
-import { OptionGroupProperties, OptionProperties } from "./SelectDropdown.models";
+import { OptionGroupProperties, OptionProperties } from "./SelectDropdown.contracts";
 
 export const isOptionGroup = (options: OptionProperties | OptionGroupProperties): boolean =>
 	(options as OptionGroupProperties)?.title !== undefined;

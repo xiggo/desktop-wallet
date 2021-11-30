@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 import { useLedgerContext } from "@/app/contexts";
 import { Participant } from "@/domains/transaction/components/MultiSignatureRegistrationForm/components/AddParticipant/AddParticipant";
-import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendRegistration/SendRegistration.models";
+import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError, withAbortPromise } from "@/domains/transaction/utils";
 import { assertString } from "@/utils/assertions";
 

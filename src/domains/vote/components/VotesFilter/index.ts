@@ -1,2 +1,2 @@
-export * from "./models";
 export * from "./VotesFilter";
+export * from "./VotesFilter.contracts";

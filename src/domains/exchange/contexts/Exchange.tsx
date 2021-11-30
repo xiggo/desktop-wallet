@@ -2,7 +2,7 @@ import { camelCase } from "@payvo/sdk-helpers";
 import React, { useCallback, useMemo, useState } from "react";
 
 import { httpClient } from "@/app/services";
-import { Exchange } from "@/domains/exchange/contracts";
+import { Exchange } from "@/domains/exchange/exchange.contracts";
 import { exchangeHost, ExchangeService } from "@/domains/exchange/services/exchange.service";
 
 interface Properties {

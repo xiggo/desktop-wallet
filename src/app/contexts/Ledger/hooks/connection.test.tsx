@@ -7,7 +7,7 @@ import nock from "nock";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { minVersionList } from "@/app/contexts/Ledger/contracts";
+import { minVersionList } from "@/app/contexts/Ledger/Ledger.contracts";
 import { toasts } from "@/app/services";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import {

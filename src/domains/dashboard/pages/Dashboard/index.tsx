@@ -1,2 +1,2 @@
 export * from "./Dashboard";
-export * from "./Dashboard.models";
+export * from "./Dashboard.contracts";

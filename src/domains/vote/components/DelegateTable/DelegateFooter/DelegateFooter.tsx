@@ -9,7 +9,7 @@ import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 
 import { LabelWrapper, StyledCircle as Circle, TextWrapper } from "./DelegateFooter.styles";
 

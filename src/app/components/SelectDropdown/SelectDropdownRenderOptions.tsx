@@ -1,12 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { isOptionGroup } from "./SelectDropdown.helpers";
 import {
 	OptionGroupProperties,
 	OptionProperties,
 	SelectDropdownRenderOptionsProperties,
-} from "./SelectDropdown.models";
+} from "./SelectDropdown.contracts";
+import { isOptionGroup } from "./SelectDropdown.helpers";
 import { SelectDropdownItem } from "./SelectDropdownItem";
 
 export const SelectDropdownRenderOptions = ({

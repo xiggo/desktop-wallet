@@ -8,8 +8,8 @@ import { Table } from "@/app/components/Table";
 
 import { DelegateFooter } from "./DelegateFooter";
 import { DelegateRow } from "./DelegateRow";
+import { DelegateTableProperties, VoteDelegateProperties } from "./DelegateTable.contracts";
 import { delegateExistsInVotes, useDelegateTableColumns } from "./DelegateTable.helpers";
-import { DelegateTableProperties, VoteDelegateProperties } from "./DelegateTable.models";
 
 const DELEGATES_PER_PAGE = 50;
 

@@ -4,7 +4,7 @@ import React from "react";
 import { TransactionFee, TransactionVotes } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionSuccessful } from "@/domains/transaction/components/TransactionSuccessful";
 
-import { SendVoteStepProperties } from "./SendVote.models";
+import { SendVoteStepProperties } from "./SendVote.contracts";
 
 type SummaryStepProperties = {
 	transaction: DTO.ExtendedSignedTransactionData;

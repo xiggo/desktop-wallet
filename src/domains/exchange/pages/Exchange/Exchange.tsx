@@ -13,7 +13,7 @@ import { ExchangeGrid } from "@/domains/exchange/components/ExchangeGrid";
 import { ExchangeNavigationBar } from "@/domains/exchange/components/ExchangeNavigationBar";
 import { ExchangeTransactionsTable } from "@/domains/exchange/components/ExchangeTransactionsTable";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { OrderStatusResponse } from "@/domains/exchange/contracts";
+import { OrderStatusResponse } from "@/domains/exchange/exchange.contracts";
 import { useOrderStatus } from "@/domains/exchange/hooks/use-order-status";
 import { assertExchangeTransaction } from "@/domains/exchange/utils";
 import { assertString } from "@/utils/assertions";

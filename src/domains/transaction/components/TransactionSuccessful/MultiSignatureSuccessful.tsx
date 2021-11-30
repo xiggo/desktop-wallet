@@ -18,7 +18,7 @@ import {
 	TransactionSender,
 	TransactionType,
 } from "@/domains/transaction/components/TransactionDetail";
-import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendRegistration/SendRegistration.models";
+import { ExtendedSignedTransactionData } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { assertString } from "@/utils/assertions";
 
 interface TransactionSuccessfulProperties {

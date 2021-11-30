@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import { Divider } from "@/app/components/Divider";
 import { InputCurrency } from "@/app/components/Input";
 import { TableCell } from "@/app/components/Table";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
 import { VoteAmount } from "@/domains/vote/validations/VoteAmount";
 
 interface DelegateVoteAmountProperties {

@@ -15,7 +15,7 @@ import { useWalletAlias } from "@/app/hooks";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
-import { SearchWalletListItemProperties, SearchWalletProperties } from "./SearchWallet.models";
+import { SearchWalletListItemProperties, SearchWalletProperties } from "./SearchWallet.contracts";
 
 const SearchWalletListItem = ({
 	index,

@@ -5,7 +5,7 @@ import React from "react";
 import { env, render, screen, waitFor, within } from "@/utils/testing-library";
 
 import { FilterNetwork, FilterNetworks } from "./FilterNetwork";
-import { FilterOption } from "./models";
+import { FilterOption } from "./FilterNetwork.contracts";
 import { NetworkOptions } from "./NetworkOptions";
 import { ToggleAllOption } from "./ToggleAllOption";
 

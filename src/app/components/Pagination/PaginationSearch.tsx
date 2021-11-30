@@ -9,7 +9,7 @@ import { Form } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { clickOutsideHandler } from "@/app/hooks";
 
-import { PaginationSearchFormProperties, PaginationSearchProperties } from "./Pagination.models";
+import { PaginationSearchFormProperties, PaginationSearchProperties } from "./Pagination.contracts";
 import { PaginationSearchToggleButton, PaginationSearchWrapper, SearchInput } from "./Pagination.styles";
 
 const PaginationSearchWrapperStyled = styled.span`

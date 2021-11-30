@@ -12,7 +12,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useValidation } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { ExchangeFormState, Order } from "@/domains/exchange/contracts";
+import { ExchangeFormState, Order } from "@/domains/exchange/exchange.contracts";
 import {
 	assertCurrency,
 	assertExchangeService,

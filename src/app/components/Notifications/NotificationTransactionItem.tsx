@@ -6,7 +6,7 @@ import { TransactionRowAmount } from "@/domains/transaction/components/Transacti
 import { TransactionRowMode } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMode";
 import { TransactionRowRecipientLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipientLabel";
 
-import { NotificationTransactionItemProperties } from "./contracts";
+import { NotificationTransactionItemProperties } from "./Notifications.contracts";
 
 export const NotificationTransactionItem = ({
 	transaction,

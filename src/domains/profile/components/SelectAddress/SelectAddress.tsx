@@ -10,7 +10,7 @@ import { Icon } from "@/app/components/Icon";
 import { Input } from "@/app/components/Input";
 import { useWalletAlias } from "@/app/hooks";
 import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
-import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.models";
+import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
 
 type SelectAddressProperties = {
 	wallet?: SelectedWallet;

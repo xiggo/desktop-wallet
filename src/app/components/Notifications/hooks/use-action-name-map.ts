@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { Action } from "@/app/components/Notifications/contracts";
+import { Action } from "@/app/components/Notifications/Notifications.contracts";
 
 export const useActionNameMap = () => {
 	const { t } = useTranslation();

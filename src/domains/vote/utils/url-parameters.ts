@@ -1,4 +1,4 @@
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 
 export type ParameterNameProperties = "vote" | "unvote";
 

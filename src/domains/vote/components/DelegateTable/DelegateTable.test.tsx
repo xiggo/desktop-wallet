@@ -10,7 +10,7 @@ import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { DelegateTable } from "./DelegateTable";
-import { VoteDelegateProperties } from "./DelegateTable.models";
+import { VoteDelegateProperties } from "./DelegateTable.contracts";
 
 let useRandomNumberSpy: jest.SpyInstance;
 

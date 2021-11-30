@@ -12,7 +12,7 @@ import {
 	TransactionStatus,
 	TransactionTimestamp,
 } from "@/domains/transaction/components/TransactionDetail";
-import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.models";
+import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
 
 export const DelegateResignationDetail = ({ isOpen, transaction, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();

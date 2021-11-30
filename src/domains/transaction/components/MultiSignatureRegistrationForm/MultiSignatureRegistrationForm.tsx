@@ -6,7 +6,7 @@ import {
 	SendRegistrationComponent,
 	SendRegistrationDetailsOptions,
 	SendRegistrationForm,
-} from "@/domains/transaction/pages/SendRegistration/SendRegistration.models";
+} from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";

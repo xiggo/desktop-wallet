@@ -1,2 +1,2 @@
 export * from "./SelectDropdown";
-export * from "./SelectDropdown.models";
+export * from "./SelectDropdown.contracts";

@@ -11,7 +11,7 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
 
-import { SendVoteStepProperties } from "./SendVote.models";
+import { SendVoteStepProperties } from "./SendVote.contracts";
 
 export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) => {
 	const { t } = useTranslation();

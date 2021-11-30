@@ -15,7 +15,7 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useNetworkOptions } from "@/app/hooks";
 import { CreateContact, DeleteContact, UpdateContact } from "@/domains/contact/components";
 import { ContactListItem } from "@/domains/contact/components/ContactListItem";
-import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.models";
+import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 import { assertNetwork } from "@/utils/assertions";
 
 import { ContactsHeaderExtraProperties } from "./Contacts.contracts";

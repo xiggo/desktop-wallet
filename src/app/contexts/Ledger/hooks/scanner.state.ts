@@ -1,4 +1,4 @@
-import { LedgerData } from "@/app/contexts/Ledger/contracts";
+import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
 
 import { Handlers, OfUnion } from "./reducer.contracts";
 

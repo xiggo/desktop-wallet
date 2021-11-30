@@ -7,8 +7,8 @@ import { Avatar } from "@/app/components/Avatar";
 import { Icon } from "@/app/components/Icon";
 import { Link } from "@/app/components/Link";
 import { TableCell, TableRow } from "@/app/components/Table";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { delegateExistsInVotes } from "@/domains/vote/components/DelegateTable/DelegateTable.helpers";
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
 
 import { DelegateRowSkeleton } from "./DelegateRowSkeleton";
 import { DelegateVoteAmount } from "./DelegateVoteAmount";

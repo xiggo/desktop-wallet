@@ -5,7 +5,7 @@ import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 
-import { FilterOption } from "./models";
+import { FilterOption } from "./FilterNetwork.contracts";
 
 export const NetworkOption = ({ network, isSelected, onClick }: FilterOption) => {
 	const renderOption = () => {

@@ -7,7 +7,7 @@ import { Spinner } from "@/app/components/Spinner";
 import { useQueryParams } from "@/app/hooks";
 import { ExchangeForm } from "@/domains/exchange/components/ExchangeForm";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { Exchange } from "@/domains/exchange/contracts";
+import { Exchange } from "@/domains/exchange/exchange.contracts";
 import { shouldUseDarkColors } from "@/utils/electron-utils";
 
 export const ExchangeView = () => {

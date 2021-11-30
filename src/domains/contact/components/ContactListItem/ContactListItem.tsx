@@ -15,7 +15,7 @@ import { useNetworkOptions } from "@/app/hooks";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { assertNetwork } from "@/utils/assertions";
 
-import { ContactListItemOption, ContactListItemProperties } from "./ContactListItem.models";
+import { ContactListItemOption, ContactListItemProperties } from "./ContactListItem.contracts";
 
 const defaultProps = {
 	options: [

@@ -1,7 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { useHistory } from "react-router-dom";
 
-import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.models";
+import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 
 interface VoteActionsProperties {

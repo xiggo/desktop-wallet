@@ -5,7 +5,7 @@ import { Dropdown } from "@/app/components/Dropdown/Dropdown";
 import { FilterNetworks } from "@/app/components/FilterNetwork";
 import { Icon } from "@/app/components/Icon";
 
-import { FilterWalletsProperties } from "./models";
+import { FilterWalletsProperties } from "./FilterWallets.contracts";
 
 export const FilterWallets = ({ networks, walletsDisplayType, useTestNetworks, onChange }: FilterWalletsProperties) => {
 	const { t } = useTranslation();

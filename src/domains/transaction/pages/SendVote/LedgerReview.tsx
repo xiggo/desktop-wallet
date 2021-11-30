@@ -6,7 +6,7 @@ import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox"
 import { TransactionDetail } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
 
-import { SendVoteStepProperties } from "./SendVote.models";
+import { SendVoteStepProperties } from "./SendVote.contracts";
 
 export const VoteLedgerReview = ({ wallet, votes, unvotes }: SendVoteStepProperties) => {
 	const { getValues } = useFormContext();

@@ -8,7 +8,7 @@ import { Dropdown } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 
-import { FilterProperties } from "./models";
+import { FilterProperties } from "./VotesFilter.contracts";
 
 export const VotesFilter = ({ onChange, selectedOption = "all", totalCurrentVotes }: FilterProperties) => {
 	const { t } = useTranslation();

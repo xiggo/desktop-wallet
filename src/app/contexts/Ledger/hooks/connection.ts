@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import semver from "semver";
 
 import { useEnvironmentContext } from "@/app/contexts/Environment";
-import { LedgerData, minVersionList } from "@/app/contexts/Ledger/contracts";
+import { LedgerData, minVersionList } from "@/app/contexts/Ledger/Ledger.contracts";
 import { formatLedgerDerivationPath } from "@/app/contexts/Ledger/utils/format-ledger-derivation-path";
 import { toasts } from "@/app/services";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";

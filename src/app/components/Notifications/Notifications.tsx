@@ -7,9 +7,9 @@ import { Table } from "@/app/components/Table";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NotificationTransactionsTable } from "@/domains/transaction/components/TransactionTable/NotificationTransactionsTable";
 
-import { NotificationItemProperties, NotificationsProperties } from "./contracts";
 import { useNotifications } from "./hooks/use-notifications";
 import { NotificationItem } from "./NotificationItem";
+import { NotificationItemProperties, NotificationsProperties } from "./Notifications.contracts";
 import { NotificationsWrapper } from "./styles";
 
 export const Notifications = ({ profile, onNotificationAction, onTransactionClick }: NotificationsProperties) => {

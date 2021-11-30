@@ -10,7 +10,7 @@ import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { useWelcomeModal } from "@/domains/profile/hooks/use-welcome-modal";
 
-import { WelcomeModalStep } from "./WelcomeModal.models";
+import { WelcomeModalStep } from "./WelcomeModal.contracts";
 
 const Banner = ({ step }: { step: WelcomeModalStep }) => {
 	if (step >= WelcomeModalStep.StepFirst) {

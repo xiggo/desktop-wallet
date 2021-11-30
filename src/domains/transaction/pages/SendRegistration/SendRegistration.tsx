@@ -26,7 +26,7 @@ import {
 } from "@/domains/transaction/components/SecondSignatureRegistrationForm";
 import { useFeeConfirmation, useMultiSignatureRegistration } from "@/domains/transaction/hooks";
 
-import { SendRegistrationForm } from "./SendRegistration.models";
+import { SendRegistrationForm } from "./SendRegistration.contracts";
 import { SummaryStep } from "./SummaryStep";
 
 export const SendRegistration = () => {

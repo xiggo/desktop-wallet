@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { Checkbox } from "@/app/components/Checkbox";
 
-import { FilterNetworksProperties, FilterOption } from "./models";
+import { FilterNetworksProperties, FilterOption } from "./FilterNetwork.contracts";
 import { NetworkOptions } from "./NetworkOptions";
 import { ToggleAllOption } from "./ToggleAllOption";
 
