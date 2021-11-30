@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 
 import { TableCell, TableRow } from "@/app/components/Table";
+import { useWalletAlias } from "@/app/hooks";
 import { TransactionRowAmount } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowAmount";
 import { TransactionRowMode } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowMode";
 import { TransactionRowRecipientLabel } from "@/domains/transaction/components/TransactionTable/TransactionRow/TransactionRowRecipientLabel";
@@ -15,12 +16,17 @@ export const NotificationTransactionItem = ({
 	containmentRef,
 	onTransactionClick,
 }: NotificationTransactionItemProperties) => {
-	const [walletName, setWalletName] = useState<string>();
+	const { getWalletAlias } = useWalletAlias();
 
-	useEffect(() => {
-		const senderWallet = profile.contacts().findByAddress(transaction?.sender());
-		setWalletName(senderWallet[0]?.name());
-	}, [profile, transaction]);
+	const { alias } = useMemo(
+		() =>
+			getWalletAlias({
+				address: transaction.recipient(),
+				network: transaction.wallet().network(),
+				profile,
+			}),
+		[profile, getWalletAlias, transaction],
+	);
 
 	return (
 		<VisibilitySensor
@@ -31,9 +37,9 @@ export const NotificationTransactionItem = ({
 		>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
 				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
-					<TransactionRowMode transaction={transaction} isCompact />
+					<TransactionRowMode transaction={transaction} address={transaction.recipient()} isCompact />
 					<div className="w-20 flex-1">
-						<TransactionRowRecipientLabel transaction={transaction} walletName={walletName} />
+						<TransactionRowRecipientLabel transaction={transaction} walletName={alias} />
 					</div>
 				</TableCell>
 

@@ -74,7 +74,7 @@ describe("Notifications", () => {
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		expect(screen.getAllByTestId("Address__alias")).toHaveLength(2);
+		expect(screen.getAllByTestId("Address__alias")).toHaveLength(5);
 
 		expect(container).toMatchSnapshot();
 

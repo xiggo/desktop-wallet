@@ -1,23 +1,21 @@
-import { DTO } from "@payvo/sdk-profiles";
 import cn from "classnames";
-import React, { useMemo } from "react";
+import React, { useMemo, VFC } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Circle } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 
+import { BaseTransactionRowModeProperties, TransactionRowModeProperties } from "./TransactionRowMode.contracts";
 import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 
-interface Properties {
-	type: string;
-	isSent: boolean;
-	isReturn?: boolean;
-	address: string;
-	isCompact: boolean;
-}
-
-export const BaseTransactionRowMode = ({ type, isSent, isReturn, address, isCompact }: Properties) => {
+export const BaseTransactionRowMode: VFC<BaseTransactionRowModeProperties> = ({
+	type,
+	isSent,
+	isReturn,
+	address,
+	isCompact,
+}) => {
 	const { t } = useTranslation();
 
 	const iconSize = isCompact ? "xs" : "lg";
@@ -71,20 +69,17 @@ export const BaseTransactionRowMode = ({ type, isSent, isReturn, address, isComp
 	);
 };
 
-export const TransactionRowMode = ({
+export const TransactionRowMode: VFC<TransactionRowModeProperties> = ({
 	transaction,
 	transactionType,
+	address,
 	isCompact,
-}: {
-	transaction: DTO.ExtendedConfirmedTransactionData;
-	transactionType?: string;
-	isCompact: boolean;
 }) => (
 	<BaseTransactionRowMode
 		isCompact={isCompact}
 		isSent={transaction.isSent()}
 		isReturn={transaction.sender() === transaction.wallet().address() && transaction.isReturn()}
 		type={transactionType || transaction.type()}
-		address={transaction.sender()}
+		address={address || transaction.sender()}
 	/>
 );

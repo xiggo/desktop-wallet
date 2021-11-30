@@ -44,6 +44,19 @@ describe("Notifications", () => {
 		expect(container).toMatchSnapshot();
 	});
 
+	it("should render notification item with wallet alias", async () => {
+		render(
+			<table>
+				<tbody>
+					<NotificationTransactionItem transaction={notificationTransaction!} profile={profile} />
+				</tbody>
+			</table>,
+		);
+		await waitFor(() => expect(screen.getAllByTestId("TransactionRowMode")).toHaveLength(1));
+
+		expect(screen.getByTestId("Address__alias")).toHaveTextContent("ARK Wallet 1");
+	});
+
 	it("should emit onVisibilityChange event", async () => {
 		const onVisibilityChange = jest.fn();
 
