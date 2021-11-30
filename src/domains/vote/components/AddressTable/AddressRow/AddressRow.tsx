@@ -135,6 +135,44 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 		return <StatusIcon label={t("WALLETS.STATUS.ACTIVE")} icon="CircleCheckMark" color="text-theme-success-600" />;
 	};
 
+	const renderWalletVotes = () => {
+		if (!hasVotes) {
+			return (
+				<>
+					<Circle
+						size={isCompact ? "xs" : "lg"}
+						className="border-theme-secondary-300 dark:border-theme-secondary-800"
+						noShadow
+					/>
+					<span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>
+				</>
+			);
+		}
+
+		if (maxVotes === 1) {
+			return (
+				<>
+					<Avatar size={isCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
+					<span>{votes[0].wallet?.username()}</span>
+				</>
+			);
+		}
+
+		return (
+			<div className={cn("flex items-center", isCompact ? "-space-x-1" : "-space-x-2")}>
+				{renderAvatar(first.wallet?.address(), first.wallet?.username())}
+
+				{second && renderAvatar(second.wallet?.address(), second.wallet?.username())}
+
+				{third && renderAvatar(third.wallet?.address(), third.wallet?.username())}
+
+				{rest && rest.length === 1 && renderAvatar(rest[0].wallet?.address(), rest[0].wallet?.username())}
+
+				{rest && rest.length > 1 && renderRestOfVotes(rest.length)}
+			</div>
+		);
+	};
+
 	return (
 		<TableRow>
 			<TableCell
@@ -163,43 +201,7 @@ export const AddressRow = ({ index, maxVotes, wallet, onSelect, isCompact = fals
 				innerClassName={cn("font-bold", { "space-x-3": isCompact }, { "space-x-4": !isCompact })}
 				isCompact={isCompact}
 			>
-				{hasVotes ? (
-					maxVotes === 1 ? (
-						<>
-							<Avatar size={isCompact ? "xs" : "lg"} address={votes[0].wallet?.address()} noShadow />
-							<span>{votes[0].wallet?.username()}</span>
-						</>
-					) : (
-						<div
-							className={cn(
-								"flex items-center",
-								{ "-space-x-1": isCompact },
-								{ "-space-x-2": !isCompact },
-							)}
-						>
-							{renderAvatar(first.wallet?.address(), first.wallet?.username())}
-
-							{second && renderAvatar(second.wallet?.address(), second.wallet?.username())}
-
-							{third && renderAvatar(third.wallet?.address(), third.wallet?.username())}
-
-							{rest &&
-								rest.length === 1 &&
-								renderAvatar(rest[0].wallet?.address(), rest[0].wallet?.username())}
-
-							{rest && rest.length > 1 && renderRestOfVotes(rest.length)}
-						</div>
-					)
-				) : (
-					<>
-						<Circle
-							size={isCompact ? "xs" : "lg"}
-							className="border-theme-secondary-300 dark:border-theme-secondary-800"
-							noShadow
-						/>
-						<span className="text-theme-secondary-400">{t("COMMON.NOT_AVAILABLE")}</span>
-					</>
-				)}
+				{renderWalletVotes()}
 			</TableCell>
 
 			{maxVotes === 1 ? (

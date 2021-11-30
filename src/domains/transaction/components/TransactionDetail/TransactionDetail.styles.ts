@@ -2,28 +2,37 @@ import tw from "twin.macro";
 
 const baseStyles = () => tw`flex items-center space-x-4`;
 
-const getBorder = (border?: boolean, borderPosition?: "top" | "bottom" | "both") =>
-	border
-		? [
-				tw`border-dashed border-theme-secondary-300 dark:border-theme-secondary-800`,
-				borderPosition === "both"
-					? tw`border-t border-b`
-					: borderPosition === "top"
-					? tw`border-t`
-					: tw`border-b`,
-		  ]
-		: [];
+const getBorder = (border?: boolean, borderPosition?: "top" | "bottom" | "both") => {
+	if (!border) {
+		return;
+	}
 
-const getPadding = (padding?: boolean, paddingPosition?: "top" | "bottom" | "both" | "none") =>
-	padding
-		? !paddingPosition || paddingPosition === "both"
-			? tw`py-6`
-			: paddingPosition === "top"
-			? tw`pt-6`
-			: paddingPosition === "none"
-			? ``
-			: tw`pb-6`
-		: tw`py-0`;
+	const borders = {
+		both: () => tw`border-t border-b`,
+		bottom: () => tw`border-b`,
+		top: () => tw`border-t`,
+	};
+
+	return [
+		tw`border-dashed border-theme-secondary-300 dark:border-theme-secondary-800`,
+		(borders[borderPosition as keyof typeof borders] || borders.bottom)(),
+	];
+};
+
+const getPadding = (padding?: boolean, paddingPosition?: "top" | "bottom" | "both" | "none") => {
+	if (!padding) {
+		return tw`py-0`;
+	}
+
+	const paddings = {
+		both: () => tw`py-6`,
+		bottom: () => tw`pb-6`,
+		none: () => "",
+		top: () => tw`pt-6`,
+	};
+
+	return (paddings[paddingPosition as keyof typeof paddings] || paddings.both)();
+};
 
 export const getStyles = ({
 	border,
@@ -35,4 +44,4 @@ export const getStyles = ({
 	borderPosition?: "top" | "bottom" | "both";
 	padding?: boolean;
 	paddingPosition?: "top" | "bottom" | "both" | "none";
-}) => [baseStyles(), ...getBorder(border, borderPosition), getPadding(padding, paddingPosition)];
+}) => [baseStyles(), getBorder(border, borderPosition), getPadding(padding, paddingPosition)];

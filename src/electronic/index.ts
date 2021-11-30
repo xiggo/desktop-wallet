@@ -13,11 +13,17 @@ let mainWindow: BrowserWindow | null;
 let windowState = null;
 let deeplinkingUrl: string | null;
 
-const winURL = isDev
-	? "http://localhost:3000"
-	: process.env.ELECTRON_IS_E2E
-	? `file://${path.resolve("build/index.html")}`
-	: `file://${path.resolve(__dirname, "../")}/index.html`;
+const getWinURL = () => {
+	if (isDev) {
+		return "http://localhost:3000";
+	}
+
+	if (process.env.ELECTRON_IS_E2E) {
+		return `file://${path.resolve("build/index.html")}`;
+	}
+
+	return `file://${path.resolve(__dirname, "../")}/index.html`;
+};
 
 const installExtensions = async () => {
 	if (isDev) {
@@ -115,7 +121,7 @@ function createWindow() {
 
 	// @ts-ignore
 	windowState.manage(mainWindow);
-	mainWindow.loadURL(winURL);
+	mainWindow.loadURL(getWinURL());
 	mainWindow.setBackgroundColor("#f7fafb");
 	mainWindow.setContentProtection(!isDev);
 

@@ -397,6 +397,18 @@ export const PluginManager = () => {
 		return menuItem;
 	});
 
+	const emptyMessage = useMemo(() => {
+		if (currentView === "my-plugins") {
+			return t("PLUGINS.PAGE_PLUGIN_MANAGER.NO_PLUGINS_INSTALLED");
+		}
+
+		if (currentView === "search") {
+			return t("PLUGINS.PAGE_PLUGIN_MANAGER.NO_PLUGINS_FOUND", {
+				query: filters.query,
+			});
+		}
+	}, [currentView, filters.query, t]);
+
 	return (
 		<>
 			<Page isBackDisabled={true}>
@@ -481,15 +493,7 @@ export const PluginManager = () => {
 									<PluginGrid
 										plugins={viewPlugins}
 										updatingStats={updatingStats}
-										emptyMessage={
-											currentView === "my-plugins"
-												? t("PLUGINS.PAGE_PLUGIN_MANAGER.NO_PLUGINS_INSTALLED")
-												: currentView === "search"
-												? t("PLUGINS.PAGE_PLUGIN_MANAGER.NO_PLUGINS_FOUND", {
-														query: filters.query,
-												  })
-												: undefined
-										}
+										emptyMessage={emptyMessage}
 										isLoading={isFetchingPackages}
 										onDelete={handleDeletePlugin}
 										onDisable={handleDisablePlugin}
@@ -503,15 +507,7 @@ export const PluginManager = () => {
 
 								{viewType === "list" && (
 									<PluginList
-										emptyMessage={
-											currentView === "my-plugins"
-												? t("PLUGINS.PAGE_PLUGIN_MANAGER.NO_PLUGINS_INSTALLED")
-												: currentView === "search"
-												? t("PLUGINS.PAGE_PLUGIN_MANAGER.NO_PLUGINS_FOUND", {
-														query: filters.query,
-												  })
-												: undefined
-										}
+										emptyMessage={emptyMessage}
 										onUpdate={handleUpdate}
 										plugins={viewPlugins}
 										showCategory={["my-plugins", "search", "all"].includes(currentView)}

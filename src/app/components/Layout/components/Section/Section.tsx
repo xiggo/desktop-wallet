@@ -24,7 +24,15 @@ const SectionWrapper = styled.div<{ backgroundClassName?: string; border?: boole
 			`,
 		]};
 
-	${({ backgroundClassName, border }) => (backgroundClassName ? tw`py-8` : border ? tw`pb-8` : "")};
+	${({ backgroundClassName, border }) => {
+		if (backgroundClassName) {
+			return tw`py-8`;
+		}
+
+		if (border) {
+			return tw`pb-8`;
+		}
+	}};
 `;
 
 export const Section = ({
