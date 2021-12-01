@@ -5,14 +5,14 @@
 import { Before, Given, IWorld, Then, When } from "@cucumber/cucumber";
 import { TestStepFunction } from "@cucumber/cucumber/lib/support_code_library_builder/types";
 import delve from "dlv";
-import { resolve } from "path";
+import path from "path";
 import { ClientFunction, RequestMock } from "testcafe";
 
 import { buildTranslations } from "../app/i18n/helpers";
 import { TranslationSet } from "../app/i18n/react-i18next.contracts";
 import { NestedLeaves } from "../types/generics";
 
-export const getPageURL = () => resolve("build/index.html");
+export const getPageURL = () => path.resolve("build/index.html");
 
 export const visitWelcomeScreen = (t: TestController) => t.navigateTo(`file://${getPageURL()}`);
 
