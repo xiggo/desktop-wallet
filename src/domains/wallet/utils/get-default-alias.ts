@@ -11,11 +11,15 @@ export const getDefaultAlias = ({ profile, network }: GetDefaultAliasInput): str
 
 	const sameCoinWallets = profile.wallets().findByCoinWithNetwork(network.coin(), network.id());
 
-	let sameCoinWalletsCount = sameCoinWallets.length || 1;
+	let counter = sameCoinWallets.length;
 
-	while (profile.wallets().findByAlias(makeAlias(sameCoinWalletsCount))) {
-		sameCoinWalletsCount++;
+	if (counter === 0) {
+		counter = 1;
 	}
 
-	return makeAlias(sameCoinWalletsCount);
+	while (profile.wallets().findByAlias(makeAlias(counter))) {
+		counter++;
+	}
+
+	return makeAlias(counter);
 };

@@ -26,7 +26,7 @@ const Permissions = ({ permissions }: { permissions: PluginPermissions[] }) => {
 
 	const [showPermissionsModal, setShowPermissionsModal] = useState(false);
 
-	if (!permissions.length) {
+	if (permissions.length === 0) {
 		return <></>;
 	}
 
@@ -83,7 +83,7 @@ const Requirements = ({ minimumVersion }: { minimumVersion?: string }) => {
 const Images = ({ images }: { images: string[] }) => {
 	const { t } = useTranslation();
 
-	if (!images.length) {
+	if (images.length === 0) {
 		return <></>;
 	}
 

@@ -79,7 +79,7 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 					page: currentPage,
 				};
 
-				if (categories.length && categories.length !== AVAILABLE_CATEGORIES.length) {
+				if (categories.length > 0 && categories.length !== AVAILABLE_CATEGORIES.length) {
 					query.categories = categories;
 				}
 

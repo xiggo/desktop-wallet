@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import cn from "classnames";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Address } from "@/app/components/Address";
@@ -55,16 +55,20 @@ export const DelegateFooter = ({
 	const [tooltipContent, setTooltipContent] = useState("");
 	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 
-	const getTotalVotes = useCallback(() => {
+	const totalVotes = useMemo(() => {
 		if (maxVotes === 1) {
-			return selectedVotes.length || selectedUnvotes.length;
+			if (selectedVotes.length > 0) {
+				return selectedVotes.length;
+			}
+
+			return selectedUnvotes.length;
 		}
 
 		return selectedVotes.length + selectedUnvotes.length;
 	}, [maxVotes, selectedUnvotes, selectedVotes]);
 
 	const continueButtonDisabled = useMemo(() => {
-		if (!getTotalVotes()) {
+		if (totalVotes < 1) {
 			setTooltipContent(t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE"));
 
 			return true;
@@ -75,7 +79,7 @@ export const DelegateFooter = ({
 		const hasZeroAmount =
 			selectedVotes.some(({ amount }) => amount === 0) || selectedUnvotes.some(({ amount }) => amount === 0);
 		return requiresStakeAmount && hasZeroAmount;
-	}, [getTotalVotes, requiresStakeAmount, selectedUnvotes, selectedVotes, t]);
+	}, [totalVotes, requiresStakeAmount, selectedUnvotes, selectedVotes, t]);
 
 	return (
 		<div
@@ -127,7 +131,7 @@ export const DelegateFooter = ({
 
 						<FooterContent
 							label={t("VOTE.DELEGATE_TABLE.TOTAL")}
-							value={`${getTotalVotes()}/${maxVotes}`}
+							value={`${totalVotes}/${maxVotes}`}
 							iconName="VoteCombination"
 						/>
 					</div>

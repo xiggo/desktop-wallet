@@ -65,7 +65,11 @@ export const WalletsList: VFC<WalletListProperties> = ({
 				return walletsPerPage;
 			}
 
-			return wallets.length || 3;
+			if (wallets.length > 0) {
+				return wallets.length;
+			}
+
+			return 3;
 		};
 
 		return Array.from<GridWallet>({ length: skeletonRowsCount() }).fill({} as GridWallet);

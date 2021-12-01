@@ -4,16 +4,17 @@ import { useTranslation } from "react-i18next";
 
 import { CircularProgressBar } from "@/app/components/CircularProgressBar";
 import { PluginImage } from "@/domains/plugin/components/PluginImage";
+import { ExtendedSerializedPluginConfigurationData, SerializedPluginConfigurationData } from "@/plugins";
 
 interface Properties {
-	plugin: any;
+	plugin: SerializedPluginConfigurationData | ExtendedSerializedPluginConfigurationData;
 	downloadProgress: { percent?: number; transferredBytes?: number; totalBytes: number };
 }
 
 export const SecondStep = ({ plugin, downloadProgress }: Properties) => {
 	const { t } = useTranslation();
 
-	const hasSize = plugin.size && plugin.size !== "0 B";
+	const hasSize = plugin.size !== "0 B";
 
 	const percent = Math.floor((downloadProgress.percent || 0) * 100);
 

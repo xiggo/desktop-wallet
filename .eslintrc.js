@@ -171,7 +171,7 @@ module.exports = {
 		"unicorn/consistent-destructuring": "error",
 		"unicorn/consistent-function-scoping": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/error-message": "warn", // @TODO: set to error and fix resulting issues
-		"unicorn/explicit-length-check": "warn", // @TODO: set to error and fix resulting issues
+		"unicorn/explicit-length-check": "error",
 		"unicorn/filename-case": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/import-style": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-abusive-eslint-disable": "warn", // @TODO: set to error and fix resulting issues

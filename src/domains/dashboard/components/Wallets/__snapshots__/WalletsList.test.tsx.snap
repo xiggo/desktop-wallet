@@ -1082,6 +1082,322 @@ exports[`WalletsList should render loading state for empty wallets 1`] = `
 </DocumentFragment>
 `;
 
+exports[`WalletsList should render loading state for when there are no more wallets 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="WalletsList"
+  >
+    <div
+      data-testid="WalletTable"
+    >
+      <div
+        class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
+        role="table"
+      >
+        <table
+          cellpadding="0"
+          class="table-auto"
+        >
+          <thead>
+            <tr
+              class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+              role="row"
+            >
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                colspan="1"
+                data-testid="table__th--0"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div>
+                    Wallet Address
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                  >
+                    <div
+                      class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg>
+                        chevron-down-small.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-40 min-w-40"
+                colspan="1"
+                data-testid="table__th--1"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top justify-center"
+                >
+                  <div>
+                    Wallet Type
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-72 min-w-72"
+                colspan="1"
+                data-testid="table__th--2"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top flex-row-reverse justify-end flex-row-reverse"
+                >
+                  <div>
+                    Balance
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                  >
+                    <div
+                      class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg>
+                        chevron-down-small.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-44 min-w-44"
+                colspan="1"
+                data-testid="table__th--3"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top flex-row-reverse justify-end flex-row-reverse"
+                >
+                  <div>
+                    Currency
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                  >
+                    <div
+                      class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg>
+                        chevron-down-small.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            role="rowgroup"
+          >
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 260px; height: 16px;"
+                    >
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center text-sm font-bold text-center align-middle"
+                >
+                  <span>
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 100px; height: 16px;"
+                    >
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq font-semibold justify-end"
+                >
+                  <span>
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 229px; height: 16px;"
+                    >
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end text-theme-secondary-400"
+                >
+                  <span>
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 100px; height: 16px;"
+                    >
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 44px; height: 44px; border-radius: 50%;"
+                        >
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 260px; height: 16px;"
+                    >
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center text-sm font-bold text-center align-middle"
+                >
+                  <span>
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 100px; height: 16px;"
+                    >
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq font-semibold justify-end"
+                >
+                  <span>
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 229px; height: 16px;"
+                    >
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end text-theme-secondary-400"
+                >
+                  <span>
+                    <span
+                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                      style="width: 100px; height: 16px;"
+                    >
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`WalletsList should render with view more button 1`] = `
 <DocumentFragment>
   <div

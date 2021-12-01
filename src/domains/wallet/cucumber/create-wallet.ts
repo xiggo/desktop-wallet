@@ -61,7 +61,7 @@ cucumber(
 		"And confirms the generated mnemonic": async (t: TestController) => {
 			const mnemonicsCount = await Selector("[data-testid=MnemonicList__item]").count;
 
-			if (mnemonicWords.length) {
+			if (mnemonicWords.length > 0) {
 				mnemonicWords = [];
 			}
 
@@ -128,7 +128,7 @@ cucumber(
 		"And confirms the generated mnemonic": async (t: TestController) => {
 			const mnemonicsCount = await Selector("[data-testid=MnemonicList__item]").count;
 
-			if (mnemonicWords.length) {
+			if (mnemonicWords.length > 0) {
 				mnemonicWords = [];
 			}
 

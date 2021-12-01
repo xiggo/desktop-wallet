@@ -103,6 +103,13 @@ describe("WalletsList", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	it("should render loading state for when there are no more wallets", () => {
+		const { asFragment } = render(<WalletsList wallets={wallets} isLoading={true} />);
+
+		expect(screen.getAllByTestId("TableRow")).toHaveLength(2);
+		expect(asFragment()).toMatchSnapshot();
+	});
+
 	it("should render loading state for empty wallets", () => {
 		const { asFragment } = render(<WalletsList wallets={[]} isLoading={true} />);
 
