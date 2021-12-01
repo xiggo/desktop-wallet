@@ -30,8 +30,9 @@ export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 	return useMemo(() => profile.wallets().findById(walletId), [profile, walletId]);
 };
 
-export const useNetworks = (profile: Contracts.IProfile) =>
-	useMemo<Networks.Network[]>(() => {
+export const useNetworks = (profile: Contracts.IProfile) => {
+	const isProfileRestored = profile.status().isRestored();
+	return useMemo<Networks.Network[]>(() => {
 		const networks: Record<string, Networks.Network> = {};
 
 		for (const wallet of profile.wallets().values()) {
@@ -39,7 +40,9 @@ export const useNetworks = (profile: Contracts.IProfile) =>
 		}
 
 		return sortBy(Object.values(networks), (network) => network.displayName());
-	}, [profile]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [profile, isProfileRestored]);
+};
 
 export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
 	const profile = useActiveProfile();

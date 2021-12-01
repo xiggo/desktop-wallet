@@ -238,7 +238,7 @@ describe("useNetworks", () => {
 					routes: [`/profiles/${"undefined"}/wallets/${"undefined"}`],
 				},
 			),
-		).toThrow("Cannot read property 'wallets' of undefined");
+		).toThrow("Cannot read property 'status' of undefined");
 
 		consoleErrorSpy.mockRestore();
 	});
