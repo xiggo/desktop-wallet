@@ -66,7 +66,7 @@ module.exports = {
 		"@typescript-eslint/no-unsafe-member-access": "warn",
 		"@typescript-eslint/no-unsafe-return": "warn",
 		"@typescript-eslint/no-unused-expressions": "warn",
-		"@typescript-eslint/no-unused-vars": ["error"],
+		"@typescript-eslint/no-unused-vars": ["error", { varsIgnorePattern: "_" }],
 		"@typescript-eslint/no-var-requires": "warn",
 		"@typescript-eslint/prefer-regexp-exec": "warn",
 		"@typescript-eslint/restrict-plus-operands": "warn",
@@ -176,7 +176,7 @@ module.exports = {
 		"unicorn/import-style": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-abusive-eslint-disable": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-array-callback-reference": "warn", // @TODO: set to error and fix resulting issues
-		"unicorn/no-array-for-each": "warn", // @TODO: set to error and fix resulting issues
+		"unicorn/no-array-for-each": "error",
 		"unicorn/no-array-method-this-argument": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-array-reduce": "error",
 		"unicorn/no-new-array": "warn", // @TODO: set to error and fix resulting issues

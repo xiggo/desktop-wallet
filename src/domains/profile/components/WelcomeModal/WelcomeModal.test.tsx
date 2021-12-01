@@ -65,7 +65,7 @@ describe("WelcomeModal", () => {
 		expect(() => screen.getByTestId("WelcomeModal-prev")).toThrow(/Unable to find an element by/);
 
 		// Intermediate steps
-		[1, 2, 3].forEach(() => {
+		for (const _ of [1, 2, 3]) {
 			userEvent.click(screen.getByTestId("WelcomeModal-next"));
 
 			expect(screen.getByTestId("WelcomeModal-next")).toBeDefined();
@@ -73,7 +73,7 @@ describe("WelcomeModal", () => {
 			expect(screen.getByTestId("DotNavigation")).toBeDefined();
 			expect(() => screen.getByTestId("WelcomeModal-finish")).toThrow(/Unable to find an element by/);
 			expect(() => screen.getByTestId("WelcomeModal-skip")).toThrow(/Unable to find an element by/);
-		});
+		}
 
 		// Final step
 		userEvent.click(screen.getByTestId("WelcomeModal-next"));
