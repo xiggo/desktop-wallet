@@ -1,9 +1,10 @@
 import { sortBy, uniq } from "@payvo/sdk-helpers";
 
 export const validatePattern = (t: any, value: string, regexp: RegExp) => {
-	const matches = value
-		.split(regexp)
-		.reduce((accumulator, current) => (current ? accumulator + current : accumulator), "");
+	let matches = "";
+
+	const parts = value.split(regexp).filter((part) => part);
+	parts.map((part) => (matches += part));
 
 	return matches.length > 0
 		? t("COMMON.VALIDATION.ILLEGAL_CHARACTERS", {

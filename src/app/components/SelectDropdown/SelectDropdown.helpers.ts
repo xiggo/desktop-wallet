@@ -22,13 +22,15 @@ export const matchOptions = (
 		return (options as OptionProperties[]).filter((option: OptionProperties) => isMatch(inputValue, option));
 	}
 
-	return (options as OptionGroupProperties[]).reduce<OptionGroupProperties[]>((allOptions, optionGroup) => {
+	const allOptions: OptionGroupProperties[] = [];
+
+	for (const optionGroup of options as OptionGroupProperties[]) {
 		const matchOptions = optionGroup.options.filter((option: OptionProperties) => isMatch(inputValue, option));
 
 		if (matchOptions.length > 0) {
-			return allOptions.concat({ options: matchOptions, title: optionGroup.title });
+			allOptions.push({ options: matchOptions, title: optionGroup.title });
 		}
+	}
 
-		return allOptions;
-	}, []);
+	return allOptions;
 };

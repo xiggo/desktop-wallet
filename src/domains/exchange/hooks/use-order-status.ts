@@ -27,10 +27,13 @@ export const useOrderStatus = () => {
 				}),
 			);
 
-			return allStatuses.reduce((statuses, response) => {
-				statuses[response.id] = response;
-				return statuses;
-			}, {} as Record<string, OrderStatusResponse>);
+			const statusMap: Record<string, OrderStatusResponse> = {};
+
+			for (const status of allStatuses) {
+				statusMap[status.id] = status;
+			}
+
+			return statusMap;
 		} catch {
 			//
 		}

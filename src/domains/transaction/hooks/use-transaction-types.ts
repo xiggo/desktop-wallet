@@ -87,13 +87,13 @@ export const useTransactionTypes = ({ wallets = [] }: TransactionTypeProperties 
 		getLabel: (type: string): string => transactionTypes[type].label,
 		types: {
 			core: useMemo(() => {
-				const allSupportedTypes = wallets.reduce(
-					(all: string[], wallet: Contracts.IReadWriteWallet) => [
-						...all,
+				const allSupportedTypes: string[] = [];
+
+				for (const wallet of wallets) {
+					allSupportedTypes.push(
 						...(wallet.transactionTypes() as string[]).filter((type) => type !== MagistrateTransactionType),
-					],
-					[],
-				);
+					);
+				}
 
 				return uniq(allSupportedTypes);
 			}, [wallets]),

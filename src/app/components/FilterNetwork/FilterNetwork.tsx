@@ -74,20 +74,20 @@ export const FilterNetworks = ({ options = [], ...properties }: FilterNetworksPr
 	const { t } = useTranslation();
 
 	const { liveNetworks, testNetworks } = useMemo(() => {
-		const initial: { liveNetworks: FilterOption[]; testNetworks: FilterOption[] } = {
+		const optionsByType: { liveNetworks: FilterOption[]; testNetworks: FilterOption[] } = {
 			liveNetworks: [],
 			testNetworks: [],
 		};
 
-		return options.reduce((options, option) => {
+		for (const option of options) {
 			if (option.network.isLive()) {
-				options.liveNetworks.push(option);
+				optionsByType.liveNetworks.push(option);
 			} else {
-				options.testNetworks.push(option);
+				optionsByType.testNetworks.push(option);
 			}
+		}
 
-			return options;
-		}, initial);
+		return optionsByType;
 	}, [options]);
 
 	return (

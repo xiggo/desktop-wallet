@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Divider } from "@/app/components/Divider";
-import { FilterNetwork, FilterOption } from "@/app/components/FilterNetwork";
+import { FilterNetwork } from "@/app/components/FilterNetwork";
 import { useEnvironmentContext } from "@/app/contexts";
 import { AVAILABLE_CATEGORIES } from "@/domains/news/news.constants";
 import { AvailableNewsCategories } from "@/domains/news/news.contracts";
@@ -89,17 +89,21 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSubmit }: New
 	};
 
 	const handleQueryUpdate = useCallback(() => {
-		const categoryNames = categories.reduce<AvailableNewsCategories[]>(
-			(accumulator, category) =>
-				category.name !== "All" && category.isSelected ? accumulator.concat(category.name) : accumulator,
-			[],
-		);
+		const categoryNames: AvailableNewsCategories[] = [];
 
-		const coinNames = coinOptions.reduce(
-			(accumulator: string[], option: FilterOption) =>
-				option.isSelected ? accumulator.concat(option.network.coin()) : accumulator,
-			[],
-		);
+		for (const category of categories) {
+			if (category.name !== "All" && category.isSelected) {
+				categoryNames.push(category.name);
+			}
+		}
+
+		const coinNames: string[] = [];
+
+		for (const option of coinOptions) {
+			if (option.isSelected) {
+				coinNames.push(option.network.coin());
+			}
+		}
 
 		onSubmit?.({
 			categories: categoryNames,

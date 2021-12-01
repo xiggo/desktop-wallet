@@ -232,23 +232,22 @@ export const PluginManager = () => {
 
 	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
 
-	const { hasUpdateAvailableCount, hasCompatibleUpdateAvailableCount } = plugins.reduce(
-		(counts, item) => {
-			if (item.updateStatus.isAvailable) {
-				counts.hasUpdateAvailableCount++;
-			}
+	const updateCounts = {
+		available: 0,
+		compatible: 0,
+	};
 
-			if (item.updateStatus.isCompatible) {
-				counts.hasCompatibleUpdateAvailableCount++;
-			}
+	for (const plugin of plugins) {
+		if (plugin.updateStatus.isAvailable) {
+			updateCounts.available++;
+		}
 
-			return counts;
-		},
-		{
-			hasCompatibleUpdateAvailableCount: 0,
-			hasUpdateAvailableCount: 0,
-		},
-	);
+		if (plugin.updateStatus.isCompatible) {
+			updateCounts.compatible++;
+		}
+	}
+
+	const { available: hasUpdateAvailableCount, compatible: hasCompatibleUpdateAvailableCount } = updateCounts;
 
 	const pluginsByCategory = useMemo(() => {
 		const result: Record<string, ExtendedSerializedPluginConfigurationData[]> = {};

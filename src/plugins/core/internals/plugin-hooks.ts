@@ -62,7 +62,15 @@ export class PluginHooks extends EventEmitter implements IPluginHooks {
 			return;
 		}
 
-		return this.#filters.get(key)!.reduce((accumulator, handler) => handler(accumulator, properties), content);
+		let transformedContent = content;
+
+		const handlers = this.#filters.get(key)!;
+
+		for (const handler of handlers) {
+			transformedContent = handler(transformedContent, properties);
+		}
+
+		return transformedContent;
 	}
 
 	clearAll(): void {

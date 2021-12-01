@@ -44,7 +44,11 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 			return;
 		}
 
-		const totalVotesAmount = voteDelegates.reduce((accumulator, { amount }) => accumulator + amount, 0);
+		let totalVotesAmount = 0;
+
+		for (const delegate of voteDelegates) {
+			totalVotesAmount += delegate.amount;
+		}
 
 		setAvailableBalance(availableBalance - totalVotesAmount);
 	}, []); // eslint-disable-line react-hooks/exhaustive-deps

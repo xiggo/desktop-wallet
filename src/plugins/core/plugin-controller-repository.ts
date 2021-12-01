@@ -168,9 +168,12 @@ export class PluginControllerRepository {
 			return content;
 		}
 
-		return plugins.reduce(
-			(accumulator, plugin) => plugin.hooks().applyFilter(namespace, hookName, accumulator, properties)!,
-			content,
-		);
+		let transformedContent = content;
+
+		for (const plugin of plugins) {
+			transformedContent = plugin.hooks().applyFilter(namespace, hookName, transformedContent, properties)!;
+		}
+
+		return transformedContent;
 	}
 }

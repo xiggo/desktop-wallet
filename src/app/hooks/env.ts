@@ -32,18 +32,13 @@ export const useActiveWallet = (): Contracts.IReadWriteWallet => {
 
 export const useNetworks = (profile: Contracts.IProfile) =>
 	useMemo<Networks.Network[]>(() => {
-		const results = profile
-			.wallets()
-			.values()
-			.reduce<Record<string, Networks.Network>>(
-				(accumulator, wallet) => ({
-					...accumulator,
-					[wallet.networkId()]: wallet.network(),
-				}),
-				{},
-			);
+		const networks: Record<string, Networks.Network> = {};
 
-		return sortBy(Object.values(results), (network) => network.displayName());
+		for (const wallet of profile.wallets().values()) {
+			networks[wallet.networkId()] = wallet.network();
+		}
+
+		return sortBy(Object.values(networks), (network) => network.displayName());
 	}, [profile]);
 
 export const useActiveWalletWhenNeeded = (isRequired: boolean) => {

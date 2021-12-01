@@ -70,10 +70,13 @@ export const UnlockTokensSelect: FC<UnlockTokensSelectProperties> = ({
 
 	useEffect(() => {
 		const recalculateAmount = () => {
-			setValue(
-				"amount",
-				selectedObjects.reduce((total, value) => total + value.amount.toHuman(), 0),
-			);
+			let amount = 0;
+
+			for (const object of selectedObjects) {
+				amount = amount + object.amount.toHuman();
+			}
+
+			setValue("amount", amount);
 		};
 
 		const recalculateFee = async () => {

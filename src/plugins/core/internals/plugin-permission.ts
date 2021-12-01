@@ -38,5 +38,12 @@ export const isPluginEnabled: Rule =
 		);
 	};
 
-export const applyPluginMiddlewares = (context: MiddlewareContext, rules: Rule[]) => (response: any) =>
-	rules.reduce((accumulator, rule) => rule(context)(accumulator), response);
+export const applyPluginMiddlewares = (context: MiddlewareContext, rules: Rule[]) => (response: any) => {
+	let transformedResponse = response;
+
+	for (const rule of rules) {
+		transformedResponse = rule(context)(transformedResponse);
+	}
+
+	return transformedResponse;
+};

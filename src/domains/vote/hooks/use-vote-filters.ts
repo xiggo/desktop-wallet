@@ -79,29 +79,27 @@ export const useVoteFilters = ({
 					.values()
 					.filter((wallet) => wallet.network().isLive());
 
-		const usedCoins = uniq(usedWallets.map((wallet) => wallet.currency()));
+		const mappedWallets: Record<string, Contracts.IReadWriteWallet[]> = {};
 
-		return usedCoins.reduce(
-			(coins, coin) => ({
-				...coins,
-				[coin]: Object.values(wallets[coin]).filter((wallet: Contracts.IReadWriteWallet) => {
-					if (!selectedNetworkIds.includes(wallet.network().id())) {
-						return false;
-					}
+		for (const coin of uniq(usedWallets.map((wallet) => wallet.currency()))) {
+			mappedWallets[coin] = Object.values(wallets[coin]).filter((wallet: Contracts.IReadWriteWallet) => {
+				if (!selectedNetworkIds.includes(wallet.network().id())) {
+					return false;
+				}
 
-					if (walletsDisplayType === "starred") {
-						return wallet.isStarred();
-					}
+				if (walletsDisplayType === "starred") {
+					return wallet.isStarred();
+				}
 
-					if (walletsDisplayType === "ledger") {
-						return wallet.isLedger();
-					}
+				if (walletsDisplayType === "ledger") {
+					return wallet.isLedger();
+				}
 
-					return wallet;
-				}),
-			}),
-			{} as Record<string, Contracts.IReadWriteWallet[]>,
-		);
+				return wallet;
+			});
+		}
+
+		return mappedWallets;
 	}, [profile, selectedNetworkIds, walletsDisplayType]);
 
 	const filteredWalletsByCoin = useMemo(() => {
@@ -111,21 +109,21 @@ export const useVoteFilters = ({
 
 		const query = searchQuery.toLowerCase();
 
-		return Object.keys(walletsByCoin).reduce(
-			(coins, coin) => ({
-				...coins,
-				[coin]: Object.values(walletsByCoin[coin]).filter((wallet: Contracts.IReadWriteWallet) => {
-					const { alias } = getWalletAlias({
-						address: wallet.address(),
-						network: wallet.network(),
-						profile,
-					});
+		const mappedWallets: Record<string, Contracts.IReadWriteWallet[]> = {};
 
-					return wallet.address().toLowerCase().includes(query) || alias?.toLowerCase()?.includes(query);
-				}),
-			}),
-			{} as Record<string, Contracts.IReadWriteWallet[]>,
-		);
+		for (const coin of Object.keys(walletsByCoin)) {
+			mappedWallets[coin] = Object.values(walletsByCoin[coin]).filter((wallet: Contracts.IReadWriteWallet) => {
+				const { alias } = getWalletAlias({
+					address: wallet.address(),
+					network: wallet.network(),
+					profile,
+				});
+
+				return wallet.address().toLowerCase().includes(query) || alias?.toLowerCase()?.includes(query);
+			});
+		}
+
+		return mappedWallets;
 	}, [getWalletAlias, profile, searchQuery, walletsByCoin]);
 
 	const hasEmptyResults = Object.keys(filteredWalletsByCoin).every(

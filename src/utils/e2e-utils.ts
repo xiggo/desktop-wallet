@@ -484,9 +484,11 @@ export const cucumber = (
 };
 
 export const translate = (path: NestedLeaves<TranslationSet>, values: Record<string, string> = {}): string => {
-	const languageString = delve(buildTranslations(), path, "No translation found") as string;
-	return Object.entries(values).reduce<string>(
-		(acc, [key, value]) => acc.replace(`{{${key}}}`, value),
-		languageString,
-	);
+	let languageString = delve(buildTranslations(), path, "No translation found") as string;
+
+	for (const [key, value] of Object.entries(values)) {
+		languageString = languageString.replace(`{{${key}}}`, value);
+	}
+
+	return languageString;
 };

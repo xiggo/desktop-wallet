@@ -41,13 +41,15 @@ export const useDelegates = ({
 			return delegates.filter((delegate) => !delegate.isResignedDelegate());
 		}
 
-		return currentVotes.reduce((accumulator: Contracts.IReadOnlyWallet[], { wallet }) => {
-			if (wallet && !wallet.isResignedDelegate()) {
-				accumulator.push(wallet);
-			}
+		const voteWallets: Contracts.IReadOnlyWallet[] = [];
 
-			return accumulator;
-		}, []);
+		for (const { wallet } of currentVotes) {
+			if (wallet && !wallet.isResignedDelegate()) {
+				voteWallets.push(wallet);
+			}
+		}
+
+		return voteWallets;
 	}, [delegates, currentVotes, voteFilter]);
 
 	const filteredDelegates = useMemo(() => {

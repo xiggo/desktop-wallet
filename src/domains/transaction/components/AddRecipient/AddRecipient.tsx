@@ -108,13 +108,17 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 	const maxRecipients = network?.multiPaymentRecipients() ?? 0;
 
 	const remainingBalance = useMemo(() => {
-		const senderBalance = wallet?.balance() || 0;
+		let senderBalance = wallet?.balance() || 0;
 
 		if (isSingle) {
 			return senderBalance;
 		}
 
-		return addedRecipients.reduce((sum, item) => sum - Number(item.amount || 0), senderBalance);
+		for (const recipient of addedRecipients) {
+			senderBalance = senderBalance - Number(recipient.amount || 0);
+		}
+
+		return senderBalance;
 	}, [addedRecipients, wallet, isSingle]);
 
 	const remainingNetBalance = useMemo(() => {
@@ -147,11 +151,13 @@ export const AddRecipient: VFC<AddRecipientProperties> = ({
 			return;
 		}
 
-		setRecipientsAmount(
-			recipients
-				.reduce((accumulator, currentValue) => Number(accumulator) + Number(currentValue.amount), 0)
-				.toString(),
-		);
+		let amount = 0;
+
+		for (const recipient of recipients) {
+			amount = amount + Number(recipient.amount);
+		}
+
+		setRecipientsAmount(amount.toString());
 	}, [recipients, withDeeplink]);
 
 	useEffect(() => {
