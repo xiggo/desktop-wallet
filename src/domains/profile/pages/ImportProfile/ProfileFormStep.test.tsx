@@ -262,7 +262,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		act(() => screen.getAllByTestId("InputPassword")[0].focus());
 
-		expect(() => screen.getByTestId("SelectProfileImage__avatar")).toThrow(/^Unable to find an element by/);
+		expect(screen.queryByTestId("SelectProfileImage__avatar")).not.toBeInTheDocument();
 
 		// Upload avatar image
 		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));

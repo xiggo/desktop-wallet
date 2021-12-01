@@ -78,9 +78,7 @@ describe("ImportProfile", () => {
 
 		userEvent.click(screen.getByTestId("SelectFileStep__change-file"));
 
-		await waitFor(() =>
-			expect(() => screen.getByTestId("SelectFileStep__change-file")).toThrow(/Unable to find an element by/),
-		);
+		await waitFor(() => expect(screen.queryByTestId("SelectFileStep__change-file")).not.toBeInTheDocument());
 	});
 
 	it("should select file and go to step 2", async () => {
@@ -200,7 +198,7 @@ describe("ImportProfile", () => {
 
 		await expect(screen.findByTestId("CreateProfile__form")).resolves.toBeVisible();
 
-		expect(() => screen.getByTestId("InputPassword")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("InputPassword")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
 

@@ -69,14 +69,14 @@ describe("ConfirmRemovePendingTransaction", () => {
 	it("should not render if not open", () => {
 		const { asFragment } = render(<ConfirmRemovePendingTransaction isOpen={false} />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should not render if transaction type is not available", () => {
 		const { asFragment } = render(<ConfirmRemovePendingTransaction isOpen={true} />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

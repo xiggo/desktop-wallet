@@ -142,7 +142,7 @@ describe("ContactForm", () => {
 	it("should add a valid address successfully", async () => {
 		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 
 		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
 
@@ -177,7 +177,7 @@ describe("ContactForm", () => {
 	it("should not add invalid address and should display error message", async () => {
 		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 
 		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
 
@@ -208,13 +208,13 @@ describe("ContactForm", () => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 
-		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 	});
 
 	it("should not add duplicate address and display error message", async () => {
 		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 
 		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
 
@@ -247,13 +247,13 @@ describe("ContactForm", () => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 
-		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 	});
 
 	it("should remove network from options", async () => {
 		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 
 		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
 
@@ -300,7 +300,7 @@ describe("ContactForm", () => {
 		userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 		});
 	});
 

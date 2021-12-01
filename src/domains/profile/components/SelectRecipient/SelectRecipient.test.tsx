@@ -49,7 +49,7 @@ describe("SelectRecipient", () => {
 	it("should open and close contacts modal", async () => {
 		render(<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
@@ -57,13 +57,13 @@ describe("SelectRecipient", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it("should select address from contacts modal", async () => {
 		render(<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
@@ -73,7 +73,7 @@ describe("SelectRecipient", () => {
 
 		userEvent.click(firstContactAddress);
 
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue(
@@ -85,17 +85,17 @@ describe("SelectRecipient", () => {
 	it("should not show select recipient button if showOptions is false", async () => {
 		render(<SelectRecipient profile={profile} showOptions={false} />);
 
-		expect(() => screen.getByTestId("SelectRecipient__select-recipient")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("queryByTestId-recipient")).not.toBeInTheDocument();
 	});
 
 	it("should not open contacts modal if disabled", async () => {
 		render(<SelectRecipient profile={profile} address="bP6T9GQ3kqP6T9GQ3kqP6T9GQ3kqTTTP6T9GQ3kqT" disabled />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 	});
 
 	it("should call onChange prop when entered address in input", async () => {
@@ -131,7 +131,7 @@ describe("SelectRecipient", () => {
 			/>,
 		);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
@@ -143,7 +143,7 @@ describe("SelectRecipient", () => {
 
 		userEvent.click(firstAddress);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		const selectedAddressValue = profile.contacts().values()[0].addresses().values()[0].address();
 
@@ -188,21 +188,17 @@ describe("SelectRecipient", () => {
 			/>,
 		);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
-		await waitFor(() =>
-			expect(() => screen.getAllByTestId("RecipientListItem__select-button")).toThrow(
-				/Unable to find an element by/,
-			),
-		);
+		await waitFor(() => expect(screen.queryByTestId("RecipientListItem__select-button")).not.toBeInTheDocument());
 	});
 
 	it("should filter recipients list by MultiSignature type", async () => {
 		const { rerender } = render(<SelectRecipient profile={profile} />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 

@@ -156,11 +156,7 @@ describe("FilterNetworks", () => {
 
 		userEvent.click(within(screen.getAllByTestId("FilterNetwork")[0]).getByTestId("network__viewall"));
 
-		await waitFor(() =>
-			expect(() => screen.getByTestId("FilterNetwork__select-all-checkbox")).toThrow(
-				/Unable to find an element by/,
-			),
-		);
+		await waitFor(() => expect(screen.queryByTestId("FilterNetwork__select-all-checkbox")).not.toBeInTheDocument());
 
 		expect(container).toMatchSnapshot();
 	});

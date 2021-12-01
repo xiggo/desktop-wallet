@@ -66,7 +66,7 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
@@ -75,7 +75,7 @@ describe("SelectAddress", () => {
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		});
 	});
 
@@ -89,11 +89,11 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it("should select address from wallets modal", async () => {
@@ -105,7 +105,7 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
@@ -118,7 +118,7 @@ describe("SelectAddress", () => {
 		userEvent.click(firstAddress);
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		});
 
 		expect(screen.getByTestId("SelectAddress__input")).toHaveValue(wallets[0].address());
@@ -134,12 +134,12 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		});
 	});
 
@@ -155,7 +155,7 @@ describe("SelectAddress", () => {
 			/>,
 		);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectAddress__wrapper"));
 
@@ -168,7 +168,7 @@ describe("SelectAddress", () => {
 		userEvent.click(firstAddress);
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		});
 
 		expect(onChange).toHaveBeenCalledWith(wallets[0].address());

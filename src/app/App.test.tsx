@@ -125,9 +125,7 @@ describe("App", () => {
 			jest.runAllTimers();
 		});
 
-		await waitFor(() =>
-			expect(() => screen.getByTestId("SyncErrorMessage__retry")).toThrow(/Unable to find an element by/),
-		);
+		await waitFor(() => expect(screen.queryByTestId("SyncErrorMessage__retry")).not.toBeInTheDocument());
 		await waitFor(() => expect(history.location.pathname).toBe(profileDashboardUrl));
 
 		walletRestoreErrorMock.mockRestore();
@@ -141,7 +139,7 @@ describe("App", () => {
 
 		const { container, asFragment } = render(<App />, { withProviders: false });
 
-		await waitFor(() => expect(() => screen.getByTestId("Splash__text")).toThrow(/^Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("Splash__text")).not.toBeInTheDocument());
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();

@@ -91,7 +91,7 @@ describe("PluginList", () => {
 		const { asFragment } = render(<PluginList plugins={plugins} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(2);
-		expect(() => screen.getByTestId("Pagination")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("Pagination")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -100,7 +100,7 @@ describe("PluginList", () => {
 		const { asFragment } = render(<PluginList plugins={plugins} showPagination={false} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(2);
-		expect(() => screen.getByTestId("Pagination")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("Pagination")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -111,12 +111,12 @@ describe("PluginList", () => {
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 
 		expect(screen.getByText("ARK Avatars")).toBeInTheDocument();
-		expect(() => screen.getByText("ARK Explorer")).toThrow(/Unable to find an element with/);
+		expect(screen.queryByText("ARK Explorer")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("Pagination__next"));
 
 		expect(screen.getByText("ARK Explorer")).toBeInTheDocument();
-		expect(() => screen.getByText("ARK Avatars")).toThrow(/Unable to find an element with/);
+		expect(screen.queryByText("ARK Avatars")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -63,7 +63,7 @@ describe("Password Settings", () => {
 
 		const currentPasswordInput = "Password-settings__input--currentPassword";
 
-		expect(() => screen.getByTestId(currentPasswordInput)).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId(currentPasswordInput)).not.toBeInTheDocument();
 
 		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), password);
 
@@ -284,9 +284,7 @@ describe("Password Settings", () => {
 
 		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__cancel"));
 
-		expect(() => screen.getByTestId("PasswordRemovalConfirmModal__input-password")).toThrow(
-			/Unable to find an element by/,
-		);
+		expect(screen.queryByTestId("PasswordRemovalConfirmModal__input-password")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("Password-settings__remove-button"));
 
@@ -301,9 +299,7 @@ describe("Password Settings", () => {
 		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__confirm"));
 
 		await waitFor(() =>
-			expect(() => screen.getByTestId("PasswordRemovalConfirmModal__input-password")).toThrow(
-				/Unable to find an element by/,
-			),
+			expect(screen.queryByTestId("PasswordRemovalConfirmModal__input-password")).not.toBeInTheDocument(),
 		);
 
 		expect(forgetPasswordSpy).toHaveBeenCalledWith(password);

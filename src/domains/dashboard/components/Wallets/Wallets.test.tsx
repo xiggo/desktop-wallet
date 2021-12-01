@@ -355,9 +355,11 @@ describe("Wallets", () => {
 			expect(screen.getByTestId("WalletsGrid")).toBeInTheDocument();
 		});
 
-		expect(() => within(screen.getAllByTestId("Card")[0]).getByText(name)).toThrow(/Unable to find an element/);
+		const walletCard = screen.getAllByTestId("Card")[0];
 
-		userEvent.click(within(screen.getAllByTestId("Card")[0]).getByTestId("dropdown__toggle"));
+		expect(within(walletCard).queryByText(name)).not.toBeInTheDocument();
+
+		userEvent.click(within(walletCard).getByTestId("dropdown__toggle"));
 
 		expect(screen.getByTestId("dropdown__content")).toBeInTheDocument();
 		expect(screen.getByText(commonTranslations.RENAME)).toBeInTheDocument();
@@ -381,7 +383,7 @@ describe("Wallets", () => {
 
 		await waitFor(() => expect(profile.wallets().first().alias()).toBe(name));
 
-		expect(within(screen.getAllByTestId("Card")[0]).getByText(name)).toBeInTheDocument();
+		expect(within(walletCard).getByText(name)).toBeInTheDocument();
 	});
 
 	it("should delete wallet through wallet card dropdown", async () => {

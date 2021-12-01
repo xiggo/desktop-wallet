@@ -92,7 +92,7 @@ describe("ExchangeView", () => {
 		});
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("ExchangeForm")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("ExchangeForm")).not.toBeInTheDocument();
 		});
 
 		expect(container).toMatchSnapshot();

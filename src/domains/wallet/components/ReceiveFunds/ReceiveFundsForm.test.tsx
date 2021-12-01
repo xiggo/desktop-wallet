@@ -57,7 +57,7 @@ describe("ReceiveFundsForm", () => {
 			defaultValues: { memo },
 		});
 
-		expect(() => screen.getByTestId("ReceiveFundsForm__memo")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("ReceiveFundsForm__memo")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 

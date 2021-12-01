@@ -364,7 +364,7 @@ describe("Exchange", () => {
 		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => {
-			expect(() => screen.getAllByTestId("TableRow")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("TableRow")).not.toBeInTheDocument();
 		});
 
 		expect(() => profile.exchangeTransactions().findById(exchangeTransaction.id())).toThrow("Failed to find");
@@ -426,7 +426,7 @@ describe("Exchange", () => {
 		userEvent.click(screen.getByTestId(buttonId));
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		});
 	});
 });

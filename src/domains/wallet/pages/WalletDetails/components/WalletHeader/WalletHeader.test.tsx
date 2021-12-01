@@ -90,12 +90,12 @@ describe("WalletHeader", () => {
 
 		userEvent.click(screen.getByTestId("dropdown__toggle"));
 
+		const dropdownContent = screen.getByTestId("dropdown__content");
+
 		await waitFor(() =>
-			expect(() =>
-				within(screen.getByTestId("dropdown__content")).getByText(
-					walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE,
-				),
-			).toThrow(/Unable to find an element/),
+			expect(
+				within(dropdownContent).queryByText(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SECOND_SIGNATURE),
+			).not.toBeInTheDocument(),
 		);
 
 		mockIsSecondSignature.mockRestore();
@@ -151,7 +151,7 @@ describe("WalletHeader", () => {
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
-		expect(() => screen.getByTestId("WalletHeader__currency-balance")).toThrow(/Unable to find/);
+		expect(screen.queryByTestId("WalletHeader__currency-balance")).not.toBeInTheDocument();
 
 		networkSpy.mockRestore();
 	});
@@ -187,7 +187,7 @@ describe("WalletHeader", () => {
 			},
 		);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		clickItem(walletTranslations.PAGE_WALLET_DETAILS.OPTIONS.SIGN_MESSAGE);
 
@@ -203,7 +203,7 @@ describe("WalletHeader", () => {
 			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it.each(["cancel", "close"])("should open & %s verify message modal", async (action) => {
@@ -221,7 +221,7 @@ describe("WalletHeader", () => {
 			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it.each(["cancel", "close"])("should open & %s delete wallet modal", async (action) => {
@@ -239,7 +239,7 @@ describe("WalletHeader", () => {
 			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it.each(["cancel", "close"])("should open & %s wallet name modal", async (action) => {
@@ -257,7 +257,7 @@ describe("WalletHeader", () => {
 			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it("should open & close receive funds modal", async () => {
@@ -273,7 +273,7 @@ describe("WalletHeader", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it("should manually sync wallet data", async () => {
@@ -417,7 +417,7 @@ describe("WalletHeader", () => {
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
-		expect(() => screen.getByTestId("WalletIcon__Multisignature")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("WalletIcon__Multisignature")).not.toBeInTheDocument();
 
 		multisigSpy.mockRestore();
 	});
@@ -447,9 +447,7 @@ describe("WalletHeader", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		await waitFor(() =>
-			expect(() => screen.getByTestId("UnlockTokensModal")).toThrow(/Unable to find an element by/),
-		);
+		await waitFor(() => expect(screen.queryByTestId("UnlockTokensModal")).not.toBeInTheDocument());
 
 		usesLockedBalance.mockRestore();
 		balance.mockRestore();

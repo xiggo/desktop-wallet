@@ -359,7 +359,7 @@ describe("PluginManager", () => {
 
 		userEvent.click(screen.getByTestId(buttonId));
 
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
 		mockAcceptedManualInstallation.mockRestore();
 	});
@@ -442,7 +442,7 @@ describe("PluginManager", () => {
 
 		userEvent.click(screen.getByTestId("InstallPlugin__cancel-button"));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -819,7 +819,7 @@ describe("PluginManager", () => {
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
 		userEvent.click(screen.getByTestId("PluginUninstall__cancel-button"));
 
-		expect(() => screen.getByTestId("PluginUninstallConfirmation")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("PluginUninstallConfirmation")).not.toBeInTheDocument();
 
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 
@@ -859,7 +859,7 @@ describe("PluginManager", () => {
 
 		await waitFor(() => expect(pluginManager.plugins().findById(plugin.config().id())).toBeUndefined());
 
-		expect(() => screen.getByTestId("PluginUninstallConfirmation")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("PluginUninstallConfirmation")).not.toBeInTheDocument();
 
 		invokeMock.mockRestore();
 	});
@@ -923,7 +923,7 @@ describe("PluginManager", () => {
 
 		userEvent.click(screen.getByTestId("PluginUpdates__cancel-button"));
 
-		expect(() => screen.getByTestId("PluginUpdatesConfirmation")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("PluginUpdatesConfirmation")).not.toBeInTheDocument();
 
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});

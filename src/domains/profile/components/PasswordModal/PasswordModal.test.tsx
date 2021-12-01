@@ -18,7 +18,7 @@ describe("PasswordModal", () => {
 	it("should not render if not open", () => {
 		const { asFragment } = render(<PasswordModal isOpen={false} />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

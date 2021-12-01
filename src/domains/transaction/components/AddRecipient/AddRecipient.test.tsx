@@ -147,7 +147,7 @@ describe("AddRecipient", () => {
 	it("should select recipient", async () => {
 		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
@@ -155,7 +155,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
 		const selectedAddressValue = profile.wallets().first().address();
 
@@ -360,7 +360,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
@@ -368,7 +368,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		await waitFor(() =>
 			expect(screen.getByTestId("SelectDropdown__input")).toHaveValue("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"),
@@ -387,7 +387,7 @@ describe("AddRecipient", () => {
 	it("should show error for low balance", async () => {
 		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
@@ -397,7 +397,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(firstAddress);
 
-		await waitFor(() => expect(() => screen.getByTestId("Input__error")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "10000000000");
 
@@ -409,7 +409,7 @@ describe("AddRecipient", () => {
 
 		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
@@ -419,7 +419,7 @@ describe("AddRecipient", () => {
 
 		userEvent.click(firstAddress);
 
-		await waitFor(() => expect(() => screen.getByTestId("Input__error")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "0.1");
 
@@ -431,13 +431,13 @@ describe("AddRecipient", () => {
 	it("should show error for invalid address", async () => {
 		renderWithFormProvider(<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		await waitFor(() => expect(() => screen.getByTestId("Input__error")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
 		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
 

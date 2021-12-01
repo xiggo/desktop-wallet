@@ -214,7 +214,7 @@ describe("WalletDetails", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 		jest.restoreAllMocks();
 	});
 
@@ -246,9 +246,7 @@ describe("WalletDetails", () => {
 
 		userEvent.click(screen.getByTestId("ConfirmRemovePendingTransaction__remove"));
 
-		await waitFor(() =>
-			expect(() => screen.getByTestId("PendingTransactions")).toThrow(/Unable to find an element by/),
-		);
+		await waitFor(() => expect(screen.queryByTestId("PendingTransactions")).not.toBeInTheDocument());
 
 		expect(toastsMock).toHaveBeenCalledWith(translations.TRANSACTION.TRANSACTION_REMOVED);
 
@@ -268,7 +266,7 @@ describe("WalletDetails", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 		jest.restoreAllMocks();
 	});
 
@@ -294,7 +292,7 @@ describe("WalletDetails", () => {
 		await renderPage({ waitForTopSection: false });
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("WalletVote")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("WalletVote")).not.toBeInTheDocument();
 		});
 
 		networkFeatureSpy.mockRestore();
@@ -419,7 +417,7 @@ describe("WalletDetails", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 	});
 
 	it("should fetch more transactions", async () => {

@@ -146,7 +146,7 @@ describe("NavigationBar", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it("should close the search wallet modal", async () => {
@@ -168,7 +168,7 @@ describe("NavigationBar", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it("should disable send transfer button when no Live wallets in test network", () => {

@@ -61,7 +61,7 @@ describe("VoteDetail", () => {
 			},
 		);
 
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
 		expect(asFragment()).toMatchSnapshot();
 	});

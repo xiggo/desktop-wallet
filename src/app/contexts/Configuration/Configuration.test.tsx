@@ -59,7 +59,7 @@ describe("Configuration Context", () => {
 
 		expect(screen.getByTestId("Configuration__consumer")).toBeInTheDocument();
 
-		await waitFor(() => expect(() => screen.getByTestId("Configuration__list")).toThrow(/Unable to find/));
+		await waitFor(() => expect(screen.queryByTestId("Configuration__list")).not.toBeInTheDocument());
 
 		userEvent.click(screen.getByTestId("Configuration__consumer"));
 

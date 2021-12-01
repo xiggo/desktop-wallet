@@ -482,7 +482,7 @@ describe("SelectDropdown", () => {
 
 			userEvent.paste(selectDropdown, "Unmatched");
 
-			expect(() => screen.getByTestId("SelectDropdown__option--0")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument();
 		},
 	);
 

@@ -676,7 +676,7 @@ describe("Registration", () => {
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.SIMPLE),
 		);
 
-		expect(() => screen.getByTestId("InputCurrency")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("InputCurrency")).not.toBeInTheDocument();
 	});
 
 	it("should return to form step by cancelling fee warning", async () => {

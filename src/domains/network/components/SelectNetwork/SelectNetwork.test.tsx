@@ -144,17 +144,15 @@ describe("SelectNetwork", () => {
 
 		userEvent.keyboard("{enter}");
 
-		await expect(
-			within(screen.getByTestId("SelectNetworkInput__network")).findByTestId("NetworkIcon__icon"),
-		).resolves.toBeVisible();
+		const network = screen.getByTestId("SelectNetworkInput__network");
 
-		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
+		await expect(within(network).findByTestId("NetworkIcon__icon")).resolves.toBeVisible();
+
+		expect(network).toHaveAttribute("aria-label", "ARK");
 
 		userEvent.paste(input, "A");
 
-		expect(() =>
-			within(screen.getByTestId("SelectNetworkInput__network")).getByTestId("NetworkIcon__icon"),
-		).toThrow(/Unable to find an element by/);
+		expect(within(network).queryByTestId("NetworkIcon__icon")).not.toBeInTheDocument();
 
 		expect(screen.getByTestId("SelectNetworkInput__network")).not.toHaveAttribute("aria-label");
 	});

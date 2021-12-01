@@ -8,9 +8,7 @@ describe("StepNavigation", () => {
 	it("should not render back to wallet button if not on last step", () => {
 		const { asFragment } = render(<StepNavigation activeIndex={1} size={2} />);
 
-		expect(() => screen.getByTestId("StepNavigation__back-to-wallet-button")).toThrow(
-			/Unable to find an element by/,
-		);
+		expect(screen.queryByTestId("StepNavigation__back-to-wallet-button")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -31,7 +29,7 @@ describe("StepNavigation", () => {
 	it("should not render back button if on last step", () => {
 		const { asFragment } = render(<StepNavigation activeIndex={1} size={1} />);
 
-		expect(() => screen.getByTestId("StepNavigation__back-button")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("StepNavigation__back-button")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -45,12 +43,12 @@ describe("StepNavigation", () => {
 	it("should not render continue button if on last two steps", () => {
 		const { asFragment, rerender } = render(<StepNavigation activeIndex={1} size={2} />);
 
-		expect(() => screen.getByTestId("StepNavigation__continue-button")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("StepNavigation__continue-button")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
 		rerender(<StepNavigation activeIndex={2} size={2} />);
 
-		expect(() => screen.getByTestId("StepNavigation__continue-button")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("StepNavigation__continue-button")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

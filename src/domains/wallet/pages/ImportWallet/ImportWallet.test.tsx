@@ -374,7 +374,7 @@ describe("ImportWallet", () => {
 		userEvent.keyboard("{enter}");
 		userEvent.click(screen.getByTestId("UpdateWalletName__submit"));
 
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
 		userEvent.click(screen.getByTestId("ImportWallet__finish-button"));
 

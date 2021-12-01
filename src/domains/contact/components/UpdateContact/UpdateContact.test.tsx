@@ -19,7 +19,7 @@ describe("UpdateContact", () => {
 	it("should not render if not open", () => {
 		const { asFragment } = render(<UpdateContact profile={profile} isOpen={false} contact={contact} />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -143,7 +143,7 @@ describe("UpdateContact", () => {
 		userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 		});
 
 		inputElement.select();

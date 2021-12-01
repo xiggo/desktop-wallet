@@ -216,9 +216,7 @@ describe("useProfileSynchronizer", () => {
 		});
 
 		await waitFor(() => expect(history.location.pathname).toBe("/"));
-		await waitFor(() => expect(() => screen.getByTestId("ProfileSynced")).toThrow(/Unable to find an element by/), {
-			timeout: 4000,
-		});
+		await waitFor(() => expect(screen.queryByTestId("ProfileSynced")).not.toBeInTheDocument(), { timeout: 5000 });
 
 		jest.clearAllTimers();
 	});
@@ -306,7 +304,7 @@ describe("useProfileSynchronizer", () => {
 			},
 		);
 
-		await waitFor(() => expect(() => screen.getByTestId("Content")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("Content")).not.toBeInTheDocument());
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 		memoryPasswordMock.mockRestore();
 	});

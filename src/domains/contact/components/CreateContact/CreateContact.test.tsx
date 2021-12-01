@@ -22,7 +22,7 @@ describe("CreateContact", () => {
 	it("should not render if not open", () => {
 		const { asFragment } = render(<CreateContact profile={profile} isOpen={false} onSave={onSave} />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

@@ -773,7 +773,7 @@ describe("SendTransfer", () => {
 		userEvent.click(firstAddress);
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		});
 
 		expect(container).toMatchSnapshot();
@@ -1780,7 +1780,7 @@ describe("SendTransfer", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("1"));
 
-		await waitFor(() => expect(() => screen.getByTestId("Input__error")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
 		// Step 2
 		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
@@ -1797,7 +1797,7 @@ describe("SendTransfer", () => {
 		await expect(screen.findByTestId("FeeWarning__cancel-button")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 	});
 
 	it.each(["cancel", "continue"])(
@@ -2490,14 +2490,14 @@ describe("SendTransfer", () => {
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("ConfirmSendTransaction__cancel"));
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
 		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -2627,7 +2627,7 @@ describe("SendTransfer", () => {
 
 		// confirm within the modal
 		userEvent.click(screen.getByTestId("ConfirmSendTransaction__confirm"));
-		await waitFor(() => expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/));
+		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 

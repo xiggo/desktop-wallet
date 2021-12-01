@@ -35,7 +35,7 @@ describe("WelcomeModal", () => {
 		mockHasCompletedTutorial.mockReturnValue(true);
 		const { asFragment } = render(<Wrapper />);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -60,9 +60,9 @@ describe("WelcomeModal", () => {
 
 		expect(screen.getByTestId("WelcomeModal-skip")).toBeDefined();
 		expect(screen.getByTestId("WelcomeModal-next")).toBeDefined();
-		expect(() => screen.getByTestId("DotNavigation")).toThrow(/Unable to find an element by/);
-		expect(() => screen.getByTestId("WelcomeModal-finish")).toThrow(/Unable to find an element by/);
-		expect(() => screen.getByTestId("WelcomeModal-prev")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("DotNavigation")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("WelcomeModal-finish")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("WelcomeModal-prev")).not.toBeInTheDocument();
 
 		// Intermediate steps
 		for (const _ of [1, 2, 3]) {
@@ -71,9 +71,9 @@ describe("WelcomeModal", () => {
 			expect(screen.getByTestId("WelcomeModal-next")).toBeDefined();
 			expect(screen.getByTestId("WelcomeModal-prev")).toBeDefined();
 			expect(screen.getByTestId("DotNavigation")).toBeDefined();
-			expect(() => screen.getByTestId("WelcomeModal-finish")).toThrow(/Unable to find an element by/);
-			expect(() => screen.getByTestId("WelcomeModal-skip")).toThrow(/Unable to find an element by/);
-		}
+			expect(screen.queryByTestId("WelcomeModal-finish")).not.toBeInTheDocument();
+			expect(screen.queryByTestId("WelcomeModal-skip")).not.toBeInTheDocument();
+		});
 
 		// Final step
 		userEvent.click(screen.getByTestId("WelcomeModal-next"));
@@ -81,8 +81,8 @@ describe("WelcomeModal", () => {
 		expect(screen.getByTestId("WelcomeModal-finish")).toBeDefined();
 		expect(screen.getByTestId("WelcomeModal-prev")).toBeDefined();
 		expect(screen.getByTestId("DotNavigation")).toBeDefined();
-		expect(() => screen.getByTestId("WelcomeModal-next")).toThrow(/Unable to find an element by/);
-		expect(() => screen.getByTestId("WelcomeModal-skip")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("WelcomeModal-next")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("WelcomeModal-skip")).not.toBeInTheDocument();
 	});
 
 	it("can change the current step with the navigation dots", () => {
@@ -99,7 +99,7 @@ describe("WelcomeModal", () => {
 		expect(screen.getByTestId("WelcomeModal-finish")).toBeDefined();
 		expect(screen.getByTestId("WelcomeModal-prev")).toBeDefined();
 		expect(screen.getByTestId("DotNavigation")).toBeDefined();
-		expect(() => screen.getByTestId("WelcomeModal-next")).toThrow(/Unable to find an element by/);
-		expect(() => screen.getByTestId("WelcomeModal-skip")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("WelcomeModal-next")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("WelcomeModal-skip")).not.toBeInTheDocument();
 	});
 });

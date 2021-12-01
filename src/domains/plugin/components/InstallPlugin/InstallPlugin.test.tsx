@@ -28,7 +28,7 @@ describe("InstallPlugin", () => {
 			</PluginManagerProvider>,
 		);
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

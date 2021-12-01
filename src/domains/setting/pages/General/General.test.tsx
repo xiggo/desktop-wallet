@@ -153,7 +153,7 @@ describe("General Settings", () => {
 
 		act(() => screen.getByTestId("General-settings__submit-button").focus());
 
-		expect(() => screen.getByTestId("SelectProfileImage__avatar")).toThrow(/^Unable to find an element by/);
+		expect(screen.queryByTestId("SelectProfileImage__avatar")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -303,7 +303,7 @@ describe("General Settings", () => {
 
 		userEvent.click(screen.getByTestId("DevelopmentNetwork__continue-button"));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		// Toggle Test Development Network
 		userEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
@@ -507,7 +507,7 @@ describe("General Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("General-settings__toggle--useTestNetworks"));
 
@@ -521,7 +521,7 @@ describe("General Settings", () => {
 
 		userEvent.click(screen.getByTestId(buttonId));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it.each([
@@ -542,7 +542,7 @@ describe("General Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByText(translations.COMMON.RESET_SETTINGS));
 
@@ -558,7 +558,7 @@ describe("General Settings", () => {
 		userEvent.click(screen.getByTestId(buttonId));
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		});
 	});
 
@@ -703,7 +703,7 @@ describe("General Settings", () => {
 
 		await expect(screen.findByText("EUR (€)")).resolves.toBeVisible();
 
-		expect(() => screen.getByText("VND (₫)")).toThrow(/Unable to find an element/);
+		expect(screen.queryByText("VND (₫)")).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByText("EUR (€)"));
 

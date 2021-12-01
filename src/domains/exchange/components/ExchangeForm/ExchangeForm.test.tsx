@@ -342,7 +342,7 @@ describe("ExchangeForm", () => {
 		userEvent.click(screen.getByTestId("ExchangeForm__remove-refund-address"));
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("ExchangeForm__refund-address")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("ExchangeForm__refund-address")).not.toBeInTheDocument();
 		});
 	});
 
@@ -753,19 +753,17 @@ describe("ExchangeForm", () => {
 			expect(recipientDropdown).toHaveValue("payoutAddress");
 		});
 
+		const recipientAddress = screen.getByTestId("ExchangeForm__recipient-address");
+
 		await waitFor(() => {
-			expect(
-				within(screen.getByTestId("ExchangeForm__recipient-address")).getAllByTestId("Input__error"),
-			).toHaveLength(2);
+			expect(within(recipientAddress).getAllByTestId("Input__error")).toHaveLength(2);
 		});
 
 		// remove to currency
 		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[1]);
 
 		await waitFor(() => {
-			expect(() =>
-				within(screen.getByTestId("ExchangeForm__recipient-address")).getAllByTestId("Input__error"),
-			).toThrow(/Unable to find an element by/);
+			expect(within(recipientAddress).queryByTestId("Input__error")).not.toBeInTheDocument();
 		});
 	});
 
@@ -794,9 +792,10 @@ describe("ExchangeForm", () => {
 		});
 
 		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
-		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
-		});
+
+		const refundAddress = screen.getByTestId("ExchangeForm__refund-address");
+
+		expect(refundAddress).toBeVisible();
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
 
@@ -807,18 +806,14 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(
-				within(screen.getByTestId("ExchangeForm__refund-address")).getAllByTestId("Input__error"),
-			).toHaveLength(2);
+			expect(within(refundAddress).getAllByTestId("Input__error")).toHaveLength(2);
 		});
 
 		// remove from currency
 		userEvent.clear(screen.getAllByTestId("SelectDropdown__input")[0]);
 
 		await waitFor(() => {
-			expect(() =>
-				within(screen.getByTestId("ExchangeForm__refund-address")).getAllByTestId("Input__error"),
-			).toThrow(/Unable to find an element by/);
+			expect(within(refundAddress).queryByTestId("Input__error")).not.toBeInTheDocument();
 		});
 	});
 
@@ -1206,7 +1201,7 @@ describe("ExchangeForm", () => {
 
 		// status: awaiting confirmation
 		await waitFor(() => {
-			expect(() => screen.getAllByTestId("StatusIcon__check-mark")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("StatusIcon__check-mark")).not.toBeInTheDocument();
 		});
 
 		expect(screen.getAllByTestId("StatusIcon__spinner")).toHaveLength(1);
@@ -1220,8 +1215,8 @@ describe("ExchangeForm", () => {
 			{ timeout: 4000 },
 		);
 
-		expect(() => screen.getAllByTestId("StatusIcon__spinner")).toThrow(/Unable to find an element by/);
-		expect(() => screen.getAllByTestId("StatusIcon__empty")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("StatusIcon__spinner")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("StatusIcon__empty")).not.toBeInTheDocument();
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__confirmation-step")).toBeInTheDocument();
@@ -1427,7 +1422,7 @@ describe("StatusStep", () => {
 
 		// status: awaiting confirmation
 		await waitFor(() => {
-			expect(() => screen.getAllByTestId("StatusIcon__check-mark")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("StatusIcon__check-mark")).not.toBeInTheDocument();
 		});
 
 		expect(screen.getAllByTestId("StatusIcon__spinner")).toHaveLength(1);
@@ -1517,7 +1512,7 @@ describe("ConfirmationStep", () => {
 		);
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("ExchangeForm__confirmation-step")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("ExchangeForm__confirmation-step")).not.toBeInTheDocument();
 		});
 
 		expect(container).toMatchSnapshot();

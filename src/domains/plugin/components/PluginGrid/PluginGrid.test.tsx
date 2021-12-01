@@ -129,7 +129,7 @@ describe("PluginGrid", () => {
 			await expect(screen.findByText(plugin.title)).resolves.toBeVisible();
 		}
 
-		expect(() => screen.getByTestId("Pagination")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("Pagination")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -154,7 +154,7 @@ describe("PluginGrid", () => {
 			await expect(screen.findByText(plugin.title)).resolves.toBeVisible();
 		}
 
-		expect(() => screen.getByTestId("Pagination")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("Pagination")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -163,13 +163,13 @@ describe("PluginGrid", () => {
 
 		await expect(screen.findByText(plugins[0].title)).resolves.toBeVisible();
 
-		await expect(screen.findByText(plugins[1].title)).rejects.toThrow(/Unable to find an element/);
+		expect(screen.queryByText(plugins[1].title)).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("Pagination__next"));
 
 		await expect(screen.findByText(plugins[1].title)).resolves.toBeVisible();
 
-		await expect(screen.findByText(plugins[0].title)).rejects.toThrow(/Unable to find an element/);
+		expect(screen.queryByText(plugins[0].title)).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -45,7 +45,7 @@ describe("WalletsList", () => {
 	it("should not render if isVisible is false", () => {
 		const { asFragment } = render(<WalletsList wallets={wallets} isVisible={false} />);
 
-		expect(() => screen.getByTestId("WalletsList")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("WalletsList")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 

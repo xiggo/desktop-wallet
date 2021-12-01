@@ -31,7 +31,7 @@ describe("WalletsGrid", () => {
 	it("should not render if visible prop is falsy", () => {
 		render(<WalletsGrid wallets={[]} isVisible={false} />);
 
-		expect(() => screen.getByTestId("WalletsGrid")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("WalletsGrid")).not.toBeInTheDocument();
 	});
 
 	it("should render loading state", async () => {

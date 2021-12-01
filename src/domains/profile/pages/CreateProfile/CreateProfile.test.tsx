@@ -244,9 +244,7 @@ describe("CreateProfile", () => {
 	it("should update the avatar when removing focus from name input", async () => {
 		await renderComponent();
 
-		expect(() => screen.getByTestId("SelectProfileImage__avatar-identicon")).toThrow(
-			/^Unable to find an element by/,
-		);
+		expect(screen.queryByTestId("SelectProfileImage__avatar-identicon")).not.toBeInTheDocument();
 
 		const inputElement: HTMLInputElement = screen.getByTestId("Input");
 
@@ -276,9 +274,7 @@ describe("CreateProfile", () => {
 
 		fireEvent.blur(inputElement);
 
-		expect(() => screen.getByTestId("SelectProfileImage__avatar-identicon")).toThrow(
-			/^Unable to find an element by/,
-		);
+		expect(screen.queryByTestId("SelectProfileImage__avatar-identicon")).not.toBeInTheDocument();
 	});
 
 	it("should not update the uploaded avatar when removing focus from name input", async () => {

@@ -42,7 +42,7 @@ describe("Contacts", () => {
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
 
 		expect(screen.getByTestId("ContactList")).toBeInTheDocument();
-		expect(() => screen.getByTestId("EmptyBlock")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -65,7 +65,7 @@ describe("Contacts", () => {
 		expect(screen.getByTestId("ContactList")).toBeInTheDocument();
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 		expect(screen.getByTestId("TableRow")).toHaveTextContent(address.address());
-		expect(() => screen.getByTestId("EmptyBlock")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("EmptyBlock")).not.toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -82,7 +82,7 @@ describe("Contacts", () => {
 		expect(screen.getByTestId("header__title")).toHaveTextContent(translations.CONTACTS_PAGE.TITLE);
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.CONTACTS_PAGE.SUBTITLE);
 
-		expect(() => screen.getByTestId("ContactList")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("ContactList")).not.toBeInTheDocument();
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
 
 		expect(asFragment()).toMatchSnapshot();
@@ -105,7 +105,7 @@ describe("Contacts", () => {
 
 		userEvent.click(screen.getByTestId(buttonId));
 
-		expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
 
 	it("should successfully add contact", async () => {
@@ -116,7 +116,7 @@ describe("Contacts", () => {
 		expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
 		expect(screen.getByTestId("contact-form__add-address-btn")).toBeDisabled();
 
-		expect(() => screen.getAllByTestId("contact-form__address-list-item")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 
 		userEvent.paste(screen.getByTestId("contact-form__name-input"), "Test Contact");
 
@@ -150,7 +150,7 @@ describe("Contacts", () => {
 		userEvent.click(screen.getByTestId("contact-form__save-btn"));
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		});
 
 		expect(profile.contacts().findByAddress("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).toHaveLength(1);
@@ -229,7 +229,7 @@ describe("Contacts", () => {
 		userEvent.click(screen.getByTestId(buttonId));
 
 		await waitFor(() => {
-			expect(() => screen.getByTestId("modal__inner")).toThrow(/Unable to find an element by/);
+			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		});
 	});
 

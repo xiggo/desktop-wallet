@@ -106,9 +106,7 @@ describe("MultiSignatureSuccessful", () => {
 		);
 
 		await waitFor(() =>
-			expect(() => screen.getByTestId("MultiSignatureSuccessful__publicKeys")).toThrow(
-				/Unable to find an element by/,
-			),
+			expect(screen.queryByTestId("MultiSignatureSuccessful__publicKeys")).not.toBeInTheDocument(),
 		);
 
 		expect(asFragment()).toMatchSnapshot();

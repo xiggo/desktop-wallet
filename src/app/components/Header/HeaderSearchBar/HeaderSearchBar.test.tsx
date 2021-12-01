@@ -89,7 +89,7 @@ describe("HeaderSearchBar", () => {
 
 		userEvent.click(outsideElement);
 
-		expect(() => screen.getByTestId("Input")).toThrow(/Unable to find an element by/);
+		expect(screen.queryByTestId("Input")).not.toBeInTheDocument();
 	});
 
 	it("should reset the query", () => {
