@@ -85,7 +85,12 @@ export const usePortfolioBreakdown: UsePortfolioBreakdownHook = ({
 			return;
 		}
 
-		setBalance(portfolioItems.reduce((previous, current) => previous + current.convertedAmount, 0));
+		let balance = 0;
+		for (const item of portfolioItems) {
+			balance += item.convertedAmount;
+		}
+
+		setBalance(balance);
 		setAssets(portfolioItems);
 		setLoading(false);
 	}, [isEmpty, isRestored, profile, profileIsSyncingExchangeRates, walletIds, selectedNetworkIds]);
