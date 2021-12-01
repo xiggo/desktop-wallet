@@ -5,7 +5,7 @@ interface BaseProperties {
 	viewType?: "list" | "grid";
 	useTestNetworks?: boolean;
 	walletsDisplayType?: string;
-	selectedNetworkIds?: string[];
+	selectedNetworkIds: string[];
 	isFilterChanged?: boolean;
 	defaultConfiguration: DashboardConfiguration;
 }

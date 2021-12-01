@@ -12,11 +12,7 @@ interface AmountProperties {
 }
 
 const Amount: React.VFC<AmountProperties> = ({ value, ticker, showTicker = true, isNegative, showSign, className }) => {
-	let formattedAmount = Helpers.Currency.format(value, ticker);
-
-	if (!showTicker) {
-		formattedAmount = formattedAmount.split(" ").slice(0, -1).join(" ");
-	}
+	let formattedAmount = Helpers.Currency.format(value, ticker, { withTicker: showTicker });
 
 	if (showSign) {
 		formattedAmount = `${isNegative ? "-" : "+"} ${formattedAmount}`;

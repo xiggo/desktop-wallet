@@ -76,7 +76,7 @@ describe("useWalletConfig", () => {
 		});
 	});
 
-	it("should render with no networks selected", async () => {
+	it.each([undefined, []])("should render with no networks selected (%s)", async (selectedNetworkIds) => {
 		profile.wallets().first().toggleStarred();
 
 		const wrapper = ({ children }: any) => (
@@ -85,7 +85,7 @@ describe("useWalletConfig", () => {
 			</EnvironmentProvider>
 		);
 
-		const { result } = renderHook(() => useWalletConfig({ defaults: { selectedNetworkIds: [] }, profile }), {
+		const { result } = renderHook(() => useWalletConfig({ defaults: { selectedNetworkIds } as any, profile }), {
 			wrapper,
 		});
 

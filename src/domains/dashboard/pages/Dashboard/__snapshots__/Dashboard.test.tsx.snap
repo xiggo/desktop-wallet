@@ -460,6 +460,100 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
             </div>
           </div>
           <div
+            class="mb-4"
+          >
+            <div
+              class="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
+              data-testid="PortfolioBreakdown"
+            >
+              <div
+                class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+              >
+                <div
+                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+                  >
+                    Your Balance
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="Amount"
+                  >
+                    50.11421128 BTC
+                  </span>
+                </div>
+                <div
+                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+                  >
+                    Assets
+                  </span>
+                  <span
+                    class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="PortfolioBreakdown__assets"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+                  >
+                    Wallets
+                  </span>
+                  <span
+                    class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="PortfolioBreakdown__wallets"
+                  >
+                    1
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex-1 ml-6"
+              >
+                <div>
+                  <div
+                    class="absolute z-10 duration-200 transition-opacity opacity-0"
+                    data-testid="TooltipContainer"
+                  />
+                  <div
+                    class="flex justify-end mb-1"
+                    data-testid="LineGraph__legend"
+                  >
+                    <div
+                      class="flex justify-end mb-1"
+                    >
+                      <div
+                        class="flex space-x-4"
+                      />
+                      <div
+                        class="border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-4 pl-4"
+                      >
+                        <button
+                          class="font-semibold text-sm link"
+                          type="button"
+                        >
+                          More Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <svg
+                    class="w-full h-5"
+                    data-testid="LineGraph__svg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
             class="w-full"
             data-testid="WalletsGrid"
           >
@@ -1350,6 +1444,100 @@ exports[`Dashboard should render 1`] = `
                       </div>
                     </div>
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mb-4"
+          >
+            <div
+              class="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
+              data-testid="PortfolioBreakdown"
+            >
+              <div
+                class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+              >
+                <div
+                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+                  >
+                    Your Balance
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="Amount"
+                  >
+                    50.11421128 BTC
+                  </span>
+                </div>
+                <div
+                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+                  >
+                    Assets
+                  </span>
+                  <span
+                    class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="PortfolioBreakdown__assets"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+                  >
+                    Wallets
+                  </span>
+                  <span
+                    class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="PortfolioBreakdown__wallets"
+                  >
+                    1
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex-1 ml-6"
+              >
+                <div>
+                  <div
+                    class="absolute z-10 duration-200 transition-opacity opacity-0"
+                    data-testid="TooltipContainer"
+                  />
+                  <div
+                    class="flex justify-end mb-1"
+                    data-testid="LineGraph__legend"
+                  >
+                    <div
+                      class="flex justify-end mb-1"
+                    >
+                      <div
+                        class="flex space-x-4"
+                      />
+                      <div
+                        class="border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-4 pl-4"
+                      >
+                        <button
+                          class="font-semibold text-sm link"
+                          type="button"
+                        >
+                          More Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <svg
+                    class="w-full h-5"
+                    data-testid="LineGraph__svg"
+                  />
                 </div>
               </div>
             </div>
@@ -3039,6 +3227,100 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                       </div>
                     </div>
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mb-4"
+          >
+            <div
+              class="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
+              data-testid="PortfolioBreakdown"
+            >
+              <div
+                class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+              >
+                <div
+                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+                  >
+                    Your Balance
+                  </span>
+                  <span
+                    class="whitespace-nowrap text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="Amount"
+                  >
+                    50.11421128 BTC
+                  </span>
+                </div>
+                <div
+                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+                  >
+                    Assets
+                  </span>
+                  <span
+                    class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="PortfolioBreakdown__assets"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                >
+                  <span
+                    class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
+                  >
+                    Wallets
+                  </span>
+                  <span
+                    class="text-lg text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="PortfolioBreakdown__wallets"
+                  >
+                    1
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex-1 ml-6"
+              >
+                <div>
+                  <div
+                    class="absolute z-10 duration-200 transition-opacity opacity-0"
+                    data-testid="TooltipContainer"
+                  />
+                  <div
+                    class="flex justify-end mb-1"
+                    data-testid="LineGraph__legend"
+                  >
+                    <div
+                      class="flex justify-end mb-1"
+                    >
+                      <div
+                        class="flex space-x-4"
+                      />
+                      <div
+                        class="border-l border-theme-secondary-300 dark:border-theme-secondary-800 ml-4 pl-4"
+                      >
+                        <button
+                          class="font-semibold text-sm link"
+                          type="button"
+                        >
+                          More Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <svg
+                    class="w-full h-5"
+                    data-testid="LineGraph__svg"
+                  />
                 </div>
               </div>
             </div>

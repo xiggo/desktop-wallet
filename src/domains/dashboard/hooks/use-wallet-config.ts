@@ -45,7 +45,7 @@ export const useWalletConfig = ({
 		await environment.persist();
 	};
 
-	const { selectedNetworkIds, walletsDisplayType } = dashboardConfiguration;
+	const { selectedNetworkIds = [], walletsDisplayType } = dashboardConfiguration;
 	const allWalletsLength = profile.wallets().values().length;
 	const selectedWallets = useMemo(
 		() =>
@@ -58,7 +58,7 @@ export const useWalletConfig = ({
 						return false;
 					}
 
-					if (!selectedNetworkIds?.includes(wallet.network().id())) {
+					if (!selectedNetworkIds.includes(wallet.network().id())) {
 						return false;
 					}
 
@@ -80,5 +80,6 @@ export const useWalletConfig = ({
 		setValue,
 		...dashboardConfiguration,
 		defaultConfiguration,
+		selectedNetworkIds,
 	};
 };

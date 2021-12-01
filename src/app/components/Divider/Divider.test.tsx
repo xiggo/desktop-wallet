@@ -5,6 +5,8 @@ import { render } from "@/utils/testing-library";
 import { Divider } from "./Divider";
 
 describe("Divider", () => {
+	const sizes = ["sm", "md", "lg", "default"];
+
 	it("should render", () => {
 		const { container, asFragment } = render(<Divider />);
 
@@ -24,14 +26,14 @@ describe("Divider", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render vertical type and small", () => {
-		const { container } = render(<Divider type="vertical" size="sm" />);
+	it.each(sizes)("should render vertical with size %s", (size) => {
+		const { container } = render(<Divider type="vertical" size={size as any} />);
 
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render vertical type and large", () => {
-		const { container } = render(<Divider type="vertical" size="lg" />);
+	it.each(sizes)("should render horizontal with size %s", (size) => {
+		const { container } = render(<Divider type="horizontal" size={size as any} />);
 
 		expect(container).toMatchSnapshot();
 	});

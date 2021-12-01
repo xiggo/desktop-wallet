@@ -51,7 +51,7 @@ export const InputFeeAdvancedAddon: React.FC<Properties> = ({
 	<div className="flex items-center">
 		{showConvertedValue && (
 			<div className="mr-3 text-sm font-semibold whitespace-no-break text-theme-secondary-500 dark:text-theme-secondary-700">
-				<Amount showTicker ticker={exchangeTicker} value={convertedValue} />
+				<Amount ticker={exchangeTicker} value={convertedValue} />
 			</div>
 		)}
 		<div

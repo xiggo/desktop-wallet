@@ -1,3 +1,4 @@
+import { uniq } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
 import React, { FC, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -5,9 +6,10 @@ import { useHistory } from "react-router-dom";
 
 import { DropdownOption } from "@/app/components/Dropdown";
 import { Section } from "@/app/components/Layout";
-import { useEnvironmentContext } from "@/app/contexts";
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
+import { PortfolioBreakdown } from "@/domains/dashboard/components/PortfolioBreakdown";
 import { WalletsControls } from "@/domains/dashboard/components/WalletsControls";
 import { DeleteWallet } from "@/domains/wallet/components/DeleteWallet";
 import { LedgerWaitingDevice } from "@/domains/wallet/components/Ledger/LedgerWaitingDevice";
@@ -35,6 +37,8 @@ export const Wallets: FC<WalletsProperties> = ({
 	const [modal, setModal] = useState<WalletActionType | undefined>();
 	const [selectedWallet, setSelectedWallet] = useState<Contracts.IReadWriteWallet>();
 
+	const { profileIsSyncingExchangeRates } = useConfiguration();
+
 	const history = useHistory();
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
@@ -55,6 +59,18 @@ export const Wallets: FC<WalletsProperties> = ({
 			.values()
 			.filter((wallet) => wallet.network().isLive());
 	}, [activeProfile, walletsCount, profileIsSyncedWithNetwork]); // eslint-disable-line react-hooks/exhaustive-deps
+
+	const liveNetworkIds = useMemo(
+		() =>
+			uniq(
+				activeProfile
+					.wallets()
+					.values()
+					.filter((wallet) => wallet.network().isLive())
+					.map((wallet) => wallet.networkId()),
+			),
+		[activeProfile, walletsCount, profileIsSyncedWithNetwork], // eslint-disable-line react-hooks/exhaustive-deps
+	);
 
 	const { listWallets, gridWallets, sliderOptions, hasWalletsMatchingOtherNetworks } = useWalletDisplay({
 		displayType: walletsDisplayType,
@@ -115,6 +131,15 @@ export const Wallets: FC<WalletsProperties> = ({
 						onFilterChange={update}
 					/>
 				</div>
+			</div>
+
+			<div className="mb-4">
+				<PortfolioBreakdown
+					profile={activeProfile}
+					profileIsSyncingExchangeRates={profileIsSyncingExchangeRates}
+					liveNetworkIds={liveNetworkIds}
+					selectedNetworkIds={selectedNetworkIds}
+				/>
 			</div>
 
 			<WalletsGrid
