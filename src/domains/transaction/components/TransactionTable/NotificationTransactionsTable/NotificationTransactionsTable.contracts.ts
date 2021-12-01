@@ -9,3 +9,12 @@ export interface NotificationTransactionsProperties {
 	isLoading?: boolean;
 	onVisibilityChange?: (isVisible: boolean) => void;
 }
+
+export interface NotificationTransactionsSkeletonProperties {
+	limit?: number;
+	isCompact: boolean;
+}
+
+export interface NotificationTransactionSkeletonRowProperties {
+	isCompact: boolean;
+}

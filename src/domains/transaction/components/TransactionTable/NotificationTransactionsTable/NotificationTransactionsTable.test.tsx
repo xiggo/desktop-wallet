@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
+import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { env, getDefaultProfileId, getDefaultWalletId, render, screen, waitFor } from "@/utils/testing-library";
 
 import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
@@ -17,6 +18,12 @@ describe("NotificationsTransactionTable", () => {
 			.get("/transactions")
 			.query(true)
 			.reply(200, require("tests/fixtures/coins/ark/devnet/transactions.json"));
+
+		jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
+	});
+
+	afterAll(() => {
+		useRandomNumberHook.useRandomNumber.mockRestore();
 	});
 
 	beforeEach(async () => {
@@ -31,6 +38,18 @@ describe("NotificationsTransactionTable", () => {
 		render(<NotificationTransactionsTable transactions={transactions} profile={profile} isLoading={false} />);
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(transactions.length);
+	});
+
+	it("should render compact skeleton", () => {
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, true);
+
+		const { asFragment } = render(
+			<NotificationTransactionsTable transactions={transactions} profile={profile} isLoading />,
+		);
+
+		expect(asFragment()).toMatchSnapshot();
+
+		profile.settings().set(Contracts.ProfileSetting.UseExpandedTables, false);
 	});
 
 	it("should render loading state", () => {

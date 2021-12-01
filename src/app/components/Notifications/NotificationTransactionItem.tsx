@@ -15,6 +15,7 @@ export const NotificationTransactionItem = ({
 	onVisibilityChange,
 	containmentRef,
 	onTransactionClick,
+	isCompact,
 }: NotificationTransactionItemProperties) => {
 	const { getWalletAlias } = useWalletAlias();
 
@@ -36,14 +37,18 @@ export const NotificationTransactionItem = ({
 			containment={containmentRef?.current}
 		>
 			<TableRow onClick={() => onTransactionClick?.(transaction)}>
-				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact>
-					<TransactionRowMode transaction={transaction} address={transaction.recipient()} isCompact />
+				<TableCell variant="start" className="w-3/5" innerClassName="flex space-x-3" isCompact={isCompact}>
+					<TransactionRowMode
+						transaction={transaction}
+						address={transaction.recipient()}
+						isCompact={isCompact}
+					/>
 					<div className="w-20 flex-1">
 						<TransactionRowRecipientLabel transaction={transaction} walletName={alias} />
 					</div>
 				</TableCell>
 
-				<TableCell variant="end" innerClassName="justify-end" isCompact>
+				<TableCell variant="end" innerClassName="justify-end" isCompact={isCompact}>
 					<TransactionRowAmount transaction={transaction} />
 				</TableCell>
 			</TableRow>

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { VFC } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Table } from "@/app/components/Table";
 
 import { NotificationTransactionSkeletonRow } from "./NotificationTransactionSkeletonRow";
+import { NotificationTransactionsSkeletonProperties } from "./NotificationTransactionsTable.contracts";
 
-export const NotificationTransactionsSkeleton = ({ limit = 10 }: { limit?: number }) => {
+export const NotificationTransactionsSkeleton: VFC<NotificationTransactionsSkeletonProperties> = ({
+	limit = 10,
+	isCompact,
+}) => {
 	const { t } = useTranslation();
 
 	const skeletonRows = new Array(limit).fill({});
@@ -18,7 +22,7 @@ export const NotificationTransactionsSkeleton = ({ limit = 10 }: { limit?: numbe
 				</div>
 
 				<Table hideHeader columns={[{ Header: "-", className: "hidden" }]} data={skeletonRows}>
-					{() => <NotificationTransactionSkeletonRow />}
+					{() => <NotificationTransactionSkeletonRow isCompact={isCompact} />}
 				</Table>
 			</div>
 		</div>
