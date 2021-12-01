@@ -73,7 +73,7 @@ describe("WelcomeModal", () => {
 			expect(screen.getByTestId("DotNavigation")).toBeDefined();
 			expect(screen.queryByTestId("WelcomeModal-finish")).not.toBeInTheDocument();
 			expect(screen.queryByTestId("WelcomeModal-skip")).not.toBeInTheDocument();
-		});
+		}
 
 		// Final step
 		userEvent.click(screen.getByTestId("WelcomeModal-next"));
