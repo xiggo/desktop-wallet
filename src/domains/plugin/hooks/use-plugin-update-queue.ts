@@ -38,7 +38,7 @@ export const usePluginUpdateQueue = (profile: Contracts.IProfile) => {
 	};
 
 	const hasInUpdateQueue = (id: string) => {
-		return !!queue.find((plugin) => plugin.id === id);
+		return queue.some((plugin) => plugin.id === id);
 	};
 
 	useEffect(() => {

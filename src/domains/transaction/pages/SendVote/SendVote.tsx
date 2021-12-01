@@ -178,18 +178,19 @@ export const SendVote = () => {
 				const walletVotes = activeWallet.voting().current();
 
 				if (type === "vote") {
-					isConfirmed = !!walletVotes.find(({ wallet }) => wallet?.address() === votes[0].wallet?.address());
+					isConfirmed = walletVotes.some(({ wallet }) => wallet?.address() === votes[0].wallet?.address());
 				}
 
 				if (type === "unvote") {
-					isConfirmed = !walletVotes.find(({ wallet }) => wallet?.address() === unvotes[0].wallet?.address());
+					isConfirmed = !walletVotes.some(({ wallet }) => wallet?.address() === unvotes[0].wallet?.address());
 				}
 
 				if (type === "combined") {
-					const voteConfirmed = !!walletVotes.find(
+					const voteConfirmed = walletVotes.some(
 						({ wallet }) => wallet?.address() === votes[0].wallet?.address(),
 					);
-					const unvoteConfirmed = !walletVotes.find(
+
+					const unvoteConfirmed = !walletVotes.some(
 						({ wallet }) => wallet?.address() === unvotes[0].wallet?.address(),
 					);
 

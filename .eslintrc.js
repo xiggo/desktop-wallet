@@ -183,7 +183,7 @@ module.exports = {
 		"unicorn/no-null": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-object-as-default-parameter": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-useless-undefined": "off",
-		"unicorn/prefer-array-some": "warn", // @TODO: set to error and fix resulting issues
+		"unicorn/prefer-array-some": "error",
 		"unicorn/prefer-at": "off", // @TODO: set to error and fix resulting issues
 		"unicorn/prefer-module": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/prefer-node-protocol": "off",

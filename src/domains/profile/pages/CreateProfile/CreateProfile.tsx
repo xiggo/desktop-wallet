@@ -106,7 +106,7 @@ export const CreateProfile = () => {
 		const currency = LocaleCurrency.getCurrency(locale);
 
 		if (
-			currencyOptions[0].options.find(
+			currencyOptions[0].options.some(
 				(option) => (option.value as string).toLowerCase() === currency.toLowerCase(),
 			)
 		) {
