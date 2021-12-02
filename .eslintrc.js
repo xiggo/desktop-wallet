@@ -188,7 +188,7 @@ module.exports = {
 		"unicorn/prefer-module": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/prefer-node-protocol": "off",
 		"unicorn/prefer-number-properties": "warn", // @TODO: set to error and fix resulting issues
-		"unicorn/prefer-prototype-methods": "warn", // @TODO: set to error and fix resulting issues
+		"unicorn/prefer-prototype-methods": "error",
 		"unicorn/prefer-spread": "error",
 		"unicorn/prefer-string-slice": "error",
 		"unicorn/prefer-ternary": "off",
