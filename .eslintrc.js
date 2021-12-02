@@ -184,13 +184,13 @@ module.exports = {
 		"unicorn/no-object-as-default-parameter": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-useless-undefined": "off",
 		"unicorn/prefer-array-some": "error",
-		"unicorn/prefer-at": "off", // @TODO: set to error and fix resulting issues
+		"unicorn/prefer-at": "off",
 		"unicorn/prefer-module": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/prefer-node-protocol": "off",
 		"unicorn/prefer-number-properties": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/prefer-prototype-methods": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/prefer-spread": "error",
-		"unicorn/prefer-string-slice": "warn", // @TODO: set to error and fix resulting issues
+		"unicorn/prefer-string-slice": "error",
 		"unicorn/prefer-ternary": "off",
 		"unicorn/prefer-top-level-await": "error", // @TODO: set to error and fix resulting issues
 		"unicorn/prevent-abbreviations": "warn", // @TODO: set to error and fix resulting issues

@@ -35,7 +35,7 @@ describe("HeaderSearchBar", () => {
 
 		userEvent.paste(input, longText);
 
-		expect(input.value).toBe(longText.substring(0, input.maxLength));
+		expect(input.value).toBe(longText.slice(0, input.maxLength));
 		expect(input.value).toHaveLength(input.maxLength);
 	});
 
