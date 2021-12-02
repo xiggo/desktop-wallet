@@ -21,15 +21,15 @@ interface ExplorerLinkProperties {
 }
 
 const ExplorerLink = ({ value, explorerMask }: ExplorerLinkProperties) => {
-	const ref = useRef(null);
+	const reference = useRef(null);
 
 	const explorerUrl = (value: string, explorerMask: string) => explorerMask.replace("{}", value);
 
 	if (explorerMask) {
 		return (
-			<span data-testid="ExplorerLink" ref={ref} className="overflow-hidden">
+			<span data-testid="ExplorerLink" ref={reference} className="overflow-hidden">
 				<Link to={explorerUrl(value, explorerMask)} isExternal>
-					<TruncateMiddleDynamic value={value} offset={24} parentRef={ref} />
+					<TruncateMiddleDynamic value={value} offset={24} parentRef={reference} />
 				</Link>
 			</span>
 		);

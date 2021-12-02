@@ -6,7 +6,7 @@ import { Size } from "@/types";
 
 import { getStyles } from "./Circle.styles";
 
-export type CircleProps = {
+export type CircleProperties = {
 	as?: React.ElementType;
 	children?: React.ReactNode;
 	avatarId?: string;
@@ -16,10 +16,10 @@ export type CircleProps = {
 	noShadow?: boolean;
 } & React.HTMLAttributes<any>;
 
-const CircleWrapper = styled.div<CircleProps>(getStyles);
+const CircleWrapper = styled.div<CircleProperties>(getStyles);
 
-export const Circle = forwardRef<HTMLDivElement, CircleProps>(
-	({ className, noShadow = false, shadowClassName, size, children, ...properties }: CircleProps, reference) => (
+export const Circle = forwardRef<HTMLDivElement, CircleProperties>(
+	({ className, noShadow = false, shadowClassName, size, children, ...properties }: CircleProperties, reference) => (
 		<CircleWrapper
 			ref={reference}
 			size={size}

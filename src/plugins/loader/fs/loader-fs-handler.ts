@@ -12,6 +12,6 @@ export const injectHandler = () => {
 	const finder = new PluginLoaderFileSystem(root);
 
 	ipcMain.handle("plugin:loader-fs.search", (_, profileId: string) => finder.search(profileId));
-	ipcMain.handle("plugin:loader-fs.remove", (_, dir: string) => finder.remove(dir));
-	ipcMain.handle("plugin:loader-fs.find", (_, dir: string) => finder.find(dir));
+	ipcMain.handle("plugin:loader-fs.remove", (_, directory: string) => finder.remove(directory));
+	ipcMain.handle("plugin:loader-fs.find", (_, directory: string) => finder.find(directory));
 };

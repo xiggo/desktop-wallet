@@ -255,15 +255,15 @@ export const FormStep = ({ profile, showRefundInput }: FormStepProperties) => {
 	const handleSwapCurrencies = () => {
 		const { fromCurrency, toCurrency, payinAmount, payoutAmount } = getValues();
 
-		let temp = fromCurrency;
+		let temporary = fromCurrency;
 
 		setValue("fromCurrency", toCurrency);
-		setValue("toCurrency", temp);
+		setValue("toCurrency", temporary);
 
-		temp = payinAmount;
+		temporary = payinAmount;
 
 		setValue("payinAmount", payoutAmount);
-		setValue("payoutAmount", temp);
+		setValue("payoutAmount", temporary);
 	};
 
 	const handleRecipientWalletChange = (address: string | undefined) => {

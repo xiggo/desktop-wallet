@@ -40,7 +40,7 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 			transport.listen({
 				complete: () => void 0,
 
-				error: (e) => dispatch({ message: e.message, type: "failed" }),
+				error: (error) => dispatch({ message: error.message, type: "failed" }),
 				// @ts-ignore
 				next: ({ type, descriptor, deviceModel }) => {
 					setDeviceName(deviceModel?.productName);

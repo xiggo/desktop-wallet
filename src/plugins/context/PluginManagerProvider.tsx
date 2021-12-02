@@ -77,8 +77,8 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	);
 
 	const loadPlugin = useCallback(
-		async (dir: string) => {
-			const result = await PluginLoaderFileSystem.ipc().find(dir);
+		async (directory: string) => {
+			const result = await PluginLoaderFileSystem.ipc().find(directory);
 
 			result.config.size = await fetchSize(result.config.name);
 

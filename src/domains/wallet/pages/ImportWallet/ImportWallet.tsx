@@ -12,7 +12,7 @@ import { SyncErrorMessage } from "@/app/components/ProfileSyncStatusMessage";
 import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
-import { useQueryParams } from "@/app/hooks";
+import { useQueryParameters } from "@/app/hooks";
 import { useActiveProfile } from "@/app/hooks/env";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { toasts } from "@/app/services";
@@ -47,7 +47,7 @@ export const ImportWallet = () => {
 	const [isSyncingCoin, setIsSyncingCoin] = useState(false);
 	const [isEditAliasModalOpen, setIsEditAliasModalOpen] = useState(false);
 
-	const queryParameters = useQueryParams();
+	const queryParameters = useQueryParameters();
 	const isLedgerImport = !!queryParameters.get("ledger");
 
 	const history = useHistory();

@@ -55,6 +55,6 @@ describe("PluginLoaderFileSystem", () => {
 
 		const directory = path.resolve("/etc/plugins/plugin-test-custom-button");
 
-		await expect(subject.remove(directory)).rejects.toBe(`The dir ${directory} cannot be removed.`);
+		await expect(subject.remove(directory)).rejects.toBe(`The directory ${directory} cannot be removed.`);
 	});
 });

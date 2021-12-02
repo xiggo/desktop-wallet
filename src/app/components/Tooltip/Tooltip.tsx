@@ -7,11 +7,11 @@ import { Size } from "@/types";
 
 import { getStyles } from "./Tooltip.styles";
 
-export type TooltipProps = {
+export type TooltipProperties = {
 	size?: Size;
 } & TippyProps;
 
-export const Tooltip = ({ size, theme, ...properties }: TooltipProps) => {
+export const Tooltip = ({ size, theme, ...properties }: TooltipProperties) => {
 	const themeOptions = useTheme();
 	if (!properties.content) {
 		return <>{properties.children}</>;

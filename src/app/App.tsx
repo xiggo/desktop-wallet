@@ -30,7 +30,7 @@ import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { Splash } from "@/domains/splash/pages";
 import { StubStorage } from "@/tests/mocks";
 import { setThemeSource, shouldUseDarkColors } from "@/utils/electron-utils";
-import { bootEnvWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
+import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
 
 import { SyncErrorMessage } from "./components/ProfileSyncStatusMessage";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, useEnvironmentContext } from "./contexts";
@@ -95,7 +95,7 @@ const Main = () => {
 			try {
 				/* istanbul ignore next */
 				if (isE2E() || isUnit()) {
-					await bootEnvWithProfileFixtures({ env, shouldRestoreDefaultProfile: isUnit() });
+					await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: isUnit() });
 
 					setShowSplash(false);
 					return;

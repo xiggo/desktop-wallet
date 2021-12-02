@@ -116,8 +116,8 @@ export class ExchangeService {
 	 * @returns {Promise<OrderResponse>}
 	 * @memberof ExchangeService
 	 */
-	public async createOrder(params: any): Promise<OrderResponse> {
-		const result = await this.post("orders", params);
+	public async createOrder(parameters: any): Promise<OrderResponse> {
+		const result = await this.post("orders", parameters);
 		return result.data;
 	}
 

@@ -25,7 +25,7 @@ export class PluginConfigurationData implements IPluginConfigurationData {
 		this.#manifest = manifest;
 	}
 
-	static make(config: Record<string, any>, dir?: string): PluginConfigurationData {
+	static make(config: Record<string, any>, directory?: string): PluginConfigurationData {
 		const data = new Repositories.DataRepository();
 		data.fill(config);
 
@@ -38,8 +38,8 @@ export class PluginConfigurationData implements IPluginConfigurationData {
 
 		const plugin = new PluginConfigurationData(data, manifest);
 
-		if (dir) {
-			void plugin.syncSize(dir);
+		if (directory) {
+			void plugin.syncSize(directory);
 		}
 
 		return plugin;

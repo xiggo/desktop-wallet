@@ -1,7 +1,6 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { useSendTransferForm } from "domains/transaction/hooks/use-send-transfer-form";
-import { useTransactionQueryParams } from "domains/transaction/hooks/use-transaction-query-params";
 import { SendTransferStep } from "domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -19,6 +18,7 @@ import { ConfirmSendTransaction } from "@/domains/transaction/components/Confirm
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransaction } from "@/domains/transaction/hooks";
+import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
 
 import { FormStep } from "./FormStep";
@@ -40,7 +40,7 @@ export const SendTransfer: React.VFC = () => {
 		hasAnyParameters: hasDeepLinkParameters,
 		hasReset: shouldResetForm,
 		queryParameters: deepLinkParameters,
-	} = useTransactionQueryParams();
+	} = useTransactionQueryParameters();
 
 	const abortReference = useRef(new AbortController());
 

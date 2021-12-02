@@ -4,9 +4,9 @@ import { Route } from "react-router-dom";
 
 import { render, screen } from "@/utils/testing-library";
 
-import { useQueryParams as useQueryParameters } from "./use-query-params";
+import { useQueryParameters } from "./use-query-parameters";
 
-describe("useQueryParams hook", () => {
+describe("useQueryParameters hook", () => {
 	const TestComponent: React.FC = () => {
 		const reloadPath = useQueryParameters();
 
@@ -15,12 +15,12 @@ describe("useQueryParams hook", () => {
 		};
 		return (
 			<h1 data-testid="header_test" onClick={handle}>
-				useQueryParams Test Component
+				useQueryParameters Test Component
 			</h1>
 		);
 	};
 
-	it("should render useQueryParams", () => {
+	it("should render useQueryParameters", () => {
 		render(
 			<Route pathname="/">
 				<TestComponent />
@@ -31,6 +31,6 @@ describe("useQueryParams hook", () => {
 
 		userEvent.click(screen.getByTestId("header_test"));
 
-		expect(screen.getByText("useQueryParams Test Component")).toBeInTheDocument();
+		expect(screen.getByText("useQueryParameters Test Component")).toBeInTheDocument();
 	});
 });

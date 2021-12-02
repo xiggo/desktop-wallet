@@ -91,13 +91,13 @@ describe("Plugin Controller subject", () => {
 		subject.fill([
 			{
 				config: { keywords: ["@payvo", "wallet-plugin"], name: "plugin1" },
-				dir: "/plugin1",
+				directory: "/plugin1",
 				source: "module.exports = () => void 0",
 				sourcePath: "/plugin1/index.js",
 			},
 			{
 				config: {},
-				dir: "/plugin2",
+				directory: "/plugin2",
 				source: "module.exports = () => void 0",
 				sourcePath: "/plugin2/index.js",
 			},

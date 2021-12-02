@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
 import { Page, Section } from "@/app/components/Layout";
-import { useActiveProfile, useQueryParams } from "@/app/hooks";
+import { useActiveProfile, useQueryParameters } from "@/app/hooks";
 import { toasts } from "@/app/services";
 import { InstallPlugin } from "@/domains/plugin/components/InstallPlugin";
 import { PluginHeader } from "@/domains/plugin/components/PluginHeader";
@@ -15,7 +15,7 @@ import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider
 export const PluginDetails = () => {
 	const { t } = useTranslation();
 	const activeProfile = useActiveProfile();
-	const queryParameters = useQueryParams();
+	const queryParameters = useQueryParameters();
 	const history = useHistory();
 
 	const [isUninstallOpen, setIsUninstallOpen] = React.useState(false);

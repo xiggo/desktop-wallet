@@ -4,14 +4,14 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Image } from "@/app/components/Image";
 import { Page } from "@/app/components/Layout";
 import { Spinner } from "@/app/components/Spinner";
-import { useQueryParams } from "@/app/hooks";
+import { useQueryParameters } from "@/app/hooks";
 import { ExchangeForm } from "@/domains/exchange/components/ExchangeForm";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { Exchange } from "@/domains/exchange/exchange.contracts";
 import { shouldUseDarkColors } from "@/utils/electron-utils";
 
 export const ExchangeView = () => {
-	const queryParameters = useQueryParams();
+	const queryParameters = useQueryParameters();
 
 	const [logoUrl, setLogoUrl] = useState<string>();
 	const [isReady, setIsReady] = useState<boolean>(false);

@@ -58,7 +58,7 @@ export interface PluginRawInstance {
 	config: Record<string, any>;
 	sourcePath: string;
 	source: string;
-	dir: string;
+	directory: string;
 }
 
 export enum PluginServiceIdentifier {

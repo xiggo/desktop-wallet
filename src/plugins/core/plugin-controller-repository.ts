@@ -133,13 +133,13 @@ export class PluginControllerRepository {
 					},
 				});
 
-				const plugin = new PluginController(entry.config, callback, entry.dir);
+				const plugin = new PluginController(entry.config, callback, entry.directory);
 
 				plugin.config().validate();
 
 				plugins[plugin.config().id()] = plugin;
 			} catch (error) {
-				console.error(`Failed to parse the plugin from "${entry.dir}".`, error.message);
+				console.error(`Failed to parse the plugin from "${entry.directory}".`, error.message);
 			}
 		}
 

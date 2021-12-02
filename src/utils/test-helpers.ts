@@ -4,7 +4,7 @@ import { Environment, StorageData } from "@payvo/sdk-profiles";
 import fixtureData from "@/tests/fixtures/env/storage.json";
 import TestingPasswords from "@/tests/fixtures/env/testing-passwords.json";
 
-export const bootEnvWithProfileFixtures = async ({
+export const bootEnvironmentWithProfileFixtures = async ({
 	env,
 	shouldRestoreDefaultProfile = false,
 }: {

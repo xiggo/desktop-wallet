@@ -16,10 +16,10 @@ export class PluginController implements IPluginController {
 	#callback: Callback;
 	#dir: string | undefined;
 
-	constructor(config: Record<string, any>, callback: Callback, dir?: string) {
+	constructor(config: Record<string, any>, callback: Callback, directory?: string) {
 		this.#hooks = new PluginHooks();
-		this.#dir = dir;
-		this.#config = PluginConfigurationData.make(config, dir);
+		this.#dir = directory;
+		this.#config = PluginConfigurationData.make(config, directory);
 		this.#callback = callback;
 	}
 

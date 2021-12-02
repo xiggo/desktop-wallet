@@ -193,7 +193,12 @@ module.exports = {
 		"unicorn/prefer-string-slice": "error",
 		"unicorn/prefer-ternary": "off",
 		"unicorn/prefer-top-level-await": "error", // @TODO: set to error and fix resulting issues
-		"unicorn/prevent-abbreviations": "warn", // @TODO: set to error and fix resulting issues
+		"unicorn/prevent-abbreviations": [
+			"error",
+			{
+				ignore: [/^env/, "i18n", "e2e"],
+			},
+		],
 		"unused-imports/no-unused-imports-ts": "error",
 	},
 	overrides: [

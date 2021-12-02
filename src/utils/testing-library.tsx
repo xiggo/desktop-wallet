@@ -148,7 +148,7 @@ export const ledgerObserverSpy = () => {
 		mockTransportListen,
 		observer: {
 			complete: () => observer.complete(),
-			error: (e: any) => observer.error(e),
+			error: (error: any) => observer.error(error),
 			next: (property: { descriptor: string; deviceModel: { id: string }; type: string }) =>
 				observer.error(property),
 		},

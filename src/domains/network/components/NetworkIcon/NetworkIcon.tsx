@@ -2,7 +2,7 @@ import { Networks } from "@payvo/sdk";
 import cn from "classnames";
 import React from "react";
 
-import { Circle, CircleProps } from "@/app/components/Circle";
+import { Circle, CircleProperties } from "@/app/components/Circle";
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { Size } from "@/types";
@@ -20,7 +20,7 @@ interface NetworkIconProperties {
 	isCompact?: boolean;
 }
 
-const Placeholder = (properties: CircleProps) => (
+const Placeholder = (properties: CircleProperties) => (
 	<Circle
 		data-testid="NetworkIcon__placeholder"
 		className="border-theme-secondary-200 text-theme-secondary-500 dark:border-theme-secondary-700"

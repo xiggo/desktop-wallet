@@ -1,5 +1,5 @@
 import MockDate from "mockdate";
-import { bootEnvWithProfileFixtures } from "@/utils/test-helpers";
+import { bootEnvironmentWithProfileFixtures } from "@/utils/test-helpers";
 import { env } from "@/utils/testing-library";
 
 // Reduce retries to 2 in all tests
@@ -72,7 +72,7 @@ jest.mock("fs", () => {
 });
 
 beforeAll(async (done) => {
-	await bootEnvWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
+	await bootEnvironmentWithProfileFixtures({ env, shouldRestoreDefaultProfile: true });
 	// Mark profiles as restored, to prevent multiple restoration in profile synchronizer
 	process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 	done();

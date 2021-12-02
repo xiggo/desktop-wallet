@@ -19,24 +19,24 @@ export class PluginLoaderFileSystem {
 		return loaderIpc;
 	}
 
-	remove(dir: string) {
+	remove(directory: string) {
 		const fsExtra = require("fs-extra");
-		const isValid = validatePath(this.#root, dir);
+		const isValid = validatePath(this.#root, directory);
 
 		if (!isValid) {
-			return Promise.reject(`The dir ${dir} cannot be removed.`);
+			return Promise.reject(`The directory ${directory} cannot be removed.`);
 		}
 
-		return fsExtra.remove(dir);
+		return fsExtra.remove(directory);
 	}
 
 	search(profileId: string): PluginRawInstance[] {
 		const paths = this.findPaths(profileId);
 		const entries: PluginRawInstance[] = [];
 
-		for (const dir of paths) {
+		for (const directory of paths) {
 			try {
-				const result = this.find(dir);
+				const result = this.find(directory);
 				entries.push(result!);
 			} catch {
 				continue;
@@ -46,14 +46,14 @@ export class PluginLoaderFileSystem {
 		return entries;
 	}
 
-	find(dir: string) {
-		const configPath = path.join(dir, "package.json");
+	find(directory: string) {
+		const configPath = path.join(directory, "package.json");
 		const config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
 
 		let sourcePath: string | false = false;
 
 		try {
-			sourcePath = resolve.sync(dir, ".");
+			sourcePath = resolve.sync(directory, ".");
 		} catch {
 			//
 		}
@@ -61,7 +61,7 @@ export class PluginLoaderFileSystem {
 		/* istanbul ignore next */
 		if (!sourcePath) {
 			try {
-				sourcePath = resolve.sync(dir, "./src");
+				sourcePath = resolve.sync(directory, "./src");
 			} catch {
 				//
 			}
@@ -73,7 +73,7 @@ export class PluginLoaderFileSystem {
 
 			return {
 				config,
-				dir,
+				directory,
 				source,
 				sourcePath,
 			};

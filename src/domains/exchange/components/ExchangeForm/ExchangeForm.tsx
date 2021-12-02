@@ -213,7 +213,7 @@ const ExchangeForm = ({ orderId, onReady }: { orderId?: string; onReady: () => v
 			history.push(`/profiles/${activeProfile.id()}/exchange`);
 		}
 
-		setActiveTab((prev) => prev - 1);
+		setActiveTab((previous) => previous - 1);
 	};
 
 	const handleNext = useCallback(async () => {
