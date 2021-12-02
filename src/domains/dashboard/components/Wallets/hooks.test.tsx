@@ -103,6 +103,37 @@ describe("useWalletDisplay", () => {
 		expect(result.current.gridWallets).toHaveLength(3);
 	});
 
+	it("should return 4 grid wallet padded with 2 additional empty grid wallets", async () => {
+		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}> {children} </EnvironmentProvider>;
+
+		const testWallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: MNEMONICS[0],
+			network: "ark.devnet",
+		});
+
+		const test2Wallet = await profile.walletFactory().fromMnemonicWithBIP39({
+			coin: "ARK",
+			mnemonic: MNEMONICS[1],
+			network: "ark.devnet",
+		});
+
+		profile.wallets().push(testWallet);
+		profile.wallets().push(test2Wallet);
+
+		const { result } = renderHook(
+			() => useWalletDisplay({ selectedNetworkIds: ["ark.devnet"], wallets: profile.wallets().values() }),
+			{
+				wrapper,
+			},
+		);
+
+		expect(result.current.gridWallets).toHaveLength(6);
+
+		profile.wallets().forget(testWallet.id());
+		profile.wallets().forget(test2Wallet.id());
+	});
+
 	it("should return all grid wallets", async () => {
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}> {children} </EnvironmentProvider>;
 

@@ -6,14 +6,14 @@ import { Route } from "react-router-dom";
 import { translations } from "@/domains/dashboard/i18n";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
-import { GridWallet } from "./Wallets.contracts";
+import { WrappedWallet } from "./Wallets.contracts";
 import { WalletsList } from "./WalletsList";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createMemoryHistory();
 
 let profile: Contracts.IProfile;
-let wallets: GridWallet[];
+let wallets: WrappedWallet[];
 
 describe("WalletsList", () => {
 	beforeAll(() => {

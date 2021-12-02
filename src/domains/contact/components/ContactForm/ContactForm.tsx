@@ -174,14 +174,15 @@ export const ContactForm = ({
 			return setError("address", { message: t("CONTACTS.VALIDATION.CONTACT_ADDRESS_EXISTS"), type: "manual" });
 		}
 
-		setAddresses(
-			addresses.concat({
+		setAddresses([
+			...addresses,
+			{
 				address,
 				coin: network.coin(),
 				name: address,
 				network: network.id(),
-			}),
-		);
+			},
+		]);
 
 		setValue("network", null);
 		setValue("address", null);

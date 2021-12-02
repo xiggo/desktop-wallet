@@ -5,11 +5,11 @@ import { Route } from "react-router-dom";
 
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
-import { GridWallet } from "./Wallets.contracts";
+import { WrappedWallet } from "./Wallets.contracts";
 import { WalletsGrid } from "./WalletsGrid";
 
 let profile: Contracts.IProfile;
-let wallets: GridWallet[];
+let wallets: WrappedWallet[];
 
 const history = createMemoryHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;

@@ -11,10 +11,11 @@ import { WalletIcons } from "@/app/components/WalletIcons";
 import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
+import { assertWallet } from "@/utils/assertions";
 import { shouldUseDarkColors } from "@/utils/electron-utils";
 
 export interface WalletListItemProperties {
-	wallet: Contracts.IReadWriteWallet;
+	wallet?: Contracts.IReadWriteWallet;
 	activeWalletId?: string;
 	onClick?: (walletId: string) => void;
 	isCompact?: boolean;
@@ -26,6 +27,8 @@ export const WalletListItem: React.FC<WalletListItemProperties> = ({
 	onClick,
 	isCompact = false,
 }: WalletListItemProperties) => {
+	assertWallet(wallet);
+
 	const { t } = useTranslation();
 
 	const isSelected = useMemo(() => activeWalletId === wallet.id(), [activeWalletId, wallet]);

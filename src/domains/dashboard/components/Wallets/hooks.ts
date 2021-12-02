@@ -2,7 +2,7 @@ import { chunk } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
 import { useMemo } from "react";
 
-import { GridWallet, UseWalletDisplayProperties } from "./Wallets.contracts";
+import { UseWalletDisplayProperties, WrappedWallet } from "./Wallets.contracts";
 
 export const useWalletDisplay = ({
 	wallets = [],
@@ -37,20 +37,26 @@ export const useWalletDisplay = ({
 			.map((wallet) => ({ wallet }));
 
 		const loadGridWallets = () => {
-			const walletObjects = [...listWallets];
+			const walletObjects: WrappedWallet[] = [...listWallets];
 
 			if (walletObjects.length <= sliderOptions.slidesPerView) {
-				return walletObjects.concat(
-					new Array(sliderOptions.slidesPerView - walletObjects.length).fill({ displayType, isBlank: true }),
-				);
+				return [
+					...walletObjects,
+					...Array.from({ length: sliderOptions.slidesPerView - walletObjects.length }, () => ({
+						displayType,
+						isBlank: true,
+					})),
+				] as WrappedWallet[];
 			}
 
 			const walletsPerPage = sliderOptions.slidesPerView * 2;
 			const desiredLength = Math.ceil(walletObjects.length / walletsPerPage) * walletsPerPage;
 
-			walletObjects.push(...new Array(desiredLength - walletObjects.length).fill({ displayType, isBlank: true }));
+			walletObjects.push(
+				...Array.from({ length: desiredLength - walletObjects.length }, () => ({ displayType, isBlank: true })),
+			);
 
-			const result: GridWallet[] = [];
+			const result: WrappedWallet[] = [];
 
 			for (const page of chunk(walletObjects, walletsPerPage)) {
 				const firstHalf = page.slice(0, walletsPerPage / 2);

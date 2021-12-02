@@ -12,9 +12,10 @@ export interface WalletsProperties {
 	isLoading?: boolean;
 }
 
-export interface GridWallet {
+export interface WrappedWallet {
 	isBlank?: boolean;
-	wallet: Contracts.IReadWriteWallet;
+	displayType?: string;
+	wallet?: Contracts.IReadWriteWallet;
 }
 
 export interface WalletGridProperties {
@@ -22,7 +23,7 @@ export interface WalletGridProperties {
 	isVisible?: boolean;
 	isLoading?: boolean;
 	sliderOptions?: Record<string, any>;
-	wallets: GridWallet[];
+	wallets: WrappedWallet[];
 	onWalletAction?: (action: string, wallet: Contracts.IReadWriteWallet) => void;
 }
 
@@ -31,7 +32,7 @@ export interface WalletListProperties {
 	isLoading?: boolean;
 	isVisible?: boolean;
 	onRowClick?: (walletId: string) => void;
-	wallets: GridWallet[];
+	wallets: WrappedWallet[];
 	walletsDisplayType?: string;
 	isCompact?: boolean;
 	walletsPerPage: number;

@@ -8,7 +8,7 @@ import { Table } from "@/app/components/Table";
 import { WalletListItem } from "@/app/components/WalletListItem";
 import { WalletListItemSkeleton } from "@/app/components/WalletListItem/WalletListItemSkeleton";
 
-import { GridWallet, WalletListProperties } from "./Wallets.contracts";
+import { WalletListProperties, WrappedWallet } from "./Wallets.contracts";
 
 export const WalletsList: VFC<WalletListProperties> = ({
 	hasWalletsMatchingOtherNetworks,
@@ -28,7 +28,7 @@ export const WalletsList: VFC<WalletListProperties> = ({
 
 	const { t } = useTranslation();
 
-	const columns: Column<GridWallet>[] = [
+	const columns: Column<WrappedWallet>[] = [
 		{
 			Header: t("COMMON.WALLET_ADDRESS"),
 			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
@@ -55,7 +55,7 @@ export const WalletsList: VFC<WalletListProperties> = ({
 		},
 	];
 
-	const tableRows = useMemo<GridWallet[]>(() => {
+	const tableRows = useMemo<WrappedWallet[]>(() => {
 		if (!isLoading) {
 			return wallets;
 		}
@@ -72,7 +72,7 @@ export const WalletsList: VFC<WalletListProperties> = ({
 			return 3;
 		};
 
-		return Array.from<GridWallet>({ length: skeletonRowsCount() }).fill({} as GridWallet);
+		return Array.from<WrappedWallet>({ length: skeletonRowsCount() }).fill({} as WrappedWallet);
 	}, [hasMoreWallets, walletsPerPage, wallets, isLoading]);
 
 	const emptyBlockContent = () => {
@@ -100,7 +100,7 @@ export const WalletsList: VFC<WalletListProperties> = ({
 	};
 
 	const renderTableRow = useCallback(
-		(rowData: GridWallet) =>
+		(rowData: WrappedWallet) =>
 			isLoading ? (
 				<WalletListItemSkeleton isCompact={isCompact} />
 			) : (
