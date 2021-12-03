@@ -12,7 +12,7 @@ export const NotificationTransactionsSkeleton: VFC<NotificationTransactionsSkele
 }) => {
 	const { t } = useTranslation();
 
-	const skeletonRows = new Array(limit).fill({});
+	const skeletonRows: any[] = Array.from({ length: limit }).fill({});
 
 	return (
 		<div>

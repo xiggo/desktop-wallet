@@ -179,7 +179,7 @@ module.exports = {
 		"unicorn/no-array-for-each": "error",
 		"unicorn/no-array-method-this-argument": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-array-reduce": "error",
-		"unicorn/no-new-array": "warn", // @TODO: set to error and fix resulting issues
+		"unicorn/no-new-array": "error",
 		"unicorn/no-null": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-object-as-default-parameter": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-useless-undefined": "off",

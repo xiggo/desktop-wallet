@@ -50,7 +50,7 @@ export const PluginGrid = ({
 
 	if (isLoading) {
 		// @ts-ignore
-		skeletons = new Array(skeletonsLimit).fill({});
+		skeletons = Array.from({ length: skeletonsLimit }).fill({});
 	}
 
 	const getActions = useCallback(
@@ -133,8 +133,8 @@ export const PluginGrid = ({
 	return (
 		<div data-testid="PluginGrid">
 			<div className={cn("grid grid-cols-3 gap-4.5", className)}>
-				{pagePlugins.map((plugin: ExtendedSerializedPluginConfigurationData | undefined, index: number) =>
-					plugin ? (
+				{pagePlugins.map((plugin: ExtendedSerializedPluginConfigurationData, index: number) =>
+					plugin.id ? (
 						<PluginCard
 							key={plugin.id}
 							actions={getActions(plugin)}

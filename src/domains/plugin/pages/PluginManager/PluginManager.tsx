@@ -70,6 +70,17 @@ const LatestPlugins = ({
 
 	const renderPlugins = (plugins: ExtendedSerializedPluginConfigurationData[], category: PluginCategories) => {
 		if (viewType === "grid") {
+			const gridPlugins: ExtendedSerializedPluginConfigurationData[] = [...plugins];
+
+			if (gridPlugins.length < 3) {
+				gridPlugins.push(
+					...Array.from(
+						{ length: 3 - plugins.length },
+						() => ({} as ExtendedSerializedPluginConfigurationData),
+					),
+				);
+			}
+
 			return (
 				<PluginGrid
 					category={category}
@@ -81,7 +92,7 @@ const LatestPlugins = ({
 					onLaunch={onLaunch}
 					onSelect={onSelect}
 					onUpdate={onUpdate}
-					plugins={plugins}
+					plugins={gridPlugins}
 					showPagination={false}
 					updatingStats={updatingStats}
 				/>
@@ -112,10 +123,6 @@ const LatestPlugins = ({
 				const categoryCount = plugins.length;
 
 				plugins = plugins.slice(0, 3);
-
-				if (plugins.length < 3 && viewType === "grid") {
-					plugins.push(...new Array(3 - plugins.length).fill(undefined));
-				}
 
 				return (
 					<Section key={category}>
