@@ -83,12 +83,9 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 	);
 
 	const connect = useCallback(
-		async (
-			profile: Contracts.IProfile,
-			coin: string,
-			network: string,
-			retryOptions: retry.Options = { factor: 1, randomize: false, retries: 50 },
-		) => {
+		async (profile: Contracts.IProfile, coin: string, network: string, retryOptions?: retry.Options) => {
+			const options = retryOptions || { factor: 1, randomize: false, retries: 50 };
+
 			dispatch({ type: "waiting" });
 			abortRetryReference.current = false;
 
@@ -121,7 +118,7 @@ export const useLedgerConnection = (transport: typeof LedgerTransportNodeHID) =>
 					await instance.ledger().getPublicKey(formatLedgerDerivationPath({ coinType: slip44 }));
 				};
 
-				await retry(connectFunction, retryOptions);
+				await retry(connectFunction, options);
 				dispatch({ type: "connected" });
 			} catch (connectError) {
 				const errorMessage =
