@@ -40,7 +40,9 @@ describe("useTransaction", () => {
 	});
 
 	it("should return an empty list if lookup fails", async () => {
-		const walletSpy = jest.spyOn(wallet.transactionIndex(), "sent").mockRejectedValue(new Error());
+		const walletSpy = jest
+			.spyOn(wallet.transactionIndex(), "sent")
+			.mockRejectedValue(new Error("transaction rejected."));
 
 		const { result } = renderHook(() => useTransaction());
 

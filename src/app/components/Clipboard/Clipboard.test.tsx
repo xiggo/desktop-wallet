@@ -99,7 +99,7 @@ describe("Clipboard", () => {
 	describe("on error", () => {
 		beforeAll(() => {
 			(navigator as any).clipboard = {
-				writeText: jest.fn().mockRejectedValue(new Error()),
+				writeText: jest.fn().mockRejectedValue(new Error("writeText rejected.")),
 			};
 		});
 

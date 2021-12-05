@@ -78,7 +78,7 @@ const saveFile = async (raw: any, defaultPath?: string, options?: DialogOptions)
 
 const openExternal = (value: string) => {
 	if (!/^https?:\/\//.test(value)) {
-		throw new Error();
+		throw new Error(`"${value}" is not a valid URL`);
 	}
 
 	const url = new URL(value);

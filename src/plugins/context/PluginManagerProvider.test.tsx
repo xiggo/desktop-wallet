@@ -729,7 +729,7 @@ describe("PluginManagerProvider", () => {
 
 		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:install") {
-				throw new Error();
+				throw new Error("plugin installation rejected.");
 			}
 		});
 

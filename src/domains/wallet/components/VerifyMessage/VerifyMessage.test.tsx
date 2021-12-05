@@ -199,7 +199,7 @@ describe("VerifyMessage", () => {
 		const messageInput = screen.getByTestId("VerifyMessage__manual-message");
 		const signatureInput = screen.getByTestId("VerifyMessage__manual-signature");
 
-		const messageSpy = jest.spyOn(wallet.message(), "verify").mockRejectedValue(new Error());
+		const messageSpy = jest.spyOn(wallet.message(), "verify").mockRejectedValue(new Error("message rejected."));
 
 		userEvent.paste(signatoryInput, signedMessage.signatory);
 		userEvent.paste(messageInput, signedMessage.message);

@@ -28,7 +28,7 @@ describe("PluginLoaderFileSystem", () => {
 
 	it("should not fail on search", () => {
 		const pathSpy = jest.spyOn(subject, "find").mockImplementationOnce(() => {
-			throw new Error();
+			throw new Error("search rejected.");
 		});
 
 		expect(subject.search(profile.id())).toHaveLength(1);
