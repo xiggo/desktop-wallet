@@ -1,4 +1,4 @@
-import { UnlockableBalance as SDKUnlockableBalance } from "@payvo/sdk/distribution/cjs/services"; // @TODO: refactor export path in sdk
+import { Services } from "@payvo/sdk"; // @TODO: refactor export path in sdk
 import { Contracts } from "@payvo/sdk-profiles";
 
 const POLLING_INTERVAL = 1000 * 60; // 1 min
@@ -11,7 +11,7 @@ enum Step {
 	ErrorStep,
 }
 
-interface UnlockableBalance extends SDKUnlockableBalance {
+interface UnlockableBalance extends Services.UnlockableBalance {
 	id: string;
 }
 

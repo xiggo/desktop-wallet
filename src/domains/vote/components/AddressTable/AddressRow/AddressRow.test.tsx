@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
 import "jest-extended";
 
-import { Contracts } from "@payvo/sdk-profiles";
-// @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
+import { Contracts, ReadOnlyWallet } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";

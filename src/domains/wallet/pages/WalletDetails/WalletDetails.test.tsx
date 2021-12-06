@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
-import { Contracts, DTO } from "@payvo/sdk-profiles";
-// @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
+import { Contracts, DTO, ReadOnlyWallet } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import { createMemoryHistory } from "history";

@@ -1,5 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
+import { Contracts, ReadOnlyWallet } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import React from "react";

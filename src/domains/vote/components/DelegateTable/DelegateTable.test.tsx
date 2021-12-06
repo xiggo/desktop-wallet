@@ -1,6 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
-// @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
+import { Contracts, ReadOnlyWallet } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 

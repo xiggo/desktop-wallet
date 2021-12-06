@@ -1,5 +1,4 @@
-import { Contracts } from "@payvo/sdk-profiles";
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
+import { Contracts, ReadOnlyWallet } from "@payvo/sdk-profiles";
 import React from "react";
 
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";

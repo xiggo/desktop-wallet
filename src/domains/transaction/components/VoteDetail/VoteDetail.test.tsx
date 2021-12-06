@@ -1,5 +1,4 @@
-// @README: This import is fine in tests but should be avoided in production code.
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
+import { ReadOnlyWallet } from "@payvo/sdk-profiles";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";

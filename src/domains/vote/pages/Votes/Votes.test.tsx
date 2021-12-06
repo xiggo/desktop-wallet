@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { LSK } from "@payvo/sdk-lsk";
-import { Contracts } from "@payvo/sdk-profiles";
-import { ReadOnlyWallet } from "@payvo/sdk-profiles/distribution/cjs/read-only-wallet";
+import { Contracts, ReadOnlyWallet } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import nock from "nock";
