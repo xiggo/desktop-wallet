@@ -27,7 +27,7 @@ export const ContactListItem: FC<ContactListItemProperties> = ({
 	item,
 	onAction,
 	onSend,
-	options = defaultProps.options,
+	options,
 	useTestNetworks,
 }) => {
 	const { env } = useEnvironmentContext();
@@ -53,7 +53,7 @@ export const ContactListItem: FC<ContactListItemProperties> = ({
 
 	return (
 		<>
-			{filteredAddresses.map((address: Contracts.IContactAddress, index: number) => {
+			{filteredAddresses.map((address, index) => {
 				const borderClasses = () =>
 					index === filteredAddresses.length - 1
 						? ""
@@ -121,7 +121,7 @@ export const ContactListItem: FC<ContactListItemProperties> = ({
 								</Button>
 
 								<div className={index === 0 ? "visible" : "invisible"}>
-									{options?.length > 1 ? (
+									{options.length > 1 ? (
 										<Dropdown
 											toggleContent={
 												<Button variant="secondary" size="icon">
@@ -130,16 +130,16 @@ export const ContactListItem: FC<ContactListItemProperties> = ({
 											}
 											options={options}
 											onSelect={(action: ContactListItemOption) =>
-												onAction?.(action, address.address())
+												onAction(action, address.address())
 											}
 										/>
 									) : (
 										<Button
 											data-testid={`ContactListItem__one-option-button-${index}`}
 											variant="secondary"
-											onClick={() => onAction?.(options[0], address.address())}
+											onClick={() => onAction(options[0], address.address())}
 										>
-											{options?.[0]?.label}
+											{options[0]?.label}
 										</Button>
 									)}
 								</div>

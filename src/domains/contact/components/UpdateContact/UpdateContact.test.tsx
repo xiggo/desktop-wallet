@@ -9,21 +9,28 @@ import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testi
 let profile: Contracts.IProfile;
 let contact: Contracts.IContact;
 
+const onCancel = jest.fn();
+const onClose = jest.fn();
+const onDelete = jest.fn();
+const onSave = jest.fn();
+
 describe("UpdateContact", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 		contact = profile.contacts().values()[0];
 	});
 
-	it("should not render if not open", () => {
-		const { asFragment } = render(<UpdateContact profile={profile} isOpen={false} contact={contact} />);
-
-		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should render", async () => {
-		const { asFragment } = render(<UpdateContact isOpen={true} profile={profile} contact={contact} />);
+		const { asFragment } = render(
+			<UpdateContact
+				onCancel={onCancel}
+				onClose={onClose}
+				onDelete={onDelete}
+				onSave={onSave}
+				profile={profile}
+				contact={contact}
+			/>,
+		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
@@ -33,9 +40,18 @@ describe("UpdateContact", () => {
 	});
 
 	it("should cancel contact update", async () => {
-		const onCancel = jest.fn();
+		const onCancelFunction = jest.fn();
 
-		render(<UpdateContact isOpen={true} onCancel={onCancel} profile={profile} contact={contact} />);
+		render(
+			<UpdateContact
+				onCancel={onCancelFunction}
+				onClose={onClose}
+				onDelete={onDelete}
+				onSave={onSave}
+				profile={profile}
+				contact={contact}
+			/>,
+		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
@@ -43,11 +59,11 @@ describe("UpdateContact", () => {
 
 		userEvent.click(screen.getByTestId("contact-form__cancel-btn"));
 
-		expect(onCancel).toHaveBeenCalledWith();
+		expect(onCancelFunction).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
 	});
 
 	it("should not update contact if provided name already exists", async () => {
-		const onSave = jest.fn();
+		const onSaveFunction = jest.fn();
 
 		const newContact = profile.contacts().create("New name", [
 			{
@@ -57,7 +73,16 @@ describe("UpdateContact", () => {
 			},
 		]);
 
-		render(<UpdateContact isOpen={true} onSave={onSave} profile={profile} contact={newContact} />);
+		render(
+			<UpdateContact
+				onCancel={onCancel}
+				onClose={onClose}
+				onDelete={onDelete}
+				onSave={onSaveFunction}
+				profile={profile}
+				contact={newContact}
+			/>,
+		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(newContact.name());
@@ -97,15 +122,24 @@ describe("UpdateContact", () => {
 
 		userEvent.click(screen.getByTestId("contact-form__save-btn"));
 
-		expect(onSave).not.toHaveBeenCalled();
+		expect(onSaveFunction).not.toHaveBeenCalled();
 	});
 
 	it("should call onDelete callback", async () => {
 		const deleteSpy = jest.spyOn(profile.contacts(), "forget").mockImplementation();
 
-		const onDelete = jest.fn();
+		const onDeleteFunction = jest.fn();
 
-		render(<UpdateContact isOpen={true} onDelete={onDelete} profile={profile} contact={contact} />);
+		render(
+			<UpdateContact
+				onCancel={onCancel}
+				onClose={onClose}
+				onSave={onSave}
+				onDelete={onDeleteFunction}
+				profile={profile}
+				contact={contact}
+			/>,
+		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
@@ -114,14 +148,16 @@ describe("UpdateContact", () => {
 		userEvent.click(screen.getByTestId("contact-form__delete-btn"));
 
 		await waitFor(() => {
-			expect(onDelete).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
+			expect(onDeleteFunction).toHaveBeenCalledWith(
+				expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }),
+			);
 		});
 
 		deleteSpy.mockRestore();
 	});
 
 	it("should update contact name and address", async () => {
-		const onSave = jest.fn();
+		const onSaveFunction = jest.fn();
 
 		const newName = "Updated name";
 		const newAddress = {
@@ -131,7 +167,16 @@ describe("UpdateContact", () => {
 			network: "ark.devnet",
 		};
 
-		render(<UpdateContact isOpen={true} onSave={onSave} profile={profile} contact={contact} />);
+		render(
+			<UpdateContact
+				onCancel={onCancel}
+				onClose={onClose}
+				onDelete={onDelete}
+				onSave={onSaveFunction}
+				profile={profile}
+				contact={contact}
+			/>,
+		);
 
 		const inputElement: HTMLInputElement = screen.getByTestId("contact-form__name-input");
 
@@ -178,7 +223,7 @@ describe("UpdateContact", () => {
 		userEvent.click(screen.getByTestId("contact-form__save-btn"));
 
 		await waitFor(() => {
-			expect(onSave).toHaveBeenCalledWith(contact.id());
+			expect(onSaveFunction).toHaveBeenCalledWith(contact.id());
 		});
 
 		const savedContact = profile.contacts().findById(contact.id());

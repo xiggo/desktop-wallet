@@ -110,6 +110,10 @@ describe("Contacts", () => {
 	it("should successfully add contact", async () => {
 		renderComponent();
 
+		await waitFor(() => {
+			expect(screen.getByTestId("contacts__add-contact-btn")).toBeInTheDocument();
+		});
+
 		userEvent.click(screen.getByTestId("contacts__add-contact-btn"));
 
 		expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
@@ -149,10 +153,8 @@ describe("Contacts", () => {
 		userEvent.click(screen.getByTestId("contact-form__save-btn"));
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
+			expect(profile.contacts().findByAddress("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).toHaveLength(1);
 		});
-
-		expect(profile.contacts().findByAddress("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD")).toHaveLength(1);
 	});
 
 	it("should successfully delete contact", async () => {

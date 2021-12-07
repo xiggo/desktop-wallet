@@ -1,122 +1,32 @@
-import { Coins, Networks } from "@payvo/sdk";
+import { Coins } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 import React, { useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
-import { Address } from "@/app/components/Address";
-import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Form, FormField, FormLabel, SubForm } from "@/app/components/Form";
 import { Icon } from "@/app/components/Icon";
 import { InputAddress, InputDefault } from "@/app/components/Input";
 import { OptionProperties, Select } from "@/app/components/SelectDropdown";
 import { Tooltip } from "@/app/components/Tooltip";
-import { useEnvironmentContext } from "@/app/contexts";
 import { useNetworkOptions } from "@/app/hooks";
 import { contactForm } from "@/domains/contact/validations/ContactForm";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { assertNetwork } from "@/utils/assertions";
 
-interface AddressListItemProperties {
-	address: any;
-	onRemove: any;
-}
+import { AddressList } from "./ContactForm.blocks";
+import { AddressItem, ContactFormProperties, ContactFormState, NetworkOption } from "./ContactForm.contracts";
 
-interface NetworkOption {
-	label: string;
-	value: string;
-	isTestNetwork?: boolean;
-}
-
-const AddressListItem = ({ address, onRemove }: AddressListItemProperties) => {
-	const { env } = useEnvironmentContext();
-
-	const network = useMemo(
-		() =>
-			env
-				.availableNetworks()
-				.find(
-					(network: Networks.Network) => network.coin() === address.coin && network.id() === address.network,
-				),
-		[address, env],
-	);
-
-	return (
-		<div
-			data-testid="contact-form__address-list-item"
-			className="flex items-center py-4 border-b border-dashed last:pb-0 last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
-		>
-			<div className="mr-4">
-				<div className="flex items-center -space-x-1">
-					<NetworkIcon network={network} size="lg" />
-					<Avatar address={address.address} size="lg" />
-				</div>
-			</div>
-
-			<span className="font-semibold">
-				<Address address={address.address} />
-			</span>
-
-			<Button
-				data-testid="contact-form__remove-address-btn"
-				size="icon"
-				className="flex items-center ml-auto"
-				variant="danger"
-				onClick={() => onRemove(address)}
-			>
-				<Icon name="Trash" />
-			</Button>
-		</div>
-	);
-};
-
-interface AddressListProperties {
-	addresses: any[];
-	onRemove: any;
-}
-
-const AddressList = ({ addresses, onRemove }: AddressListProperties) => {
-	const { t } = useTranslation();
-
-	return (
-		<div className="group">
-			<span className="inline-block text-sm font-semibold transition-colors duration-100 text-theme-secondary-text group-hover:text-theme-primary-600">
-				{t("CONTACTS.CONTACT_FORM.ADDRESSES")}
-			</span>
-
-			<div data-testid="contact-form__address-list">
-				{addresses.map((address: any, index: number) => (
-					<AddressListItem key={index} address={address} onRemove={onRemove} />
-				))}
-			</div>
-		</div>
-	);
-};
-
-interface ContactFormProperties {
-	contact?: Contracts.IContact;
-	profile: Contracts.IProfile;
-	onCancel?: any;
-	onChange?: any;
-	onDelete?: any;
-	onSave: any;
-	errors?: any;
-}
-
-const defaultProps = {
-	errors: {},
-};
-
-export const ContactForm = ({
+export const ContactForm: React.VFC<ContactFormProperties> = ({
 	profile,
 	contact,
 	onChange,
 	onCancel,
 	onDelete,
 	onSave,
-	errors = defaultProps.errors,
-}: ContactFormProperties) => {
-	const [addresses, setAddresses] = useState(() =>
+	errors,
+}) => {
+	const [addresses, setAddresses] = useState<AddressItem[]>(() =>
 		contact
 			? contact
 					.addresses()
@@ -132,7 +42,15 @@ export const ContactForm = ({
 
 	const { t } = useTranslation();
 
-	const form = useForm({ mode: "onChange" });
+	const form = useForm<ContactFormState>({
+		defaultValues: {
+			address: "",
+			name: contact?.name() ?? "",
+			network: undefined,
+		},
+		mode: "onChange",
+	});
+
 	const { formState, register, setError, setValue, watch, trigger } = form;
 	const { isValid } = formState;
 
@@ -141,12 +59,12 @@ export const ContactForm = ({
 	const contactFormValidation = contactForm(t, profile);
 
 	useEffect(() => {
-		register({ name: "network" });
+		register("network");
 	}, [register]);
 
 	useEffect(() => {
-		for (const [field, message] of Object.entries(errors)) {
-			setError(field, { message: message as string, type: "manual" });
+		for (const [field, message] of Object.entries(errors) as [keyof ContactFormState, string][]) {
+			setError(field, { message, type: "manual" });
 		}
 	}, [errors, setError]);
 
@@ -155,11 +73,12 @@ export const ContactForm = ({
 	);
 
 	const filteredNetworks = useMemo(() => {
-		const usedNetworks = new Set(addresses.map((address: any) => address.network));
+		const usedNetworks = new Set(addresses.map((address) => address.network));
 		return networkOptions.filter(({ value }: NetworkOption) => !usedNetworks.has(value));
 	}, [addresses, networkOptions]);
 
 	const handleAddAddress = async () => {
+		assertNetwork(network);
 		const instance: Coins.Coin = profile.coins().set(network.coin(), network.id());
 		await instance.__construct();
 		const isValidAddress: boolean = await instance.address().validate(address);
@@ -184,13 +103,13 @@ export const ContactForm = ({
 			},
 		]);
 
-		setValue("network", null);
-		setValue("address", null);
+		setValue("network", undefined);
+		setValue("address", "");
 	};
 
-	const handleRemoveAddress = (item: any) => {
+	const handleRemoveAddress = (item: AddressItem) => {
 		setAddresses(
-			addresses.filter((current: any) => !(current.address === item.address && current.network === item.network)),
+			addresses.filter((current) => !(current.address === item.address && current.network === item.network)),
 		);
 	};
 
@@ -202,7 +121,7 @@ export const ContactForm = ({
 	const renderNetworkLabel = (option: OptionProperties) => (
 		<div className="flex justify-between">
 			<span>{option.label}</span>
-			{!!(option as NetworkOption).isTestNetwork && (
+			{(option as NetworkOption).isTestNetwork && (
 				<Tooltip content={t("COMMON.TEST_NETWORK")}>
 					<span>
 						<Icon
@@ -232,10 +151,8 @@ export const ContactForm = ({
 				<InputDefault
 					data-testid="contact-form__name-input"
 					ref={register(contactFormValidation.name(contact?.id()))}
-					onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-						onChange?.("name", event.target.value);
-					}}
-					defaultValue={contact?.name?.()}
+					onChange={() => onChange("name")}
+					defaultValue={contact?.name()}
 				/>
 			</FormField>
 
@@ -246,7 +163,7 @@ export const ContactForm = ({
 						placeholder={t("COMMON.INPUT_NETWORK.PLACEHOLDER")}
 						defaultValue={network?.id()}
 						options={filteredNetworks}
-						onChange={(networkOption: any) => handleSelectNetwork(networkOption)}
+						onChange={(networkOption) => handleSelectNetwork(networkOption)}
 						renderLabel={renderNetworkLabel}
 					/>
 				</FormField>
@@ -258,7 +175,7 @@ export const ContactForm = ({
 						profile={profile}
 						useDefaultRules={false}
 						registerRef={register}
-						onChange={() => onChange?.("address", address)}
+						onChange={() => onChange("address")}
 						data-testid="contact-form__address-input"
 					/>
 				</FormField>
@@ -276,7 +193,7 @@ export const ContactForm = ({
 				</div>
 			</SubForm>
 
-			{addresses && addresses.length > 0 && <AddressList addresses={addresses} onRemove={handleRemoveAddress} />}
+			{addresses.length > 0 && <AddressList addresses={addresses} onRemove={handleRemoveAddress} />}
 
 			<div
 				className={`flex w-full pt-8 border-t border-theme-secondary-300 dark:border-theme-secondary-800 ${

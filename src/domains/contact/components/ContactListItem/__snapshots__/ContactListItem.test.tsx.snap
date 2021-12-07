@@ -145,32 +145,17 @@ exports[`ContactListItem should render 1`] = `
               <div
                 class="visible"
               >
-                <div
-                  class="relative"
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                  data-testid="ContactListItem__one-option-button-0"
+                  type="button"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <div
+                    class="flex items-center space-x-2"
                   >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        <div
-                          class="sc-bdvvtL qGXhc"
-                          height="20"
-                          width="20"
-                        >
-                          <svg>
-                            ellipsis-vertical.svg
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
-                  </span>
-                </div>
+                    Option 1
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -326,32 +311,17 @@ exports[`ContactListItem should render as delegate 1`] = `
               <div
                 class="visible"
               >
-                <div
-                  class="relative"
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                  data-testid="ContactListItem__one-option-button-0"
+                  type="button"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <div
+                    class="flex items-center space-x-2"
                   >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        <div
-                          class="sc-bdvvtL qGXhc"
-                          height="20"
-                          width="20"
-                        >
-                          <svg>
-                            ellipsis-vertical.svg
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
-                  </span>
-                </div>
+                    Option 1
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -507,32 +477,17 @@ exports[`ContactListItem should render with live networks only 1`] = `
               <div
                 class="visible"
               >
-                <div
-                  class="relative"
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                  data-testid="ContactListItem__one-option-button-0"
+                  type="button"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <div
+                    class="flex items-center space-x-2"
                   >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        <div
-                          class="sc-bdvvtL qGXhc"
-                          height="20"
-                          width="20"
-                        >
-                          <svg>
-                            ellipsis-vertical.svg
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
-                  </span>
-                </div>
+                    Option 1
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -688,32 +643,17 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
               <div
                 class="visible"
               >
-                <div
-                  class="relative"
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                  data-testid="ContactListItem__one-option-button-0"
+                  type="button"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <div
+                    class="flex items-center space-x-2"
                   >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        <div
-                          class="sc-bdvvtL qGXhc"
-                          height="20"
-                          width="20"
-                        >
-                          <svg>
-                            ellipsis-vertical.svg
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
-                  </span>
-                </div>
+                    Option 1
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -834,32 +774,17 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
               <div
                 class="invisible"
               >
-                <div
-                  class="relative"
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                  data-testid="ContactListItem__one-option-button-1"
+                  type="button"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <div
+                    class="flex items-center space-x-2"
                   >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        <div
-                          class="sc-bdvvtL qGXhc"
-                          height="20"
-                          width="20"
-                        >
-                          <svg>
-                            ellipsis-vertical.svg
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
-                  </span>
-                </div>
+                    Option 1
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -980,32 +905,17 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
               <div
                 class="invisible"
               >
-                <div
-                  class="relative"
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                  data-testid="ContactListItem__one-option-button-2"
+                  type="button"
                 >
-                  <span
-                    data-testid="dropdown__toggle"
+                  <div
+                    class="flex items-center space-x-2"
                   >
-                    <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
-                      type="button"
-                    >
-                      <div
-                        class="flex items-center space-x-2"
-                      >
-                        <div
-                          class="sc-bdvvtL qGXhc"
-                          height="20"
-                          width="20"
-                        >
-                          <svg>
-                            ellipsis-vertical.svg
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
-                  </span>
-                </div>
+                    Option 1
+                  </div>
+                </button>
               </div>
             </div>
           </div>

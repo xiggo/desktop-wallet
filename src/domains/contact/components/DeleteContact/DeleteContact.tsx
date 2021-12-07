@@ -6,15 +6,20 @@ import { DeleteResource } from "@/app/components/DeleteResource";
 import { useEnvironmentContext } from "@/app/contexts";
 
 interface DeleteContactProperties {
-	isOpen: boolean;
 	contact: Contracts.IContact;
 	profile: Contracts.IProfile;
-	onCancel?: any;
-	onClose?: any;
-	onDelete?: any;
+	onCancel: () => void;
+	onClose: () => void;
+	onDelete: (contactId: string) => void;
 }
 
-export const DeleteContact = ({ isOpen, contact, profile, onCancel, onClose, onDelete }: DeleteContactProperties) => {
+export const DeleteContact: React.VFC<DeleteContactProperties> = ({
+	contact,
+	profile,
+	onCancel,
+	onClose,
+	onDelete,
+}) => {
 	const { t } = useTranslation();
 
 	const { persist } = useEnvironmentContext();
@@ -23,14 +28,14 @@ export const DeleteContact = ({ isOpen, contact, profile, onCancel, onClose, onD
 		profile.contacts().forget(contact.id());
 		await persist();
 
-		onDelete?.(contact.id());
+		onDelete(contact.id());
 	};
 
 	return (
 		<DeleteResource
+			isOpen
 			title={t("CONTACTS.MODAL_DELETE_CONTACT.TITLE")}
 			description={t("CONTACTS.MODAL_DELETE_CONTACT.DESCRIPTION")}
-			isOpen={isOpen}
 			onClose={onClose}
 			onCancel={onCancel}
 			onDelete={handleDelete}

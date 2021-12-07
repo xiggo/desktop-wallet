@@ -6,9 +6,9 @@ export interface ContactListItemOption {
 }
 
 export interface ContactListItemProperties {
-	item: any;
-	options?: ContactListItemOption[];
+	item: Contracts.IContact;
+	options: ContactListItemOption[];
 	useTestNetworks: boolean;
-	onAction?: (action: ContactListItemOption, address: any) => void;
-	onSend?: (address: Contracts.IContactAddress) => void;
+	onAction: (action: ContactListItemOption, address: string) => void;
+	onSend: (address: Contracts.IContactAddress) => void;
 }

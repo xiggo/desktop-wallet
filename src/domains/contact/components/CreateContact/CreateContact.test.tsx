@@ -8,6 +8,8 @@ import { translations } from "@/domains/contact/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 const onSave = jest.fn();
+const onCancel = jest.fn();
+const onClose = jest.fn();
 
 let profile: Contracts.IProfile;
 let contact: Contracts.IContact;
@@ -18,24 +20,21 @@ describe("CreateContact", () => {
 		contact = profile.contacts().values()[0];
 	});
 
-	it("should not render if not open", () => {
-		const { asFragment } = render(<CreateContact profile={profile} isOpen={false} onSave={onSave} />);
+	it("should render", async () => {
+		const { asFragment } = render(
+			<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />,
+		);
 
-		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
+		await waitFor(() => {
+			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
+		});
 
-	it("should render", () => {
-		const { asFragment } = render(<CreateContact profile={profile} isOpen={true} onSave={onSave} />);
-
-		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_CREATE_CONTACT.TITLE);
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_CREATE_CONTACT.DESCRIPTION);
-
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should not create new contact if contact name exists", async () => {
-		render(<CreateContact profile={profile} isOpen={true} onSave={onSave} />);
+		render(<CreateContact profile={profile} onCancel={onCancel} onClose={onClose} onSave={onSave} />);
 
 		userEvent.paste(screen.getByTestId("contact-form__name-input"), contact.name());
 

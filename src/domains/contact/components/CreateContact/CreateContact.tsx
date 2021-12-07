@@ -1,45 +1,43 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Modal } from "@/app/components/Modal";
 import { useEnvironmentContext } from "@/app/contexts";
 import { ContactForm } from "@/domains/contact/components/ContactForm";
+import { ContactFormData, ContactFormState } from "@/domains/contact/components/ContactForm/ContactForm.contracts";
 
 interface CreateContactProperties {
-	isOpen: boolean;
 	profile: Contracts.IProfile;
-	onClose?: any;
-	onCancel?: any;
-	onSave: any;
+	onClose: () => void;
+	onCancel: () => void;
+	onSave: (contactId: string) => void;
 }
 
-export const CreateContact = ({ isOpen, profile, onClose, onCancel, onSave }: CreateContactProperties) => {
+export const CreateContact: React.VFC<CreateContactProperties> = ({ profile, onClose, onCancel, onSave }) => {
 	const { t } = useTranslation();
-	const [errors, setErrors] = useState<any>({});
+
+	const [errors, setErrors] = useState<Partial<Record<keyof ContactFormState, string>>>({});
 
 	const { persist } = useEnvironmentContext();
 
-	useEffect(() => setErrors({}), [isOpen]);
-
-	const handleOnSave = async ({ name, addresses }: any) => {
+	const handleOnSave = async ({ name, addresses }: ContactFormData) => {
 		const contact = profile.contacts().create(name, addresses);
 		await persist();
-		onSave?.(contact.id());
+		onSave(contact.id());
 		setErrors({});
 	};
 
-	const handleChange = (fieldName: string) => {
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const handleChange = (fieldName: keyof ContactFormState) => {
 		const { [fieldName]: _, ...restErrors } = errors;
 		setErrors(restErrors);
 	};
 
 	return (
 		<Modal
+			isOpen
 			title={t("CONTACTS.MODAL_CREATE_CONTACT.TITLE")}
 			description={t("CONTACTS.MODAL_CREATE_CONTACT.DESCRIPTION")}
-			isOpen={isOpen}
 			onClose={onClose}
 		>
 			<div className="mt-8">

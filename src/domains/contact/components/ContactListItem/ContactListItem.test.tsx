@@ -21,7 +21,13 @@ describe("ContactListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} useTestNetworks />
+					<ContactListItem
+						options={singleOption}
+						onAction={jest.fn()}
+						onSend={jest.fn()}
+						item={contact}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -39,7 +45,13 @@ describe("ContactListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} useTestNetworks={false} />
+					<ContactListItem
+						options={singleOption}
+						onAction={jest.fn()}
+						onSend={jest.fn()}
+						item={contact}
+						useTestNetworks={false}
+					/>
 				</tbody>
 			</table>,
 		);
@@ -74,7 +86,13 @@ describe("ContactListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={delegateContact} useTestNetworks />
+					<ContactListItem
+						options={singleOption}
+						onAction={jest.fn()}
+						onSend={jest.fn()}
+						item={delegateContact as unknown as Contracts.IContact}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -98,7 +116,13 @@ describe("ContactListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} useTestNetworks />
+					<ContactListItem
+						options={singleOption}
+						onAction={jest.fn()}
+						onSend={jest.fn()}
+						item={contact}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -110,7 +134,13 @@ describe("ContactListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} options={singleOption} useTestNetworks />
+					<ContactListItem
+						options={singleOption}
+						onAction={jest.fn()}
+						onSend={jest.fn()}
+						item={contact}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -122,7 +152,13 @@ describe("ContactListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} options={multiOptions} useTestNetworks />
+					<ContactListItem
+						onAction={jest.fn()}
+						onSend={jest.fn()}
+						item={contact}
+						options={multiOptions}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -136,7 +172,13 @@ describe("ContactListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={singleOption} useTestNetworks />
+					<ContactListItem
+						onSend={jest.fn()}
+						item={contact}
+						onAction={onAction}
+						options={singleOption}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -152,7 +194,13 @@ describe("ContactListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={singleOption} useTestNetworks />
+					<ContactListItem
+						onSend={jest.fn()}
+						item={contact}
+						onAction={onAction}
+						options={singleOption}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -168,7 +216,13 @@ describe("ContactListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={multiOptions} useTestNetworks />
+					<ContactListItem
+						onSend={jest.fn()}
+						item={contact}
+						onAction={onAction}
+						options={multiOptions}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -185,7 +239,13 @@ describe("ContactListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={multiOptions} useTestNetworks />
+					<ContactListItem
+						onSend={jest.fn()}
+						item={contact}
+						onAction={onAction}
+						options={multiOptions}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -202,7 +262,13 @@ describe("ContactListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} options={multiOptions} useTestNetworks />
+					<ContactListItem
+						onSend={jest.fn()}
+						onAction={jest.fn()}
+						item={contact}
+						options={multiOptions}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -219,7 +285,13 @@ describe("ContactListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} options={multiOptions} useTestNetworks />
+					<ContactListItem
+						onSend={jest.fn()}
+						onAction={jest.fn()}
+						item={contact}
+						options={multiOptions}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -236,7 +308,13 @@ describe("ContactListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={singleOption} useTestNetworks />
+					<ContactListItem
+						onSend={jest.fn()}
+						item={contact}
+						onAction={onAction}
+						options={singleOption}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -255,7 +333,13 @@ describe("ContactListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onAction={onAction} options={singleOption} useTestNetworks />
+					<ContactListItem
+						onSend={jest.fn()}
+						item={contact}
+						onAction={onAction}
+						options={singleOption}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);
@@ -274,7 +358,13 @@ describe("ContactListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<ContactListItem item={contact} onSend={onSend} options={singleOption} useTestNetworks />
+					<ContactListItem
+						onAction={jest.fn()}
+						item={contact}
+						onSend={onSend}
+						options={singleOption}
+						useTestNetworks
+					/>
 				</tbody>
 			</table>,
 		);

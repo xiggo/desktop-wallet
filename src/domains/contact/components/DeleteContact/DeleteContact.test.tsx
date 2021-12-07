@@ -21,18 +21,15 @@ describe("DeleteContact", () => {
 		onDelete.mockRestore();
 	});
 
-	it("should not render if not open", () => {
-		const { asFragment } = render(
-			<DeleteContact contact={contact} isOpen={false} onDelete={onDelete} profile={profile} />,
-		);
-
-		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
-		expect(asFragment()).toMatchSnapshot();
-	});
-
 	it("should render a modal", () => {
 		const { asFragment } = render(
-			<DeleteContact contact={contact} isOpen={true} onDelete={onDelete} profile={profile} />,
+			<DeleteContact
+				onClose={jest.fn()}
+				onCancel={jest.fn()}
+				contact={contact}
+				onDelete={onDelete}
+				profile={profile}
+			/>,
 		);
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DELETE_CONTACT.TITLE);
@@ -41,7 +38,15 @@ describe("DeleteContact", () => {
 	});
 
 	it("should delete contact", async () => {
-		render(<DeleteContact isOpen={true} onDelete={onDelete} profile={profile} contact={contact} />);
+		render(
+			<DeleteContact
+				onClose={jest.fn()}
+				onCancel={jest.fn()}
+				onDelete={onDelete}
+				profile={profile}
+				contact={contact}
+			/>,
+		);
 		const deleteButton = screen.getByTestId("DeleteResource__submit-button");
 
 		userEvent.click(deleteButton);

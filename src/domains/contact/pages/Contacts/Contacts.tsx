@@ -74,7 +74,7 @@ export const Contacts: FC = () => {
 			return contacts;
 		}
 
-		const networkMap: Record<string, boolean> = {};
+		const networkMap: Record<string, boolean | undefined> = {};
 
 		return contacts.filter((contact) => {
 			const identifiers = [contact.name().toLowerCase()];
@@ -88,7 +88,7 @@ export const Contacts: FC = () => {
 
 				const isLive = networkMap[address.network()];
 
-				if (isLive || (useTestNetworks && !isLive)) {
+				if (isLive || useTestNetworks) {
 					identifiers.push(address.address().toLowerCase());
 				}
 			}
@@ -105,14 +105,14 @@ export const Contacts: FC = () => {
 
 	const [createIsOpen, setCreateIsOpen] = useState(false);
 
-	const [contactAction, setContactAction] = useState<string | null>(null);
-	const [selectedContact, setSelectedContact] = useState<Contracts.IContact | null>(null);
+	const [contactAction, setContactAction] = useState<string | undefined>(undefined);
+	const [selectedContact, setSelectedContact] = useState<Contracts.IContact | undefined>(undefined);
 
 	const { t } = useTranslation();
 
 	useEffect(() => {
 		if (!contactAction) {
-			setSelectedContact(null);
+			setSelectedContact(undefined);
 		}
 	}, [contactAction]);
 
@@ -163,26 +163,22 @@ export const Contacts: FC = () => {
 	);
 
 	const resetContactAction = () => {
-		setContactAction(null);
+		setContactAction(undefined);
 	};
 
 	const renderTableRow = useCallback(
-		(contact: Contracts.IContact) => {
-			const contactOptions = [
-				{ label: t("COMMON.EDIT"), value: "edit" },
-				{ label: t("COMMON.DELETE"), value: "delete" },
-			];
-
-			return (
-				<ContactListItem
-					item={contact}
-					options={contactOptions}
-					onSend={handleSend}
-					onAction={(action) => handleContactAction(action, contact)}
-					useTestNetworks={useTestNetworks}
-				/>
-			);
-		},
+		(contact: Contracts.IContact) => (
+			<ContactListItem
+				item={contact}
+				options={[
+					{ label: t("COMMON.EDIT"), value: "edit" },
+					{ label: t("COMMON.DELETE"), value: "delete" },
+				]}
+				onSend={handleSend}
+				onAction={(action) => handleContactAction(action, contact)}
+				useTestNetworks={useTestNetworks}
+			/>
+		),
 		[t, handleSend, useTestNetworks, handleContactAction],
 	);
 
@@ -224,34 +220,37 @@ export const Contacts: FC = () => {
 				</Section>
 			</Page>
 
-			<CreateContact
-				isOpen={createIsOpen}
-				profile={activeProfile}
-				onCancel={() => setCreateIsOpen(false)}
-				onClose={() => setCreateIsOpen(false)}
-				onSave={() => setCreateIsOpen(false)}
-			/>
+			{createIsOpen && (
+				<CreateContact
+					profile={activeProfile}
+					onCancel={() => setCreateIsOpen(false)}
+					onClose={() => setCreateIsOpen(false)}
+					onSave={() => setCreateIsOpen(false)}
+				/>
+			)}
 
 			{selectedContact && (
 				<>
-					<UpdateContact
-						isOpen={contactAction === "edit"}
-						contact={selectedContact}
-						profile={activeProfile}
-						onCancel={resetContactAction}
-						onClose={resetContactAction}
-						onDelete={() => setContactAction("delete")}
-						onSave={resetContactAction}
-					/>
+					{contactAction === "edit" && (
+						<UpdateContact
+							contact={selectedContact}
+							profile={activeProfile}
+							onCancel={resetContactAction}
+							onClose={resetContactAction}
+							onDelete={() => setContactAction("delete")}
+							onSave={resetContactAction}
+						/>
+					)}
 
-					<DeleteContact
-						isOpen={contactAction === "delete"}
-						contact={selectedContact}
-						profile={activeProfile}
-						onCancel={resetContactAction}
-						onClose={resetContactAction}
-						onDelete={resetContactAction}
-					/>
+					{contactAction === "delete" && (
+						<DeleteContact
+							contact={selectedContact}
+							profile={activeProfile}
+							onCancel={resetContactAction}
+							onClose={resetContactAction}
+							onDelete={resetContactAction}
+						/>
+					)}
 				</>
 			)}
 		</>

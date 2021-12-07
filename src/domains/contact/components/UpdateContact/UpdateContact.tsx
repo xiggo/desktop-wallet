@@ -1,57 +1,50 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Modal } from "@/app/components/Modal";
 import { useEnvironmentContext } from "@/app/contexts";
 import { ContactForm } from "@/domains/contact/components/ContactForm";
+import { ContactFormData, ContactFormState } from "@/domains/contact/components/ContactForm/ContactForm.contracts";
 
 interface UpdateContactProperties {
-	isOpen: boolean;
 	contact: Contracts.IContact;
 	profile: Contracts.IProfile;
-	onCancel?: any;
-	onClose?: any;
-	onDelete?: any;
-	onSave?: any;
+	onCancel: () => void;
+	onClose: () => void;
+	onDelete: () => void;
+	onSave: (contactId: string) => void;
 }
 
-export const UpdateContact = ({
-	isOpen,
+export const UpdateContact: React.VFC<UpdateContactProperties> = ({
 	contact,
 	onClose,
 	onCancel,
 	onDelete,
 	onSave,
 	profile,
-}: UpdateContactProperties) => {
-	const [errors, setErrors] = useState<any>({});
+}) => {
+	const [errors, setErrors] = useState<Partial<Record<keyof ContactFormState, string>>>({});
 
 	const { t } = useTranslation();
 	const { persist } = useEnvironmentContext();
 
-	useEffect(() => setErrors({}), [isOpen]);
-
-	const handleSave = async ({ name, addresses }: any) => {
-		profile.contacts().update(contact.id(), {
-			addresses,
-			name,
-		});
+	const handleSave = async ({ name, addresses }: ContactFormData) => {
+		profile.contacts().update(contact.id(), { addresses, name });
 		await persist();
-		onSave?.(contact.id());
+		onSave(contact.id());
 	};
 
-	const handleChange = (fieldName: string) => {
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const handleChange = (fieldName: keyof ContactFormState) => {
 		const { [fieldName]: _, ...restErrors } = errors;
 		setErrors(restErrors);
 	};
 
 	return (
 		<Modal
+			isOpen
 			title={t("CONTACTS.MODAL_UPDATE_CONTACT.TITLE")}
 			description={t("CONTACTS.MODAL_UPDATE_CONTACT.DESCRIPTION")}
-			isOpen={isOpen}
 			onClose={onClose}
 		>
 			<div className="mt-8">
@@ -59,7 +52,7 @@ export const UpdateContact = ({
 					profile={profile}
 					errors={errors}
 					contact={contact}
-					onCancel={() => onCancel?.()}
+					onCancel={onCancel}
 					onDelete={onDelete}
 					onChange={handleChange}
 					onSave={handleSave}

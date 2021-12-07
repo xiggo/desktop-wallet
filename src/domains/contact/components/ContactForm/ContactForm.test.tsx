@@ -8,6 +8,7 @@ import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testi
 
 const onSave = jest.fn();
 const onCancel = jest.fn();
+const onChange = jest.fn();
 
 let profile: Contracts.IProfile;
 let contact: Contracts.IContact;
@@ -24,7 +25,9 @@ describe("ContactForm", () => {
 	});
 
 	it("should render", async () => {
-		const { asFragment } = render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		const { asFragment } = render(
+			<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />,
+		);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
@@ -39,6 +42,7 @@ describe("ContactForm", () => {
 				profile={profile}
 				onCancel={onCancel}
 				onSave={onSave}
+				onChange={onChange}
 				errors={{ name: "Contact name error" }}
 			/>,
 		);
@@ -56,6 +60,7 @@ describe("ContactForm", () => {
 				profile={profile}
 				onCancel={onCancel}
 				onSave={onSave}
+				onChange={onChange}
 				errors={{ address: "Contact address error" }}
 			/>,
 		);
@@ -103,14 +108,15 @@ describe("ContactForm", () => {
 	});
 
 	it("should handle onChange event", async () => {
-		const onChange = jest.fn();
-
 		const name = "Sample name";
+
+		const onChangeFunction = jest.fn();
 
 		render(
 			<ContactForm
 				profile={profile}
-				onChange={onChange}
+				onCancel={onCancel}
+				onChange={onChangeFunction}
 				onSave={onSave}
 				errors={{ name: "Contact name error" }}
 			/>,
@@ -123,12 +129,12 @@ describe("ContactForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(onChange).toHaveBeenCalledWith("name", name);
+			expect(onChangeFunction).toHaveBeenCalledWith("name");
 		});
 	});
 
 	it("should select cryptoasset", async () => {
-		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm profile={profile} onCancel={onCancel} onChange={onChange} errors={{}} onSave={onSave} />);
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
 
@@ -139,7 +145,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should add a valid address successfully", async () => {
-		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 
@@ -174,7 +180,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should not add invalid address and should display error message", async () => {
-		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 
@@ -211,7 +217,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should not add duplicate address and display error message", async () => {
-		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 
@@ -250,7 +256,7 @@ describe("ContactForm", () => {
 	});
 
 	it("should remove network from options", async () => {
-		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 
@@ -292,7 +298,16 @@ describe("ContactForm", () => {
 	});
 
 	it("should remove an address", async () => {
-		render(<ContactForm profile={profile} contact={contact} onCancel={onCancel} onSave={onSave} />);
+		render(
+			<ContactForm
+				onChange={onChange}
+				errors={{}}
+				profile={profile}
+				contact={contact}
+				onCancel={onCancel}
+				onSave={onSave}
+			/>,
+		);
 
 		expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(contact.addresses().count());
 
@@ -306,7 +321,7 @@ describe("ContactForm", () => {
 	it("should handle save", async () => {
 		const onSave = jest.fn();
 
-		render(<ContactForm profile={profile} onCancel={onCancel} onSave={onSave} />);
+		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
 		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
 
