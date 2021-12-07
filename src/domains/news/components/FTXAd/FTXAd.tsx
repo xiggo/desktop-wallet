@@ -8,7 +8,7 @@ import FTXBanner from "@/domains/news/images/ftx-banner.png";
 
 const { DownloadAppStoreButton, DownloadGooglePlayButton } = images.news.common;
 
-export const FTXAd = () => {
+export const FTXAd: React.VFC = () => {
 	const { t } = useTranslation();
 
 	return (

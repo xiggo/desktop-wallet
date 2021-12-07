@@ -10,7 +10,9 @@ const coins = ["ark"];
 
 describe("NewsOptions", () => {
 	it("should render", () => {
-		const { container, asFragment } = render(<NewsOptions selectedCategories={categories} selectedCoins={coins} />);
+		const { container, asFragment } = render(
+			<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={jest.fn()} />,
+		);
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -23,7 +25,7 @@ describe("NewsOptions", () => {
 	});
 
 	it("should select asset", () => {
-		render(<NewsOptions selectedCategories={categories} selectedCoins={coins} />);
+		render(<NewsOptions selectedCategories={categories} selectedCoins={coins} onSubmit={jest.fn()} />);
 
 		const arkOption = screen.getByTestId("NetworkOption__ark.mainnet");
 		userEvent.click(arkOption);

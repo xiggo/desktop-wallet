@@ -3,6 +3,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { SelectCategory } from "./components/SelectCategory";
+import { NewsOptionsProperties, Option } from "./NewsOptions.contracts";
 import { Divider } from "@/app/components/Divider";
 import { FilterNetwork } from "@/app/components/FilterNetwork";
 import { useEnvironmentContext } from "@/app/contexts";
@@ -25,7 +26,7 @@ const HEADER_HEIGHT = 84;
 const VERTICAL_PADDING = 20 + 32;
 // endregion
 
-export const NewsOptions = ({ selectedCategories, selectedCoins, onSubmit }: NewsOptionsProperties) => {
+export const NewsOptions: React.VFC<NewsOptionsProperties> = ({ selectedCategories, selectedCoins, onSubmit }) => {
 	const { env } = useEnvironmentContext();
 
 	const { t } = useTranslation();
@@ -104,7 +105,7 @@ export const NewsOptions = ({ selectedCategories, selectedCoins, onSubmit }: New
 			}
 		}
 
-		onSubmit?.({
+		onSubmit({
 			categories: categoryNames,
 			coins: coinNames,
 		});

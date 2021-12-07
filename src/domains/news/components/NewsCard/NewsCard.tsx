@@ -1,5 +1,4 @@
 import { Networks } from "@payvo/sdk";
-import { BlockfolioSignal as FTXSignal } from "@payvo/sdk-news";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import Linkify from "react-linkify";
@@ -14,11 +13,15 @@ import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { AvailableNewsCategories } from "@/domains/news/news.contracts";
 import { assertNetwork } from "@/utils/assertions";
 
-type Properties = {
-	coverImage?: string;
-} & FTXSignal;
+import { NewsCardProperties } from "./NewsCard.contracts";
 
-export const NewsCard = ({ text, category, author, created_at: createdAt, coverImage }: Properties) => {
+export const NewsCard: React.VFC<NewsCardProperties> = ({
+	text,
+	category,
+	author,
+	created_at: createdAt,
+	coverImage,
+}) => {
 	const { env } = useEnvironmentContext();
 	const { t } = useTranslation();
 

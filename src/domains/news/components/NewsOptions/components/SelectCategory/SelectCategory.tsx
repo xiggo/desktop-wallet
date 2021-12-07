@@ -1,15 +1,7 @@
 import React from "react";
 import tw, { styled } from "twin.macro";
 
-type Properties = {
-	children: React.ReactNode;
-	type?: "radio" | "checkbox";
-	name?: string | number;
-	value?: string | number;
-	checked?: boolean;
-	defaultChecked?: boolean;
-	disabled?: boolean;
-} & React.HTMLProps<any>;
+import { SelectCategoryProperties } from "./SelectCategory.contracts";
 
 const Input = styled.input`
 	${tw`sr-only`}
@@ -22,7 +14,7 @@ const CustomButton = styled.div`
 	}
 `;
 
-export const SelectCategory = React.forwardRef<HTMLInputElement, Properties>(
+export const SelectCategory = React.forwardRef<HTMLInputElement, SelectCategoryProperties>(
 	(
 		{
 			children,
@@ -34,7 +26,7 @@ export const SelectCategory = React.forwardRef<HTMLInputElement, Properties>(
 			disabled,
 			onChange,
 			...properties
-		}: Properties,
+		}: SelectCategoryProperties,
 		reference,
 	) => (
 		<label htmlFor={name} tw="cursor-pointer" {...properties}>

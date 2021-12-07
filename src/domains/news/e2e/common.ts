@@ -5,7 +5,7 @@ import { goToProfile } from "../../profile/e2e/common";
 
 const translations = buildTranslations();
 
-export const goToNews = async (t: any) => {
+export const goToNews = async (t: TestController) => {
 	await goToProfile(t);
 
 	await t.click(Selector("a").withText(translations.NEWS.NEWS));

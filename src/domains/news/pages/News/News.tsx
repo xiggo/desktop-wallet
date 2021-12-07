@@ -4,38 +4,20 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { SvgCollection } from "@/app/assets/svg";
-import { EmptyResults } from "@/app/components/EmptyResults";
 import { Header } from "@/app/components/Header";
 import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
 import { Page, Section } from "@/app/components/Layout";
-import { Pagination } from "@/app/components/Pagination";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { httpClient, toasts } from "@/app/services";
-import { FTXAd } from "@/domains/news/components/FTXAd";
-import { NewsCard, NewsCardSkeleton } from "@/domains/news/components/NewsCard";
+import { NewsList } from "@/domains/news/components/NewsList";
 import { NewsOptions } from "@/domains/news/components/NewsOptions";
 import { AVAILABLE_CATEGORIES } from "@/domains/news/news.constants";
-import { AvailableNewsCategories } from "@/domains/news/news.contracts";
+import { NewsFilters, NewsQuery } from "@/domains/news/news.contracts";
 
-interface NewsFilters {
-	categories: AvailableNewsCategories[];
-	coins: string[];
-	searchQuery?: string;
-}
+import { NewsProperties } from "./News.contracts";
 
-interface NewsQuery {
-	categories?: string[];
-	coins: string[];
-	page?: number;
-	query?: string;
-}
-
-interface Properties {
-	itemsPerPage?: number;
-}
-
-export const News = ({ itemsPerPage = 15 }: Properties) => {
+export const News: React.FC<NewsProperties> = ({ itemsPerPage = 15 }) => {
 	const activeProfile = useActiveProfile();
 	const { persist } = useEnvironmentContext();
 
@@ -61,8 +43,6 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 	});
 
 	const [news, setNews] = useState<FTXSignal[]>([]);
-
-	const skeletonCards = Array.from({ length: 8 }).fill({});
 
 	const { t } = useTranslation();
 
@@ -112,17 +92,15 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 		updateSettings();
 	}, [activeProfile, categories, coins, persist]);
 
-	const handleSelectPage = (page: number) => {
-		setCurrentPage(page);
-	};
+	const handleSelectPage = useCallback((page: number) => setCurrentPage(page), []);
 
-	const handleFilterSubmit = useCallback((data: any) => {
+	const handleFilterSubmit = useCallback((data: NewsFilters) => {
 		setCurrentPage(1);
 		setFilters(data);
 	}, []);
 
 	return (
-		<Page isBackDisabled={true}>
+		<Page isBackDisabled>
 			<Section backgroundClassName="bg-theme-background">
 				<Header
 					title={t("NEWS.PAGE_NEWS.TITLE")}
@@ -148,43 +126,16 @@ export const News = ({ itemsPerPage = 15 }: Properties) => {
 			<Section className="flex-1" backgroundClassName="bg-theme-secondary-background">
 				<div className="container flex space-x-5 xl:space-x-8">
 					<div className="flex-none w-2/3">
-						{isLoading && (
-							<div className="space-y-5">
-								{skeletonCards.map((_, key: number) => (
-									<NewsCardSkeleton key={key} />
-								))}
-							</div>
-						)}
-
-						{!isLoading && news.length === 0 && (
-							<EmptyResults
-								className="rounded-lg border-2 border-theme-primary-100 dark:border-theme-secondary-800"
-								title={t("COMMON.EMPTY_RESULTS.TITLE")}
-								subtitle={t("COMMON.EMPTY_RESULTS.SUBTITLE")}
-							/>
-						)}
-
-						{!isLoading && news.length > 0 && (
-							<>
-								<div className="space-y-5">
-									{news.map((data, index) => (
-										<NewsCard key={index} {...data} />
-									))}
-
-									<FTXAd />
-								</div>
-
-								<div className="flex justify-center mt-10 w-full">
-									<Pagination
-										totalCount={totalCount}
-										itemsPerPage={itemsPerPage}
-										onSelectPage={handleSelectPage}
-										currentPage={currentPage}
-									/>
-								</div>
-							</>
-						)}
+						<NewsList
+							isLoading={isLoading}
+							news={news}
+							totalCount={totalCount}
+							itemsPerPage={itemsPerPage}
+							currentPage={currentPage}
+							onSelectPage={handleSelectPage}
+						/>
 					</div>
+
 					<div className="relative w-1/3">
 						<NewsOptions
 							selectedCategories={categories}
