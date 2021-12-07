@@ -1,4 +1,4 @@
-import { isEmptyObject, uniq } from "@payvo/sdk-helpers";
+import { isEmptyObject } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
 import { useMemo, useState } from "react";
 
@@ -69,8 +69,6 @@ export const useVoteFilters = ({
 	};
 
 	const walletsByCoin = useMemo(() => {
-		const wallets = profile.wallets().allByCoin();
-
 		const usesTestNetworks = profile.settings().get(Contracts.ProfileSetting.UseTestNetworks);
 		const usedWallets = usesTestNetworks
 			? profile.wallets().values()
@@ -81,22 +79,27 @@ export const useVoteFilters = ({
 
 		const mappedWallets: Record<string, Contracts.IReadWriteWallet[]> = {};
 
-		for (const coin of uniq(usedWallets.map((wallet) => wallet.currency()))) {
-			mappedWallets[coin] = Object.values(wallets[coin]).filter((wallet: Contracts.IReadWriteWallet) => {
-				if (!selectedNetworkIds.includes(wallet.network().id())) {
-					return false;
-				}
+		for (const wallet of usedWallets) {
+			const networkId = wallet.network().id();
 
-				if (walletsDisplayType === "starred") {
-					return wallet.isStarred();
-				}
+			// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+			if (!mappedWallets[networkId]) {
+				mappedWallets[networkId] = [];
+			}
 
-				if (walletsDisplayType === "ledger") {
-					return wallet.isLedger();
-				}
+			if (!selectedNetworkIds.includes(networkId)) {
+				continue;
+			}
 
-				return wallet;
-			});
+			if (walletsDisplayType === "starred" && !wallet.isStarred()) {
+				continue;
+			}
+
+			if (walletsDisplayType === "ledger" && !wallet.isLedger()) {
+				continue;
+			}
+
+			mappedWallets[networkId].push(wallet);
 		}
 
 		return mappedWallets;
