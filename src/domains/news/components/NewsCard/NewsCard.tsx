@@ -3,6 +3,7 @@ import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import Linkify from "react-linkify";
 
+import { NewsCardProperties } from "./NewsCard.contracts";
 import { Card } from "@/app/components/Card";
 import { Divider } from "@/app/components/Divider";
 import { Label } from "@/app/components/Label";
@@ -12,8 +13,6 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { AvailableNewsCategories } from "@/domains/news/news.contracts";
 import { assertNetwork } from "@/utils/assertions";
-
-import { NewsCardProperties } from "./NewsCard.contracts";
 
 export const NewsCard: React.VFC<NewsCardProperties> = ({
 	text,

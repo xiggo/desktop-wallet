@@ -1,12 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { NewsListProperties } from "./NewsList.contracts";
 import { EmptyResults } from "@/app/components/EmptyResults";
 import { Pagination } from "@/app/components/Pagination";
 import { FTXAd } from "@/domains/news/components/FTXAd";
 import { NewsCard, NewsCardSkeleton } from "@/domains/news/components/NewsCard";
-
-import { NewsListProperties } from "./NewsList.contracts";
 
 const NewsList: React.VFC<NewsListProperties> = ({
 	isLoading,

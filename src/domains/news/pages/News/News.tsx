@@ -3,6 +3,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { NewsProperties } from "./News.contracts";
 import { SvgCollection } from "@/app/assets/svg";
 import { Header } from "@/app/components/Header";
 import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
@@ -14,8 +15,6 @@ import { NewsList } from "@/domains/news/components/NewsList";
 import { NewsOptions } from "@/domains/news/components/NewsOptions";
 import { AVAILABLE_CATEGORIES } from "@/domains/news/news.constants";
 import { NewsFilters, NewsQuery } from "@/domains/news/news.contracts";
-
-import { NewsProperties } from "./News.contracts";
 
 export const News: React.FC<NewsProperties> = ({ itemsPerPage = 15 }) => {
 	const activeProfile = useActiveProfile();

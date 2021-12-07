@@ -2,14 +2,13 @@ import { Networks } from "@payvo/sdk";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+import { AddressListItemProperties, AddressListProperties } from "./ContactForm.contracts";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { useEnvironmentContext } from "@/app/contexts";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-
-import { AddressListItemProperties, AddressListProperties } from "./ContactForm.contracts";
 
 const AddressListItem: React.VFC<AddressListItemProperties> = ({ address, onRemove }) => {
 	const { env } = useEnvironmentContext();

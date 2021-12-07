@@ -16,13 +16,6 @@ import { useNetworkOptions } from "@/app/hooks";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { assertNetwork } from "@/utils/assertions";
 
-const defaultProps = {
-	options: [
-		{ label: "Edit", value: "edit" },
-		{ label: "Delete", value: "send" },
-	],
-};
-
 export const ContactListItem: FC<ContactListItemProperties> = ({
 	item,
 	onAction,

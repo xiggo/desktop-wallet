@@ -3,10 +3,9 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
+import { useVoteFilters } from "./use-vote-filters";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
-
-import { useVoteFilters } from "./use-vote-filters";
 
 let profile: Contracts.IProfile;
 

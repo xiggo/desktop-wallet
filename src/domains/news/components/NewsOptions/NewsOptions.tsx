@@ -10,17 +10,6 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { AVAILABLE_CATEGORIES } from "@/domains/news/news.constants";
 import { AvailableNewsCategories } from "@/domains/news/news.contracts";
 
-interface Option {
-	name: AvailableNewsCategories;
-	isSelected: boolean;
-}
-
-interface NewsOptionsProperties {
-	selectedCategories: AvailableNewsCategories[];
-	selectedCoins: string[];
-	onSubmit?: (data: object) => void;
-}
-
 // region for scrollable sidebar on small screen
 const HEADER_HEIGHT = 84;
 const VERTICAL_PADDING = 20 + 32;
