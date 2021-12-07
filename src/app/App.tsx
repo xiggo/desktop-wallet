@@ -25,13 +25,6 @@ import { useHistory } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { middlewares, RouterView, routes } from "router";
 
-import { Offline } from "@/domains/error/pages";
-import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
-import { Splash } from "@/domains/splash/pages";
-import { StubStorage } from "@/tests/mocks";
-import { setThemeSource, shouldUseDarkColors } from "@/utils/electron-utils";
-import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
-
 import { SyncErrorMessage } from "./components/ProfileSyncStatusMessage";
 import { ConfigurationProvider, EnvironmentProvider, LedgerProvider, useEnvironmentContext } from "./contexts";
 import { useDeeplink, useNetworkStatus, useProfileSynchronizer } from "./hooks";
@@ -40,6 +33,12 @@ import { PluginProviders } from "./PluginProviders";
 import { SentryProvider } from "./sentry/SentryProvider";
 import { SentryRouterWrapper } from "./sentry/SentryRouterWrapper";
 import { httpClient, toasts } from "./services";
+import { bootEnvironmentWithProfileFixtures, isE2E, isUnit } from "@/utils/test-helpers";
+import { setThemeSource, shouldUseDarkColors } from "@/utils/electron-utils";
+import { StubStorage } from "@/tests/mocks";
+import { Splash } from "@/domains/splash/pages";
+import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
+import { Offline } from "@/domains/error/pages";
 
 const RouteWrappers = ({ children }: { children: React.ReactNode }) => (
 	<SentryRouterWrapper>{children}</SentryRouterWrapper>

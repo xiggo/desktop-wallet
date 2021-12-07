@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { PluginSpecs } from "./components/PluginSpecs";
 import { Button } from "@/app/components/Button";
 import { Divider } from "@/app/components/Divider";
 import { Icon } from "@/app/components/Icon";
@@ -10,8 +11,6 @@ import { PluginDropdown } from "@/domains/plugin/components/PluginDropdown";
 import { PluginImage } from "@/domains/plugin/components/PluginImage";
 import { PluginCategories } from "@/domains/plugin/plugin.contracts";
 import { PluginUpdateStatus } from "@/plugins/types";
-
-import { PluginSpecs } from "./components/PluginSpecs";
 
 interface Properties {
 	title?: string;

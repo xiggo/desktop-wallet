@@ -2,10 +2,9 @@ import { BigNumber } from "@payvo/sdk-helpers";
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
+import { useValidation } from "./use-validation";
 import { EnvironmentProvider } from "@/app/contexts";
 import { env } from "@/utils/testing-library";
-
-import { useValidation } from "./use-validation";
 
 const mockNetwork = {
 	coin: jest.fn,

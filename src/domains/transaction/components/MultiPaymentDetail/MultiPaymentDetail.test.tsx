@@ -2,11 +2,10 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { MultiPaymentDetail } from "./MultiPaymentDetail";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
-import { MultiPaymentDetail } from "./MultiPaymentDetail";
 
 const fixtureProfileId = getDefaultProfileId();
 

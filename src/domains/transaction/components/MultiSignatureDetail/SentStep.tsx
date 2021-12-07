@@ -2,10 +2,9 @@ import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { Signatures } from "./Signatures";
 import { Header } from "@/app/components/Header";
 import { Image } from "@/app/components/Image";
-
-import { Signatures } from "./Signatures";
 
 export const SentStep = ({
 	transaction,

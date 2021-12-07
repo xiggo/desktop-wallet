@@ -1,11 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
 
+import { isPluginEnabled, isServiceDefinedInConfig } from "./plugin-permission";
 import { PluginController } from "@/plugins/core/plugin-controller";
 import { PluginServiceData } from "@/plugins/core/plugin-service";
 import { EventsPluginService } from "@/plugins/services";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
-
-import { isPluginEnabled, isServiceDefinedInConfig } from "./plugin-permission";
 
 describe("Plugin Permissions", () => {
 	let profile: Contracts.IProfile;

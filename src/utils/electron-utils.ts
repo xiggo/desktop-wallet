@@ -1,10 +1,9 @@
-import electron, { FileFilter, ipcRenderer } from "electron";
 import fs from "fs";
 import path from "path";
-
-import { Theme } from "@/types";
+import electron, { FileFilter, ipcRenderer } from "electron";
 
 import { validatePath } from "./validate-path";
+import { Theme } from "@/types";
 
 interface DialogOptions {
 	filters?: FileFilter | FileFilter[];

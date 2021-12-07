@@ -1,6 +1,5 @@
-import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
-
 import { Handlers, OfUnion } from "./reducer.contracts";
+import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
 
 interface State {
 	error?: string;

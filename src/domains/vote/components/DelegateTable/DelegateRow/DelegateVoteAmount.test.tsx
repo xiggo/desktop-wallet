@@ -4,12 +4,11 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { DelegateVoteAmount } from "./DelegateVoteAmount";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, fireEvent, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { DelegateVoteAmount } from "./DelegateVoteAmount";
 
 let wallet: Contracts.IReadWriteWallet;
 let delegate: Contracts.IReadOnlyWallet;

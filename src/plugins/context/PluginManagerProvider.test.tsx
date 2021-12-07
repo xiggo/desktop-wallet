@@ -4,12 +4,11 @@ import electron from "electron";
 import nock from "nock";
 import React, { useState } from "react";
 
+import { PluginManagerProvider, usePluginManagerContext } from "./PluginManagerProvider";
 import { EnvironmentProvider } from "@/app/contexts";
 import { PluginController, PluginManager } from "@/plugins/core";
 import { PluginConfigurationData } from "@/plugins/core/configuration";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { PluginManagerProvider, usePluginManagerContext } from "./PluginManagerProvider";
 
 describe("PluginManagerProvider", () => {
 	let manager: PluginManager;

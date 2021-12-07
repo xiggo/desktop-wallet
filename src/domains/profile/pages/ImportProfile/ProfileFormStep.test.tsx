@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
+import os from "os";
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import { createMemoryHistory } from "history";
-import os from "os";
 import React from "react";
 
 import { EnvironmentProvider } from "@/app/contexts";

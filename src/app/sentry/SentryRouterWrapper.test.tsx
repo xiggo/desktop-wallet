@@ -3,6 +3,8 @@ import * as Sentry from "@sentry/react";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { SentryProvider } from "./SentryProvider";
+import { SentryRouterWrapper } from "./SentryRouterWrapper";
 import { LedgerProvider } from "@/app/contexts";
 import {
 	env,
@@ -12,9 +14,6 @@ import {
 	render,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { SentryProvider } from "./SentryProvider";
-import { SentryRouterWrapper } from "./SentryRouterWrapper";
 
 const transport = getDefaultLedgerTransport();
 

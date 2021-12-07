@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { ControlButton } from "./ControlButton";
+import { render } from "@/utils/testing-library";
 
 describe("ControlButton", () => {
 	it("should render", () => {

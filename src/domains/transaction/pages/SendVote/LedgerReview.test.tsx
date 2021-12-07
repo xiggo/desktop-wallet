@@ -3,9 +3,8 @@ import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
 import { VoteLedgerReview } from "./LedgerReview";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 describe("LedgerReview", () => {
 	let profile: Contracts.IProfile;

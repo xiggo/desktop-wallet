@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { itemToString, SelectNetwork } from "./SelectNetwork";
 import { availableNetworksMock } from "@/tests/mocks/networks";
 import { render, screen, waitFor, within } from "@/utils/testing-library";
-
-import { itemToString, SelectNetwork } from "./SelectNetwork";
 
 describe("SelectNetwork", () => {
 	it("should render", () => {

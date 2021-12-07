@@ -2,12 +2,11 @@ import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { AccentColorType, ViewingModeType } from "@/app/hooks";
-
 import { AppearanceSettingsState, UseAppearanceSettings } from "./Appearance.contracts";
 import { AppearanceAccentColor } from "./blocks/AppearanceAccentColor";
 import { AppearanceToggle } from "./blocks/AppearanceToggle";
 import { AppearanceViewingMode } from "./blocks/AppearanceViewingMode";
+import { AccentColorType, ViewingModeType } from "@/app/hooks";
 
 export const useAppearanceItems = (): Record<string, any>[] => {
 	const { t } = useTranslation();

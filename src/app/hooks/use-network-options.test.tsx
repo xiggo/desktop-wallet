@@ -1,10 +1,9 @@
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
+import { useNetworkOptions } from "./use-network-options";
 import { EnvironmentProvider } from "@/app/contexts";
 import { env } from "@/utils/testing-library";
-
-import { useNetworkOptions } from "./use-network-options";
 
 describe("useNetworkOptions hook", () => {
 	it("should return network options", () => {

@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { NavLink, useHistory } from "react-router-dom";
 import tw, { css, styled } from "twin.macro";
 
+import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
+import { defaultStyle } from "./NavigationBar.styles";
 import { images } from "@/app/assets/images";
 import { Button } from "@/app/components/Button";
 import { DropdownOption } from "@/app/components/Dropdown";
@@ -21,9 +23,6 @@ import { SearchWallet } from "@/domains/wallet/components/SearchWallet";
 import { SelectedWallet } from "@/domains/wallet/components/SearchWallet/SearchWallet.contracts";
 import { assertString } from "@/utils/assertions";
 import { openExternal } from "@/utils/electron-utils";
-
-import { NavigationBarFullProperties, NavigationBarLogoOnlyProperties } from "./NavigationBar.contracts";
-import { defaultStyle } from "./NavigationBar.styles";
 
 const { PayvoLogo } = images.common;
 

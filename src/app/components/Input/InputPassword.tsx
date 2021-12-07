@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Icon } from "@/app/components/Icon";
-
 import { Input } from "./Input";
+import { Icon } from "@/app/components/Icon";
 
 type InputPasswordProperties = React.InputHTMLAttributes<any>;
 

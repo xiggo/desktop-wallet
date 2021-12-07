@@ -2,10 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 
-import { Icon } from "@/app/components/Icon";
-
 import { OptionButton } from "./MnemonicVerificationOptions";
 import { getOrdinalIndicator } from "./utils/evaluateOrdinalIndicator";
+import { Icon } from "@/app/components/Icon";
 
 const TabStyled = styled(OptionButton)<{ isActive: boolean; isComplete: boolean; isPending: boolean }>`
 	${tw`flex flex-1 items-center justify-center pointer-events-none transition-colors duration-200`};

@@ -1,10 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
 
+import { EventsPluginService } from "./EventsPluginService";
 import { IPluginController, PluginController, PluginManager } from "@/plugins/core";
 import { PluginAPI } from "@/plugins/types";
 import { env } from "@/utils/testing-library";
-
-import { EventsPluginService } from "./EventsPluginService";
 
 const config = {
 	"desktop-wallet": { permissions: ["EVENTS"] },

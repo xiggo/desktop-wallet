@@ -3,16 +3,15 @@ import { DTO } from "@payvo/sdk-profiles";
 import React, { useEffect, useRef, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
+import { UnlockTokensAuthentication, UnlockTokensReview, UnlockTokensSelect, UnlockTokensSummary } from "./blocks";
+import { Step, UnlockTokensFormState, UnlockTokensModalProperties } from "./UnlockTokens.contracts";
+import { useUnlockableBalances } from "./UnlockTokens.helpers";
 import { Form } from "@/app/components/Form";
 import { Modal } from "@/app/components/Modal";
 import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
-
-import { UnlockTokensAuthentication, UnlockTokensReview, UnlockTokensSelect, UnlockTokensSummary } from "./blocks";
-import { Step, UnlockTokensFormState, UnlockTokensModalProperties } from "./UnlockTokens.contracts";
-import { useUnlockableBalances } from "./UnlockTokens.helpers";
 
 export const UnlockTokensModal: React.VFC<UnlockTokensModalProperties> = ({ profile, wallet, onClose }) => {
 	const [step, setStep] = useState<Step>(Step.SelectStep);

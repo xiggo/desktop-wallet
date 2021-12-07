@@ -2,10 +2,9 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as reactHookForm from "react-hook-form";
 
+import { AppearanceViewingMode } from "./AppearanceViewingMode";
 import { translations } from "@/domains/setting/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { AppearanceViewingMode } from "./AppearanceViewingMode";
 
 describe("AppearanceViewingMode", () => {
 	it("should render", () => {

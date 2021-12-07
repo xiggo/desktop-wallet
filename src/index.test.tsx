@@ -2,10 +2,9 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Prompt, Route, Switch, useHistory } from "react-router-dom";
 
+import { AppRouter } from "./index";
 import { translations } from "@/app/i18n/common/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { AppRouter } from "./index";
 
 jest.mock("react-dom", () => ({ render: jest.fn() }));
 

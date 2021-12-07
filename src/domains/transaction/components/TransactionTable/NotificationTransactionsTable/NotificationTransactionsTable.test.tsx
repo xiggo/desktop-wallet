@@ -3,10 +3,9 @@ import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
+import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { env, getDefaultProfileId, getDefaultWalletId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { NotificationTransactionsTable } from "./NotificationTransactionsTable";
 
 describe("NotificationsTransactionTable", () => {
 	let profile: Contracts.IProfile;

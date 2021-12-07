@@ -2,6 +2,7 @@ import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 import { Header } from "@/app/components/Header";
 import { Image } from "@/app/components/Image";
 import {
@@ -10,8 +11,6 @@ import {
 	TransactionSender,
 	TransactionType,
 } from "@/domains/transaction/components/TransactionDetail";
-
-import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 
 interface TransactionSuccessfulProperties {
 	transaction: DTO.ExtendedSignedTransactionData;

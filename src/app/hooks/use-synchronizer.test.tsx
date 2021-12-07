@@ -2,10 +2,9 @@ import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import React, { useEffect } from "react";
 
+import { useSynchronizer } from "./use-synchronizer";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { act, env, render, screen, waitFor } from "@/utils/testing-library";
-
-import { useSynchronizer } from "./use-synchronizer";
 
 describe("Synchronizer Hook", () => {
 	let onCall: jest.Mock;

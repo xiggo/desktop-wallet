@@ -1,8 +1,8 @@
 /* istanbul ignore file */
 
-import { ipcMain } from "electron";
 import os from "os";
 import path from "path";
+import { ipcMain } from "electron";
 
 import { PluginLoaderFileSystem } from "./loader-fs";
 

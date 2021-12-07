@@ -1,10 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
 
+import { HttpPluginService } from "./HttpPluginService";
 import { IPluginController, PluginController, PluginManager } from "@/plugins/core";
 import { PluginAPI } from "@/plugins/types";
 import { defaultNetMocks, env, waitFor } from "@/utils/testing-library";
-
-import { HttpPluginService } from "./HttpPluginService";
 
 const config = {
 	"desktop-wallet": { permissions: ["HTTP"], urls: ["https://ark-test.payvo.com"] },

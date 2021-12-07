@@ -5,9 +5,8 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
 import { Page } from "./Page";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 

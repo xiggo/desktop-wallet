@@ -1,12 +1,11 @@
-import resolve from "enhanced-resolve";
 import fs from "fs";
-import { glob, IOptions } from "glob";
 import path from "path";
-
-import { PluginRawInstance } from "@/plugins/types";
-import { validatePath } from "@/utils/validate-path";
+import resolve from "enhanced-resolve";
+import { glob, IOptions } from "glob";
 
 import * as loaderIpc from "./loader-fs-ipc";
+import { PluginRawInstance } from "@/plugins/types";
+import { validatePath } from "@/utils/validate-path";
 
 export class PluginLoaderFileSystem {
 	readonly #root: string;

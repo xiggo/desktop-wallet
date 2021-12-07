@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { PluginListItem } from "./PluginListItem";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { PluginListItem } from "./PluginListItem";
 
 describe("PluginListItem", () => {
 	it("should render", () => {

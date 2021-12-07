@@ -3,6 +3,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { SignIn } from "./SignIn";
 import { translations } from "@/domains/profile/i18n";
 import {
 	act,
@@ -13,8 +14,6 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { SignIn } from "./SignIn";
 
 let profile: Contracts.IProfile;
 

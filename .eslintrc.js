@@ -21,7 +21,6 @@ module.exports = {
 		"promise",
 		"react-hooks",
 		"react",
-		"simple-import-sort",
 		"sonarjs",
 		"sort-keys-fix",
 		"testcafe",
@@ -74,6 +73,7 @@ module.exports = {
 		"@typescript-eslint/unbound-method": "warn",
 		"arrow-body-style": ["error", "as-needed"],
 		curly: "error",
+		"import/order": "error",
 		"import/default": "error",
 		"import/export": "warn",
 		"import/exports-last": "warn",
@@ -97,7 +97,6 @@ module.exports = {
 		"import/no-unused-modules": "error",
 		"import/no-useless-path-segments": "error",
 		"import/no-webpack-loader-syntax": "error",
-		"import/order": "warn",
 		"jest/consistent-test-it": "error",
 		"jest/max-nested-describe": "error",
 		"jest/no-alias-methods": "error",
@@ -132,8 +131,6 @@ module.exports = {
 		"react-hooks/rules-of-hooks": "error",
 		"react/prop-types": "off",
 		"react/self-closing-comp": "error",
-		"simple-import-sort/exports": "error",
-		"simple-import-sort/imports": "error",
 		"sonarjs/cognitive-complexity": "warn", // @TODO: set to error and resolve issues
 		"sonarjs/no-all-duplicated-branches": "warn", // @TODO: set to error and resolve issues
 		"sonarjs/no-collapsible-if": "warn", // @TODO: set to error and resolve issues

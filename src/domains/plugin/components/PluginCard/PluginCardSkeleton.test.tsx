@@ -1,9 +1,8 @@
 import React from "react";
 
+import { PluginCardSkeleton } from "./PluginCardSkeleton";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { render, screen } from "@/utils/testing-library";
-
-import { PluginCardSkeleton } from "./PluginCardSkeleton";
 
 describe("PluginCardSkeleton", () => {
 	beforeAll(() => {

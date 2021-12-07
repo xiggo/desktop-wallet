@@ -2,9 +2,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
 import { DeleteProfile } from "./DeleteProfile";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 

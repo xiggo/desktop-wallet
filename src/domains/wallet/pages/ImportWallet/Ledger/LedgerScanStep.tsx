@@ -6,6 +6,7 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
+import { LedgerTableProperties } from "./LedgerTabs.contracts";
 import { Address } from "@/app/components/Address";
 import { Alert } from "@/app/components/Alert";
 import { Amount } from "@/app/components/Amount";
@@ -20,8 +21,6 @@ import { useLedgerContext } from "@/app/contexts";
 import { LedgerData, useLedgerScanner } from "@/app/contexts/Ledger";
 import { useRandomNumber } from "@/app/hooks";
 import { SelectNetwork } from "@/domains/network/components/SelectNetwork";
-
-import { LedgerTableProperties } from "./LedgerTabs.contracts";
 
 const AmountWrapper = ({ isLoading, children }: { isLoading: boolean; children?: React.ReactNode }) => {
 	const amountWidth = useRandomNumber(100, 130);

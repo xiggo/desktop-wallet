@@ -7,6 +7,7 @@ import nock from "nock";
 import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
+import { UnlockTokensSelect } from "./UnlockTokensSelect";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { buildTranslations } from "@/app/i18n/helpers";
 import {
@@ -14,8 +15,6 @@ import {
 	UnlockTokensFormState,
 } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import { env, render, screen, waitFor, within } from "@/utils/testing-library";
-
-import { UnlockTokensSelect } from "./UnlockTokensSelect";
 
 const translations = buildTranslations();
 

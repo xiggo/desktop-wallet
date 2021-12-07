@@ -1,6 +1,5 @@
-import { PluginServiceConfig } from "@/plugins/types";
-
 import { IPluginController, IPluginServiceData, PluginService } from "./plugin.contracts";
+import { PluginServiceConfig } from "@/plugins/types";
 
 export class PluginServiceData implements IPluginServiceData {
 	#instance: PluginService;

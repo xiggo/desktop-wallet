@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { Spinner } from "./Spinner";
+import { render } from "@/utils/testing-library";
 
 describe("Spinner", () => {
 	beforeAll(() => {

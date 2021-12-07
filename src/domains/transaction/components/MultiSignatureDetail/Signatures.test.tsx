@@ -1,9 +1,8 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React from "react";
 
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
 import { Signatures } from "./Signatures";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 describe("Signatures", () => {
 	let profile: Contracts.IProfile;

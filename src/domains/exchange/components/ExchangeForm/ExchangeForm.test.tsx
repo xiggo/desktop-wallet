@@ -8,15 +8,14 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
-import { httpClient, toasts } from "@/app/services";
-import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
-import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
-
 import { ConfirmationStep } from "./ConfirmationStep";
 import { ExchangeForm } from "./ExchangeForm";
 import { FormStep } from "./FormStep";
 import { ReviewStep } from "./ReviewStep";
 import { StatusStep } from "./StatusStep";
+import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
+import { ExchangeProvider, useExchangeContext } from "@/domains/exchange/contexts/Exchange";
+import { httpClient, toasts } from "@/app/services";
 
 let profile: Contracts.IProfile;
 

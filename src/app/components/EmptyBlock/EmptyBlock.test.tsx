@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { EmptyBlock } from "./EmptyBlock";
+import { render, screen } from "@/utils/testing-library";
 
 describe("EmptyBlock", () => {
 	it("should render", () => {

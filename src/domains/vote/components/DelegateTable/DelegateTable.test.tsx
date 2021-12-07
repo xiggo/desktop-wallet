@@ -2,13 +2,12 @@ import { Contracts, ReadOnlyWallet } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { DelegateTable } from "./DelegateTable";
+import { VoteDelegateProperties } from "./DelegateTable.contracts";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations } from "@/app/i18n/common/i18n";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { DelegateTable } from "./DelegateTable";
-import { VoteDelegateProperties } from "./DelegateTable.contracts";
 
 let useRandomNumberSpy: jest.SpyInstance;
 

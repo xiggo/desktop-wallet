@@ -2,10 +2,9 @@ import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { TransactionRecipients } from "./TransactionRecipients";
 import { translations } from "@/domains/transaction/i18n";
 import { env, getDefaultProfileId, render } from "@/utils/testing-library";
-
-import { TransactionRecipients } from "./TransactionRecipients";
 
 let profile: Contracts.IProfile;
 

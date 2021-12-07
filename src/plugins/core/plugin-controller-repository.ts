@@ -1,6 +1,9 @@
 import * as PayvoIntl from "@payvo/sdk-intl";
 import { Contracts } from "@payvo/sdk-profiles";
 
+import { IPluginController } from "./plugin.contracts";
+import { container } from "./plugin-container";
+import { PluginController } from "./plugin-controller";
 import { Alert } from "@/app/components/Alert";
 import { OriginalButton } from "@/app/components/Button/OriginalButton";
 import { Card } from "@/app/components/Card";
@@ -17,10 +20,6 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { Box } from "@/plugins/components/shared/Box";
 import { runUnknownCode } from "@/plugins/loader/vm";
 import { PluginRawInstance } from "@/plugins/types";
-
-import { IPluginController } from "./plugin.contracts";
-import { container } from "./plugin-container";
-import { PluginController } from "./plugin-controller";
 
 export class PluginControllerRepository {
 	#plugins: IPluginController[] = [];

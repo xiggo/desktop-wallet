@@ -2,6 +2,7 @@ import { Contracts as ProfilesContracts } from "@payvo/sdk-profiles";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+import { SendVoteStepProperties } from "./SendVote.contracts";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { FeeField } from "@/domains/transaction/components/FeeField";
@@ -11,8 +12,6 @@ import {
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
-
-import { SendVoteStepProperties } from "./SendVote.contracts";
 
 type FormStepProperties = {
 	profile: ProfilesContracts.IProfile;

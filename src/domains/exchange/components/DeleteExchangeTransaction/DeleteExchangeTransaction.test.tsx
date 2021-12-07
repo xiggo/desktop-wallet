@@ -2,10 +2,9 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { DeleteExchangeTransaction } from "./DeleteExchangeTransaction";
 import { translations } from "@/domains/exchange/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { DeleteExchangeTransaction } from "./DeleteExchangeTransaction";
 
 let profile: Contracts.IProfile;
 let exchangeTransaction: Contracts.IExchangeTransaction;

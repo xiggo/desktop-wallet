@@ -4,6 +4,7 @@ import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
+import { useTransactionBuilder } from "./use-transaction-builder";
 import { LedgerProvider } from "@/app/contexts";
 import transactionFixture from "@/tests/fixtures/coins/ark/devnet/transactions/transfer.json";
 import {
@@ -15,8 +16,6 @@ import {
 	waitFor,
 	WithProviders,
 } from "@/utils/testing-library";
-
-import { useTransactionBuilder } from "./use-transaction-builder";
 
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	// @ts-ignore

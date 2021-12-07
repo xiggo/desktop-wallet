@@ -6,6 +6,14 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import {
+	useProfileJobs,
+	useProfileRestore,
+	useProfileStatusWatcher,
+	useProfileSynchronizer,
+	useProfileSyncStatus,
+} from "./use-profile-synchronizer";
+import * as profileUtilsHook from "./use-profile-utils";
 import { ConfigurationProvider, EnvironmentProvider, useConfiguration } from "@/app/contexts";
 import { toasts } from "@/app/services";
 import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
@@ -20,15 +28,6 @@ import {
 	syncDelegates,
 	waitFor,
 } from "@/utils/testing-library";
-
-import {
-	useProfileJobs,
-	useProfileRestore,
-	useProfileStatusWatcher,
-	useProfileSynchronizer,
-	useProfileSyncStatus,
-} from "./use-profile-synchronizer";
-import * as profileUtilsHook from "./use-profile-utils";
 
 const history = createMemoryHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;

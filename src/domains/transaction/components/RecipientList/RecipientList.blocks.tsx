@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { RecipientListItemProperties } from "./RecipientList.contracts";
 import { Address } from "@/app/components/Address";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
@@ -8,8 +9,6 @@ import { OriginalButton as Button } from "@/app/components/Button/OriginalButton
 import { Icon } from "@/app/components/Icon";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
-
-import { RecipientListItemProperties } from "./RecipientList.contracts";
 
 export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 	disableButton,

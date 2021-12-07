@@ -3,10 +3,9 @@ import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React, { useEffect, useState } from "react";
 
+import { useWalletTransactions } from "./use-wallet-transactions";
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { useWalletTransactions } from "./use-wallet-transactions";
 
 describe("Wallet Transactions Hook", () => {
 	let wallet: Contracts.IReadWriteWallet;

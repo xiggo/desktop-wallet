@@ -1,8 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 
-import { env, MNEMONICS } from "@/utils/testing-library";
-
 import { getDefaultAlias } from "./get-default-alias";
+import { env, MNEMONICS } from "@/utils/testing-library";
 
 describe("getDefaultAlias", () => {
 	let profile: Contracts.IProfile;

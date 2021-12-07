@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { DeleteResource } from "./DeleteResource";
+import { render, screen } from "@/utils/testing-library";
 
 const onDelete = jest.fn();
 

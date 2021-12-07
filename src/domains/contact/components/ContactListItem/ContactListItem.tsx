@@ -3,6 +3,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import React, { FC, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+import { ContactListItemOption, ContactListItemProperties } from "./ContactListItem.contracts";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
@@ -14,8 +15,6 @@ import { useEnvironmentContext } from "@/app/contexts";
 import { useNetworkOptions } from "@/app/hooks";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { assertNetwork } from "@/utils/assertions";
-
-import { ContactListItemOption, ContactListItemProperties } from "./ContactListItem.contracts";
 
 const defaultProps = {
 	options: [

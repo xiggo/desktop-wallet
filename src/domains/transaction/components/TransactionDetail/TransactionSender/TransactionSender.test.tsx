@@ -2,9 +2,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { env, getDefaultProfileId, render } from "@/utils/testing-library";
-
 import { TransactionSender } from "./TransactionSender";
+import { env, getDefaultProfileId, render } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

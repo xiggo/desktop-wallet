@@ -2,9 +2,8 @@ import "jest-extended";
 
 import nock from "nock";
 
-import { httpClient } from "@/app/services";
-
 import { exchangeHost, ExchangeService } from "./exchange.service";
+import { httpClient } from "@/app/services";
 
 let subject: ExchangeService;
 

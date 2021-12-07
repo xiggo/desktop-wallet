@@ -2,15 +2,14 @@ import { Contracts } from "@payvo/sdk-profiles";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { FirstStep } from "./Step1";
+import { SecondStep } from "./Step2";
+import { ThirdStep } from "./Step3";
 import { Button } from "@/app/components/Button";
 import { Image } from "@/app/components/Image";
 import { Modal } from "@/app/components/Modal";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useUpdater } from "@/app/hooks/use-updater";
-
-import { FirstStep } from "./Step1";
-import { SecondStep } from "./Step2";
-import { ThirdStep } from "./Step3";
 
 interface WalletUpdateProperties {
 	version?: string;

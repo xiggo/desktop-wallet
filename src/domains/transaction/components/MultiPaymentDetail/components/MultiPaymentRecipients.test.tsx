@@ -1,10 +1,9 @@
 import React from "react";
 
+import { MultiPaymentRecipients } from "./MultiPaymentRecipients";
 import { translations } from "@/domains/transaction/i18n";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { render, screen } from "@/utils/testing-library";
-
-import { MultiPaymentRecipients } from "./MultiPaymentRecipients";
 
 describe("MultiPaymentRecipients", () => {
 	it("should render recipients", () => {

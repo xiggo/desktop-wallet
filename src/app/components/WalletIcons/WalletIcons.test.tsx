@@ -2,9 +2,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
 import { WalletIcons } from "./WalletIcons";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 

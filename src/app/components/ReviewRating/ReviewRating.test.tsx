@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { ReviewRating } from "./ReviewRating";
+import { render, screen } from "@/utils/testing-library";
 
 describe("ReviewRating", () => {
 	it("should render", () => {

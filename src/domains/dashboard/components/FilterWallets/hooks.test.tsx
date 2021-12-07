@@ -2,10 +2,9 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
+import { useWalletFilters } from "./hooks";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
-
-import { useWalletFilters } from "./hooks";
 
 let profile: Contracts.IProfile;
 

@@ -2,11 +2,10 @@ import { DTO } from "@payvo/sdk-profiles";
 import React, { FC, useCallback, useMemo } from "react";
 import { TableState } from "react-table";
 
-import { Table } from "@/app/components/Table";
-import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
-
 import { TransactionRow } from "./TransactionRow/TransactionRow";
 import { TransactionTableProperties } from "./TransactionTable.contracts";
+import { Table } from "@/app/components/Table";
+import { useTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
 
 export const TransactionTable: FC<TransactionTableProperties> = ({
 	transactions,

@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepIndicator } from "@/app/components/StepIndicator";
@@ -16,10 +19,6 @@ import { ErrorStep } from "@/domains/transaction/components/ErrorStep";
 import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
-
-import { FormStep } from "./FormStep";
-import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
 
 enum Step {
 	FormStep = 1,

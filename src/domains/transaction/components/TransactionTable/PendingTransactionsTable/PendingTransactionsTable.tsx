@@ -2,13 +2,12 @@ import { DTO } from "@payvo/sdk-profiles";
 import React, { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { PendingTransaction, Properties } from "./PendingTransactionsTable.contracts";
 import { Table } from "@/app/components/Table";
 import { ConfirmRemovePendingTransaction } from "@/domains/transaction/components/ConfirmRemovePendingTransaction";
 import { PendingTransferRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/PendingTransferRow";
 import { SignedTransactionRow } from "@/domains/transaction/components/TransactionTable/TransactionRow/SignedTransactionRow";
 import { usePendingTransactionTableColumns } from "@/domains/transaction/components/TransactionTable/TransactionTable.helpers";
-
-import { PendingTransaction, Properties } from "./PendingTransactionsTable.contracts";
 
 export const PendingTransactions = ({
 	wallet,

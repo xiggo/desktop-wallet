@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { InputCounter } from "./InputCounter";
 import { FormFieldProvider } from "@/app/components/Form/useFormField";
 import { render, screen } from "@/utils/testing-library";
-
-import { InputCounter } from "./InputCounter";
 
 describe("InputCounter", () => {
 	it("should render", () => {

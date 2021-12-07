@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { MnemonicVerificationProgress } from "./MnemonicVerificationProgress";
+import { render, screen } from "@/utils/testing-library";
 
 describe("MnemonicVerificationProgress", () => {
 	it("should render tabs", () => {

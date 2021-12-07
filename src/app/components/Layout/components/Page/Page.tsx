@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 
-import { NavigationBar } from "@/app/components/NavigationBar";
-
 import { PageProperties } from "./Page.contracts";
+import { NavigationBar } from "@/app/components/NavigationBar";
 
 export const Page: FC<PageProperties> = ({ navbarVariant = "full", title, isBackDisabled, sidebar, children }) => {
 	const renderSidebar = () => (

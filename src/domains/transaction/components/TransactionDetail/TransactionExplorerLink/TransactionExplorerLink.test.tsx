@@ -1,9 +1,8 @@
 import React from "react";
 
+import { TransactionExplorerLink } from "./TransactionExplorerLink";
 import { translations } from "@/domains/transaction/i18n";
 import { render } from "@/utils/testing-library";
-
-import { TransactionExplorerLink } from "./TransactionExplorerLink";
 
 describe("TransactionExplorerLink", () => {
 	it("should render a transaction link", () => {

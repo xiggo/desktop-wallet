@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { MultiSignatureDetail } from "./MultiSignatureDetail";
 import { LedgerProvider, minVersionList } from "@/app/contexts";
 import { translations } from "@/domains/transaction/i18n";
 import MultisignatureRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
@@ -18,8 +19,6 @@ import {
 	syncDelegates,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { MultiSignatureDetail } from "./MultiSignatureDetail";
 
 const passphrase = getDefaultWalletMnemonic();
 

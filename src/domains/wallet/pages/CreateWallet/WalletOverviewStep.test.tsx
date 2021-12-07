@@ -7,10 +7,9 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Trans } from "react-i18next";
 
+import { WalletOverviewStep } from "./WalletOverviewStep";
 import { toasts } from "@/app/services";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
-
-import { WalletOverviewStep } from "./WalletOverviewStep";
 
 let profile: Contracts.IProfile;
 

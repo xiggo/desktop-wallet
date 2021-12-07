@@ -2,9 +2,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { act, renderHook } from "@testing-library/react-hooks";
 
-import { env } from "@/utils/testing-library";
-
 import { useWalletSync } from "./use-wallet-sync";
+import { env } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 

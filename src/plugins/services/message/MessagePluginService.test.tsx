@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { MessagePluginService } from "./MessagePluginService";
 import { LedgerProvider } from "@/app/contexts";
 import { IPluginController, PluginController, PluginManager } from "@/plugins/core";
 import { PluginAPI } from "@/plugins/types";
@@ -16,8 +17,6 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { MessagePluginService } from "./MessagePluginService";
 
 const pluginDescription = {
 	"desktop-wallet": { permissions: ["MESSAGE"] },

@@ -1,5 +1,5 @@
-import electron from "electron";
 import fs from "fs";
+import electron from "electron";
 
 import { PluginService } from "@/plugins/core";
 import { PluginServiceConfig, PluginServiceIdentifier } from "@/plugins/types";

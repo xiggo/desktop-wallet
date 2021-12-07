@@ -1,9 +1,8 @@
 import React from "react";
 
+import { Offline } from "./Offline";
 import { translations } from "@/domains/error/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { Offline } from "./Offline";
 
 describe("Offline", () => {
 	it("should render", () => {

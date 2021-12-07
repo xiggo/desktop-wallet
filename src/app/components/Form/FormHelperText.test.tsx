@@ -1,9 +1,8 @@
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { FormHelperText } from "./FormHelperText";
 import { FormFieldProvider } from "./useFormField";
+import { render, screen } from "@/utils/testing-library";
 
 describe("FormHelperText", () => {
 	it("should render hint text", () => {

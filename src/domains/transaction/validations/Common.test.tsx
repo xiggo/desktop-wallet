@@ -4,9 +4,8 @@ import { LSK } from "@payvo/sdk-lsk";
 import { renderHook } from "@testing-library/react-hooks";
 import { useTranslation } from "react-i18next";
 
-import { env } from "@/utils/testing-library";
-
 import { common } from "./Common";
+import { env } from "@/utils/testing-library";
 
 let network: Networks.Network;
 

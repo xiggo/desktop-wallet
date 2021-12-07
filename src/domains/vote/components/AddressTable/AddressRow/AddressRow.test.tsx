@@ -7,11 +7,10 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { AddressRow } from "./AddressRow";
 import { data } from "@/tests/fixtures/coins/ark/devnet/delegates.json";
 import walletMock from "@/tests/fixtures/coins/ark/devnet/wallets/D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD.json";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, syncDelegates } from "@/utils/testing-library";
-
-import { AddressRow } from "./AddressRow";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

@@ -3,9 +3,8 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { render, screen, within } from "@/utils/testing-library";
-
 import { PluginInfo } from "./PluginInfo";
+import { render, screen, within } from "@/utils/testing-library";
 
 describe("PluginInfo", () => {
 	it("should render properly", () => {

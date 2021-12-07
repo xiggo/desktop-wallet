@@ -2,9 +2,8 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { useQueryParameters } from "./use-query-parameters";
+import { render, screen } from "@/utils/testing-library";
 
 describe("useQueryParameters hook", () => {
 	const TestComponent: React.FC = () => {

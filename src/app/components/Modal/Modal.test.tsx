@@ -2,9 +2,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { Modal } from "./Modal";
+import { render, screen } from "@/utils/testing-library";
 
 describe("Modal", () => {
 	it("should not render if not open", () => {

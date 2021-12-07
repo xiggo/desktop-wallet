@@ -3,9 +3,8 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
-
 import { AddressTable } from "./AddressTable";
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

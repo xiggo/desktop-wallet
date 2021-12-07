@@ -1,11 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
 
-import { PluginAPI } from "@/plugins/types";
-
 import { IPluginConfigurationData, PluginConfigurationData } from "./configuration";
 import { applyPluginMiddlewares, IPluginHooks, isPluginEnabled, PluginHooks } from "./internals";
 import { IPluginController } from "./plugin.contracts";
 import { container } from "./plugin-container";
+import { PluginAPI } from "@/plugins/types";
 
 type Callback = (api: PluginAPI) => void;
 

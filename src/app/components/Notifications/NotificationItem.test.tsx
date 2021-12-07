@@ -3,9 +3,8 @@ import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
 import { NotificationItem } from "./NotificationItem";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");
 

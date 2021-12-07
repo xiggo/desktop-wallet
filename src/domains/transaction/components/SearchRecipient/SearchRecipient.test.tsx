@@ -2,11 +2,10 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { translations } from "@/domains/transaction/i18n";
-import { act, env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
-
 import { SearchRecipient } from "./SearchRecipient";
 import { RecipientProperties } from "./SearchRecipient.contracts";
+import { translations } from "@/domains/transaction/i18n";
+import { act, env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
 
 let recipients: RecipientProperties[];
 

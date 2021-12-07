@@ -4,11 +4,10 @@ import { useCombobox } from "downshift";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { SelectNetworkInput } from "./SelectNetworkInput";
 import { Divider } from "@/app/components/Divider";
 import { Toggle } from "@/app/components/Toggle";
 import { NetworkOption } from "@/domains/network/components/NetworkOption";
-
-import { SelectNetworkInput } from "./SelectNetworkInput";
 
 interface SelectNetworkProperties {
 	autoFocus?: boolean;

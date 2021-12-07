@@ -5,6 +5,11 @@ import { SendTransferStep } from "domains/transaction/pages/SendTransfer/SendTra
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
 
+import { FormStep } from "./FormStep";
+import { TransferLedgerReview } from "./LedgerReview";
+import { NetworkStep } from "./NetworkStep";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepIndicator } from "@/app/components/StepIndicator";
@@ -20,12 +25,6 @@ import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransaction } from "@/domains/transaction/hooks";
 import { useTransactionQueryParameters } from "@/domains/transaction/hooks/use-transaction-query-parameters";
 import { assertNetwork, assertWallet } from "@/utils/assertions";
-
-import { FormStep } from "./FormStep";
-import { TransferLedgerReview } from "./LedgerReview";
-import { NetworkStep } from "./NetworkStep";
-import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
 
 const MAX_TABS = 5;
 

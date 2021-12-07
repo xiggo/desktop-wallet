@@ -1,9 +1,8 @@
 import React from "react";
 
+import { TransactionType } from "./TransactionType";
 import { translations } from "@/domains/transaction/i18n";
 import { render } from "@/utils/testing-library";
-
-import { TransactionType } from "./TransactionType";
 
 describe("TransactionType", () => {
 	it("should render", () => {

@@ -3,6 +3,7 @@ import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
+import { useTransactionBuilder } from "./use-transaction-builder";
 import { LedgerProvider } from "@/app/contexts";
 import {
 	defaultNetMocks,
@@ -12,8 +13,6 @@ import {
 	getDefaultWalletMnemonic,
 	WithProviders,
 } from "@/utils/testing-library";
-
-import { useTransactionBuilder } from "./use-transaction-builder";
 
 describe("Use Transaction Builder Hook", () => {
 	let profile: ProfileContracts.IProfile;

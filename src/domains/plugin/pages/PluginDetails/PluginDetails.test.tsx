@@ -6,12 +6,11 @@ import { LaunchPluginService, PluginController } from "plugins";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { PluginDetails } from "./PluginDetails";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import { PluginManagerProvider, usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
 import { env, getDefaultProfileId, pluginManager, render, screen, waitFor, within } from "@/utils/testing-library";
-
-import { PluginDetails } from "./PluginDetails";
 
 const translations = buildTranslations();
 

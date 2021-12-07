@@ -1,9 +1,8 @@
 import { DateTime } from "@payvo/sdk-intl";
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { TransactionTimestamp } from "./TransactionTimestamp";
+import { render } from "@/utils/testing-library";
 
 const datetime = DateTime.fromUnix(1_596_213_281);
 

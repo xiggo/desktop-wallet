@@ -4,12 +4,11 @@ import { act, renderHook } from "@testing-library/react-hooks";
 import electron from "electron";
 import React from "react";
 
+import { useUpdater } from "./use-updater";
 import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
 import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
-
-import { useUpdater } from "./use-updater";
 
 let profile: Contracts.IProfile;
 

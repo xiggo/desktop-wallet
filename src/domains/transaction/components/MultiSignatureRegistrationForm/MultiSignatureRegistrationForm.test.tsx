@@ -6,12 +6,11 @@ import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
+import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
 import { translations } from "@/domains/transaction/i18n";
 import multiSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/multisignature-registration.json";
 import { TransactionFees } from "@/types";
 import { env, getDefaultProfileId, render, RenderResult, screen, syncFees, waitFor } from "@/utils/testing-library";
-
-import { MultiSignatureRegistrationForm } from "./MultiSignatureRegistrationForm";
 
 describe("MultiSignature Registration Form", () => {
 	let profile: ProfilesContracts.IProfile;

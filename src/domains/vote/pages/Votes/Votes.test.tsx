@@ -7,10 +7,9 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { Votes } from "./Votes";
 import { useProfileStatusWatcher } from "@/app/hooks";
 import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor, within } from "@/utils/testing-library";
-
-import { Votes } from "./Votes";
 
 const history = createMemoryHistory();
 

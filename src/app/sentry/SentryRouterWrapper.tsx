@@ -2,9 +2,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import React, { useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
 
-import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
-
 import { useSentryContext } from "./SentryProvider";
+import { useEnvironmentContext, useLedgerContext } from "@/app/contexts";
 
 export const SentryRouterWrapper = ({ children }: { children: React.ReactNode }) => {
 	const context = useEnvironmentContext();

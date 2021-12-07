@@ -2,6 +2,11 @@ import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
+import {
+	RecipientProperties,
+	SearchRecipientListItemProperties,
+	SearchRecipientProperties,
+} from "./SearchRecipient.contracts";
 import { Address } from "@/app/components/Address";
 import { Avatar } from "@/app/components/Avatar";
 import { Button } from "@/app/components/Button";
@@ -10,12 +15,6 @@ import { HeaderSearchBar } from "@/app/components/Header/HeaderSearchBar";
 import { Modal } from "@/app/components/Modal";
 import { Table, TableCell, TableRow } from "@/app/components/Table";
 import { useSearchWallet } from "@/app/hooks/use-search-wallet";
-
-import {
-	RecipientProperties,
-	SearchRecipientListItemProperties,
-	SearchRecipientProperties,
-} from "./SearchRecipient.contracts";
 
 const SearchRecipientListItem: FC<SearchRecipientListItemProperties> = ({
 	index,

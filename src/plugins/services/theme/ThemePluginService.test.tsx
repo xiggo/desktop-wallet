@@ -1,12 +1,11 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 
+import { ThemePluginService } from "./ThemePluginService";
+import { withThemeDecorator } from "./withThemeDecorator";
 import { PluginController, PluginManager } from "@/plugins/core";
 import { PluginAPI } from "@/plugins/types";
 import { env, render, screen } from "@/utils/testing-library";
-
-import { ThemePluginService } from "./ThemePluginService";
-import { withThemeDecorator } from "./withThemeDecorator";
 
 const config = { "desktop-wallet": { permissions: ["THEME"] }, name: "test", version: "1.1" };
 

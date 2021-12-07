@@ -2,10 +2,9 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as reactHookForm from "react-hook-form";
 
+import { AppearanceAccentColor } from "./AppearanceAccentColor";
 import { translations } from "@/domains/setting/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { AppearanceAccentColor } from "./AppearanceAccentColor";
 
 describe("AppearanceAccentColor", () => {
 	it("should render", () => {

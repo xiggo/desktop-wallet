@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { act, render, screen, waitFor } from "@/utils/testing-library";
-
 import { Clipboard } from "./Clipboard";
+import { act, render, screen, waitFor } from "@/utils/testing-library";
 
 type VariantType = "icon" | "button";
 

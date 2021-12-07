@@ -5,6 +5,8 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import tw, { css, styled } from "twin.macro";
 
+import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
+import { AddRecipientWrapper } from "./AddRecipient.styles";
 import { Amount } from "@/app/components/Amount";
 import { Button } from "@/app/components/Button";
 import { FormField, FormLabel, SubForm } from "@/app/components/Form";
@@ -17,9 +19,6 @@ import { useExchangeRate } from "@/app/hooks/use-exchange-rate";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
 import { RecipientList } from "@/domains/transaction/components/RecipientList";
 import { RecipientItem } from "@/domains/transaction/components/RecipientList/RecipientList.contracts";
-
-import { AddRecipientProperties, ToggleButtonProperties } from "./AddRecipient.contracts";
-import { AddRecipientWrapper } from "./AddRecipient.styles";
 
 const TransferType = ({ isSingle, disableMultiple, onChange, maxRecipients }: ToggleButtonProperties) => {
 	const { t } = useTranslation();

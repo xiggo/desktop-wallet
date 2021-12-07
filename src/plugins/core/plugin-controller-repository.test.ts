@@ -1,11 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
 
-import { env, getDefaultProfileId } from "@/utils/testing-library";
-
 import { container } from "./plugin-container";
 import { PluginController } from "./plugin-controller";
 import { PluginControllerRepository } from "./plugin-controller-repository";
 import { PluginServiceRepository } from "./plugin-service-repository";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("Plugin Controller subject", () => {
 	let profile: Contracts.IProfile;

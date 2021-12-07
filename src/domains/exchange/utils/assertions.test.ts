@@ -1,9 +1,8 @@
 import { ExchangeTransaction } from "@payvo/sdk-profiles";
 
+import { assertCurrency, assertExchangeService, assertExchangeTransaction } from "./assertions";
 import { httpClient } from "@/app/services";
 import { ExchangeService } from "@/domains/exchange/services/exchange.service";
-
-import { assertCurrency, assertExchangeService, assertExchangeTransaction } from "./assertions";
 
 describe("#assertExchangeService", () => {
 	it("should pass with a ExchangeService instance", () => {

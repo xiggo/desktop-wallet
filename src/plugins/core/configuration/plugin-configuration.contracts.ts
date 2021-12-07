@@ -1,9 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { Asserts } from "yup";
 
-import { SerializedPluginConfigurationData } from "@/plugins/types";
-
 import { schema } from "./schema";
+import { SerializedPluginConfigurationData } from "@/plugins/types";
 
 export interface IPluginConfigurationData {
 	validate(): Asserts<typeof schema>;

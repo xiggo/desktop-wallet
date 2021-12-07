@@ -1,7 +1,5 @@
 import { Contracts } from "@payvo/sdk-profiles";
 
-import { PluginAPI, PluginServiceIdentifier } from "@/plugins/types";
-
 import {
 	applyPluginMiddlewares,
 	IPluginHooks,
@@ -11,6 +9,7 @@ import {
 } from "./internals";
 import { IPluginController, IPluginServiceData, IPluginServiceRepository, PluginService } from "./plugin.contracts";
 import { PluginServiceData } from "./plugin-service";
+import { PluginAPI, PluginServiceIdentifier } from "@/plugins/types";
 
 export class PluginServiceRepository implements IPluginServiceRepository {
 	#services: Map<string, IPluginServiceData> = new Map();

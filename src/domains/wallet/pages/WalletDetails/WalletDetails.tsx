@@ -5,6 +5,8 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { WalletHeader, WalletVote } from "./components";
+import { useWalletTransactions } from "./hooks/use-wallet-transactions";
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile, useActiveWallet } from "@/app/hooks/env";
@@ -13,9 +15,6 @@ import { MultiSignatureDetail } from "@/domains/transaction/components/MultiSign
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
 import { Transactions } from "@/domains/transaction/components/Transactions";
 import { PendingTransactions } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable";
-
-import { WalletHeader, WalletVote } from "./components";
-import { useWalletTransactions } from "./hooks/use-wallet-transactions";
 
 export const WalletDetails = () => {
 	const [signedTransactionModalItem, setSignedTransactionModalItem] = useState<DTO.ExtendedSignedTransactionData>();

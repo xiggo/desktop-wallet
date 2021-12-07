@@ -1,7 +1,7 @@
+import path from "path";
 import { app, BrowserWindow, ipcMain, screen, shell } from "electron";
 import isDev from "electron-is-dev";
 import winState from "electron-window-state";
-import path from "path";
 
 import assignMenu from "./menu";
 import { setupPlugins } from "./plugins";

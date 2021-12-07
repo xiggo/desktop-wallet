@@ -5,14 +5,13 @@ import parseAuthor from "parse-author";
 import semver from "semver";
 import { Asserts } from "yup";
 
-import { SerializedPluginConfigurationData } from "@/plugins/types";
-import { assertString } from "@/utils/assertions";
-
 // eslint-disable-next-line import/no-relative-parent-imports
 import appPackage from "../../../../package.json";
 import { allPermissions } from "./permissions";
 import { IPluginConfigurationData } from "./plugin-configuration.contracts";
 import { schema } from "./schema";
+import { assertString } from "@/utils/assertions";
+import { SerializedPluginConfigurationData } from "@/plugins/types";
 
 export class PluginConfigurationData implements IPluginConfigurationData {
 	readonly #config: Contracts.IDataRepository;

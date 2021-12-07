@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { Switch, SwitchOption } from "./Switch";
+import { render, screen } from "@/utils/testing-library";
 
 describe("Switch", () => {
 	const onChange = jest.fn();

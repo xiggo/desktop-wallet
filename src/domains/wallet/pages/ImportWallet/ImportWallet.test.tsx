@@ -11,6 +11,9 @@ import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
+import { ImportWallet } from "./ImportWallet";
+import { MethodStep } from "./MethodStep";
+import { SuccessStep } from "./SuccessStep";
 import { EnvironmentProvider, LedgerProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
@@ -28,10 +31,6 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { ImportWallet } from "./ImportWallet";
-import { MethodStep } from "./MethodStep";
-import { SuccessStep } from "./SuccessStep";
 
 let profile: Contracts.IProfile;
 const fixtureProfileId = getDefaultProfileId();

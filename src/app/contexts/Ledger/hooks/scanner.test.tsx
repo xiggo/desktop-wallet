@@ -3,10 +3,9 @@ import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
+import { useLedgerScanner } from "./scanner";
 import { LedgerProvider, useLedgerContext } from "@/app/contexts/Ledger";
 import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { useLedgerScanner } from "./scanner";
 
 const transport = getDefaultLedgerTransport();
 

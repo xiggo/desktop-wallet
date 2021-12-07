@@ -3,12 +3,11 @@ import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
+import { PendingTransaction } from "./PendingTransactionsTable.contracts";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { PendingTransactions } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable";
 import * as utils from "@/utils/electron-utils";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { PendingTransaction } from "./PendingTransactionsTable.contracts";
 
 const translations = buildTranslations();
 

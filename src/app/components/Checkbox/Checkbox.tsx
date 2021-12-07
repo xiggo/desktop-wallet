@@ -1,9 +1,8 @@
 import React from "react";
 import { styled } from "twin.macro";
 
-import { Color } from "@/types";
-
 import { getStyles } from "./Checkbox.styles";
+import { Color } from "@/types";
 
 type CheckboxProperties = {
 	color?: Color;

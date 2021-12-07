@@ -6,6 +6,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { Transactions } from "./Transactions";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import {
 	env,
@@ -18,8 +19,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-import { Transactions } from "./Transactions";
 
 const history = createMemoryHistory();
 let profile: Contracts.IProfile;

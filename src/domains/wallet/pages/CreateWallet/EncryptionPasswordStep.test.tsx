@@ -6,9 +6,8 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
-
 import { CreateWallet } from "./CreateWallet";
+import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let bip39GenerateMock: any;

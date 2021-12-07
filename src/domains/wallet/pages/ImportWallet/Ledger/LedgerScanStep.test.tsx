@@ -5,10 +5,9 @@ import nock from "nock";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
+import { LedgerScanStep } from "./LedgerScanStep";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { LedgerScanStep } from "./LedgerScanStep";
 
 describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;

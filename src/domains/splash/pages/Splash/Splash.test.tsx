@@ -1,11 +1,10 @@
 import { DateTime } from "@payvo/sdk-intl";
 import React from "react";
 
+import { Splash } from "./Splash";
 import { translations } from "@/domains/splash/i18n";
 import * as utils from "@/utils/electron-utils";
 import { render, screen } from "@/utils/testing-library";
-
-import { Splash } from "./Splash";
 
 describe("Splash", () => {
 	it.each(["light", "dark"])("should  render  %s theme", (theme) => {

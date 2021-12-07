@@ -7,6 +7,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { Dashboard } from "./Dashboard";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as dashboardTranslations } from "@/domains/dashboard/i18n";
@@ -24,8 +25,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-import { Dashboard } from "./Dashboard";
 
 const history = createMemoryHistory();
 let profile: Contracts.IProfile;

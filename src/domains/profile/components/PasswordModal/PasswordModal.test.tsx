@@ -2,9 +2,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen, waitFor } from "@/utils/testing-library";
-
 import { PasswordModal } from "./PasswordModal";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("PasswordModal", () => {
 	beforeEach(() => {

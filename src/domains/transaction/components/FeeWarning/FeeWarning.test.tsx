@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { FeeWarning, FeeWarningVariant } from "./FeeWarning";
 import { translations } from "@/domains/transaction/i18n";
 import { renderWithForm, screen } from "@/utils/testing-library";
-
-import { FeeWarning, FeeWarningVariant } from "./FeeWarning";
 
 describe("FeeWarning", () => {
 	it("should not render if not open", () => {

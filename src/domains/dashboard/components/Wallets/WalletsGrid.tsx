@@ -1,9 +1,8 @@
 import React, { memo } from "react";
 
+import { WalletGridProperties } from "./Wallets.contracts";
 import { Slider } from "@/app/components/Slider";
 import { WalletCard } from "@/app/components/WalletCard";
-
-import { WalletGridProperties } from "./Wallets.contracts";
 
 export const WalletsGrid = memo(
 	({ actions, onWalletAction, isVisible, isLoading, wallets, sliderOptions }: WalletGridProperties) => {

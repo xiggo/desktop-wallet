@@ -1,6 +1,6 @@
+import { AssertionError } from "assert";
 import { Coins, Networks } from "@payvo/sdk";
 import { Contracts, DTO, Profile, ReadOnlyWallet, Wallet } from "@payvo/sdk-profiles";
-import { AssertionError } from "assert";
 import { PluginController } from "plugins";
 
 import { IPluginController } from "@/plugins/core";

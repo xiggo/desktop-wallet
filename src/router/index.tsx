@@ -1,3 +1,4 @@
+import { Middleware } from "./interfaces";
 import { ContactRoutes } from "@/domains/contact/routing";
 import { DashboardRoutes } from "@/domains/dashboard/routing";
 import { ExchangeRoutes } from "@/domains/exchange/routing";
@@ -9,8 +10,6 @@ import { TransactionRoutes } from "@/domains/transaction/routing";
 import { VoteRoutes } from "@/domains/vote/routing";
 import { WalletMiddleware } from "@/domains/wallet/middleware";
 import { WalletRoutes } from "@/domains/wallet/routing";
-
-import { Middleware } from "./interfaces";
 
 export * from "./RouterView";
 

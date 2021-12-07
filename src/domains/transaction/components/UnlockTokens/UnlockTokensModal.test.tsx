@@ -8,13 +8,12 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { UnlockTokensModal } from "./UnlockTokensModal";
 import { LedgerProvider } from "@/app/contexts";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { buildTranslations } from "@/app/i18n/helpers";
 import transactionFixture from "@/tests/fixtures/coins/lsk/testnet/transactions/unlock-token.json";
 import { env, getDefaultLedgerTransport, render, screen, waitFor, within } from "@/utils/testing-library";
-
-import { UnlockTokensModal } from "./UnlockTokensModal";
 
 const translations = buildTranslations();
 const transport = getDefaultLedgerTransport() as any;

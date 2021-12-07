@@ -4,6 +4,10 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
+import { FormStep } from "./FormStep";
+import { useMessageSigner } from "./hooks/use-message-signer";
+import { LedgerConfirmationStep } from "./LedgerConfirmationStep";
+import { SignedStep } from "./SignedStep";
 import { OriginalButton as Button } from "@/app/components/Button/OriginalButton";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Form } from "@/app/components/Form";
@@ -14,11 +18,6 @@ import { useLedgerContext } from "@/app/contexts";
 import { toasts } from "@/app/services";
 import { isNoDeviceError, isRejectionError } from "@/domains/transaction/utils";
 import { LedgerWaitingApp, LedgerWaitingDevice } from "@/domains/wallet/components/Ledger";
-
-import { FormStep } from "./FormStep";
-import { useMessageSigner } from "./hooks/use-message-signer";
-import { LedgerConfirmationStep } from "./LedgerConfirmationStep";
-import { SignedStep } from "./SignedStep";
 
 interface SignMessageProperties {
 	profile: ProfileContracts.IProfile;

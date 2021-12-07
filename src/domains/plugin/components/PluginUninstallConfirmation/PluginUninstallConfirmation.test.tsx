@@ -4,10 +4,9 @@ import { ipcRenderer } from "electron";
 import { PluginController, PluginManager } from "plugins";
 import React from "react";
 
+import { PluginUninstallConfirmation } from "./PluginUninstallConfirmation";
 import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { PluginUninstallConfirmation } from "./PluginUninstallConfirmation";
 
 describe("Plugin Uninstall Confirmation", () => {
 	let profile: Contracts.IProfile;

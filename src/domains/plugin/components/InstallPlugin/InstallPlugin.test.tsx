@@ -4,15 +4,14 @@ import { ipcRenderer } from "electron";
 import { PluginManager } from "plugins";
 import React from "react";
 
-import { toasts } from "@/app/services";
-import { translations as pluginTranslations } from "@/domains/plugin/i18n";
-import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
-import { env, getDefaultProfileId, pluginManager, render, screen, waitFor } from "@/utils/testing-library";
-
 import { InstallPlugin } from "./InstallPlugin";
 import { FirstStep } from "./Step1";
 import { SecondStep } from "./Step2";
 import { ThirdStep } from "./Step3";
+import { toasts } from "@/app/services";
+import { translations as pluginTranslations } from "@/domains/plugin/i18n";
+import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
+import { env, getDefaultProfileId, pluginManager, render, screen, waitFor } from "@/utils/testing-library";
 
 describe("InstallPlugin", () => {
 	let profile: Contracts.IProfile;

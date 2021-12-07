@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { LedgerWaitingApp } from "./LedgerWaitingApp";
+import { render, screen } from "@/utils/testing-library";
 
 describe("LedgerWaitingApp", () => {
 	it("should call the onClose callback if given", () => {

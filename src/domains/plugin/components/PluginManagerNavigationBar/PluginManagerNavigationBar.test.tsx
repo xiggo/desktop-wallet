@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { PluginManagerNavigationBar } from "./PluginManagerNavigationBar";
 import { translations as pluginTranslations } from "@/domains/plugin/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { PluginManagerNavigationBar } from "./PluginManagerNavigationBar";
 
 let menu: any[];
 

@@ -12,6 +12,7 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
+import { SendVote } from "./SendVote";
 import { LedgerProvider } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import { VoteDelegateProperties } from "@/domains/vote/components/DelegateTable/DelegateTable.contracts";
@@ -33,8 +34,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-import { SendVote } from "./SendVote";
 
 const fixtureProfileId = getDefaultProfileId();
 

@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { PercentageBar } from "./PercentageBar";
+import { render } from "@/utils/testing-library";
 
 const data = [
 	{

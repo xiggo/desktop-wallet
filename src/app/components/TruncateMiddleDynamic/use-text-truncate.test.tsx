@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 
-import { act, render, screen } from "@/utils/testing-library";
-
 import { useTextTruncate } from "./use-text-truncate";
+import { act, render, screen } from "@/utils/testing-library";
 
 let referenceElement: any;
 

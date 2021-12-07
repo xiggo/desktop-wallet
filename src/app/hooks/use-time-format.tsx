@@ -1,9 +1,8 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { useHistory } from "react-router-dom";
 
-import { useEnvironmentContext } from "@/app/contexts";
-
 import { useProfileUtils } from "./use-profile-utils";
+import { useEnvironmentContext } from "@/app/contexts";
 
 export const useTimeFormat = () => {
 	const { env } = useEnvironmentContext();

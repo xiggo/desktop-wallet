@@ -2,10 +2,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { SearchBar } from "./SearchBar";
 import { translations } from "@/app/i18n/common/i18n";
 import { render, screen, waitFor } from "@/utils/testing-library";
-
-import { SearchBar } from "./SearchBar";
 
 describe("SearchBar", () => {
 	it("should render", () => {

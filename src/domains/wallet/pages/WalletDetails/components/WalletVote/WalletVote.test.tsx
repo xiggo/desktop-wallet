@@ -4,9 +4,8 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
-
 import { WalletVote } from "./WalletVote";
+import { env, getDefaultProfileId, render, screen, syncDelegates, waitFor } from "@/utils/testing-library";
 
 let wallet: Contracts.IReadWriteWallet;
 let profile: Contracts.IProfile;

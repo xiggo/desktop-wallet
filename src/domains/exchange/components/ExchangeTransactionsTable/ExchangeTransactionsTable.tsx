@@ -3,11 +3,10 @@ import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column, TableState } from "react-table";
 
-import { EmptyBlock } from "@/app/components/EmptyBlock";
-import { Table } from "@/app/components/Table";
-
 import { ExchangeTransactionsRow } from "./ExchangeTransactionsRow";
 import { ExchangeTransactionsTableProperties } from "./ExchangeTransactionsTable.contracts";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { Table } from "@/app/components/Table";
 
 export const ExchangeTransactionsTable: FC<ExchangeTransactionsTableProperties> = ({
 	exchangeTransactions,

@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { renderHook } from "@testing-library/react-hooks";
 
+import { useQRCode } from "./hooks";
 import * as utils from "@/utils/electron-utils";
 import { waitFor } from "@/utils/testing-library";
-
-import { useQRCode } from "./hooks";
 
 describe("useQRCode hook", () => {
 	let darkModeSpy: jest.SpyInstance;

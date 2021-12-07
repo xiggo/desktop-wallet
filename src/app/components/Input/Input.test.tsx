@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { Input } from "./Input";
+import { render, screen } from "@/utils/testing-library";
 
 describe("Input", () => {
 	it.each([true, false])("should render when isCompact = %s", (isCompact: boolean) => {

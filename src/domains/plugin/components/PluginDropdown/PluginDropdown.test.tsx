@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { PluginDropdown } from "./PluginDropdown";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { PluginDropdown } from "./PluginDropdown";
 
 describe("PluginDropdown", () => {
 	it("should execute onUpdate callback", () => {

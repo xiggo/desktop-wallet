@@ -2,10 +2,9 @@ import Tippy, { TippyProps } from "@tippyjs/react";
 import cn from "classnames";
 import React from "react";
 
+import { getStyles } from "./Tooltip.styles";
 import { useTheme } from "@/app/hooks";
 import { Size } from "@/types";
-
-import { getStyles } from "./Tooltip.styles";
 
 export type TooltipProperties = {
 	size?: Size;

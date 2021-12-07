@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen, waitFor } from "@/utils/testing-library";
-
 import { PaginationSearch } from "./PaginationSearch";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("PaginationSearch", () => {
 	it("should render", async () => {

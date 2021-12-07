@@ -1,6 +1,6 @@
+import querystring from "querystring";
 import { URI } from "@payvo/sdk-helpers";
 import { ipcRenderer } from "electron";
-import querystring from "querystring";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { matchPath, useHistory } from "react-router-dom";

@@ -3,11 +3,11 @@ import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
+import { NotificationTransactionItem } from "./NotificationTransactionItem";
 import { httpClient } from "@/app/services";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
-import { NotificationTransactionItem } from "./NotificationTransactionItem";
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
 const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");
 

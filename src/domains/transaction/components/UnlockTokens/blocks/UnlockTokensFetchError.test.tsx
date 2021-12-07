@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { UnlockTokensFetchError } from "./UnlockTokensFetchError";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { render, screen } from "@/utils/testing-library";
-
-import { UnlockTokensFetchError } from "./UnlockTokensFetchError";
 
 const translations = buildTranslations();
 

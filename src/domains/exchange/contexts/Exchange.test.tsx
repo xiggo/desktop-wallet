@@ -2,11 +2,10 @@ import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
 
+import { useExchangeContext } from "./Exchange";
 import { httpClient } from "@/app/services";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { render, screen, waitFor } from "@/utils/testing-library";
-
-import { useExchangeContext } from "./Exchange";
 
 describe("Exchange Context", () => {
 	afterEach(() => httpClient.clearCache());

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
+import { SendVoteStepProperties } from "./SendVote.contracts";
 import { Header } from "@/app/components/Header";
 import { TotalAmountBox } from "@/domains/transaction/components/TotalAmountBox";
 import {
@@ -10,8 +11,6 @@ import {
 	TransactionSender,
 } from "@/domains/transaction/components/TransactionDetail";
 import { VoteList } from "@/domains/vote/components/VoteList";
-
-import { SendVoteStepProperties } from "./SendVote.contracts";
 
 export const ReviewStep = ({ unvotes, votes, wallet }: SendVoteStepProperties) => {
 	const { t } = useTranslation();

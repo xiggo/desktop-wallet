@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { TransactionAmount } from "./TransactionAmount";
 import { translations } from "@/domains/transaction/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { TransactionAmount } from "./TransactionAmount";
 
 describe("TransactionAmount", () => {
 	it("should render", () => {

@@ -2,10 +2,10 @@
 /* eslint-disable max-lines */
 /* eslint-disable import/no-relative-parent-imports */
 
+import path from "path";
 import { Before, Given, IWorld, Then, When } from "@cucumber/cucumber";
 import { TestStepFunction } from "@cucumber/cucumber/lib/support_code_library_builder/types";
 import delve from "dlv";
-import path from "path";
 import { ClientFunction, RequestMock } from "testcafe";
 
 import { buildTranslations } from "../app/i18n/helpers";

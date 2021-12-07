@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { PluginManagerControls } from "./PluginManagerControls";
+import { render, screen } from "@/utils/testing-library";
 
 describe("PluginManagerControls", () => {
 	it("should render", () => {

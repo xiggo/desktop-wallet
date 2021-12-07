@@ -5,6 +5,9 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { LedgerTabs } from "./Ledger/LedgerTabs";
+import { MethodStep } from "./MethodStep";
+import { SuccessStep } from "./SuccessStep";
 import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
@@ -24,10 +27,6 @@ import { useWalletImport, WalletGenerationInput } from "@/domains/wallet/hooks/u
 import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
 import { getDefaultAlias } from "@/domains/wallet/utils/get-default-alias";
 import { assertString, assertWallet } from "@/utils/assertions";
-
-import { LedgerTabs } from "./Ledger/LedgerTabs";
-import { MethodStep } from "./MethodStep";
-import { SuccessStep } from "./SuccessStep";
 
 enum Step {
 	NetworkStep = 1,

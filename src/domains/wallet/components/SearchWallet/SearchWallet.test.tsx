@@ -6,10 +6,9 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { SearchWallet } from "./SearchWallet";
 import { translations } from "@/domains/wallet/i18n";
 import { act, env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
-
-import { SearchWallet } from "./SearchWallet";
 
 const history = createMemoryHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;

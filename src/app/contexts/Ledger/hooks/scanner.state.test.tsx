@@ -1,9 +1,8 @@
 import { act, renderHook } from "@testing-library/react-hooks";
 import { useReducer } from "react";
 
-import { waitFor } from "@/utils/testing-library";
-
 import { scannerReducer } from "./scanner.state";
+import { waitFor } from "@/utils/testing-library";
 
 describe("Scanner State", () => {
 	it("should dispatch toggleSelect with selected", async () => {

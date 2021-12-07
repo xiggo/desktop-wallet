@@ -2,14 +2,13 @@ import { Contracts } from "@payvo/sdk-profiles";
 import React, { FC, useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { EmptyResults } from "@/app/components/EmptyResults";
-import { Pagination } from "@/app/components/Pagination";
-import { Table } from "@/app/components/Table";
-
 import { DelegateFooter } from "./DelegateFooter";
 import { DelegateRow } from "./DelegateRow";
 import { DelegateTableProperties, VoteDelegateProperties } from "./DelegateTable.contracts";
 import { delegateExistsInVotes, useDelegateTableColumns } from "./DelegateTable.helpers";
+import { Table } from "@/app/components/Table";
+import { Pagination } from "@/app/components/Pagination";
+import { EmptyResults } from "@/app/components/EmptyResults";
 
 const DELEGATES_PER_PAGE = 50;
 

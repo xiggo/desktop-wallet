@@ -1,9 +1,8 @@
 import * as Sentry from "@sentry/react";
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { SentryProvider, useSentryContext } from "./SentryProvider";
+import { render, screen } from "@/utils/testing-library";
 
 describe("SentryProvider", () => {
 	afterEach(() => {

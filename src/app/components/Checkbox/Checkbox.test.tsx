@@ -1,9 +1,8 @@
 import React from "react";
 
+import { Checkbox } from "./Checkbox";
 import { Color } from "@/types";
 import { render } from "@/utils/testing-library";
-
-import { Checkbox } from "./Checkbox";
 
 describe("Checkbox", () => {
 	beforeAll(() => {

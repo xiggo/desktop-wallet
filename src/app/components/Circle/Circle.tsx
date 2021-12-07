@@ -2,9 +2,8 @@ import cn from "classnames";
 import React, { forwardRef } from "react";
 import { styled } from "twin.macro";
 
-import { Size } from "@/types";
-
 import { getStyles } from "./Circle.styles";
+import { Size } from "@/types";
 
 export type CircleProperties = {
 	as?: React.ElementType;

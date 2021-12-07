@@ -3,10 +3,9 @@ import { act as hookAct, renderHook } from "@testing-library/react-hooks";
 import nock from "nock";
 import React from "react";
 
+import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { act, env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } from "@/utils/testing-library";
-
-import { useProfileTransactions } from "./use-profile-transactions";
 
 describe("useProfileTransactions", () => {
 	beforeAll(async () => {

@@ -3,9 +3,8 @@ import { Networks } from "@payvo/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, getDefaultProfileId, getDefaultWalletId, renderWithForm, screen, waitFor } from "@/utils/testing-library";
-
 import { ReceiveFundsForm } from "./ReceiveFundsForm";
+import { env, getDefaultProfileId, getDefaultWalletId, renderWithForm, screen, waitFor } from "@/utils/testing-library";
 
 let network: Networks.Network;
 

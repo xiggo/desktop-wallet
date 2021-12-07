@@ -2,6 +2,8 @@ import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { getMultiSignatureInfo } from "./MultiSignatureDetail.helpers";
+import { Signatures } from "./Signatures";
 import { Circle } from "@/app/components/Circle";
 import { Clipboard } from "@/app/components/Clipboard";
 import { Header } from "@/app/components/Header";
@@ -19,9 +21,6 @@ import {
 } from "@/domains/transaction/components/TransactionDetail";
 import { useMultiSignatureStatus } from "@/domains/transaction/hooks";
 import { useTransactionTypes } from "@/domains/transaction/hooks/use-transaction-types";
-
-import { getMultiSignatureInfo } from "./MultiSignatureDetail.helpers";
-import { Signatures } from "./Signatures";
 
 export const SummaryStep = ({
 	wallet,

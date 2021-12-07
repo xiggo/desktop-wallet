@@ -1,8 +1,7 @@
 import { styled } from "twin.macro";
 
-import { Size } from "@/types";
-
 import { ColorType, getStyles } from "./Label.styles";
+import { Size } from "@/types";
 
 export interface LabelProperties {
 	color?: ColorType;

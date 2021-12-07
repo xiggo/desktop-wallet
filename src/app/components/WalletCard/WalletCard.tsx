@@ -4,6 +4,7 @@ import React, { useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { WalletCardSkeleton } from "./WalletCardSkeleton";
 import { Amount } from "@/app/components/Amount";
 import { Avatar } from "@/app/components/Avatar";
 import { Card } from "@/app/components/Card";
@@ -17,8 +18,6 @@ import { useActiveProfile, useWalletAlias } from "@/app/hooks";
 import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";
 import { isElementTruncated } from "@/utils/is-element-truncated";
-
-import { WalletCardSkeleton } from "./WalletCardSkeleton";
 
 interface WalletCardProperties {
 	actions?: DropdownOption[];

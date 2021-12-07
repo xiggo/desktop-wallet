@@ -1,6 +1,5 @@
-import { LedgerModel } from "@/app/hooks";
-
 import { Handlers, OfUnion } from "./reducer.contracts";
+import { LedgerModel } from "@/app/hooks";
 
 interface State {
 	device?: {

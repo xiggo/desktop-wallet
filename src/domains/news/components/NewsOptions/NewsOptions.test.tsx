@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { NewsOptions } from "./NewsOptions";
 import { AvailableNewsCategories } from "@/domains/news/news.contracts";
 import { render, screen, waitFor } from "@/utils/testing-library";
-
-import { NewsOptions } from "./NewsOptions";
 
 const categories: AvailableNewsCategories[] = ["Technical"];
 const coins = ["ark"];

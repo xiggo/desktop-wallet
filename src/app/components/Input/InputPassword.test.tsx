@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { InputPassword } from "./InputPassword";
 import { FormFieldProvider } from "@/app/components/Form/useFormField";
 import { render, screen } from "@/utils/testing-library";
-
-import { InputPassword } from "./InputPassword";
 
 describe("InputPassword", () => {
 	it("should render as a password field", () => {

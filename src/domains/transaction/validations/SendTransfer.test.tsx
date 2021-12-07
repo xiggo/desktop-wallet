@@ -2,9 +2,8 @@
 import { BigNumber } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
 
-import { env, getDefaultProfileId } from "@/utils/testing-library";
-
 import { sendTransfer } from "./SendTransfer";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let translationMock: any;

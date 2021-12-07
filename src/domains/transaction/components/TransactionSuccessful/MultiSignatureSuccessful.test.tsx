@@ -2,10 +2,9 @@ import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 import { TransactionFixture } from "@/tests/fixtures/transactions";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { MultiSignatureSuccessful } from "./MultiSignatureSuccessful";
 
 describe("MultiSignatureSuccessful", () => {
 	let profile: Contracts.IProfile;

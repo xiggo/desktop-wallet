@@ -3,10 +3,9 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { MemoryRouter, Router, withRouter } from "react-router-dom";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { Middleware, MiddlewareParameters } from "./interfaces";
 import { RouterView } from "./RouterView";
+import { render, screen } from "@/utils/testing-library";
 
 describe("RouterView", () => {
 	const LocationDisplay = withRouter(({ location }) => (

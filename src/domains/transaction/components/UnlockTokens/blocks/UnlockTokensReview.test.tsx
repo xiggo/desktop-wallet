@@ -5,11 +5,10 @@ import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
+import { UnlockTokensReview } from "./UnlockTokensReview";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { UnlockTokensFormState } from "@/domains/transaction/components/UnlockTokens/UnlockTokens.contracts";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
-import { UnlockTokensReview } from "./UnlockTokensReview";
 
 const translations = buildTranslations();
 

@@ -1,9 +1,8 @@
 import React from "react";
 
+import { TransactionMemo } from "./TransactionMemo";
 import { translations } from "@/domains/transaction/i18n";
 import { render } from "@/utils/testing-library";
-
-import { TransactionMemo } from "./TransactionMemo";
 
 describe("TransactionMemo", () => {
 	it("should render", () => {

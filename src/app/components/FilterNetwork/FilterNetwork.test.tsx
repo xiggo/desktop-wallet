@@ -2,12 +2,11 @@ import { Networks } from "@payvo/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, render, screen, waitFor, within } from "@/utils/testing-library";
-
 import { FilterNetwork, FilterNetworks } from "./FilterNetwork";
 import { FilterOption } from "./FilterNetwork.contracts";
 import { NetworkOptions } from "./NetworkOptions";
 import { ToggleAllOption } from "./ToggleAllOption";
+import { env, render, screen, waitFor, within } from "@/utils/testing-library";
 
 let networkOptions: FilterOption[];
 

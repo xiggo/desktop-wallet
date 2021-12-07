@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { SelectCategory } from "./SelectCategory";
+import { render } from "@/utils/testing-library";
 
 describe("SelectCategory", () => {
 	it("should render", () => {

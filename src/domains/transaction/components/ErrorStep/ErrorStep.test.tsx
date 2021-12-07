@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen, waitFor } from "@/utils/testing-library";
-
 import { ErrorStep } from "./ErrorStep";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("ErrorStep", () => {
 	it("should render with default texts", () => {

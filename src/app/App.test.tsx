@@ -5,6 +5,7 @@ import { Contracts, Environment } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { App, initializeEnvironment } from "./App";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import { translations as errorTranslations } from "@/domains/error/i18n";
@@ -21,8 +22,6 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { App, initializeEnvironment } from "./App";
 
 let profile: Contracts.IProfile;
 let passwordProtectedProfile: Contracts.IProfile;

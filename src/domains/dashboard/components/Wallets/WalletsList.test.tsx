@@ -3,11 +3,10 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { translations } from "@/domains/dashboard/i18n";
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
 import { WrappedWallet } from "./Wallets.contracts";
 import { WalletsList } from "./WalletsList";
+import { translations } from "@/domains/dashboard/i18n";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createMemoryHistory();

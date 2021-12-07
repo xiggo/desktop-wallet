@@ -1,10 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { ClipboardIconProperties } from "./Clipboard.contracts";
 import { Tooltip } from "@/app/components/Tooltip";
 import { useClipboard } from "@/app/hooks";
-
-import { ClipboardIconProperties } from "./Clipboard.contracts";
 
 export const ClipboardIcon = ({ data, tooltip, tooltipDarkTheme, options, children }: ClipboardIconProperties) => {
 	const { t } = useTranslation();

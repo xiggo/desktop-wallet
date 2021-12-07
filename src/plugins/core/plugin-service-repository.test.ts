@@ -1,7 +1,6 @@
+import { PluginServiceRepository } from "./plugin-service-repository";
 import { EventsPluginService } from "@/plugins/services";
 import { PluginServiceIdentifier } from "@/plugins/types";
-
-import { PluginServiceRepository } from "./plugin-service-repository";
 
 describe("Plugin Service Repository", () => {
 	it("should return all", () => {

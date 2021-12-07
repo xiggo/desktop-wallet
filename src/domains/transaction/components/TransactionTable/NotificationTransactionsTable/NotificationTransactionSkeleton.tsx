@@ -1,10 +1,9 @@
 import React, { VFC } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Table } from "@/app/components/Table";
-
 import { NotificationTransactionSkeletonRow } from "./NotificationTransactionSkeletonRow";
 import { NotificationTransactionsSkeletonProperties } from "./NotificationTransactionsTable.contracts";
+import { Table } from "@/app/components/Table";
 
 export const NotificationTransactionsSkeleton: VFC<NotificationTransactionsSkeletonProperties> = ({
 	limit = 10,

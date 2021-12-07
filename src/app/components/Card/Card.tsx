@@ -1,10 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import React from "react";
 
+import { CardButton } from "./Card.styles";
 import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
 import { Icon } from "@/app/components/Icon";
-
-import { CardButton } from "./Card.styles";
 
 interface CardProperties {
 	as?: React.ElementType;

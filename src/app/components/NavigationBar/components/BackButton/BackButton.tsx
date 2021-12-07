@@ -2,9 +2,8 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { styled } from "twin.macro";
 
-import { Icon } from "@/app/components/Icon";
-
 import { getStyles } from "./BackButton.styles";
+import { Icon } from "@/app/components/Icon";
 
 interface BackButtonProperties {
 	backToUrl?: string;

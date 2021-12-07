@@ -9,6 +9,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { SendRegistration } from "./SendRegistration";
 import { LedgerProvider, minVersionList } from "@/app/contexts";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
 import DelegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
@@ -29,8 +30,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-import { SendRegistration } from "./SendRegistration";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

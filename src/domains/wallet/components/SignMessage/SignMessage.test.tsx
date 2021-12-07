@@ -5,6 +5,8 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { SignedStep } from "./SignedStep";
+import { SignMessage } from "./SignMessage";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { toasts } from "@/app/services";
 import { translations as transactionTranslations } from "@/domains/transaction/i18n";
@@ -20,9 +22,6 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { SignedStep } from "./SignedStep";
-import { SignMessage } from "./SignMessage";
 
 const history = createMemoryHistory();
 let walletUrl: string;

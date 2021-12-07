@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import { EventEmitter } from "events";
+import { Contracts } from "@payvo/sdk-profiles";
 
 import { HandlerFunction, IPluginHooks } from "./plugin-hooks.contracts";
 

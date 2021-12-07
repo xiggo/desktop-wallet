@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { FilePreview } from "./FilePreview";
+import { render } from "@/utils/testing-library";
 
 describe("FilePreview", () => {
 	const file = { content: "dfdf", extension: ".dwe", name: "filename" };

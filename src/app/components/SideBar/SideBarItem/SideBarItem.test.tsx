@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { SideBarItem } from "./SideBarItem";
+import { render, screen } from "@/utils/testing-library";
 
 const item = {
 	icon: "Plugin",

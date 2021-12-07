@@ -2,11 +2,10 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
+import { usePluginUpdateQueue } from "./use-plugin-update-queue";
 import { EnvironmentProvider } from "@/app/contexts";
 import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
 import { env, getDefaultProfileId, pluginManager } from "@/utils/testing-library";
-
-import { usePluginUpdateQueue } from "./use-plugin-update-queue";
 
 describe("Plugin Update Queue", () => {
 	let profile: Contracts.IProfile;

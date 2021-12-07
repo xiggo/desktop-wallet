@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { PasswordRemovalConfirmModal } from "./PasswordRemovalConfirmModal";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { render, screen, waitFor } from "@/utils/testing-library";
-
-import { PasswordRemovalConfirmModal } from "./PasswordRemovalConfirmModal";
 
 const translations = buildTranslations();
 

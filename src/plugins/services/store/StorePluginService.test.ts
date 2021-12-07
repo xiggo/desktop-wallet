@@ -1,10 +1,9 @@
 import { Contracts } from "@payvo/sdk-profiles";
 
+import { StorePluginService } from "./StorePluginService";
 import { IPluginController, PluginController, PluginManager } from "@/plugins/core";
 import { PluginAPI } from "@/plugins/types";
 import { env } from "@/utils/testing-library";
-
-import { StorePluginService } from "./StorePluginService";
 
 const config = { "desktop-wallet": { permissions: ["STORE"] }, name: "test", version: "1.1" };
 

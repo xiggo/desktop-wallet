@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable unicorn/prefer-module */
+const path = require("path");
 const { Menu, shell } = require("electron");
 const aboutWindow = require("about-window").default;
-const path = require("path");
 const packageJson = require("../../package.json");
 
 const isProduction = process.env.NODE_ENV === "production";

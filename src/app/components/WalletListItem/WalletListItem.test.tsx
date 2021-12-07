@@ -4,9 +4,8 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
 import { WalletListItem } from "./WalletListItem";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createMemoryHistory();

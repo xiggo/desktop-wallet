@@ -2,9 +2,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { LedgerDeviceError } from "./LedgerDeviceError";
+import { render, screen } from "@/utils/testing-library";
 
 describe("LedgerDeviceError", () => {
 	it("should call the onClose callback if given", () => {

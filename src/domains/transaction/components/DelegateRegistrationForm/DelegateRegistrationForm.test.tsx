@@ -6,6 +6,7 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 import { Route } from "react-router-dom";
 
+import { DelegateRegistrationForm, signDelegateRegistration } from "./DelegateRegistrationForm";
 import * as useFeesHook from "@/app/hooks/use-fees";
 import { translations } from "@/domains/transaction/i18n";
 import delegateRegistrationFixture from "@/tests/fixtures/coins/ark/devnet/transactions/delegate-registration.json";
@@ -19,8 +20,6 @@ import {
 	syncDelegates,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { DelegateRegistrationForm, signDelegateRegistration } from "./DelegateRegistrationForm";
 
 let profile: ProfilesContracts.IProfile;
 let wallet: ProfilesContracts.IReadWriteWallet;

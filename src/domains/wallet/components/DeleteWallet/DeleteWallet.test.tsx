@@ -1,9 +1,8 @@
 import React from "react";
 
+import { DeleteWallet } from "./DeleteWallet";
 import { translations } from "@/domains/wallet/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { DeleteWallet } from "./DeleteWallet";
 
 const onDelete = jest.fn();
 

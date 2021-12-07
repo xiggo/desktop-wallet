@@ -4,6 +4,10 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
+import { FormStep } from "./FormStep";
+import { VoteLedgerReview } from "./LedgerReview";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepIndicator } from "@/app/components/StepIndicator";
@@ -20,11 +24,6 @@ import { handleBroadcastError } from "@/domains/transaction/utils";
 import { useVoteQueryParameters } from "@/domains/vote/hooks/use-vote-query-parameters";
 import { appendParameters } from "@/domains/vote/utils/url-parameters";
 import { assertProfile, assertWallet } from "@/utils/assertions";
-
-import { FormStep } from "./FormStep";
-import { VoteLedgerReview } from "./LedgerReview";
-import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
 
 enum Step {
 	FormStep = 1,

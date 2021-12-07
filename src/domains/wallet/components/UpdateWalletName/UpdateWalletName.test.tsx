@@ -3,11 +3,10 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { UpdateWalletName } from "./UpdateWalletName";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations } from "@/domains/wallet/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { UpdateWalletName } from "./UpdateWalletName";
 
 describe("UpdateWalletName", () => {
 	let profile: Contracts.IProfile;

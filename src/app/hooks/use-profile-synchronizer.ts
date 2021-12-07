@@ -3,18 +3,17 @@ import { Contracts, Environment } from "@payvo/sdk-profiles";
 import { useEffect, useMemo, useRef } from "react";
 import { matchPath, useHistory, useLocation } from "react-router-dom";
 
-import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
-import { useAccentColor } from "@/app/hooks/use-accent-color";
-import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
-import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
-import { isIdle } from "@/utils/electron-utils";
-
 import { usePrevious } from "./use-previous";
 import { useProfileUtils } from "./use-profile-utils";
 import { useScreenshotProtection } from "./use-screenshot-protection";
 import { useSynchronizer } from "./use-synchronizer";
 import { useTheme } from "./use-theme";
 import { useUpdater } from "./use-updater";
+import { isIdle } from "@/utils/electron-utils";
+import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
+import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
+import { useAccentColor } from "@/app/hooks/use-accent-color";
+import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 
 enum Intervals {
 	VeryShort = 15_000,

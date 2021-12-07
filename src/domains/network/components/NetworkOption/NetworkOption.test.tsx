@@ -2,9 +2,8 @@ import { Networks } from "@payvo/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, getDefaultProfileId, MNEMONICS, render, screen } from "@/utils/testing-library";
-
 import { NetworkOption } from "./NetworkOption";
+import { env, getDefaultProfileId, MNEMONICS, render, screen } from "@/utils/testing-library";
 
 let network: Networks.Network;
 let networkTestnet: Networks.Network;

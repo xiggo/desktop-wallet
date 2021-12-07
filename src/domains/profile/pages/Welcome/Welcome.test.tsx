@@ -3,6 +3,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { Welcome } from "./Welcome";
 import { EnvironmentProvider } from "@/app/contexts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { httpClient } from "@/app/services";
@@ -18,8 +19,6 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { Welcome } from "./Welcome";
 
 const fixtureProfileId = getDefaultProfileId();
 const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;

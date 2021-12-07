@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { Icon } from "./Icon";
+import { render, screen } from "@/utils/testing-library";
 
 describe("Icon", () => {
 	it("should render", () => {

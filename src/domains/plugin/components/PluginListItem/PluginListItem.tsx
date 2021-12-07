@@ -2,6 +2,7 @@ import cn from "classnames";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { PluginLaunchButton } from "./PluginListItem.blocks";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { TableCell, TableRow } from "@/app/components/Table";
@@ -10,8 +11,6 @@ import { OfficialPluginIcon } from "@/domains/plugin/components/OfficialPluginIc
 import { PluginDropdown } from "@/domains/plugin/components/PluginDropdown";
 import { PluginImage, PluginImageProgressSize } from "@/domains/plugin/components/PluginImage";
 import { PluginCategories } from "@/domains/plugin/plugin.contracts";
-
-import { PluginLaunchButton } from "./PluginListItem.blocks";
 
 interface PluginListItemProperties {
 	onDelete?: (plugin: any) => void;

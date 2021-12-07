@@ -3,6 +3,7 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { AuthenticationStep } from "./AuthenticationStep";
 import {
 	env,
 	getDefaultProfileId,
@@ -12,8 +13,6 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { AuthenticationStep } from "./AuthenticationStep";
 
 describe("AuthenticationStep", () => {
 	let wallet: Contracts.IReadWriteWallet;

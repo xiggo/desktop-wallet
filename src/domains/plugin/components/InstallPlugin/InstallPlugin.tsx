@@ -5,16 +5,15 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
 
+import { FirstStep } from "./Step1";
+import { SecondStep } from "./Step2";
+import { ThirdStep } from "./Step3";
 import { Button } from "@/app/components/Button";
 import { Modal } from "@/app/components/Modal";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { toasts } from "@/app/services";
 import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
 import { assertString } from "@/utils/assertions";
-
-import { FirstStep } from "./Step1";
-import { SecondStep } from "./Step2";
-import { ThirdStep } from "./Step3";
 
 interface InstallPluginProperties {
 	isOpen: boolean;

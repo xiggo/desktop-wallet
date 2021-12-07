@@ -8,13 +8,12 @@ import { LaunchPluginService, PluginController } from "plugins";
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
 
+import { PluginManager } from "./PluginManager";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
 import { translations } from "@/domains/plugin/i18n";
 import { usePluginManagerContext } from "@/plugins/context/PluginManagerProvider";
 import { env, getDefaultProfileId, pluginManager, render, screen, waitFor, within } from "@/utils/testing-library";
-
-import { PluginManager } from "./PluginManager";
 
 let profile: Contracts.IProfile;
 const history = createMemoryHistory();

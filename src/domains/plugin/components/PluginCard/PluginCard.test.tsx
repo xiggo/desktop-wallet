@@ -1,11 +1,10 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { BlankPluginCard, PluginCard } from "./PluginCard";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations as pluginTranslations } from "@/domains/plugin/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { BlankPluginCard, PluginCard } from "./PluginCard";
 
 const basePlugin = {
 	author: "ARK.io",

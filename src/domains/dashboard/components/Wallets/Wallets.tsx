@@ -4,6 +4,10 @@ import React, { FC, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { useWalletDisplay } from "./hooks";
+import { WalletsProperties } from "./Wallets.contracts";
+import { WalletsGrid } from "./WalletsGrid";
+import { WalletsList } from "./WalletsList";
 import { DropdownOption } from "@/app/components/Dropdown";
 import { Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
@@ -15,11 +19,6 @@ import { DeleteWallet } from "@/domains/wallet/components/DeleteWallet";
 import { LedgerWaitingDevice } from "@/domains/wallet/components/Ledger/LedgerWaitingDevice";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
 import { assertWallet } from "@/utils/assertions";
-
-import { useWalletDisplay } from "./hooks";
-import { WalletsProperties } from "./Wallets.contracts";
-import { WalletsGrid } from "./WalletsGrid";
-import { WalletsList } from "./WalletsList";
 
 type WalletActionType = "delete" | "rename";
 

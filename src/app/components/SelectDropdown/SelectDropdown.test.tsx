@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 
-import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
-
 import { Select } from "./SelectDropdown";
+import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 enum OptionType {
 	base = "base",

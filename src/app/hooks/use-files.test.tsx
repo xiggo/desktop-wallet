@@ -1,6 +1,6 @@
+import os from "os";
 import { act, renderHook } from "@testing-library/react-hooks";
 import electron from "electron";
-import os from "os";
 
 import { useFiles } from "./use-files";
 

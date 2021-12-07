@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen, waitFor } from "@/utils/testing-library";
-
 import { Pagination } from "./Pagination";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 const handleSelectPage = jest.fn();
 

@@ -1,8 +1,7 @@
 import React from "react";
 
-import { env, render, screen } from "@/utils/testing-library";
-
 import { AppearanceForm } from "./AppearanceForm";
+import { env, render, screen } from "@/utils/testing-library";
 
 describe("AppearanceForm", () => {
 	it("should render", () => {

@@ -7,6 +7,7 @@ import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Route, Router } from "react-router-dom";
 
+import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
 import { toasts } from "@/app/services";
 import { translations } from "@/domains/transaction/i18n";
 import secondSignatureFixture from "@/tests/fixtures/coins/ark/devnet/transactions/second-signature-registration.json";
@@ -21,8 +22,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-import { SecondSignatureRegistrationForm, signSecondSignatureRegistration } from "./SecondSignatureRegistrationForm";
 
 const history = createMemoryHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;

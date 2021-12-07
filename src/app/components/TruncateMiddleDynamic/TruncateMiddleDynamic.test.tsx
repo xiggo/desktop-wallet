@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React, { useRef } from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { TruncateMiddleDynamic } from "./TruncateMiddleDynamic";
+import { render, screen } from "@/utils/testing-library";
 
 describe("TruncateMiddleDynamic", () => {
 	it("should render", () => {

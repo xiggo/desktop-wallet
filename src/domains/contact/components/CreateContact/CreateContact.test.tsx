@@ -3,10 +3,9 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { CreateContact } from "./CreateContact";
 import { translations } from "@/domains/contact/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { CreateContact } from "./CreateContact";
 
 const onSave = jest.fn();
 

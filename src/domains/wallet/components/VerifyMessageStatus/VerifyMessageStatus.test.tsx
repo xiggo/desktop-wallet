@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { VerifyMessageStatus } from "./VerifyMessageStatus";
+import { render } from "@/utils/testing-library";
 
 describe("VerifyMessageStatus", () => {
 	it("should render verify message success", () => {

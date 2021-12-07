@@ -3,9 +3,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 import nock from "nock";
 
-import { env, getDefaultProfileId } from "@/utils/testing-library";
-
 import { useActionNameMap } from "./use-action-name-map";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 const NotificationTransactionsFixtures = require("tests/fixtures/coins/ark/devnet/notification-transactions.json");
 const TransactionsFixture = require("tests/fixtures/coins/ark/devnet/transactions.json");

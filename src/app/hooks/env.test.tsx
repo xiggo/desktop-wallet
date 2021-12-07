@@ -6,9 +6,8 @@ import { beforeEach } from "jest-circus";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
 import { useActiveProfile, useActiveWallet, useActiveWalletWhenNeeded, useNetworks } from "./env";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;

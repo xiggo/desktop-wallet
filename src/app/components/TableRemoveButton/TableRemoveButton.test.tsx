@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { TableRemoveButton } from "./TableRemoveButton";
+import { render, screen } from "@/utils/testing-library";
 
 describe("TableRemoveButton", () => {
 	it("should render", () => {

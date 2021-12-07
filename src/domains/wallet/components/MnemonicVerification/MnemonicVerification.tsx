@@ -1,10 +1,9 @@
 import { sample } from "@payvo/sdk-helpers";
 import React, { useEffect, useMemo, useState } from "react";
 
-import { TabPanel, Tabs } from "@/app/components/Tabs";
-
 import { MnemonicVerificationOptions } from "./MnemonicVerificationOptions";
 import { MnemonicVerificationProgress } from "./MnemonicVerificationProgress";
+import { TabPanel, Tabs } from "@/app/components/Tabs";
 
 interface Properties {
 	mnemonic: string;

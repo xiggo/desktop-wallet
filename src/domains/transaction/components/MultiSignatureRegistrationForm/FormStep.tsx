@@ -3,14 +3,13 @@ import React, { ChangeEvent, useCallback, useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 
+import { AddParticipant, Participant } from "./components/AddParticipant/AddParticipant";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
 import { Input } from "@/app/components/Input";
 import { useValidation } from "@/app/hooks";
 import { FeeField } from "@/domains/transaction/components/FeeField";
 import { FormStepProperties } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
-
-import { AddParticipant, Participant } from "./components/AddParticipant/AddParticipant";
 
 const MINIMUM_PARTICIPANTS = 2;
 

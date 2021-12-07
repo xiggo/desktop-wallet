@@ -4,9 +4,8 @@ import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
-import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
 import { NetworkStep } from "./NetworkStep";
+import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 

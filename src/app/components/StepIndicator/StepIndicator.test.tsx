@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { StepIndicator } from "./StepIndicator";
+import { render } from "@/utils/testing-library";
 
 describe("StepIndicator", () => {
 	it("should render", () => {

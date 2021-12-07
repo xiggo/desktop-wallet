@@ -4,6 +4,10 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { ConfirmationStep } from "./ConfirmationStep";
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
+import { StatusStep } from "./StatusStep";
 import { Button } from "@/app/components/Button";
 import { Form } from "@/app/components/Form";
 import { StepIndicator } from "@/app/components/StepIndicator";
@@ -21,11 +25,6 @@ import {
 	isInvalidRefundAddressError,
 } from "@/domains/exchange/utils";
 import { delay } from "@/utils/delay";
-
-import { ConfirmationStep } from "./ConfirmationStep";
-import { FormStep } from "./FormStep";
-import { ReviewStep } from "./ReviewStep";
-import { StatusStep } from "./StatusStep";
 
 enum Step {
 	FormStep = 1,

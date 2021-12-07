@@ -7,6 +7,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { WalletDetails } from "./WalletDetails";
 import { LedgerProvider } from "@/app/contexts";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
@@ -24,8 +25,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-import { WalletDetails } from "./WalletDetails";
 
 const translations = buildTranslations();
 

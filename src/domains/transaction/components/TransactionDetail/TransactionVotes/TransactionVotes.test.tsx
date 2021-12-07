@@ -1,9 +1,8 @@
 import { ReadOnlyWallet } from "@payvo/sdk-profiles";
 import React from "react";
 
-import { render, screen, waitFor } from "@/utils/testing-library";
-
 import { TransactionVotes } from "./TransactionVotes";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 const votes = [
 	// @ts-ignore

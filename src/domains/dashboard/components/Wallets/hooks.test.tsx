@@ -4,10 +4,9 @@ import { renderHook } from "@testing-library/react-hooks";
 import nock from "nock";
 import React from "react";
 
+import { useWalletDisplay } from "./hooks";
 import { EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, MNEMONICS, syncDelegates } from "@/utils/testing-library";
-
-import { useWalletDisplay } from "./hooks";
 
 let profile: Contracts.IProfile;
 let wallets: Contracts.IReadWriteWallet[];

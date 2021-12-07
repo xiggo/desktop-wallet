@@ -1,11 +1,3 @@
-import { error } from "@/domains/error/images";
-import { exchange } from "@/domains/exchange/images";
-import { news } from "@/domains/news/images";
-import { plugin } from "@/domains/plugin/images";
-import { profile } from "@/domains/profile/images";
-import { transaction } from "@/domains/transaction/images";
-import { wallet } from "@/domains/wallet/images";
-
 import { ReactComponent as DeleteBannerDarkBlue } from "./delete-banner-dark-blue.svg";
 import { ReactComponent as DeleteBannerDarkGreen } from "./delete-banner-dark-green.svg";
 import { ReactComponent as DeleteBannerLightBlue } from "./delete-banner-light-blue.svg";
@@ -40,6 +32,13 @@ import { ReactComponent as WelcomeBannerDarkGreen } from "./welcome-banner-dark-
 import { ReactComponent as WelcomeBannerLightBlue } from "./welcome-banner-light-blue.svg";
 import { ReactComponent as WelcomeBannerLightGreen } from "./welcome-banner-light-green.svg";
 import { ReactComponent as WorldMap } from "./world-map.svg";
+import { wallet } from "@/domains/wallet/images";
+import { transaction } from "@/domains/transaction/images";
+import { profile } from "@/domains/profile/images";
+import { plugin } from "@/domains/plugin/images";
+import { news } from "@/domains/news/images";
+import { exchange } from "@/domains/exchange/images";
+import { error } from "@/domains/error/images";
 
 export const images = {
 	common: {

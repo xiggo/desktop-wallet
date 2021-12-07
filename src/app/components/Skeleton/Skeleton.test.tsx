@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { Skeleton } from "./Skeleton";
+import { render } from "@/utils/testing-library";
 
 describe("Skeleton", () => {
 	it("should render", () => {

@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { Label } from "./Label";
+import { render } from "@/utils/testing-library";
 
 describe("Label", () => {
 	it("should render", () => {

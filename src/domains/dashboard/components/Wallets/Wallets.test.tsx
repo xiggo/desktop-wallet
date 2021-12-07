@@ -6,6 +6,7 @@ import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { Wallets } from "./Wallets";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
@@ -21,8 +22,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-import { Wallets } from "./Wallets";
 
 const history = createMemoryHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;

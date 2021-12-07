@@ -4,10 +4,9 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { WalletCard } from "./WalletCard";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
-import { WalletCard } from "./WalletCard";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createMemoryHistory();

@@ -6,11 +6,10 @@ import { createMemoryHistory, MemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { AppearanceSettings } from "./Appearance";
 import { toasts } from "@/app/services";
 import { translations } from "@/domains/setting/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
-
-import { AppearanceSettings } from "./Appearance";
 
 describe("Appearance Settings", () => {
 	let profile: Contracts.IProfile;

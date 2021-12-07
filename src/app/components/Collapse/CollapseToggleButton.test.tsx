@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { CollapseToggleButton } from "./CollapseToggleButton";
 import { translations } from "@/app/i18n/common/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { CollapseToggleButton } from "./CollapseToggleButton";
 
 describe("CollapseToggleButton", () => {
 	it("should render", () => {

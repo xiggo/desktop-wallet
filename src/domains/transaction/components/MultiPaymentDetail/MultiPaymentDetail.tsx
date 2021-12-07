@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+import { MultiPaymentRecipients } from "./components/MultiPaymentRecipients";
 import { Modal } from "@/app/components/Modal";
 import {
 	TransactionAmount,
@@ -12,8 +13,6 @@ import {
 	TransactionTimestamp,
 } from "@/domains/transaction/components/TransactionDetail";
 import { TransactionDetailProperties } from "@/domains/transaction/components/TransactionDetailModal/TransactionDetailModal.contracts";
-
-import { MultiPaymentRecipients } from "./components/MultiPaymentRecipients";
 
 export const MultiPaymentDetail = ({ isOpen, transaction, aliases, onClose }: TransactionDetailProperties) => {
 	const { t } = useTranslation();

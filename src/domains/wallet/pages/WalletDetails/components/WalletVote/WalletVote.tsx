@@ -2,11 +2,10 @@ import { Contracts, Environment } from "@payvo/sdk-profiles";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Button } from "@/app/components/Button";
-import { Icon } from "@/app/components/Icon";
-
 import { EmptyVotes, Votes } from "./WalletVote.blocks";
 import { WalletVoteSkeleton } from "./WalletVoteSkeleton";
+import { Button } from "@/app/components/Button";
+import { Icon } from "@/app/components/Icon";
 
 interface WalletVoteProperties {
 	wallet: Contracts.IReadWriteWallet;

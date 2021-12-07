@@ -1,9 +1,8 @@
 import React from "react";
 
+import { DevelopmentNetwork } from "./DevelopmentNetwork";
 import { translations } from "@/domains/setting/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { DevelopmentNetwork } from "./DevelopmentNetwork";
 
 describe("DevelopmentNetwork", () => {
 	it("should not render if not open", () => {

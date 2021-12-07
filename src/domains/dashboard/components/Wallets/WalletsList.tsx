@@ -2,13 +2,12 @@ import React, { useCallback, useMemo, useState, VFC } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
+import { WalletListProperties, WrappedWallet } from "./Wallets.contracts";
 import { Button } from "@/app/components/Button";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Table } from "@/app/components/Table";
 import { WalletListItem } from "@/app/components/WalletListItem";
 import { WalletListItemSkeleton } from "@/app/components/WalletListItem/WalletListItemSkeleton";
-
-import { WalletListProperties, WrappedWallet } from "./Wallets.contracts";
 
 export const WalletsList: VFC<WalletListProperties> = ({
 	hasWalletsMatchingOtherNetworks,

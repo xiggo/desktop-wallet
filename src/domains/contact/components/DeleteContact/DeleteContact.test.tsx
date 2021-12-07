@@ -2,10 +2,9 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { DeleteContact } from "./DeleteContact";
 import { translations } from "@/domains/contact/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { DeleteContact } from "./DeleteContact";
 
 let contact: Contracts.IContact;
 let profile: Contracts.IProfile;

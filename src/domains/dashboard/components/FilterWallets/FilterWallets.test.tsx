@@ -2,11 +2,10 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { FilterWallets } from "./FilterWallets";
 import { FilterOption } from "@/app/components/FilterNetwork";
 import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
-import { FilterWallets } from "./FilterWallets";
 
 let profile: Contracts.IProfile;
 let networkOptions: FilterOption[];

@@ -1,12 +1,11 @@
 import cn from "classnames";
 import React, { VFC } from "react";
 
+import { NotificationTransactionSkeletonRowProperties } from "./NotificationTransactionsTable.contracts";
 import { Circle } from "@/app/components/Circle";
 import { Skeleton } from "@/app/components/Skeleton";
 import { TableCell, TableRow } from "@/app/components/Table";
 import { useRandomNumber } from "@/app/hooks";
-
-import { NotificationTransactionSkeletonRowProperties } from "./NotificationTransactionsTable.contracts";
 
 export const NotificationTransactionSkeletonRow: VFC<NotificationTransactionSkeletonRowProperties> = ({
 	isCompact,

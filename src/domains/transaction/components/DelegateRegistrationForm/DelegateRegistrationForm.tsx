@@ -1,13 +1,12 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React from "react";
 
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { TransactionDetail, TransactionFee } from "@/domains/transaction/components/TransactionDetail";
 import { SendRegistrationForm } from "@/domains/transaction/pages/SendRegistration/SendRegistration.contracts";
 import { handleBroadcastError } from "@/domains/transaction/utils";
-
-import { FormStep } from "./FormStep";
-import { ReviewStep } from "./ReviewStep";
 
 const component = ({
 	activeTab,

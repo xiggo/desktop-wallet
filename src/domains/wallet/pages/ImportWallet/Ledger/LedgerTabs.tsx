@@ -5,6 +5,10 @@ import { useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { LedgerConnectionStep } from "./LedgerConnectionStep";
+import { LedgerImportStep } from "./LedgerImportStep";
+import { LedgerScanStep } from "./LedgerScanStep";
+import { LedgerTabsProperties, LedgerTabStep } from "./LedgerTabs.contracts";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { StepIndicator } from "@/app/components/StepIndicator";
@@ -15,11 +19,6 @@ import { useKeydown } from "@/app/hooks/use-keydown";
 import { useWalletConfig } from "@/domains/dashboard/hooks";
 import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { assertWallet } from "@/utils/assertions";
-
-import { LedgerConnectionStep } from "./LedgerConnectionStep";
-import { LedgerImportStep } from "./LedgerImportStep";
-import { LedgerScanStep } from "./LedgerScanStep";
-import { LedgerTabsProperties, LedgerTabStep } from "./LedgerTabs.contracts";
 
 const Paginator = ({
 	activeIndex,

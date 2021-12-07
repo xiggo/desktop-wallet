@@ -1,10 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { Description, Images, Permissions, Requirements } from "./PluginInfo.blocks";
 import { Alert } from "@/app/components/Alert";
 import { PluginPermissions } from "@/domains/plugin/plugin.contracts";
-
-import { Description, Images, Permissions, Requirements } from "./PluginInfo.blocks";
 
 interface PluginInfoProperties {
 	description?: string;

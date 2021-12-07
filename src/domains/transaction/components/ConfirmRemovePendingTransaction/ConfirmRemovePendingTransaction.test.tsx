@@ -2,10 +2,9 @@ import { Contracts, DTO } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
 import { translations } from "@/domains/transaction/i18n";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
-
-import { ConfirmRemovePendingTransaction } from "./ConfirmRemovePendingTransaction";
 
 describe("ConfirmRemovePendingTransaction", () => {
 	let profile: Contracts.IProfile;

@@ -1,8 +1,7 @@
 import { styled } from "twin.macro";
 
-import { Color, Size } from "@/types";
-
 import { getStyles } from "./Spinner.styles";
+import { Color, Size } from "@/types";
 
 interface SpinnerType {
 	color?: Color;

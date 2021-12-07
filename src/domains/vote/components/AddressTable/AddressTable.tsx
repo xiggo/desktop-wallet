@@ -3,11 +3,10 @@ import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
 
-import { Table } from "@/app/components/Table";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-
 import { AddressRow } from "./AddressRow";
 import { AddressTableProperties } from "./AddressTable.contracts";
+import { Table } from "@/app/components/Table";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
 
 export const AddressTable: FC<AddressTableProperties> = ({ wallets, onSelect, isCompact = false }) => {
 	const { t } = useTranslation();

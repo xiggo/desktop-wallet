@@ -1,9 +1,8 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
 
-import { env, getDefaultProfileId } from "@/utils/testing-library";
-
 import { useMultiSignatureStatus } from "./use-multisignature-status";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 describe("Use MultiSignature Status Hook", () => {
 	let profile: Contracts.IProfile;

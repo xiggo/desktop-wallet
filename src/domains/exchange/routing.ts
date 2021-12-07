@@ -1,6 +1,5 @@
-import { ExchangeView } from "@/domains/exchange/pages/ExchangeView";
-
 import { Exchange } from "./pages";
+import { ExchangeView } from "@/domains/exchange/pages/ExchangeView";
 
 export const ExchangeRoutes = [
 	{

@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { ConfirmationModal } from "./ConfirmationModal";
 import { translations } from "@/app/i18n/common/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { ConfirmationModal } from "./ConfirmationModal";
 
 describe("Confirmation Modal", () => {
 	it("should render with default title and description", () => {

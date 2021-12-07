@@ -2,10 +2,9 @@
 import { renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
+import { useProfileUtils } from "./use-profile-utils";
 import { ConfigurationProvider } from "@/app/contexts";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
-
-import { useProfileUtils } from "./use-profile-utils";
 
 describe("useProfileUtils", () => {
 	it("#getProfileById", async () => {

@@ -1,6 +1,7 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React from "react";
 
+import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
 import {
 	env,
 	getDefaultProfileId,
@@ -9,8 +10,6 @@ import {
 	screen,
 	syncDelegates,
 } from "@/utils/testing-library";
-
-import { getMultiSignatureInfo, MultiSignatureDetailStep, Paginator } from "./MultiSignatureDetail.helpers";
 
 describe("MultiSignatureDetail Helpers", () => {
 	let profile: Contracts.IProfile;

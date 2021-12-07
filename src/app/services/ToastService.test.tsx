@@ -1,9 +1,9 @@
 import React from "react";
 import { toast, ToastContainer } from "react-toastify";
 
+import { ToastService } from "./ToastService";
 import { act, render, screen } from "@/utils/testing-library";
 
-import { ToastService } from "./ToastService";
 let subject: ToastService;
 
 describe("ToastService", () => {

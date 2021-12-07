@@ -1,11 +1,10 @@
 import React from "react";
 import { styled } from "twin.macro";
 
+import { getStyles } from "./Button.styles";
 import { ButtonSpinner } from "@/app/components/ButtonSpinner";
 import { Icon } from "@/app/components/Icon";
 import { ButtonVariant, Size } from "@/types";
-
-import { getStyles } from "./Button.styles";
 
 type ButtonProperties = {
 	variant?: ButtonVariant;

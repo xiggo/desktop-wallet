@@ -5,12 +5,11 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { NavigationBar } from "./NavigationBar";
 import * as navigation from "@/app/constants/navigation";
 import * as environmentHooks from "@/app/hooks/env";
 import * as useScrollHook from "@/app/hooks/use-scroll";
 import { env as mockedTestEnvironment, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { NavigationBar } from "./NavigationBar";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createMemoryHistory();

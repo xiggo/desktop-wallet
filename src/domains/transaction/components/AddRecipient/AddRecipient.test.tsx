@@ -6,10 +6,9 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
+import { AddRecipient } from "./AddRecipient";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor, within } from "@/utils/testing-library";
-
-import { AddRecipient } from "./AddRecipient";
 
 const translations = buildTranslations();
 

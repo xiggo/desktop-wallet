@@ -2,10 +2,9 @@ import { uniqBy } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
 import { useCallback, useMemo, useReducer, useRef, useState } from "react";
 
+import { scannerReducer } from "./scanner.state";
 import { useLedgerContext } from "@/app/contexts/Ledger/Ledger";
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
-
-import { scannerReducer } from "./scanner.state";
 
 export const useLedgerScanner = (coin: string, network: string) => {
 	const { setBusy, setIdle } = useLedgerContext();

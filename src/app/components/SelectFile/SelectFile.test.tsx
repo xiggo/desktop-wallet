@@ -1,13 +1,12 @@
+import os from "os";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import electron from "electron";
-import os from "os";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
-
 import { SelectFile } from "./SelectFile";
+import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
 jest.mock("fs", () => ({
 	readFileSync: jest.fn().mockReturnValue({ toString: () => "{test:'test'}" }),

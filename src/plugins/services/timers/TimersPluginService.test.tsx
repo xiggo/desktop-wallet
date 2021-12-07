@@ -1,11 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { act } from "react-dom/test-utils";
 
+import { TimersPluginService } from "./TimersPluginService";
 import { IPluginController, PluginController, PluginManager } from "@/plugins/core";
 import { PluginAPI } from "@/plugins/types";
 import { env, waitFor } from "@/utils/testing-library";
-
-import { TimersPluginService } from "./TimersPluginService";
 
 const config = { "desktop-wallet": { permissions: ["TIMERS"] }, name: "test", version: "1.1" };
 

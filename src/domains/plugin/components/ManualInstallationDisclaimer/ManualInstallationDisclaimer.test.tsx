@@ -1,9 +1,8 @@
 import React from "react";
 
+import { ManualInstallationDisclaimer } from "./ManualInstallationDisclaimer";
 import { translations } from "@/domains/plugin/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { ManualInstallationDisclaimer } from "./ManualInstallationDisclaimer";
 
 describe("ManualInstallationDisclaimer", () => {
 	it("should not render if not open", () => {

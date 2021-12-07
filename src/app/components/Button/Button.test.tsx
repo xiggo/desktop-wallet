@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { Button } from "./Button";
 import { ButtonVariant } from "@/types";
 import { render, screen } from "@/utils/testing-library";
-
-import { Button } from "./Button";
 
 describe("Button", () => {
 	it("should render", () => {

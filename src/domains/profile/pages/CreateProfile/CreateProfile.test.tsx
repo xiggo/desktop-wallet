@@ -1,17 +1,16 @@
 /* eslint-disable @typescript-eslint/require-await */
+import os from "os";
 import { ARK } from "@payvo/sdk-ark";
 import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import { getCurrency } from "locale-currency";
-import os from "os";
 import React from "react";
 
+import { CreateProfile } from "./CreateProfile";
 import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import * as utils from "@/utils/electron-utils";
 import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
-
-import { CreateProfile } from "./CreateProfile";
 
 jest.mock("fs", () => ({
 	readFileSync: jest.fn(() => "avatarImage"),

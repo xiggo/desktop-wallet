@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { TableRow } from "./TableRow";
+import { render, screen } from "@/utils/testing-library";
 
 describe("TableRow", () => {
 	it("should render with border", () => {

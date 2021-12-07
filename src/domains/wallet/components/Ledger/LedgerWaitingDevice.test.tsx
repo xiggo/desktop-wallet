@@ -2,10 +2,9 @@ import { Observer } from "@ledgerhq/hw-transport";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { LedgerWaitingDevice } from "./LedgerWaitingDevice";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { act, getDefaultLedgerTransport, render, screen } from "@/utils/testing-library";
-
-import { LedgerWaitingDevice } from "./LedgerWaitingDevice";
 
 const transport = getDefaultLedgerTransport();
 

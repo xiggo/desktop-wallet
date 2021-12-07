@@ -1,6 +1,6 @@
+import fs from "fs";
 import { Profile } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import fs from "fs";
 import React from "react";
 
 import { ProcessingImport } from "@/domains/profile/pages/ImportProfile/ProcessingImportStep";

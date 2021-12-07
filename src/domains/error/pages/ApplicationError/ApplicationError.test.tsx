@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { ApplicationError } from "./ApplicationError";
 import { translations } from "@/domains/error/i18n";
 import { render, screen } from "@/utils/testing-library";
-
-import { ApplicationError } from "./ApplicationError";
 
 describe("ApplicationError", () => {
 	it("should render", () => {

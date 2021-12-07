@@ -2,9 +2,8 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { render, screen, waitFor } from "@/utils/testing-library";
-
 import { SyncErrorMessage } from "./ProfileSyncStatusMessage";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("SyncErrorMessage", () => {
 	const failedNetworkNames = ["ARK Devnet", "ARK Mainnet", "Lisk Devnet"];

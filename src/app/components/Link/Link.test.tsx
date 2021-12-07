@@ -2,11 +2,10 @@ import userEvent from "@testing-library/user-event";
 import electron from "electron";
 import React from "react";
 
+import { Link } from "./Link";
 import { buildTranslations } from "@/app/i18n/helpers";
 import { toasts } from "@/app/services";
 import { render, screen } from "@/utils/testing-library";
-
-import { Link } from "./Link";
 
 const translations = buildTranslations();
 

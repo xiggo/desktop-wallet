@@ -5,6 +5,10 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 
+import { FormStep } from "./FormStep";
+import { IpfsLedgerReview } from "./LedgerReview";
+import { ReviewStep } from "./ReviewStep";
+import { SummaryStep } from "./SummaryStep";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepIndicator } from "@/app/components/StepIndicator";
@@ -19,11 +23,6 @@ import { FeeWarning } from "@/domains/transaction/components/FeeWarning";
 import { useFeeConfirmation, useTransactionBuilder } from "@/domains/transaction/hooks";
 import { handleBroadcastError } from "@/domains/transaction/utils";
 import { assertWallet } from "@/utils/assertions";
-
-import { FormStep } from "./FormStep";
-import { IpfsLedgerReview } from "./LedgerReview";
-import { ReviewStep } from "./ReviewStep";
-import { SummaryStep } from "./SummaryStep";
 
 enum Step {
 	FormStep = 1,

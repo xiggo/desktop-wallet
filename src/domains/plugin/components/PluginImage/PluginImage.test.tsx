@@ -1,10 +1,9 @@
 import React from "react";
 
+import { PluginImage } from "./PluginImage";
 import { Size } from "@/types";
 import * as utils from "@/utils/electron-utils";
 import { fireEvent, render, screen } from "@/utils/testing-library";
-
-import { PluginImage } from "./PluginImage";
 
 describe("PluginImage", () => {
 	it("should render image placeholder", () => {

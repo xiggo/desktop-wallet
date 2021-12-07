@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { Select } from "./Select";
+import { render, screen } from "@/utils/testing-library";
 
 describe("Select", () => {
 	it("should render a select input with placeholder", () => {

@@ -6,11 +6,10 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route } from "react-router-dom";
 
+import { LedgerTabs } from "./LedgerTabs";
 import { LedgerProvider, minVersionList } from "@/app/contexts";
 import * as scanner from "@/app/contexts/Ledger/hooks/scanner.state";
 import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
-import { LedgerTabs } from "./LedgerTabs";
 
 describe("LedgerTabs", () => {
 	let profile: Contracts.IProfile;

@@ -2,13 +2,12 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import * as updaterHook from "@/app/hooks/use-updater";
-import { render, screen, waitFor } from "@/utils/testing-library";
-
 import { FirstStep } from "./Step1";
 import { SecondStep } from "./Step2";
 import { ThirdStep } from "./Step3";
 import { WalletUpdate } from "./WalletUpdate";
+import { render, screen, waitFor } from "@/utils/testing-library";
+import * as updaterHook from "@/app/hooks/use-updater";
 
 describe("WalletUpdate", () => {
 	it("should not render if not open", () => {

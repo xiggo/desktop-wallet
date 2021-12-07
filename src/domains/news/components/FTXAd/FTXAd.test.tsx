@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render } from "@/utils/testing-library";
-
 import { FTXAd } from "./FTXAd";
+import { render } from "@/utils/testing-library";
 
 describe("FTXAd", () => {
 	it("should render", () => {

@@ -1,10 +1,11 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import querystring from "querystring";
+import { Contracts } from "@payvo/sdk-profiles";
 import React, { FC, useCallback, useEffect, useMemo, useState, VFC } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { Column } from "react-table";
 
+import { ContactsHeaderExtraProperties } from "./Contacts.contracts";
 import { Button } from "@/app/components/Button";
 import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Header } from "@/app/components/Header";
@@ -17,8 +18,6 @@ import { CreateContact, DeleteContact, UpdateContact } from "@/domains/contact/c
 import { ContactListItem } from "@/domains/contact/components/ContactListItem";
 import { ContactListItemOption } from "@/domains/contact/components/ContactListItem/ContactListItem.contracts";
 import { assertNetwork } from "@/utils/assertions";
-
-import { ContactsHeaderExtraProperties } from "./Contacts.contracts";
 
 const ContactsHeaderExtra: VFC<ContactsHeaderExtraProperties> = ({ showSearchBar, onSearch, onAddContact }) => {
 	const { t } = useTranslation();

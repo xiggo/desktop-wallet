@@ -2,16 +2,13 @@ import { DateTime } from "@payvo/sdk-intl";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import tw, { styled } from "twin.macro";
-
+import { version } from "../../../../../package.json"; // eslint-disable-line import/no-relative-parent-imports
 import { images } from "@/app/assets/images";
 import { CircularProgressBar } from "@/app/components/CircularProgressBar";
 import { Divider } from "@/app/components/Divider";
 import { Image } from "@/app/components/Image";
 import { Page, Section } from "@/app/components/Layout";
 import { shouldUseDarkColors } from "@/utils/electron-utils";
-
-// eslint-disable-next-line import/no-relative-parent-imports
-import { version } from "../../../../../package.json";
 
 const { PayvoLogo } = images.common;
 

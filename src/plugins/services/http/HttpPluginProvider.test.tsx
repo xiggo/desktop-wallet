@@ -1,9 +1,8 @@
 import React from "react";
 
+import { HttpPluginProvider } from "./HttpPluginProvider";
 import { PluginManager } from "@/plugins/core";
 import { render } from "@/utils/testing-library";
-
-import { HttpPluginProvider } from "./HttpPluginProvider";
 
 describe("HttpPluginProvider", () => {
 	it("should render properly", () => {

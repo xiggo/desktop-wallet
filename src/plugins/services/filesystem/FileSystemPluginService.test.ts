@@ -1,11 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import electron from "electron";
 
+import { FileSystemPluginService } from "./FileSystemPluginService";
 import { IPluginController, PluginController, PluginManager } from "@/plugins/core";
 import { PluginAPI } from "@/plugins/types";
 import { env } from "@/utils/testing-library";
-
-import { FileSystemPluginService } from "./FileSystemPluginService";
 
 const config = {
 	"desktop-wallet": { permissions: ["FILESYSTEM"] },

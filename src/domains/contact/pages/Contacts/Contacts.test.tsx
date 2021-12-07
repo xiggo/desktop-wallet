@@ -5,11 +5,10 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { Contacts } from "./Contacts";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { translations } from "@/domains/contact/i18n";
 import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/utils/testing-library";
-
-import { Contacts } from "./Contacts";
 
 let profile: Contracts.IProfile;
 

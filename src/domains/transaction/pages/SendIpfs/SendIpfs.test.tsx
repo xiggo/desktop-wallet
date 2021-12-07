@@ -6,6 +6,10 @@ import nock from "nock";
 import React from "react";
 import { Route, Router } from "react-router-dom";
 
+import { FormStep } from "./FormStep";
+import { ReviewStep } from "./ReviewStep";
+import { SendIpfs } from "./SendIpfs";
+import { SummaryStep } from "./SummaryStep";
 import { LedgerProvider, minVersionList } from "@/app/contexts";
 import { translations } from "@/domains/transaction/i18n";
 import ipfsFixture from "@/tests/fixtures/coins/ark/devnet/transactions/ipfs.json";
@@ -23,11 +27,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-import { FormStep } from "./FormStep";
-import { ReviewStep } from "./ReviewStep";
-import { SendIpfs } from "./SendIpfs";
-import { SummaryStep } from "./SummaryStep";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();

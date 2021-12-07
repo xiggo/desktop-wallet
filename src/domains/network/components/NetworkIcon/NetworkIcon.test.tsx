@@ -2,10 +2,9 @@ import { Networks } from "@payvo/sdk";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { NetworkIcon } from "./NetworkIcon";
 import { availableNetworksMock } from "@/tests/mocks/networks";
 import { render, screen } from "@/utils/testing-library";
-
-import { NetworkIcon } from "./NetworkIcon";
 
 let network: Networks.Network;
 

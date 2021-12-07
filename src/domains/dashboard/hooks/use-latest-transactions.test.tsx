@@ -3,10 +3,9 @@ import { renderHook } from "@testing-library/react-hooks";
 import nock from "nock";
 import React from "react";
 
+import { useLatestTransactions } from "./use-latest-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } from "@/utils/testing-library";
-
-import { useLatestTransactions } from "./use-latest-transactions";
 
 let profile: Contracts.IProfile;
 

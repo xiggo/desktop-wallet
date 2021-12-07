@@ -3,10 +3,9 @@ import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
 import { WrappedWallet } from "./Wallets.contracts";
 import { WalletsGrid } from "./WalletsGrid";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 let wallets: WrappedWallet[];

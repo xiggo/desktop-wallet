@@ -1,10 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { ButtonGroup, ButtonGroupOption } from "./ButtonGroup";
 import { useSelectionState } from "./useSelectionState";
+import { render, screen } from "@/utils/testing-library";
 
 describe("ButtonGroup", () => {
 	it("should render", () => {

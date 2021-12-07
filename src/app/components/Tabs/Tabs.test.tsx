@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { Tab, TabList, TabPanel, Tabs } from "./Tabs";
+import { render, screen } from "@/utils/testing-library";
 
 describe("Tabs", () => {
 	it("should render", () => {

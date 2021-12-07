@@ -1,9 +1,9 @@
+import os from "os";
+import path from "path";
 import decompress from "decompress";
 import { BrowserWindow, ipcMain } from "electron";
 import { download } from "electron-dl";
 import { ensureDirSync } from "fs-extra";
-import os from "os";
-import path from "path";
 import trash from "trash";
 
 import { injectHandler } from "@/plugins/loader/fs/loader-fs-handler";

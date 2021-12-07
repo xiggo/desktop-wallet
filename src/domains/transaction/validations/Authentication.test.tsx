@@ -2,9 +2,8 @@
 import { BIP39 } from "@payvo/sdk-cryptography";
 import { Contracts } from "@payvo/sdk-profiles";
 
-import { env, MNEMONICS } from "@/utils/testing-library";
-
 import { authentication } from "./Authentication";
+import { env, MNEMONICS } from "@/utils/testing-library";
 
 let translationMock: any;
 let wallet: Contracts.IReadWriteWallet;

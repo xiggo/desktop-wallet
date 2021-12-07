@@ -13,6 +13,11 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { Route, Router } from "react-router-dom";
 
+import { FormStep } from "./FormStep";
+import { NetworkStep } from "./NetworkStep";
+import { ReviewStep } from "./ReviewStep";
+import { SendTransfer } from "./SendTransfer";
+import { SummaryStep } from "./SummaryStep";
 import { LedgerProvider, minVersionList } from "@/app/contexts";
 import { useProfileStatusWatcher } from "@/app/hooks";
 import * as useFeesHook from "@/app/hooks/use-fees";
@@ -33,12 +38,6 @@ import {
 	waitFor,
 	within,
 } from "@/utils/testing-library";
-
-import { FormStep } from "./FormStep";
-import { NetworkStep } from "./NetworkStep";
-import { ReviewStep } from "./ReviewStep";
-import { SendTransfer } from "./SendTransfer";
-import { SummaryStep } from "./SummaryStep";
 
 const passphrase = getDefaultWalletMnemonic();
 const fixtureProfileId = getDefaultProfileId();

@@ -2,6 +2,7 @@ import React, { FC, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column, TableState } from "react-table";
 
+import { PluginUpdatesConfirmationProperties } from "./PluginUpdatesConfirmation.contracts";
 import { Button } from "@/app/components/Button";
 import { Icon } from "@/app/components/Icon";
 import { Image } from "@/app/components/Image";
@@ -11,8 +12,6 @@ import { Tooltip } from "@/app/components/Tooltip";
 import { OfficialPluginIcon } from "@/domains/plugin/components/OfficialPluginIcon";
 import { PluginImage } from "@/domains/plugin/components/PluginImage";
 import { ExtendedSerializedPluginConfigurationData } from "@/plugins/types";
-
-import { PluginUpdatesConfirmationProperties } from "./PluginUpdatesConfirmation.contracts";
 
 export const PluginUpdatesConfirmation: FC<PluginUpdatesConfirmationProperties> = ({
 	isOpen,

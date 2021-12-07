@@ -1,10 +1,9 @@
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import React, { useMemo } from "react";
 
-import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
-
 import { TransactionRowRecipientIcon } from "./TransactionRowRecipientIcon";
 import { TransactionRowRecipientLabel } from "./TransactionRowRecipientLabel";
+import { useWalletAlias } from "@/app/hooks/use-wallet-alias";
 
 interface Properties {
 	transaction: DTO.ExtendedConfirmedTransactionData;

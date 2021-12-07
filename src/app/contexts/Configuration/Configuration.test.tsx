@@ -1,9 +1,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { render, screen, waitFor } from "@/utils/testing-library";
-
 import { ConfigurationProvider, useConfiguration } from "./Configuration";
+import { render, screen, waitFor } from "@/utils/testing-library";
 
 describe("Configuration Context", () => {
 	it("should render the wrapper properly", () => {

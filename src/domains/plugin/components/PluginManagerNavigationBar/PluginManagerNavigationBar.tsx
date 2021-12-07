@@ -2,12 +2,11 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { styled } from "twin.macro";
 
+import { defaultStyle } from "./styles";
 import { Badge } from "@/app/components/Badge";
 import { LayoutControls } from "@/app/components/LayoutControls";
 import { Tab, TabList, Tabs } from "@/app/components/Tabs";
 import { Tooltip } from "@/app/components/Tooltip";
-
-import { defaultStyle } from "./styles";
 
 interface Properties {
 	hasUpdatesAvailable: boolean;

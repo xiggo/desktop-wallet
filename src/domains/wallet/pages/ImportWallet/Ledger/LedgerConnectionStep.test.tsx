@@ -8,6 +8,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Route } from "react-router-dom";
 
+import { LedgerConnectionStep } from "./LedgerConnectionStep";
 import { EnvironmentProvider, minVersionList } from "@/app/contexts";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import {
@@ -19,8 +20,6 @@ import {
 	screen,
 	waitFor,
 } from "@/utils/testing-library";
-
-import { LedgerConnectionStep } from "./LedgerConnectionStep";
 
 const history = createMemoryHistory();
 

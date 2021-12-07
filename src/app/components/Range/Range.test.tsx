@@ -1,8 +1,7 @@
 import React from "react";
 
-import { render, screen } from "@/utils/testing-library";
-
 import { Range } from "./Range";
+import { render, screen } from "@/utils/testing-library";
 
 describe("Range", () => {
 	it("should render", () => {

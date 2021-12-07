@@ -1,9 +1,8 @@
 import { Http, Services } from "@payvo/sdk";
 import { Repositories } from "@payvo/sdk-profiles";
 
-import { HttpClient } from "@/app/services/HttpClient";
-
 import { PluginManager } from "./core";
+import { HttpClient } from "@/app/services/HttpClient";
 
 export type WithPluginManager<T> = T & { manager: PluginManager };
 

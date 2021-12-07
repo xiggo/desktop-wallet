@@ -3,9 +3,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
-
 import { ContactForm } from "./ContactForm";
+import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
 const onSave = jest.fn();
 const onCancel = jest.fn();

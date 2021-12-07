@@ -1,9 +1,8 @@
-import { Contracts } from "@payvo/sdk-profiles";
 import path from "path";
-
-import { env, getDefaultProfileId } from "@/utils/testing-library";
+import { Contracts } from "@payvo/sdk-profiles";
 
 import { PluginLoaderFileSystem } from "./loader-fs";
+import { env, getDefaultProfileId } from "@/utils/testing-library";
 
 jest.mock("electron-is-dev", () => true);
 

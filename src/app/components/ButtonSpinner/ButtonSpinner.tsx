@@ -1,8 +1,7 @@
 import { styled } from "twin.macro";
 
-import { ButtonVariant } from "@/types";
-
 import { getStyles } from "./ButtonSpinner.styles";
+import { ButtonVariant } from "@/types";
 
 interface ButtonSpinnerType {
 	variant: ButtonVariant | undefined;

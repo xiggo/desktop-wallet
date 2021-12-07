@@ -2,13 +2,12 @@ import { Networks } from "@payvo/sdk";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { SelectCategory } from "./components/SelectCategory";
 import { Divider } from "@/app/components/Divider";
 import { FilterNetwork } from "@/app/components/FilterNetwork";
 import { useEnvironmentContext } from "@/app/contexts";
 import { AVAILABLE_CATEGORIES } from "@/domains/news/news.constants";
 import { AvailableNewsCategories } from "@/domains/news/news.contracts";
-
-import { SelectCategory } from "./components/SelectCategory";
 
 interface Option {
 	name: AvailableNewsCategories;

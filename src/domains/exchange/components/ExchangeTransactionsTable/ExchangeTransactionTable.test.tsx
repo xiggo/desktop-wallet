@@ -2,10 +2,9 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
+import { ExchangeTransactionsTable } from "./ExchangeTransactionsTable";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { env, getDefaultProfileId, render, screen, within } from "@/utils/testing-library";
-
-import { ExchangeTransactionsTable } from "./ExchangeTransactionsTable";
 
 let profile: Contracts.IProfile;
 

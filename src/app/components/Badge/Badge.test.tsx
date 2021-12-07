@@ -1,9 +1,8 @@
 import React from "react";
 
+import { Badge } from "./Badge";
 import { Position, Size } from "@/types";
 import { render } from "@/utils/testing-library";
-
-import { Badge } from "./Badge";
 
 describe("Badge", () => {
 	it("should render", () => {

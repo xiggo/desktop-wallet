@@ -2,9 +2,8 @@
 import userEvent from "@testing-library/user-event";
 import React from "react";
 
-import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
-
 import { EncryptPasswordStep } from "./EncryptPasswordStep";
+import { renderWithForm, screen, waitFor } from "@/utils/testing-library";
 
 describe("EncryptPasswordStep", () => {
 	it("should render", () => {

@@ -1,10 +1,9 @@
 import React from "react";
 
+import { TransactionNetwork } from "./TransactionNetwork";
 import { translations } from "@/domains/transaction/i18n";
 import { availableNetworksMock } from "@/tests/mocks/networks";
 import { render } from "@/utils/testing-library";
-
-import { TransactionNetwork } from "./TransactionNetwork";
 
 describe("TransactionNetwork", () => {
 	it("should render", () => {

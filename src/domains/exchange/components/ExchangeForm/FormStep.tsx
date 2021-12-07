@@ -5,6 +5,7 @@ import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from "r
 import { useFormContext } from "react-hook-form";
 import { Trans, useTranslation } from "react-i18next";
 
+import { CurrencyIcon, FormDivider } from "./FormStep.blocks";
 import { Alert } from "@/app/components/Alert";
 import { FormField, FormLabel } from "@/app/components/Form";
 import { InputCurrency, InputDefault } from "@/app/components/Input";
@@ -13,8 +14,6 @@ import { Spinner } from "@/app/components/Spinner";
 import { useExchangeContext } from "@/domains/exchange/contexts/Exchange";
 import { assertExchangeService, isUnavailablePairError } from "@/domains/exchange/utils";
 import { SelectRecipient } from "@/domains/profile/components/SelectRecipient";
-
-import { CurrencyIcon, FormDivider } from "./FormStep.blocks";
 
 interface FormStepProperties {
 	profile: Contracts.IProfile;
