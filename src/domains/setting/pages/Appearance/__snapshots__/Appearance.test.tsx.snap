@@ -456,9 +456,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                             Choose a color for buttons and other wallet features.
                           </span>
                         </div>
-                        <div
-                          class=""
-                        >
+                        <div>
                           <span
                             data-testid="list-divided-item__value"
                           >
@@ -524,9 +522,7 @@ exports[`Appearance Settings should render appearance settings 1`] = `
                             Choose a light or dark viewing mode.
                           </span>
                         </div>
-                        <div
-                          class=""
-                        >
+                        <div>
                           <span
                             data-testid="list-divided-item__value"
                           >

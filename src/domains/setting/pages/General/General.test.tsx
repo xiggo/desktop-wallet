@@ -680,7 +680,7 @@ describe("General Settings", () => {
 		const marketPriceContainer: HTMLElement = screen.getAllByRole("combobox")[3];
 
 		const getSelectInput = (type: "MARKET_PROVIDER" | "CURRENCY") => {
-			let subject: any;
+			let subject: HTMLElement;
 
 			if (type === "MARKET_PROVIDER") {
 				subject = marketPriceContainer;

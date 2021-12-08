@@ -6,8 +6,8 @@ import { goToSettings } from "../e2e/common";
 
 const translations = buildTranslations();
 
-let automaticSignOutPeriod: any;
-let name: any;
+let automaticSignOutPeriod: string | undefined;
+let name: string | undefined;
 
 cucumber("@resetProfile", {
 	"Given Alice is on the Settings page": async (t: TestController) => {

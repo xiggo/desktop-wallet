@@ -59,4 +59,4 @@ export type SelectProperties = {
 	allowFreeInput?: boolean;
 	onChange?: (selected: OptionProperties) => void;
 	renderLabel?: (option: OptionProperties) => JSX.Element;
-} & React.InputHTMLAttributes<any>;
+} & Omit<React.InputHTMLAttributes<any>, "onChange">;

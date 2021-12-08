@@ -1,8 +1,10 @@
-export interface Properties {
+interface PasswordRemovalProperties {
 	onCancel: () => void;
 	onConfirm: (currentPassword: string) => void;
 }
 
-export interface FormState {
+interface PasswordRemovalFormState {
 	currentPassword: string;
 }
+
+export type { PasswordRemovalProperties, PasswordRemovalFormState };

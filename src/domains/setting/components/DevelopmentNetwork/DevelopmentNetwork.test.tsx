@@ -5,15 +5,21 @@ import { translations } from "@/domains/setting/i18n";
 import { render, screen } from "@/utils/testing-library";
 
 describe("DevelopmentNetwork", () => {
+	const methods = {
+		onCancel: jest.fn(),
+		onClose: jest.fn(),
+		onContinue: jest.fn(),
+	};
+
 	it("should not render if not open", () => {
-		const { asFragment } = render(<DevelopmentNetwork isOpen={false} />);
+		const { asFragment } = render(<DevelopmentNetwork isOpen={false} {...methods} />);
 
 		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal", () => {
-		const { asFragment } = render(<DevelopmentNetwork isOpen={true} />);
+		const { asFragment } = render(<DevelopmentNetwork isOpen={true} {...methods} />);
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_DEVELOPMENT_NETWORK.TITLE);
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(

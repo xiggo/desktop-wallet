@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Prompt } from "react-router-dom";
 
+import { PasswordSettingsState } from "./Password.contracts";
 import { Button } from "@/app/components/Button";
 import { Form, FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
@@ -14,12 +15,6 @@ import { toasts } from "@/app/services";
 import { PasswordRemovalConfirmModal } from "@/domains/setting/components/PasswordRemovalConfirmModal";
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
-
-interface PasswordSettingsState {
-	currentPassword: string;
-	password: string;
-	confirmPassword: string;
-}
 
 export const PasswordSettings = () => {
 	const activeProfile = useActiveProfile();
@@ -99,12 +94,7 @@ export const PasswordSettings = () => {
 					}
 				/>
 
-				<Form
-					id="password-settings__form"
-					className="mt-8"
-					context={form as any}
-					onSubmit={handleSubmit as any}
-				>
+				<Form id="password-settings__form" className="mt-8" context={form} onSubmit={handleSubmit}>
 					<div className="space-y-5">
 						{usesPassword && (
 							<FormField name="currentPassword">

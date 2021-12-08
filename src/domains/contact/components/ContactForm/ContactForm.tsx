@@ -162,7 +162,7 @@ export const ContactForm: React.VFC<ContactFormProperties> = ({
 						placeholder={t("COMMON.INPUT_NETWORK.PLACEHOLDER")}
 						defaultValue={network?.id()}
 						options={filteredNetworks}
-						onChange={(networkOption) => handleSelectNetwork(networkOption)}
+						onChange={(networkOption) => handleSelectNetwork(networkOption as NetworkOption)}
 						renderLabel={renderNetworkLabel}
 					/>
 				</FormField>

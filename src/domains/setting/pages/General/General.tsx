@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { Prompt } from "react-router-dom";
 
+import { GeneralSettingsState, SettingsOption } from "./General.contracts";
 import { Button } from "@/app/components/Button";
 import { Form, FormField, FormLabel } from "@/app/components/Form";
 import { Header } from "@/app/components/Header";
@@ -23,20 +24,6 @@ import { DevelopmentNetwork } from "@/domains/setting/components/DevelopmentNetw
 import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrapper";
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { setScreenshotProtection } from "@/utils/electron-utils";
-
-interface GeneralSettingsState {
-	automaticSignOutPeriod: string;
-	avatar: string;
-	bip39Locale: string;
-	errorReporting: boolean;
-	exchangeCurrency: string;
-	locale: string;
-	marketProvider: string;
-	name: string;
-	screenshotProtection: boolean;
-	timeFormat: string;
-	useTestNetworks: boolean;
-}
 
 export const GeneralSettings: React.FC = () => {
 	const profile = useActiveProfile();
@@ -180,7 +167,7 @@ export const GeneralSettings: React.FC = () => {
 							label: t("COMMON.DATETIME.MINUTES", { count }),
 							value: `${count}`,
 						}))}
-						onChange={(signOutPeriod: any) => {
+						onChange={(signOutPeriod: SettingsOption) => {
 							setValue("automaticSignOutPeriod", signOutPeriod?.value, { shouldDirty: true });
 						}}
 						defaultValue={`${getDefaultValues().automaticSignOutPeriod}`}
@@ -267,12 +254,7 @@ export const GeneralSettings: React.FC = () => {
 		<SettingsWrapper profile={profile} activeSettings="general">
 			<Header title={t("SETTINGS.GENERAL.TITLE")} subtitle={t("SETTINGS.GENERAL.SUBTITLE")} />
 
-			<Form
-				className="space-y-8"
-				data-testid="General-settings__form"
-				context={form as any}
-				onSubmit={handleSubmit as any}
-			>
+			<Form className="space-y-8" data-testid="General-settings__form" context={form} onSubmit={handleSubmit}>
 				<div className="relative mt-8">
 					<h2 className="text-lg mb-3">{t("SETTINGS.GENERAL.PERSONAL.TITLE")}</h2>
 
@@ -324,7 +306,7 @@ export const GeneralSettings: React.FC = () => {
 											field: t("SETTINGS.GENERAL.PERSONAL.PASSPHRASE_LANGUAGE"),
 										}).toString(),
 									})}
-									onChange={(bip39Locale: any) =>
+									onChange={(bip39Locale: SettingsOption) =>
 										setValue("bip39Locale", bip39Locale?.value, {
 											shouldDirty: true,
 											shouldValidate: true,
@@ -349,7 +331,7 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={currencyOptions}
 									defaultValue={exchangeCurrency}
-									onChange={(exchangeCurrency: any) =>
+									onChange={(exchangeCurrency: SettingsOption) =>
 										setValue("exchangeCurrency", exchangeCurrency?.value, {
 											shouldDirty: true,
 											shouldValidate: true,
@@ -374,7 +356,7 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={PlatformSdkChoices.languages}
 									defaultValue={getDefaultValues().locale}
-									onChange={(locale: any) =>
+									onChange={(locale: SettingsOption) =>
 										setValue("locale", locale?.value, { shouldDirty: true, shouldValidate: true })
 									}
 								/>
@@ -394,7 +376,7 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={PlatformSdkChoices.marketProviders}
 									defaultValue={marketProvider}
-									onChange={(marketProvider: any) => {
+									onChange={(marketProvider: SettingsOption) => {
 										if (marketProvider?.unsupportedCurrencies?.includes(exchangeCurrency)) {
 											toasts.warning(
 												t("SETTINGS.GENERAL.UNSUPPORTED_CURRENCY", {
@@ -431,7 +413,7 @@ export const GeneralSettings: React.FC = () => {
 									})}
 									options={PlatformSdkChoices.timeFormats}
 									defaultValue={getDefaultValues().timeFormat}
-									onChange={(timeFormat: any) =>
+									onChange={(timeFormat: SettingsOption) =>
 										setValue("timeFormat", timeFormat?.value, {
 											shouldDirty: true,
 											shouldValidate: true,

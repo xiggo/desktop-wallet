@@ -1,6 +1,6 @@
 import { AccentColorType, ViewingModeType } from "@/app/hooks";
 
-export interface AppearanceSettingsState {
+interface AppearanceSettingsState {
 	accentColor: AccentColorType;
 	dashboardTransactionHistory: boolean;
 	useExpandedTables: boolean;
@@ -8,7 +8,9 @@ export interface AppearanceSettingsState {
 	viewingMode: ViewingModeType;
 }
 
-export interface UseAppearanceSettings {
+interface UseAppearanceSettings {
 	getValues: () => AppearanceSettingsState;
 	setValues: (values: AppearanceSettingsState) => void;
 }
+
+export type { AppearanceSettingsState, UseAppearanceSettings };

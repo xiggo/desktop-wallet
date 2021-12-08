@@ -1,20 +1,8 @@
 import React from "react";
 
-interface Properties {
-	isFloatingLabel: boolean;
-	label: string;
-	labelClass: string;
-	labelDescription: string;
-	labelDescriptionClass?: string;
-	labelAddon?: React.ReactNode;
-	value: string;
-	itemValueClass: string;
-	content: React.ReactNode;
-	contentClass?: string;
-	wrapperClass?: string;
-}
+import { ListDividedItemProperties } from "./ListDivided.contracts";
 
-export const ListDividedItem = ({
+export const ListDividedItem: React.VFC<ListDividedItemProperties> = ({
 	isFloatingLabel,
 	label,
 	labelClass,
@@ -26,7 +14,7 @@ export const ListDividedItem = ({
 	content,
 	contentClass,
 	wrapperClass,
-}: Properties) => (
+}) => (
 	<li className={`flex flex-col w-full ${wrapperClass || ""}`} data-testid="list-divided-item__wrapper">
 		<div
 			className={`flex justify-between ${isFloatingLabel ? "flex-col items-start" : "items-center"}`}
@@ -55,7 +43,7 @@ export const ListDividedItem = ({
 				)}
 			</div>
 			{value && (
-				<div className={`${itemValueClass || ""}`}>
+				<div className={itemValueClass}>
 					<span data-testid="list-divided-item__value">{value}</span>
 				</div>
 			)}

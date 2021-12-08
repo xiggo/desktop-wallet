@@ -2,6 +2,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import * as reactHookForm from "react-hook-form";
 
+import { UseFormMethods } from "react-hook-form";
 import { AppearanceViewingMode } from "./AppearanceViewingMode";
 import { translations } from "@/domains/setting/i18n";
 import { render, screen } from "@/utils/testing-library";
@@ -11,7 +12,9 @@ describe("AppearanceViewingMode", () => {
 		const watch = jest.fn();
 		const setValue = jest.fn();
 
-		jest.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(() => ({ setValue, watch } as any));
+		jest.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
+			() => ({ setValue, watch } as unknown as UseFormMethods),
+		);
 
 		const { asFragment } = render(<AppearanceViewingMode />);
 
@@ -23,7 +26,9 @@ describe("AppearanceViewingMode", () => {
 		const watch = jest.fn();
 		const setValue = jest.fn();
 
-		jest.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(() => ({ setValue, watch } as any));
+		jest.spyOn(reactHookForm, "useFormContext").mockImplementationOnce(
+			() => ({ setValue, watch } as unknown as UseFormMethods),
+		);
 
 		render(<AppearanceViewingMode />);
 

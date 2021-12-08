@@ -1,8 +1,9 @@
 import { Contracts, Environment } from "@payvo/sdk-profiles";
+import { TFunction } from "react-i18next";
 
 import { lowerCaseEquals } from "@/utils/equals";
 
-export const settings = (t: any, environment: Environment) => ({
+export const settings = (t: TFunction, environment: Environment) => ({
 	name: (id: string) => ({
 		validate: {
 			maxLength: (name: string) =>

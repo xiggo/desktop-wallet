@@ -171,9 +171,7 @@ exports[`ListDividedItem should render the value 1`] = `
           />
         </div>
       </div>
-      <div
-        class=""
-      >
+      <div>
         <span
           data-testid="list-divided-item__value"
         >

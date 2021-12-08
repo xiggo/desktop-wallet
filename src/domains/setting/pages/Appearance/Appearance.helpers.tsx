@@ -6,21 +6,20 @@ import { AppearanceSettingsState, UseAppearanceSettings } from "./Appearance.con
 import { AppearanceAccentColor } from "./blocks/AppearanceAccentColor";
 import { AppearanceToggle } from "./blocks/AppearanceToggle";
 import { AppearanceViewingMode } from "./blocks/AppearanceViewingMode";
+import { ListDividedItemProperties } from "@/app/components/ListDivided/ListDivided.contracts";
 import { AccentColorType, ViewingModeType } from "@/app/hooks";
 
-export const useAppearanceItems = (): Record<string, any>[] => {
+export const useAppearanceItems = (): ListDividedItemProperties[] => {
 	const { t } = useTranslation();
 
 	return [
 		{
-			isFloatingLabel: false,
 			label: `${t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.TITLE")}`,
 			labelDescription: `${t("SETTINGS.APPEARANCE.OPTIONS.ACCENT_COLOR.DESCRIPTION")}`,
 			value: <AppearanceAccentColor />,
 			wrapperClass: "pb-6",
 		},
 		{
-			isFloatingLabel: false,
 			label: `${t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.TITLE")}`,
 			labelDescription: `${t("SETTINGS.APPEARANCE.OPTIONS.VIEWING_MODE.DESCRIPTION")}`,
 			value: <AppearanceViewingMode />,

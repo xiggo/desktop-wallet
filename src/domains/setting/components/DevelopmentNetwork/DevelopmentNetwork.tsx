@@ -1,17 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { DevelopmentNetworkProperties } from "./DevelopmentNetwork.contracts";
 import { Button } from "@/app/components/Button";
 import { Modal } from "@/app/components/Modal";
 
-interface DevelopmentNetworkProperties {
-	isOpen: boolean;
-	onClose?: () => void;
-	onCancel?: () => void;
-	onContinue?: () => void;
-}
-
-export const DevelopmentNetwork = ({ isOpen, onClose, onCancel, onContinue }: DevelopmentNetworkProperties) => {
+export const DevelopmentNetwork: React.FC<DevelopmentNetworkProperties> = ({
+	isOpen,
+	onClose,
+	onCancel,
+	onContinue,
+}) => {
 	const { t } = useTranslation();
 
 	return (

@@ -4,11 +4,11 @@ import { useFormContext } from "react-hook-form";
 import { Toggle } from "@/app/components/Toggle";
 import { AppearanceSettingsState } from "@/domains/setting/pages/Appearance/Appearance.contracts";
 
-interface Properties {
+interface AppearanceToggleProperties {
 	name: string;
 }
 
-export const AppearanceToggle: React.FC<Properties> = ({ name }: Properties) => {
+export const AppearanceToggle: React.FC<AppearanceToggleProperties> = ({ name }) => {
 	const form = useFormContext<AppearanceSettingsState>();
 
 	const value = form.watch(name);

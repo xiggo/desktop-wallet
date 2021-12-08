@@ -14,11 +14,11 @@ import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { AppearanceSettingsState } from "@/domains/setting/pages/Appearance/Appearance.contracts";
 import { useAppearanceItems, useAppearanceSettings } from "@/domains/setting/pages/Appearance/Appearance.helpers";
 
-interface Properties {
+interface AppearanceFormProperties {
 	profile: Contracts.IProfile;
 }
 
-export const AppearanceForm: React.FC<Properties> = ({ profile }: Properties) => {
+export const AppearanceForm: React.FC<AppearanceFormProperties> = ({ profile }) => {
 	const { t } = useTranslation();
 
 	const { getValues, setValues } = useAppearanceSettings(profile);
@@ -59,7 +59,7 @@ export const AppearanceForm: React.FC<Properties> = ({ profile }: Properties) =>
 	};
 
 	return (
-		<Form data-testid="AppearanceForm" context={form as any} onSubmit={save as any} className="mt-8">
+		<Form data-testid="AppearanceForm" context={form} onSubmit={save} className="mt-8">
 			<ListDivided items={items} />
 
 			<div className="flex justify-end mt-8 space-x-3 w-full">

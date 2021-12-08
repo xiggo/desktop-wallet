@@ -5,7 +5,7 @@ import { goToProfile } from "../../profile/e2e/common";
 
 const translations = buildTranslations();
 
-export const goToSettings = async (t: any) => {
+export const goToSettings = async (t: TestController) => {
 	await goToProfile(t);
 
 	await t.click(Selector('[data-testid="navbar__useractions"]'));
@@ -14,7 +14,7 @@ export const goToSettings = async (t: any) => {
 	await t.expect(Selector("h1").withText(translations.SETTINGS.GENERAL.TITLE).exists).ok();
 };
 
-export const saveSettings = async (t: any) => {
+export const saveSettings = async (t: TestController) => {
 	await t.click(Selector("button").withText(translations.COMMON.SAVE));
 	await t
 		.expect(Selector("[data-testid=ToastMessage__content]").withText(translations.SETTINGS.GENERAL.SUCCESS).exists)
