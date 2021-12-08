@@ -4,11 +4,6 @@ import React from "react";
 import { SelectFileStep } from "@/domains/profile/pages/ImportProfile/SelectFileStep";
 import { render, screen } from "@/utils/testing-library";
 
-jest.mock("fs", () => ({
-	readFileSync: jest.fn().mockReturnValue({ toString: () => "{test:'test'}" }),
-	writeFileSync: jest.fn(),
-}));
-
 describe("Import Profile Select File Step", () => {
 	it("should render with dwe fileFormat selected", () => {
 		const { container } = render(<SelectFileStep fileFormat=".dwe" />);

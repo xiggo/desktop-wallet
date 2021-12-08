@@ -12,10 +12,6 @@ import { StubStorage } from "@/tests/mocks";
 import * as utils from "@/utils/electron-utils";
 import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
-jest.mock("fs", () => ({
-	readFileSync: jest.fn(() => "avatarImage"),
-}));
-
 jest.mock("locale-currency", () => ({
 	getCurrency: jest.fn(() => "USD"),
 }));
@@ -55,10 +51,6 @@ const renderComponent = async () => {
 
 	return utils;
 };
-
-jest.mock("fs", () => ({
-	readFileSync: jest.fn(() => "avatarImage"),
-}));
 
 const BASE64_REGEX = /(?:[\d+/A-Za-z]{4})*(?:[\d+/A-Za-z]{2}==|[\d+/A-Za-z]{3}=)?/g;
 

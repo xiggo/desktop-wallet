@@ -4,11 +4,6 @@ import React from "react";
 import { ImportError } from "@/domains/profile/pages/ImportProfile/ErrorStep";
 import { render, screen } from "@/utils/testing-library";
 
-jest.mock("fs", () => ({
-	readFileSync: jest.fn().mockReturnValue({ toString: () => "{test:'test'}" }),
-	writeFileSync: jest.fn(),
-}));
-
 describe("Import Profile - Error Step", () => {
 	const file = { content: "dfdf", extension: ".dwe", name: "filename" };
 

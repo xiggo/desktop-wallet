@@ -32,11 +32,6 @@ const showOpenDialogParameters = {
 	properties: ["openFile"],
 };
 
-jest.mock("fs", () => ({
-	readFileSync: jest.fn(() => "avatarImage"),
-	writeFileSync: jest.fn(),
-}));
-
 describe("General Settings", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());

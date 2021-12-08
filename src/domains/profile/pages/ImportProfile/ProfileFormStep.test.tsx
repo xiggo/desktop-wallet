@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/require-await */
+import fs from "fs";
 import os from "os";
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
@@ -13,15 +14,13 @@ import { act, env, fireEvent, render, screen, waitFor } from "@/utils/testing-li
 let profile: Contracts.IProfile;
 
 let showOpenDialogMock: jest.SpyInstance;
+let fsMock: jest.SpyInstance;
+
 const showOpenDialogParameters = {
 	defaultPath: os.homedir(),
 	filters: [{ extensions: ["png", "jpg", "jpeg", "bmp"], name: "" }],
 	properties: ["openFile"],
 };
-
-jest.mock("fs", () => ({
-	readFileSync: jest.fn(() => "avatarImage"),
-}));
 
 describe("Import Profile - Profile Form Step", () => {
 	beforeAll(() => {
@@ -29,10 +28,17 @@ describe("Import Profile - Profile Form Step", () => {
 	});
 
 	beforeEach(() => {
+		fsMock = jest.spyOn(fs, "readFileSync").mockReturnValue(Buffer.from("file"));
+
 		//@ts-ignore
 		showOpenDialogMock = jest.spyOn(electron.remote.dialog, "showOpenDialog").mockImplementation(() => ({
 			filePaths: ["filePath"],
 		}));
+	});
+
+	afterEach(() => {
+		fsMock.mockRestore();
+		showOpenDialogMock.mockRestore();
 	});
 
 	it("should render profile form", async () => {

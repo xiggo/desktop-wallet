@@ -1,3 +1,4 @@
+import fs from "fs";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
 import electron from "electron";
@@ -67,6 +68,8 @@ describe("SelectProfileImage", () => {
 	});
 
 	it("should not allow to upload an invalid file image", async () => {
+		const fsMock = jest.spyOn(fs, "readFileSync").mockReturnValue(Buffer.from("not-an-image"));
+
 		const onSelect = jest.fn();
 		const toastSpy = jest.spyOn(toasts, "error");
 
@@ -77,7 +80,7 @@ describe("SelectProfileImage", () => {
 		const openFileDialog = jest.spyOn(electron.remote.dialog, "showOpenDialog").mockImplementation(
 			() =>
 				({
-					filePaths: ["notAnImage.png"],
+					filePaths: ["not-an-image.png"],
 				} as any),
 		);
 
@@ -86,6 +89,8 @@ describe("SelectProfileImage", () => {
 		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(translations.ERRORS.INVALID_IMAGE));
+
+		fsMock.mockRestore();
 	});
 
 	it("should not handle upload file", async () => {

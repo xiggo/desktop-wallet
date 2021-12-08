@@ -12,11 +12,6 @@ import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testi
 const history = createMemoryHistory();
 let profile: Contracts.IProfile;
 
-jest.mock("fs", () => ({
-	readFileSync: jest.fn(() => "avatarImage"),
-	writeFileSync: jest.fn(),
-}));
-
 describe("Export Settings", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());

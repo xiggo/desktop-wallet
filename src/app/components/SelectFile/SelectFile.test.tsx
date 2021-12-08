@@ -1,3 +1,4 @@
+import fs from "fs";
 import os from "os";
 import { renderHook } from "@testing-library/react-hooks";
 import userEvent from "@testing-library/user-event";
@@ -7,11 +8,6 @@ import { useTranslation } from "react-i18next";
 
 import { SelectFile } from "./SelectFile";
 import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
-
-jest.mock("fs", () => ({
-	readFileSync: jest.fn().mockReturnValue({ toString: () => "{test:'test'}" }),
-	writeFileSync: jest.fn(),
-}));
 
 describe("SelectFile", () => {
 	it("should render with dwe file format", () => {
@@ -27,6 +23,8 @@ describe("SelectFile", () => {
 	});
 
 	it("should open dialog to select file", async () => {
+		const fsMock = jest.spyOn(fs, "readFileSync").mockReturnValue(Buffer.from("file"));
+
 		//@ts-ignore
 		const showOpenDialogMock = jest.spyOn(electron.remote.dialog, "showOpenDialog").mockImplementation(() => ({
 			filePaths: ["filePath"],
@@ -52,6 +50,7 @@ describe("SelectFile", () => {
 		);
 
 		showOpenDialogMock.mockRestore();
+		fsMock.mockRestore();
 	});
 
 	it("should change background when dragging over drop zone", async () => {

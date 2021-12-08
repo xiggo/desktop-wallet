@@ -1,3 +1,4 @@
+import fs from "fs";
 import { Contracts } from "@payvo/sdk-profiles";
 import electron from "electron";
 
@@ -30,6 +31,8 @@ describe("FileSystemPluginService", () => {
 	});
 
 	it("should open file", async () => {
+		const fsMock = jest.spyOn(fs, "readFileSync").mockReturnValue("test mnemonic");
+
 		let content: any;
 
 		jest.spyOn(electron.remote.dialog, "showOpenDialog").mockResolvedValue({ filePaths: ["filePath"] });
@@ -50,6 +53,8 @@ describe("FileSystemPluginService", () => {
 		await new Promise((r) => setTimeout(r, 200));
 
 		expect(content).toBe("test mnemonic");
+
+		fsMock.mockRestore();
 	});
 
 	it("should return true if the dialog has been finished", async () => {
