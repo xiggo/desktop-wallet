@@ -12,7 +12,6 @@ let networkOptions: FilterOption[];
 
 const defaultConfiguration: DashboardConfiguration = {
 	selectedNetworkIds: [],
-	viewType: "grid",
 	walletsDisplayType: "all",
 };
 
@@ -37,14 +36,21 @@ describe("FilterWallets", () => {
 	});
 
 	it("should render", () => {
-		const { container } = render(<FilterWallets defaultConfiguration={defaultConfiguration} />);
+		const { container } = render(
+			<FilterWallets selectedNetworkIds={[]} defaultConfiguration={defaultConfiguration} />,
+		);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with networks selection", () => {
 		const { container } = render(
-			<FilterWallets networks={networkOptions} useTestNetworks defaultConfiguration={defaultConfiguration} />,
+			<FilterWallets
+				selectedNetworkIds={[]}
+				networks={networkOptions}
+				useTestNetworks
+				defaultConfiguration={defaultConfiguration}
+			/>,
 		);
 
 		expect(container).toMatchSnapshot();
@@ -55,6 +61,7 @@ describe("FilterWallets", () => {
 
 		render(
 			<FilterWallets
+				selectedNetworkIds={[]}
 				networks={networkOptions}
 				onChange={onChange}
 				useTestNetworks
@@ -71,7 +78,12 @@ describe("FilterWallets", () => {
 		const onChange = jest.fn();
 
 		render(
-			<FilterWallets networks={networkOptions} onChange={onChange} defaultConfiguration={defaultConfiguration} />,
+			<FilterWallets
+				selectedNetworkIds={[]}
+				networks={networkOptions}
+				onChange={onChange}
+				defaultConfiguration={defaultConfiguration}
+			/>,
 		);
 
 		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
@@ -84,7 +96,13 @@ describe("FilterWallets", () => {
 	it("should not emit onChange for wallet display type change", () => {
 		const onChange = jest.fn();
 
-		render(<FilterWallets networks={networkOptions} defaultConfiguration={defaultConfiguration} />);
+		render(
+			<FilterWallets
+				selectedNetworkIds={[]}
+				networks={networkOptions}
+				defaultConfiguration={defaultConfiguration}
+			/>,
+		);
 
 		userEvent.click(screen.getByTestId("filter-wallets__wallets"));
 

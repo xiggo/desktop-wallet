@@ -3,7 +3,8 @@ Feature: Wallet Routing
     @walletRouting-walletDetails
     Scenario: Successfully navigate to Wallet Details
         Given Alice is signed into a profile
-        When she selects a wallet
+        When she selects a network
+		And she selects a wallet
         Then she is navigated to the wallet details page
 
     @walletRouting-createWallet

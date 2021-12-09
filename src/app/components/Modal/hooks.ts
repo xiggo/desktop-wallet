@@ -18,6 +18,8 @@ export const useModal = ({ isOpen, onClose }: { isOpen: boolean; onClose?: any }
 
 	const onEscKey = useCallback(
 		(event: KeyboardEvent) => {
+			event.preventDefault();
+			event.stopPropagation();
 			if (event.key === "Escape") {
 				onClose();
 			}

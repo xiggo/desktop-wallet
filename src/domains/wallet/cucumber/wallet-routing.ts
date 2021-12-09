@@ -11,8 +11,11 @@ const preSteps = {
 };
 cucumber("@walletRouting-walletDetails", {
 	...preSteps,
-	"When she selects a wallet": async (t: TestController) => {
-		await t.click(Selector("[data-testid=WalletCard__D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD]"));
+	"When she selects a network": async (t: TestController) => {
+		await t.click(Selector("[data-testid=NetworkGroup_Toggle]"));
+	},
+	"And she selects a wallet": async (t: TestController) => {
+		await t.click(Selector("[data-testid=Address__address]").withText("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"));
 	},
 	"Then she is navigated to the wallet details page": async (t: TestController) => {
 		await t.expect(Selector("span").withText("ARK Wallet 1").exists).ok();

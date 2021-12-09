@@ -1,40 +1,31 @@
 import { Enums } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
+import { Amount } from "app/components/Amount";
+import { Avatar } from "app/components/Avatar";
+import { Button } from "app/components/Button";
+import { Clipboard } from "app/components/Clipboard";
+import { Dropdown } from "app/components/Dropdown";
+import { Icon } from "app/components/Icon";
+import { Tooltip } from "app/components/Tooltip";
+import { TruncateMiddleDynamic } from "app/components/TruncateMiddleDynamic";
+import { WalletIcons } from "app/components/WalletIcons";
+import { useEnvironmentContext } from "app/contexts";
+import { usePrevious, useWalletAlias } from "app/hooks";
 import cn from "classnames";
+import { NetworkIcon } from "domains/network/components/NetworkIcon";
+import { WalletActionsModals } from "domains/wallet/components/WalletActionsModals/WalletActionsModals";
+import { useWalletActions } from "domains/wallet/hooks/use-wallet-actions";
+import { useWalletSync } from "domains/wallet/hooks/use-wallet-sync";
+import { useWalletOptions } from "domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
 import tw, { styled } from "twin.macro";
-
-import { Amount } from "@/app/components/Amount";
-import { Avatar } from "@/app/components/Avatar";
-import { Button } from "@/app/components/Button";
-import { Clipboard } from "@/app/components/Clipboard";
-import { Dropdown, DropdownOption } from "@/app/components/Dropdown";
-import { Icon } from "@/app/components/Icon";
-import { Tooltip } from "@/app/components/Tooltip";
-import { TruncateMiddleDynamic } from "@/app/components/TruncateMiddleDynamic";
-import { WalletIcons } from "@/app/components/WalletIcons";
-import { useEnvironmentContext } from "@/app/contexts";
-import { usePrevious, useWalletAlias } from "@/app/hooks";
-import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
-import { UnlockTokensModal } from "@/domains/transaction/components/UnlockTokens";
-import { DeleteWallet } from "@/domains/wallet/components/DeleteWallet";
-import { ReceiveFunds } from "@/domains/wallet/components/ReceiveFunds";
-import { SignMessage } from "@/domains/wallet/components/SignMessage";
-import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";
-import { VerifyMessage } from "@/domains/wallet/components/VerifyMessage";
-import { WalletEncryptionWarning } from "@/domains/wallet/components/WalletEncryptionWarning";
-import { useWalletSync } from "@/domains/wallet/hooks/use-wallet-sync";
-import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
-import { assertString } from "@/utils/assertions";
-import { openExternal } from "@/utils/electron-utils";
+import { assertString } from "utils/assertions";
 
 interface WalletHeaderProperties {
 	profile: Contracts.IProfile;
 	wallet: Contracts.IReadWriteWallet;
 	currencyDelta?: number;
-	onSend?: () => void;
 	isUpdatingTransactions?: boolean;
 	onUpdate?: (status: boolean) => void;
 }
@@ -43,34 +34,28 @@ const WalletHeaderButton = styled.button`
 	${tw`inline-flex items-center justify-center w-8 h-8 transition-all duration-100 ease-linear rounded outline-none focus:(outline-none ring-2 ring-theme-primary-400) text-theme-secondary-text hover:text-theme-secondary-500 disabled:(cursor-not-allowed text-theme-secondary-800)`}
 `;
 
-export const WalletHeader = ({
+export const WalletHeader: React.VFC<WalletHeaderProperties> = ({
 	profile,
 	wallet,
 	currencyDelta,
-	onSend,
 	isUpdatingTransactions,
 	onUpdate,
-}: WalletHeaderProperties) => {
-	const [modal, setModal] = useState<string | undefined>();
-
+}) => {
 	const { env } = useEnvironmentContext();
 	const { syncAll } = useWalletSync({ env, profile });
 	const [isSyncing, setIsSyncing] = useState(false);
 	const previousIsUpdatingTransactions = usePrevious(isUpdatingTransactions);
 
-	const history = useHistory();
-
 	const { t } = useTranslation();
-	const { persist } = useEnvironmentContext();
 
 	const { getWalletAlias } = useWalletAlias();
-
 	const { alias } = getWalletAlias({
 		address: wallet.address(),
 		network: wallet.network(),
 		profile,
 	});
 
+	const { handleToggleStar, handleSelectOption, handleSend, activeModal, setActiveModal } = useWalletActions(wallet);
 	const { primaryOptions, secondaryOptions, additionalOptions, registrationOptions } = useWalletOptions(wallet);
 
 	const isUnlockBalanceButtonVisible = useMemo(() => {
@@ -87,49 +72,6 @@ export const WalletHeader = ({
 
 		return supported && hasLockedBalance;
 	}, [wallet]);
-
-	const handleStar = async () => {
-		wallet.toggleStarred();
-		await persist();
-	};
-
-	const handleDeleteWallet = async () => {
-		setModal(undefined);
-
-		profile.wallets().forget(wallet.id());
-		profile.notifications().transactions().forgetByRecipient(wallet.address());
-		await persist();
-
-		history.push(`/profiles/${profile.id()}/dashboard`);
-	};
-
-	const handleSelect = (option: DropdownOption) => {
-		if (option.value === "multi-signature") {
-			history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/multiSignature`);
-		}
-
-		if (option.value === "second-signature" && !wallet.usesPassword()) {
-			history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`);
-		}
-
-		if (option.value === "delegate-registration") {
-			history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/delegateRegistration`);
-		}
-
-		if (option.value === "delegate-resignation") {
-			history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-delegate-resignation`);
-		}
-
-		if (option.value === "store-hash") {
-			history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-ipfs`);
-		}
-
-		if (option.value === "open-explorer") {
-			openExternal(wallet.explorerLink());
-		}
-
-		setModal(option.value?.toString());
-	};
 
 	const syncWallet = async () => {
 		onUpdate?.(true);
@@ -149,10 +91,6 @@ export const WalletHeader = ({
 			onUpdate?.(false);
 		}
 	}, [isSyncing, previousIsUpdatingTransactions, isUpdatingTransactions, onUpdate]);
-
-	const handleConfirmEncryptionWarning = () => {
-		history.push(`/profiles/${profile.id()}/wallets/${wallet.id()}/send-registration/secondSignature`);
-	};
 
 	const exchangeCurrency = profile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
 	assertString(exchangeCurrency);
@@ -308,7 +246,7 @@ export const WalletHeader = ({
 							<WalletHeaderButton
 								data-testid="WalletHeader__star-button"
 								type="button"
-								onClick={handleStar}
+								onClick={handleToggleStar}
 							>
 								<Icon
 									className={cn({ "text-theme-warning-400": wallet.isStarred() })}
@@ -324,7 +262,7 @@ export const WalletHeader = ({
 							wallet.balance() === 0 || !wallet.hasBeenFullyRestored() || !wallet.hasSyncedWithNetwork()
 						}
 						className="my-auto ml-3"
-						onClick={onSend}
+						onClick={handleSend}
 					>
 						{t("COMMON.SEND")}
 					</Button>
@@ -336,7 +274,7 @@ export const WalletHeader = ({
 								size="icon"
 								className="text-white bg-theme-secondary-800 hover:bg-theme-primary-700 my-auto ml-3"
 								data-testid="WalletHeader__locked-balance-button"
-								onClick={() => setModal("unlockable-balances")}
+								onClick={() => setActiveModal("unlockable-balances")}
 							>
 								<Icon name="Lock" size="lg" />
 							</Button>
@@ -354,68 +292,14 @@ export const WalletHeader = ({
 									<Icon name="EllipsisVertical" size="lg" />
 								</Button>
 							}
-							onSelect={handleSelect}
+							onSelect={handleSelectOption}
 							options={[primaryOptions, registrationOptions, additionalOptions, secondaryOptions]}
 						/>
 					</div>
 				</div>
 			</header>
 
-			{modal === "sign-message" && (
-				<SignMessage
-					profile={profile}
-					walletId={wallet.id()}
-					isOpen={true}
-					onClose={() => setModal(undefined)}
-					onCancel={() => setModal(undefined)}
-				/>
-			)}
-
-			<VerifyMessage
-				isOpen={modal === "verify-message"}
-				onClose={() => setModal(undefined)}
-				onCancel={() => setModal(undefined)}
-				walletId={wallet.id()}
-				profileId={profile.id()}
-			/>
-
-			{modal === "receive-funds" && (
-				<ReceiveFunds
-					address={wallet.address()}
-					name={alias}
-					network={wallet.network()}
-					onClose={() => setModal(undefined)}
-				/>
-			)}
-
-			{modal === "wallet-name" && (
-				<UpdateWalletName
-					onAfterSave={() => setModal(undefined)}
-					onCancel={() => setModal(undefined)}
-					profile={profile}
-					wallet={wallet}
-				/>
-			)}
-
-			{modal === "delete-wallet" && (
-				<DeleteWallet
-					onClose={() => setModal(undefined)}
-					onCancel={() => setModal(undefined)}
-					onDelete={handleDeleteWallet}
-				/>
-			)}
-
-			{modal === "second-signature" && (
-				<WalletEncryptionWarning
-					importType={wallet.actsWithMnemonicWithEncryption() ? "mnemonic" : "secret"}
-					onCancel={() => setModal(undefined)}
-					onConfirm={handleConfirmEncryptionWarning}
-				/>
-			)}
-
-			{modal === "unlockable-balances" && (
-				<UnlockTokensModal profile={profile} wallet={wallet} onClose={() => setModal(undefined)} />
-			)}
+			<WalletActionsModals wallet={wallet} activeModal={activeModal} setActiveModal={setActiveModal} />
 		</>
 	);
 };

@@ -1,5 +1,7 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
+import * as envHooks from "app/hooks/env";
+import * as useWalletActionsModule from "domains/wallet/hooks/use-wallet-actions";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
@@ -43,6 +45,7 @@ describe("WalletHeader", () => {
 		walletUrl = `/profiles/${profile.id()}/wallets/${wallet.id()}`;
 
 		jest.spyOn(useQRCodeHook, "useQRCode").mockImplementation(() => ({}));
+		jest.spyOn(envHooks, "useActiveProfile").mockReturnValue(profile);
 	});
 
 	afterAll(() => {
@@ -102,9 +105,12 @@ describe("WalletHeader", () => {
 	});
 
 	it("should trigger onSend callback if provided", async () => {
-		const onSend = jest.fn();
+		const handleSend = jest.fn();
+		const useWalletActionsSpy = jest.spyOn(useWalletActionsModule, "useWalletActions").mockReturnValue({
+			handleSend,
+		} as unknown as ReturnType<typeof useWalletActionsModule.useWalletActions>);
 
-		render(<WalletHeader profile={profile} wallet={wallet} onSend={onSend} />);
+		render(<WalletHeader profile={profile} wallet={wallet} />);
 
 		await expect(screen.findByText(wallet.address())).resolves.toBeVisible();
 
@@ -112,7 +118,9 @@ describe("WalletHeader", () => {
 
 		userEvent.click(screen.getByTestId("WalletHeader__send-button"));
 
-		expect(onSend).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
+		expect(handleSend).toHaveBeenCalledWith(expect.objectContaining({ nativeEvent: expect.any(MouseEvent) }));
+
+		useWalletActionsSpy.mockRestore();
 	});
 
 	it("send button should be disabled if wallet has no balance", async () => {

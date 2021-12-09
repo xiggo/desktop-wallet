@@ -73,9 +73,6 @@ export const WalletDetails = () => {
 					<WalletHeader
 						profile={activeProfile}
 						wallet={activeWallet}
-						onSend={() =>
-							history.push(`/profiles/${activeProfile.id()}/wallets/${activeWallet.id()}/send-transfer`)
-						}
 						onUpdate={setIsUpdatingWallet}
 						isUpdatingTransactions={isUpdatingTransactions}
 					/>

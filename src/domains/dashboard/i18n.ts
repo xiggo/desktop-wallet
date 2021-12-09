@@ -18,7 +18,6 @@ export const translations = {
 	},
 
 	PORTFOLIO_BREAKDOWN: {
-		EMPTY: "Your portfolio is currently empty. <bold>Create</bold> or <bold>Import</bold> a wallet to get started.",
 		FILTERED: "Please enable at least one public network to display your portfolio report.",
 	},
 
@@ -28,7 +27,7 @@ export const translations = {
 
 	WALLET_CONTROLS: {
 		CREATE: "Create",
-		EMPTY_MESSAGE: "You don't have any wallets yet.",
+		EMPTY_MESSAGE: "Your portfolio is currently empty. <1>Create</1> or <3>Import</3> a wallet to get started.",
 		EMPTY_MESSAGE_FILTERED: "You don't have any wallets matching the selected networks.",
 		EMPTY_MESSAGE_TYPE: "You don't have any <bold>{{type}}</bold> wallets.",
 		EMPTY_MESSAGE_TYPE_FILTERED: "You don't have any <bold>{{type}}</bold> wallets matching the selected networks.",

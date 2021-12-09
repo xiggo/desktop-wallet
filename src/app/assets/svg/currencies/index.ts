@@ -25,7 +25,7 @@ import { ReactComponent as XQR } from "./xqr.svg";
 import { ReactComponent as XRP } from "./xrp.svg";
 import { ReactComponent as ZIL } from "./zil.svg";
 
-export const Currencies: any = {
+export const Currencies = {
 	ADA,
 	ARK,
 	ATOM,

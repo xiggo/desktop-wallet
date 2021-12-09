@@ -15,6 +15,24 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
             class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
           >
             <div
+              class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-11 gap-4"
+            >
+              <div
+                class="flex items-center justify-center "
+                data-testid="WalletIcon__Starred"
+              >
+                <span>
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 20px; height: 20px;"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div />
+            </div>
+            <div
               class="flex items-center -space-x-1"
             >
               <div
@@ -23,19 +41,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
                 <span>
                   <span
                     class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 44px; height: 44px; border-radius: 50%;"
-                  >
-                    ‌
-                  </span>
-                </span>
-              </div>
-              <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
-              >
-                <span>
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 44px; height: 44px; border-radius: 50%;"
+                    style="width: 20px; height: 20px;"
                   >
                     ‌
                   </span>
@@ -45,7 +51,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
             <span>
               <span
                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 260px; height: 16px;"
+                style="width: 200px; height: 20px;"
               >
                 ‌
               </span>
@@ -59,7 +65,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
             <span>
               <span
                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 100px; height: 16px;"
+                style="width: 100px; height: 20px;"
               >
                 ‌
               </span>
@@ -73,7 +79,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
             <span>
               <span
                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 229px; height: 16px;"
+                style="width: 150px; height: 20px;"
               >
                 ‌
               </span>
@@ -87,11 +93,53 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
             <span>
               <span
                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 100px; height: 16px;"
+                style="width: 100px; height: 20px;"
               >
                 ‌
               </span>
             </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end text-theme-secondary-text"
+          >
+            <button
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe ml-3 my-auto "
+              data-testid="WalletHeader__send-button"
+              disabled=""
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                Send
+              </div>
+            </button>
+            <div
+              class="ml-3"
+              data-testid="WalletHeader__more-button"
+            >
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe w-11 flex-1 text-white bg-theme-primary-600 hover:bg-theme-primary-700"
+                disabled=""
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <div
+                    class="sc-bdvvtL qGXhc"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      ellipsis-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
           </div>
         </td>
       </tr>
@@ -112,8 +160,26 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
       >
         <td>
           <div
-            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-4"
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
           >
+            <div
+              class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+            >
+              <div
+                class="flex items-center justify-center "
+                data-testid="WalletIcon__Starred"
+              >
+                <span>
+                  <span
+                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 20px; height: 20px;"
+                  >
+                    ‌
+                  </span>
+                </span>
+              </div>
+              <div />
+            </div>
             <div
               class="flex items-center space-x-4"
             >
@@ -123,19 +189,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
                 <span>
                   <span
                     class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 20px; height: 20px; border-radius: 50%;"
-                  >
-                    ‌
-                  </span>
-                </span>
-              </div>
-              <div
-                class="Circle__CircleWrapper-sc-d5u41q-0 csrTuU border-transparent ring-theme-background"
-              >
-                <span>
-                  <span
-                    class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                    style="width: 20px; height: 20px; border-radius: 50%;"
+                    style="width: 20px; height: 20px;"
                   >
                     ‌
                   </span>
@@ -145,7 +199,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
             <span>
               <span
                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 260px; height: 16px;"
+                style="width: 200px; height: 20px;"
               >
                 ‌
               </span>
@@ -159,7 +213,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
             <span>
               <span
                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 100px; height: 16px;"
+                style="width: 100px; height: 20px;"
               >
                 ‌
               </span>
@@ -173,7 +227,7 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
             <span>
               <span
                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 229px; height: 16px;"
+                style="width: 150px; height: 20px;"
               >
                 ‌
               </span>
@@ -187,11 +241,53 @@ exports[`WalletListItemSkeleton should render wallet list skeleton when isCompac
             <span>
               <span
                 class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                style="width: 100px; height: 16px;"
+                style="width: 100px; height: 20px;"
               >
                 ‌
               </span>
             </span>
+          </div>
+        </td>
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+          >
+            <button
+              class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+              data-testid="WalletHeader__send-button"
+              disabled=""
+              type="button"
+            >
+              <div
+                class="flex items-center space-x-2"
+              >
+                Send
+              </div>
+            </button>
+            <div
+              class="ml-3"
+              data-testid="WalletHeader__more-button"
+            >
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                disabled=""
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <div
+                    class="sc-bdvvtL qGXhc"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      ellipsis-vertical.svg
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
           </div>
         </td>
       </tr>

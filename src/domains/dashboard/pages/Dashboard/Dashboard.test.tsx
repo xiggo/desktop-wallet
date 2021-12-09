@@ -148,7 +148,7 @@ describe("Dashboard", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(5));
+		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(9));
 
 		userEvent.click(screen.getByText(dashboardTranslations.WALLET_CONTROLS.IMPORT_LEDGER));
 
@@ -240,13 +240,10 @@ describe("Dashboard", () => {
 	});
 
 	it("should display empty block when there are no transactions", async () => {
-		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockImplementation(() => {
-			const response = {
-				hasMorePages: () => false,
-				items: () => [],
-			};
-			return Promise.resolve(response);
-		});
+		const mockTransactionsAggregate = jest.spyOn(profile.transactionAggregate(), "all").mockResolvedValue({
+			hasMorePages: () => false,
+			items: () => [],
+		} as any);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/dashboard">
@@ -257,6 +254,11 @@ describe("Dashboard", () => {
 				routes: [dashboardURL],
 				withProfileSynchronizer: true,
 			},
+		);
+
+		await waitFor(
+			() => expect(within(screen.getByTestId("TransactionTable")).getByRole("rowgroup")).toBeVisible(),
+			{ timeout: 4000 },
 		);
 
 		await expect(screen.findByTestId("EmptyBlock")).resolves.toBeVisible();

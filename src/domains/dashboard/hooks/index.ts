@@ -1,1 +1,1 @@
-export * from "./use-wallet-config";
+export * from "./use-latest-transactions";

@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { FC } from "react";
+import React from "react";
 import { styled } from "twin.macro";
 
 import { getStyles, TableRowStyleProperties } from "./TableRow.styles";
@@ -11,7 +11,7 @@ type TableRowProperties = {
 
 const TableRowStyled = styled.tr<TableRowProperties>(getStyles);
 
-export const TableRow: FC<TableRowProperties> = ({ border = true, dotted, children, isSelected, onClick }) => (
+export const TableRow: React.FC<TableRowProperties> = ({ border = true, dotted, children, isSelected, onClick }) => (
 	<TableRowStyled
 		data-testid="TableRow"
 		className={cn({ group: !!onClick })}

@@ -1,3 +1,5 @@
+import { FC, SVGProps } from "react";
+
 import { ArrowIcons } from "./arrows";
 import { ReactComponent as Bell } from "./bell.svg";
 import { ReactComponent as Categories } from "./categories.svg";
@@ -57,7 +59,7 @@ import { ReactComponent as UnderlineSun } from "./underline-sun.svg";
 import { ReactComponent as User } from "./user.svg";
 import { ReactComponent as UserCheckMark } from "./user-check-mark.svg";
 
-export const SvgCollection: any = {
+export const SvgCollection: Record<string, FC<SVGProps<SVGSVGElement>>> = {
 	...ArrowIcons,
 	...Currencies,
 	...TransactionIcons,

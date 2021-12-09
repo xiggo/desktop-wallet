@@ -21,7 +21,7 @@ interface UpdateWalletNameState {
 	name: string;
 }
 
-export const UpdateWalletName = ({ onAfterSave, onCancel, profile, wallet }: UpdateWalletNameProperties) => {
+export const UpdateWalletName: React.VFC<UpdateWalletNameProperties> = ({ onAfterSave, onCancel, profile, wallet }) => {
 	const getDefaultValues = (): UpdateWalletNameState => ({
 		name: wallet.alias() as string,
 	});
@@ -56,7 +56,7 @@ export const UpdateWalletName = ({ onAfterSave, onCancel, profile, wallet }: Upd
 			size="lg"
 			onClose={onCancel}
 		>
-			<Form context={form as any} onSubmit={onSubmit as any} className="mt-8">
+			<Form context={form} onSubmit={onSubmit} className="mt-8">
 				<FormField name="name">
 					<FormLabel>{t("WALLETS.WALLET_NAME")}</FormLabel>
 					<div className="relative">

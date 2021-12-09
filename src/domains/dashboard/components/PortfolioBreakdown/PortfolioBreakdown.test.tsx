@@ -146,7 +146,7 @@ describe("PortfolioBreakdown", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
-	it("should render empty", () => {
+	it("should return nothing when portfolio is empty and there are no filtered networks", () => {
 		portfolioBreakdownMock.mockReturnValue([]);
 
 		const { asFragment } = render(
@@ -158,8 +158,25 @@ describe("PortfolioBreakdown", () => {
 			/>,
 		);
 
+		expect(asFragment()).toMatchInlineSnapshot("<DocumentFragment />");
+	});
+
+	it("should render empty block when portfolio is empty and there are filtered networks", () => {
+		portfolioBreakdownMock.mockReturnValue([]);
+
+		const { asFragment } = render(
+			<PortfolioBreakdown
+				profile={profile}
+				profileIsSyncingExchangeRates={false}
+				selectedNetworkIds={["ark.mainnet"]}
+				liveNetworkIds={liveNetworkIds}
+			/>,
+		);
+
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
-		expect(screen.getByTestId("EmptyBlock")).toHaveTextContent(/Your portfolio is currently empty/);
+		expect(screen.getByTestId("EmptyBlock")).toHaveTextContent(
+			/Please enable at least one public network to display your portfolio report/,
+		);
 
 		expect(asFragment()).toMatchSnapshot();
 	});

@@ -95,14 +95,14 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 		return <PortfolioBreakdownSkeleton />;
 	}
 
-	if (assets.length === 0) {
+	if (assets.length === 0 && !isFilteringNetworks) {
+		return <></>;
+	}
+
+	if (assets.length === 0 && isFilteringNetworks) {
 		return (
 			<EmptyBlock>
-				{isFilteringNetworks ? (
-					<Trans i18nKey="DASHBOARD.PORTFOLIO_BREAKDOWN.FILTERED" />
-				) : (
-					<Trans i18nKey="DASHBOARD.PORTFOLIO_BREAKDOWN.EMPTY" components={{ bold: <strong /> }} />
-				)}
+				<Trans i18nKey="DASHBOARD.PORTFOLIO_BREAKDOWN.FILTERED" />
 			</EmptyBlock>
 		);
 	}

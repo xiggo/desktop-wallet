@@ -118,7 +118,7 @@ export const Modal = ({
 		return <></>;
 	}
 
-	const handleClickOverlay = () => {
+	const handleClickOverlay = (event: React.MouseEvent<HTMLElement>) => {
 		if (referenceShouldClose.current === null) {
 			referenceShouldClose.current = true;
 		}
@@ -128,6 +128,8 @@ export const Modal = ({
 			return;
 		}
 
+		event.preventDefault();
+		event.stopPropagation();
 		onClose();
 	};
 

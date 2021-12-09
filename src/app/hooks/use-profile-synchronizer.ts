@@ -229,7 +229,6 @@ export const useProfileRestore = () => {
 					.values()
 					.map((wallet) => wallet.network().id()),
 			),
-			viewType: "grid",
 			walletsDisplayType: "all",
 		};
 

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WalletListItem.blocks should render CurrencyCell 1`] = `[Function]`;
+
+exports[`WalletListItem.blocks should render CurrencyCell 2`] = `[Function]`;
+
+exports[`WalletListItem.blocks should render CurrencyCell 3`] = `[Function]`;
+
+exports[`WalletListItem.blocks should render WalletCell 1`] = `[Function]`;

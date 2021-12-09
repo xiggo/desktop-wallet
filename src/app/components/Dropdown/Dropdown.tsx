@@ -77,9 +77,9 @@ export const Dropdown: FC<DropdownProperties> = ({
 				if (option.disabled) {
 					return;
 				}
-				onSelectOption(option);
 				event.preventDefault();
 				event.stopPropagation();
+				onSelectOption(option);
 			};
 
 			if (options.length > 0 && isOptionGroup(options[0])) {
@@ -151,9 +151,9 @@ export const Dropdown: FC<DropdownProperties> = ({
 			if (disableToggle) {
 				return;
 			}
-			setIsOpen(!isOpen);
 			event.preventDefault();
 			event.stopPropagation();
+			setIsOpen(!isOpen);
 		},
 		[disableToggle, setIsOpen, isOpen],
 	);

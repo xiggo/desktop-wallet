@@ -13,22 +13,14 @@ exports[`PortfolioBreakdown should render empty (filtered) message when there ar
 </DocumentFragment>
 `;
 
-exports[`PortfolioBreakdown should render empty 1`] = `
+exports[`PortfolioBreakdown should render empty block when portfolio is empty and there are filtered networks 1`] = `
 <DocumentFragment>
   <div
     class="border border-solid border-theme-secondary-300 dark:border-theme-secondary-800 rounded-lg text-theme-secondary-text text-center leading-5 p-6"
     data-testid="EmptyBlock"
   >
     <div>
-      Your portfolio is currently empty. 
-      <strong>
-        Create
-      </strong>
-       or 
-      <strong>
-        Import
-      </strong>
-       a wallet to get started.
+      Please enable at least one public network to display your portfolio report.
     </div>
   </div>
 </DocumentFragment>

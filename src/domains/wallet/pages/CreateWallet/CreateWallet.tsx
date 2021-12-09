@@ -15,7 +15,7 @@ import { StepIndicator } from "@/app/components/StepIndicator";
 import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
-import { useWalletConfig } from "@/domains/dashboard/hooks";
+import { useWalletConfig } from "@/domains/wallet/hooks";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
 import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";

@@ -2,7 +2,6 @@ import { DashboardConfiguration } from "@/domains/dashboard/pages/Dashboard";
 
 interface BaseProperties {
 	networks?: any;
-	viewType?: "list" | "grid";
 	useTestNetworks?: boolean;
 	walletsDisplayType?: string;
 	selectedNetworkIds: string[];

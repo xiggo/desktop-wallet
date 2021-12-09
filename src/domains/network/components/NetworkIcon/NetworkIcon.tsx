@@ -28,7 +28,7 @@ const Placeholder = (properties: CircleProperties) => (
 	/>
 );
 
-export const NetworkIcon = ({
+export const NetworkIcon: React.VFC<NetworkIconProperties> = ({
 	network,
 	iconSize = "lg",
 	className,
@@ -36,7 +36,7 @@ export const NetworkIcon = ({
 	tooltipDarkTheme,
 	isCompact = false,
 	...properties
-}: NetworkIconProperties) => {
+}) => {
 	if (!network) {
 		return <Placeholder className={className} {...properties} />;
 	}

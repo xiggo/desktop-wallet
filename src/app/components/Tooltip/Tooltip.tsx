@@ -10,7 +10,7 @@ export type TooltipProperties = {
 	size?: Size;
 } & TippyProps;
 
-export const Tooltip = ({ size, theme, ...properties }: TooltipProperties) => {
+export const Tooltip: React.FC<TooltipProperties> = ({ size, theme, ...properties }) => {
 	const themeOptions = useTheme();
 	if (!properties.content) {
 		return <>{properties.children}</>;

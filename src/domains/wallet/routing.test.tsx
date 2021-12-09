@@ -2,7 +2,7 @@ import { WalletRoutes } from "@/domains/wallet/routing";
 
 describe("Wallet routing", () => {
 	it("should have 3 routes", () => {
-		expect(WalletRoutes).toHaveLength(3);
+		expect(WalletRoutes).toHaveLength(4);
 	});
 
 	it("should have a page to create a wallet", () => {

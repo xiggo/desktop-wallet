@@ -1,9 +1,10 @@
+import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 import { useNetworks } from "app/hooks";
 import { useMemo } from "react";
 
 import { FilterWalletsHookProperties } from "./FilterWallets.contracts";
-import { useWalletConfig } from "@/domains/dashboard/hooks";
+import { useWalletConfig } from "@/domains/wallet/hooks";
 
 export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) => {
 	const { defaultConfiguration, setValue, walletsDisplayType, selectedNetworkIds, viewType } = useWalletConfig({
@@ -12,7 +13,7 @@ export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) =
 
 	const basicNetworks = useNetworks(profile);
 	const allWalletsLength = profile.wallets().values().length;
-	const networks = useMemo(
+	const networks = useMemo<{ network: Networks.Network; isSelected: boolean }[]>(
 		() =>
 			basicNetworks.map((network) => ({
 				isSelected: selectedNetworkIds.includes(network.id()),

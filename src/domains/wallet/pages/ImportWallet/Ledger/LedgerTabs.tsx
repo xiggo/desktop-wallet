@@ -16,7 +16,7 @@ import { TabPanel, Tabs } from "@/app/components/Tabs";
 import { LedgerData, useLedgerContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
 import { useKeydown } from "@/app/hooks/use-keydown";
-import { useWalletConfig } from "@/domains/dashboard/hooks";
+import { useWalletConfig } from "@/domains/wallet/hooks";
 import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { assertWallet } from "@/utils/assertions";
 

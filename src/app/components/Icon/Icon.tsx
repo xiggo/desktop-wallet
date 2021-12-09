@@ -5,11 +5,12 @@ import styled from "styled-components";
 import { SvgCollection } from "@/app/assets/svg";
 import { Size } from "@/types";
 
-type Properties = {
+type IconProperties = {
 	name: string;
 	size?: Size;
 	as?: React.ElementType;
 	fallback?: React.ReactNode;
+	dimensions?: [number, number];
 } & Omit<React.HTMLProps<any>, "size" | "width" | "height">;
 
 interface WrapperProperties {
@@ -24,13 +25,15 @@ const Wrapper = styled.div(({ width, height }: WrapperProperties) => ({
 	},
 }));
 
-export const Icon = ({ name, fallback, size, ...properties }: Properties) => {
+export const Icon: React.VFC<IconProperties> = ({ name, fallback, size, dimensions, ...properties }) => {
 	const Svg = SvgCollection[name];
 
-	const getDimensions = (size?: Size): number[] => {
-		const sizeMap: {
-			[key: string]: number[];
-		} = {
+	const getDimensions = (size?: Size): [number, number] => {
+		if (dimensions) {
+			return dimensions;
+		}
+
+		const sizeMap: Record<string, [number, number]> = {
 			lg: [20, 20],
 			md: [16, 16],
 			sm: [10, 10],

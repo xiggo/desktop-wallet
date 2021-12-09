@@ -1,52 +1,66 @@
+import { uniq } from "@payvo/sdk-helpers";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import React, { FC, useState } from "react";
+import { EmptyBlock } from "app/components/EmptyBlock";
+import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
+import { PortfolioBreakdown } from "domains/dashboard/components/PortfolioBreakdown";
+import { PortfolioHeader } from "domains/wallet/components/PortfolioHeader";
+import { WalletsGroupsList } from "domains/wallet/components/WalletsGroup";
+import { useLatestTransactions } from "domains/dashboard/hooks/use-latest-transactions";
+import { TransactionTable } from "domains/transaction/components/TransactionTable";
+import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
 
-import { EmptyBlock } from "@/app/components/EmptyBlock";
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";
 import { useActiveProfile } from "@/app/hooks";
-import { Wallets } from "@/domains/dashboard/components/Wallets";
-import { useLatestTransactions } from "@/domains/dashboard/hooks/use-latest-transactions";
 import { WelcomeModal } from "@/domains/profile/components/WelcomeModal";
 import { TransactionDetailModal } from "@/domains/transaction/components/TransactionDetailModal";
-import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
 
-export const Dashboard: FC = () => {
-	const history = useHistory();
-	const { t } = useTranslation();
+export const Dashboard: React.VFC = () => {
 	const activeProfile = useActiveProfile();
-
-	const { profileIsSyncing } = useConfiguration();
+	const { t } = useTranslation();
 	const { env } = useEnvironmentContext();
-
-	const profileWalletsCount = activeProfile.wallets().count();
+	const { profileIsSyncing, profileIsSyncingExchangeRates } = useConfiguration();
+	const profileIsSyncedWithNetwork = !activeProfile.hasBeenPartiallyRestored();
+	const walletsCount = activeProfile.wallets().count();
+	const { selectedNetworkIds } = useWalletFilters({ profile: activeProfile });
+	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
+		undefined,
+	);
 	const showTransactions = activeProfile.appearance().get("dashboardTransactionHistory");
 	const exchangeCurrency = activeProfile.settings().get<string>(Contracts.ProfileSetting.ExchangeCurrency);
-
 	const { isLoadingTransactions, latestTransactions } = useLatestTransactions({
 		profile: activeProfile,
 		profileIsSyncing,
 	});
 
-	const [transactionModalItem, setTransactionModalItem] = useState<DTO.ExtendedConfirmedTransactionData | undefined>(
-		undefined,
+	const liveNetworkIds = useMemo(
+		() =>
+			uniq(
+				activeProfile
+					.wallets()
+					.values()
+					.filter((wallet) => wallet.network().isLive())
+					.map((wallet) => wallet.networkId()),
+			),
+		[activeProfile, walletsCount, profileIsSyncedWithNetwork], // eslint-disable-line react-hooks/exhaustive-deps
 	);
 
 	return (
 		<>
 			<Page isBackDisabled={true}>
-				<Wallets
-					title={t("COMMON.WALLETS")}
-					walletsCount={profileWalletsCount}
-					isLoading={profileIsSyncing}
-					onCreateWallet={() => history.push(`/profiles/${activeProfile.id()}/wallets/create`)}
-					onImportWallet={() => history.push(`/profiles/${activeProfile.id()}/wallets/import`)}
-					onImportLedgerWallet={() =>
-						history.push(`/profiles/${activeProfile.id()}/wallets/import?ledger=true`)
-					}
-				/>
+				<Section>
+					<PortfolioHeader />
+					<div className="mb-4">
+						<PortfolioBreakdown
+							profile={activeProfile}
+							profileIsSyncingExchangeRates={profileIsSyncingExchangeRates}
+							liveNetworkIds={liveNetworkIds}
+							selectedNetworkIds={selectedNetworkIds}
+						/>
+					</div>
+					<WalletsGroupsList />
+				</Section>
 
 				{showTransactions && (
 					<Section className="mt-2" data-testid="dashboard__transactions-view">

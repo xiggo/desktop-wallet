@@ -19,7 +19,7 @@ import { useQueryParameters } from "@/app/hooks";
 import { useActiveProfile } from "@/app/hooks/env";
 import { useKeydown } from "@/app/hooks/use-keydown";
 import { toasts } from "@/app/services";
-import { useWalletConfig } from "@/domains/dashboard/hooks";
+import { useWalletConfig } from "@/domains/wallet/hooks";
 import { EncryptPasswordStep } from "@/domains/wallet/components/EncryptPasswordStep";
 import { NetworkStep } from "@/domains/wallet/components/NetworkStep";
 import { UpdateWalletName } from "@/domains/wallet/components/UpdateWalletName";

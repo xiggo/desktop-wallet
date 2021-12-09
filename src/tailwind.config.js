@@ -263,7 +263,7 @@ module.exports = {
 			margin: ["first"],
 			opacity: ["group-hover"],
 			padding: ["first", "last"],
-			ringColor: ["dark", "group-hover"],
+			ringColor: ["dark", "hover", "group-hover"],
 			textAlign: ["focus"],
 			visibility: ["group-hover"],
 		},

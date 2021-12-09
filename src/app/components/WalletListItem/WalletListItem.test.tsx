@@ -1,19 +1,21 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
+import * as useWalletActionsModule from "domains/wallet/hooks/use-wallet-actions";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
-
 import { WalletListItem } from "./WalletListItem";
+
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
+import * as isFullySyncedModule from "@/domains/wallet/utils/is-fully-synced";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 const history = createMemoryHistory();
 
-let profile: Contracts.IProfile;
-let wallet: Contracts.IReadWriteWallet;
-
 describe("WalletListItem", () => {
+	let profile: Contracts.IProfile;
+	let wallet: Contracts.IReadWriteWallet;
+
 	beforeAll(() => {
 		history.push(dashboardURL);
 	});
@@ -48,39 +50,14 @@ describe("WalletListItem", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render for selected wallet", () => {
-		jest.spyOn(wallet.network(), "isTest").mockReturnValue(false);
-
-		const walletId = "ac38fe6d-4b67-4ef1-85be-17c5f6841129";
-
-		const { asFragment } = render(
-			<table>
-				<tbody>
-					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} activeWalletId={walletId} />
-					</Route>
-				</tbody>
-			</table>,
-			{
-				history,
-				routes: [dashboardURL],
-			},
-		);
-
-		expect(asFragment()).toMatchSnapshot();
-		expect(screen.queryByText("N/A")).toBeNull();
-	});
-
 	it("should render with a N/A for fiat", () => {
-		jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
-
-		const walletId = "ac38fe6d-4b67-4ef1-85be-17c5f6841129";
+		const isTestMock = jest.spyOn(wallet.network(), "isTest").mockReturnValue(true);
 
 		const { asFragment } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} activeWalletId={walletId} />
+						<WalletListItem wallet={wallet} isCompact={false} />
 					</Route>
 				</tbody>
 			</table>,
@@ -92,15 +69,18 @@ describe("WalletListItem", () => {
 
 		expect(asFragment()).toMatchSnapshot();
 		expect(screen.getByText("N/A")).toBeInTheDocument();
+
+		isTestMock.mockRestore();
 	});
 
 	it("should render with default BTC as default exchangeCurrency", () => {
 		const mockExchangeCurrency = jest.spyOn(wallet, "exchangeCurrency").mockReturnValue(undefined as any);
+
 		const { container } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} />
+						<WalletListItem wallet={wallet} isCompact={false} />
 					</Route>
 				</tbody>
 			</table>,
@@ -117,14 +97,22 @@ describe("WalletListItem", () => {
 		mockExchangeCurrency.mockRestore();
 	});
 
-	it("should call onClick when clicked and fully restored", () => {
-		const onClick = jest.fn();
+	it("should avoid click on TableRow when syncing", () => {
+		const useWalletActionsReturn = {
+			activeModal: "wallet-name",
+			handleOpen: jest.fn(),
+		} as unknown as ReturnType<typeof useWalletActionsModule.useWalletActions>;
 
-		render(
+		const isFullySyncedSpy = jest.spyOn(isFullySyncedModule, "isFullySynced").mockReturnValue(false);
+		const useWalletActionsSpy = jest
+			.spyOn(useWalletActionsModule, "useWalletActions")
+			.mockReturnValue(useWalletActionsReturn);
+
+		const { asFragment } = render(
 			<table>
 				<tbody>
 					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} onClick={onClick} />
+						<WalletListItem wallet={wallet} isCompact={false} />
 					</Route>
 				</tbody>
 			</table>,
@@ -134,34 +122,15 @@ describe("WalletListItem", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText(wallet.alias()!));
+		expect(asFragment).toMatchSnapshot();
 
-		expect(onClick).toHaveBeenCalledWith(wallet.id());
-	});
+		expect(screen.getByTestId("UpdateWalletName__submit")).toBeInTheDocument();
 
-	it("should not call onClick when clicked but not fully restored", () => {
-		const hasBeenFullyRestored = jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
+		userEvent.click(screen.getByTestId("TableRow"));
 
-		const onClick = jest.fn();
+		expect(useWalletActionsReturn.handleOpen).not.toHaveBeenCalled();
 
-		render(
-			<table>
-				<tbody>
-					<Route path="/profiles/:profileId/dashboard">
-						<WalletListItem wallet={wallet} onClick={onClick} />
-					</Route>
-				</tbody>
-			</table>,
-			{
-				history,
-				routes: [dashboardURL],
-			},
-		);
-
-		userEvent.click(screen.getByText(wallet.alias()!));
-
-		expect(onClick).not.toHaveBeenCalled();
-
-		hasBeenFullyRestored.mockRestore();
+		isFullySyncedSpy.mockRestore();
+		useWalletActionsSpy.mockRestore();
 	});
 });
