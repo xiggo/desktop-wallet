@@ -302,7 +302,7 @@ describe("Use Ledger Connection", () => {
 				screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
 			).resolves.toBeVisible();
 
-			await waitFor(() => () => expect(getPublicKeySpy).toHaveBeenCalledTimes(9));
+			await waitFor(() => expect(getPublicKeySpy).toHaveBeenCalledTimes(3));
 
 			getPublicKeySpy.mockReset();
 		});

@@ -4,15 +4,19 @@ type AccentColorType = "green" | "blue";
 
 const ACCENT_BLUE_CLASS = "accent-blue"; // defined in variables.css
 
+const getCurrentAccentColor = (): AccentColorType => {
+	if (document.body.classList.contains(ACCENT_BLUE_CLASS)) {
+		return "blue";
+	}
+
+	return "green";
+};
+
+const resetAccentColor = () => {
+	document.body.classList.remove(ACCENT_BLUE_CLASS);
+};
+
 const useAccentColor = () => {
-	const getCurrentAccentColor = (): AccentColorType => {
-		if (document.body.classList.contains(ACCENT_BLUE_CLASS)) {
-			return "blue";
-		}
-
-		return "green";
-	};
-
 	const setAccentColor = (value: AccentColorType) => {
 		if (value === "blue") {
 			document.body.classList.add(ACCENT_BLUE_CLASS);
@@ -30,10 +34,6 @@ const useAccentColor = () => {
 		if (getCurrentAccentColor() !== profileAccentColor) {
 			setAccentColor(profileAccentColor as AccentColorType);
 		}
-	};
-
-	const resetAccentColor = () => {
-		document.body.classList.remove(ACCENT_BLUE_CLASS);
 	};
 
 	return {

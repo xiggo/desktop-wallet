@@ -29,6 +29,20 @@ interface ExchangeTransactionsRowStatusProperties {
 	status: Contracts.ExchangeTransactionStatus;
 }
 
+const getCircle = (type: string) => {
+	if (type === "sent") {
+		return {
+			circleStyles: "border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400",
+			iconName: "Sent",
+		};
+	}
+
+	return {
+		circleStyles: "border-theme-success-200 text-theme-success-600 dark:border-theme-success-600",
+		iconName: "Received",
+	};
+};
+
 const ExchangeTransactionRowAmount = ({
 	type,
 	data,
@@ -41,20 +55,6 @@ const ExchangeTransactionRowAmount = ({
 	isPending?: boolean;
 }) => {
 	const { t } = useTranslation();
-
-	const getCircle = (type: string) => {
-		if (type === "sent") {
-			return {
-				circleStyles: "border-theme-danger-100 text-theme-danger-400 dark:border-theme-danger-400",
-				iconName: "Sent",
-			};
-		}
-
-		return {
-			circleStyles: "border-theme-success-200 text-theme-success-600 dark:border-theme-success-600",
-			iconName: "Received",
-		};
-	};
 
 	const { iconName, circleStyles } = getCircle(type);
 

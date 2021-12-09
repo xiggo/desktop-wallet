@@ -9,6 +9,11 @@ import { env, render, screen } from "@/utils/testing-library";
 
 const config = { "desktop-wallet": { permissions: ["THEME"] }, name: "test", version: "1.1" };
 
+const fixture = (api: PluginAPI) => {
+	const MyButton = (properties: any) => <span data-testid="plugin-button" {...properties} />;
+	api.theme().decorate("test.button", () => MyButton);
+};
+
 describe("ThemePluginService", () => {
 	let profile: Contracts.IProfile;
 	let manager: PluginManager;
@@ -23,11 +28,6 @@ describe("ThemePluginService", () => {
 	});
 
 	it("should override components when enabled", () => {
-		const fixture = (api: PluginAPI) => {
-			const MyButton = (properties: any) => <span data-testid="plugin-button" {...properties} />;
-			api.theme().decorate("test.button", () => MyButton);
-		};
-
 		const ctrl = new PluginController(config, fixture);
 		ctrl.enable(profile);
 

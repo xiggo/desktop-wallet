@@ -34,6 +34,24 @@ const stubData = {
 	provider: "changenow",
 };
 
+const Wrapper = ({ children }: { children: React.ReactNode }) => {
+	const { exchangeProviders, fetchProviders } = useExchangeContext();
+
+	useEffect(() => {
+		const _fetchProviders = async () => fetchProviders();
+
+		if (!exchangeProviders?.length) {
+			_fetchProviders();
+		}
+	}, [exchangeProviders, fetchProviders]);
+
+	if (exchangeProviders?.length) {
+		return children;
+	}
+
+	return null;
+};
+
 describe("Exchange", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -52,24 +70,6 @@ describe("Exchange", () => {
 
 		profile.exchangeTransactions().flush();
 	});
-
-	const Wrapper = ({ children }: { children: React.ReactNode }) => {
-		const { exchangeProviders, fetchProviders } = useExchangeContext();
-
-		useEffect(() => {
-			const _fetchProviders = async () => fetchProviders();
-
-			if (!exchangeProviders?.length) {
-				_fetchProviders();
-			}
-		}, [exchangeProviders, fetchProviders]);
-
-		if (exchangeProviders?.length) {
-			return children;
-		}
-
-		return null;
-	};
 
 	it("should render empty", async () => {
 		nock("https://exchanges.payvo.com").get("/api").reply(200, { data: [] });

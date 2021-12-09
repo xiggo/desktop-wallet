@@ -50,6 +50,15 @@ interface TransactionAggregateQueryParameters {
 	type?: string;
 }
 
+const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
+	transactions.items().filter((transaction) => {
+		if (!transaction.isSent()) {
+			return true;
+		}
+
+		return transaction.isConfirmed();
+	});
+
 export const useProfileTransactions = ({ profile, wallets, limit = 30 }: ProfileTransactionsProperties) => {
 	const lastQuery = useRef<string>();
 	const isMounted = useRef(true);
@@ -175,15 +184,6 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		},
 		[LIMIT, profile],
 	);
-
-	const filterTransactions = ({ transactions }: FilterTransactionProperties) =>
-		transactions.items().filter((transaction) => {
-			if (!transaction.isSent()) {
-				return true;
-			}
-
-			return transaction.isConfirmed();
-		});
 
 	const fetchMore = useCallback(async () => {
 		cursor.current = cursor.current + 1;

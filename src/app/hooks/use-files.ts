@@ -18,15 +18,15 @@ interface UseFilesOutput {
 	openFile: (parameters: OpenFileParameters) => Promise<ReadableFile | undefined>;
 }
 
+const readFileContents = (filePath: string): ReadableFile => {
+	const extension = path.extname(filePath);
+	const content = fs.readFileSync(filePath);
+	const name = path.basename(filePath);
+
+	return { content, extension, name };
+};
+
 const useFiles = (): UseFilesOutput => {
-	const readFileContents = (filePath: string): ReadableFile => {
-		const extension = path.extname(filePath);
-		const content = fs.readFileSync(filePath);
-		const name = path.basename(filePath);
-
-		return { content, extension, name };
-	};
-
 	const openFile = async ({ extensions }: OpenFileParameters): Promise<ReadableFile | undefined> => {
 		const { filePaths } = await electron.remote.dialog.showOpenDialog({
 			defaultPath: os.homedir(),

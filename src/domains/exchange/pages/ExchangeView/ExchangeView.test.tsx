@@ -8,21 +8,21 @@ import { getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-li
 
 const history = createMemoryHistory();
 
+const Wrapper = ({ children }: { children: React.ReactNode }) => {
+	const { exchangeProviders, fetchProviders } = useExchangeContext();
+
+	useEffect(() => {
+		const _fetchProviders = async () => fetchProviders();
+
+		if (!exchangeProviders?.length) {
+			_fetchProviders();
+		}
+	}, [exchangeProviders, fetchProviders]);
+
+	return children;
+};
+
 describe("ExchangeView", () => {
-	const Wrapper = ({ children }: { children: React.ReactNode }) => {
-		const { exchangeProviders, fetchProviders } = useExchangeContext();
-
-		useEffect(() => {
-			const _fetchProviders = async () => fetchProviders();
-
-			if (!exchangeProviders?.length) {
-				_fetchProviders();
-			}
-		}, [exchangeProviders, fetchProviders]);
-
-		return children;
-	};
-
 	it("should render", async () => {
 		const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view?exchangeId=changenow`;
 

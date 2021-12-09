@@ -22,6 +22,84 @@ interface AddSignatureProperties {
 	wallet: ProfileContracts.IReadWriteWallet;
 }
 
+const getPublicKey = (wallet: ProfileContracts.IReadWriteWallet) => {
+	if (wallet.isLedger()) {
+		const derivationPath = wallet.data().get(ProfileContracts.WalletData.DerivationPath);
+		assertString(derivationPath);
+
+		return wallet.ledger().getPublicKey(derivationPath);
+	}
+
+	return wallet.publicKey();
+};
+
+const sendMultiSignature = async ({
+	wallet,
+	participants,
+	minParticipants,
+	fee,
+	signatory,
+}: SendMultisignatureProperties) => {
+	// TODO: Handle ledger wallets of other participants without public keys (use derivation path)
+	const restPublicKeys = participants
+		.filter((participant) => participant.address !== wallet.address())
+		.map((participant) => participant.publicKey);
+
+	const senderPublicKey = await getPublicKey(wallet);
+	assertString(senderPublicKey);
+
+	const publicKeys = [senderPublicKey, ...restPublicKeys];
+	await wallet.transaction().sync();
+
+	const transaction: ExtendedSignedTransactionData = wallet.transaction().transaction(
+		await wallet.transaction().signMultiSignature({
+			data: {
+				mandatoryKeys: publicKeys,
+				min: +minParticipants,
+				numberOfSignatures: +minParticipants,
+				optionalKeys: [],
+				publicKeys,
+				senderPublicKey,
+			},
+			fee: +fee,
+			signatory,
+		}),
+	);
+
+	await wallet.transaction().broadcast(transaction.id());
+
+	try {
+		transaction.generatedAddress = (
+			await wallet.coin().address().fromMultiSignature({ min: minParticipants, publicKeys, senderPublicKey })
+		).address;
+	} catch {
+		// We are using a coin that doesn't support multi-signature address derivation.
+	}
+
+	return transaction;
+};
+
+const broadcast = async ({
+	wallet,
+	transactionId,
+}: {
+	wallet: ProfileContracts.IReadWriteWallet;
+	transactionId: string;
+}) => {
+	if (!wallet.transaction().canBeBroadcasted(transactionId)) {
+		throw new Error("Transaction cannot be broadcasted");
+	}
+
+	await wallet.transaction().sync();
+
+	const response = await wallet.transaction().broadcast(transactionId);
+	handleBroadcastError(response);
+
+	await wallet.transaction().sync();
+
+	return wallet.transaction().transaction(transactionId);
+};
+
 export const useMultiSignatureRegistration = () => {
 	const { abortConnectionRetry } = useLedgerContext();
 	const abortReference = useRef(new AbortController());
@@ -42,84 +120,6 @@ export const useMultiSignatureRegistration = () => {
 		}
 
 		return wallet.transaction().addSignature(transactionId, signatory);
-	};
-
-	const getPublicKey = (wallet: ProfileContracts.IReadWriteWallet) => {
-		if (wallet.isLedger()) {
-			const derivationPath = wallet.data().get(ProfileContracts.WalletData.DerivationPath);
-			assertString(derivationPath);
-
-			return wallet.ledger().getPublicKey(derivationPath);
-		}
-
-		return wallet.publicKey();
-	};
-
-	const sendMultiSignature = async ({
-		wallet,
-		participants,
-		minParticipants,
-		fee,
-		signatory,
-	}: SendMultisignatureProperties) => {
-		// TODO: Handle ledger wallets of other participants without public keys (use derivation path)
-		const restPublicKeys = participants
-			.filter((participant) => participant.address !== wallet.address())
-			.map((participant) => participant.publicKey);
-
-		const senderPublicKey = await getPublicKey(wallet);
-		assertString(senderPublicKey);
-
-		const publicKeys = [senderPublicKey, ...restPublicKeys];
-		await wallet.transaction().sync();
-
-		const transaction: ExtendedSignedTransactionData = wallet.transaction().transaction(
-			await wallet.transaction().signMultiSignature({
-				data: {
-					mandatoryKeys: publicKeys,
-					min: +minParticipants,
-					numberOfSignatures: +minParticipants,
-					optionalKeys: [],
-					publicKeys,
-					senderPublicKey,
-				},
-				fee: +fee,
-				signatory,
-			}),
-		);
-
-		await wallet.transaction().broadcast(transaction.id());
-
-		try {
-			transaction.generatedAddress = (
-				await wallet.coin().address().fromMultiSignature({ min: minParticipants, publicKeys, senderPublicKey })
-			).address;
-		} catch {
-			// We are using a coin that doesn't support multi-signature address derivation.
-		}
-
-		return transaction;
-	};
-
-	const broadcast = async ({
-		wallet,
-		transactionId,
-	}: {
-		wallet: ProfileContracts.IReadWriteWallet;
-		transactionId: string;
-	}) => {
-		if (!wallet.transaction().canBeBroadcasted(transactionId)) {
-			throw new Error("Transaction cannot be broadcasted");
-		}
-
-		await wallet.transaction().sync();
-
-		const response = await wallet.transaction().broadcast(transactionId);
-		handleBroadcastError(response);
-
-		await wallet.transaction().sync();
-
-		return wallet.transaction().transaction(transactionId);
 	};
 
 	return { abortReference, addSignature, broadcast, sendMultiSignature };

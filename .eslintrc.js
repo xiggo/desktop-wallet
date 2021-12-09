@@ -166,7 +166,7 @@ module.exports = {
 		"testing-library/prefer-wait-for": "error",
 		"testing-library/render-result-naming-convention": "error",
 		"unicorn/consistent-destructuring": "error",
-		"unicorn/consistent-function-scoping": "warn", // @TODO: set to error and fix resulting issues
+		"unicorn/consistent-function-scoping": "error",
 		"unicorn/error-message": "error",
 		"unicorn/explicit-length-check": "error",
 		"unicorn/filename-case": "warn", // @TODO: set to error and fix resulting issues

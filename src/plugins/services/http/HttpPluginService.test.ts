@@ -11,6 +11,13 @@ const config = {
 	version: "1.1",
 };
 
+const fixture = (api: PluginAPI) => {
+	api.http()
+		.get("https://ark-live.payvo.com")
+		.then((result) => result.json())
+		.catch((error) => console.log(error));
+};
+
 describe("HttpPluginService", () => {
 	let profile: Contracts.IProfile;
 	let manager: PluginManager;
@@ -71,13 +78,6 @@ describe("HttpPluginService", () => {
 
 	it("should fail to get a unknown url", async () => {
 		let response: any;
-
-		const fixture = (api: PluginAPI) => {
-			api.http()
-				.get("https://ark-live.payvo.com")
-				.then((result) => result.json())
-				.catch((error) => console.log(error));
-		};
 
 		ctrl = new PluginController(config, fixture);
 		ctrl.enable(profile);

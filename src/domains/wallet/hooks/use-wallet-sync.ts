@@ -5,6 +5,8 @@ interface WalletImportTypes {
 	env: Environment;
 }
 
+const syncBalance = async (wallet: Contracts.IReadWriteWallet) => wallet.synchroniser().identity();
+
 export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 	const syncFees = async (wallet: Contracts.IReadWriteWallet) => {
 		const network = wallet.network();
@@ -35,8 +37,6 @@ export const useWalletSync = ({ profile, env }: WalletImportTypes) => {
 			}
 		}
 	};
-
-	const syncBalance = async (wallet: Contracts.IReadWriteWallet) => wallet.synchroniser().identity();
 
 	const syncAll = async (wallet: Contracts.IReadWriteWallet) =>
 		Promise.allSettled([syncVotes(wallet), syncRates(profile, wallet), syncFees(wallet), syncBalance(wallet)]);

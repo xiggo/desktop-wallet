@@ -27,6 +27,20 @@ interface TransactionSuccessfulProperties {
 	senderWallet: Contracts.IReadWriteWallet;
 }
 
+const addressFromPublicKey = async (wallet: Contracts.IReadWriteWallet, publicKey?: string) => {
+	if (publicKey === wallet.publicKey() && wallet.isLedger()) {
+		const derivationPath = wallet.data().get(Contracts.WalletData.DerivationPath);
+		assertString(derivationPath);
+
+		const ledgerWalletPublicKey = await wallet.ledger().getPublicKey(derivationPath);
+		return (await wallet.coin().address().fromPublicKey(ledgerWalletPublicKey)).address;
+	}
+
+	assertString(publicKey);
+
+	return (await wallet.coin().address().fromPublicKey(publicKey)).address;
+};
+
 export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }: TransactionSuccessfulProperties) => {
 	const { t } = useTranslation();
 	const [generatedAddress, setGeneratedAddress] = useState<string>();
@@ -40,20 +54,6 @@ export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }
 			if (!transaction) {
 				return;
 			}
-
-			const addressFromPublicKey = async (wallet: Contracts.IReadWriteWallet, publicKey?: string) => {
-				if (publicKey === wallet.publicKey() && wallet.isLedger()) {
-					const derivationPath = wallet.data().get(Contracts.WalletData.DerivationPath);
-					assertString(derivationPath);
-
-					const ledgerWalletPublicKey = await wallet.ledger().getPublicKey(derivationPath);
-					return (await wallet.coin().address().fromPublicKey(ledgerWalletPublicKey)).address;
-				}
-
-				assertString(publicKey);
-
-				return (await wallet.coin().address().fromPublicKey(publicKey)).address;
-			};
 
 			const { min, publicKeys } = getMultiSignatureInfo(transaction);
 

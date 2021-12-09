@@ -32,38 +32,36 @@ const withAbortPromise =
 			return promise.then(resolve).catch(reject);
 		});
 
-// @TODO: extract this into the SDK/Profiles
-export const useMessageSigner = () => {
-	const sign = async (
-		wallet: ProfileContracts.IReadWriteWallet,
-		message: string,
-		mnemonic?: string,
-		wif?: string,
-		secret?: string,
-		options?: {
-			abortSignal?: AbortSignal;
-		},
-	): Promise<Services.SignedMessage> => {
-		if (wallet.isLedger()) {
-			return withAbortPromise(options?.abortSignal)(signWithLedger(message, wallet));
-		}
+const sign = async (
+	wallet: ProfileContracts.IReadWriteWallet,
+	message: string,
+	mnemonic?: string,
+	wif?: string,
+	secret?: string,
+	options?: {
+		abortSignal?: AbortSignal;
+	},
+): Promise<Services.SignedMessage> => {
+	if (wallet.isLedger()) {
+		return withAbortPromise(options?.abortSignal)(signWithLedger(message, wallet));
+	}
 
-		let signatory: any;
+	let signatory: any;
 
-		if (mnemonic) {
-			signatory = await wallet.signatory().mnemonic(mnemonic);
-		}
+	if (mnemonic) {
+		signatory = await wallet.signatory().mnemonic(mnemonic);
+	}
 
-		if (wif) {
-			signatory = await wallet.signatory().mnemonic(wif);
-		}
+	if (wif) {
+		signatory = await wallet.signatory().mnemonic(wif);
+	}
 
-		if (secret) {
-			signatory = await wallet.signatory().secret(secret);
-		}
+	if (secret) {
+		signatory = await wallet.signatory().secret(secret);
+	}
 
-		return wallet.message().sign({ message, signatory });
-	};
-
-	return { sign };
+	return wallet.message().sign({ message, signatory });
 };
+
+// @TODO: extract this into the SDK/Profiles
+export const useMessageSigner = () => ({ sign });

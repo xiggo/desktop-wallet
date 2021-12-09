@@ -8,6 +8,26 @@ import { SentryErrorBoundary } from "./SentryErrorBoundary";
 
 const SentryContext = React.createContext<any>(undefined);
 
+const setLedgerContext = (ledgerData: {
+	hasDeviceAvailable: boolean;
+	isConnected: boolean;
+	isAwaitingConnection: boolean;
+}) => {
+	Sentry.setContext("ledger", {
+		hasDeviceAvailable: ledgerData.hasDeviceAvailable,
+		isAwaitingConnection: ledgerData.isAwaitingConnection,
+		isConnected: ledgerData.isConnected,
+	});
+};
+
+const captureMessage = (message: string) => {
+	Sentry.captureMessage(message);
+};
+
+const captureException = (error: Error) => {
+	Sentry.captureException(error);
+};
+
 const useSentry = () => {
 	const initializedProfileReference = useRef<Contracts.IProfile>();
 
@@ -48,18 +68,6 @@ const useSentry = () => {
 		});
 	};
 
-	const setLedgerContext = (ledgerData: {
-		hasDeviceAvailable: boolean;
-		isConnected: boolean;
-		isAwaitingConnection: boolean;
-	}) => {
-		Sentry.setContext("ledger", {
-			hasDeviceAvailable: ledgerData.hasDeviceAvailable,
-			isAwaitingConnection: ledgerData.isAwaitingConnection,
-			isConnected: ledgerData.isConnected,
-		});
-	};
-
 	const initSentry = (profile: Contracts.IProfile) => {
 		if (initializedProfileReference.current?.id() === profile.id()) {
 			return;
@@ -82,14 +90,6 @@ const useSentry = () => {
 			dsn: undefined,
 		});
 	}, []);
-
-	const captureMessage = (message: string) => {
-		Sentry.captureMessage(message);
-	};
-
-	const captureException = (error: Error) => {
-		Sentry.captureException(error);
-	};
 
 	return {
 		captureException,

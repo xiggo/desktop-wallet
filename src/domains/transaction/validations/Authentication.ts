@@ -4,26 +4,26 @@ import { Contracts } from "@payvo/sdk-profiles";
 
 import { debounceAsync } from "@/utils/debounce";
 
-export const authentication = (t: any) => {
-	// @TODO: extract this into the SDK/Profiles
-	const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, password: string) => {
-		try {
-			const wif = wallet.signingKey().get(password);
+// @TODO: extract this into the SDK/Profiles
+const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, password: string) => {
+	try {
+		const wif = wallet.signingKey().get(password);
 
-			if (BIP39.validate(wif)) {
-				const { address } = await wallet.coin().address().fromMnemonic(wif);
-
-				return address;
-			}
-
-			const { address } = await wallet.coin().address().fromSecret(wif);
+		if (BIP39.validate(wif)) {
+			const { address } = await wallet.coin().address().fromMnemonic(wif);
 
 			return address;
-		} catch {
-			return;
 		}
-	};
 
+		const { address } = await wallet.coin().address().fromSecret(wif);
+
+		return address;
+	} catch {
+		return;
+	}
+};
+
+export const authentication = (t: any) => {
 	const addressFromPassword = debounceAsync(addressFromEncryptedPassword, 700);
 
 	return {

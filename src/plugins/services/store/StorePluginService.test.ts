@@ -7,6 +7,11 @@ import { env } from "@/utils/testing-library";
 
 const config = { "desktop-wallet": { permissions: ["STORE"] }, name: "test", version: "1.1" };
 
+const fixture = (api: PluginAPI) => {
+	api.store().data().set("theme", "dark");
+	api.store().persist();
+};
+
 describe("StorePluginService", () => {
 	let profile: Contracts.IProfile;
 	let manager: PluginManager;
@@ -22,11 +27,6 @@ describe("StorePluginService", () => {
 	});
 
 	it("should persist values", () => {
-		const fixture = (api: PluginAPI) => {
-			api.store().data().set("theme", "dark");
-			api.store().persist();
-		};
-
 		ctrl = new PluginController(config, fixture);
 		ctrl.enable(profile);
 

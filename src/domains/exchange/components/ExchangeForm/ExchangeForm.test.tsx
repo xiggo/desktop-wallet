@@ -50,6 +50,49 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 	return null;
 };
 
+const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; to?: Record<string, string> }) => {
+	// from currency
+	if (from) {
+		await waitFor(() => {
+			expect(screen.getAllByTestId("SelectDropdown__input")[0]).not.toBeDisabled();
+		});
+
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toBeInTheDocument());
+		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[0], from.name);
+
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
+		userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(from.name);
+		});
+
+		await waitFor(() => {
+			expect(screen.getByAltText(`${from.ticker} Icon`)).toBeInTheDocument();
+		});
+	}
+	// to currency
+	if (to) {
+		await waitFor(() => {
+			expect(screen.getAllByTestId("SelectDropdown__input")[1]).not.toBeDisabled();
+		});
+
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toBeInTheDocument());
+		userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], to.name);
+
+		await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
+		userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
+
+		await waitFor(() => {
+			expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(to.name);
+		});
+
+		await waitFor(() => {
+			expect(screen.getByAltText(`${to.ticker} Icon`)).toBeInTheDocument();
+		});
+	}
+};
+
 describe("ExchangeForm", () => {
 	beforeAll(() => {
 		nock.disableNetConnect();
@@ -80,49 +123,6 @@ describe("ExchangeForm", () => {
 				routes: [exchangeURL],
 			},
 		);
-
-	const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; to?: Record<string, string> }) => {
-		// from currency
-		if (from) {
-			await waitFor(() => {
-				expect(screen.getAllByTestId("SelectDropdown__input")[0]).not.toBeDisabled();
-			});
-
-			await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[0]).toBeInTheDocument());
-			userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[0], from.name);
-
-			await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
-			userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
-
-			await waitFor(() => {
-				expect(screen.getAllByTestId("SelectDropdown__input")[0]).toHaveValue(from.name);
-			});
-
-			await waitFor(() => {
-				expect(screen.getByAltText(`${from.ticker} Icon`)).toBeInTheDocument();
-			});
-		}
-		// to currency
-		if (to) {
-			await waitFor(() => {
-				expect(screen.getAllByTestId("SelectDropdown__input")[1]).not.toBeDisabled();
-			});
-
-			await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__input")[1]).toBeInTheDocument());
-			userEvent.paste(screen.getAllByTestId("SelectDropdown__input")[1], to.name);
-
-			await waitFor(() => expect(screen.getAllByTestId("SelectDropdown__option--0")[0]).toBeInTheDocument());
-			userEvent.click(screen.getAllByTestId("SelectDropdown__option--0")[0]);
-
-			await waitFor(() => {
-				expect(screen.getAllByTestId("SelectDropdown__input")[1]).toHaveValue(to.name);
-			});
-
-			await waitFor(() => {
-				expect(screen.getByAltText(`${to.ticker} Icon`)).toBeInTheDocument();
-			});
-		}
-	};
 
 	it("should render exchange form", async () => {
 		const onReady = jest.fn();

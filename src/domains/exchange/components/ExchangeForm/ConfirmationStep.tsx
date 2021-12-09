@@ -20,10 +20,10 @@ interface ExplorerLinkProperties {
 	explorerMask?: string;
 }
 
+const explorerUrl = (value: string, explorerMask: string) => explorerMask.replace("{}", value);
+
 const ExplorerLink = ({ value, explorerMask }: ExplorerLinkProperties) => {
 	const reference = useRef(null);
-
-	const explorerUrl = (value: string, explorerMask: string) => explorerMask.replace("{}", value);
 
 	if (explorerMask) {
 		return (

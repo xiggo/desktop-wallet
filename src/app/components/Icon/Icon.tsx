@@ -25,25 +25,25 @@ const Wrapper = styled.div(({ width, height }: WrapperProperties) => ({
 	},
 }));
 
+const getDimensions = (size?: Size, dimensions?: [number, number]): [number, number] => {
+	if (dimensions) {
+		return dimensions;
+	}
+
+	const sizeMap: Record<string, [number, number]> = {
+		lg: [20, 20],
+		md: [16, 16],
+		sm: [10, 10],
+		xl: [40, 40],
+	};
+
+	return sizeMap[size || "md"];
+};
+
 export const Icon: React.VFC<IconProperties> = ({ name, fallback, size, dimensions, ...properties }) => {
 	const Svg = SvgCollection[name];
 
-	const getDimensions = (size?: Size): [number, number] => {
-		if (dimensions) {
-			return dimensions;
-		}
-
-		const sizeMap: Record<string, [number, number]> = {
-			lg: [20, 20],
-			md: [16, 16],
-			sm: [10, 10],
-			xl: [40, 40],
-		};
-
-		return sizeMap[size || "md"];
-	};
-
-	const [width, height] = getDimensions(size);
+	const [width, height] = getDimensions(size, dimensions);
 
 	return (
 		<Wrapper width={width} height={height} {...properties}>

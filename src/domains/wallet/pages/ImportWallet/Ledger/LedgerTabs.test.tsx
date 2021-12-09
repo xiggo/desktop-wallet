@@ -11,6 +11,9 @@ import { LedgerProvider, minVersionList } from "@/app/contexts";
 import * as scanner from "@/app/contexts/Ledger/hooks/scanner.state";
 import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
+const nextSelector = () => screen.getByTestId("Paginator__continue-button");
+const backSelector = () => screen.getByTestId("Paginator__back-button");
+
 describe("LedgerTabs", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -98,9 +101,6 @@ describe("LedgerTabs", () => {
 			</LedgerProvider>
 		</Route>
 	);
-
-	const nextSelector = () => screen.getByTestId("Paginator__continue-button");
-	const backSelector = () => screen.getByTestId("Paginator__back-button");
 
 	it("should render scan step", async () => {
 		jest.useRealTimers();

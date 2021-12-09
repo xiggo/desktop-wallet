@@ -35,6 +35,14 @@ const fixtures: Record<string, any> = {
 	vote: undefined,
 };
 
+const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
+	jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
+		[fixtures.transfer.id()]: fixtures.transfer,
+	});
+
+	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
+};
+
 describe("MultiSignatureDetail", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -208,14 +216,6 @@ describe("MultiSignatureDetail", () => {
 	afterAll(() => {
 		getVersionSpy.mockRestore();
 	});
-
-	const mockPendingTransfers = (wallet: Contracts.IReadWriteWallet) => {
-		jest.spyOn(wallet.transaction(), "signed").mockReturnValue({
-			[fixtures.transfer.id()]: fixtures.transfer,
-		});
-
-		jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(fixtures.transfer);
-	};
 
 	it("should render summary step for transfer", async () => {
 		mockPendingTransfers(wallet);

@@ -22,8 +22,8 @@ export const isServiceDefinedInConfig: Rule =
 		);
 	};
 
-// TODO:
-export const isServiceEnabled: Rule = () => (result) => result;
+const result = (result) => result;
+export const isServiceEnabled: Rule = () => result;
 
 export const isPluginEnabled: Rule =
 	({ profile, plugin }) =>

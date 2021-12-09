@@ -180,6 +180,13 @@ describe("useActiveProfile", () => {
 let networks: Networks.Network[];
 let wallets: Contracts.IReadWriteWallet[];
 
+const setGlobalVariables = (profileId: string) => {
+	profile = env.profiles().findById(profileId);
+	wallets = profile.wallets().values();
+	networks = wallets.map((wallet) => wallet.network()).sort((a, b) => a.displayName().localeCompare(b.displayName()));
+	networks = [...new Set(networks)];
+};
+
 describe("useNetworks", () => {
 	const TestNetworks = ({ profile }: { profile: Contracts.IProfile }) => {
 		const networks = useNetworks(profile);
@@ -190,15 +197,6 @@ describe("useNetworks", () => {
 				))}
 			</ul>
 		);
-	};
-
-	const setGlobalVariables = (profileId: string) => {
-		profile = env.profiles().findById(profileId);
-		wallets = profile.wallets().values();
-		networks = wallets
-			.map((wallet) => wallet.network())
-			.sort((a, b) => a.displayName().localeCompare(b.displayName()));
-		networks = [...new Set(networks)];
 	};
 
 	beforeEach(() => {

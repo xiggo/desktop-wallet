@@ -126,14 +126,13 @@ describe("Dropdown", () => {
 	});
 
 	it("should close dropdown content when click outside", () => {
-		const onSelect = () => ({});
 		render(
 			<div>
 				<div data-testid="dropdown__outside" className="mt-16">
 					outside elememt to be clicked
 				</div>
 				<div className="m-16">
-					<Dropdown options={options} onSelect={onSelect} />
+					<Dropdown options={options} />
 				</div>
 			</div>,
 		);

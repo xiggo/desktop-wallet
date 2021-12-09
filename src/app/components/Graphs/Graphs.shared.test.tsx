@@ -7,6 +7,12 @@ import { act, render } from "utils/testing-library";
 import { AddToOtherGroupFunction, GRAPH_MIN_VALUE, GraphType } from "./Graphs.contracts";
 import { useGraphData, useGraphTooltip, useGraphWidth } from "./Graphs.shared";
 
+const addToOtherGroup: AddToOtherGroupFunction = (otherGroup, entry) => ({
+	color: "",
+	data: { label: "Other" },
+	value: (otherGroup?.value ?? 0) + entry.value,
+});
+
 describe("Graphs shared hooks", () => {
 	describe("useGraphWidth", () => {
 		it("should return reference and width of the svg element where it is applied", () => {
@@ -176,12 +182,6 @@ describe("Graphs shared hooks", () => {
 			{ size: GRAPH_MIN_VALUE.line / THRESHOLD, type: "line" as GraphType },
 			{ size: GRAPH_MIN_VALUE.donut / THRESHOLD, type: "donut" as GraphType },
 		])("group (%s)", ({ type, size }) => {
-			const addToOtherGroup: AddToOtherGroupFunction = (otherGroup, entry) => ({
-				color: "",
-				data: { label: "Other" },
-				value: (otherGroup?.value ?? 0) + entry.value,
-			});
-
 			it("should not group basic entries", () => {
 				const { result } = renderHook(() => useGraphData(type, addToOtherGroup));
 
