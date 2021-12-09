@@ -1,7 +1,4 @@
 export const translations = {
-	"PAGE_#": "Page {{page}}",
-	"RECIPIENT_#": "Recipient #{{count}}",
-	// eslint-disable-next-line
 	ACTION: "Action",
 	ADAPTER: "Adapter",
 	ADD: "Add",
@@ -210,6 +207,7 @@ export const translations = {
 	OPTIONAL: "optional",
 	OTHER: "Other",
 	PAGE: "Page",
+	"PAGE_#": "Page {{page}}",
 	PAGINATION: {
 		ENTER_NUMBER: "Enter the page number",
 	},
@@ -243,6 +241,7 @@ export const translations = {
 	RATING: "Rating",
 	RECIPIENT: "Recipient",
 	RECIPIENTS: "Recipients",
+	"RECIPIENT_#": "Recipient #{{count}}",
 	REGISTER: "Register",
 	REGISTRATIONS: "Registrations",
 	REMOVE: "Remove",

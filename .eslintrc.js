@@ -171,7 +171,7 @@ module.exports = {
 		"unicorn/explicit-length-check": "error",
 		"unicorn/filename-case": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/import-style": "error",
-		"unicorn/no-abusive-eslint-disable": "warn", // @TODO: set to error and fix resulting issues
+		"unicorn/no-abusive-eslint-disable": "error",
 		"unicorn/no-array-callback-reference": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-array-for-each": "error",
 		"unicorn/no-array-method-this-argument": "warn", // @TODO: set to error and fix resulting issues

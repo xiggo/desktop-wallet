@@ -120,9 +120,7 @@ export const useProfileTransactions = ({ profile, wallets, limit = 30 }: Profile
 		return () => {
 			isMounted.current = false;
 		};
-
-		// eslint-disable-next-line
-	}, [wallets.length, activeMode, activeTransactionType, timestamp]);
+	}, [wallets.length, activeMode, activeTransactionType, timestamp]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const updateFilters = useCallback(
 		({ activeMode, activeTransactionType, timestamp }: TransactionFilters) => {

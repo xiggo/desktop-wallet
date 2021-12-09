@@ -12,7 +12,6 @@ const resources = {
 	},
 };
 
-// eslint-disable-next-line
 i18n.use(initReactI18next).init({
 	defaultNS,
 	lng: "en",

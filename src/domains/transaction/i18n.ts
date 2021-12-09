@@ -148,8 +148,6 @@ export const translations = {
 	},
 	MULTIPLE: "Multiple",
 	MULTISIGNATURE: {
-		"PARTICIPANT_#": "Participant #{{count}}",
-		// eslint-disable-next-line
 		ADD_PARTICIPANT: "Add Participant",
 		AWAITING_CONFIRMATIONS: "Awaiting confirmations",
 		AWAITING_FINAL_SIGNATURE: "Awaiting final signature",
@@ -168,6 +166,7 @@ export const translations = {
 		OUT_OF_LENGTH: "out of {{ length }}",
 		PARTICIPANT: "Multisignature Participant",
 		PARTICIPANTS: "Multisignature Participants",
+		"PARTICIPANT_#": "Participant #{{count}}",
 		READY: "Ready to broadcast",
 		REMOVE_NOT_ALLOWED: "Your own address cannot be removed",
 	},
