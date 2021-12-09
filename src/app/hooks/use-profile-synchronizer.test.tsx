@@ -500,7 +500,7 @@ describe("useProfileRestore", () => {
 
 		const mockProfileFromUrl = jest.spyOn(profileUtilsHook, "useProfileUtils").mockImplementation(() => ({
 			getProfileFromUrl: () => profile,
-			getProfileStoredPassword: () => undefined,
+			getProfileStoredPassword: () => void 0,
 		}));
 
 		const wrapper = ({ children }: any) => (
@@ -576,8 +576,8 @@ describe("useProfileRestore", () => {
 		profile.wallets().flush();
 
 		const mockProfileFromUrl = jest.spyOn(profileUtilsHook, "useProfileUtils").mockImplementation(() => ({
-			getProfileFromUrl: () => undefined,
-			getProfileStoredPassword: () => undefined,
+			getProfileFromUrl: () => void 0,
+			getProfileStoredPassword: () => void 0,
 		}));
 
 		const wrapper = ({ children }: any) => (

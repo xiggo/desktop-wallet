@@ -135,7 +135,7 @@ export const getDefaultLedgerTransport = () => TransportReplayer;
 // Ledger observer spy helper
 export const ledgerObserverSpy = () => {
 	//@ts-ignore
-	let observer: Observer<any> = undefined;
+	let observer: Observer<any>;
 	const unsubscribe = jest.fn();
 
 	const mockTransportListen = (transport: typeof Transport) =>

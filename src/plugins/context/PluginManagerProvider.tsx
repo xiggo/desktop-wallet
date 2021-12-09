@@ -313,7 +313,7 @@ const useManager = (services: PluginService[], manager: PluginManager) => {
 	);
 
 	const installPlugin = useCallback(
-		async (savedPath, name, profileId, subDirectory = undefined) => {
+		async (savedPath, name, profileId, subDirectory?: string) => {
 			const pluginPath = await electron.ipcRenderer.invoke("plugin:install", {
 				name,
 				profileId,

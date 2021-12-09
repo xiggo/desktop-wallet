@@ -39,7 +39,7 @@ export const FormStep = ({
 
 	const senderWallet = useMemo(() => {
 		if (!network) {
-			return undefined;
+			return;
 		}
 		assertNetwork(network);
 		return profile.wallets().findByAddressWithNetwork(senderAddress, network.id());

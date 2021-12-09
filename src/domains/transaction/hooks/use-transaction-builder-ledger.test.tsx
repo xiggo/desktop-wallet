@@ -83,7 +83,7 @@ describe("Use Transaction Builder with Ledger", () => {
 	it("should sign transfer with cold ledger wallet", async () => {
 		const { result } = renderHook(() => useTransactionBuilder(), { wrapper });
 		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
-		jest.spyOn(wallet, "publicKey").mockImplementation(() => undefined);
+		jest.spyOn(wallet, "publicKey").mockImplementation(() => void 0);
 		jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
 
 		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(

@@ -23,7 +23,7 @@ const useGraphData: UseGraphDataHook = (graphType, addToOtherGroup) => {
 
 			const result: GraphDataPoint[] = [];
 
-			let otherGroup: GraphDataPoint | undefined = undefined;
+			let otherGroup: GraphDataPoint | undefined;
 
 			let itemCount = 0;
 

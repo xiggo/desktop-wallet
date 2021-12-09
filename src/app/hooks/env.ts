@@ -56,7 +56,7 @@ export const useActiveWalletWhenNeeded = (isRequired: boolean) => {
 				throw error;
 			}
 
-			return undefined;
+			return;
 		}
 	}, [isRequired, profile, walletId]);
 };

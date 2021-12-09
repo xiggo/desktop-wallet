@@ -161,7 +161,7 @@ export const CreateWallet = () => {
 
 	const renderUpdateWalletNameModal = () => {
 		if (!isEditAliasModalOpen) {
-			return undefined;
+			return;
 		}
 
 		const wallet = getValues("wallet");

@@ -30,7 +30,7 @@ export const RecipientListItem: React.VFC<RecipientListItemProperties> = ({
 
 	const renderAmount = () => {
 		if (!showAmount || amount === undefined) {
-			return undefined;
+			return;
 		}
 
 		if (variant === "condensed") {

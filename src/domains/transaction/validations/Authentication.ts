@@ -20,7 +20,7 @@ export const authentication = (t: any) => {
 
 			return address;
 		} catch {
-			return undefined;
+			return;
 		}
 	};
 

@@ -56,7 +56,7 @@ export const TransactionDetailModal = ({
 	}, [getWalletAlias, profile, transactionItem]);
 
 	const transactionsDetail = {
-		default: () => undefined,
+		default: () => void 0,
 		delegateRegistration: () => DelegateRegistrationDetail,
 		delegateResignation: () => DelegateResignationDetail,
 		ipfs: () => IpfsDetail,

@@ -131,7 +131,7 @@ export const useWalletImport = ({ profile }: { profile: Contracts.IProfile }) =>
 						secret: value,
 					}),
 				),
-			default: () => undefined,
+			default: () => void 0,
 		};
 
 		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition

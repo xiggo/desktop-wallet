@@ -110,7 +110,7 @@ export const NavigationBarFull: React.FC<NavigationBarFullProperties> = ({
 
 	const userInitials = useMemo(() => {
 		if (!isProfileRestored) {
-			return undefined;
+			return;
 		}
 
 		const name = profile.settings().get(Contracts.ProfileSetting.Name);

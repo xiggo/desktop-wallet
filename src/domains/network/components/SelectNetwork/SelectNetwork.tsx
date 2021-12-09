@@ -125,12 +125,12 @@ export const SelectNetwork = ({
 				return "border-theme-success-500 dark:border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 text-theme-secondary-600 dark:text-theme-secondary-200";
 			}
 
-			return undefined;
+			return;
 		}
 
 		// no input or input matches `network`
 		if (!inputValue || isMatch(inputValue, network)) {
-			return undefined;
+			return;
 		}
 
 		// input does not match `network`

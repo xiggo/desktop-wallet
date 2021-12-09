@@ -37,7 +37,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
-					onSelectWallet={() => undefined}
+					onSelectWallet={() => void 0}
 				/>
 			</Route>,
 			{
@@ -70,7 +70,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					title={translations.MODAL_SELECT_ACCOUNT.TITLE}
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
-					onSelectWallet={() => undefined}
+					onSelectWallet={() => void 0}
 				/>
 			</Route>,
 			{
@@ -154,7 +154,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					showConvertedValue={showConvertedValue}
 					wallets={[]}
 					title={"title"}
-					onSelectWallet={() => undefined}
+					onSelectWallet={() => void 0}
 				/>
 			</Route>,
 			{
@@ -180,7 +180,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					showConvertedValue={showConvertedValue}
-					onSelectWallet={() => undefined}
+					onSelectWallet={() => void 0}
 				/>
 			</Route>,
 			{
@@ -227,7 +227,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					showConvertedValue={showConvertedValue}
-					onSelectWallet={() => undefined}
+					onSelectWallet={() => void 0}
 				/>
 			</Route>,
 			{
@@ -275,7 +275,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					showConvertedValue={showConvertedValue}
-					onSelectWallet={() => undefined}
+					onSelectWallet={() => void 0}
 				/>
 			</Route>,
 			{
@@ -330,7 +330,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 					description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 					wallets={wallets}
 					showConvertedValue={showConvertedValue}
-					onSelectWallet={() => undefined}
+					onSelectWallet={() => void 0}
 				/>
 			</Route>,
 			{
@@ -379,7 +379,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				wallets={wallets}
 				showConvertedValue={showConvertedValue}
 				disableAction={(wallet: Contracts.IReadWriteWallet) => wallet.alias() === "Sample Wallet"}
-				onSelectWallet={() => undefined}
+				onSelectWallet={() => void 0}
 			/>,
 		);
 

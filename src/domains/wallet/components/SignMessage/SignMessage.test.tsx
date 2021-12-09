@@ -406,7 +406,7 @@ describe("SignMessage", () => {
 		const { observer, mockTransportListen } = ledgerObserverSpy();
 		const ledgerListenMock = mockTransportListen(transport);
 
-		const consoleErrorMock = jest.spyOn(console, "error").mockImplementation(() => undefined);
+		const consoleErrorMock = jest.spyOn(console, "error").mockImplementation(() => void 0);
 
 		const signMessageSpy = jest.spyOn(wallet.coin().ledger(), "signMessage").mockImplementation(() => {
 			throw new Error("Condition of use not satisfied");
@@ -461,7 +461,7 @@ describe("SignMessage", () => {
 		const toastSpy = jest.spyOn(toasts, "error");
 
 		const isLedgerMock = jest.spyOn(wallet, "isLedger").mockReturnValue(true);
-		const consoleErrorMock = jest.spyOn(console, "error").mockImplementation(() => undefined);
+		const consoleErrorMock = jest.spyOn(console, "error").mockImplementation(() => void 0);
 
 		const { mockTransportListen } = ledgerObserverSpy();
 		const ledgerListenMock = mockTransportListen(transport);

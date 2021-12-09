@@ -39,7 +39,7 @@ describe("SecondSignatureDetail", () => {
 						...TransactionFixture,
 						wallet: () => ({
 							...TransactionFixture.wallet(),
-							alias: () => undefined,
+							alias: () => void 0,
 						}),
 					}}
 				/>
