@@ -415,7 +415,7 @@ describe("SelectDropdown", () => {
 			return (
 				<>
 					<Select onChange={onChange} defaultValue={selected} options={options} />
-					<button type="button" data-testid="btn-reset" onClick={() => setSelected(null)}>
+					<button type="button" data-testid="btn-reset" onClick={() => setSelected(undefined)}>
 						Reset
 					</button>
 				</>

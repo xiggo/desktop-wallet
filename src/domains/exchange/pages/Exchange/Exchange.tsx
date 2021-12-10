@@ -32,8 +32,7 @@ export const Exchange = () => {
 
 	const [currentView, setCurrentView] = useState<ExchangeView>(ExchangeView.Exchanges);
 
-	const [selectedExchangeTransaction, setSelectedExchangeTransaction] =
-		useState<Contracts.IExchangeTransaction | null>(null);
+	const [selectedExchangeTransaction, setSelectedExchangeTransaction] = useState<Contracts.IExchangeTransaction>();
 
 	const { exchangeProviders, fetchProviders } = useExchangeContext();
 	const { checkOrderStatus, prepareParameters } = useOrderStatus();
@@ -95,7 +94,7 @@ export const Exchange = () => {
 	};
 
 	const handleDelete = (exchangeTransaction: Contracts.IExchangeTransaction) => {
-		setSelectedExchangeTransaction(null);
+		setSelectedExchangeTransaction(undefined);
 
 		toasts.success(
 			<Trans
@@ -137,8 +136,8 @@ export const Exchange = () => {
 						isOpen={!!selectedExchangeTransaction}
 						exchangeTransaction={selectedExchangeTransaction}
 						profile={activeProfile}
-						onCancel={() => setSelectedExchangeTransaction(null)}
-						onClose={() => setSelectedExchangeTransaction(null)}
+						onCancel={() => setSelectedExchangeTransaction(undefined)}
+						onClose={() => setSelectedExchangeTransaction(undefined)}
 						onDelete={handleDelete}
 					/>
 				)}

@@ -165,7 +165,7 @@ const UpdateAllBanner = ({
 	const { t } = useTranslation();
 
 	if (hasUpdateAvailableCount === 0) {
-		return null;
+		return <></>;
 	}
 
 	const renderText = () => {
@@ -234,8 +234,8 @@ export const PluginManager = () => {
 		ExtendedSerializedPluginConfigurationData | undefined
 	>(undefined);
 
-	const plugins = allPlugins.map(mapConfigToPluginData.bind(null, activeProfile));
-	const searchResultsData = searchResults.map(mapConfigToPluginData.bind(null, activeProfile));
+	const plugins = allPlugins.map(mapConfigToPluginData.bind(undefined, activeProfile));
+	const searchResultsData = searchResults.map(mapConfigToPluginData.bind(undefined, activeProfile));
 
 	const useCompactTables = !activeProfile.appearance().get("useExpandedTables");
 
@@ -282,7 +282,7 @@ export const PluginManager = () => {
 		.plugins()
 		.all()
 		.map((item) => item.config())
-		.map(mapConfigToPluginData.bind(null, activeProfile));
+		.map(mapConfigToPluginData.bind(undefined, activeProfile));
 
 	const setCurrentView = (value: string) => {
 		resetFilters();

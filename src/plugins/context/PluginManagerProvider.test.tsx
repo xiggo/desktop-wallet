@@ -516,7 +516,7 @@ describe("PluginManagerProvider", () => {
 		const Component = () => {
 			const { fetchPluginPackages, allPlugins, mapConfigToPluginData } = usePluginManagerContext();
 			const onClick = () => fetchPluginPackages();
-			const pluginDatas = allPlugins.map(mapConfigToPluginData.bind(null, profile));
+			const pluginDatas = allPlugins.map(mapConfigToPluginData.bind(undefined, profile));
 
 			return (
 				<div>
@@ -557,7 +557,7 @@ describe("PluginManagerProvider", () => {
 		const Component = () => {
 			const { fetchPluginPackages, allPlugins, mapConfigToPluginData } = usePluginManagerContext();
 			const onClick = () => fetchPluginPackages();
-			const pluginDatas = allPlugins.map(mapConfigToPluginData.bind(null, profile));
+			const pluginDatas = allPlugins.map(mapConfigToPluginData.bind(undefined, profile));
 
 			return (
 				<div>
@@ -644,7 +644,7 @@ describe("PluginManagerProvider", () => {
 		const Component = () => {
 			const { fetchPluginPackages, allPlugins, mapConfigToPluginData, updatePlugin, updatingStats } =
 				usePluginManagerContext();
-			const pluginItems = allPlugins.map(mapConfigToPluginData.bind(null, profile));
+			const pluginItems = allPlugins.map(mapConfigToPluginData.bind(undefined, profile));
 
 			return (
 				<div>
@@ -751,7 +751,7 @@ describe("PluginManagerProvider", () => {
 										<span>Updated failed</span>
 									) : (
 										<>
-											{updateStatus.isAvailable ? <span>Update Available</span> : null}
+											{updateStatus.isAvailable ? <span>Update Available</span> : <></>}
 											<button onClick={() => updatePlugin({ id: package_.name() }, profile.id())}>
 												Update
 											</button>

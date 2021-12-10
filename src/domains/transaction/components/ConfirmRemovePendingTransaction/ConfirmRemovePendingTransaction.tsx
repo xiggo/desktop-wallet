@@ -25,7 +25,7 @@ export const ConfirmRemovePendingTransaction = ({
 	const { getLabel } = useTransactionTypes();
 
 	if (!transaction?.type()) {
-		return null;
+		return <></>;
 	}
 
 	const typeLabel = getLabel(transaction?.type());

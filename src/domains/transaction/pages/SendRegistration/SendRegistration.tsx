@@ -32,7 +32,7 @@ export const SendRegistration = () => {
 	const history = useHistory();
 
 	const [activeTab, setActiveTab] = useState(1);
-	const [transaction, setTransaction] = useState(null as unknown as DTO.ExtendedSignedTransactionData);
+	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [registrationForm, setRegistrationForm] = useState<SendRegistrationForm>();
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 

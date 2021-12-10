@@ -189,7 +189,7 @@ export const Votes: FC = () => {
 										/>
 									</div>
 								</Alert>
-							) : null
+							) : undefined
 						}
 					/>
 				</Section>

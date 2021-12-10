@@ -103,7 +103,7 @@ describe("SelectProfileImage", () => {
 		const openFileDialog = jest.spyOn(electron.remote.dialog, "showOpenDialog").mockImplementation(
 			() =>
 				({
-					filePaths: null,
+					filePaths: undefined,
 				} as any),
 		);
 

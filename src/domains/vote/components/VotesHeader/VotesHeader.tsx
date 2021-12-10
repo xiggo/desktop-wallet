@@ -41,50 +41,48 @@ export const VotesHeader = ({
 		return t("VOTE.VOTES_PAGE.SEARCH_WALLET_PLACEHOLDER");
 	};
 
-	return (
-		<Header
-			title={t("VOTE.VOTES_PAGE.TITLE")}
-			subtitle={t("VOTE.VOTES_PAGE.SUBTITLE")}
-			extra={
-				profile.wallets().count() ? (
-					<div className="flex items-center space-x-5 text-theme-primary-200">
-						<HeaderSearchBar
-							placeholder={renderPlaceholder()}
-							onSearch={setSearchQuery}
-							onReset={() => setSearchQuery("")}
+	const headerExtra = () => {
+		if (profile.wallets().count()) {
+			return (
+				<div className="flex items-center space-x-5 text-theme-primary-200">
+					<HeaderSearchBar
+						placeholder={renderPlaceholder()}
+						onSearch={setSearchQuery}
+						onReset={() => setSearchQuery("")}
+					/>
+
+					<div className="h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800" />
+
+					{selectedAddress && (
+						<VotesFilter
+							totalCurrentVotes={totalCurrentVotes}
+							selectedOption={selectedFilter}
+							onChange={setSelectedFilter}
 						/>
+					)}
 
-						<div className="h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800" />
+					{!selectedAddress && (
+						<div data-testid="Votes__FilterWallets">
+							<Dropdown
+								position="right"
+								toggleContent={
+									<ControlButton isChanged={isFilterChanged}>
+										<div className="flex justify-center items-center w-5 h-5">
+											<Icon name="SlidersVertical" size="lg" />
+										</div>
+									</ControlButton>
+								}
+							>
+								<div className="py-7 px-10 w-128">
+									<FilterWallets {...filterProperties} />
+								</div>
+							</Dropdown>
+						</div>
+					)}
+				</div>
+			);
+		}
+	};
 
-						{selectedAddress && (
-							<VotesFilter
-								totalCurrentVotes={totalCurrentVotes}
-								selectedOption={selectedFilter}
-								onChange={setSelectedFilter}
-							/>
-						)}
-
-						{!selectedAddress && (
-							<div data-testid="Votes__FilterWallets">
-								<Dropdown
-									position="right"
-									toggleContent={
-										<ControlButton isChanged={isFilterChanged}>
-											<div className="flex justify-center items-center w-5 h-5">
-												<Icon name="SlidersVertical" size="lg" />
-											</div>
-										</ControlButton>
-									}
-								>
-									<div className="py-7 px-10 w-128">
-										<FilterWallets {...filterProperties} />
-									</div>
-								</Dropdown>
-							</div>
-						)}
-					</div>
-				) : null
-			}
-		/>
-	);
+	return <Header title={t("VOTE.VOTES_PAGE.TITLE")} subtitle={t("VOTE.VOTES_PAGE.SUBTITLE")} extra={headerExtra()} />;
 };

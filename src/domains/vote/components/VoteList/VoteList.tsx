@@ -42,7 +42,7 @@ const VoteItem = ({ wallet, amount = 0, currency, isNegativeAmount }: VoteItemPr
 
 export const VoteList = ({ votes, currency, isNegativeAmount = false }: VoteListProperties) => {
 	if (votes.length === 0) {
-		return null;
+		return <></>;
 	}
 
 	if ((votes[0] as Contracts.VoteRegistryItem).amount === undefined) {

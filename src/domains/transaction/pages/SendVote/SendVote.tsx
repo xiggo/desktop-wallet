@@ -48,7 +48,7 @@ export const SendVote = () => {
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
 	const [unvotes, setUnvotes] = useState<Contracts.VoteRegistryItem[]>([]);
 	const [votes, setVotes] = useState<Contracts.VoteRegistryItem[]>([]);
-	const [transaction, setTransaction] = useState(null as unknown as DTO.ExtendedSignedTransactionData);
+	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const form = useForm({ mode: "onChange" });

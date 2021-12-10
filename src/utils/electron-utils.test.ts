@@ -1,6 +1,7 @@
-import electron from "electron";
+import electron, { SaveDialogReturnValue } from "electron";
 
 import { appVersion, isIdle, openExternal, saveFile, setScreenshotProtection, setThemeSource } from "./electron-utils";
+import { Theme } from "@/types";
 
 const defaultFilters = [
 	{ extensions: ["json"], name: "JSON" },
@@ -10,7 +11,7 @@ const defaultFilters = [
 describe("Electron utils", () => {
 	describe("setThemeSource", () => {
 		it("should set theme source", () => {
-			setThemeSource("theme");
+			setThemeSource("theme" as Theme);
 
 			expect(electron.remote.nativeTheme.themeSource).toBe("theme");
 		});
@@ -105,9 +106,9 @@ describe("Electron utils", () => {
 		let showSaveDialogMock: jest.SpyInstance;
 
 		beforeEach(() => {
-			showSaveDialogMock = jest.spyOn(electron.remote.dialog, "showSaveDialog").mockImplementation(() => ({
+			showSaveDialogMock = jest.spyOn(electron.remote.dialog, "showSaveDialog").mockResolvedValue({
 				filePath: "filePath",
-			}));
+			} as SaveDialogReturnValue);
 		});
 
 		afterEach(() => {
@@ -115,17 +116,17 @@ describe("Electron utils", () => {
 		});
 
 		it("should return early when the obtained filePath is falsy", async () => {
-			showSaveDialogMock = jest.spyOn(electron.remote.dialog, "showSaveDialog").mockImplementation(() => ({
+			showSaveDialogMock = jest.spyOn(electron.remote.dialog, "showSaveDialog").mockResolvedValue({
 				filePath: undefined,
-			}));
+			} as SaveDialogReturnValue);
 
-			await expect(saveFile()).resolves.toBeUndefined();
+			await expect(saveFile(undefined, undefined)).resolves.toBeUndefined();
 		});
 
 		it("should return the basename", async () => {
-			showSaveDialogMock = jest.spyOn(electron.remote.dialog, "showSaveDialog").mockImplementation(() => ({
+			showSaveDialogMock = jest.spyOn(electron.remote.dialog, "showSaveDialog").mockResolvedValue({
 				filePath: "filename.txt",
-			}));
+			} as SaveDialogReturnValue);
 
 			await expect(saveFile("raw", "filename", { returnBasename: true })).resolves.toBe("filename.txt");
 		});
@@ -149,8 +150,8 @@ describe("Electron utils", () => {
 				});
 			});
 
-			it.each([null, undefined])("should fallback to the default filters when filters is %s", async (filters) => {
-				await saveFile("raw", "path", { filters });
+			it("should fallback to the default filters when filters is undefined", async () => {
+				await saveFile("raw", "path", { filters: undefined });
 
 				expect(showSaveDialogMock).toHaveBeenCalledWith({
 					defaultPath: "path",
@@ -161,19 +162,21 @@ describe("Electron utils", () => {
 
 		describe("when restricting the file path", () => {
 			it("should not throw an error if the given filepath is valid", async () => {
-				showSaveDialogMock = jest.spyOn(electron.remote.dialog, "showSaveDialog").mockImplementation(() => ({
+				showSaveDialogMock = jest.spyOn(electron.remote.dialog, "showSaveDialog").mockResolvedValue({
 					filePath: "./filePath",
-				}));
+				} as SaveDialogReturnValue);
 
-				await expect(saveFile(null, null, { restrictToPath: "./" })).resolves.not.toThrow();
+				// eslint-disable-next-line unicorn/no-null
+				await expect(saveFile(null, undefined, { restrictToPath: "./" })).resolves.not.toThrow();
 			});
 
 			it("should throw an error if the given filepath is invalid", async () => {
-				showSaveDialogMock = jest.spyOn(electron.remote.dialog, "showSaveDialog").mockImplementation(() => ({
+				showSaveDialogMock = jest.spyOn(electron.remote.dialog, "showSaveDialog").mockResolvedValue({
 					filePath: "/home/bar/foo",
-				}));
+				} as SaveDialogReturnValue);
 
-				await expect(saveFile(null, null, { restrictToPath: "/home/foo" })).rejects.toThrow(
+				// eslint-disable-next-line unicorn/no-null
+				await expect(saveFile(null, undefined, { restrictToPath: "/home/foo" })).rejects.toThrow(
 					`Writing to "/home/bar/foo" is not allowed`,
 				);
 			});

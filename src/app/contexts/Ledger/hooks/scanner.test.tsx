@@ -131,15 +131,15 @@ describe("Use Ledger Scanner", () => {
 			return (
 				<div>
 					<ul>
-						{wallets.map((x, index) => (
-							<li key={x.path}>
-								<p>{`Path: ${x.path}`}</p>
-								<p>{`Address: ${x.address}`}</p>
-								<p>{`Selected: ${isSelected(x.path)}`}</p>
+						{wallets.map((wallet, index) => (
+							<li key={wallet.path}>
+								<p>{`Path: ${wallet.path}`}</p>
+								<p>{`Address: ${wallet.address}`}</p>
+								<p>{`Selected: ${isSelected(wallet.path)}`}</p>
 								<input
 									type="checkbox"
 									data-testid={`input--${index}`}
-									onChange={toggleSelect.bind(null, x.path)}
+									onChange={toggleSelect.bind(undefined, wallet.path)}
 								/>
 							</li>
 						))}

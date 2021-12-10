@@ -227,6 +227,7 @@ describe("SelectNetwork", () => {
 	});
 
 	it("should return empty if the item has not defined", () => {
+		// eslint-disable-next-line unicorn/no-null
 		expect(itemToString(null)).toBe("");
 	});
 });

@@ -108,7 +108,7 @@ export const useDeeplink = () => {
 	const { handler } = useDeepLinkHandler();
 
 	useEffect(() => {
-		handler(null, "");
+		handler(undefined, "");
 	}, [handler]);
 };
 

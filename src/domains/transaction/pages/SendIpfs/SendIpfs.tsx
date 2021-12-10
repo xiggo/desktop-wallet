@@ -37,7 +37,7 @@ export const SendIpfs = () => {
 	const history = useHistory();
 
 	const [activeTab, setActiveTab] = useState<Step>(Step.FormStep);
-	const [transaction, setTransaction] = useState(null as unknown as DTO.ExtendedSignedTransactionData);
+	const [transaction, setTransaction] = useState(undefined as unknown as DTO.ExtendedSignedTransactionData);
 	const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
 	const { env, persist } = useEnvironmentContext();

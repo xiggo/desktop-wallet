@@ -11,7 +11,7 @@ describe("Exchange Context", () => {
 	afterEach(() => httpClient.clearCache());
 
 	it("should throw without provider", () => {
-		jest.spyOn(console, "error").mockImplementation(() => null);
+		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
 
 		const Test = () => {
 			const { exchangeProviders } = useExchangeContext();
@@ -20,7 +20,7 @@ describe("Exchange Context", () => {
 
 		expect(() => render(<Test />)).toThrow("[useExchangeContext] Component not wrapped within a Provider");
 
-		console.error.mockRestore();
+		consoleSpy.mockRestore();
 	});
 
 	it("should successfully fetch providers", async () => {

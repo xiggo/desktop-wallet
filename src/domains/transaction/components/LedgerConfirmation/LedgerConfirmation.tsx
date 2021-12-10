@@ -7,10 +7,11 @@ import { Spinner } from "@/app/components/Spinner";
 
 interface LedgerConfirmationProperties {
 	children?: React.ReactNode;
-	detailsHeading?: any;
+	detailsHeading?: string;
+	noHeading?: boolean;
 }
 
-export const LedgerConfirmation = ({ children, detailsHeading }: LedgerConfirmationProperties) => {
+export const LedgerConfirmation = ({ children, detailsHeading, noHeading }: LedgerConfirmationProperties) => {
 	const { t } = useTranslation();
 
 	return (
@@ -36,7 +37,7 @@ export const LedgerConfirmation = ({ children, detailsHeading }: LedgerConfirmat
 					<Divider />
 
 					<section data-testid="LedgerReview__details">
-						{detailsHeading !== null && (
+						{!noHeading && (
 							<h2 className="mb-0 text-2xl font-bold">
 								{detailsHeading || t("TRANSACTION.TRANSACTION_DETAILS")}
 							</h2>

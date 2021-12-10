@@ -85,7 +85,7 @@ export const SignIn = ({ isOpen, profile, onCancel, onClose, onSuccess }: SignIn
 	};
 
 	if (!isOpen) {
-		return null;
+		return <></>;
 	}
 
 	return (

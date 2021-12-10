@@ -25,7 +25,7 @@ export const TransactionRecipients: React.FC<TransactionRecipientsProperties> = 
 	const { t } = useTranslation();
 
 	if (recipients.length === 0) {
-		return null;
+		return <></>;
 	}
 
 	if (recipients.length === 1) {

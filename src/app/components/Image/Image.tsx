@@ -6,12 +6,12 @@ import { useActiveProfile } from "@/app/hooks";
 import { useAccentColor } from "@/app/hooks/use-accent-color";
 import { shouldUseDarkColors } from "@/utils/electron-utils";
 
-type Properties = {
+type ImageProperties = {
 	name: string;
 	domain?: string;
 } & React.HTMLProps<any>;
 
-export const Image = ({ name, domain = "common", ...properties }: Properties) => {
+export const Image: React.VFC<ImageProperties> = ({ name, domain = "common", ...properties }) => {
 	const [imageName, setImageName] = React.useState("");
 	const { getCurrentAccentColor } = useAccentColor();
 	const currentAccentColor = getCurrentAccentColor();
@@ -45,5 +45,5 @@ export const Image = ({ name, domain = "common", ...properties }: Properties) =>
 		return <img src={Image} alt="" {...(properties as React.ImgHTMLAttributes<any>)} />;
 	}
 
-	return Image ? <Image {...properties} /> : null;
+	return Image ? <Image {...properties} /> : <></>;
 };

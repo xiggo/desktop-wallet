@@ -17,7 +17,8 @@ describe("Environment Context", () => {
 	});
 
 	it("should throw without provider", () => {
-		jest.spyOn(console, "error").mockImplementation(() => null);
+		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+
 		const Test = () => {
 			const { env } = useEnvironmentContext();
 			return <p>{env.profiles().count()}</p>;
@@ -26,6 +27,8 @@ describe("Environment Context", () => {
 		expect(() => render(<Test />, { withProviders: false })).toThrow(
 			"[useEnvironment] Component not wrapped within a Provider",
 		);
+
+		consoleSpy.mockRestore();
 	});
 
 	it("should render the wrapper properly", () => {

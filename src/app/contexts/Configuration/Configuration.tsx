@@ -15,7 +15,7 @@ const ConfigurationContext = React.createContext<any>(undefined);
 export const ConfigurationProvider = ({ children, defaultConfiguration }: Properties) => {
 	const [configuration, setConfig] = React.useState<any>({
 		// Domain specific configuration defaults
-		dashboard: null,
+		dashboard: undefined,
 
 		isProfileInitialSync: true,
 

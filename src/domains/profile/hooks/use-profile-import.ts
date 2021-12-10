@@ -76,8 +76,6 @@ export const useProfileImport = ({ env }: { env: Environment }) => {
 					profile.wallets().push(importedWallet);
 					return importedWallet;
 				}
-
-				return null;
 			}),
 		);
 

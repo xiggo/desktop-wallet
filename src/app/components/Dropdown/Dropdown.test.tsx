@@ -342,15 +342,6 @@ describe("Dropdown ClickOutside Hook", () => {
 
 		expect(callback).toHaveBeenCalledWith();
 	});
-
-	it("should do nothing if callback is not provided", () => {
-		const div = document.createElement("div");
-		const reference = { current: div };
-
-		clickOutsideHandler(reference, null);
-
-		userEvent.click(document.body);
-	});
 });
 
 describe("Dropdown positioning", () => {
@@ -429,10 +420,10 @@ describe("Dropdown positioning", () => {
 	});
 
 	it("shouldn't do resize if no ref found", () => {
-		const reference = { current: null };
+		const reference = { current: undefined };
 		Object.defineProperty(reference, "current", {
-			get: jest.fn(() => null),
-			set: jest.fn(() => null),
+			get: jest.fn(() => {}),
+			set: jest.fn(() => {}),
 		});
 		const useReferenceSpy = jest.spyOn(React, "useRef").mockReturnValue(reference);
 		const getBoundingClientRectSpy = jest.spyOn(Element.prototype, "getBoundingClientRect");

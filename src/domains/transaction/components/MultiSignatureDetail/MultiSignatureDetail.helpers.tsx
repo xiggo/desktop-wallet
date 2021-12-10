@@ -99,7 +99,7 @@ export const Paginator = ({
 		);
 	}
 
-	return null;
+	return <></>;
 };
 
 export const getMultiSignatureInfo = (transaction: DTO.ExtendedSignedTransactionData) => {

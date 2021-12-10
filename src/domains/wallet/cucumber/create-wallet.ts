@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-null */
 import { Selector } from "testcafe";
 
 import { buildTranslations } from "../../../app/i18n/helpers";

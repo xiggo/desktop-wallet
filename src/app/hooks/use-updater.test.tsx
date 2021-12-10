@@ -23,7 +23,7 @@ describe("useUpdater hook", () => {
 		jest.spyOn(electron.ipcRenderer, "invoke").mockResolvedValue((event: string) => {
 			if (event === "updater:check-for-updates") {
 				const response = {
-					cancellationToken: isUpdateCalled ? null : "1",
+					cancellationToken: isUpdateCalled ? undefined : "1",
 					updateInfo: { version: "3.0.0" },
 				};
 				isUpdateCalled = true;

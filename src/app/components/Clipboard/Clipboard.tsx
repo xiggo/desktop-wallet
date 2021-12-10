@@ -8,9 +8,9 @@ const defaultProps = {
 	options: {},
 };
 
-export const Clipboard = ({ options = defaultProps.options, ...properties }: ClipboardProperties) => {
+export const Clipboard: React.VFC<ClipboardProperties> = ({ options = defaultProps.options, ...properties }) => {
 	if (!properties.children) {
-		return null;
+		return <></>;
 	}
 
 	if (properties.variant === "icon") {

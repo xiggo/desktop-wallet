@@ -12,7 +12,7 @@ export const LedgerConfirmationStep = ({ message }: { message: string }) => {
 		<>
 			<Header title={t("WALLETS.MODAL_SIGN_MESSAGE.LEDGER_CONFIRMATION_STEP.TITLE")} />
 
-			<LedgerConfirmation detailsHeading={null}>
+			<LedgerConfirmation noHeading>
 				<TransactionDetail label={t("COMMON.MESSAGE")} padding={false} border={false}>
 					<span className="break-all">{message}</span>
 				</TransactionDetail>

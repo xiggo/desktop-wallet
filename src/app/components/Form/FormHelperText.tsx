@@ -8,7 +8,7 @@ interface FormHelperTextProperties {
 	children?: React.ReactNode;
 }
 
-export function FormHelperText({ children, ...properties }: FormHelperTextProperties) {
+export const FormHelperText: React.FC<FormHelperTextProperties> = ({ children, ...properties }) => {
 	const fieldContext = useFormField();
 	const isInvalid = properties.isInvalid || fieldContext?.isInvalid;
 	const errorMessage = properties.errorMessage || fieldContext?.errorMessage;
@@ -21,5 +21,5 @@ export function FormHelperText({ children, ...properties }: FormHelperTextProper
 		return <p className="text-sm font-normal text-theme-secondary-500">{children}</p>;
 	}
 
-	return null;
-}
+	return <></>;
+};

@@ -9,9 +9,9 @@ import { setupUpdater } from "./updater";
 import { handleSingleInstance } from "./utils/single-instance";
 
 const windows = {};
-let mainWindow: BrowserWindow | null;
-let windowState = null;
-let deeplinkingUrl: string | null;
+let mainWindow: BrowserWindow | undefined;
+let windowState;
+let deeplinkingUrl: string | undefined;
 
 const getWinURL = () => {
 	if (isDev) {
@@ -37,14 +37,14 @@ const installExtensions = async () => {
 	}
 };
 
-function broadcastURL(url: string | null) {
+function broadcastURL(url?: string) {
 	if (!url || typeof url !== "string") {
 		return;
 	}
 
 	if (mainWindow && mainWindow.webContents) {
 		mainWindow.webContents.send("process-url", url);
-		deeplinkingUrl = null;
+		deeplinkingUrl = undefined;
 	}
 }
 
@@ -125,8 +125,8 @@ function createWindow() {
 	mainWindow.setBackgroundColor("#f7fafb");
 	mainWindow.setContentProtection(!isDev);
 
-	mainWindow.on("close", () => (mainWindow = null));
-	mainWindow.on("closed", () => (mainWindow = null));
+	mainWindow.on("close", () => (mainWindow = undefined));
+	mainWindow.on("closed", () => (mainWindow = undefined));
 
 	mainWindow.webContents.on("did-finish-load", () => {
 		const version = app.getVersion();
@@ -162,7 +162,7 @@ app.on("window-all-closed", () => {
 });
 
 app.on("activate", () => {
-	if (mainWindow === null) {
+	if (mainWindow === undefined) {
 		createWindow();
 	}
 });

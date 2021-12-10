@@ -19,7 +19,8 @@ describe("Configuration Context", () => {
 	});
 
 	it("should throw without provider", () => {
-		jest.spyOn(console, "error").mockImplementation(() => null);
+		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+
 		const Test = () => {
 			useConfiguration();
 			return <p>Configuration content</p>;
@@ -28,6 +29,8 @@ describe("Configuration Context", () => {
 		expect(() => render(<Test />, { withProviders: false })).toThrow(
 			"[useConfiguration] Component not wrapped within a Provider",
 		);
+
+		consoleSpy.mockRestore();
 	});
 
 	it("should render configuration consumer component", () => {

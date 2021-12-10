@@ -49,7 +49,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 		return children;
 	}
 
-	return null;
+	return <></>;
 };
 
 describe("Exchange", () => {

@@ -52,7 +52,7 @@ describe("Plugin View", () => {
 	});
 
 	it.each(["message", "stack"])("should render error boundary with error %s", (type) => {
-		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => null);
+		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
 
 		const Component = () => {
 			const error = new Error("error");

@@ -22,7 +22,7 @@ if (process.env.NODE_ENV && ["development", "production"].includes(process.env.N
 				window.__REACT_DEVTOOLS_GLOBAL_HOOK__[property],
 			)
 				? Function.prototype
-				: null;
+				: undefined;
 		}
 	}
 }

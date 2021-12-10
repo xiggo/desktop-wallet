@@ -211,7 +211,7 @@ describe("useFees", () => {
 		});
 		await env.wallets().syncByProfile(profile);
 
-		const mockFind = jest.spyOn(env.fees(), "findByType").mockReturnValue(null as any);
+		const mockFind = jest.spyOn(env.fees(), "findByType").mockReturnValue({} as any);
 
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children}</EnvironmentProvider>;
 		const {

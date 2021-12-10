@@ -26,15 +26,6 @@ describe("ClickOutside Hook", () => {
 		expect(callback).toHaveBeenCalledWith();
 	});
 
-	it("should do nothing if callback is not provided", () => {
-		const div = document.createElement("div");
-		const reference = { current: div };
-
-		clickOutsideHandler(reference, null);
-
-		userEvent.click(document.body);
-	});
-
 	it("should cover the removeEvent", () => {
 		const div = document.createElement("div");
 		const reference = { current: div };

@@ -17,7 +17,7 @@ const ExchangeTransactionProvider = ({ slug }: { slug: string }) => {
 	const { exchangeProviders } = useExchangeContext();
 
 	if (!exchangeProviders) {
-		return null;
+		return <></>;
 	}
 
 	const provider = exchangeProviders.find((provider) => provider.slug === slug);

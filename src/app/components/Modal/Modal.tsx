@@ -111,7 +111,7 @@ export const Modal = ({
 	children,
 	onClose,
 }: ModalProperties) => {
-	const referenceShouldClose = useRef<boolean | null>(null);
+	const referenceShouldClose = useRef<boolean>();
 	useModal({ isOpen, onClose });
 
 	if (!isOpen) {
@@ -119,12 +119,12 @@ export const Modal = ({
 	}
 
 	const handleClickOverlay = (event: React.MouseEvent<HTMLElement>) => {
-		if (referenceShouldClose.current === null) {
+		if (referenceShouldClose.current === undefined) {
 			referenceShouldClose.current = true;
 		}
 
 		if (!referenceShouldClose.current) {
-			referenceShouldClose.current = null;
+			referenceShouldClose.current = undefined;
 			return;
 		}
 

@@ -33,7 +33,7 @@ const SignButton = ({ isCompact, isAwaitingFinalSignature, canBeSigned, onClick 
 	const { t } = useTranslation();
 
 	if (!canBeSigned) {
-		return null;
+		return <></>;
 	}
 
 	const ButtonContent = () => {

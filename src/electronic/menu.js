@@ -21,7 +21,7 @@ module.exports = function () {
 			aboutWindow({
 				adjust_window_size: true,
 				copyright: [`<p style="text-align: center">Distributed under ${packageJson.license} license</p>`],
-				css_path: isProduction ? path.resolve(__dirname, "styles.css") : null,
+				css_path: isProduction ? path.resolve(__dirname, "styles.css") : undefined,
 				homepage: homepageUrl,
 				icon_path: isProduction
 					? path.resolve(__dirname, "../static/512x512.png")

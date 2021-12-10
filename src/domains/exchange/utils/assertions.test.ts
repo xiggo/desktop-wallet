@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-null */
 import { ExchangeTransaction } from "@payvo/sdk-profiles";
 
 import { assertCurrency, assertExchangeService, assertExchangeTransaction } from "./assertions";

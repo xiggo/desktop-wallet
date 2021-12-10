@@ -16,7 +16,7 @@ describe("setup", () => {
 
 				media: query,
 
-				onchange: null,
+				onchange: undefined,
 
 				removeEventListener: jest.fn(),
 				// deprecated

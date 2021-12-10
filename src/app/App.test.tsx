@@ -174,7 +174,7 @@ describe("App", () => {
 	});
 
 	it("should render application error if the app fails to boot", async () => {
-		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => null);
+		const consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
 
 		const environmentSpy = jest.spyOn(Environment.prototype, "boot").mockImplementation(() => {
 			throw new Error("failed to boot env");

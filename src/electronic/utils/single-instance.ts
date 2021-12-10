@@ -6,8 +6,8 @@ export function handleSingleInstance({
 	mainWindow,
 	broadcastURL,
 }: {
-	mainWindow: BrowserWindow | null;
-	broadcastURL: (url: string | null) => void;
+	mainWindow?: BrowserWindow;
+	broadcastURL: (url?: string) => void;
 }) {
 	if (!gotTheLock) {
 		app.quit();

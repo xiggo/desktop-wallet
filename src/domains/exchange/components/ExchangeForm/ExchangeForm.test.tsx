@@ -47,7 +47,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 		return <>{children}</>;
 	}
 
-	return null;
+	return <></>;
 };
 
 const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; to?: Record<string, string> }) => {
@@ -1291,7 +1291,6 @@ describe("ReviewStep", () => {
 					fromCurrency: {
 						addressExplorerMask: "https://blockchair.com/bitcoin/address/{}?from=changenow",
 						coin: "btc",
-						externalIdName: null,
 						hasExternalId: false,
 						name: "Bitcoin",
 						transactionExplorerMask: "https://blockchair.com/bitcoin/transaction/{}?from=changenow",
@@ -1303,7 +1302,6 @@ describe("ReviewStep", () => {
 					toCurrency: {
 						addressExplorerMask: "https://explorer.ark.io/wallets/{}",
 						coin: "ark",
-						externalIdName: null,
 						hasExternalId: false,
 						name: "Ark",
 						transactionExplorerMask: "https://explorer.ark.io/transaction/{}",
@@ -1452,7 +1450,6 @@ describe("ConfirmationStep", () => {
 					fromCurrency: {
 						addressExplorerMask: "https://blockchair.com/bitcoin/address/{}",
 						coin: "btc",
-						externalIdName: null,
 						hasExternalId: false,
 						name: "Bitcoin",
 						transactionExplorerMask: "https://blockchair.com/bitcoin/transaction/{}",
