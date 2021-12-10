@@ -4,9 +4,7 @@ export const isNoDeviceError = (error: any) => String(error).includes("no device
 
 export const isRejectionError = (error: any) => String(error).includes("Condition of use not satisfied");
 
-export const handleBroadcastError = (
-	{ errors }: Services.BroadcastResponse = { accepted: [], errors: {}, rejected: [] },
-) => {
+export const handleBroadcastError = ({ errors }: Services.BroadcastResponse) => {
 	const allErrors = Object.values(errors);
 
 	if (allErrors.length === 0) {

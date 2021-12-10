@@ -757,9 +757,9 @@ describe("Registration", () => {
 
 		const actsWithMnemonicMock = jest.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
 
-		const secondPublicKeyMock = jest
-			.spyOn(secondWallet, "secondPublicKey")
-			.mockReturnValue((await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
+		const { publicKey } = await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+		const secondPublicKeyMock = jest.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
 
 		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
 
@@ -878,9 +878,9 @@ describe("Registration", () => {
 
 		const actsWithMnemonicMock = jest.spyOn(secondWallet, "actsWithMnemonic").mockReturnValue(true);
 
-		const secondPublicKeyMock = jest
-			.spyOn(secondWallet, "secondPublicKey")
-			.mockReturnValue((await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
+		const { publicKey } = await secondWallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+		const secondPublicKeyMock = jest.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
 
 		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
 

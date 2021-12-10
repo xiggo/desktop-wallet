@@ -20,11 +20,9 @@ const renderWithFormProvider = (children: any, defaultValues?: any) => {
 	const Wrapper = () => {
 		const form = useForm({
 			defaultValues: {
-				...{
-					fee: 0,
-					network,
-					senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-				},
+				fee: 0,
+				network,
+				senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
 				...defaultValues,
 			},
 			mode: "onChange",

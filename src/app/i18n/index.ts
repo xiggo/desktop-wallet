@@ -19,4 +19,6 @@ i18n.use(initReactI18next).init({
 	resources,
 });
 
-export { defaultNS, i18n, resources };
+export { defaultNS, resources };
+
+export { default as i18n } from "i18next";

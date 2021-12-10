@@ -73,7 +73,7 @@ export class ToastService {
 					{content}
 				</ToastMessage>
 			),
-			{ ...this.options(), ...(options || {}) },
+			{ ...this.options(), ...options },
 		);
 	}
 

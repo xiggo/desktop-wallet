@@ -35,8 +35,16 @@ describe("PortfolioBreakdown", () => {
 
 		profile.settings().set(Contracts.ProfileSetting.ExchangeCurrency, "USD");
 
-		arkWallet = (await profile.walletFactory().generate({ coin: "ARK", network: "ark.mainnet" })).wallet;
-		lskWallet = (await profile.walletFactory().generate({ coin: "LSK", network: "lsk.mainnet" })).wallet;
+		let walletData: {
+			mnemonic: string;
+			wallet: Contracts.IReadWriteWallet;
+		};
+
+		walletData = await profile.walletFactory().generate({ coin: "ARK", network: "ark.mainnet" });
+		arkWallet = walletData.wallet;
+
+		walletData = await profile.walletFactory().generate({ coin: "LSK", network: "lsk.mainnet" });
+		lskWallet = walletData.wallet;
 
 		profile.wallets().push(arkWallet);
 		profile.wallets().push(lskWallet);

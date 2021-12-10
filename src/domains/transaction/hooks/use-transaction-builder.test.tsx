@@ -1,5 +1,5 @@
-import { Contracts } from "@payvo/sdk";
-import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
+import { Services } from "@payvo/sdk";
+import { Contracts } from "@payvo/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
@@ -15,8 +15,8 @@ import {
 } from "@/utils/testing-library";
 
 describe("Use Transaction Builder Hook", () => {
-	let profile: ProfileContracts.IProfile;
-	let wallet: ProfileContracts.IReadWriteWallet;
+	let profile: Contracts.IProfile;
+	let wallet: Contracts.IReadWriteWallet;
 	const transport = getDefaultLedgerTransport();
 
 	const wrapper = ({ children }: any) => (
@@ -34,15 +34,15 @@ describe("Use Transaction Builder Hook", () => {
 	});
 
 	it("should sign transfer", async () => {
-		const { result } = renderHook(() => useTransactionBuilder(profile), { wrapper });
+		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
 		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
-		const input: Contracts.TransferInput = {
+		const input: Services.TransferInput = {
 			data: {
-				amount: "1",
+				amount: 1,
 				to: wallet.address(),
 			},
-			fee: "1",
+			fee: 1,
 			nonce: "1",
 			signatory,
 		};
@@ -50,14 +50,15 @@ describe("Use Transaction Builder Hook", () => {
 		let transaction: any;
 
 		await actHook(async () => {
-			transaction = (await result.current.build("transfer", input, wallet)).transaction;
+			const result = await builder.current.build("transfer", input, wallet);
+			transaction = result.transaction;
 		});
 
 		expect(transaction.id()).toBe("bad2e9a02690d7cb0efdddfff1f7eacdf4685e22c0b5c3077e1de67511e2553d");
 	});
 
 	it("should sign transfer with multisignature wallet", async () => {
-		const { result } = renderHook(() => useTransactionBuilder(profile), { wrapper });
+		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
 		jest.spyOn(wallet, "isMultiSignature").mockImplementation(() => true);
 		jest.spyOn(wallet.multiSignature(), "all").mockReturnValue({
@@ -66,12 +67,12 @@ describe("Use Transaction Builder Hook", () => {
 		});
 
 		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
-		const input: Contracts.TransferInput = {
+		const input: Services.TransferInput = {
 			data: {
-				amount: "1",
+				amount: 1,
 				to: wallet.address(),
 			},
-			fee: "1",
+			fee: 1,
 			nonce: "1",
 			signatory,
 		};
@@ -79,7 +80,8 @@ describe("Use Transaction Builder Hook", () => {
 		let transaction: any;
 
 		await actHook(async () => {
-			transaction = (await result.current.build("transfer", input, wallet)).transaction;
+			const result = await builder.current.build("transfer", input, wallet);
+			transaction = result.transaction;
 		});
 
 		expect(transaction.id()).toBe("6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4");

@@ -233,9 +233,9 @@ describe("SendDelegateResignation", () => {
 		});
 
 		it("should show mnemonic authentication error", async () => {
-			const secondPublicKeyMock = jest
-				.spyOn(wallet, "secondPublicKey")
-				.mockReturnValue((await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
+			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+			const secondPublicKeyMock = jest.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
 			const { asFragment } = renderPage();
 
@@ -270,9 +270,9 @@ describe("SendDelegateResignation", () => {
 				throw new Error("broadcast error");
 			});
 
-			const secondPublicKeyMock = jest
-				.spyOn(wallet, "secondPublicKey")
-				.mockReturnValue((await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
+			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+			const secondPublicKeyMock = jest.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
 			const { asFragment } = renderPage();
 
@@ -315,9 +315,10 @@ describe("SendDelegateResignation", () => {
 		});
 
 		it("should successfully sign and submit resignation transaction", async () => {
-			const secondPublicKeyMock = jest
-				.spyOn(wallet, "secondPublicKey")
-				.mockReturnValue((await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
+			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+			const secondPublicKeyMock = jest.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+
 			const signMock = jest
 				.spyOn(wallet.transaction(), "signDelegateResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
@@ -361,9 +362,10 @@ describe("SendDelegateResignation", () => {
 		});
 
 		it("should successfully sign and submit resignation transaction with keyboard", async () => {
-			const secondPublicKeyMock = jest
-				.spyOn(wallet, "secondPublicKey")
-				.mockReturnValue((await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
+			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+			const secondPublicKeyMock = jest.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+
 			const signMock = jest
 				.spyOn(wallet.transaction(), "signDelegateResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));
@@ -408,9 +410,10 @@ describe("SendDelegateResignation", () => {
 		});
 
 		it("should back button after successful submission", async () => {
-			const secondPublicKeyMock = jest
-				.spyOn(wallet, "secondPublicKey")
-				.mockReturnValue((await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1])).publicKey);
+			const { publicKey } = await wallet.coin().publicKey().fromMnemonic(MNEMONICS[1]);
+
+			const secondPublicKeyMock = jest.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
+
 			const signMock = jest
 				.spyOn(wallet.transaction(), "signDelegateResignation")
 				.mockReturnValue(Promise.resolve(transactionFixture.data.id));

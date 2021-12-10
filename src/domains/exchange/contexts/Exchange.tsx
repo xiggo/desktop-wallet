@@ -34,8 +34,8 @@ const useExchange = () => {
 			});
 
 		try {
-			const body = (await httpClient.get(exchangeHost)).json();
-			setExchangeProviders(transformExchanges(body.data));
+			const body = await httpClient.get(exchangeHost);
+			setExchangeProviders(transformExchanges(body.json().data));
 		} catch {
 			setExchangeProviders([]);
 		}

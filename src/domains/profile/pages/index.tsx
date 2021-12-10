@@ -1,5 +1,3 @@
-import { CreateProfile } from "./CreateProfile";
-import { ImportProfile } from "./ImportProfile";
-import { Welcome } from "./Welcome";
-
-export { CreateProfile, ImportProfile, Welcome };
+export { CreateProfile } from "./CreateProfile";
+export { ImportProfile } from "./ImportProfile";
+export { Welcome } from "./Welcome";

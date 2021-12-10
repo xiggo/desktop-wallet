@@ -397,8 +397,11 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
 
-		// @ts-ignore
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(void 0);
+		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue({
+			accepted: [fixtures.transfer.id()],
+			errors: {},
+			rejected: [],
+		});
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">
@@ -429,8 +432,8 @@ describe("MultiSignatureDetail", () => {
 		jest.spyOn(wallet.transaction(), "canBeBroadcasted").mockImplementation(() => true);
 		jest.spyOn(wallet.transaction(), "canBeSigned").mockImplementation(() => true);
 		jest.spyOn(wallet.coin().multiSignature(), "isMultiSignatureReady").mockReturnValue(true);
-		// @ts-ignore
-		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast").mockResolvedValue(void 0);
+
+		const broadcastMock = jest.spyOn(wallet.transaction(), "broadcast");
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">

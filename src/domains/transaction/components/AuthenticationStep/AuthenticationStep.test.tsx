@@ -60,11 +60,10 @@ describe("AuthenticationStep", () => {
 
 		profile.wallets().push(wallet);
 		const secondMnemonic = MNEMONICS[1];
+		const { publicKey } = await wallet.coin().publicKey().fromMnemonic(secondMnemonic);
 
 		jest.spyOn(wallet, "isSecondSignature").mockReturnValue(true);
-		jest.spyOn(wallet, "secondPublicKey").mockReturnValue(
-			(await wallet.coin().publicKey().fromMnemonic(secondMnemonic)).publicKey,
-		);
+		jest.spyOn(wallet, "secondPublicKey").mockReturnValue(publicKey);
 
 		const { form } = renderWithForm(<AuthenticationStep wallet={wallet} />, {
 			withProviders: true,

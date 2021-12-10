@@ -176,20 +176,21 @@ module.exports = {
 		"unicorn/no-array-for-each": "error",
 		"unicorn/no-array-method-this-argument": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-array-reduce": "error",
+		"unicorn/no-await-expression-member": "error",
 		"unicorn/no-new-array": "error",
 		"unicorn/no-null": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-object-as-default-parameter": "error",
 		"unicorn/no-useless-undefined": ["error", { checkArguments: false }],
 		"unicorn/prefer-array-some": "error",
 		"unicorn/prefer-at": "off",
-		"unicorn/prefer-module": "warn", // @TODO: set to error and fix resulting issues
+		"unicorn/prefer-module": "off",
 		"unicorn/prefer-node-protocol": "off",
 		"unicorn/prefer-number-properties": "error",
 		"unicorn/prefer-prototype-methods": "error",
 		"unicorn/prefer-spread": "error",
 		"unicorn/prefer-string-slice": "error",
 		"unicorn/prefer-ternary": "off",
-		"unicorn/prefer-top-level-await": "error", // @TODO: set to error and fix resulting issues
+		"unicorn/prefer-top-level-await": "error",
 		"unicorn/prevent-abbreviations": [
 			"error",
 			{

@@ -33,12 +33,16 @@ const addressFromPublicKey = async (wallet: Contracts.IReadWriteWallet, publicKe
 		assertString(derivationPath);
 
 		const ledgerWalletPublicKey = await wallet.ledger().getPublicKey(derivationPath);
-		return (await wallet.coin().address().fromPublicKey(ledgerWalletPublicKey)).address;
+		const { address } = await wallet.coin().address().fromPublicKey(ledgerWalletPublicKey);
+
+		return address;
 	}
 
 	assertString(publicKey);
 
-	return (await wallet.coin().address().fromPublicKey(publicKey)).address;
+	const { address } = await wallet.coin().address().fromPublicKey(publicKey);
+
+	return address;
 };
 
 export const MultiSignatureSuccessful = ({ children, transaction, senderWallet }: TransactionSuccessfulProperties) => {

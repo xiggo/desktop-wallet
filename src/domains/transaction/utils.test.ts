@@ -27,9 +27,5 @@ describe("Transaction utils", () => {
 		it("should not throw if accepted", () => {
 			expect(() => handleBroadcastError({ accepted: ["id"], errors: {}, rejected: [] })).not.toThrow();
 		});
-
-		it("should handle empty response", () => {
-			expect(() => handleBroadcastError()).not.toThrow();
-		});
 	});
 });

@@ -30,7 +30,7 @@ export const MultiSignatureRegistrationDetail: React.FC<TransactionDetailPropert
 		const fetchData = async () => {
 			const addresses: RecipientItem[] = [];
 			for (const publicKey of transaction.publicKeys()) {
-				const address = (await wallet.coin().address().fromPublicKey(publicKey)).address;
+				const { address } = await wallet.coin().address().fromPublicKey(publicKey);
 				addresses.push({ address });
 			}
 

@@ -1,6 +1,6 @@
-import { Contracts } from "@payvo/sdk";
+import { Services } from "@payvo/sdk";
 import { BigNumber } from "@payvo/sdk-helpers";
-import { Contracts as ProfileContracts } from "@payvo/sdk-profiles";
+import { Contracts } from "@payvo/sdk-profiles";
 import { act as actHook, renderHook } from "@testing-library/react-hooks";
 import React from "react";
 
@@ -30,8 +30,7 @@ const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	});
 
 describe("Use Transaction Builder with Ledger", () => {
-	let profile: ProfileContracts.IProfile;
-	let wallet: ProfileContracts.IReadWriteWallet;
+	let wallet: Contracts.IReadWriteWallet;
 	const transport = getDefaultLedgerTransport();
 
 	const wrapper = ({ children }: any) => (
@@ -42,12 +41,13 @@ describe("Use Transaction Builder with Ledger", () => {
 
 	beforeAll(() => {
 		defaultNetMocks();
-		profile = env.profiles().findById(getDefaultProfileId());
+		const profile = env.profiles().findById(getDefaultProfileId());
 		wallet = profile.wallets().first();
 	});
 
 	it("should sign transfer with ledger", async () => {
-		const { result } = renderHook(() => useTransactionBuilder(profile), { wrapper });
+		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
+
 		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
 		jest.spyOn(wallet.coin().ledger(), "getPublicKey").mockResolvedValue(
 			"027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582",
@@ -59,12 +59,12 @@ describe("Use Transaction Builder with Ledger", () => {
 
 		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
 
-		const input: Contracts.TransferInput = {
+		const input: Services.TransferInput = {
 			data: {
-				amount: "1",
+				amount: 1,
 				to: wallet.address(),
 			},
-			fee: "1",
+			fee: 1,
 			nonce: "1",
 			signatory,
 		};
@@ -72,7 +72,8 @@ describe("Use Transaction Builder with Ledger", () => {
 		let transaction: any;
 
 		await actHook(async () => {
-			transaction = (await result.current.build("transfer", input, wallet)).transaction;
+			const result = await builder.current.build("transfer", input, wallet);
+			transaction = result.transaction;
 		});
 
 		await waitFor(() => expect(transaction.id()).toBe(transactionFixture.data.id));
@@ -81,7 +82,8 @@ describe("Use Transaction Builder with Ledger", () => {
 	});
 
 	it("should sign transfer with cold ledger wallet", async () => {
-		const { result } = renderHook(() => useTransactionBuilder(), { wrapper });
+		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
+
 		jest.spyOn(wallet.coin(), "__construct").mockImplementation();
 		jest.spyOn(wallet, "publicKey").mockImplementation(() => void 0);
 		jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
@@ -94,12 +96,12 @@ describe("Use Transaction Builder with Ledger", () => {
 		createTransactionMock(wallet);
 
 		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
-		const input: Contracts.TransferInput = {
+		const input: Services.TransferInput = {
 			data: {
-				amount: "1",
+				amount: 1,
 				to: wallet.address(),
 			},
-			fee: "1",
+			fee: 1,
 			nonce: "1",
 			signatory,
 		};
@@ -107,7 +109,8 @@ describe("Use Transaction Builder with Ledger", () => {
 		let transaction: any;
 
 		await actHook(async () => {
-			transaction = (await result.current.build("transfer", input, wallet)).transaction;
+			const result = await builder.current.build("transfer", input, wallet);
+			transaction = result.transaction;
 		});
 
 		expect(transaction.id()).toBe(transactionFixture.data.id);
@@ -119,7 +122,7 @@ describe("Use Transaction Builder with Ledger", () => {
 		const abortCtrl = new AbortController();
 		const abortSignal = abortCtrl.signal;
 
-		const { result } = renderHook(() => useTransactionBuilder(profile), { wrapper });
+		const { result: builder } = renderHook(() => useTransactionBuilder(), { wrapper });
 
 		jest.spyOn(wallet, "isLedger").mockImplementation(() => true);
 		jest.spyOn(wallet.signatory(), "ledger").mockImplementation(
@@ -134,12 +137,12 @@ describe("Use Transaction Builder with Ledger", () => {
 		createTransactionMock(wallet);
 		const signatory = await wallet.signatory().mnemonic(getDefaultWalletMnemonic());
 
-		const input: Contracts.TransferInput = {
+		const input: Services.TransferInput = {
 			data: {
-				amount: "1",
+				amount: 1,
 				to: wallet.address(),
 			},
-			fee: "1",
+			fee: 1,
 			nonce: "1",
 			signatory,
 		};
@@ -149,7 +152,7 @@ describe("Use Transaction Builder with Ledger", () => {
 
 		await actHook(async () => {
 			try {
-				await result.current.build("transfer", input, wallet, { abortSignal });
+				await builder.current.build("transfer", input, wallet, { abortSignal });
 			} catch (error_) {
 				error = error_;
 			}

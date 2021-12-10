@@ -69,9 +69,11 @@ const sendMultiSignature = async ({
 	await wallet.transaction().broadcast(transaction.id());
 
 	try {
-		transaction.generatedAddress = (
-			await wallet.coin().address().fromMultiSignature({ min: minParticipants, publicKeys, senderPublicKey })
-		).address;
+		const { address } = await wallet
+			.coin()
+			.address()
+			.fromMultiSignature({ min: minParticipants, publicKeys, senderPublicKey });
+		transaction.generatedAddress = address;
 	} catch {
 		// We are using a coin that doesn't support multi-signature address derivation.
 	}

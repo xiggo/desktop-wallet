@@ -8,7 +8,7 @@ export const validatePattern = (t: any, value: string, regexp: RegExp) => {
 
 	return matches.length > 0
 		? t("COMMON.VALIDATION.ILLEGAL_CHARACTERS", {
-				characters: sortBy(uniq(matches.split("")))
+				characters: sortBy(uniq([...matches]))
 					.map((char) => `'${char}'`)
 					.join(", "),
 		  })
