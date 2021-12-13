@@ -138,7 +138,7 @@ module.exports = {
 		"sonarjs/no-identical-functions": "warn", // @TODO: set to error and resolve issues
 		"sonarjs/no-redundant-jump": "error",
 		"sonarjs/no-small-switch": "error",
-		"sonarjs/no-use-of-empty-return-value": "warn", // @TODO: set to error and resolve issues
+		"sonarjs/no-use-of-empty-return-value": "error",
 		"sort-keys-fix/sort-keys-fix": ["error", "asc", { caseSensitive: true }],
 		"testing-library/await-async-query": "warn", // @TODO: set to error and fix
 		"testing-library/await-async-utils": "error",
