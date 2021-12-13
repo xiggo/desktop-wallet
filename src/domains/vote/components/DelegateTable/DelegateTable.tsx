@@ -231,7 +231,7 @@ export const DelegateTable: FC<DelegateTableProperties> = ({
 		<div data-testid="DelegateTable">
 			<h2 className="mb-6 text-2xl font-bold">{t("VOTE.DELEGATE_TABLE.TITLE")}</h2>
 
-			{subtitle && subtitle}
+			{!!subtitle && subtitle}
 
 			<Table columns={columns} data={tableData} rowsPerPage={DELEGATES_PER_PAGE} currentPage={currentPage}>
 				{renderTableRow}

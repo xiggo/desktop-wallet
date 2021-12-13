@@ -134,7 +134,7 @@ module.exports = {
 		"sonarjs/no-all-duplicated-branches": "warn", // @TODO: set to error and resolve issues
 		"sonarjs/no-collapsible-if": "error",
 		"sonarjs/no-duplicate-string": "warn", // @TODO: set to error and resolve issues
-		"sonarjs/no-identical-expressions": "warn", // @TODO: set to error and resolve issues
+		"sonarjs/no-identical-expressions": "error",
 		"sonarjs/no-identical-functions": "warn", // @TODO: set to error and resolve issues
 		"sonarjs/no-redundant-jump": "warn", // @TODO: set to error and resolve issues
 		"sonarjs/no-small-switch": "error",
