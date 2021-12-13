@@ -41,7 +41,7 @@ export const PluginImage = ({
 
 	const colors = useMemo(
 		() => ({
-			progressColor: isDarkMode ? "var(--theme-color-success-600)" : "var(--theme-color-success-600)",
+			progressColor: "var(--theme-color-success-600)",
 			strokeColor: isDarkMode ? "var(--theme-color-success-800)" : "var(--theme-color-success-200)",
 		}),
 		[isDarkMode],
