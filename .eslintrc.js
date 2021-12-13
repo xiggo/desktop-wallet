@@ -136,7 +136,7 @@ module.exports = {
 		"sonarjs/no-duplicate-string": "warn", // @TODO: set to error and resolve issues
 		"sonarjs/no-identical-expressions": "error",
 		"sonarjs/no-identical-functions": "warn", // @TODO: set to error and resolve issues
-		"sonarjs/no-redundant-jump": "warn", // @TODO: set to error and resolve issues
+		"sonarjs/no-redundant-jump": "error",
 		"sonarjs/no-small-switch": "error",
 		"sonarjs/no-use-of-empty-return-value": "warn", // @TODO: set to error and resolve issues
 		"sort-keys-fix/sort-keys-fix": ["error", "asc", { caseSensitive: true }],

@@ -12,7 +12,6 @@ export const useModal = ({ isOpen, onClose }: { isOpen: boolean; onClose?: any }
 		return () => {
 			document.body.style.overflow = "overlay";
 			document.body.style.overflowX = "hidden";
-			return;
 		};
 	}, [isOpen]);
 

@@ -112,8 +112,6 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 					],
 				};
 			}
-
-			return;
 		},
 		id: () => MultisignatureRegistrationFixture.data.id,
 		isMultiSignatureRegistration: () => true,

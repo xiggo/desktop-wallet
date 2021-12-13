@@ -162,7 +162,6 @@ export const SelectNetwork = ({
 								}
 
 								event.preventDefault();
-								return;
 							}
 						},
 						placeholder: placeholder || t("COMMON.INPUT_NETWORK.PLACEHOLDER"),
