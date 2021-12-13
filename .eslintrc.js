@@ -175,7 +175,6 @@ module.exports = {
 		"unicorn/no-array-for-each": "error",
 		"unicorn/no-array-method-this-argument": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-array-reduce": "error",
-		"unicorn/no-object-as-default-parameter": "warn", // @TODO: set to error and fix resulting issues
 		"unicorn/no-await-expression-member": "error",
 		"unicorn/no-new-array": "error",
 		"unicorn/no-null": "warn", // some third party types require the use of null
