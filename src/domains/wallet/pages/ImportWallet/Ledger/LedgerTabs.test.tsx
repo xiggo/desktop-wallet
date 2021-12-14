@@ -102,34 +102,34 @@ describe("LedgerTabs", () => {
 		</Route>
 	);
 
+	const Component = ({ activeIndex }: { activeIndex: number }) => {
+		const form = useForm({
+			defaultValues: {
+				network: wallet.network(),
+			},
+			mode: "onChange",
+		});
+
+		const { register } = form;
+
+		useEffect(() => {
+			register("network");
+		}, [register]);
+
+		return (
+			<FormProvider {...form}>
+				<BaseComponent activeIndex={activeIndex} />
+			</FormProvider>
+		);
+	};
+
 	it("should render scan step", async () => {
 		jest.useRealTimers();
 		const getPublicKeySpy = jest
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-				},
-				mode: "onChange",
-			});
-
-			const { register } = form;
-
-			useEffect(() => {
-				register("network");
-			}, [register]);
-
-			return (
-				<FormProvider {...form}>
-					<BaseComponent activeIndex={2} />
-				</FormProvider>
-			);
-		};
-
-		render(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		render(<Component activeIndex={2} />, { routes: [`/profiles/${profile.id()}`] });
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 
@@ -208,28 +208,7 @@ describe("LedgerTabs", () => {
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-				},
-				mode: "onChange",
-			});
-
-			const { register } = form;
-
-			useEffect(() => {
-				register("network");
-			}, [register]);
-
-			return (
-				<FormProvider {...form}>
-					<BaseComponent activeIndex={2} />
-				</FormProvider>
-			);
-		};
-
-		render(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		render(<Component activeIndex={2} />, { routes: [`/profiles/${profile.id()}`] });
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 
@@ -250,28 +229,7 @@ describe("LedgerTabs", () => {
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-				},
-				mode: "onChange",
-			});
-
-			const { register } = form;
-
-			useEffect(() => {
-				register("network");
-			}, [register]);
-
-			return (
-				<FormProvider {...form}>
-					<BaseComponent activeIndex={3} />
-				</FormProvider>
-			);
-		};
-
-		const { history } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		const { history } = render(<Component activeIndex={3} />, { routes: [`/profiles/${profile.id()}`] });
 
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
@@ -322,28 +280,7 @@ describe("LedgerTabs", () => {
 			],
 		});
 
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-				},
-				mode: "onChange",
-			});
-
-			const { register } = form;
-
-			useEffect(() => {
-				register("network");
-			}, [register]);
-
-			return (
-				<FormProvider {...form}>
-					<BaseComponent activeIndex={3} />
-				</FormProvider>
-			);
-		};
-
-		const { history } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		const { history } = render(<Component activeIndex={3} />, { routes: [`/profiles/${profile.id()}`] });
 
 		await expect(screen.findByTestId("LedgerScanStep")).resolves.toBeVisible();
 
@@ -379,28 +316,7 @@ describe("LedgerTabs", () => {
 			.spyOn(wallet.coin().ledger(), "getPublicKey")
 			.mockImplementation((path) => Promise.resolve(publicKeyPaths.get(path)!));
 
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-				},
-				mode: "onChange",
-			});
-
-			const { register } = form;
-
-			useEffect(() => {
-				register("network");
-			}, [register]);
-
-			return (
-				<FormProvider {...form}>
-					<BaseComponent activeIndex={2} />
-				</FormProvider>
-			);
-		};
-
-		const { container } = render(<Component />, { routes: [`/profiles/${profile.id()}`] });
+		const { container } = render(<Component activeIndex={2} />, { routes: [`/profiles/${profile.id()}`] });
 
 		expect(screen.getByTestId("LedgerConnectionStep")).toBeVisible();
 

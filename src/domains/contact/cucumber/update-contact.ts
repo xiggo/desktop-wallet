@@ -30,6 +30,15 @@ const preSteps = {
 			.ok();
 	},
 };
+
+const updateContactModalNotExists = async (t: TestController) => {
+	await t
+		.expect(
+			Selector('[data-testid="modal__inner"]').withText(translations.CONTACTS.MODAL_UPDATE_CONTACT.TITLE).exists,
+		)
+		.notOk();
+};
+
 cucumber("@updateContact", {
 	...preSteps,
 	"When updates a contact name and saves": async (t: TestController) => {
@@ -41,12 +50,8 @@ cucumber("@updateContact", {
 		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).notOk();
 		await t.hover(Selector('[data-testid="contact-form__save-btn"]'));
 		await t.click(Selector('[data-testid="contact-form__save-btn"]'));
-		await t
-			.expect(
-				Selector('[data-testid="modal__inner"]').withText(translations.CONTACTS.MODAL_UPDATE_CONTACT.TITLE)
-					.exists,
-			)
-			.notOk();
+
+		await updateContactModalNotExists(t);
 	},
 	"Then the contact is updated with the new name": async (t: TestController) => {
 		await t
@@ -64,12 +69,7 @@ cucumber("@updateContact-openAndCancelModal", {
 		await t.click(Selector('[data-testid="contact-form__cancel-btn"]'));
 	},
 	"Then the update contact modal should no longer be displayed": async (t: TestController) => {
-		await t
-			.expect(
-				Selector('[data-testid="modal__inner"]').withText(translations.CONTACTS.MODAL_UPDATE_CONTACT.TITLE)
-					.exists,
-			)
-			.notOk();
+		await updateContactModalNotExists(t);
 	},
 });
 cucumber("@updateContact-openAndCloseModal", {
@@ -78,12 +78,7 @@ cucumber("@updateContact-openAndCloseModal", {
 		await t.click(Selector('[data-testid="modal__close-btn"]'));
 	},
 	"Then the update contact modal should no longer be displayed": async (t: TestController) => {
-		await t
-			.expect(
-				Selector('[data-testid="modal__inner"]').withText(translations.CONTACTS.MODAL_UPDATE_CONTACT.TITLE)
-					.exists,
-			)
-			.notOk();
+		await updateContactModalNotExists(t);
 	},
 });
 cucumber("@updateContact-invalidAddress", {

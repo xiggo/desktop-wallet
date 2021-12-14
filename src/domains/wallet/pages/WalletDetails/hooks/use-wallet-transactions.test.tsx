@@ -7,6 +7,8 @@ import { useWalletTransactions } from "./use-wallet-transactions";
 import { PendingTransaction } from "@/domains/transaction/components/TransactionTable/PendingTransactionsTable/PendingTransactionsTable.contracts";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
+let allPendingTransactions: PendingTransaction[];
+
 describe("Wallet Transactions Hook", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
@@ -101,6 +103,19 @@ describe("Wallet Transactions Hook", () => {
 		);
 	});
 
+	const Component = () => {
+		const { syncPending, pendingTransactions } = useWalletTransactions(wallet);
+		const [loading, setLoading] = useState(false);
+
+		const run = async () => {
+			setLoading(true);
+			await syncPending();
+			setLoading(false);
+			allPendingTransactions = pendingTransactions;
+		};
+		return loading ? <span>Loading</span> : <button onClick={run}>Sync</button>;
+	};
+
 	it("should sync pending transfers", async () => {
 		mockPendingTransfers(wallet);
 
@@ -125,21 +140,6 @@ describe("Wallet Transactions Hook", () => {
 		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
 		jest.spyOn(wallet.transaction(), "broadcasted").mockReturnValue({ 1: transfer });
 
-		let allPendingTransactions: PendingTransaction[];
-
-		const Component = () => {
-			const { syncPending, pendingTransactions } = useWalletTransactions(wallet);
-			const [loading, setLoading] = useState(false);
-
-			const run = async () => {
-				setLoading(true);
-				await syncPending();
-				setLoading(false);
-				allPendingTransactions = pendingTransactions;
-			};
-			return loading ? <span>Loading</span> : <button onClick={run}>Sync</button>;
-		};
-
 		render(<Component />);
 
 		userEvent.click(screen.getByRole("button"));
@@ -157,21 +157,6 @@ describe("Wallet Transactions Hook", () => {
 		jest.spyOn(wallet, "hasBeenFullyRestored").mockReturnValue(false);
 
 		jest.spyOn(wallet.transaction(), "sync").mockResolvedValue(void 0);
-
-		let allPendingTransactions: PendingTransaction[];
-
-		const Component = () => {
-			const { syncPending, pendingTransactions } = useWalletTransactions(wallet);
-			const [loading, setLoading] = useState(false);
-
-			const run = async () => {
-				setLoading(true);
-				await syncPending();
-				setLoading(false);
-				allPendingTransactions = pendingTransactions;
-			};
-			return loading ? <span>Loading</span> : <button onClick={run}>Sync</button>;
-		};
 
 		render(<Component />);
 

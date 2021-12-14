@@ -20,22 +20,30 @@ const preSteps = {
 		await t.expect(getLocation()).contains("/profiles/create");
 	},
 };
-cucumber("@createProfile-noPassword", {
-	...preSteps,
+
+const formStep = {
 	"When she fills out the form": async (t: TestController) => {
 		await t.typeText(Selector("input[name=name]"), "Anne Doe");
 		await t.click('[data-testid="SelectDropdown__input"]');
 		await t.click('[data-testid="SelectDropdown__option--0"]');
 		await t.click(Selector("input[name=isDarkMode]").parent());
 	},
-	"And she submits the form": async (t: TestController) => {
-		await t.click(Selector("button").withExactText(translations.COMMON.CREATE));
-	},
+};
+const welcomeScreenStep = {
 	"Then she will see the welcome screen": async (t: TestController) => {
 		await t.expect(getLocation()).notContains("/profiles/create");
 		await t.expect(Selector("button").withText("John Doe").exists).ok();
 		await t.expect(Selector("button").withText("Anne Doe").exists).ok();
 	},
+};
+
+cucumber("@createProfile-noPassword", {
+	...preSteps,
+	...formStep,
+	"And she submits the form": async (t: TestController) => {
+		await t.click(Selector("button").withExactText(translations.COMMON.CREATE));
+	},
+	...welcomeScreenStep,
 });
 cucumber("@createProfile-withPassword", {
 	...preSteps,
@@ -50,11 +58,7 @@ cucumber("@createProfile-withPassword", {
 	"And she submits the form": async (t: TestController) => {
 		await t.click(Selector("button").withExactText(translations.COMMON.CREATE));
 	},
-	"Then she will see the welcome screen": async (t: TestController) => {
-		await t.expect(getLocation()).notContains("/profiles/create");
-		await t.expect(Selector("button").withText("John Doe").exists).ok();
-		await t.expect(Selector("button").withText("Anne Doe").exists).ok();
-	},
+	...welcomeScreenStep,
 });
 cucumber("@createProfile-disabledSaveButton", {
 	...preSteps,
@@ -64,12 +68,7 @@ cucumber("@createProfile-disabledSaveButton", {
 });
 cucumber("@createProfile-invalidPassword", {
 	...preSteps,
-	"When she fills out the form": async (t: TestController) => {
-		await t.typeText(Selector("input[name=name]"), "Anne Doe");
-		await t.click('[data-testid="SelectDropdown__input"]');
-		await t.click('[data-testid="SelectDropdown__option--0"]');
-		await t.click(Selector("input[name=isDarkMode]").parent());
-	},
+	...formStep,
 	"But enters an invalid password": async (t: TestController) => {
 		await t.typeText(Selector("input[name=password]"), "password");
 	},
@@ -82,12 +81,7 @@ cucumber("@createProfile-invalidPassword", {
 });
 cucumber("@createProfile-breachedPassword", {
 	...preSteps,
-	"When she fills out the form": async (t: TestController) => {
-		await t.typeText(Selector("input[name=name]"), "Anne Doe");
-		await t.click('[data-testid="SelectDropdown__input"]');
-		await t.click('[data-testid="SelectDropdown__option--0"]');
-		await t.click(Selector("input[name=isDarkMode]").parent());
-	},
+	...formStep,
 	"But enters a breached password": async (t: TestController) => {
 		await t.typeText(Selector("input[name=password]"), "Password!123");
 	},

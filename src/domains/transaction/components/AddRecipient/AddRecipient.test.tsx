@@ -49,6 +49,26 @@ describe("AddRecipient", () => {
 		network = wallet.network();
 	});
 
+	const Component = () => {
+		const form = useForm({
+			defaultValues: { fee: 0, network, senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
+			mode: "onChange",
+		});
+
+		useEffect(() => {
+			form.register("network");
+			form.register("senderAddress");
+		}, []);
+
+		return (
+			<Route path="/profiles/:profileId">
+				<FormProvider {...form}>
+					<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />
+				</FormProvider>
+			</Route>
+		);
+	};
+
 	it("should render", async () => {
 		const { container } = renderWithFormProvider(
 			<AddRecipient profile={profile} wallet={wallet} recipients={[]} onChange={jest.fn()} />,
@@ -329,28 +349,6 @@ describe("AddRecipient", () => {
 	});
 
 	it("should show wallet name in recipients' list for multiple type", async () => {
-		let form: ReturnType<typeof useForm>;
-
-		const Component = () => {
-			form = useForm({
-				defaultValues: { fee: 0, network, senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
-				mode: "onChange",
-			});
-
-			useEffect(() => {
-				form.register("network");
-				form.register("senderAddress");
-			}, []);
-
-			return (
-				<Route path="/profiles/:profileId">
-					<FormProvider {...form}>
-						<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />
-					</FormProvider>
-				</Route>
-			);
-		};
-
 		render(<Component />, { routes: [`/profiles/${profile.id()}`] });
 
 		expect(screen.getByTestId("SelectDropdown__input")).not.toHaveValue();
@@ -544,28 +542,6 @@ describe("AddRecipient", () => {
 		const values = {
 			amount: 1,
 			recipientAddress: "DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T",
-		};
-
-		let form: ReturnType<typeof useForm>;
-
-		const Component = () => {
-			form = useForm({
-				defaultValues: { fee: 0, network, senderAddress: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD" },
-				mode: "onChange",
-			});
-
-			useEffect(() => {
-				form.register("network");
-				form.register("senderAddress");
-			}, []);
-
-			return (
-				<Route path="/profiles/:profileId">
-					<FormProvider {...form}>
-						<AddRecipient profile={profile} wallet={wallet} onChange={jest.fn()} recipients={[]} />
-					</FormProvider>
-				</Route>
-			);
 		};
 
 		render(<Component />, {

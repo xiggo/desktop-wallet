@@ -91,6 +91,16 @@ const Tooltip: React.VFC<TooltipProperties> = ({ dataPoint: { color, data } }) =
 	);
 };
 
+const skeletonBlock = (label: string) => (
+	<LabelledText label={label}>
+		{() => (
+			<div className="flex items-center h-7">
+				<Skeleton height={18} width={20} />
+			</div>
+		)}
+	</LabelledText>
+);
+
 const PortfolioBreakdownSkeleton: React.VFC = () => {
 	const { t } = useTranslation();
 
@@ -110,21 +120,9 @@ const PortfolioBreakdownSkeleton: React.VFC = () => {
 					)}
 				</LabelledText>
 
-				<LabelledText label={t("COMMON.ASSETS")}>
-					{() => (
-						<div className="flex items-center h-7">
-							<Skeleton height={18} width={20} />
-						</div>
-					)}
-				</LabelledText>
+				{skeletonBlock(t("COMMON.ASSETS"))}
 
-				<LabelledText label={t("COMMON.WALLETS")}>
-					{() => (
-						<div className="flex items-center h-7">
-							<Skeleton height={18} width={20} />
-						</div>
-					)}
-				</LabelledText>
+				{skeletonBlock(t("COMMON.WALLETS"))}
 			</div>
 
 			<div className="flex-1 ml-4 self-end" ref={lineGraphSkeletonReference}>

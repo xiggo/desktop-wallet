@@ -72,6 +72,21 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 const transport = getDefaultLedgerTransport();
 
+const votingMockImplementation = () => [
+	{
+		amount: 10,
+		wallet: new ReadOnlyWallet({
+			address: delegateData[1].address,
+			explorerLink: "",
+			governanceIdentifier: "address",
+			isDelegate: true,
+			isResignedDelegate: false,
+			publicKey: delegateData[1].publicKey,
+			username: delegateData[1].username,
+		}),
+	},
+];
+
 describe("SendVote", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -257,20 +272,7 @@ describe("SendVote", () => {
 	});
 
 	it("should send a unvote & vote transaction", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => [
-			{
-				amount: 10,
-				wallet: new ReadOnlyWallet({
-					address: delegateData[1].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[1].publicKey,
-					username: delegateData[1].username,
-				}),
-			},
-		]);
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 		await wallet.synchroniser().votes();
 
 		const history = createMemoryHistory();
@@ -398,20 +400,7 @@ describe("SendVote", () => {
 	});
 
 	it("should send a unvote & vote transaction and use split voting method", async () => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(() => [
-			{
-				amount: 10,
-				wallet: new ReadOnlyWallet({
-					address: delegateData[1].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: delegateData[1].publicKey,
-					username: delegateData[1].username,
-				}),
-			},
-		]);
+		const votesMock = jest.spyOn(wallet.voting(), "current").mockImplementation(votingMockImplementation);
 		await wallet.synchroniser().votes();
 
 		const history = createMemoryHistory();
@@ -1419,6 +1408,7 @@ describe("SendVote", () => {
 			search: `?${parameters}`,
 		});
 
+		// eslint-disable-next-line sonarjs/no-identical-functions
 		const { result: form } = renderHook(() =>
 			useForm({
 				defaultValues: {

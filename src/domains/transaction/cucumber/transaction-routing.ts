@@ -15,11 +15,7 @@ const preSteps = {
 		await goToWallet(t);
 	},
 };
-cucumber("@transactionRouting-transferPage", {
-	...preSteps,
-	"When she navigates to the transfer page via the send button": async (t: TestController) => {
-		await goToTransferPage(t);
-	},
+const transferPageStep = {
 	"Then she is on the transfer page": async (t: TestController) => {
 		await t
 			.expect(
@@ -29,40 +25,39 @@ cucumber("@transactionRouting-transferPage", {
 			)
 			.ok({ timeout: 60_000 });
 	},
+};
+const selectCryptoStep = {
+	"Then she is on the select crypto asset page": async (t: TestController) => {
+		await t
+			.expect(Selector("h1").withText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.NETWORK_STEP.TITLE).exists)
+			.ok();
+	},
+};
+
+cucumber("@transactionRouting-transferPage", {
+	...preSteps,
+	"When she navigates to the transfer page via the send button": async (t: TestController) => {
+		await goToTransferPage(t);
+	},
+	...transferPageStep,
 });
 cucumber("@transactionRouting-transferPageNavbar", {
 	...preSteps,
 	"When she navigates to the transfer page via the navbar": async (t: TestController) => {
 		await goToTransferPageThroughNavbar(t);
 	},
-	"Then she is on the select crypto asset page": async (t: TestController) => {
-		await t
-			.expect(Selector("h1").withText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.NETWORK_STEP.TITLE).exists)
-			.ok();
-	},
+	...selectCryptoStep,
 });
 cucumber("@transactionRouting-reloadTransfer", {
 	...preSteps,
 	"When she navigates to the transfer page via the send button": async (t: TestController) => {
 		await goToTransferPage(t);
 	},
-	"Then she is on the transfer page": async (t: TestController) => {
-		await t
-			.expect(
-				Selector("h1").withText(
-					translations.TRANSACTION.PAGE_TRANSACTION_SEND.FORM_STEP.TITLE.replace("{{ticker}}", "DARK"),
-				).exists,
-			)
-			.ok({ timeout: 60_000 });
-	},
+	...transferPageStep,
 	"When she navigates to the transfer page via the navbar": async (t: TestController) => {
 		await goToTransferPageThroughNavbar(t);
 	},
-	"Then she is on the select crypto asset page": async (t: TestController) => {
-		await t
-			.expect(Selector("h1").withText(translations.TRANSACTION.PAGE_TRANSACTION_SEND.NETWORK_STEP.TITLE).exists)
-			.ok();
-	},
+	...selectCryptoStep,
 });
 cucumber(
 	"@transactionRouting-delegateResignation",

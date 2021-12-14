@@ -135,7 +135,7 @@ module.exports = {
 		"sonarjs/no-collapsible-if": "error",
 		"sonarjs/no-duplicate-string": "warn", // @TODO: set to error and resolve issues
 		"sonarjs/no-identical-expressions": "error",
-		"sonarjs/no-identical-functions": "warn", // @TODO: set to error and resolve issues
+		"sonarjs/no-identical-functions": "error",
 		"sonarjs/no-redundant-jump": "error",
 		"sonarjs/no-small-switch": "error",
 		"sonarjs/no-use-of-empty-return-value": "error",

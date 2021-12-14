@@ -9,6 +9,33 @@ import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import { env, render, screen, waitFor } from "@/utils/testing-library";
 
+const Create = () => {
+	const { env, persist } = useEnvironmentContext();
+
+	const handleClick = async () => {
+		env.profiles().create("Test");
+		await persist();
+	};
+
+	return <button onClick={handleClick}>Create</button>;
+};
+const Details = () => {
+	const context = useEnvironmentContext();
+	const count = React.useMemo(() => context.env.profiles().count(), [context]);
+	return <h1>Counter {count}</h1>;
+};
+
+const App = ({ database }) => {
+	env.reset({ coins: { ARK }, httpClient, storage: database });
+
+	return (
+		<EnvironmentProvider env={env}>
+			<Details />
+			<Create />
+		</EnvironmentProvider>
+	);
+};
+
 describe("Environment Context", () => {
 	let database: Storage;
 
@@ -47,35 +74,7 @@ describe("Environment Context", () => {
 	});
 
 	it("should rerender components when env updates", async () => {
-		const Details = () => {
-			const context = useEnvironmentContext();
-			const count = React.useMemo(() => context.env.profiles().count(), [context]);
-			return <h1>Counter {count}</h1>;
-		};
-
-		const Create = () => {
-			const { env, persist } = useEnvironmentContext();
-
-			const handleClick = async () => {
-				env.profiles().create("Test");
-				await persist();
-			};
-
-			return <button onClick={handleClick}>Create</button>;
-		};
-
-		const App = () => {
-			env.reset({ coins: { ARK }, httpClient, storage: database });
-
-			return (
-				<EnvironmentProvider env={env}>
-					<Details />
-					<Create />
-				</EnvironmentProvider>
-			);
-		};
-
-		render(<App />, { withProviders: false });
+		render(<App database={database} />, { withProviders: false });
 
 		userEvent.click(screen.getByRole("button"));
 
@@ -117,35 +116,8 @@ describe("Environment Context", () => {
 
 	it("should not persist on e2e", async () => {
 		process.env.REACT_APP_IS_E2E = "1";
-		const Details = () => {
-			const context = useEnvironmentContext();
-			const count = React.useMemo(() => context.env.profiles().count(), [context]);
-			return <h1>Counter {count}</h1>;
-		};
 
-		const Create = () => {
-			const { env, persist } = useEnvironmentContext();
-
-			const handleClick = async () => {
-				env.profiles().create("Test");
-				await persist();
-			};
-
-			return <button onClick={handleClick}>Create</button>;
-		};
-
-		const App = () => {
-			env.reset({ coins: { ARK }, httpClient, storage: database });
-
-			return (
-				<EnvironmentProvider env={env}>
-					<Details />
-					<Create />
-				</EnvironmentProvider>
-			);
-		};
-
-		render(<App />, { withProviders: false });
+		render(<App database={database} />, { withProviders: false });
 
 		userEvent.click(screen.getByRole("button"));
 

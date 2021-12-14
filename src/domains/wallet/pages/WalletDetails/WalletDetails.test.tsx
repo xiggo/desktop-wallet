@@ -198,7 +198,7 @@ describe("WalletDetails", () => {
 		history.push(walletUrl);
 	});
 
-	it("should render pending transactions and view details in modal", async () => {
+	it("should render pending multiSignatures and view details in modal", async () => {
 		mockPendingTransfers(wallet);
 
 		await renderPage();
@@ -248,23 +248,6 @@ describe("WalletDetails", () => {
 		expect(toastsMock).toHaveBeenCalledWith(translations.TRANSACTION.TRANSACTION_REMOVED);
 
 		toastsMock.mockRestore();
-	});
-
-	it("should render pending multiSignatures and view details in modal", async () => {
-		mockPendingTransfers(wallet);
-
-		await renderPage();
-
-		await expect(screen.findByTestId("PendingTransactions")).resolves.toBeVisible();
-
-		userEvent.click(within(screen.getByTestId("PendingTransactions")).getAllByTestId("TableRow")[0]);
-
-		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
-
-		userEvent.click(screen.getByTestId("modal__close-btn"));
-
-		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
-		jest.restoreAllMocks();
 	});
 
 	it("should navigate to send transfer", async () => {

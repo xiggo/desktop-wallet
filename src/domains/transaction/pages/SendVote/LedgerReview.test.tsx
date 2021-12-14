@@ -6,6 +6,15 @@ import { FormProvider, useForm } from "react-hook-form";
 import { VoteLedgerReview } from "./LedgerReview";
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 
+const renderForm = () =>
+	renderHook(() =>
+		useForm({
+			defaultValues: {
+				fee: "0",
+			},
+		}),
+	);
+
 describe("LedgerReview", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -25,13 +34,7 @@ describe("LedgerReview", () => {
 			}),
 		];
 
-		const { result } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: "0",
-				},
-			}),
-		);
+		const { result } = renderForm();
 
 		result.current.register("fee");
 
@@ -55,13 +58,7 @@ describe("LedgerReview", () => {
 			}),
 		];
 
-		const { result } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: "0",
-				},
-			}),
-		);
+		const { result } = renderForm();
 
 		result.current.register("fee");
 
@@ -85,13 +82,7 @@ describe("LedgerReview", () => {
 			}),
 		];
 
-		const { result } = renderHook(() =>
-			useForm({
-				defaultValues: {
-					fee: "0",
-				},
-			}),
-		);
+		const { result } = renderForm();
 
 		result.current.register("fee");
 

@@ -31,12 +31,6 @@ describe("SelectRecipient", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render with preselected address", () => {
-		const { container } = render(<SelectRecipient profile={profile} />);
-
-		expect(container).toMatchSnapshot();
-	});
-
 	it("should update internal state when prop changes", () => {
 		const { container, rerender } = render(<SelectRecipient profile={profile} />);
 

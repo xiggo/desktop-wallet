@@ -18,23 +18,26 @@ describe("MultiSignatureSuccessful", () => {
 		await profile.sync();
 	});
 
+	const transactionMockImplementation = (attribute, transaction) => {
+		if (attribute === "multiSignature") {
+			return {
+				min: 2,
+				publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()],
+			};
+		}
+
+		return transaction[attribute]();
+	};
+
 	it("should render", async () => {
 		const transaction = {
 			...TransactionFixture,
 			wallet: () => wallet,
 		};
 
-		jest.spyOn(transaction, "get").mockImplementation((attribute) => {
-			if (attribute === "multiSignature") {
-				return {
-					min: 2,
-					publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()],
-				};
-			}
-
-			//@ts-ignore
-			return transaction[attribute]();
-		});
+		jest.spyOn(transaction, "get").mockImplementation((attribute) =>
+			transactionMockImplementation(attribute, transaction),
+		);
 
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
@@ -65,17 +68,9 @@ describe("MultiSignatureSuccessful", () => {
 		jest.spyOn(wallet, "isDelegate").mockReturnValue(true);
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(false);
 
-		jest.spyOn(transaction, "get").mockImplementation((attribute) => {
-			if (attribute === "multiSignature") {
-				return {
-					min: 2,
-					publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()],
-				};
-			}
-
-			//@ts-ignore
-			return transaction[attribute]();
-		});
+		jest.spyOn(transaction, "get").mockImplementation((attribute) =>
+			transactionMockImplementation(attribute, transaction),
+		);
 
 		jest.spyOn(wallet, "isResignedDelegate").mockReturnValue(true);
 
@@ -117,17 +112,9 @@ describe("MultiSignatureSuccessful", () => {
 			wallet: () => wallet,
 		};
 
-		jest.spyOn(transaction, "get").mockImplementation((attribute) => {
-			if (attribute === "multiSignature") {
-				return {
-					min: 2,
-					publicKeys: [wallet.publicKey()!, profile.wallets().last().publicKey()],
-				};
-			}
-
-			//@ts-ignore
-			return transaction[attribute]();
-		});
+		jest.spyOn(transaction, "get").mockImplementation((attribute) =>
+			transactionMockImplementation(attribute, transaction),
+		);
 
 		jest.spyOn(transaction.wallet().coin().address(), "fromMultiSignature").mockResolvedValue({
 			address: undefined,

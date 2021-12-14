@@ -28,24 +28,38 @@ const preSteps = {
 			.ok();
 	},
 };
+const encryptionPasswordsStep = {
+	"And enters the encryption passwords": async (t: TestController) => {
+		const passwordInputs = Selector("[data-testid=InputPassword]");
+
+		await t.typeText(passwordInputs.nth(0), "S3cUrePa$sword", { paste: true });
+		await t.typeText(passwordInputs.nth(1), "S3cUrePa$sword", { paste: true });
+
+		await t.hover(Selector("button").withExactText(translations.COMMON.CONTINUE));
+		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
+	},
+};
+
+const enterMnemonic = async (t: TestController) => {
+	const passphraseInput = Selector("[data-testid=ImportWallet__mnemonic-input]");
+	await t.typeText(passphraseInput, "buddy year cost vendor honey tonight viable nut female alarm duck symptom", {
+		paste: true,
+	});
+	await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
+};
+const completeImportWallet = async (t: TestController) => {
+	await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
+	const walletNameInput = Selector("input[name=name]");
+	await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias", {
+		paste: true,
+	});
+	await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
+};
 
 cucumber("@importWallet-mnemonic", {
 	...preSteps,
-	"When she enters a valid mnemonic to import": async (t: TestController) => {
-		const passphraseInput = Selector("[data-testid=ImportWallet__mnemonic-input]");
-		await t.typeText(passphraseInput, "buddy year cost vendor honey tonight viable nut female alarm duck symptom", {
-			paste: true,
-		});
-		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
-	},
-	"And completes the import wallet steps for mnemonic": async (t: TestController) => {
-		await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
-		const walletNameInput = Selector("input[name=name]");
-		await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias", {
-			paste: true,
-		});
-		await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
-	},
+	"When she enters a valid mnemonic to import": enterMnemonic,
+	"And completes the import wallet steps for mnemonic": completeImportWallet,
 	"Then the wallet is imported to her profile": async (t: TestController) => {
 		await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
 	},
@@ -56,30 +70,9 @@ cucumber("@importWallet-mnemonic-withEncryption", {
 	"When she chooses to encrypt the imported wallet": async (t: TestController) => {
 		await t.click(Selector('[data-testid="ImportWallet__encryption-toggle"]').parent());
 	},
-	"And enters a valid mnemonic to import": async (t: TestController) => {
-		const passphraseInput = Selector("[data-testid=ImportWallet__mnemonic-input]");
-		await t.typeText(passphraseInput, "buddy year cost vendor honey tonight viable nut female alarm duck symptom", {
-			paste: true,
-		});
-		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
-	},
-	"And enters the encryption passwords": async (t: TestController) => {
-		const passwordInputs = Selector("[data-testid=InputPassword]");
-
-		await t.typeText(passwordInputs.nth(0), "S3cUrePa$sword", { paste: true });
-		await t.typeText(passwordInputs.nth(1), "S3cUrePa$sword", { paste: true });
-
-		await t.hover(Selector("button").withExactText(translations.COMMON.CONTINUE));
-		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
-	},
-	"And completes the import wallet steps for mnemonic": async (t: TestController) => {
-		await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
-		const walletNameInput = Selector("input[name=name]");
-		await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias", {
-			paste: true,
-		});
-		await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
-	},
+	"And enters a valid mnemonic to import": enterMnemonic,
+	...encryptionPasswordsStep,
+	"And completes the import wallet steps for mnemonic": completeImportWallet,
 	"Then the wallet is imported to her profile": async (t: TestController) => {
 		await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
 	},
@@ -107,23 +100,8 @@ cucumber(
 			const secondSecretInput = Selector("[data-testid=EncryptPassword__second-secret]");
 			await t.typeText(secondSecretInput, "abc", { paste: true });
 		},
-		"And enters the encryption passwords": async (t: TestController) => {
-			const passwordInputs = Selector("[data-testid=InputPassword]");
-
-			await t.typeText(passwordInputs.nth(0), "S3cUrePa$sword", { paste: true });
-			await t.typeText(passwordInputs.nth(1), "S3cUrePa$sword", { paste: true });
-
-			await t.hover(Selector("button").withExactText(translations.COMMON.CONTINUE));
-			await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
-		},
-		"And completes the import wallet steps for secret": async (t: TestController) => {
-			await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
-			const walletNameInput = Selector("input[name=name]");
-			await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias", {
-				paste: true,
-			});
-			await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
-		},
+		...encryptionPasswordsStep,
+		"And completes the import wallet steps for secret": completeImportWallet,
 		"Then the wallet is imported to her profile": async (t: TestController) => {
 			await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
 		},
@@ -150,14 +128,7 @@ cucumber("@importWallet-address", {
 		});
 		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
 	},
-	"And completes the import wallet steps for address": async (t: TestController) => {
-		await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
-		const walletNameInput = Selector("input[name=name]");
-		await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias", {
-			paste: true,
-		});
-		await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
-	},
+	"And completes the import wallet steps for address": completeImportWallet,
 	"Then the wallet is imported to her profile": async (t: TestController) => {
 		await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
 	},
@@ -207,12 +178,9 @@ cucumber("@importWallet-duplicateAddress", {
 			paste: true,
 		});
 		await t.click(Selector("button").withExactText(translations.COMMON.CONTINUE));
-		await t.click(Selector("[data-testid=ImportWallet__edit-alias]"));
-		const walletNameInput = Selector("input[name=name]");
-		await t.click(walletNameInput).pressKey("ctrl+a delete").typeText(walletNameInput, "Wallet Alias", {
-			paste: true,
-		});
-		await t.click(Selector("[data-testid=UpdateWalletName__submit]"));
+
+		await completeImportWallet(t);
+
 		await t.click(Selector("button").withExactText(translations.COMMON.GO_TO_WALLET));
 	},
 	"When she attempts to import the same wallet again": async (t: TestController) => {

@@ -9,15 +9,19 @@ import { goToDelegateResignationPage } from "../e2e/common";
 const translations = buildTranslations();
 const sendButton = Selector("button").withText(translations.COMMON.SEND);
 
+const delegateFormStep = {
+	"Given Alice has navigated to the delegate resignation form for a wallet": async (t: TestController) => {
+		await visitWelcomeScreen(t);
+		await goToProfile(t);
+		await importWallet(t, MNEMONICS[0]);
+		await goToDelegateResignationPage(t);
+	},
+};
+
 cucumber(
 	"@delegateResignation",
 	{
-		"Given Alice has navigated to the delegate resignation form for a wallet": async (t: TestController) => {
-			await visitWelcomeScreen(t);
-			await goToProfile(t);
-			await importWallet(t, MNEMONICS[0]);
-			await goToDelegateResignationPage(t);
-		},
+		...delegateFormStep,
 		"When she completes the process with a valid mnemonic": async (t: TestController) => {
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
@@ -65,12 +69,7 @@ cucumber(
 cucumber(
 	"@delegateResignation-invalidMnemonic",
 	{
-		"Given Alice has navigated to the delegate resignation form for a wallet": async (t: TestController) => {
-			await visitWelcomeScreen(t);
-			await goToProfile(t);
-			await importWallet(t, MNEMONICS[0]);
-			await goToDelegateResignationPage(t);
-		},
+		...delegateFormStep,
 		"When she attempts to complete the process with an invalid mnemonic": async (t: TestController) => {
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));
 			await t.click(Selector("button").withText(translations.COMMON.CONTINUE));

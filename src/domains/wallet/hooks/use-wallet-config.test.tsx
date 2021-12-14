@@ -9,18 +9,18 @@ import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
+const wrapper = ({ children }) => (
+	<EnvironmentProvider env={env}>
+		<ConfigurationProvider>{children}</ConfigurationProvider>
+	</EnvironmentProvider>
+);
+
 describe("useWalletConfig", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
 	it("should have default configuration", () => {
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const {
 			result: { current },
 		} = renderHook(() => useWalletConfig({ profile }), { wrapper });
@@ -41,12 +41,6 @@ describe("useWalletConfig", () => {
 	it("should render with ledger wallet display type", async () => {
 		const walletIsLedgerSpy = jest.spyOn(profile.wallets().first(), "isLedger").mockReturnValue(true);
 		profile.wallets().first().toggleStarred();
-
-		const wrapper = ({ children }) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
 
 		const { result } = renderHook(
 			() =>
@@ -72,12 +66,6 @@ describe("useWalletConfig", () => {
 	it("should render with star wallet display type", async () => {
 		profile.wallets().first().toggleStarred();
 
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const { result } = renderHook(
 			() => useWalletConfig({ defaults: { selectedNetworkIds: [], walletsDisplayType: "starred" }, profile }),
 			{
@@ -93,12 +81,6 @@ describe("useWalletConfig", () => {
 	it.each([undefined, []])("should render with no networks selected (%s)", async (selectedNetworkIds) => {
 		profile.wallets().first().toggleStarred();
 
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const { result } = renderHook(() => useWalletConfig({ defaults: { selectedNetworkIds } as any, profile }), {
 			wrapper,
 		});
@@ -110,12 +92,6 @@ describe("useWalletConfig", () => {
 
 	it("should set value", async () => {
 		profile.wallets().first().toggleStarred();
-
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
 
 		const { result, waitForNextUpdate } = renderHook(
 			() => useWalletConfig({ defaults: { selectedNetworkIds: [], walletsDisplayType: "all" }, profile }),

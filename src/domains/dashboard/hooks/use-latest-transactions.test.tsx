@@ -9,6 +9,12 @@ import { env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } 
 
 let profile: Contracts.IProfile;
 
+const wrapper = ({ children }: any) => (
+	<EnvironmentProvider env={env}>
+		<ConfigurationProvider>{children}</ConfigurationProvider>
+	</EnvironmentProvider>
+);
+
 describe("useLatestTransactions", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -43,12 +49,6 @@ describe("useLatestTransactions", () => {
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => items } as any));
 
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const { result, waitForNextUpdate } = renderHook(
 			() => useLatestTransactions({ profile, profileIsSyncing: false }),
 			{ wrapper },
@@ -68,12 +68,6 @@ describe("useLatestTransactions", () => {
 		const mockTransactionsAggregate = jest
 			.spyOn(profile.transactionAggregate(), "all")
 			.mockImplementation(() => Promise.resolve({ hasMorePages: () => false, items: () => [] } as any));
-
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
 
 		const { result, waitForNextUpdate } = renderHook(
 			() => useLatestTransactions({ profile, profileIsSyncing: true }),

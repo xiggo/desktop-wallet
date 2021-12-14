@@ -13,6 +13,18 @@ import { env, getDefaultProfileId, MNEMONICS, render, screen, waitFor } from "@/
 
 let profile: Contracts.IProfile;
 
+const renderForm = () =>
+	renderHook(() =>
+		useForm({
+			defaultValues: {
+				mnemonic: MNEMONICS[0],
+				wallet: {
+					address: () => "address",
+				},
+			},
+		}),
+	);
+
 describe("WalletOverviewStep", () => {
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -24,16 +36,7 @@ describe("WalletOverviewStep", () => {
 
 	describe("Render step", () => {
 		it("should render", async () => {
-			const { result: form } = renderHook(() =>
-				useForm({
-					defaultValues: {
-						mnemonic: MNEMONICS[0],
-						wallet: {
-							address: () => "address",
-						},
-					},
-				}),
-			);
+			const { result: form } = renderForm();
 
 			jest.spyOn(electron.remote.dialog, "showSaveDialog").mockImplementation(() => ({
 				filePath: "filePath",
@@ -61,16 +64,7 @@ describe("WalletOverviewStep", () => {
 		});
 
 		it("should show success toast on successful download", async () => {
-			const { result: form } = renderHook(() =>
-				useForm({
-					defaultValues: {
-						mnemonic: MNEMONICS[0],
-						wallet: {
-							address: () => "address",
-						},
-					},
-				}),
-			);
+			const { result: form } = renderForm();
 
 			jest.spyOn(electron.remote.dialog, "showSaveDialog").mockImplementation(() => ({
 				filePath: "filePath",
@@ -100,16 +94,7 @@ describe("WalletOverviewStep", () => {
 		});
 
 		it("should not show success toast on cancelled download", async () => {
-			const { result: form } = renderHook(() =>
-				useForm({
-					defaultValues: {
-						mnemonic: MNEMONICS[0],
-						wallet: {
-							address: () => "address",
-						},
-					},
-				}),
-			);
+			const { result: form } = renderForm();
 
 			jest.spyOn(electron.remote.dialog, "showSaveDialog").mockImplementation(() => ({
 				filePath: undefined,
@@ -131,16 +116,7 @@ describe("WalletOverviewStep", () => {
 		});
 
 		it("should show error toast on error", async () => {
-			const { result: form } = renderHook(() =>
-				useForm({
-					defaultValues: {
-						mnemonic: MNEMONICS[0],
-						wallet: {
-							address: () => "address",
-						},
-					},
-				}),
-			);
+			const { result: form } = renderForm();
 
 			jest.spyOn(electron.remote.dialog, "showSaveDialog").mockImplementation(() => {
 				throw new Error("Error");

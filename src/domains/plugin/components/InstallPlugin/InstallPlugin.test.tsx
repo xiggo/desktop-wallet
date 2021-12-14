@@ -13,6 +13,12 @@ import { translations as pluginTranslations } from "@/domains/plugin/i18n";
 import { PluginManagerProvider } from "@/plugins/context/PluginManagerProvider";
 import { env, getDefaultProfileId, pluginManager, render, screen, waitFor } from "@/utils/testing-library";
 
+const ipcRendererMockImplementation = (channel: string, listener: (...arguments_: any[]) => void) => {
+	if (channel === "plugin:download-progress") {
+		return listener(undefined, { totalBytes: 200 });
+	}
+};
+
 describe("InstallPlugin", () => {
 	let profile: Contracts.IProfile;
 
@@ -88,14 +94,7 @@ describe("InstallPlugin", () => {
 			title: "Remote Plugin",
 		};
 
-		jest.spyOn(ipcRenderer, "on").mockImplementation(((
-			channel: string,
-			listener: (...arguments_: any[]) => void,
-		) => {
-			if (channel === "plugin:download-progress") {
-				return listener(undefined, { totalBytes: 200 });
-			}
-		}) as any);
+		jest.spyOn(ipcRenderer, "on").mockImplementation(ipcRendererMockImplementation as any);
 
 		const invokeSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel, ...arguments_) => {
 			if (channel === "plugin:loader-fs.find") {
@@ -168,11 +167,11 @@ describe("InstallPlugin", () => {
 
 		userEvent.click(screen.getByTestId("InstallPlugin__cancel-button"));
 
-		await waitFor(() =>
+		const cancelPluginCalled = () =>
 			expect(cancelInstall).toHaveBeenCalledWith({
 				savedPath: `/Users/plugins/temp/${plugin.id}`,
-			}),
-		);
+			});
+		await waitFor(cancelPluginCalled);
 
 		expect(cancelInstall).toHaveBeenCalledTimes(1);
 
@@ -182,11 +181,7 @@ describe("InstallPlugin", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		await waitFor(() =>
-			expect(cancelInstall).toHaveBeenCalledWith({
-				savedPath: `/Users/plugins/temp/${plugin.id}`,
-			}),
-		);
+		await waitFor(cancelPluginCalled);
 
 		expect(cancelInstall).toHaveBeenCalledTimes(2);
 
@@ -218,14 +213,7 @@ describe("InstallPlugin", () => {
 			title: "Remote Plugin",
 		};
 
-		jest.spyOn(ipcRenderer, "on").mockImplementation(((
-			channel: string,
-			listener: (...arguments_: any[]) => void,
-		) => {
-			if (channel === "plugin:download-progress") {
-				return listener(undefined, { totalBytes: 200 });
-			}
-		}) as any);
+		jest.spyOn(ipcRenderer, "on").mockImplementation(ipcRendererMockImplementation as any);
 
 		jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:loader-fs.find") {

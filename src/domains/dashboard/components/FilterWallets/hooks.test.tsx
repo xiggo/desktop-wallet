@@ -8,18 +8,18 @@ import { env, getDefaultProfileId, waitFor } from "@/utils/testing-library";
 
 let profile: Contracts.IProfile;
 
+const wrapper = ({ children }: any) => (
+	<EnvironmentProvider env={env}>
+		<ConfigurationProvider>{children}</ConfigurationProvider>
+	</EnvironmentProvider>
+);
+
 describe("useWalletFilters", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
 	});
 
 	it("should match default filters", () => {
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const {
 			result: { current },
 		} = renderHook(() => useWalletFilters({ profile }), { wrapper });
@@ -28,12 +28,6 @@ describe("useWalletFilters", () => {
 	});
 
 	it("should toggle network selection", async () => {
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const { result, waitForNextUpdate } = renderHook(() => useWalletFilters({ profile }), { wrapper });
 
 		act(() => {
@@ -46,12 +40,6 @@ describe("useWalletFilters", () => {
 	});
 
 	it("should toggle wallet display type filter", async () => {
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const { result, waitForNextUpdate } = renderHook(() => useWalletFilters({ profile }), { wrapper });
 
 		act(() => {

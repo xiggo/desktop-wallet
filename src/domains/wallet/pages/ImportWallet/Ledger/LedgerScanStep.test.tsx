@@ -3,11 +3,14 @@ import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
 import nock from "nock";
 import React from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { FormProvider, useForm, UseFormMethods } from "react-hook-form";
 
+import { Networks } from "@payvo/sdk";
 import { LedgerScanStep } from "./LedgerScanStep";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
+
+let formReference: UseFormMethods<{ network: Networks.Network }>;
 
 describe("LedgerScanStep", () => {
 	let profile: Contracts.IProfile;
@@ -81,26 +84,23 @@ describe("LedgerScanStep", () => {
 		jest.spyOn(wallet.coin().ledger(), "getExtendedPublicKey").mockResolvedValue(wallet.publicKey()!);
 	});
 
+	const Component = () => {
+		formReference = useForm({
+			defaultValues: {
+				network: wallet.network(),
+			},
+		});
+
+		return (
+			<FormProvider {...formReference}>
+				<LedgerProvider transport={transport}>
+					<LedgerScanStep profile={profile} />
+				</LedgerProvider>
+			</FormProvider>
+		);
+	};
+
 	it("should handle select", async () => {
-		let formReference: ReturnType<typeof useForm>;
-
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-				},
-			});
-			formReference = form;
-
-			return (
-				<FormProvider {...form}>
-					<LedgerProvider transport={transport}>
-						<LedgerScanStep profile={profile} />
-					</LedgerProvider>
-				</FormProvider>
-			);
-		};
-
 		render(<Component />);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
@@ -127,24 +127,6 @@ describe("LedgerScanStep", () => {
 	});
 
 	it("should render", async () => {
-		let formReference: ReturnType<typeof useForm>;
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-				},
-			});
-			formReference = form;
-
-			return (
-				<FormProvider {...form}>
-					<LedgerProvider transport={transport}>
-						<LedgerScanStep profile={profile} />
-					</LedgerProvider>
-				</FormProvider>
-			);
-		};
-
 		const { container } = render(<Component />);
 
 		await waitFor(() => expect(screen.getAllByRole("row")).toHaveLength(6));
@@ -172,11 +154,12 @@ describe("LedgerScanStep", () => {
 
 		userEvent.click(checkboxSelectAll);
 
-		await waitFor(() =>
+		const validLedgerWallet = () =>
 			expect(formReference.getValues("wallets")).toMatchObject([
 				{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" },
-			]),
-		);
+			]);
+
+		await waitFor(validLedgerWallet);
 
 		userEvent.click(checkboxFirstItem);
 
@@ -184,11 +167,7 @@ describe("LedgerScanStep", () => {
 
 		userEvent.click(checkboxFirstItem);
 
-		await waitFor(() =>
-			expect(formReference.getValues("wallets")).toMatchObject([
-				{ address: "DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG" },
-			]),
-		);
+		await waitFor(validLedgerWallet);
 
 		expect(container).toMatchSnapshot();
 	});

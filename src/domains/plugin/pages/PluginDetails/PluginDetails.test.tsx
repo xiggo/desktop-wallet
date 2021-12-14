@@ -14,6 +14,15 @@ import { env, getDefaultProfileId, pluginManager, render, screen, waitFor, withi
 
 const translations = buildTranslations();
 
+const FetchComponent = () => {
+	const { fetchLatestPackageConfiguration } = usePluginManagerContext();
+	return (
+		<button onClick={() => fetchLatestPackageConfiguration("https://github.com/arkecosystem/remote-plugin")}>
+			Fetch
+		</button>
+	);
+};
+
 describe("PluginDetails", () => {
 	let profile: Contracts.IProfile;
 
@@ -434,17 +443,6 @@ describe("PluginDetails", () => {
 			.get("/arkecosystem/remote-plugin/raw/master/package.json")
 			.reply(200, { name: "remote-plugin" });
 
-		const FetchComponent = () => {
-			const { fetchLatestPackageConfiguration } = usePluginManagerContext();
-			return (
-				<button
-					onClick={() => fetchLatestPackageConfiguration("https://github.com/arkecosystem/remote-plugin")}
-				>
-					Fetch
-				</button>
-			);
-		};
-
 		render(
 			<Route path="/profiles/:profileId/plugins/details">
 				<PluginManagerProvider manager={pluginManager} services={[]}>
@@ -498,17 +496,6 @@ describe("PluginDetails", () => {
 		nock("https://github.com/")
 			.get("/arkecosystem/remote-plugin/raw/master/package.json")
 			.reply(200, { name: "remote-plugin" });
-
-		const FetchComponent = () => {
-			const { fetchLatestPackageConfiguration } = usePluginManagerContext();
-			return (
-				<button
-					onClick={() => fetchLatestPackageConfiguration("https://github.com/arkecosystem/remote-plugin")}
-				>
-					Fetch
-				</button>
-			);
-		};
 
 		render(
 			<Route path="/profiles/:profileId/plugins/details">

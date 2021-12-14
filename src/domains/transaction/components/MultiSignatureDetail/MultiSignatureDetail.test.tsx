@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import React from "react";
 import { Route } from "react-router-dom";
 
+import { Observer } from "@ledgerhq/hw-transport";
 import { MultiSignatureDetail } from "./MultiSignatureDetail";
 import { LedgerProvider, minVersionList } from "@/app/contexts";
 import { translations } from "@/domains/transaction/i18n";
@@ -1035,6 +1036,7 @@ describe("MultiSignatureDetail", () => {
 			observer!.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
 		});
 
+		// eslint-disable-next-line sonarjs/no-identical-functions
 		await waitFor(() =>
 			expect(addSignatureMock).toHaveBeenCalledWith(
 				fixtures.multiSignature.id(),

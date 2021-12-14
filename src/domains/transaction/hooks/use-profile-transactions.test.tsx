@@ -7,6 +7,12 @@ import { useProfileTransactions } from "./use-profile-transactions";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { act, env, getDefaultProfileId, syncDelegates, useDefaultNetMocks, waitFor } from "@/utils/testing-library";
 
+const wrapper = ({ children }: any) => (
+	<EnvironmentProvider env={env}>
+		<ConfigurationProvider>{children}</ConfigurationProvider>
+	</EnvironmentProvider>
+);
+
 describe("useProfileTransactions", () => {
 	beforeAll(async () => {
 		useDefaultNetMocks();
@@ -35,12 +41,6 @@ describe("useProfileTransactions", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
 
 		const all = await profile.transactionAggregate().all({});
 		const items = all.items();
@@ -119,12 +119,6 @@ describe("useProfileTransactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const {
 			result: { current },
 		} = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), { wrapper });
@@ -150,12 +144,6 @@ describe("useProfileTransactions", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
 
 		const { result, waitForNextUpdate } = renderHook(
 			() => useProfileTransactions({ profile, wallets: profile.wallets().values() }),
@@ -230,12 +218,6 @@ describe("useProfileTransactions", () => {
 		await env.profiles().restore(profile);
 		await profile.sync();
 
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const sent = await profile.transactionAggregate().all({ limit: 30 });
 		const items = sent.items();
 
@@ -277,12 +259,6 @@ describe("useProfileTransactions", () => {
 
 		await env.profiles().restore(profile);
 		await profile.sync();
-
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
 
 		const { result } = renderHook(() => useProfileTransactions({ profile, wallets: profile.wallets().values() }), {
 			wrapper,

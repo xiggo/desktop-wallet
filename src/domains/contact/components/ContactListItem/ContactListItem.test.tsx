@@ -35,6 +35,27 @@ describe("ContactListItem", () => {
 		expect(asFragment()).toMatchSnapshot();
 	});
 
+	const renderContactList = ({
+		options,
+		onAction = jest.fn(),
+		onSend = jest.fn(),
+		item = contact,
+		useTestNetworks = true,
+	}) =>
+		render(
+			<table>
+				<tbody>
+					<ContactListItem
+						options={options}
+						onAction={onAction}
+						onSend={onSend}
+						item={item}
+						useTestNetworks={useTestNetworks}
+					/>
+				</tbody>
+			</table>,
+		);
+
 	it("should render with live networks only", () => {
 		const address = contact.addresses().create({
 			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
@@ -42,19 +63,7 @@ describe("ContactListItem", () => {
 			network: "ark.mainnet",
 		});
 
-		const { asFragment } = render(
-			<table>
-				<tbody>
-					<ContactListItem
-						options={singleOption}
-						onAction={jest.fn()}
-						onSend={jest.fn()}
-						item={contact}
-						useTestNetworks={false}
-					/>
-				</tbody>
-			</table>,
-		);
+		const { asFragment } = renderContactList({ options: singleOption, useTestNetworks: false });
 
 		expect(screen.getAllByTestId("TableRow")).toHaveLength(1);
 		expect(screen.getByTestId("TableRow")).toHaveTextContent(address.address());
@@ -83,19 +92,10 @@ describe("ContactListItem", () => {
 			name: () => "Caio",
 		};
 
-		const { asFragment } = render(
-			<table>
-				<tbody>
-					<ContactListItem
-						options={singleOption}
-						onAction={jest.fn()}
-						onSend={jest.fn()}
-						item={delegateContact as unknown as Contracts.IContact}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
+		const { asFragment } = renderContactList({
+			item: delegateContact as unknown as Contracts.IContact,
+			options: singleOption,
+		});
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -113,122 +113,29 @@ describe("ContactListItem", () => {
 			network: "ark.devnet",
 		});
 
-		const { asFragment } = render(
-			<table>
-				<tbody>
-					<ContactListItem
-						options={singleOption}
-						onAction={jest.fn()}
-						onSend={jest.fn()}
-						item={contact}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
+		const { asFragment } = renderContactList({ options: singleOption });
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with one option", () => {
-		const { asFragment } = render(
-			<table>
-				<tbody>
-					<ContactListItem
-						options={singleOption}
-						onAction={jest.fn()}
-						onSend={jest.fn()}
-						item={contact}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
+		const { asFragment } = renderContactList({ options: singleOption });
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render with multiple options", () => {
-		const { asFragment } = render(
-			<table>
-				<tbody>
-					<ContactListItem
-						onAction={jest.fn()}
-						onSend={jest.fn()}
-						item={contact}
-						options={multiOptions}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
+		const { asFragment } = renderContactList({ options: multiOptions });
 
 		expect(asFragment()).toMatchSnapshot();
-	});
-
-	it("should call onAction callback if provided with one option", () => {
-		const onAction = jest.fn();
-
-		render(
-			<table>
-				<tbody>
-					<ContactListItem
-						onSend={jest.fn()}
-						item={contact}
-						onAction={onAction}
-						options={singleOption}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
-
-		userEvent.click(screen.getByTestId("ContactListItem__one-option-button-0"));
-
-		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
 
 	it("should call onAction callback if provided with one option in my contacts", () => {
 		const onAction = jest.fn();
 
-		render(
-			<table>
-				<tbody>
-					<ContactListItem
-						onSend={jest.fn()}
-						item={contact}
-						onAction={onAction}
-						options={singleOption}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
+		renderContactList({ onAction: onAction, options: singleOption });
 
 		userEvent.click(screen.getByTestId("ContactListItem__one-option-button-0"));
-
-		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
-	});
-
-	it("should call onAction callback if provided with multiple options", () => {
-		const onAction = jest.fn();
-
-		render(
-			<table>
-				<tbody>
-					<ContactListItem
-						onSend={jest.fn()}
-						item={contact}
-						onAction={onAction}
-						options={multiOptions}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
-
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
@@ -236,19 +143,7 @@ describe("ContactListItem", () => {
 	it("should call onAction callback if provided with multiple options in my contacts", () => {
 		const onAction = jest.fn();
 
-		render(
-			<table>
-				<tbody>
-					<ContactListItem
-						onSend={jest.fn()}
-						item={contact}
-						onAction={onAction}
-						options={multiOptions}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
+		renderContactList({ onAction: onAction, options: multiOptions });
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 		userEvent.click(screen.getByTestId("dropdown__option--0"));
@@ -256,93 +151,21 @@ describe("ContactListItem", () => {
 		expect(onAction).toHaveBeenCalledWith(singleOption[0], contact.addresses().first().address());
 	});
 
-	it("should not call onAction callback if not provided with multiple options", () => {
-		const onAction = jest.fn();
-
-		render(
-			<table>
-				<tbody>
-					<ContactListItem
-						onSend={jest.fn()}
-						onAction={jest.fn()}
-						item={contact}
-						options={multiOptions}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
-
-		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
-		userEvent.click(screen.getByTestId("dropdown__option--0"));
-
-		expect(onAction).not.toHaveBeenCalled();
-	});
-
 	it("should not call onAction callback if not provided with multiple options in my contacts", () => {
 		const onAction = jest.fn();
 
-		render(
-			<table>
-				<tbody>
-					<ContactListItem
-						onSend={jest.fn()}
-						onAction={jest.fn()}
-						item={contact}
-						options={multiOptions}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
+		renderContactList({ options: multiOptions });
 
 		userEvent.click(screen.getAllByTestId("dropdown__toggle")[0]);
 		userEvent.click(screen.getByTestId("dropdown__option--0"));
 
 		expect(onAction).not.toHaveBeenCalled();
-	});
-
-	it("should call onAction callback with given values", () => {
-		const onAction = jest.fn();
-
-		render(
-			<table>
-				<tbody>
-					<ContactListItem
-						onSend={jest.fn()}
-						item={contact}
-						onAction={onAction}
-						options={singleOption}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
-
-		userEvent.click(screen.getByTestId("ContactListItem__one-option-button-0"));
-
-		expect(onAction).toHaveBeenCalledWith(
-			{ label: "Option 1", value: "option_1" },
-			"D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib",
-		);
 	});
 
 	it("should call onAction callback with given values in my contacts", () => {
 		const onAction = jest.fn();
 
-		render(
-			<table>
-				<tbody>
-					<ContactListItem
-						onSend={jest.fn()}
-						item={contact}
-						onAction={onAction}
-						options={singleOption}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
+		renderContactList({ onAction: onAction, options: singleOption });
 
 		userEvent.click(screen.getByTestId("ContactListItem__one-option-button-0"));
 
@@ -355,19 +178,7 @@ describe("ContactListItem", () => {
 	it("should call send", () => {
 		const onSend = jest.fn();
 
-		render(
-			<table>
-				<tbody>
-					<ContactListItem
-						onAction={jest.fn()}
-						item={contact}
-						onSend={onSend}
-						options={singleOption}
-						useTestNetworks
-					/>
-				</tbody>
-			</table>,
-		);
+		renderContactList({ onSend: onSend, options: singleOption });
 
 		userEvent.click(screen.getAllByTestId("ContactListItem__send-button")[0]);
 

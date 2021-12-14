@@ -116,65 +116,38 @@ describe("useActiveProfile", () => {
 		expect(screen.getByText(wallet.address())).toBeInTheDocument();
 	});
 
-	it("should return undefined if wallet id is not provided in url", () => {
-		const consoleSpy = jest.spyOn(console, "error").mockImplementation(jest.fn());
-		let activeWallet: Contracts.IReadWriteWallet | undefined;
-		let activeWalletId: string | undefined;
+	it.each([true, false])(
+		"should return undefined if wallet id is not provided in url when active wallet isRequired = %s",
+		(isRequired: boolean) => {
+			const consoleSpy = jest.spyOn(console, "error").mockImplementation(jest.fn());
+			let activeWallet: Contracts.IReadWriteWallet | undefined;
+			let activeWalletId: string | undefined;
 
-		const TestActiveWallet = () => {
-			activeWallet = useActiveWalletWhenNeeded(false);
-			activeWalletId = activeWallet?.id();
+			const TestActiveWallet = () => {
+				activeWallet = useActiveWalletWhenNeeded(isRequired);
+				activeWalletId = activeWallet?.id();
 
-			return <TestWallet />;
-		};
+				return <TestWallet />;
+			};
 
-		expect(() =>
-			render(
-				<Route path="/profiles/:profileId/wallets/:walletId">
-					<TestActiveWallet />
-				</Route>,
-				{
-					routes: [`/profiles/${profile.id()}/wallets/1`],
-					withProfileSynchronizer: false,
-				},
-			),
-		).toThrow("Failed to find a wallet for [1].");
+			expect(() =>
+				render(
+					<Route path="/profiles/:profileId/wallets/:walletId">
+						<TestActiveWallet />
+					</Route>,
+					{
+						routes: [`/profiles/${profile.id()}/wallets/1`],
+						withProfileSynchronizer: false,
+					},
+				),
+			).toThrow("Failed to find a wallet for [1].");
 
-		expect(activeWallet).toBeUndefined();
-		expect(activeWalletId).toBeUndefined();
+			expect(activeWallet).toBeUndefined();
+			expect(activeWalletId).toBeUndefined();
 
-		consoleSpy.mockRestore();
-	});
-
-	it("should throw if wallet id is not provided in url", () => {
-		const consoleSpy = jest.spyOn(console, "error").mockImplementation(jest.fn());
-		let activeWallet: Contracts.IReadWriteWallet | undefined;
-		let activeWalletId: string | undefined;
-
-		const TestActiveWallet = () => {
-			activeWallet = useActiveWalletWhenNeeded(true);
-			activeWalletId = activeWallet?.id();
-
-			return <TestWallet />;
-		};
-
-		expect(() =>
-			render(
-				<Route path="/profiles/:profileId/wallets/:walletId">
-					<TestActiveWallet />
-				</Route>,
-				{
-					routes: [`/profiles/${profile.id()}/wallets/1`],
-					withProfileSynchronizer: false,
-				},
-			),
-		).toThrow("Failed to find a wallet for [1].");
-
-		expect(activeWallet).toBeUndefined();
-		expect(activeWalletId).toBeUndefined();
-
-		consoleSpy.mockRestore();
-	});
+			consoleSpy.mockRestore();
+		},
+	);
 });
 
 let networks: Networks.Network[];

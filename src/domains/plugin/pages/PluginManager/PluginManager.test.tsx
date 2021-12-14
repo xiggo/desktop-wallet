@@ -31,6 +31,15 @@ const Component = () => {
 	return <PluginManager />;
 };
 
+const downloadPluginCalled = (ipcRendererSpy) =>
+	expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
+		name: "@dated/delegate-calculator-wallet-plugin",
+		url: "https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
+	});
+
+const pluginGridToBeVisible = () =>
+	expect(within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid")).toBeVisible();
+
 describe("PluginManager", () => {
 	beforeEach(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -77,6 +86,7 @@ describe("PluginManager", () => {
 			},
 		);
 
+		// eslint-disable-next-line sonarjs/no-identical-functions
 		await waitFor(() =>
 			expect(
 				within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("ARK Delegate Calculator"),
@@ -232,11 +242,7 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(
-				within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid"),
-			).toBeInTheDocument(),
-		);
+		await waitFor(pluginGridToBeVisible);
 
 		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 
@@ -316,6 +322,8 @@ describe("PluginManager", () => {
 		userEvent.click(screen.getByTestId("ManualInstallationDisclaimer__rememberChoice-toggle"));
 
 		userEvent.click(screen.getByTestId("ManualInstallationDisclaimer__accept-button"));
+
+		// eslint-disable-next-line sonarjs/no-identical-functions
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
 				translations.MODAL_MANUAL_INSTALL_PLUGIN.TITLE,
@@ -426,11 +434,7 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(
-				within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid"),
-			).toBeInTheDocument(),
-		);
+		await waitFor(pluginGridToBeVisible);
 
 		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 		await waitFor(() => expect(screen.getAllByTestId("PluginListItem__install")[0]).toBeInTheDocument());
@@ -456,11 +460,7 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(
-				within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid"),
-			).toBeInTheDocument(),
-		);
+		await waitFor(pluginGridToBeVisible);
 
 		userEvent.click(within(screen.getByTestId("HeaderSearchBar")).getByRole("button"));
 
@@ -506,11 +506,7 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(
-				within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid"),
-			).toBeInTheDocument(),
-		);
+		await waitFor(pluginGridToBeVisible);
 
 		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 		userEvent.click(screen.getAllByTestId("PluginListItem__install")[0]);
@@ -521,12 +517,7 @@ describe("PluginManager", () => {
 
 		userEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
-		await waitFor(() =>
-			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
-				name: "@dated/delegate-calculator-wallet-plugin",
-				url: "https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
-			}),
-		);
+		await waitFor(() => downloadPluginCalled(ipcRendererSpy));
 
 		ipcRendererSpy.mockRestore();
 	});
@@ -545,11 +536,7 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await waitFor(() =>
-			expect(
-				within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid"),
-			).toBeInTheDocument(),
-		);
+		await waitFor(pluginGridToBeVisible);
 
 		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
 		userEvent.click(screen.getAllByTestId("PluginListItem__install")[0]);
@@ -560,12 +547,7 @@ describe("PluginManager", () => {
 
 		userEvent.click(screen.getByTestId("InstallPlugin__allow-button"));
 
-		await waitFor(() =>
-			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
-				name: "@dated/delegate-calculator-wallet-plugin",
-				url: "https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
-			}),
-		);
+		await waitFor(() => downloadPluginCalled(ipcRendererSpy));
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Failed to download/)));
 
@@ -776,12 +758,7 @@ describe("PluginManager", () => {
 			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.UPDATE),
 		);
 
-		await waitFor(() =>
-			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:download", {
-				name: "@dated/delegate-calculator-wallet-plugin",
-				url: "https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
-			}),
-		);
+		await waitFor(() => downloadPluginCalled(ipcRendererSpy));
 
 		expect(asFragment()).toMatchSnapshot();
 

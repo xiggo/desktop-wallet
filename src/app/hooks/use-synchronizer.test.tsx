@@ -6,6 +6,12 @@ import { useSynchronizer } from "./use-synchronizer";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { act, env, render, screen, waitFor } from "@/utils/testing-library";
 
+const wrapper = ({ children }: any) => (
+	<EnvironmentProvider env={env}>
+		<ConfigurationProvider>{children}</ConfigurationProvider>
+	</EnvironmentProvider>
+);
+
 describe("Synchronizer Hook", () => {
 	let onCall: jest.Mock;
 
@@ -57,7 +63,7 @@ describe("Synchronizer Hook", () => {
 				start();
 			}, [start]);
 
-			return <button onClick={stop}>Stop</button>;
+			return <button onClick={() => stop()}>Stop</button>;
 		};
 
 		render(<Component />);
@@ -103,12 +109,6 @@ describe("Synchronizer Hook", () => {
 			},
 		];
 
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const { result, waitForNextUpdate } = renderHook(() => useSynchronizer(jobsWithErrors), { wrapper });
 
 		act(() => {
@@ -131,12 +131,6 @@ describe("Synchronizer Hook", () => {
 				interval: 50,
 			},
 		];
-
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>{children}</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
 
 		const { result, waitForNextUpdate } = renderHook(() => useSynchronizer(jobsWithErrors), { wrapper });
 

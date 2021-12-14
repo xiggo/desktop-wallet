@@ -9,6 +9,13 @@ import { getDefaultProfileId, getDefaultWalletId, render, screen } from "@/utils
 
 const walletURL = `/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`;
 
+const ipcRendererMockImplementation = (event, callback) => {
+	callback(
+		event,
+		"payvo:transfer?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
+	);
+};
+
 describe("useDeeplink hook", () => {
 	const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementationOnce((subject) => jest.fn(subject));
 	const toastErrorSpy = jest.spyOn(toasts, "error").mockImplementationOnce((subject) => jest.fn(subject));
@@ -24,12 +31,7 @@ describe("useDeeplink hook", () => {
 	};
 
 	it("should subscribe to deeplink listener", () => {
-		ipcRenderer.on.mockImplementationOnce((event, callback) =>
-			callback(
-				event,
-				"payvo:transfer?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
-			),
-		);
+		ipcRenderer.on.mockImplementationOnce(ipcRendererMockImplementation);
 
 		render(
 			<Route pathname="/">
@@ -42,12 +44,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to select a profile", () => {
-		ipcRenderer.on.mockImplementationOnce((event, callback) =>
-			callback(
-				event,
-				"payvo:transfer?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
-			),
-		);
+		ipcRenderer.on.mockImplementationOnce(ipcRendererMockImplementation);
 
 		render(
 			<Route pathname="/">
@@ -112,12 +109,7 @@ describe("useDeeplink hook", () => {
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to no senders available", () => {
-		ipcRenderer.on.mockImplementationOnce((event, callback) =>
-			callback(
-				event,
-				"payvo:transfer?coin=ark&network=ark.mainnet&recipient=DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9&amount=1.2&memo=ARK",
-			),
-		);
+		ipcRenderer.on.mockImplementationOnce(ipcRendererMockImplementation);
 
 		window.history.pushState({}, "Deeplink Test", `/profiles/${getDefaultProfileId()}/dashboard`);
 

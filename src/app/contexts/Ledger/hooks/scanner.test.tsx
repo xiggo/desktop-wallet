@@ -9,6 +9,18 @@ import { env, getDefaultLedgerTransport, getDefaultProfileId, render, screen, wa
 
 const transport = getDefaultLedgerTransport();
 
+const walletsList = (wallets, isSelected) => (
+	<ul>
+		{wallets.map((x) => (
+			<li key={x.path}>
+				<p>{`Path: ${x.path}`}</p>
+				<p>{`Address: ${x.address}`}</p>
+				<p>{`Selected: ${isSelected(x.path)}`}</p>
+			</li>
+		))}
+	</ul>
+);
+
 describe("Use Ledger Scanner", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -91,15 +103,7 @@ describe("Use Ledger Scanner", () => {
 
 			return (
 				<div>
-					<ul>
-						{wallets.map((x) => (
-							<li key={x.path}>
-								<p>{`Path: ${x.path}`}</p>
-								<p>{`Address: ${x.address}`}</p>
-								<p>{`Selected: ${isSelected(x.path)}`}</p>
-							</li>
-						))}
-					</ul>
+					{walletsList(wallets, isSelected)}
 					<button onClick={() => scan(profile)}>Scan</button>
 				</div>
 			);
@@ -183,15 +187,7 @@ describe("Use Ledger Scanner", () => {
 
 			return (
 				<div>
-					<ul>
-						{wallets.map((x) => (
-							<li key={x.path}>
-								<p>{`Path: ${x.path}`}</p>
-								<p>{`Address: ${x.address}`}</p>
-								<p>{`Selected: ${isSelected(x.path)}`}</p>
-							</li>
-						))}
-					</ul>
+					{walletsList(wallets, isSelected)}
 					<button onClick={() => scan(profile)}>Scan</button>
 					<button onClick={toggleSelectAll}>Toggle All</button>
 				</div>

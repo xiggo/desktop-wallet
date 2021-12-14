@@ -62,27 +62,6 @@ describe("Import Profile - Profile Form Step", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render profile form with hidden fields", async () => {
-		const history = createMemoryHistory();
-		history.push(`/profiles/import`);
-
-		const { container } = render(
-			<EnvironmentProvider env={env}>
-				<ImportProfileForm
-					env={env}
-					profile={profile}
-					onSubmit={jest.fn()}
-					shouldValidate={false}
-					onBack={jest.fn()}
-				/>
-			</EnvironmentProvider>,
-		);
-
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
-
-		expect(container).toMatchSnapshot();
-	});
-
 	it("should render profile form with empty profile", async () => {
 		const history = createMemoryHistory();
 		const emptyProfile = env.profiles().create("test2");

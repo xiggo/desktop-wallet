@@ -433,6 +433,8 @@ describe("Signed Transaction Table", () => {
 				pendingTransactions={pendingMultisignatureTransactions}
 			/>,
 		);
+
+		// eslint-disable-next-line sonarjs/no-identical-functions
 		await waitFor(() =>
 			expect(screen.getByTestId("TransactionRowRecipientLabel")).toHaveTextContent(
 				translations.TRANSACTION.TRANSACTION_TYPES.MULTI_SIGNATURE,

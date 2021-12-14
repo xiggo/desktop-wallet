@@ -32,6 +32,16 @@ import {
 const history = createMemoryHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 
+const wrapper = ({ children, defaultConfiguration }: any) => (
+	<EnvironmentProvider env={env}>
+		<ConfigurationProvider defaultConfiguration={defaultConfiguration}>
+			<PluginManagerProvider manager={pluginManager} services={[]}>
+				{children}
+			</PluginManagerProvider>
+		</ConfigurationProvider>
+	</EnvironmentProvider>
+);
+
 describe("useProfileSyncStatus", () => {
 	it("should restore", async () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = undefined;
@@ -472,16 +482,6 @@ describe("useProfileRestore", () => {
 		process.env.TEST_PROFILES_RESTORE_STATUS = "restored";
 		const profile = env.profiles().findById(getDefaultProfileId());
 
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>
-					<PluginManagerProvider manager={pluginManager} services={[]}>
-						{children}
-					</PluginManagerProvider>
-				</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const {
 			result: { current },
 		} = renderHook(() => useProfileRestore(), { wrapper });
@@ -502,16 +502,6 @@ describe("useProfileRestore", () => {
 			getProfileFromUrl: () => profile,
 			getProfileStoredPassword: () => void 0,
 		}));
-
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>
-					<PluginManagerProvider manager={pluginManager} services={[]}>
-						{children}
-					</PluginManagerProvider>
-				</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
 
 		const {
 			result: { current },
@@ -540,16 +530,6 @@ describe("useProfileRestore", () => {
 			getProfileFromUrl: () => profile,
 			getProfileStoredPassword: () => "password",
 		}));
-
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>
-					<PluginManagerProvider manager={pluginManager} services={[]}>
-						{children}
-					</PluginManagerProvider>
-				</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
 
 		const {
 			result: { current },
@@ -580,16 +560,6 @@ describe("useProfileRestore", () => {
 			getProfileStoredPassword: () => void 0,
 		}));
 
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>
-					<PluginManagerProvider manager={pluginManager} services={[]}>
-						{children}
-					</PluginManagerProvider>
-				</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const {
 			result: { current },
 		} = renderHook(() => useProfileRestore(), { wrapper });
@@ -613,19 +583,14 @@ describe("useProfileRestore", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		profile.wallets().flush();
 
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider defaultConfiguration={{ restoredProfiles: [profile.id()] }}>
-					<PluginManagerProvider manager={pluginManager} services={[]}>
-						{children}
-					</PluginManagerProvider>
-				</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		const {
 			result: { current },
-		} = renderHook(() => useProfileRestore(), { wrapper });
+		} = renderHook(() => useProfileRestore(), {
+			initialProps: {
+				defaultConfiguration: { restoredProfiles: [profile.id()] },
+			},
+			wrapper,
+		});
 
 		let isRestored;
 
@@ -798,16 +763,6 @@ describe("useProfileStatusWatcher", () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
 		const walletCountMock = jest.spyOn(profile.wallets(), "count").mockReturnValue(0);
 
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider>
-					<PluginManagerProvider manager={pluginManager} services={[]}>
-						{children}
-					</PluginManagerProvider>
-				</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
-
 		renderHook(() => useProfileStatusWatcher({ env, onProfileSyncComplete, onProfileSyncError, profile }), {
 			wrapper,
 		});
@@ -859,21 +814,6 @@ describe("useProfileStatusWatcher", () => {
 		const onProfileSyncComplete = jest.fn();
 		const onProfileSyncError = jest.fn();
 		const profile = env.profiles().findById(getDefaultProfileId());
-		const wrapper = ({ children }: any) => (
-			<EnvironmentProvider env={env}>
-				<ConfigurationProvider
-					defaultConfiguration={{
-						profileHasSynced: true,
-						profileHasSyncedOnce: true,
-						profileIsSyncingWallets: false,
-					}}
-				>
-					<PluginManagerProvider manager={pluginManager} services={[]}>
-						{children}
-					</PluginManagerProvider>
-				</ConfigurationProvider>
-			</EnvironmentProvider>
-		);
 
 		const setState = jest.fn();
 		const useStateSpy = jest.spyOn(React, "useState");
@@ -901,6 +841,13 @@ describe("useProfileStatusWatcher", () => {
 					profile,
 				}),
 			{
+				initialProps: {
+					defaultConfiguration: {
+						profileHasSynced: true,
+						profileHasSyncedOnce: true,
+						profileIsSyncingWallets: false,
+					},
+				},
 				wrapper,
 			},
 		);

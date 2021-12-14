@@ -10,6 +10,21 @@ import { PluginController, PluginManager } from "@/plugins/core";
 import { PluginConfigurationData } from "@/plugins/core/configuration";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
+const invokeMock = (channel) => {
+	if (channel === "plugin:loader-fs.find") {
+		return {
+			config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
+			dir: "/plugins/test-plugin",
+			source: () => void 0,
+			sourcePath: "/plugins/test-plugin/index.js",
+		};
+	}
+
+	if (channel === "plugin:download") {
+		return "/plugins/test-plugin";
+	}
+};
+
 describe("PluginManagerProvider", () => {
 	let manager: PluginManager;
 	let profile: Contracts.IProfile;
@@ -22,6 +37,23 @@ describe("PluginManagerProvider", () => {
 	afterAll(() => {
 		jest.clearAllMocks();
 	});
+
+	const Component = () => {
+		const { fetchPluginPackages, allPlugins, mapConfigToPluginData } = usePluginManagerContext();
+		const onClick = () => fetchPluginPackages();
+		const pluginDatas = allPlugins.map(mapConfigToPluginData.bind(undefined, profile));
+
+		return (
+			<div>
+				<button onClick={onClick}>Click</button>
+				<ul>
+					{pluginDatas.map((package_) => (
+						<li key={package_.id}>{package_.updateStatus.isAvailable ? "Update Available" : "No"}</li>
+					))}
+				</ul>
+			</div>
+		);
+	};
 
 	it("should load plugins", async () => {
 		const invokeMock = jest.spyOn(electron.ipcRenderer, "invoke").mockResolvedValue([]);
@@ -301,20 +333,7 @@ describe("PluginManagerProvider", () => {
 	});
 
 	it("should download plugin from custom url", async () => {
-		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
-			if (channel === "plugin:loader-fs.find") {
-				return {
-					config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
-					dir: "/plugins/test-plugin",
-					source: () => void 0,
-					sourcePath: "/plugins/test-plugin/index.js",
-				};
-			}
-
-			if (channel === "plugin:download") {
-				return "/plugins/test-plugin";
-			}
-		});
+		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation(invokeMock);
 
 		const Component = () => {
 			const { downloadPlugin } = usePluginManagerContext();
@@ -352,20 +371,7 @@ describe("PluginManagerProvider", () => {
 	});
 
 	it("should download plugin from custom url in subdirectory", async () => {
-		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
-			if (channel === "plugin:loader-fs.find") {
-				return {
-					config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
-					dir: "/plugins/test-plugin",
-					source: () => void 0,
-					sourcePath: "/plugins/test-plugin/index.js",
-				};
-			}
-
-			if (channel === "plugin:download") {
-				return "/plugins/test-plugin";
-			}
-		});
+		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation(invokeMock);
 
 		const Component = () => {
 			const { downloadPlugin } = usePluginManagerContext();
@@ -513,23 +519,6 @@ describe("PluginManagerProvider", () => {
 		);
 		manager.plugins().push(plugin);
 
-		const Component = () => {
-			const { fetchPluginPackages, allPlugins, mapConfigToPluginData } = usePluginManagerContext();
-			const onClick = () => fetchPluginPackages();
-			const pluginDatas = allPlugins.map(mapConfigToPluginData.bind(undefined, profile));
-
-			return (
-				<div>
-					<button onClick={onClick}>Click</button>
-					<ul>
-						{pluginDatas.map((package_) => (
-							<li key={package_.id}>{package_.updateStatus.isAvailable ? "Update Available" : "No"}</li>
-						))}
-					</ul>
-				</div>
-			);
-		};
-
 		render(
 			<EnvironmentProvider env={env}>
 				<PluginManagerProvider manager={manager} services={[]}>
@@ -553,23 +542,6 @@ describe("PluginManagerProvider", () => {
 			() => void 0,
 		);
 		manager.plugins().push(plugin);
-
-		const Component = () => {
-			const { fetchPluginPackages, allPlugins, mapConfigToPluginData } = usePluginManagerContext();
-			const onClick = () => fetchPluginPackages();
-			const pluginDatas = allPlugins.map(mapConfigToPluginData.bind(undefined, profile));
-
-			return (
-				<div>
-					<button onClick={onClick}>Click</button>
-					<ul>
-						{pluginDatas.map((package_) => (
-							<li key={package_.id}>{package_.updateStatus.isAvailable ? "Update Available" : "No"}</li>
-						))}
-					</ul>
-				</div>
-			);
-		};
 
 		render(
 			<EnvironmentProvider env={env}>

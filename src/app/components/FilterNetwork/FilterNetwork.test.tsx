@@ -10,12 +10,16 @@ import { env, render, screen, waitFor, within } from "@/utils/testing-library";
 
 let networkOptions: FilterOption[];
 
+const setNetworkOptions = () => {
+	networkOptions = env.availableNetworks().map((network: Networks.Network) => ({
+		isSelected: false,
+		network,
+	}));
+};
+
 describe("NetworkOptions", () => {
 	beforeAll(() => {
-		networkOptions = env.availableNetworks().map((network: Networks.Network) => ({
-			isSelected: false,
-			network,
-		}));
+		setNetworkOptions();
 	});
 
 	it("should render empty", () => {
@@ -75,10 +79,7 @@ describe("ToggleAllOption", () => {
 
 describe("FilterNetwork", () => {
 	beforeAll(() => {
-		networkOptions = env.availableNetworks().map((network: Networks.Network) => ({
-			isSelected: false,
-			network,
-		}));
+		setNetworkOptions();
 	});
 
 	it("should render empty", () => {
@@ -114,10 +115,7 @@ describe("FilterNetwork", () => {
 
 describe("FilterNetworks", () => {
 	beforeAll(() => {
-		networkOptions = env.availableNetworks().map((network: Networks.Network) => ({
-			isSelected: false,
-			network,
-		}));
+		setNetworkOptions();
 	});
 
 	it("should render empty", () => {

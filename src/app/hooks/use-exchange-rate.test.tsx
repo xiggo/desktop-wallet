@@ -7,10 +7,8 @@ import { env, WithProviders } from "@/utils/testing-library";
 describe("useExchangeRate", () => {
 	const wrapper = ({ children }: React.PropsWithChildren<{}>) => <WithProviders>{children}</WithProviders>;
 
-	it("should return a function to convert values based on exchange rates", () => {
-		jest.spyOn(env.exchangeRates(), "exchange").mockReturnValueOnce(1);
-
-		const { result } = renderHook(
+	const renderExchangeRate = () =>
+		renderHook(
 			() =>
 				useExchangeRate({
 					exchangeTicker: "USD",
@@ -20,6 +18,11 @@ describe("useExchangeRate", () => {
 				wrapper,
 			},
 		);
+
+	it("should return a function to convert values based on exchange rates", () => {
+		jest.spyOn(env.exchangeRates(), "exchange").mockReturnValueOnce(1);
+
+		const { result } = renderExchangeRate();
 
 		expect(typeof result.current.convert).toBe("function");
 
@@ -59,16 +62,7 @@ describe("useExchangeRate", () => {
 	it("should return 0 when value is undefined", () => {
 		const {
 			result: { current },
-		} = renderHook(
-			() =>
-				useExchangeRate({
-					exchangeTicker: "USD",
-					ticker: "ARK",
-				}),
-			{
-				wrapper,
-			},
-		);
+		} = renderExchangeRate();
 
 		expect(current.convert(undefined)).toBe(0);
 	});

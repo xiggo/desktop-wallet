@@ -46,6 +46,24 @@ describe("LedgerConnectionStep", () => {
 		getVersionSpy.mockRestore();
 	});
 
+	const Component = ({ onConnect = jest.fn(), onFailed = jest.fn() }) => {
+		const form = useForm({
+			defaultValues: {
+				network: wallet.network(),
+			},
+		});
+
+		return (
+			<EnvironmentProvider env={env}>
+				<FormProvider {...form}>
+					<LedgerProvider transport={transport}>
+						<LedgerConnectionStep onConnect={onConnect} onFailed={onFailed} />
+					</LedgerProvider>
+				</FormProvider>
+			</EnvironmentProvider>
+		);
+	};
+
 	it("should emit event on connect", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
@@ -62,28 +80,11 @@ describe("LedgerConnectionStep", () => {
 
 		const onConnect = jest.fn();
 
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-				},
-			});
-			return (
-				<EnvironmentProvider env={env}>
-					<FormProvider {...form}>
-						<LedgerProvider transport={transport}>
-							<LedgerConnectionStep onConnect={onConnect} />
-						</LedgerProvider>
-					</FormProvider>
-				</EnvironmentProvider>
-			);
-		};
-
 		history.push(`/profiles/${profile.id()}`);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">
-				<Component />
+				<Component onConnect={onConnect} />
 			</Route>,
 			{ history, withProviders: false },
 		);
@@ -107,24 +108,6 @@ describe("LedgerConnectionStep", () => {
 
 		const onFailed = jest.fn();
 
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-				},
-			});
-
-			return (
-				<EnvironmentProvider env={env}>
-					<FormProvider {...form}>
-						<LedgerProvider transport={transport}>
-							<LedgerConnectionStep onFailed={onFailed} />
-						</LedgerProvider>
-					</FormProvider>
-				</EnvironmentProvider>
-			);
-		};
-
 		history.push(`/profiles/${profile.id()}`);
 
 		const { mockTransportListen, observer } = ledgerObserverSpy();
@@ -132,7 +115,7 @@ describe("LedgerConnectionStep", () => {
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">
-				<Component />
+				<Component onFailed={onFailed} />
 			</Route>,
 			{ history, withProviders: false },
 		);
@@ -170,28 +153,11 @@ describe("LedgerConnectionStep", () => {
 
 		const onFailed = jest.fn();
 
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-				},
-			});
-			return (
-				<EnvironmentProvider env={env}>
-					<FormProvider {...form}>
-						<LedgerProvider transport={transport}>
-							<LedgerConnectionStep onFailed={onFailed} />
-						</LedgerProvider>
-					</FormProvider>
-				</EnvironmentProvider>
-			);
-		};
-
 		history.push(`/profiles/${profile.id()}`);
 
 		const { container } = render(
 			<Route path="/profiles/:profileId">
-				<Component />
+				<Component onFailed={onFailed} />
 			</Route>,
 			{ history, withProviders: false },
 		);

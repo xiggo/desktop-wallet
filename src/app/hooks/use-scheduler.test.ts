@@ -17,14 +17,17 @@ describe("useScheduler", () => {
 		jest.useRealTimers();
 	});
 
-	it("should start/stop execution of a function at each time interval", () => {
-		const { result } = renderHook(() =>
+	const renderScheduler = (autostart = false) =>
+		renderHook(() =>
 			useScheduler({
-				autostart: false,
+				autostart,
 				handler,
 				timeout: 1000,
 			}),
 		);
+
+	it("should start/stop execution of a function at each time interval", () => {
+		const { result } = renderScheduler();
 
 		expect(handler).not.toHaveBeenCalled();
 
@@ -48,13 +51,7 @@ describe("useScheduler", () => {
 	});
 
 	it("should throw error on start if job already started", () => {
-		const { result } = renderHook(() =>
-			useScheduler({
-				autostart: false,
-				handler,
-				timeout: 1000,
-			}),
-		);
+		const { result } = renderScheduler();
 
 		expect(handler).not.toHaveBeenCalled();
 
@@ -64,13 +61,7 @@ describe("useScheduler", () => {
 	});
 
 	it("should automatically start with autostart = true", () => {
-		const { result } = renderHook(() =>
-			useScheduler({
-				autostart: true,
-				handler,
-				timeout: 1000,
-			}),
-		);
+		const { result } = renderScheduler(true);
 
 		expect(handler).toHaveBeenCalledTimes(1);
 

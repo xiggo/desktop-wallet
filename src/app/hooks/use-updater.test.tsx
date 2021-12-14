@@ -117,17 +117,6 @@ describe("useUpdater hook", () => {
 		await waitFor(() => expect(result.current.downloadStatus).toBe("idle"));
 	});
 
-	it("should handle notifyForUpdates and stay idle", async () => {
-		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
-		const { result } = renderHook(() => useUpdater(), { wrapper });
-
-		act(() => {
-			result.current.notifyForUpdates();
-		});
-
-		await waitFor(() => expect(result.current.downloadStatus).toBe("idle"));
-	});
-
 	it("should handle download progress", async () => {
 		const wrapper = ({ children }: any) => <EnvironmentProvider env={env}>{children} </EnvironmentProvider>;
 		const { result } = renderHook(() => useUpdater(), { wrapper });

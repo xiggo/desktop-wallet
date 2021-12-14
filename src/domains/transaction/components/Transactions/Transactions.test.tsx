@@ -279,23 +279,18 @@ describe("Transactions", () => {
 			},
 		);
 
-		await waitFor(() => {
-			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(
-				commonTranslations.VIEW_MORE,
-			);
-		});
+		const fetchMoreButtonHasContent = (content) =>
+			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(content);
+
+		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.VIEW_MORE));
 
 		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(4);
 
 		userEvent.click(screen.getByTestId("transactions__fetch-more-button"));
 
-		expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(commonTranslations.LOADING);
+		fetchMoreButtonHasContent(commonTranslations.LOADING);
 
-		await waitFor(() => {
-			expect(screen.getByTestId("transactions__fetch-more-button")).toHaveTextContent(
-				commonTranslations.VIEW_MORE,
-			);
-		});
+		await waitFor(() => fetchMoreButtonHasContent(commonTranslations.VIEW_MORE));
 
 		expect(within(screen.getByTestId("TransactionTable")).getAllByTestId("TableRow")).toHaveLength(8);
 

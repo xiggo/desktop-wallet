@@ -1,6 +1,15 @@
+import { TFunction } from "i18next";
 import { ExchangeService } from "@/domains/exchange/services/exchange.service";
 
-export const exchangeOrder = (t: any) => ({
+const minimumInputValidation = (amount: number, t: TFunction, minimum?: number, ticker?: string) => {
+	if (amount < (minimum || 0)) {
+		return t("EXCHANGE.VALIDATION.MIN_AMOUNT", { amount: minimum, ticker });
+	}
+
+	return true;
+};
+
+export const exchangeOrder = (t: TFunction) => ({
 	fromCurrency: () => ({
 		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
 			field: t("EXCHANGE.EXCHANGE_FORM.FROM_CURRENCY"),
@@ -8,13 +17,7 @@ export const exchangeOrder = (t: any) => ({
 	}),
 	payinAmount: (minimum?: number, ticker?: string) => ({
 		validate: {
-			minimum: (amount: number) => {
-				if (amount < (minimum || 0)) {
-					return t("EXCHANGE.VALIDATION.MIN_AMOUNT", { amount: minimum, ticker });
-				}
-
-				return true;
-			},
+			minimum: (amount: number) => minimumInputValidation(amount, t, minimum, ticker),
 			required: (amount: number) => {
 				if (!amount) {
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
@@ -28,13 +31,7 @@ export const exchangeOrder = (t: any) => ({
 	}),
 	payoutAmount: (minimum?: number, ticker?: string) => ({
 		validate: {
-			minimum: (amount: number) => {
-				if (amount < (minimum || 0)) {
-					return t("EXCHANGE.VALIDATION.MIN_AMOUNT", { amount: minimum, ticker });
-				}
-
-				return true;
-			},
+			minimum: (amount: number) => minimumInputValidation(amount, t, minimum, ticker),
 			required: (amount: number) => {
 				if (!amount) {
 					return t("COMMON.VALIDATION.FIELD_REQUIRED", {

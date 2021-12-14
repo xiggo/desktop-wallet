@@ -1,7 +1,7 @@
 import { Networks } from "@payvo/sdk";
 import cn from "classnames";
 import { useCombobox } from "downshift";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { SelectNetworkInput } from "./SelectNetworkInput";
@@ -104,41 +104,61 @@ export const SelectNetwork = ({
 		selectItem(selected || null);
 	}, [selectItem, selected, disabled]);
 
-	const toggleSelection = (item: Networks.Network) => {
-		if (item.id() === selectedItem?.id()) {
-			setSuggestion("");
-			reset();
-			openMenu();
-			return;
-		}
-		selectItem(item);
-	};
+	const toggleSelection = useCallback(
+		(item: Networks.Network) => {
+			if (item.id() === selectedItem?.id()) {
+				setSuggestion("");
+				reset();
+				openMenu();
+				return;
+			}
+			selectItem(item);
+		},
+		[openMenu, reset, selectItem, selectedItem],
+	);
 
 	const publicNetworks = networks.filter((network) => network.isLive());
 	const developmentNetworks = networks.filter((network) => network.isTest());
 
-	const optionClassName = (network: Networks.Network) => {
-		if (selectedItem) {
-			// `network` is the selected item
+	const optionClassName = useCallback(
+		(network: Networks.Network) => {
+			if (selectedItem) {
+				// `network` is the selected item
 
-			if (selectedItem.displayName() === network.displayName()) {
-				return "border-theme-success-500 dark:border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 text-theme-secondary-600 dark:text-theme-secondary-200";
+				if (selectedItem.displayName() === network.displayName()) {
+					return "border-theme-success-500 dark:border-theme-success-600 bg-theme-success-100 dark:bg-theme-success-900 text-theme-secondary-600 dark:text-theme-secondary-200";
+				}
+
+				return;
 			}
 
-			return;
-		}
+			// no input or input matches `network`
+			if (!inputValue || isMatch(inputValue, network)) {
+				return;
+			}
 
-		// no input or input matches `network`
-		if (!inputValue || isMatch(inputValue, network)) {
-			return;
-		}
-
-		// input does not match `network`
-		return "text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800";
-	};
+			// input does not match `network`
+			return "text-theme-secondary-500 dark:text-theme-secondary-800 border-theme-primary-100 dark:border-theme-secondary-800";
+		},
+		[inputValue, selectedItem],
+	);
 
 	const hasPublicNetworks = publicNetworks.length > 0;
 	const hasDevelopmentNetworks = developmentNetworks.length > 0;
+
+	const renderNetworks = useCallback(
+		(network: Networks.Network[]) =>
+			network.map((network: Networks.Network, index: number) => (
+				<NetworkOption
+					key={index}
+					disabled={disabled}
+					network={network}
+					iconClassName={optionClassName(network)}
+					onClick={() => toggleSelection(network)}
+				/>
+			)),
+		[disabled, optionClassName, toggleSelection],
+	);
 
 	return (
 		<div>
@@ -178,15 +198,7 @@ export const SelectNetwork = ({
 					)}
 
 					<ul {...getMenuProps()} className="grid grid-cols-7 gap-3 mt-3">
-						{publicNetworks.map((network: Networks.Network, index: number) => (
-							<NetworkOption
-								key={index}
-								disabled={disabled}
-								network={network}
-								iconClassName={optionClassName(network)}
-								onClick={() => toggleSelection(network)}
-							/>
-						))}
+						{renderNetworks(publicNetworks)}
 					</ul>
 				</div>
 
@@ -215,15 +227,7 @@ export const SelectNetwork = ({
 							hidden: !showDevelopmentNetworks && hasPublicNetworks,
 						})}
 					>
-						{developmentNetworks.map((network: Networks.Network, index: number) => (
-							<NetworkOption
-								key={index}
-								disabled={disabled}
-								network={network}
-								iconClassName={optionClassName(network)}
-								onClick={() => toggleSelection(network)}
-							/>
-						))}
+						{renderNetworks(developmentNetworks)}
 					</ul>
 				</div>
 			</div>

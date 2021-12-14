@@ -9,6 +9,9 @@ import { act, env, getDefaultProfileId, render, screen, waitFor, within } from "
 
 let recipients: RecipientProperties[];
 
+const modalDescription = () =>
+	expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION);
+
 describe("SearchRecipient", () => {
 	beforeAll(() => {
 		const profile: Contracts.IProfile = env.profiles().findById(getDefaultProfileId());
@@ -96,11 +99,7 @@ describe("SearchRecipient", () => {
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
 		);
-		await waitFor(() =>
-			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
-				translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION,
-			),
-		);
+		await waitFor(modalDescription);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
@@ -129,11 +128,7 @@ describe("SearchRecipient", () => {
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
 		);
-		await waitFor(() =>
-			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
-				translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION,
-			),
-		);
+		await waitFor(modalDescription);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
@@ -162,11 +157,7 @@ describe("SearchRecipient", () => {
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
 		);
-		await waitFor(() =>
-			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
-				translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION,
-			),
-		);
+		await waitFor(modalDescription);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 
@@ -202,11 +193,7 @@ describe("SearchRecipient", () => {
 		await waitFor(() =>
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SEARCH_RECIPIENT.TITLE),
 		);
-		await waitFor(() =>
-			expect(screen.getByTestId("modal__inner")).toHaveTextContent(
-				translations.MODAL_SEARCH_RECIPIENT.DESCRIPTION,
-			),
-		);
+		await waitFor(modalDescription);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(2));
 

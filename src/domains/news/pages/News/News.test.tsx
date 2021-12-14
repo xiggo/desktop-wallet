@@ -21,6 +21,14 @@ const translations = buildTranslations();
 
 jest.setTimeout(30_000);
 
+const firstPageReply = () => {
+	const { meta, data } = page1Fixture;
+	return {
+		data: data.slice(0, 1),
+		meta,
+	};
+};
+
 describe("News", () => {
 	const renderPage = () =>
 		render(
@@ -38,21 +46,9 @@ describe("News", () => {
 
 		nock("https://news.payvo.com")
 			.get("/api?coins=ARK")
-			.reply(200, () => {
-				const { meta, data } = page1Fixture;
-				return {
-					data: data.slice(0, 1),
-					meta,
-				};
-			})
+			.reply(200, firstPageReply)
 			.get("/api?coins=ARK&page=1")
-			.reply(200, () => {
-				const { meta, data } = page1Fixture;
-				return {
-					data: data.slice(0, 1),
-					meta,
-				};
-			})
+			.reply(200, firstPageReply)
 			.get("/api")
 			.query((parameters) => !!parameters.categories)
 			.reply(200, filteredFixture)

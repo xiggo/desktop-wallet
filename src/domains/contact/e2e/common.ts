@@ -5,7 +5,7 @@ import { goToProfile } from "../../profile/e2e/common";
 
 const translations = buildTranslations();
 
-export const goToContacts = async (t: any) => {
+export const goToContacts = async (t: TestController) => {
 	await goToProfile(t);
 
 	await t.click(Selector('[data-testid="navbar__useractions"]'));

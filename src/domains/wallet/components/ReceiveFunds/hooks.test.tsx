@@ -5,6 +5,17 @@ import { useQRCode } from "./hooks";
 import * as utils from "@/utils/electron-utils";
 import { waitFor } from "@/utils/testing-library";
 
+const renderQRCode = () =>
+	renderHook(() =>
+		useQRCode({
+			address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
+			amount: "10",
+			coin: "ARK",
+			memo: "test",
+			network: "ark",
+		}),
+	);
+
 describe("useQRCode hook", () => {
 	let darkModeSpy: jest.SpyInstance;
 
@@ -17,15 +28,7 @@ describe("useQRCode hook", () => {
 	});
 
 	it("should generate qr code", async () => {
-		const { result, waitForNextUpdate } = renderHook(() =>
-			useQRCode({
-				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-				amount: "10",
-				coin: "ARK",
-				memo: "test",
-				network: "ark",
-			}),
-		);
+		const { result, waitForNextUpdate } = renderQRCode();
 
 		await waitForNextUpdate();
 
@@ -41,20 +44,13 @@ describe("useQRCode hook", () => {
 	});
 
 	it("should generate qr code with dark colors", async () => {
-		const { result, waitForNextUpdate } = renderHook(() =>
-			useQRCode({
-				address: "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-				amount: "10",
-				coin: "ARK",
-				memo: "test",
-				network: "ark",
-			}),
-		);
+		const { result, waitForNextUpdate } = renderQRCode();
 
 		await waitForNextUpdate();
 
 		const darkColorsMock = jest.spyOn(utils, "shouldUseDarkColors").mockReturnValue(true);
 
+		// eslint-disable-next-line sonarjs/no-identical-functions
 		await waitFor(() =>
 			expect(result.current.uri).toBe(
 				"payvo:transfer?coin=ARK&network=ark&recipient=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD&amount=10&memo=test",

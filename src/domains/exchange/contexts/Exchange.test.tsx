@@ -7,6 +7,16 @@ import { httpClient } from "@/app/services";
 import { ExchangeProvider } from "@/domains/exchange/contexts/Exchange";
 import { render, screen, waitFor } from "@/utils/testing-library";
 
+const Test = () => {
+	const { exchangeProviders, fetchProviders } = useExchangeContext();
+	return (
+		<>
+			<span>provider count: {exchangeProviders?.length}</span>
+			<button onClick={fetchProviders} />
+		</>
+	);
+};
+
 describe("Exchange Context", () => {
 	afterEach(() => httpClient.clearCache());
 
@@ -24,16 +34,6 @@ describe("Exchange Context", () => {
 	});
 
 	it("should successfully fetch providers", async () => {
-		const Test = () => {
-			const { exchangeProviders, fetchProviders } = useExchangeContext();
-			return (
-				<>
-					<span>provider count: {exchangeProviders?.length}</span>
-					<button onClick={fetchProviders} />
-				</>
-			);
-		};
-
 		const { container } = render(
 			<ExchangeProvider>
 				<Test />
@@ -51,16 +51,6 @@ describe("Exchange Context", () => {
 		nock.cleanAll();
 
 		nock("https://exchanges.payvo.com").get("/api").reply(404);
-
-		const Test = () => {
-			const { exchangeProviders, fetchProviders } = useExchangeContext();
-			return (
-				<>
-					<span>provider count: {exchangeProviders?.length}</span>
-					<button onClick={fetchProviders} />
-				</>
-			);
-		};
 
 		const { container } = render(
 			<ExchangeProvider>

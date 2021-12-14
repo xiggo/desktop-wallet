@@ -13,6 +13,12 @@ let profile: Contracts.IProfile;
 const history = createMemoryHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 
+const wrapper = ({ children }: any) => (
+	<WithProviders>
+		<Router history={history}>{children}</Router>
+	</WithProviders>
+);
+
 describe("useTimeFormat", () => {
 	beforeAll(() => {
 		history.push(dashboardURL);
@@ -30,11 +36,6 @@ describe("useTimeFormat", () => {
 		const settingsSpy = jest.spyOn(profile.settings(), "get");
 		when(settingsSpy).calledWith(Contracts.ProfileSetting.TimeFormat).mockReturnValueOnce("format");
 
-		const wrapper = ({ children }: any) => (
-			<WithProviders>
-				<Router history={history}>{children}</Router>
-			</WithProviders>
-		);
 		const { result } = renderHook(() => useTimeFormat(), { wrapper });
 
 		expect(result.current).toBe("DD.MM.YYYY format");
@@ -44,11 +45,6 @@ describe("useTimeFormat", () => {
 		const settingsSpy = jest.spyOn(profile.settings(), "get");
 		when(settingsSpy).calledWith(Contracts.ProfileSetting.TimeFormat).mockReturnValueOnce();
 
-		const wrapper = ({ children }: any) => (
-			<WithProviders>
-				<Router history={history}>{children}</Router>
-			</WithProviders>
-		);
 		const { result } = renderHook(() => useTimeFormat(), { wrapper });
 
 		expect(result.current).toBe("DD.MM.YYYY h:mm A");

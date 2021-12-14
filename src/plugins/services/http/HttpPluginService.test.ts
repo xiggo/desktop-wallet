@@ -69,6 +69,7 @@ describe("HttpPluginService", () => {
 		manager.plugins().push(ctrl);
 		manager.plugins().runAllEnabled(profile);
 
+		// eslint-disable-next-line sonarjs/no-identical-functions
 		await waitFor(() =>
 			expect(response).toMatchObject({
 				data: expect.anything(),

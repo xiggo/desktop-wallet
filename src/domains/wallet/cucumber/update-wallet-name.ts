@@ -28,6 +28,15 @@ const preSteps = {
 		await openUpdateWalletName(t);
 	},
 };
+
+const saveButtonStep = {
+	"And the update name save button is disabled": async (t: TestController) => {
+		await t.expect(Selector("[data-testid=UpdateWalletName__submit]").hasAttribute("disabled")).ok();
+		await t.click(Selector('[data-testid="UpdateWalletName__submit"]'));
+		await t.expect(Selector("[data-testid=modal__inner]").exists).ok();
+	},
+};
+
 cucumber("@updateWalletName", {
 	...preSteps,
 	"When she enters a valid wallet name": async (t: TestController) => {
@@ -73,11 +82,7 @@ cucumber("@updateWalletName-invalidNameLength", {
 	"Then an error is displayed on the name field": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=UpdateWalletName__input]").hasAttribute("aria-invalid")).ok();
 	},
-	"And the update name save button is disabled": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=UpdateWalletName__submit]").hasAttribute("disabled")).ok();
-		await t.click(Selector('[data-testid="UpdateWalletName__submit"]'));
-		await t.expect(Selector("[data-testid=modal__inner]").exists).ok();
-	},
+	...saveButtonStep,
 });
 cucumber("@updateWalletName-whiteSpaceName", {
 	...preSteps,
@@ -88,9 +93,5 @@ cucumber("@updateWalletName-whiteSpaceName", {
 	"Then an error is displayed on the name field": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=UpdateWalletName__input]").hasAttribute("aria-invalid")).ok();
 	},
-	"And the update name save button is disabled": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=UpdateWalletName__submit]").hasAttribute("disabled")).ok();
-		await t.click(Selector('[data-testid="UpdateWalletName__submit"]'));
-		await t.expect(Selector("[data-testid=modal__inner]").exists).ok();
-	},
+	...saveButtonStep,
 });

@@ -1,13 +1,13 @@
 import { Handlers, OfUnion } from "./reducer.contracts";
 import { LedgerData } from "@/app/contexts/Ledger/Ledger.contracts";
 
-interface State {
+export interface State {
 	error?: string;
 	selected: string[];
 	wallets: LedgerData[];
 }
 
-type Action =
+export type Action =
 	| { type: "success"; payload: LedgerData[] }
 	| { type: "failed"; error: string }
 	| { type: "toggleSelect"; path: string }

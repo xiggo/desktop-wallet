@@ -10,12 +10,6 @@ describe("Circle", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it("should render as blank", () => {
-		const { container } = render(<Circle />);
-
-		expect(container).toMatchSnapshot();
-	});
-
 	it("should render with content", () => {
 		const { container } = render(
 			<Circle size="sm">

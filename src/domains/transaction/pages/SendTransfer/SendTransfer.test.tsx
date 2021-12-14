@@ -88,6 +88,36 @@ let wallet: Contracts.IReadWriteWallet;
 let secondWallet: Contracts.IReadWriteWallet;
 let getVersionSpy: jest.SpyInstance;
 
+const transactionIdToBeVisible = () =>
+	expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
+		"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
+	);
+
+const Component = ({ deeplinkProperties }) => {
+	const form = useForm({
+		defaultValues: {
+			network: wallet.network(),
+			senderAddress: wallet.address(),
+		},
+	});
+
+	const { register } = form;
+
+	useEffect(() => {
+		register("network");
+		register("fee");
+		register("fees");
+		register("inputFeeSettings");
+		register("senderAddress");
+	}, [register]);
+
+	return (
+		<FormProvider {...form}>
+			<FormStep networks={[]} profile={profile} deeplinkProps={deeplinkProperties} />
+		</FormProvider>
+	);
+};
+
 describe("SendTransfer", () => {
 	beforeAll(async () => {
 		env.registerCoin("LSK", LSK);
@@ -156,6 +186,7 @@ describe("SendTransfer", () => {
 				defaultValues: {
 					network: wallet.network(),
 				},
+				// eslint-disable-next-line sonarjs/no-identical-functions
 				registerCallback: ({ register }) => {
 					register("network");
 					register("fee");
@@ -201,34 +232,9 @@ describe("SendTransfer", () => {
 			recipient: "DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9",
 		};
 
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-					senderAddress: wallet.address(),
-				},
-			});
-
-			const { register } = form;
-
-			useEffect(() => {
-				register("network");
-				register("fee");
-				register("fees");
-				register("inputFeeSettings");
-				register("senderAddress");
-			}, [register]);
-
-			return (
-				<FormProvider {...form}>
-					<FormStep networks={[]} profile={profile} deeplinkProps={deeplinkProperties} />
-				</FormProvider>
-			);
-		};
-
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/send-transfer">
-				<Component />
+				<Component deeplinkProperties={deeplinkProperties} />
 			</Route>,
 			{
 				history,
@@ -255,34 +261,9 @@ describe("SendTransfer", () => {
 			recipient: "DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9",
 		};
 
-		const Component = () => {
-			const form = useForm({
-				defaultValues: {
-					network: wallet.network(),
-					senderAddress: wallet.address(),
-				},
-			});
-
-			const { register } = form;
-
-			useEffect(() => {
-				register("network");
-				register("fee");
-				register("fees");
-				register("inputFeeSettings");
-				register("senderAddress");
-			}, [register]);
-
-			return (
-				<FormProvider {...form}>
-					<FormStep networks={[]} profile={profile} deeplinkProps={deeplinkProperties} />
-				</FormProvider>
-			);
-		};
-
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId/send-transfer">
-				<Component />
+				<Component deeplinkProperties={deeplinkProperties} />
 			</Route>,
 			{
 				history,
@@ -435,6 +416,7 @@ describe("SendTransfer", () => {
 					network: wallet.network(),
 					senderAddress: wallet.address(),
 				},
+				// eslint-disable-next-line sonarjs/no-identical-functions
 				registerCallback: ({ register }) => {
 					register("network");
 					register("fee");
@@ -1159,11 +1141,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
-				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
-			),
-		);
+		await waitFor(transactionIdToBeVisible);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -1500,11 +1478,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
-				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
-			),
-		);
+		await waitFor(transactionIdToBeVisible);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -1982,11 +1956,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
-				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
-			),
-		);
+		await waitFor(transactionIdToBeVisible);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -2500,11 +2470,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
-				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
-			),
-		);
+		await waitFor(transactionIdToBeVisible);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -2630,11 +2596,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
-				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
-			),
-		);
+		await waitFor(transactionIdToBeVisible);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();
@@ -2742,11 +2704,7 @@ describe("SendTransfer", () => {
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("TransactionSuccessful")).toHaveTextContent(
-				"8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877",
-			),
-		);
+		await waitFor(transactionIdToBeVisible);
 
 		signMock.mockRestore();
 		broadcastMock.mockRestore();

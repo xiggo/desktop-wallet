@@ -22,6 +22,20 @@ let wallet2: Contracts.IReadWriteWallet;
 
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
 
+const votingMockReturnValue = (delegatesIndex: number[]) =>
+	delegatesIndex.map((index) => ({
+		amount: 0,
+		wallet: new ReadOnlyWallet({
+			address: data[index].address,
+			explorerLink: "",
+			governanceIdentifier: "address",
+			isDelegate: true,
+			isResignedDelegate: false,
+			publicKey: data[index].publicKey,
+			username: data[index].username,
+		}),
+	}));
+
 describe("AddressRow", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -104,20 +118,9 @@ describe("AddressRow", () => {
 	it.each([true, false])(
 		"should render with isCompact = %s when the maximum votes is greater than 1",
 		(isCompact: boolean) => {
-			const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue(
-				[0, 1, 2, 3].map((index) => ({
-					amount: 0,
-					wallet: new ReadOnlyWallet({
-						address: data[index].address,
-						explorerLink: "",
-						governanceIdentifier: "address",
-						isDelegate: true,
-						isResignedDelegate: false,
-						publicKey: data[index].publicKey,
-						username: data[index].username,
-					}),
-				})),
-			);
+			const votesMock = jest
+				.spyOn(wallet.voting(), "current")
+				.mockReturnValue(votingMockReturnValue([0, 1, 2, 3]));
 
 			const { asFragment, container } = render(
 				<Route path="/profiles/:profileId/votes">
@@ -140,20 +143,9 @@ describe("AddressRow", () => {
 	);
 
 	it.each([true, false])("should render with isCompact = %s when the wallet has many votes", (isCompact: boolean) => {
-		const votesMock = jest.spyOn(wallet.voting(), "current").mockReturnValue(
-			[0, 1, 2, 3, 4].map((index) => ({
-				amount: 0,
-				wallet: new ReadOnlyWallet({
-					address: data[index].address,
-					explorerLink: "",
-					governanceIdentifier: "address",
-					isDelegate: true,
-					isResignedDelegate: false,
-					publicKey: data[index].publicKey,
-					username: data[index].username,
-				}),
-			})),
-		);
+		const votesMock = jest
+			.spyOn(wallet.voting(), "current")
+			.mockReturnValue(votingMockReturnValue([0, 1, 2, 3, 4]));
 
 		const { asFragment, container } = render(
 			<Route path="/profiles/:profileId/votes">
