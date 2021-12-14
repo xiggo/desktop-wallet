@@ -1,36 +1,67 @@
+import { TruncateMiddleDynamicProperties } from "app/components/TruncateMiddleDynamic/TruncateMiddleDynamic.contracts";
 import cn from "classnames";
-import React, { useCallback, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 
-import { useTextTruncate } from "./use-text-truncate";
+import { useResizeDetector } from "react-resize-detector";
 import { Tooltip } from "@/app/components/Tooltip";
 
-type Properties = {
-	value: string;
-	offset?: number;
-	parentRef?: React.RefObject<HTMLElement>;
-	tooltipDarkTheme?: boolean;
-} & React.HTMLProps<any>;
+export const getTruncatedValue = (referenceElement: HTMLElement, elementWidth: number, value: string, offset = 0) => {
+	const hasOverflow = (element: HTMLElement) => element.getBoundingClientRect().width > elementWidth - offset;
 
-export const TruncateMiddleDynamic = ({
+	const getTruncatedValue = (mid: number) => {
+		const prefix = value.slice(0, Math.max(0, mid));
+		const suffix = value.slice(-mid);
+
+		return `${prefix}…${suffix}`;
+	};
+
+	const element = document.createElement("span");
+	element.innerHTML = value;
+	element.classList.add("fixed", "invisible", "w-auto", "whitespace-nowrap");
+	referenceElement.append(element);
+
+	if (!hasOverflow(element)) {
+		element.remove();
+		return value;
+	}
+
+	let temporary = value;
+	let mid = Math.floor(value.length / 2) - 1;
+	do {
+		temporary = getTruncatedValue(mid);
+		mid--;
+
+		element.innerHTML = temporary;
+	} while (mid && hasOverflow(element));
+	element.remove();
+
+	return temporary;
+};
+
+export const TruncateMiddleDynamic: React.VFC<TruncateMiddleDynamicProperties> = ({
 	value,
 	offset = 0,
 	className,
 	tooltipDarkTheme,
 	parentRef,
 	...properties
-}: Properties) => {
-	const [reference, setReference] = useState<HTMLElement | undefined>();
+}) => {
+	const [truncatedValue, setTruncatedValue] = useState(value);
 
-	const truncated = useTextTruncate(parentRef?.current || reference, value, offset);
+	const { width, ref } = useResizeDetector<HTMLElement>({ handleHeight: false, targetRef: parentRef ?? undefined });
+	const spanReference = parentRef ? undefined : ref;
 
-	const callbackReference = useCallback((node) => {
-		setReference(node);
-	}, []);
+	useLayoutEffect(() => {
+		if (!ref.current || !width) {
+			return;
+		}
+		setTruncatedValue(getTruncatedValue(ref.current, Number(width), value, offset));
+	}, [ref, value, offset, width]);
 
 	return (
-		<Tooltip content={value} disabled={truncated === value} theme={tooltipDarkTheme ? "dark" : undefined}>
-			<span ref={callbackReference} className={cn("inline-flex overflow-hidden", className)} {...properties}>
-				{truncated}
+		<Tooltip content={value} disabled={truncatedValue === value} theme={tooltipDarkTheme ? "dark" : undefined}>
+			<span ref={spanReference} className={cn("inline-flex overflow-hidden", className)} {...properties}>
+				{truncatedValue}
 			</span>
 		</Tooltip>
 	);

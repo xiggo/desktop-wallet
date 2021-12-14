@@ -5,7 +5,27 @@ exports[`TruncateMiddleDynamic should render 1`] = `
   <span
     class="inline-flex overflow-hidden"
   >
-    Lorem ipsum dolor sit amet
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </span>
+</DocumentFragment>
+`;
+
+exports[`TruncateMiddleDynamic should return the value if it fits the given container 1`] = `
+<DocumentFragment>
+  <span
+    class="inline-flex overflow-hidden"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </span>
+</DocumentFragment>
+`;
+
+exports[`TruncateMiddleDynamic should return the value if the elements have no width 1`] = `
+<DocumentFragment>
+  <span
+    class="inline-flex overflow-hidden"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
   </span>
 </DocumentFragment>
 `;
