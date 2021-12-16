@@ -1,6 +1,6 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import cn from "classnames";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { LabelWrapper, StyledCircle as Circle, TextWrapper } from "./DelegateFooter.styles";
@@ -52,6 +52,7 @@ export const DelegateFooter = ({
 }: DelegateFooterProperties) => {
 	const { t } = useTranslation();
 	const [tooltipContent, setTooltipContent] = useState("");
+	const [isContinueDisabled, setIsContinueDisabled] = useState(true);
 	const requiresStakeAmount = selectedWallet.network().votesAmountMinimum() > 0;
 
 	const totalVotes = useMemo(() => {
@@ -66,18 +67,24 @@ export const DelegateFooter = ({
 		return selectedVotes.length + selectedUnvotes.length;
 	}, [maxVotes, selectedUnvotes, selectedVotes]);
 
-	const continueButtonDisabled = useMemo(() => {
+	useEffect(() => {
 		if (totalVotes < 1) {
 			setTooltipContent(t("VOTE.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE"));
-
-			return true;
+			setIsContinueDisabled(true);
+			return;
 		}
-
-		setTooltipContent(t("VOTE.DELEGATE_TABLE.TOOLTIP.ZERO_AMOUNT"));
 
 		const hasZeroAmount =
 			selectedVotes.some(({ amount }) => amount === 0) || selectedUnvotes.some(({ amount }) => amount === 0);
-		return requiresStakeAmount && hasZeroAmount;
+
+		if (requiresStakeAmount && hasZeroAmount) {
+			setTooltipContent(t("VOTE.DELEGATE_TABLE.TOOLTIP.INVALID_AMOUNT"));
+			setIsContinueDisabled(true);
+			return;
+		}
+
+		setTooltipContent("");
+		setIsContinueDisabled(false);
 	}, [totalVotes, requiresStakeAmount, selectedUnvotes, selectedVotes, t]);
 
 	return (
@@ -135,10 +142,10 @@ export const DelegateFooter = ({
 						/>
 					</div>
 
-					<Tooltip content={tooltipContent} disabled={!continueButtonDisabled}>
+					<Tooltip content={tooltipContent} disabled={!isContinueDisabled}>
 						<span data-testid="DelegateTable__continue--wrapper">
 							<Button
-								disabled={continueButtonDisabled}
+								disabled={isContinueDisabled}
 								onClick={() => onContinue?.(selectedUnvotes, selectedVotes)}
 								data-testid="DelegateTable__continue-button"
 							>

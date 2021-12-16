@@ -120,12 +120,9 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		const continueWrapper = screen.getByTestId("DelegateTable__continue--wrapper");
-		const continueButton = screen.getByTestId("DelegateTable__continue-button");
+		expect(screen.getByTestId("DelegateTable__continue-button")).toBeDisabled();
 
-		expect(continueButton).toBeDisabled();
-
-		userEvent.hover(continueWrapper);
+		userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
 		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE);
 
@@ -139,7 +136,7 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		expect(continueButton).not.toBeDisabled();
+		expect(screen.getByTestId("DelegateTable__continue-button")).not.toBeDisabled();
 
 		rerender(
 			<DelegateFooter
@@ -151,9 +148,9 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		expect(continueButton).not.toBeDisabled();
+		expect(screen.getByTestId("DelegateTable__continue-button")).not.toBeDisabled();
 
-		userEvent.hover(continueWrapper);
+		userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
 		expect(baseElement).not.toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.SELECTED_DELEGATE);
 	});
@@ -179,14 +176,11 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		const continueWrapper = screen.getByTestId("DelegateTable__continue--wrapper");
-		const continueButton = screen.getByTestId("DelegateTable__continue-button");
+		expect(screen.getByTestId("DelegateTable__continue-button")).toBeDisabled();
 
-		expect(continueButton).toBeDisabled();
+		userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
-		userEvent.hover(continueWrapper);
-
-		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.ZERO_AMOUNT);
+		expect(baseElement).toHaveTextContent(voteTranslations.DELEGATE_TABLE.TOOLTIP.INVALID_AMOUNT);
 
 		rerender(
 			<DelegateFooter
@@ -203,7 +197,7 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		expect(continueButton).not.toBeDisabled();
+		expect(screen.getByTestId("DelegateTable__continue-button")).not.toBeDisabled();
 
 		votesAmountMinimumMock.mockRestore();
 	});

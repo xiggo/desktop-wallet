@@ -8,9 +8,9 @@ export const translations = {
 		PAYOUT_INTERVAL: "Payout",
 		TITLE: "Select a Delegate",
 		TOOLTIP: {
+			INVALID_AMOUNT: "Invalid amount specified for at least 1 amount field",
 			MAX_VOTES: "You have selected the maximum number of delegates",
 			SELECTED_DELEGATE: "You have not yet selected a delegate",
-			ZERO_AMOUNT: "You have at least 1 empty amount field",
 		},
 		TOTAL: "Total",
 		UNVOTES: "Unvotes",
