@@ -193,7 +193,6 @@ exports[`AppearanceForm should render 1`] = `
                   class="Toggle__Wrapper-sc-6s3wfu-0 efNWJo"
                 >
                   <input
-                    checked=""
                     class="Toggle__Input-sc-6s3wfu-1 WwplI"
                     data-testid="AppearanceToggle__toggle-dashboardTransactionHistory"
                     name="dashboardTransactionHistory"
