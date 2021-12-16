@@ -66,10 +66,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
@@ -182,10 +182,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
@@ -396,10 +396,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple active
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
@@ -517,10 +517,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
@@ -637,10 +637,10 @@ exports[`WalletVote multi vote networks should render a vote for multiple standb
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
@@ -771,10 +771,10 @@ exports[`WalletVote should disable vote button when balance is less than votesAm
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
@@ -1076,10 +1076,10 @@ exports[`WalletVote should render 1`] = `
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
@@ -1182,10 +1182,10 @@ exports[`WalletVote should render as all resigned 1`] = `
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
@@ -1286,10 +1286,10 @@ exports[`WalletVote should render disabled vote button 1`] = `
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
@@ -1591,10 +1591,10 @@ exports[`WalletVote single vote networks should render a vote for a delegate wit
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
@@ -1695,10 +1695,10 @@ exports[`WalletVote single vote networks should render a vote for a standby dele
         class="flex justify-end items-center space-x-2"
       >
         <span
-          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-600 dark:bg-theme-secondary-800"
+          class="flex items-center justify-center w-5 h-5 rounded-full bg-theme-primary-100 hover:bg-theme-primary-600 dark:bg-theme-secondary-800 text-theme-primary-600 hover:text-theme-primary-100 dark:text-theme-secondary-200 transition-colors"
         >
           <div
-            class="sc-bdvvtL Cfvxc text-theme-primary-200 dark:text-theme-secondary-200"
+            class="sc-bdvvtL Cfvxc"
             height="10"
             width="10"
           >
