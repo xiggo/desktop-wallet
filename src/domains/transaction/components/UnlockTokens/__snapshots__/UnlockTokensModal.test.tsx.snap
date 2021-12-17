@@ -424,7 +424,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with error 2`]
                       class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                     >
                       <span
-                        class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                        class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                         data-testid="Address__address"
                       >
                         lsk7faq75geeaphrz5m4kknbhdzbb4jy7kd3st77z
@@ -1300,7 +1300,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 2
                       class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                     >
                       <span
-                        class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                        class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                         data-testid="Address__address"
                       >
                         lsk7faq75geeaphrz5m4kknbhdzbb4jy7kd3st77z
@@ -1708,7 +1708,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                                 class="Link__Content-sc-ec014t-1 fPOlTq"
                               >
                                 <span
-                                  class="inline-flex overflow-hidden"
+                                  class="flex-1 inline-flex overflow-hidden"
                                 >
                                   adaf8f61b332611c6d4bd6ac3e75bafc7c82eeee8a4bee14ded471f1373cd23a
                                 </span>
@@ -1835,7 +1835,7 @@ exports[`UnlockTokensModal should handle unlock token transaction with success 4
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             lsk7faq75geeaphrz5m4kknbhdzbb4jy7kd3st77z

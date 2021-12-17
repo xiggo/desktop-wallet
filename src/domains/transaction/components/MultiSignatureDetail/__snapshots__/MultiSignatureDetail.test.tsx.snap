@@ -86,7 +86,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -132,7 +132,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -310,7 +310,7 @@ exports[`MultiSignatureDetail should fail to broadcast transaction and show erro
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
@@ -572,7 +572,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -618,7 +618,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -796,7 +796,7 @@ exports[`MultiSignatureDetail should not broadcast if wallet is not ready to do 
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
@@ -1058,7 +1058,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -1104,7 +1104,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1282,7 +1282,7 @@ exports[`MultiSignatureDetail should not show send button when waiting for confi
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
@@ -1518,7 +1518,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -1564,7 +1564,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1742,7 +1742,7 @@ exports[`MultiSignatureDetail should render summary step and handle exception 1`
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
@@ -1978,7 +1978,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -2140,7 +2140,7 @@ exports[`MultiSignatureDetail should render summary step for ipfs 1`] = `
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 df40dfc6170f3af89b1ba1cc3bb73d66800c41c0ba18c006acd5388611e0ccb7
                               </span>
@@ -2376,7 +2376,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -2508,7 +2508,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                         class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                       >
                                         <span
-                                          class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                          class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                           data-testid="Address__address"
                                         >
                                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2553,7 +2553,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                                         class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                                       >
                                         <span
-                                          class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                          class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                           data-testid="Address__address"
                                         >
                                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2729,7 +2729,7 @@ exports[`MultiSignatureDetail should render summary step for multi payment 1`] =
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 96fef904192bf8bc5e05f1e971db3cbad12b3f06413f000974d0020f89d29088
                               </span>
@@ -2976,7 +2976,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                               </span>
                             </span>
                             <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3108,7 +3108,7 @@ exports[`MultiSignatureDetail should render summary step for multi signature 1`]
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 e4d2450ea41e5c8857139ea3b2f19d5b064dbc45639246637e1128f1ab150377
                               </span>
@@ -3344,7 +3344,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -3390,7 +3390,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3568,7 +3568,7 @@ exports[`MultiSignatureDetail should render summary step for transfer 1`] = `
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
@@ -3804,7 +3804,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -3884,7 +3884,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -4001,7 +4001,7 @@ exports[`MultiSignatureDetail should render summary step for unvote 1`] = `
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 27078ab8ee89585838cd88872c08c776cccf6c05f03424bd41d76b523a619330
                               </span>
@@ -4237,7 +4237,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -4317,7 +4317,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                                     </span>
                                   </span>
                                   <span
-                                    class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                    class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                     data-testid="Address__address"
                                   >
                                     D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -4434,7 +4434,7 @@ exports[`MultiSignatureDetail should render summary step for vote 1`] = `
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 ef2f81b906eda4a158c3abca1da7897ab408c0a952076616484efce03c15c787
                               </span>
@@ -4868,7 +4868,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -4914,7 +4914,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5092,7 +5092,7 @@ exports[`MultiSignatureDetail should show send button when able to add final sig
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>
@@ -5354,7 +5354,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -5400,7 +5400,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5578,7 +5578,7 @@ exports[`MultiSignatureDetail should show sign button when able to sign 1`] = `
                               class="w-20 flex-1"
                             >
                               <span
-                                class="inline-flex overflow-hidden"
+                                class="flex-1 inline-flex overflow-hidden"
                               >
                                 6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                               </span>

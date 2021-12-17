@@ -261,7 +261,7 @@ exports[`ReceiveFunds should render with a wallet name 1`] = `
                         class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                       >
                         <span
-                          class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                          class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           abc
@@ -414,7 +414,7 @@ exports[`ReceiveFunds should render without a wallet name 1`] = `
                         class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                       >
                         <span
-                          class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                          class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           abc

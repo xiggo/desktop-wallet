@@ -542,7 +542,7 @@ exports[`Contacts should render with contacts 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -714,7 +714,7 @@ exports[`Contacts should render with contacts 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
@@ -860,7 +860,7 @@ exports[`Contacts should render with contacts 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
@@ -1006,7 +1006,7 @@ exports[`Contacts should render with contacts 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -1651,7 +1651,7 @@ exports[`Contacts should render with contacts of live networks only 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX

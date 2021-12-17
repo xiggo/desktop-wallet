@@ -60,7 +60,7 @@ export const TruncateMiddleDynamic: React.VFC<TruncateMiddleDynamicProperties> =
 
 	return (
 		<Tooltip content={value} disabled={truncatedValue === value} theme={tooltipDarkTheme ? "dark" : undefined}>
-			<span ref={spanReference} className={cn("inline-flex overflow-hidden", className)} {...properties}>
+			<span ref={spanReference} className={cn("flex-1 inline-flex overflow-hidden", className)} {...properties}>
 				{truncatedValue}
 			</span>
 		</Tooltip>

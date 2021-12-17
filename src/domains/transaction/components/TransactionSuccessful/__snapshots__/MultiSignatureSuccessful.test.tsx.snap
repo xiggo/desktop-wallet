@@ -90,7 +90,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
                 class="w-20 flex-1"
               >
                 <span
-                  class="inline-flex overflow-hidden"
+                  class="flex-1 inline-flex overflow-hidden"
                 >
                   ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                 </span>
@@ -158,7 +158,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                    class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -268,7 +268,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
                 </span>
               </span>
               <span
-                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -386,7 +386,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -421,7 +421,7 @@ exports[`MultiSignatureSuccessful should render 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -556,7 +556,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
                 class="w-20 flex-1"
               >
                 <span
-                  class="inline-flex overflow-hidden"
+                  class="flex-1 inline-flex overflow-hidden"
                 >
                   ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                 </span>
@@ -624,7 +624,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                    class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -734,7 +734,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
                 </span>
               </span>
               <span
-                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -852,7 +852,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -887,7 +887,7 @@ exports[`MultiSignatureSuccessful should render with delegate sender wallet 1`] 
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1022,7 +1022,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
                 class="w-20 flex-1"
               >
                 <span
-                  class="inline-flex overflow-hidden"
+                  class="flex-1 inline-flex overflow-hidden"
                 >
                   ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                 </span>
@@ -1210,7 +1210,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1245,7 +1245,7 @@ exports[`MultiSignatureSuccessful should render with ledger sender wallet 1`] = 
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1380,7 +1380,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
                 class="w-20 flex-1"
               >
                 <span
-                  class="inline-flex overflow-hidden"
+                  class="flex-1 inline-flex overflow-hidden"
                 >
                   ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                 </span>
@@ -1474,7 +1474,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
                 </span>
               </span>
               <span
-                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1592,7 +1592,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1627,7 +1627,7 @@ exports[`MultiSignatureSuccessful should render without generated address 1`] = 
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb

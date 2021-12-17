@@ -44,7 +44,7 @@ exports[`DelegateFooter should render 1`] = `
                 class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
               >
                 <span
-                  class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                  class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

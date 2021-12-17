@@ -639,7 +639,7 @@ exports[`Votes should filter current delegates 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1558,7 +1558,7 @@ exports[`Votes should hide testnet wallet if disabled from profile setting 1`] =
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2444,7 +2444,7 @@ exports[`Votes should render 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3329,7 +3329,7 @@ exports[`Votes should render and handle wallet current voting exception 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4590,7 +4590,7 @@ exports[`Votes should select a delegate 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5474,7 +5474,7 @@ exports[`Votes should select an address without vote 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -7459,7 +7459,7 @@ exports[`Votes should show resigned delegate notice 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8336,7 +8336,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                               </span>
                             </span>
                             <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8444,7 +8444,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                               </span>
                             </span>
                             <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -8541,7 +8541,7 @@ exports[`Votes should toggle network selection from network filters 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
@@ -9400,7 +9400,7 @@ exports[`Votes should trigger network connection warning 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                            class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

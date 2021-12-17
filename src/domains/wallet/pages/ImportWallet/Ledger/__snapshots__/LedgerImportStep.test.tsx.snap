@@ -107,7 +107,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                         </span>
                       </span>
                       <span
-                        class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                         data-testid="Address__address"
                       >
                         DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq
@@ -192,7 +192,7 @@ exports[`LedgerImportStep should render with multiple import 1`] = `
                         </span>
                       </span>
                       <span
-                        class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                        class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                         data-testid="Address__address"
                       >
                         DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -319,7 +319,7 @@ exports[`LedgerImportStep should render with single import 1`] = `
             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
           >
             <span
-              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
               data-testid="Address__address"
             >
               DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES

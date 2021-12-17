@@ -40,7 +40,7 @@ exports[`VoteList should render 1`] = `
             </span>
           </span>
           <span
-            class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -83,7 +83,7 @@ exports[`VoteList should render 1`] = `
             </span>
           </span>
           <span
-            class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -126,7 +126,7 @@ exports[`VoteList should render 1`] = `
             </span>
           </span>
           <span
-            class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES
@@ -178,7 +178,7 @@ exports[`VoteList should render vote amount 1`] = `
             </span>
           </span>
           <span
-            class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -231,7 +231,7 @@ exports[`VoteList should render vote amount 1`] = `
             </span>
           </span>
           <span
-            class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             D5L5zXgvqtg7qoGimt5vYhFuf5Ued6iWVr
@@ -284,7 +284,7 @@ exports[`VoteList should render vote amount 1`] = `
             </span>
           </span>
           <span
-            class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+            class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
             data-testid="Address__address"
           >
             DRgF3PvzeGWndQjET7dZsSmnrc6uAy23ES

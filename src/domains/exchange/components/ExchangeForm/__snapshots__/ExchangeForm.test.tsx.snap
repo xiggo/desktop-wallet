@@ -85,7 +85,7 @@ exports[`ConfirmationStep should render 1`] = `
                     class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <span
-                      class="inline-flex overflow-hidden"
+                      class="flex-1 inline-flex overflow-hidden"
                     >
                       payinHash
                     </span>
@@ -151,7 +151,7 @@ exports[`ConfirmationStep should render 1`] = `
                     class="Link__Content-sc-ec014t-1 fPOlTq"
                   >
                     <span
-                      class="inline-flex overflow-hidden"
+                      class="flex-1 inline-flex overflow-hidden"
                     >
                       payinAddress
                     </span>
@@ -274,7 +274,7 @@ exports[`ConfirmationStep should render 1`] = `
               class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
             >
               <span
-                class="inline-flex overflow-hidden"
+                class="flex-1 inline-flex overflow-hidden"
               >
                 payoutAddress
               </span>
@@ -944,7 +944,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                             class="Link__Content-sc-ec014t-1 fPOlTq"
                           >
                             <span
-                              class="inline-flex overflow-hidden"
+                              class="flex-1 inline-flex overflow-hidden"
                             >
                               payinHash
                             </span>
@@ -1010,7 +1010,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                             class="Link__Content-sc-ec014t-1 fPOlTq"
                           >
                             <span
-                              class="inline-flex overflow-hidden"
+                              class="flex-1 inline-flex overflow-hidden"
                             >
                               payinAddress
                             </span>
@@ -1134,7 +1134,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                             class="Link__Content-sc-ec014t-1 fPOlTq"
                           >
                             <span
-                              class="inline-flex overflow-hidden"
+                              class="flex-1 inline-flex overflow-hidden"
                             >
                               payoutHash
                             </span>
@@ -1200,7 +1200,7 @@ exports[`ExchangeForm should render exchange form with id of finished order 1`] 
                             class="Link__Content-sc-ec014t-1 fPOlTq"
                           >
                             <span
-                              class="inline-flex overflow-hidden"
+                              class="flex-1 inline-flex overflow-hidden"
                             >
                               payoutAddress
                             </span>
@@ -1379,7 +1379,7 @@ exports[`ExchangeForm should render exchange form with id of pending order 1`] =
                   class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
                 >
                   <span
-                    class="inline-flex overflow-hidden no-ligatures"
+                    class="flex-1 inline-flex overflow-hidden no-ligatures"
                   >
                     payinAddress
                   </span>
@@ -1504,7 +1504,7 @@ exports[`ExchangeForm should render exchange form with id of pending order 1`] =
                   class="flex items-center space-x-2 whitespace-nowrap font-semibold"
                 >
                   <span
-                    class="inline-flex overflow-hidden no-ligatures"
+                    class="flex-1 inline-flex overflow-hidden no-ligatures"
                   >
                     payoutAddress
                   </span>
@@ -2082,7 +2082,7 @@ exports[`ReviewStep should render 1`] = `
           1 ARK
         </span>
         <span
-          class="inline-flex overflow-hidden text-xs font-semibold no-ligatures"
+          class="flex-1 inline-flex overflow-hidden text-xs font-semibold no-ligatures"
         >
           AYx3T2He3Ubz7H5pycQNG2Cvn6HYzeiC73
         </span>
@@ -2225,7 +2225,7 @@ exports[`StatusStep should render 1`] = `
           class="flex items-center space-x-2 whitespace-nowrap text-lg font-semibold"
         >
           <span
-            class="inline-flex overflow-hidden no-ligatures"
+            class="flex-1 inline-flex overflow-hidden no-ligatures"
           >
             payinAddress
           </span>
@@ -2350,7 +2350,7 @@ exports[`StatusStep should render 1`] = `
           class="flex items-center space-x-2 whitespace-nowrap font-semibold"
         >
           <span
-            class="inline-flex overflow-hidden no-ligatures"
+            class="flex-1 inline-flex overflow-hidden no-ligatures"
           >
             payoutAddress
           </span>

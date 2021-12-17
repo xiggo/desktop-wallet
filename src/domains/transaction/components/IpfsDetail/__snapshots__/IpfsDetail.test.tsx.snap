@@ -83,7 +83,7 @@ exports[`IpfsDetail should render a modal 1`] = `
                           class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
-                            class="inline-flex overflow-hidden"
+                            class="flex-1 inline-flex overflow-hidden"
                           >
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
@@ -154,7 +154,7 @@ exports[`IpfsDetail should render a modal 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -379,7 +379,7 @@ exports[`IpfsDetail should render a modal without a wallet alias 1`] = `
                           class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
-                            class="inline-flex overflow-hidden"
+                            class="flex-1 inline-flex overflow-hidden"
                           >
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
@@ -450,7 +450,7 @@ exports[`IpfsDetail should render a modal without a wallet alias 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

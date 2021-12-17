@@ -83,7 +83,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                           class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
-                            class="inline-flex overflow-hidden"
+                            class="flex-1 inline-flex overflow-hidden"
                           >
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
@@ -154,7 +154,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -234,7 +234,7 @@ exports[`VoteDetail should render a modal with unvotes 1`] = `
                             </span>
                           </span>
                           <span
-                            class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                             data-testid="Address__address"
                           >
                             034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
@@ -412,7 +412,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                           class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
-                            class="inline-flex overflow-hidden"
+                            class="flex-1 inline-flex overflow-hidden"
                           >
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
@@ -483,7 +483,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -563,7 +563,7 @@ exports[`VoteDetail should render a modal with votes 1`] = `
                             </span>
                           </span>
                           <span
-                            class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                             data-testid="Address__address"
                           >
                             034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
@@ -741,7 +741,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                           class="Link__Content-sc-ec014t-1 fPOlTq"
                         >
                           <span
-                            class="inline-flex overflow-hidden"
+                            class="flex-1 inline-flex overflow-hidden"
                           >
                             ea63bf9a4b3eaf75a1dfff721967c45dce64eb7facf1aef29461868681b5c79b
                           </span>
@@ -812,7 +812,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -892,7 +892,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                             </span>
                           </span>
                           <span
-                            class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                             data-testid="Address__address"
                           >
                             034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192
@@ -957,7 +957,7 @@ exports[`VoteDetail should render a modal with votes and unvotes 1`] = `
                             </span>
                           </span>
                           <span
-                            class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                             data-testid="Address__address"
                           >
                             034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192

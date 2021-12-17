@@ -219,7 +219,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                    class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -505,7 +505,7 @@ exports[`Signed Transaction Table should render pending transfers when isCompact
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                    class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -1089,7 +1089,7 @@ exports[`Signed Transaction Table should show as awaiting confirmations 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                    class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

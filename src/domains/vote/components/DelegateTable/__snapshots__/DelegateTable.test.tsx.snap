@@ -3284,7 +3284,7 @@ exports[`DelegateTable loading state for base should render when isCompact = fal
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6704,7 +6704,7 @@ exports[`DelegateTable loading state for base should render when isCompact = tru
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -10957,7 +10957,7 @@ exports[`DelegateTable loading state for requiresAmount should render when isCom
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -15230,7 +15230,7 @@ exports[`DelegateTable loading state for requiresAmount should render when isCom
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -15763,7 +15763,7 @@ exports[`DelegateTable should add resigned delegate to the unvote list 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -16273,7 +16273,7 @@ exports[`DelegateTable should emit action on continue button to unvote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -16783,7 +16783,7 @@ exports[`DelegateTable should emit action on continue button to vote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -17293,7 +17293,7 @@ exports[`DelegateTable should render 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -17977,7 +17977,7 @@ exports[`DelegateTable should render vote amount column 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -18510,7 +18510,7 @@ exports[`DelegateTable should render with a delegate to unvote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -19023,7 +19023,7 @@ exports[`DelegateTable should render with a delegate to unvote/vote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -19531,7 +19531,7 @@ exports[`DelegateTable should render with a delegate to vote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -20069,7 +20069,7 @@ exports[`DelegateTable should render with subtitle 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -20751,7 +20751,7 @@ exports[`DelegateTable should select a changed delegate to unvote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -21284,7 +21284,7 @@ exports[`DelegateTable should select a delegate to unvote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -21800,7 +21800,7 @@ exports[`DelegateTable should select a delegate to unvote/vote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -22308,7 +22308,7 @@ exports[`DelegateTable should select a delegate to vote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -22990,7 +22990,7 @@ exports[`DelegateTable should select a delegate with vote amount and make it unv
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -23523,7 +23523,7 @@ exports[`DelegateTable should select multiple delegates to unvote/vote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -24031,7 +24031,7 @@ exports[`DelegateTable should unselect a delegate to unvote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -24544,7 +24544,7 @@ exports[`DelegateTable should unselect a delegate to vote 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden leading-tight font-semibold text-lg"
+                    class="flex-1 inline-flex overflow-hidden leading-tight font-semibold text-lg"
                     data-testid="Address__address"
                   >
                     D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

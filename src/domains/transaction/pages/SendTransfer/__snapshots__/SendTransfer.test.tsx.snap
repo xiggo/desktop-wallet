@@ -359,7 +359,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -497,7 +497,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -543,7 +543,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                             >
                               <span
-                                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -858,7 +858,7 @@ exports[`SendTransfer should display unconfirmed transactions modal when submitt
                                           </span>
                                         </span>
                                         <span
-                                          class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                           data-testid="Address__address"
                                         >
                                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -1520,7 +1520,7 @@ exports[`SendTransfer should render 1st step with custom deeplink values and use
                   </span>
                 </span>
                 <span
-                  class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -2484,7 +2484,7 @@ exports[`SendTransfer should render form and use location state 1`] = `
                                   </span>
                                 </span>
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3483,7 +3483,7 @@ exports[`SendTransfer should render form and use location state without memo 1`]
                                   </span>
                                 </span>
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4744,7 +4744,7 @@ exports[`SendTransfer should render form step with deeplink values and use them 
                   </span>
                 </span>
                 <span
-                  class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                   data-testid="Address__address"
                 >
                   D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6850,7 +6850,7 @@ exports[`SendTransfer should render review step 1`] = `
               </span>
             </span>
             <span
-              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6907,7 +6907,7 @@ exports[`SendTransfer should render review step 1`] = `
               </span>
             </span>
             <span
-              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7142,7 +7142,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
               </span>
             </span>
             <span
-              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7274,7 +7274,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
                         class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                       >
                         <span
-                          class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                          class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7319,7 +7319,7 @@ exports[`SendTransfer should render review step with multiple recipients (with m
                         class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                       >
                         <span
-                          class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                          class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -7552,7 +7552,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
               </span>
             </span>
             <span
-              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+              class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
               data-testid="Address__address"
             >
               D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7684,7 +7684,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
                         class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                       >
                         <span
-                          class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                          class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7729,7 +7729,7 @@ exports[`SendTransfer should render review step with multiple recipients (withou
                         class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                       >
                         <span
-                          class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                          class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                           data-testid="Address__address"
                         >
                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -7889,7 +7889,7 @@ exports[`SendTransfer should render summary step 1`] = `
                 class="w-20 flex-1"
               >
                 <span
-                  class="inline-flex overflow-hidden"
+                  class="flex-1 inline-flex overflow-hidden"
                 >
                   6c38de343321f7d853ff98c1669aecee429ed51c13a473f6d39e3037d6685da4
                 </span>
@@ -7957,7 +7957,7 @@ exports[`SendTransfer should render summary step 1`] = `
                   class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                 >
                   <span
-                    class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                    class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                     data-testid="Address__address"
                   >
                     DNzn2Rg6jCg3RCZnUyYjhbhvAgSWGwaMbH
@@ -8067,7 +8067,7 @@ exports[`SendTransfer should render summary step 1`] = `
                 </span>
               </span>
               <span
-                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8185,7 +8185,7 @@ exports[`SendTransfer should render summary step 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8220,7 +8220,7 @@ exports[`SendTransfer should render summary step 1`] = `
                           class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                         >
                           <span
-                            class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                             data-testid="Address__address"
                           >
                             D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -8326,7 +8326,7 @@ exports[`SendTransfer should render summary step 1`] = `
                 </span>
               </span>
               <span
-                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                 data-testid="Address__address"
               >
                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -8906,7 +8906,7 @@ exports[`SendTransfer should select a cryptoasset and select sender without wall
                                   </span>
                                 </span>
                                 <span
-                                  class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                  class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                   data-testid="Address__address"
                                 >
                                   D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -10259,7 +10259,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -10397,7 +10397,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -10443,7 +10443,7 @@ exports[`SendTransfer should send a single transfer and handle undefined expirat
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                             >
                               <span
-                                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -10927,7 +10927,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -11065,7 +11065,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -11111,7 +11111,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                             >
                               <span
-                                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -11426,7 +11426,7 @@ exports[`SendTransfer should send a single transfer and show unconfirmed transac
                                           </span>
                                         </span>
                                         <span
-                                          class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                          class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                           data-testid="Address__address"
                                         >
                                           D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -11933,7 +11933,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -12071,7 +12071,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -12117,7 +12117,7 @@ exports[`SendTransfer should send a single transfer using wallet with encryption
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                             >
                               <span
-                                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -12601,7 +12601,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -12739,7 +12739,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -12785,7 +12785,7 @@ exports[`SendTransfer should send a single transfer with a high fee by confirmin
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                             >
                               <span
-                                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -13269,7 +13269,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -13407,7 +13407,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -13453,7 +13453,7 @@ exports[`SendTransfer should send a single transfer with a low fee by confirming
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                             >
                               <span
-                                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -13937,7 +13937,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -14075,7 +14075,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -14121,7 +14121,7 @@ exports[`SendTransfer should send a single transfer with keyboard 1`] = `
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                             >
                               <span
-                                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -14605,7 +14605,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -14743,7 +14743,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -14789,7 +14789,7 @@ exports[`SendTransfer should send a single transfer without keyboard 1`] = `
                               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                             >
                               <span
-                                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv

@@ -243,7 +243,7 @@ exports[`LedgerScanStep should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DQseW3VJ1db5xN5xZi4Qhn6AFWtcwSwzpG

@@ -35,7 +35,7 @@ exports[`TransactionExplorerLink should render a transaction link 1`] = `
                 class="Link__Content-sc-ec014t-1 fPOlTq"
               >
                 <span
-                  class="inline-flex overflow-hidden"
+                  class="flex-1 inline-flex overflow-hidden"
                 >
                   test-id
                 </span>

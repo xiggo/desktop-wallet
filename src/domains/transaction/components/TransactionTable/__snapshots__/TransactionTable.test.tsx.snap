@@ -3656,7 +3656,7 @@ exports[`TransactionTable should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -3701,7 +3701,7 @@ exports[`TransactionTable should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3844,7 +3844,7 @@ exports[`TransactionTable should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -3878,7 +3878,7 @@ exports[`TransactionTable should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -4010,7 +4010,7 @@ exports[`TransactionTable should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4055,7 +4055,7 @@ exports[`TransactionTable should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4187,7 +4187,7 @@ exports[`TransactionTable should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4232,7 +4232,7 @@ exports[`TransactionTable should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4364,7 +4364,7 @@ exports[`TransactionTable should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4409,7 +4409,7 @@ exports[`TransactionTable should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4541,7 +4541,7 @@ exports[`TransactionTable should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4586,7 +4586,7 @@ exports[`TransactionTable should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4718,7 +4718,7 @@ exports[`TransactionTable should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4763,7 +4763,7 @@ exports[`TransactionTable should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -4895,7 +4895,7 @@ exports[`TransactionTable should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -4940,7 +4940,7 @@ exports[`TransactionTable should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5072,7 +5072,7 @@ exports[`TransactionTable should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5117,7 +5117,7 @@ exports[`TransactionTable should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5260,7 +5260,7 @@ exports[`TransactionTable should render 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5294,7 +5294,7 @@ exports[`TransactionTable should render 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5559,7 +5559,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DK1f5frUPTNqhFxoyDUHwN7VC2B4Uzhpmy
@@ -5604,7 +5604,7 @@ exports[`TransactionTable should render compact 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5747,7 +5747,7 @@ exports[`TransactionTable should render compact 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -5781,7 +5781,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DPKAyxsa7s9K3kQ5av8wwn9JY9a5ezxh4g
@@ -5913,7 +5913,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -5958,7 +5958,7 @@ exports[`TransactionTable should render compact 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6090,7 +6090,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6135,7 +6135,7 @@ exports[`TransactionTable should render compact 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6267,7 +6267,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6312,7 +6312,7 @@ exports[`TransactionTable should render compact 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6444,7 +6444,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6489,7 +6489,7 @@ exports[`TransactionTable should render compact 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6621,7 +6621,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6666,7 +6666,7 @@ exports[`TransactionTable should render compact 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6798,7 +6798,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -6843,7 +6843,7 @@ exports[`TransactionTable should render compact 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -6975,7 +6975,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2
@@ -7020,7 +7020,7 @@ exports[`TransactionTable should render compact 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7163,7 +7163,7 @@ exports[`TransactionTable should render compact 1`] = `
                       </span>
                     </span>
                     <span
-                      class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                       data-testid="Address__address"
                     >
                       D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -7197,7 +7197,7 @@ exports[`TransactionTable should render compact 1`] = `
                     class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                   >
                     <span
-                      class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                      class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                       data-testid="Address__address"
                     >
                       DBoKkzKAT6YdXhyv1mvcKEg97JxiRqMuK2

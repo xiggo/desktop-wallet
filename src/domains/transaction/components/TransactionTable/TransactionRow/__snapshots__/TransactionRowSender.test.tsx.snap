@@ -52,7 +52,7 @@ exports[`TransactionRowSender should render 1`] = `
         </span>
       </span>
       <span
-        class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+        class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
         data-testid="Address__address"
       >
         D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
@@ -114,7 +114,7 @@ exports[`TransactionRowSender should render compact 1`] = `
         </span>
       </span>
       <span
-        class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+        class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
         data-testid="Address__address"
       >
         D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD

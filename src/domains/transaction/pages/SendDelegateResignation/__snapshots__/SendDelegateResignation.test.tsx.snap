@@ -411,7 +411,7 @@ exports[`SendDelegateResignation Delegate Resignation should change fee 1`] = `
                               </span>
                             </span>
                             <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -1027,7 +1027,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 1st step 1`]
                               </span>
                             </span>
                             <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -1623,7 +1623,7 @@ exports[`SendDelegateResignation Delegate Resignation should render 2nd step 1`]
                               </span>
                             </span>
                             <span
-                              class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -3523,7 +3523,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -3661,7 +3661,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -4118,7 +4118,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -4256,7 +4256,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr
@@ -4713,7 +4713,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                     class="Link__Content-sc-ec014t-1 fPOlTq"
                                   >
                                     <span
-                                      class="inline-flex overflow-hidden"
+                                      class="flex-1 inline-flex overflow-hidden"
                                     >
                                       8f913b6b719e7767d49861c0aec79ced212767645cb793d75d2f1b89abb49877
                                     </span>
@@ -4851,7 +4851,7 @@ exports[`SendDelegateResignation Delegate Resignation should successfully sign a
                                 </span>
                               </span>
                               <span
-                                class="inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                                class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
                                 data-testid="Address__address"
                               >
                                 DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr

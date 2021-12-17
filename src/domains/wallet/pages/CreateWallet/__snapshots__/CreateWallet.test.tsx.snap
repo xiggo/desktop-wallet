@@ -997,7 +997,7 @@ exports[`CreateWallet should create a wallet 2`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z
@@ -2085,7 +2085,7 @@ exports[`CreateWallet should create a wallet with encryption 2`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DTLomV8hpJheFDPnBGB5EtrDCfDZJnG23z

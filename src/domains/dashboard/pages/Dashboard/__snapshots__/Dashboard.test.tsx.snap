@@ -1784,7 +1784,7 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -1818,7 +1818,7 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -1955,7 +1955,7 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -1989,7 +1989,7 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D5pVkhZbSb4UNXvfmF6j7zdau8yGxfKwSv
@@ -2126,7 +2126,7 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2160,7 +2160,7 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A
@@ -2297,7 +2297,7 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax
@@ -2331,7 +2331,7 @@ exports[`Dashboard should render 1`] = `
                             class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
                           >
                             <span
-                              class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                              class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                               data-testid="Address__address"
                             >
                               DKY5eyQUKKYyaCfPp6MUv3Y4FW6EbNF53A

@@ -86,7 +86,7 @@ exports[`ContactListItem should render 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -252,7 +252,7 @@ exports[`ContactListItem should render as delegate 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 id5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb
@@ -418,7 +418,7 @@ exports[`ContactListItem should render with live networks only 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
@@ -584,7 +584,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -715,7 +715,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -846,7 +846,7 @@ exports[`ContactListItem should render with multiple addresses 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -1012,7 +1012,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1158,7 +1158,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1304,7 +1304,7 @@ exports[`ContactListItem should render with multiple options 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
@@ -1485,7 +1485,7 @@ exports[`ContactListItem should render with one option 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1616,7 +1616,7 @@ exports[`ContactListItem should render with one option 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
@@ -1747,7 +1747,7 @@ exports[`ContactListItem should render with one option 1`] = `
               class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
             >
               <span
-                class="inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
                 data-testid="Address__address"
               >
                 DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
