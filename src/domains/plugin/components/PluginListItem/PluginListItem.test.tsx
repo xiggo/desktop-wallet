@@ -5,15 +5,18 @@ import { PluginListItem } from "./PluginListItem";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import { render, screen } from "@/utils/testing-library";
 
+const pluginTitle = "ARK Explorer";
+const pluginID = "ark-explorer";
+
 describe("PluginListItem", () => {
 	it("should render", () => {
 		const plugin = {
 			author: "ARK.io",
 			category: "utility",
-			id: "ark-explorer",
+			id: pluginID,
 			isInstalled: false,
 			size: "4.2 MB",
-			title: "ARK Explorer",
+			title: pluginTitle,
 			updateStatus: {
 				isAvailable: false,
 			},
@@ -23,12 +26,12 @@ describe("PluginListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<PluginListItem plugin={plugin} />
+					<PluginListItem plugin={plugin} onInstall={jest.fn} />
 				</tbody>
 			</table>,
 		);
 
-		expect(screen.getByTestId("TableRow")).toHaveTextContent("ARK Explorer");
+		expect(screen.getByTestId("TableRow")).toHaveTextContent(pluginTitle);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -36,10 +39,10 @@ describe("PluginListItem", () => {
 		const plugin = {
 			author: "ARK.io",
 			category: "utility",
-			id: "ark-explorer",
+			id: pluginID,
 			isInstalled: false,
 			size: "4.2 MB",
-			title: "ARK Explorer",
+			title: pluginTitle,
 			updateStatus: {
 				isAvailable: true,
 				isCompatible: true,
@@ -67,10 +70,10 @@ describe("PluginListItem", () => {
 		const plugin = {
 			author: "ARK.io",
 			category: "utility",
-			id: "ark-explorer",
+			id: pluginID,
 			isInstalled: true,
 			size: "4.2 MB",
-			title: "ARK Explorer",
+			title: pluginTitle,
 			updateStatus: {
 				isAvailable: true,
 				isCompatible: true,
@@ -83,7 +86,7 @@ describe("PluginListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<PluginListItem plugin={plugin} onUpdate={onUpdate} />
+					<PluginListItem plugin={plugin} onUpdate={onUpdate} onInstall={jest.fn} />
 				</tbody>
 			</table>,
 		);
@@ -100,10 +103,10 @@ describe("PluginListItem", () => {
 		const plugin = {
 			author: "ARK.io",
 			category: "utility",
-			id: "ark-explorer",
+			id: pluginID,
 			isInstalled: true,
 			size: "4.2 MB",
-			title: "ARK Explorer",
+			title: pluginTitle,
 			updateStatus: {
 				isAvailable: false,
 			},
@@ -115,7 +118,7 @@ describe("PluginListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<PluginListItem plugin={plugin} onDelete={onDelete} />
+					<PluginListItem plugin={plugin} onDelete={onDelete} onInstall={jest.fn} />
 				</tbody>
 			</table>,
 		);
@@ -130,10 +133,10 @@ describe("PluginListItem", () => {
 		const plugin = {
 			author: "ARK.io",
 			category: "utility",
-			id: "ark-explorer",
+			id: pluginID,
 			isInstalled: true,
 			size: "4.2 MB",
-			title: "ARK Explorer",
+			title: pluginTitle,
 			updateStatus: {
 				isAvailable: false,
 			},
@@ -145,7 +148,7 @@ describe("PluginListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<PluginListItem plugin={plugin} onEnable={onEnable} />
+					<PluginListItem plugin={plugin} onEnable={onEnable} onInstall={jest.fn} />
 				</tbody>
 			</table>,
 		);
@@ -160,9 +163,9 @@ describe("PluginListItem", () => {
 		const plugin = {
 			author: "ARK.io",
 			category: "utility",
-			id: "ark-explorer",
+			id: pluginID,
 			size: "4.2 MB",
-			title: "ARK Explorer",
+			title: pluginTitle,
 			updateStatus: {
 				isAvailable: false,
 			},
@@ -174,7 +177,7 @@ describe("PluginListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<PluginListItem plugin={plugin} onClick={onClick} />
+					<PluginListItem plugin={plugin} onClick={onClick} onInstall={jest.fn} />
 				</tbody>
 			</table>,
 		);
@@ -188,11 +191,11 @@ describe("PluginListItem", () => {
 		const plugin = {
 			author: "ARK.io",
 			category: "utility",
-			id: "ark-explorer",
+			id: pluginID,
 			isEnabled: true,
 			isInstalled: true,
 			size: "4.2 MB",
-			title: "ARK Explorer",
+			title: pluginTitle,
 			updateStatus: {
 				isAvailable: false,
 			},
@@ -204,7 +207,7 @@ describe("PluginListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<PluginListItem plugin={plugin} onDisable={onDisable} />
+					<PluginListItem plugin={plugin} onDisable={onDisable} onInstall={jest.fn} />
 				</tbody>
 			</table>,
 		);
@@ -220,11 +223,11 @@ describe("PluginListItem", () => {
 			author: "ARK.io",
 			category: "utility",
 			hasLaunch: true,
-			id: "ark-explorer",
+			id: pluginID,
 			isEnabled: true,
 			isInstalled: true,
 			size: "4.2 MB",
-			title: "ARK Explorer",
+			title: pluginTitle,
 			updateStatus: {
 				isAvailable: false,
 			},
@@ -236,7 +239,7 @@ describe("PluginListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<PluginListItem plugin={plugin} onLaunch={onLaunch} />
+					<PluginListItem plugin={plugin} onLaunch={onLaunch} onInstall={jest.fn} />
 				</tbody>
 			</table>,
 		);
@@ -249,10 +252,10 @@ describe("PluginListItem", () => {
 	it("should render minimum version warning", () => {
 		const plugin = {
 			category: "utility",
-			id: "ark-explorer",
+			id: pluginID,
 			isCompatible: true,
 			isInstalled: true,
-			name: "ARK Explorer",
+			name: pluginTitle,
 			size: "4.2 MB",
 			title: "ARK.io",
 			updateStatus: {
@@ -266,7 +269,7 @@ describe("PluginListItem", () => {
 		render(
 			<table>
 				<tbody>
-					<PluginListItem plugin={plugin} />
+					<PluginListItem plugin={plugin} onInstall={jest.fn} />
 				</tbody>
 			</table>,
 		);
@@ -278,11 +281,11 @@ describe("PluginListItem", () => {
 		const plugin = {
 			author: "ARK.io",
 			category: "utility",
-			id: "ark-explorer",
+			id: pluginID,
 			isInstalled: false,
 			isOfficial: true,
 			size: "4.2 MB",
-			title: "ARK Explorer",
+			title: pluginTitle,
 			updateStatus: {
 				isAvailable: false,
 			},
@@ -292,7 +295,7 @@ describe("PluginListItem", () => {
 		const { asFragment } = render(
 			<table>
 				<tbody>
-					<PluginListItem plugin={plugin} />
+					<PluginListItem plugin={plugin} onInstall={jest.fn} />
 				</tbody>
 			</table>,
 		);

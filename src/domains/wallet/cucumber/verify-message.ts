@@ -3,7 +3,7 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { goToWallet } from "../e2e/common";
+import { goToWallet, modal } from "../e2e/common";
 
 const translations = buildTranslations();
 
@@ -19,7 +19,7 @@ const preSteps = {
 				translations.WALLETS.PAGE_WALLET_DETAILS.OPTIONS.VERIFY_MESSAGE,
 			),
 		);
-		await t.expect(Selector("[data-testid=modal__inner]").exists).ok();
+		await t.expect(modal.exists).ok();
 	},
 };
 cucumber("@verifyMessage", {
@@ -38,12 +38,7 @@ cucumber("@verifyMessage", {
 		await t.click(Selector("[data-testid=VerifyMessage__submit]"));
 	},
 	"Then the message is successfully verified": async (t: TestController) => {
-		await t
-			.expect(
-				Selector("[data-testid=modal__inner]").withText(translations.WALLETS.MODAL_VERIFY_MESSAGE.SUCCESS.TITLE)
-					.exists,
-			)
-			.ok();
+		await t.expect(modal.withText(translations.WALLETS.MODAL_VERIFY_MESSAGE.SUCCESS.TITLE).exists).ok();
 	},
 });
 cucumber("@verifyMessage-failVerification", {
@@ -62,12 +57,7 @@ cucumber("@verifyMessage-failVerification", {
 		await t.click(Selector("[data-testid=VerifyMessage__submit]"));
 	},
 	"Then the message verification fails": async (t: TestController) => {
-		await t
-			.expect(
-				Selector("[data-testid=modal__inner]").withText(translations.WALLETS.MODAL_VERIFY_MESSAGE.ERROR.TITLE)
-					.exists,
-			)
-			.ok();
+		await t.expect(modal.withText(translations.WALLETS.MODAL_VERIFY_MESSAGE.ERROR.TITLE).exists).ok();
 	},
 });
 cucumber("@verifyMessage-openAndClose", {
@@ -77,7 +67,7 @@ cucumber("@verifyMessage-openAndClose", {
 		await t.click(Selector('[data-testid="modal__close-btn"]'));
 	},
 	"Then the verify message modal is no longer displayed": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=modal__inner]").exists).notOk();
+		await t.expect(modal.exists).notOk();
 	},
 });
 cucumber("@verifyMessage-openAndCancel", {
@@ -87,6 +77,6 @@ cucumber("@verifyMessage-openAndCancel", {
 		await t.click(Selector("[data-testid=VerifyMessage__cancel]"));
 	},
 	"Then the verify message modal is no longer displayed": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=modal__inner]").exists).notOk();
+		await t.expect(modal.exists).notOk();
 	},
 });

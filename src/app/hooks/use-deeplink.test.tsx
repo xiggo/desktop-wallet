@@ -16,6 +16,11 @@ const ipcRendererMockImplementation = (event, callback) => {
 	);
 };
 
+const deeplinkTest = "Deeplink Test";
+const processURL = "process-url";
+
+const deeplinkTestContent = () => screen.getByText(deeplinkTest);
+
 describe("useDeeplink hook", () => {
 	const toastWarningSpy = jest.spyOn(toasts, "warning").mockImplementationOnce((subject) => jest.fn(subject));
 	const toastErrorSpy = jest.spyOn(toasts, "error").mockImplementationOnce((subject) => jest.fn(subject));
@@ -27,7 +32,7 @@ describe("useDeeplink hook", () => {
 	const TestComponent: React.FC = () => {
 		useDeeplink();
 
-		return <h1>Deeplink tester</h1>;
+		return <h1>Deeplink Test</h1>;
 	};
 
 	it("should subscribe to deeplink listener", () => {
@@ -39,8 +44,8 @@ describe("useDeeplink hook", () => {
 			</Route>,
 		);
 
-		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
-		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
+		expect(deeplinkTestContent()).toBeInTheDocument();
+		expect(ipcRenderer.on).toHaveBeenCalledWith(processURL, expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to select a profile", () => {
@@ -55,9 +60,9 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
+		expect(deeplinkTestContent()).toBeInTheDocument();
 		expect(toastWarningSpy).toHaveBeenCalledWith(translations.SELECT_A_PROFILE);
-		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith(processURL, expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to coin not supported", () => {
@@ -68,7 +73,7 @@ describe("useDeeplink hook", () => {
 			),
 		);
 
-		window.history.pushState({}, "Deeplink Test", `/profiles/${getDefaultProfileId()}/dashboard`);
+		window.history.pushState({}, deeplinkTest, `/profiles/${getDefaultProfileId()}/dashboard`);
 
 		render(
 			<Route pathname="/profiles/:profileId">
@@ -79,9 +84,9 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
+		expect(deeplinkTestContent()).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenLastCalledWith('Invalid URI: Coin "doge" not supported.');
-		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith(processURL, expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to network not supported", () => {
@@ -92,7 +97,7 @@ describe("useDeeplink hook", () => {
 			),
 		);
 
-		window.history.pushState({}, "Deeplink Test", `/profiles/${getDefaultProfileId()}/dashboard`);
+		window.history.pushState({}, deeplinkTest, `/profiles/${getDefaultProfileId()}/dashboard`);
 
 		render(
 			<Route pathname="/profiles/:profileId">
@@ -103,15 +108,15 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
+		expect(deeplinkTestContent()).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenCalledWith('Invalid URI: Network "custom" not supported.');
-		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith(processURL, expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and toast a warning to no senders available", () => {
 		ipcRenderer.on.mockImplementationOnce(ipcRendererMockImplementation);
 
-		window.history.pushState({}, "Deeplink Test", `/profiles/${getDefaultProfileId()}/dashboard`);
+		window.history.pushState({}, deeplinkTest, `/profiles/${getDefaultProfileId()}/dashboard`);
 
 		render(
 			<Route pathname="/profiles/:profileId">
@@ -122,11 +127,11 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
+		expect(deeplinkTestContent()).toBeInTheDocument();
 		expect(toastErrorSpy).toHaveBeenCalledWith(
 			'Invalid URI: The current profile has no wallets available for the "ark.mainnet" network',
 		);
-		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith(processURL, expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and navigate", () => {
@@ -139,7 +144,7 @@ describe("useDeeplink hook", () => {
 
 		window.history.pushState(
 			{},
-			"Deeplink Test",
+			deeplinkTest,
 			`/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`,
 		);
 
@@ -152,9 +157,9 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
+		expect(deeplinkTestContent()).toBeInTheDocument();
 		expect(history.location.pathname).toBe(`/profiles/${getDefaultProfileId()}/send-transfer`);
-		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith(processURL, expect.any(Function));
 	});
 
 	it("should subscribe to deeplink listener and navigate when no method found", () => {
@@ -164,7 +169,7 @@ describe("useDeeplink hook", () => {
 
 		window.history.pushState(
 			{},
-			"Deeplink Test",
+			deeplinkTest,
 			`/profiles/${getDefaultProfileId()}/wallets/${getDefaultWalletId()}`,
 		);
 
@@ -177,9 +182,9 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
+		expect(deeplinkTestContent()).toBeInTheDocument();
 		expect(history.location.pathname).toBe("/");
-		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
+		expect(ipcRenderer.on).toHaveBeenCalledWith(processURL, expect.any(Function));
 	});
 
 	it("should not use create", () => {
@@ -196,7 +201,7 @@ describe("useDeeplink hook", () => {
 			},
 		);
 
-		expect(screen.getByText("Deeplink tester")).toBeInTheDocument();
-		expect(ipcRenderer.on).toHaveBeenCalledWith("process-url", expect.any(Function));
+		expect(deeplinkTestContent()).toBeInTheDocument();
+		expect(ipcRenderer.on).toHaveBeenCalledWith(processURL, expect.any(Function));
 	});
 });

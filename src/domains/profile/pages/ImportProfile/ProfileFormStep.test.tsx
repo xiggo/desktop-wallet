@@ -22,6 +22,8 @@ const showOpenDialogParameters = {
 	properties: ["openFile"],
 };
 
+const submitButton = () => screen.getByTestId("CreateProfile__submit-button");
+
 describe("Import Profile - Profile Form Step", () => {
 	beforeAll(() => {
 		profile = env.profiles().first();
@@ -57,7 +59,7 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(submitButton()).toHaveAttribute("disabled"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -79,7 +81,7 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(submitButton()).toHaveAttribute("disabled"));
 
 		expect(container).toMatchSnapshot();
 	});
@@ -98,7 +100,7 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(submitButton()).toHaveAttribute("disabled"));
 
 		// Upload avatar image
 		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
@@ -114,10 +116,10 @@ describe("Import Profile - Profile Form Step", () => {
 		userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled();
+			expect(submitButton()).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(submitButton());
 
 		expect(emptyProfile.usesPassword()).toBe(false);
 
@@ -126,7 +128,7 @@ describe("Import Profile - Profile Form Step", () => {
 
 		userEvent.click(screen.getByRole("checkbox"));
 
-		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(submitButton());
 
 		const newProfile = env.profiles().findById(emptyProfile.id());
 
@@ -164,22 +166,22 @@ describe("Import Profile - Profile Form Step", () => {
 		userEvent.paste(passwordInput, "753lk6JD!&");
 		userEvent.paste(passwordConfirmationInput, "753lk6JD!");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeDisabled());
+		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		passwordConfirmationInput.select();
 		userEvent.paste(passwordConfirmationInput, "753lk6JD!&");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		passwordInput.select();
 		userEvent.paste(passwordInput, "753lk6JD!");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeDisabled());
+		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		passwordConfirmationInput.select();
 		userEvent.paste(passwordConfirmationInput, "753lk6JD!");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -200,7 +202,7 @@ describe("Import Profile - Profile Form Step", () => {
 			</EnvironmentProvider>,
 		);
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(submitButton()).toHaveAttribute("disabled"));
 
 		const inputElement: HTMLInputElement = screen.getAllByTestId("Input")[0] as HTMLInputElement;
 

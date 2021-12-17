@@ -23,6 +23,13 @@ const FetchComponent = () => {
 	);
 };
 
+const pluginHeader = () => screen.getByTestId("plugin-details__header");
+const fetchPackages = () => screen.getByText("Fetch Packages");
+const testPlugin = () => screen.findByText("Test Plugin");
+
+const remotePluginName = "remote-plugin";
+const testPluginName = "test-plugin";
+
 describe("PluginDetails", () => {
 	let profile: Contracts.IProfile;
 
@@ -55,7 +62,7 @@ describe("PluginDetails", () => {
 
 		await waitFor(() => expect(screen.getByTestId("PluginSpecs__size")).toHaveTextContent("N/A"));
 
-		userEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(fetchPackages());
 
 		await expect(screen.findByText("ARK Delegate Calculator")).resolves.toBeVisible();
 
@@ -66,7 +73,7 @@ describe("PluginDetails", () => {
 
 	it("should render properly", async () => {
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: testPluginName },
 			() => void 0,
 		);
 
@@ -90,9 +97,9 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(fetchPackages());
 
-		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
+		await expect(testPlugin()).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -102,7 +109,7 @@ describe("PluginDetails", () => {
 	it("should render properly for remote package", async () => {
 		nock("https://github.com/")
 			.get("/arkecosystem/remote-plugin/raw/master/package.json")
-			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: "remote-plugin" });
+			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: remotePluginName });
 
 		const FetchComponent = () => {
 			const { fetchLatestPackageConfiguration } = usePluginManagerContext();
@@ -139,7 +146,7 @@ describe("PluginDetails", () => {
 		const ipcRendererMock = jest.spyOn(ipcRenderer, "send").mockImplementation();
 
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: testPluginName },
 			() => void 0,
 		);
 
@@ -163,9 +170,9 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(fetchPackages());
 
-		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
+		await expect(testPlugin()).resolves.toBeVisible();
 
 		expect(container).toMatchSnapshot();
 
@@ -183,7 +190,7 @@ describe("PluginDetails", () => {
 
 	it("should open the plugin view", async () => {
 		const plugin = new PluginController(
-			{ "desktop-wallet": { permissions: ["LAUNCH"] }, name: "test-plugin" },
+			{ "desktop-wallet": { permissions: ["LAUNCH"] }, name: testPluginName },
 			(api) => api.launch().render(<h1>Test</h1>),
 		);
 		pluginManager.services().register([new LaunchPluginService()]);
@@ -208,9 +215,9 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(fetchPackages());
 
-		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
+		await expect(testPlugin()).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("PluginHeader__button--launch"));
 
@@ -224,7 +231,7 @@ describe("PluginDetails", () => {
 		const toastSpy = jest.spyOn(toasts, "success").mockImplementation();
 
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: testPluginName },
 			() => void 0,
 		);
 
@@ -248,11 +255,11 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(fetchPackages());
 
-		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
+		await expect(testPlugin()).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(within(pluginHeader()).getByTestId("dropdown__toggle"));
 		userEvent.click(screen.getByText(translations.COMMON.ENABLE));
 
 		await waitFor(() => expect(plugin.isEnabled(profile)).toBe(true));
@@ -270,7 +277,7 @@ describe("PluginDetails", () => {
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: testPluginName },
 			{ incompatible: true },
 		);
 
@@ -294,11 +301,11 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(fetchPackages());
 
-		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
+		await expect(testPlugin()).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(within(pluginHeader()).getByTestId("dropdown__toggle"));
 		userEvent.click(screen.getByText(translations.COMMON.ENABLE));
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Failed to enable/)));
@@ -310,7 +317,7 @@ describe("PluginDetails", () => {
 
 	it("should disable package from header", async () => {
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: testPluginName },
 			() => void 0,
 		);
 
@@ -335,11 +342,11 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(fetchPackages());
 
-		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
+		await expect(testPlugin()).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(within(pluginHeader()).getByTestId("dropdown__toggle"));
 		userEvent.click(screen.getByText(translations.COMMON.DISABLE));
 
 		await waitFor(() => expect(plugin.isEnabled(profile)).toBe(false));
@@ -348,7 +355,7 @@ describe("PluginDetails", () => {
 
 	it("should remove package", async () => {
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: testPluginName },
 			() => void 0,
 		);
 
@@ -372,11 +379,11 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(fetchPackages());
 
-		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
+		await expect(testPlugin()).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(within(pluginHeader()).getByTestId("dropdown__toggle"));
 		userEvent.click(screen.getByText(translations.COMMON.DELETE));
 
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
@@ -392,7 +399,7 @@ describe("PluginDetails", () => {
 
 	it("should close remove confirmation", async () => {
 		const plugin = new PluginController(
-			{ "desktop-wallet": { categories: ["other"] }, name: "test-plugin" },
+			{ "desktop-wallet": { categories: ["other"] }, name: testPluginName },
 			() => void 0,
 		);
 
@@ -416,11 +423,11 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(fetchPackages());
 
-		await expect(screen.findByText("Test Plugin")).resolves.toBeVisible();
+		await expect(testPlugin()).resolves.toBeVisible();
 
-		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(within(pluginHeader()).getByTestId("dropdown__toggle"));
 		userEvent.click(screen.getByText(translations.COMMON.DELETE));
 
 		const invokeMock = jest.spyOn(ipcRenderer, "invoke").mockResolvedValue([]);
@@ -441,7 +448,7 @@ describe("PluginDetails", () => {
 
 		nock("https://github.com/")
 			.get("/arkecosystem/remote-plugin/raw/master/package.json")
-			.reply(200, { name: "remote-plugin" });
+			.reply(200, { name: remotePluginName });
 
 		render(
 			<Route path="/profiles/:profileId/plugins/details">
@@ -481,7 +488,7 @@ describe("PluginDetails", () => {
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockImplementation((channel) => {
 			if (channel === "plugin:loader-fs.find") {
 				return {
-					config: { keywords: ["@payvo", "wallet-plugin"], name: "remote-plugin", version: "0.0.1" },
+					config: { keywords: ["@payvo", "wallet-plugin"], name: remotePluginName, version: "0.0.1" },
 					dir: "/plugins/remote-plugin",
 					source: () => void 0,
 					sourcePath: "/plugins/remote-plugin/index.js",
@@ -495,7 +502,7 @@ describe("PluginDetails", () => {
 
 		nock("https://github.com/")
 			.get("/arkecosystem/remote-plugin/raw/master/package.json")
-			.reply(200, { name: "remote-plugin" });
+			.reply(200, { name: remotePluginName });
 
 		render(
 			<Route path="/profiles/:profileId/plugins/details">
@@ -526,7 +533,7 @@ describe("PluginDetails", () => {
 
 		await waitFor(() =>
 			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
-				name: "remote-plugin",
+				name: remotePluginName,
 				url: "https://github.com/arkecosystem/remote-plugin/archive/master.zip",
 			}),
 		);
@@ -563,9 +570,9 @@ describe("PluginDetails", () => {
 			},
 		);
 
-		userEvent.click(screen.getByText("Fetch Packages"));
+		userEvent.click(fetchPackages());
 
-		userEvent.click(within(screen.getByTestId("plugin-details__header")).getByTestId("dropdown__toggle"));
+		userEvent.click(within(pluginHeader()).getByTestId("dropdown__toggle"));
 
 		await expect(screen.findByText(translations.COMMON.UPDATE)).resolves.toBeVisible();
 

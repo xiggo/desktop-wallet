@@ -1,6 +1,8 @@
 import { TFunction } from "i18next";
 import { ExchangeService } from "@/domains/exchange/services/exchange.service";
 
+const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
+
 const minimumInputValidation = (amount: number, t: TFunction, minimum?: number, ticker?: string) => {
 	if (amount < (minimum || 0)) {
 		return t("EXCHANGE.VALIDATION.MIN_AMOUNT", { amount: minimum, ticker });
@@ -11,7 +13,7 @@ const minimumInputValidation = (amount: number, t: TFunction, minimum?: number, 
 
 export const exchangeOrder = (t: TFunction) => ({
 	fromCurrency: () => ({
-		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+		required: t(requiredFieldMessage, {
 			field: t("EXCHANGE.EXCHANGE_FORM.FROM_CURRENCY"),
 		}),
 	}),
@@ -20,7 +22,7 @@ export const exchangeOrder = (t: TFunction) => ({
 			minimum: (amount: number) => minimumInputValidation(amount, t, minimum, ticker),
 			required: (amount: number) => {
 				if (!amount) {
-					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
+					return t(requiredFieldMessage, {
 						field: t("EXCHANGE.EXCHANGE_FORM.PAYIN_AMOUNT"),
 					}).toString();
 				}
@@ -34,7 +36,7 @@ export const exchangeOrder = (t: TFunction) => ({
 			minimum: (amount: number) => minimumInputValidation(amount, t, minimum, ticker),
 			required: (amount: number) => {
 				if (!amount) {
-					return t("COMMON.VALIDATION.FIELD_REQUIRED", {
+					return t(requiredFieldMessage, {
 						field: t("EXCHANGE.EXCHANGE_FORM.PAYOUT_AMOUNT"),
 					}).toString();
 				}
@@ -44,7 +46,7 @@ export const exchangeOrder = (t: TFunction) => ({
 		},
 	}),
 	recipientWallet: (exchangeService: ExchangeService, currency: string) => ({
-		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+		required: t(requiredFieldMessage, {
 			field: t("EXCHANGE.EXCHANGE_FORM.RECIPIENT_WALLET"),
 		}),
 		validate: async (address: string) => {
@@ -85,7 +87,7 @@ export const exchangeOrder = (t: TFunction) => ({
 		},
 	}),
 	toCurrency: () => ({
-		required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+		required: t(requiredFieldMessage, {
 			field: t("EXCHANGE.EXCHANGE_FORM.TO_CURRENCY"),
 		}),
 	}),

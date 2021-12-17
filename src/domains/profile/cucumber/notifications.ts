@@ -3,6 +3,8 @@ import { Selector } from "testcafe";
 import { cucumber, mockRequest, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../e2e/common";
 
+const notifications = Selector("[data-testid=navbar__buttons--notifications]");
+
 const preSteps = {
 	"Given Alice is signed into her profile": async (t: TestController) => {
 		await visitWelcomeScreen(t);
@@ -14,8 +16,8 @@ cucumber(
 	{
 		...preSteps,
 		"When she opens her notifications": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=navbar__buttons--notifications]").exists).ok();
-			await t.click(Selector("[data-testid=navbar__buttons--notifications]"));
+			await t.expect(notifications.exists).ok();
+			await t.click(notifications);
 		},
 		"Then the notification list is displayed": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=NotificationsWrapper]").exists).ok();
@@ -41,8 +43,8 @@ cucumber(
 	{
 		...preSteps,
 		"When she opens her notifications": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=navbar__buttons--notifications]").exists).ok();
-			await t.click(Selector("[data-testid=navbar__buttons--notifications]"));
+			await t.expect(notifications.exists).ok();
+			await t.click(notifications);
 		},
 		"And selects a transaction": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=TransactionTable]").exists).ok();
@@ -105,8 +107,8 @@ cucumber(
 			await t.expect(Selector("[data-testid=navbar__buttons--notifications] .rounded-full").exists).ok();
 		},
 		"When she opens her notifications": async (t: TestController) => {
-			await t.expect(Selector("[data-testid=navbar__buttons--notifications]").exists).ok();
-			await t.click(Selector("[data-testid=navbar__buttons--notifications]"));
+			await t.expect(notifications.exists).ok();
+			await t.click(notifications);
 		},
 		"Then the notifications are marked as read": async (t: TestController) => {
 			await t.expect(Selector("[data-testid=NotificationsWrapper] [data-testid=TableRow]").count).eql(3);

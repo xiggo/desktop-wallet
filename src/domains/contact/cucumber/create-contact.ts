@@ -6,6 +6,9 @@ import { goToContacts } from "../e2e/common";
 const contactName = "Test contact";
 const nameInput = Selector('[data-testid="contact-form__name-input"]');
 const addressInput = Selector('[data-testid="contact-form__address-input"]');
+const addAddressButton = Selector('[data-testid="contact-form__add-address-btn"]');
+const saveButton = Selector('[data-testid="contact-form__save-btn"]');
+const error = Selector('[data-testid="Input__error"]');
 
 const preSteps = {
 	"Given Alice is on the contacts page": async (t: TestController) => {
@@ -31,9 +34,9 @@ cucumber("@createContact", {
 		await t.pressKey("tab");
 		const addressInput = Selector('[data-testid="contact-form__address-input"]');
 		await t.typeText(addressInput, "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
-		await t.expect(Selector('[data-testid="contact-form__add-address-btn"]').hasAttribute("disabled")).notOk();
-		await t.click(Selector('[data-testid="contact-form__add-address-btn"]'));
-		await t.click(Selector('[data-testid="contact-form__save-btn"]'));
+		await t.expect(addAddressButton.hasAttribute("disabled")).notOk();
+		await t.click(addAddressButton);
+		await t.click(saveButton);
 		await t
 			.expect(
 				Selector('[data-testid="modal__inner"]').withText(translate("CONTACTS.MODAL_CREATE_CONTACT.TITLE"))
@@ -72,10 +75,10 @@ cucumber("@createContact-invalidNameLength", {
 		await t.typeText(nameInput, "1234567890123456789012345678901234567890123");
 	},
 	"Then the name field provides an error": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
+		await t.expect(error.exists).ok();
 	},
 	"And the save button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).ok();
+		await t.expect(saveButton.hasAttribute("disabled")).ok();
 	},
 });
 
@@ -86,18 +89,18 @@ cucumber("@createContact-duplicateName", {
 		await t.typeText(Selector('[data-testid="SelectDropdown__input"]'), "ARK D");
 		await t.pressKey("tab");
 		await t.typeText(addressInput, "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
-		await t.expect(Selector('[data-testid="contact-form__add-address-btn"]').hasAttribute("disabled")).notOk();
-		await t.click(Selector('[data-testid="contact-form__add-address-btn"]'));
+		await t.expect(addAddressButton.hasAttribute("disabled")).notOk();
+		await t.click(addAddressButton);
 	},
 	"Then the name field provides an error": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
-		await t.expect(Selector('[data-testid="Input__error"]').hasAttribute("data-errortext")).ok();
+		await t.expect(error.exists).ok();
+		await t.expect(error.hasAttribute("data-errortext")).ok();
 		await t
-			.expect(Selector('[data-testid="Input__error"]').getAttribute("data-errortext"))
+			.expect(error.getAttribute("data-errortext"))
 			.eql(translate("CONTACTS.VALIDATION.NAME_EXISTS", { name: "Sam" }));
 	},
 	"And the save button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).ok();
+		await t.expect(saveButton.hasAttribute("disabled")).ok();
 	},
 });
 
@@ -108,14 +111,14 @@ cucumber("@createContact-invalidAddress", {
 		await t.typeText(Selector('[data-testid="SelectDropdown__input"]'), "ARK D");
 		await t.pressKey("tab");
 		await t.typeText(addressInput, "AZzmCRP3Us7q4Pbyu3qCr2Dwq8vvuseLKa");
-		await t.expect(Selector('[data-testid="contact-form__add-address-btn"]').hasAttribute("disabled")).notOk();
-		await t.click(Selector('[data-testid="contact-form__add-address-btn"]'));
+		await t.expect(addAddressButton.hasAttribute("disabled")).notOk();
+		await t.click(addAddressButton);
 	},
 	"Then the address field provides an error": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
+		await t.expect(error.exists).ok();
 	},
 	"And the save button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).ok();
+		await t.expect(saveButton.hasAttribute("disabled")).ok();
 	},
 });
 
@@ -125,11 +128,11 @@ cucumber("@createContact-noName", {
 		await t.typeText(Selector('[data-testid="SelectDropdown__input"]'), "ARK D");
 		await t.pressKey("tab");
 		await t.typeText(addressInput, "D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax");
-		await t.expect(Selector('[data-testid="contact-form__add-address-btn"]').hasAttribute("disabled")).notOk();
-		await t.click(Selector('[data-testid="contact-form__add-address-btn"]'));
+		await t.expect(addAddressButton.hasAttribute("disabled")).notOk();
+		await t.click(addAddressButton);
 	},
 	"Then the save button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).ok();
+		await t.expect(saveButton.hasAttribute("disabled")).ok();
 		await t
 			.expect(
 				Selector('[data-testid="modal__inner"]').withText(translate("CONTACTS.MODAL_CREATE_CONTACT.TITLE"))

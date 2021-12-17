@@ -5,6 +5,10 @@ import { itemToString, SelectNetwork } from "./SelectNetwork";
 import { availableNetworksMock } from "@/tests/mocks/networks";
 import { render, screen, waitFor, within } from "@/utils/testing-library";
 
+const ARKMainnet = () => screen.getByTestId("NetworkIcon-ARK-ark.mainnet");
+
+const ariaLabel = "aria-label";
+
 describe("SelectNetwork", () => {
 	it("should render", () => {
 		const { container } = render(<SelectNetwork />);
@@ -42,7 +46,7 @@ describe("SelectNetwork", () => {
 		expect(input).toHaveValue(value);
 
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toBeInTheDocument();
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
+		expect(ARKMainnet()).toBeInTheDocument();
 
 		userEvent.clear(input);
 
@@ -98,7 +102,7 @@ describe("SelectNetwork", () => {
 
 		userEvent.keyboard("{enter}");
 
-		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute(ariaLabel, "ARK");
 	});
 
 	it("should not select non-matching asset after key input and enter", () => {
@@ -147,13 +151,13 @@ describe("SelectNetwork", () => {
 
 		await expect(within(network).findByTestId("NetworkIcon__icon")).resolves.toBeVisible();
 
-		expect(network).toHaveAttribute("aria-label", "ARK");
+		expect(network).toHaveAttribute(ariaLabel, "ARK");
 
 		userEvent.paste(input, "A");
 
 		expect(within(network).queryByTestId("NetworkIcon__icon")).not.toBeInTheDocument();
 
-		expect(screen.getByTestId("SelectNetworkInput__network")).not.toHaveAttribute("aria-label");
+		expect(screen.getByTestId("SelectNetworkInput__network")).not.toHaveAttribute(ariaLabel);
 	});
 
 	it("should select an item by clicking on it", () => {
@@ -164,17 +168,17 @@ describe("SelectNetwork", () => {
 
 		expect(input).toHaveValue("ARK");
 		expect(screen.getByTestId("Input__suggestion")).toBeInTheDocument();
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
+		expect(ARKMainnet()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
+		userEvent.click(ARKMainnet());
 
 		expect(screen.queryByTestId("Input__suggestion")).not.toBeInTheDocument();
-		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute(ariaLabel, "ARK");
 		expect(screen.getByTestId("NetworkIcon-ARK-ark.devnet")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.devnet"));
 
-		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK Devnet");
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute(ariaLabel, "ARK Devnet");
 	});
 
 	it("should toggle selection by clicking on network icon", () => {
@@ -182,19 +186,19 @@ describe("SelectNetwork", () => {
 
 		userEvent.click(screen.getByTestId("SelectNetworkInput__input"));
 
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
+		expect(ARKMainnet()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
+		userEvent.click(ARKMainnet());
 
-		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute("aria-label", "ARK");
+		expect(screen.getByTestId("SelectNetworkInput__network")).toHaveAttribute(ariaLabel, "ARK");
 
 		userEvent.click(screen.getByTestId("SelectNetworkInput__input"));
 
-		expect(screen.getByTestId("NetworkIcon-ARK-ark.mainnet")).toBeInTheDocument();
+		expect(ARKMainnet()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("NetworkIcon-ARK-ark.mainnet"));
+		userEvent.click(ARKMainnet());
 
-		expect(screen.getByTestId("SelectNetworkInput__network")).not.toHaveAttribute("aria-label");
+		expect(screen.getByTestId("SelectNetworkInput__network")).not.toHaveAttribute(ariaLabel);
 	});
 
 	it("should show and hide development networks through toggle", () => {

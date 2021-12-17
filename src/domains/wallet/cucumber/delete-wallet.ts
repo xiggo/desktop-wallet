@@ -3,7 +3,7 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber, getLocation, scrollToTop, visitWelcomeScreen } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { goToWallet } from "../e2e/common";
+import { goToWallet, modal } from "../e2e/common";
 
 const translations = buildTranslations();
 
@@ -22,10 +22,10 @@ const preSteps = {
 cucumber("@deleteWallet", {
 	...preSteps,
 	"And confirms the deletion": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=modal__inner]").exists).ok();
+		await t.expect(modal.exists).ok();
 		await t.expect(Selector("[data-testid=DeleteResource__submit-button]").exists).ok();
 		await t.click(Selector('[data-testid="DeleteResource__submit-button"]'));
-		await t.expect(Selector("[data-testid=modal__inner]").exists).notOk();
+		await t.expect(modal.exists).notOk();
 	},
 	"Then the wallet is deleted from her profile": async (t: TestController) => {
 		await t.expect(getLocation()).contains("/dashboard");
@@ -34,22 +34,22 @@ cucumber("@deleteWallet", {
 cucumber("@deleteWallet-openAndCancel", {
 	...preSteps,
 	"But selects cancel on the modal": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=modal__inner]").exists).ok();
+		await t.expect(modal.exists).ok();
 		await t.expect(Selector("[data-testid=DeleteResource__cancel-button]").exists).ok();
 		await t.click(Selector('[data-testid="DeleteResource__cancel-button"]'));
 	},
 	"Then the modal is no longer displayed": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=modal__inner]").exists).notOk();
+		await t.expect(modal.exists).notOk();
 	},
 });
 cucumber("@deleteWallet-openAndClose", {
 	...preSteps,
 	"But selects close on the modal": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=modal__inner]").exists).ok();
+		await t.expect(modal.exists).ok();
 		await t.expect(Selector('[data-testid="modal__close-btn"]').exists).ok();
 		await t.click(Selector('[data-testid="modal__close-btn"]'));
 	},
 	"Then the modal is no longer displayed": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=modal__inner]").exists).notOk();
+		await t.expect(modal.exists).notOk();
 	},
 });

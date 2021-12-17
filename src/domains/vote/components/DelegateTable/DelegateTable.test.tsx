@@ -15,6 +15,11 @@ let wallet: Contracts.IReadWriteWallet;
 let delegates: Contracts.IReadOnlyWallet[];
 let votes: Contracts.VoteRegistryItem[];
 
+const pressingContinueButton = () => userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+const firstDelegateVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
+const footerUnvotes = () => screen.getByTestId("DelegateTable__footer--unvote");
+const footerVotes = () => screen.getByTestId("DelegateTable__footer--vote");
+
 describe("DelegateTable", () => {
 	beforeAll(() => {
 		useRandomNumberSpy = jest.spyOn(useRandomNumberHook, "useRandomNumber").mockImplementation(() => 1);
@@ -154,16 +159,15 @@ describe("DelegateTable", () => {
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		expect(footerVotes()).toHaveTextContent("1");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
-		expect(selectButton).toHaveTextContent(translations.SELECT);
+		expect(firstDelegateVoteButton()).toHaveTextContent(translations.SELECT);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -183,7 +187,7 @@ describe("DelegateTable", () => {
 		userEvent.click(selectButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		expect(footerVotes()).toHaveTextContent("1");
 
 		userEvent.click(selectButton);
 
@@ -202,16 +206,15 @@ describe("DelegateTable", () => {
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(footerUnvotes()).toHaveTextContent("1");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
-		expect(selectButton).toHaveTextContent(translations.CURRENT);
+		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -235,16 +238,15 @@ describe("DelegateTable", () => {
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(footerUnvotes()).toHaveTextContent("1");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
-		expect(selectButton).toHaveTextContent(translations.CURRENT);
+		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(asFragment()).toMatchSnapshot();
 
 		votesAmountMinimumMock.mockRestore();
@@ -273,7 +275,6 @@ describe("DelegateTable", () => {
 		);
 
 		const { asFragment, rerender } = render(<Table />);
-		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 		const amountField = screen.getAllByTestId("InputCurrency")[0];
 
 		userEvent.clear(amountField);
@@ -282,19 +283,19 @@ describe("DelegateTable", () => {
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+			expect(footerVotes()).toHaveTextContent("1");
 		});
 
-		expect(selectButton).toHaveTextContent(translations.CHANGED);
+		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CHANGED);
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(footerUnvotes()).toHaveTextContent("1");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
-		expect(selectButton).toHaveTextContent(translations.CURRENT);
+		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(amountField).toHaveValue("20");
 
 		rerender(<Table />);
@@ -303,19 +304,19 @@ describe("DelegateTable", () => {
 		userEvent.paste(amountField, "10");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+			expect(footerUnvotes()).toHaveTextContent("1");
 		});
 
-		expect(selectButton).toHaveTextContent(translations.CHANGED);
+		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CHANGED);
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(footerUnvotes()).toHaveTextContent("1");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
-		expect(selectButton).toHaveTextContent(translations.CURRENT);
+		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(amountField).toHaveValue("20");
 		expect(asFragment()).toMatchSnapshot();
 
@@ -334,20 +335,19 @@ describe("DelegateTable", () => {
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectUnvoteButton = screen.getByTestId("DelegateRow__toggle-0");
 		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
 
-		userEvent.click(selectUnvoteButton);
+		userEvent.click(firstDelegateVoteButton());
 
 		userEvent.click(selectVoteButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
-		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		expect(footerUnvotes()).toHaveTextContent("1");
+		expect(footerVotes()).toHaveTextContent("1");
 
-		userEvent.click(selectUnvoteButton);
+		userEvent.click(firstDelegateVoteButton());
 
-		expect(selectUnvoteButton).toHaveTextContent(translations.CURRENT);
+		expect(firstDelegateVoteButton()).toHaveTextContent(translations.CURRENT);
 		expect(selectVoteButton).toHaveTextContent(translations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -363,17 +363,16 @@ describe("DelegateTable", () => {
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectUnvoteButton = screen.getByTestId("DelegateRow__toggle-0");
 		const selectVoteButton = screen.getByTestId("DelegateRow__toggle-1");
 
-		userEvent.click(selectUnvoteButton);
+		userEvent.click(firstDelegateVoteButton());
 		userEvent.click(selectVoteButton);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
-		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		expect(footerUnvotes()).toHaveTextContent("1");
+		expect(footerVotes()).toHaveTextContent("1");
 
-		expect(selectUnvoteButton).toHaveTextContent(translations.UNSELECTED);
+		expect(firstDelegateVoteButton()).toHaveTextContent(translations.UNSELECTED);
 		expect(selectVoteButton).toHaveTextContent(translations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -396,8 +395,8 @@ describe("DelegateTable", () => {
 		userEvent.click(selectButtons[2]);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("2");
-		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(footerVotes()).toHaveTextContent("2");
+		expect(footerUnvotes()).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -421,13 +420,12 @@ describe("DelegateTable", () => {
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+		pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
@@ -463,7 +461,7 @@ describe("DelegateTable", () => {
 		);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(footerUnvotes()).toHaveTextContent("1");
 
 		rerender(
 			<DelegateTable
@@ -478,7 +476,7 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
+		expect(footerUnvotes()).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -505,7 +503,7 @@ describe("DelegateTable", () => {
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+		pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith([], voteDelegates);
@@ -535,7 +533,7 @@ describe("DelegateTable", () => {
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+		pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith(unvoteDelegates, []);
@@ -570,10 +568,10 @@ describe("DelegateTable", () => {
 		);
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateTable__footer--unvote")).toHaveTextContent("1");
-		expect(screen.getByTestId("DelegateTable__footer--vote")).toHaveTextContent("1");
+		expect(footerUnvotes()).toHaveTextContent("1");
+		expect(footerVotes()).toHaveTextContent("1");
 
-		userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+		pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith(unvoteDelegates, voteDelegates);
@@ -600,13 +598,12 @@ describe("DelegateTable", () => {
 				maxVotes={wallet.network().maximumVotesPerTransaction()}
 			/>,
 		);
-		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
 		expect(screen.getByTestId("DelegateTable__footer")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("DelegateTable__continue-button"));
+		pressingContinueButton();
 
 		expect(container).toBeInTheDocument();
 		expect(onContinue).toHaveBeenCalledWith(voteDelegates, []);
@@ -627,7 +624,7 @@ describe("DelegateTable", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
+		expect(firstDelegateVoteButton()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("Pagination__next"));
 
@@ -635,7 +632,7 @@ describe("DelegateTable", () => {
 
 		userEvent.click(screen.getByTestId("Pagination__previous"));
 
-		expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
+		expect(firstDelegateVoteButton()).toBeInTheDocument();
 	});
 
 	it("should not show pagination", () => {

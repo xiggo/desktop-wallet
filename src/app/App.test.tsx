@@ -28,6 +28,14 @@ let passwordProtectedProfile: Contracts.IProfile;
 
 const translations = buildTranslations();
 
+const passwordInput = () => screen.getByTestId("SignIn__input--password");
+
+const ARKMnemonic = {
+	coin: "ARK",
+	mnemonic: MNEMONICS[0],
+	network: "ark.devnet",
+};
+
 describe("App", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -78,13 +86,7 @@ describe("App", () => {
 
 		const selectedProfile = env.profiles().findById(profile.id());
 
-		selectedProfile.wallets().push(
-			await selectedProfile.walletFactory().fromMnemonicWithBIP39({
-				coin: "ARK",
-				mnemonic: MNEMONICS[0],
-				network: "ark.devnet",
-			}),
-		);
+		selectedProfile.wallets().push(await selectedProfile.walletFactory().fromMnemonicWithBIP39(ARKMnemonic));
 
 		selectedProfile.wallets().push(
 			await selectedProfile.walletFactory().fromAddress({
@@ -238,13 +240,13 @@ describe("App", () => {
 		userEvent.click(screen.getAllByTestId("Card")[1]);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SignIn__input--password")).toBeInTheDocument();
+			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.type(screen.getByTestId("SignIn__input--password"), "password");
+		userEvent.type(passwordInput(), "password");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SignIn__input--password")).toHaveValue("password");
+			expect(passwordInput()).toHaveValue("password");
 		});
 
 		const verifyPasswordMock = jest.spyOn(Bcrypt, "verify").mockReturnValue(true);
@@ -282,13 +284,7 @@ describe("App", () => {
 
 		const selectedProfile = env.profiles().findById(profile.id());
 
-		selectedProfile.wallets().push(
-			await selectedProfile.walletFactory().fromMnemonicWithBIP39({
-				coin: "ARK",
-				mnemonic: MNEMONICS[0],
-				network: "ark.devnet",
-			}),
-		);
+		selectedProfile.wallets().push(await selectedProfile.walletFactory().fromMnemonicWithBIP39(ARKMnemonic));
 
 		selectedProfile.wallets().push(
 			await selectedProfile.walletFactory().fromAddress({
@@ -358,13 +354,13 @@ describe("App", () => {
 		userEvent.click(screen.getAllByTestId("Card")[1]);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SignIn__input--password")).toBeInTheDocument();
+			expect(passwordInput()).toBeInTheDocument();
 		});
 
-		userEvent.type(screen.getByTestId("SignIn__input--password"), "password");
+		userEvent.type(passwordInput(), "password");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SignIn__input--password")).toHaveValue("password");
+			expect(passwordInput()).toHaveValue("password");
 		});
 
 		jest.spyOn(toasts, "dismiss").mockResolvedValue(undefined);
@@ -389,11 +385,7 @@ describe("App", () => {
 		const appEnvironment = initializeEnvironment();
 		const profile = appEnvironment.profiles().create("John Doe");
 
-		const wallet = await profile.walletFactory().fromMnemonicWithBIP39({
-			coin: "ARK",
-			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
-		});
+		const wallet = await profile.walletFactory().fromMnemonicWithBIP39(ARKMnemonic);
 
 		profile.wallets().push(wallet);
 

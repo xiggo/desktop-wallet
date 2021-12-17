@@ -4,6 +4,8 @@ import { Contracts } from "@payvo/sdk-profiles";
 
 import { debounceAsync } from "@/utils/debounce";
 
+const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
+
 // @TODO: extract this into the SDK/Profiles
 const addressFromEncryptedPassword = async (wallet: Contracts.IReadWriteWallet, password: string) => {
 	try {
@@ -28,7 +30,7 @@ export const authentication = (t: any) => {
 
 	return {
 		encryptionPassword: (wallet: Contracts.IReadWriteWallet) => ({
-			required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			required: t(requiredFieldMessage, {
 				field: t("TRANSACTION.ENCRYPTION_PASSWORD"),
 			}),
 			validate: async (password: string) => {
@@ -42,7 +44,7 @@ export const authentication = (t: any) => {
 			},
 		}),
 		mnemonic: (wallet: Contracts.IReadWriteWallet) => ({
-			required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			required: t(requiredFieldMessage, {
 				field: t("COMMON.MNEMONIC"),
 			}),
 			validate: {
@@ -62,7 +64,7 @@ export const authentication = (t: any) => {
 			},
 		}),
 		privateKey: (wallet: Contracts.IReadWriteWallet) => ({
-			required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			required: t(requiredFieldMessage, {
 				field: t("COMMON.PRIVATE_KEY"),
 			}),
 			validate: async (privateKey: string) => {
@@ -76,7 +78,7 @@ export const authentication = (t: any) => {
 			},
 		}),
 		secondMnemonic: (coin: Coins.Coin, secondPublicKey: string) => ({
-			required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			required: t(requiredFieldMessage, {
 				field: t("COMMON.SECOND_MNEMONIC"),
 			}),
 			validate: {
@@ -96,7 +98,7 @@ export const authentication = (t: any) => {
 			},
 		}),
 		secondSecret: (coin: Coins.Coin, secondPublicKey: string) => ({
-			required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			required: t(requiredFieldMessage, {
 				field: t("COMMON.SECOND_SECRET"),
 			}),
 			validate: {
@@ -116,7 +118,7 @@ export const authentication = (t: any) => {
 			},
 		}),
 		secret: (wallet: Contracts.IReadWriteWallet) => ({
-			required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			required: t(requiredFieldMessage, {
 				field: t("COMMON.SECRET"),
 			}),
 			validate: async (secret: string) => {
@@ -134,7 +136,7 @@ export const authentication = (t: any) => {
 			},
 		}),
 		wif: (wallet: Contracts.IReadWriteWallet) => ({
-			required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+			required: t(requiredFieldMessage, {
 				field: t("COMMON.WIF"),
 			}),
 			validate: {

@@ -15,6 +15,8 @@ const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 let wallets: Contracts.IReadWriteWallet[];
 let profile: Contracts.IProfile;
 
+const walletAlias = "Sample Wallet";
+
 describe.each([true, false])("SearchWallet uses fiat value = %s", (showConvertedValue) => {
 	beforeAll(() => {
 		history.push(dashboardURL);
@@ -24,7 +26,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		profile = env.profiles().findById(getDefaultProfileId());
 
 		wallets = profile.wallets().values();
-		wallets[0].settings().set(Contracts.WalletSetting.Alias, "Sample Wallet");
+		wallets[0].settings().set(Contracts.WalletSetting.Alias, walletAlias);
 	});
 
 	it("should render", async () => {
@@ -252,7 +254,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		const searchInput = within(screen.getByTestId("HeaderSearchBar__input")).getByTestId("Input");
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
-		userEvent.paste(searchInput, "Sample Wallet");
+		userEvent.paste(searchInput, walletAlias);
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -301,7 +303,7 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 		await waitFor(() => expect(searchInput).toBeInTheDocument());
 
 		// Search by wallet alias
-		userEvent.paste(searchInput, "Sample Wallet");
+		userEvent.paste(searchInput, walletAlias);
 
 		act(() => {
 			jest.advanceTimersByTime(100);
@@ -378,17 +380,17 @@ describe.each([true, false])("SearchWallet uses fiat value = %s", (showConverted
 				description={translations.MODAL_SELECT_ACCOUNT.DESCRIPTION}
 				wallets={wallets}
 				showConvertedValue={showConvertedValue}
-				disableAction={(wallet: Contracts.IReadWriteWallet) => wallet.alias() === "Sample Wallet"}
+				disableAction={(wallet: Contracts.IReadWriteWallet) => wallet.alias() === walletAlias}
 				onSelectWallet={() => void 0}
 			/>,
 		);
 
 		await waitFor(() => expect(screen.getAllByTestId("TableRow")).toHaveLength(2));
 
-		expect(screen.getAllByTestId("TableRow")[0]).toHaveTextContent("Sample Wallet");
+		expect(screen.getAllByTestId("TableRow")[0]).toHaveTextContent(walletAlias);
 		expect(within(screen.getAllByTestId("TableRow")[0]).getByRole("button")).toBeDisabled();
 
-		expect(screen.getAllByTestId("TableRow")[1]).not.toHaveTextContent("Sample Wallet");
+		expect(screen.getAllByTestId("TableRow")[1]).not.toHaveTextContent(walletAlias);
 		expect(within(screen.getAllByTestId("TableRow")[1]).getByRole("button")).not.toBeDisabled();
 	});
 });

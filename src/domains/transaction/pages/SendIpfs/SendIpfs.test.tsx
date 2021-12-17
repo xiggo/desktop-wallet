@@ -52,6 +52,13 @@ let wallet: Contracts.IReadWriteWallet;
 const transport = getDefaultLedgerTransport();
 let getVersionSpy: jest.SpyInstance;
 
+const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
+const sendButton = () => screen.getByTestId("StepNavigation__send-button");
+const formStep = () => screen.findByTestId("SendIpfs__form-step");
+
+const feeWarningContinueID = "FeeWarning__continue-button";
+const reviewStepID = "SendIpfs__review-step";
+
 describe("SendIpfs", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(fixtureProfileId);
@@ -100,7 +107,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -129,7 +136,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendIpfs__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 		expect(container).toHaveTextContent(wallet.network().name());
 		expect(container).toHaveTextContent("D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 		expect(container).toHaveTextContent("QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco");
@@ -199,7 +206,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
@@ -219,24 +226,24 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -260,7 +267,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
@@ -285,16 +292,16 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -313,9 +320,9 @@ describe("SendIpfs", () => {
 		});
 		const transactionMock = createTransactionMock(wallet);
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -359,7 +366,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
@@ -386,14 +393,14 @@ describe("SendIpfs", () => {
 
 		userEvent.keyboard("{enter}");
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		userEvent.keyboard("{enter}");
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -412,10 +419,10 @@ describe("SendIpfs", () => {
 		});
 		const transactionMock = createTransactionMock(wallet);
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		userEvent.keyboard("{enter}");
-		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -446,7 +453,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
@@ -466,19 +473,19 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 	});
 
 	it("should proceed to authentication step by confirming fee warning", async () => {
@@ -499,7 +506,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
@@ -520,17 +527,17 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+		userEvent.click(screen.getByTestId(feeWarningContinueID));
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 	});
@@ -553,7 +560,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
@@ -574,18 +581,18 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		// Auth Step
@@ -596,13 +603,13 @@ describe("SendIpfs", () => {
 		userEvent.paste(mnemonicInput, passphrase);
 		await waitFor(() => expect(mnemonicInput).toHaveValue(passphrase));
 
-		expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled();
+		expect(sendButton()).not.toBeDisabled();
 
 		mnemonicInput.select();
 		userEvent.paste(mnemonicInput, MNEMONICS[0]);
 		await waitFor(() => expect(mnemonicInput).toHaveValue(MNEMONICS[0]));
 
-		expect(screen.getByTestId("StepNavigation__send-button")).toBeDisabled();
+		expect(sendButton()).toBeDisabled();
 
 		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
@@ -631,7 +638,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
@@ -660,7 +667,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
@@ -680,18 +687,18 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -704,7 +711,7 @@ describe("SendIpfs", () => {
 			throw new Error("broadcast error");
 		});
 
-		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
@@ -770,7 +777,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
@@ -790,18 +797,18 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		// Step 4
@@ -817,7 +824,7 @@ describe("SendIpfs", () => {
 
 		const transactionMock = createTransactionMock(wallet);
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -881,7 +888,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
@@ -932,18 +939,18 @@ describe("SendIpfs", () => {
 			}
 		});
 
-		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		// Auto broadcast
@@ -985,7 +992,7 @@ describe("SendIpfs", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("SendIpfs__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		const networkLabel = `${wallet.network().coin()} ${wallet.network().name()}`;
 		await waitFor(() => expect(screen.getByTestId("TransactionNetwork")).toHaveTextContent(networkLabel));
@@ -1007,18 +1014,18 @@ describe("SendIpfs", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("SendIpfs__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		if (!profile.settings().get(Contracts.ProfileSetting.DoNotShowFeeWarning)) {
-			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(feeWarningContinueID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("FeeWarning__continue-button"));
+			userEvent.click(screen.getByTestId(feeWarningContinueID));
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -1040,9 +1047,9 @@ describe("SendIpfs", () => {
 
 		const transactionMock = createTransactionMock(encryptedWallet);
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 

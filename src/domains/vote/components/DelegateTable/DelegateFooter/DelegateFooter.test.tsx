@@ -14,6 +14,8 @@ let delegate: Contracts.IReadOnlyWallet;
 
 const translations = buildTranslations();
 
+const continueButton = () => screen.getByTestId("DelegateTable__continue-button");
+
 describe("DelegateFooter", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
@@ -120,7 +122,7 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__continue-button")).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 
 		userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
@@ -136,7 +138,7 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
 		rerender(
 			<DelegateFooter
@@ -148,7 +150,7 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
 		userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
@@ -176,7 +178,7 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__continue-button")).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 
 		userEvent.hover(screen.getByTestId("DelegateTable__continue--wrapper"));
 
@@ -197,7 +199,7 @@ describe("DelegateFooter", () => {
 			/>,
 		);
 
-		expect(screen.getByTestId("DelegateTable__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
 		votesAmountMinimumMock.mockRestore();
 	});

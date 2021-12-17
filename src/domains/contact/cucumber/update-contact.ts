@@ -7,6 +7,7 @@ import { goToContacts } from "../e2e/common";
 const translations = buildTranslations();
 const nameInput = Selector('[data-testid="contact-form__name-input"]');
 const addressInput = Selector('[data-testid="contact-form__address-input"]');
+const saveButton = Selector('[data-testid="contact-form__save-btn"]');
 
 const preSteps = {
 	"Given Alice is on the contacts page": async (t: TestController) => {
@@ -47,9 +48,9 @@ cucumber("@updateContact", {
 			.expect(Selector('[data-testid="ContactList"] tbody > tr:first-child td').withText("Anne Doe").exists)
 			.notOk();
 		await t.typeText(nameInput, "Anne Doe", { replace: true });
-		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).notOk();
-		await t.hover(Selector('[data-testid="contact-form__save-btn"]'));
-		await t.click(Selector('[data-testid="contact-form__save-btn"]'));
+		await t.expect(saveButton.hasAttribute("disabled")).notOk();
+		await t.hover(saveButton);
+		await t.click(saveButton);
 
 		await updateContactModalNotExists(t);
 	},
@@ -96,7 +97,7 @@ cucumber("@updateContact-invalidAddress", {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
 	},
 	"And the save button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).ok();
+		await t.expect(saveButton.hasAttribute("disabled")).ok();
 	},
 });
 cucumber("@updateContact-duplicateName", {
@@ -108,7 +109,7 @@ cucumber("@updateContact-duplicateName", {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
 	},
 	"And the save button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).ok();
+		await t.expect(saveButton.hasAttribute("disabled")).ok();
 	},
 });
 cucumber("@updateContact-noName", {
@@ -120,6 +121,6 @@ cucumber("@updateContact-noName", {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
 	},
 	"And the save button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="contact-form__save-btn"]').hasAttribute("disabled")).ok();
+		await t.expect(saveButton.hasAttribute("disabled")).ok();
 	},
 });

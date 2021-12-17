@@ -13,6 +13,9 @@ import walletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/D61mfSggzbv
 import coldWalletFixture from "@/tests/fixtures/coins/ark/devnet/wallets/DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P.json";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
+const ARKTestURL = "https://ark-test.payvo.com";
+const walletsURLPath = "/api/wallets";
+
 describe("Add Participant", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -30,10 +33,7 @@ describe("Add Participant", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock("https://ark-test.payvo.com")
-			.get("/api/wallets")
-			.query({ address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba" })
-			.reply(404);
+		nock(ARKTestURL).get(walletsURLPath).query({ address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyiba" }).reply(404);
 
 		const { asFragment } = render(
 			<Route path="/profiles/:profileId">
@@ -67,8 +67,8 @@ describe("Add Participant", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock("https://ark-test.payvo.com")
-			.get("/api/wallets")
+		nock(ARKTestURL)
+			.get(walletsURLPath)
 			.query({ address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P" })
 			.reply(200, {
 				data: [coldWalletFixture.data],
@@ -148,8 +148,8 @@ describe("Add Participant", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock("https://ark-test.payvo.com")
-			.get("/api/wallets")
+		nock(ARKTestURL)
+			.get(walletsURLPath)
 			.query({ address: "DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq20" })
 			.reply(200, {
 				data: [],
@@ -217,8 +217,8 @@ describe("Add Participant", () => {
 	});
 
 	it("should work with a remote wallet", async () => {
-		const scope = nock("https://ark-test.payvo.com")
-			.get("/api/wallets")
+		const scope = nock(ARKTestURL)
+			.get(walletsURLPath)
 			.query((parameters) => !!parameters.address)
 			.reply(200, {
 				data: [walletFixture.data],
@@ -270,8 +270,8 @@ describe("Add Participant", () => {
 	});
 
 	it("should clear participant field when address is added", async () => {
-		nock("https://ark-test.payvo.com")
-			.get("/api/wallets")
+		nock(ARKTestURL)
+			.get(walletsURLPath)
 			.query((parameters) => !!parameters.address)
 			.reply(200, {
 				data: [walletFixture.data],

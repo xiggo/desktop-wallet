@@ -6,6 +6,8 @@ import { PluginControllerRepository } from "./plugin-controller-repository";
 import { PluginServiceRepository } from "./plugin-service-repository";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
+const pluginName = "plugin-test";
+
 describe("Plugin Controller subject", () => {
 	let profile: Contracts.IProfile;
 	let subject: PluginControllerRepository;
@@ -21,13 +23,13 @@ describe("Plugin Controller subject", () => {
 	});
 
 	it("should return all", () => {
-		subject.push(new PluginController({ name: "plugin-test" }, () => void 0));
+		subject.push(new PluginController({ name: pluginName }, () => void 0));
 
 		expect(subject.all()).toHaveLength(1);
 	});
 
 	it("should remove by id", () => {
-		const plugin = new PluginController({ name: "plugin-test" }, () => void 0);
+		const plugin = new PluginController({ name: pluginName }, () => void 0);
 		subject.push(plugin);
 
 		expect(subject.all()).toHaveLength(1);
@@ -51,7 +53,7 @@ describe("Plugin Controller subject", () => {
 	});
 
 	it("should check if plugin has filters", () => {
-		const plugin = new PluginController({ name: "plugin-test" }, () => void 0);
+		const plugin = new PluginController({ name: pluginName }, () => void 0);
 		plugin.hooks().addFilter("test", "plus", () => 1);
 		subject.push(plugin);
 
@@ -59,7 +61,7 @@ describe("Plugin Controller subject", () => {
 	});
 
 	it("should not run all enabled if it is already running", () => {
-		const plugin = new PluginController({ name: "plugin-test" }, () => void 0);
+		const plugin = new PluginController({ name: pluginName }, () => void 0);
 		subject.push(plugin);
 		subject.runAllEnabled(profile);
 
@@ -73,7 +75,7 @@ describe("Plugin Controller subject", () => {
 	});
 
 	it("should dispose", () => {
-		const plugin = new PluginController({ name: "plugin-test" }, () => void 0);
+		const plugin = new PluginController({ name: pluginName }, () => void 0);
 
 		subject.push(plugin);
 

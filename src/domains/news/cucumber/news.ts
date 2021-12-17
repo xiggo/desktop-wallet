@@ -8,6 +8,9 @@ const itemsPerPage = 15;
 const translations = buildTranslations();
 const searchBarButton = Selector('[data-testid="HeaderSearchBar"] button');
 const queryInput = Selector('[data-testid="HeaderSearchBar__input"] input');
+const newsCard = Selector('[data-testid="NewsCard"]');
+
+const filteredNews = "news/filtered";
 
 const preSteps = {
 	"Given Alice is on the news page": async (t: TestController) => {
@@ -20,8 +23,8 @@ cucumber(
 	{
 		...preSteps,
 		"Then the news feed should be displayed": async (t: TestController) => {
-			await t.expect(Selector('[data-testid="NewsCard"]').exists).ok();
-			await t.expect(Selector('[data-testid="NewsCard"]').count).eql(itemsPerPage);
+			await t.expect(newsCard.exists).ok();
+			await t.expect(newsCard.count).eql(itemsPerPage);
 		},
 	},
 	[mockRequest("https://news.payvo.com/api?coins=ARK&page=1", "news/page-1")],
@@ -36,16 +39,16 @@ cucumber(
 			await t.click(Selector('[data-testid="Pagination__next"]'));
 		},
 		"Then the next page of articles are displayed": async (t: TestController) => {
-			await t.expect(Selector('[data-testid="NewsCard"]').exists).ok();
-			await t.expect(Selector('[data-testid="NewsCard"]').count).eql(itemsPerPage);
+			await t.expect(newsCard.exists).ok();
+			await t.expect(newsCard.count).eql(itemsPerPage);
 		},
 		"When she uses pagination to view the previous page of news": async (t: TestController) => {
 			await t.hover(Selector('[data-testid="Pagination__previous"]'));
 			await t.click(Selector('[data-testid="Pagination__previous"]'));
 		},
 		"Then the previous page of articles are displayed": async (t: TestController) => {
-			await t.expect(Selector('[data-testid="NewsCard"]').exists).ok();
-			await t.expect(Selector('[data-testid="NewsCard"]').count).eql(itemsPerPage);
+			await t.expect(newsCard.exists).ok();
+			await t.expect(newsCard.count).eql(itemsPerPage);
 		},
 	},
 	[
@@ -68,7 +71,7 @@ cucumber(
 			await t.typeText(queryInput, query, { replace: true });
 		},
 		"Then the results should be filtered by category": async (t: TestController) => {
-			await t.expect(Selector('[data-testid="NewsCard"]').exists).ok();
+			await t.expect(newsCard.exists).ok();
 			await t
 				.expect(
 					Selector('[data-testid="NewsCard__category"]').withText(translations.NEWS.CATEGORIES.TECHNICAL)
@@ -92,35 +95,35 @@ cucumber(
 		mockRequest("https://news.payvo.com/api?coins=ARK&page=2", "news/page-2"),
 		mockRequest(
 			"https://news.payvo.com/api?coins=ARK%2CETH&page=1&categories=Technical&query=major+league+hacking",
-			"news/filtered",
+			filteredNews,
 		),
 		mockRequest(
 			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency",
-			"news/filtered",
+			filteredNews,
 		),
 		mockRequest(
 			"https://news.payvo.com/api?coins=ARK&page=1&categories=Community%2CEmergency%2CTechnical",
-			"news/filtered",
+			filteredNews,
 		),
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Emergency%2CTechnical", "news/filtered"),
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CEmergency", "news/filtered"),
-		mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Technical", "news/filtered"),
+		mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Emergency%2CTechnical", filteredNews),
+		mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CEmergency", filteredNews),
+		mockRequest("https://news.payvo.com/api?coins=ARK&page=1&categories=Technical", filteredNews),
 		mockRequest(
 			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical&query=major+league+hacking",
-			"news/filtered",
+			filteredNews,
 		),
-		mockRequest("https://news.payvo.com/api?coins=ARK%2CETH&page=1&categories=Technical", "news/filtered"),
+		mockRequest("https://news.payvo.com/api?coins=ARK%2CETH&page=1&categories=Technical", filteredNews),
 		mockRequest(
 			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CCommunity%2CEmergency&query=major+league+hacking",
-			"news/filtered",
+			filteredNews,
 		),
 		mockRequest(
 			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical%2CEmergency&query=major+league+hacking",
-			"news/filtered",
+			filteredNews,
 		),
 		mockRequest(
 			"https://news.payvo.com/api?coins=ARK&page=1&categories=Technical&query=major+league+hackin",
-			"news/filtered",
+			filteredNews,
 		),
 	],
 );

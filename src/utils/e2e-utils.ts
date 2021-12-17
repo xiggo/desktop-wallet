@@ -31,6 +31,10 @@ const pluginNames: string[] = ["@dated/delegate-calculator-wallet-plugin", "@pay
 
 const knownWallets: any[] = [];
 
+const transactionsFixture = "coins/ark/devnet/transactions";
+const delegatesFixture = "coins/ark/devnet/delegates";
+const imageFixture = "/assets/background.png";
+
 const walletMocks = () => {
 	const addresses = [
 		"D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax",
@@ -230,12 +234,12 @@ export const requestMocks = {
 	],
 	delegates: [
 		// devnet
-		mockRequest("https://ark-test.payvo.com/api/delegates", "coins/ark/devnet/delegates"),
-		mockRequest("https://ark-test.payvo.com/api/delegates?page=1", "coins/ark/devnet/delegates"),
-		mockRequest("https://ark-test.payvo.com/api/delegates?page=2", "coins/ark/devnet/delegates"),
-		mockRequest("https://ark-test.payvo.com/api/delegates?page=3", "coins/ark/devnet/delegates"),
-		mockRequest("https://ark-test.payvo.com/api/delegates?page=4", "coins/ark/devnet/delegates"),
-		mockRequest("https://ark-test.payvo.com/api/delegates?page=5", "coins/ark/devnet/delegates"),
+		mockRequest("https://ark-test.payvo.com/api/delegates", delegatesFixture),
+		mockRequest("https://ark-test.payvo.com/api/delegates?page=1", delegatesFixture),
+		mockRequest("https://ark-test.payvo.com/api/delegates?page=2", delegatesFixture),
+		mockRequest("https://ark-test.payvo.com/api/delegates?page=3", delegatesFixture),
+		mockRequest("https://ark-test.payvo.com/api/delegates?page=4", delegatesFixture),
+		mockRequest("https://ark-test.payvo.com/api/delegates?page=5", delegatesFixture),
 
 		// mainnet
 		mockRequest("https://ark-live.payvo.com/api/delegates", "coins/ark/mainnet/delegates"),
@@ -252,9 +256,9 @@ export const requestMocks = {
 			"exchange/cryptocompare-eth",
 		),
 		mockRequest(/https:\/\/min-api\.cryptocompare\.com\/data\/histoday/, "exchange/cryptocompare-historical"),
-		mockRequest(/thumbnail.png$/, () => "/assets/background.png"),
-		mockRequest(/dark.png$/, () => "/assets/background.png"),
-		mockRequest(/light.png$/, () => "/assets/background.png"),
+		mockRequest(/thumbnail.png$/, () => imageFixture),
+		mockRequest(/dark.png$/, () => imageFixture),
+		mockRequest(/light.png$/, () => imageFixture),
 		mockRequest("https://exchanges.payvo.com/api", "exchange/exchanges"),
 	],
 	multisignature: [...multisignatureMocks()],
@@ -270,8 +274,8 @@ export const requestMocks = {
 			"plugins/whitelist",
 		),
 		mockRequest(/https:\/\/registry\.npmjs\.com\/-\/v1\/search.*from=0.*/, "plugins/registry-response"),
-		mockRequest(/logo.png$/, () => "/assets/background.png"),
-		mockRequest(/master\/images\/preview-\d.png$/, () => "/assets/background.png"),
+		mockRequest(/logo.png$/, () => imageFixture),
+		mockRequest(/master\/images\/preview-\d.png$/, () => imageFixture),
 		...pluginNames.map((pluginName) =>
 			mockRequest(`https://registry.npmjs.com/${pluginName}`, `plugins/registry/${pluginName}`),
 		),
@@ -286,27 +290,27 @@ export const requestMocks = {
 	transactions: [
 		// devnet
 		mockRequest("https://ark-test.payvo.com/api/transactions/fees", "coins/ark/devnet/transaction-fees"),
-		mockRequest("https://ark-test.payvo.com/api/transactions?limit=10", "coins/ark/devnet/transactions"),
-		mockRequest("https://ark-test.payvo.com/api/transactions?limit=20", "coins/ark/devnet/transactions"),
+		mockRequest("https://ark-test.payvo.com/api/transactions?limit=10", transactionsFixture),
+		mockRequest("https://ark-test.payvo.com/api/transactions?limit=20", transactionsFixture),
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=2&limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=20&senderId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?limit=30&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=2&limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
@@ -320,60 +324,60 @@ export const requestMocks = {
 
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DC8ghUdhS8w8d11K8cFQ37YsLBFhL3Dq2P",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&recipientId=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=20&senderId=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?limit=30&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr%2CD5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb%2CDH4Xyyt5zPqM9KwUkevUZPbzM3KjjW8fp5",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 		// unconfirmed transactions list before sending single or multiPayment transaction
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=20&senderId=DDA5nM7KEqLeTtQKv5qGgcnc6dpNBKJNTS",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 
 		mockRequest(
 			/https:\/\/ark-test\.payvo\.com\/api\/transactions\?page=1&limit=20&senderId=(.*?)/,
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=D5sRKWckH4rE1hQ9eeMeHAepgyC3cvJtwb",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DJXg9Vqg2tofRNrMAvMzhZTkegu8QyyNQq",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 
 		mockRequest(
 			"https://ark-test.payvo.com/api/transactions?page=1&limit=10&orderBy=timestamp&address=DABCrsfEqhtdzmBrE2AU5NNmdUFCGXKEkr",
-			"coins/ark/devnet/transactions",
+			transactionsFixture,
 		),
 
 		mockRequest(

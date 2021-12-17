@@ -4,6 +4,8 @@ import React from "react";
 import { Tab, TabList, TabPanel, Tabs } from "./Tabs";
 import { render, screen } from "@/utils/testing-library";
 
+const activePanel = () => screen.getByTestId("tab-pabel__active-panel");
+
 describe("Tabs", () => {
 	it("should render", () => {
 		const { container, asFragment } = render(
@@ -86,7 +88,7 @@ describe("Tabs", () => {
 		userEvent.click(screen.getByTestId("tabs__tab-button-1"));
 
 		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
+		expect(activePanel()).toHaveTextContent("1");
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -121,7 +123,7 @@ describe("Tabs", () => {
 
 		userEvent.keyboard("{enter}");
 
-		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("2");
+		expect(activePanel()).toHaveTextContent("2");
 
 		expect(firstTab).toHaveAttribute("aria-selected", "false");
 		expect(secondTab).toHaveAttribute("aria-selected", "true");
@@ -134,7 +136,7 @@ describe("Tabs", () => {
 
 		userEvent.keyboard("{space}");
 
-		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
+		expect(activePanel()).toHaveTextContent("1");
 
 		// go left to second tab
 		userEvent.keyboard("{arrowleft}");
@@ -144,7 +146,7 @@ describe("Tabs", () => {
 
 		userEvent.keyboard("{enter}");
 
-		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("2");
+		expect(activePanel()).toHaveTextContent("2");
 
 		// go left to first tab
 		userEvent.keyboard("{arrowleft}");
@@ -154,7 +156,7 @@ describe("Tabs", () => {
 
 		userEvent.keyboard("{space}");
 
-		expect(screen.getByTestId("tab-pabel__active-panel")).toHaveTextContent("1");
+		expect(activePanel()).toHaveTextContent("1");
 
 		// tab away
 		userEvent.tab();

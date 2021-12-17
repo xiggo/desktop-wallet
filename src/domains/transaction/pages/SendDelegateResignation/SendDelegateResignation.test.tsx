@@ -57,6 +57,12 @@ const transactionResponse = {
 const createTransactionMock = (wallet: Contracts.IReadWriteWallet) =>
 	jest.spyOn(wallet.transaction(), "transaction").mockReturnValue(transactionResponse as any);
 
+const secondMnemonic = () => screen.getByTestId("AuthenticationStep__second-mnemonic");
+const reviewStep = () => screen.findByTestId("SendDelegateResignation__review-step");
+const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
+const formStep = () => screen.findByTestId("SendDelegateResignation__form-step");
+const sendButton = () => screen.getByTestId("StepNavigation__send-button");
+
 describe("SendDelegateResignation", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -87,7 +93,7 @@ describe("SendDelegateResignation", () => {
 		it("should render 1st step", async () => {
 			const { asFragment } = renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -95,7 +101,7 @@ describe("SendDelegateResignation", () => {
 		it("should change fee", async () => {
 			const { asFragment } = renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
 			// Fee (simple)
 			expect(screen.getAllByRole("radio")[1]).toBeChecked();
@@ -119,11 +125,11 @@ describe("SendDelegateResignation", () => {
 		it("should render 2nd step", async () => {
 			const { asFragment } = renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
 			expect(asFragment()).toMatchSnapshot();
 		});
@@ -133,7 +139,7 @@ describe("SendDelegateResignation", () => {
 
 			renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
 			userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
@@ -145,27 +151,27 @@ describe("SendDelegateResignation", () => {
 		it("should navigate between 1st and 2nd step", async () => {
 			renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
 			userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 		});
 
 		it("should render 3rd step", async () => {
 			const { asFragment } = renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -175,7 +181,7 @@ describe("SendDelegateResignation", () => {
 		it("should return to form step by cancelling fee warning", async () => {
 			renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
 			// Fee
 			userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
@@ -187,25 +193,25 @@ describe("SendDelegateResignation", () => {
 
 			await waitFor(() => expect(inputElement).toHaveValue("30"));
 
-			await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+			await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("FeeWarning__cancel-button")).resolves.toBeVisible();
 
 			userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 		});
 
 		it("should proceed to authentication step by confirming fee warning", async () => {
 			renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
 			// Fee
 			userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
@@ -217,13 +223,13 @@ describe("SendDelegateResignation", () => {
 
 			await waitFor(() => expect(inputElement).toHaveValue("30"));
 
-			await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+			await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("FeeWarning__continue-button")).resolves.toBeVisible();
 
@@ -239,26 +245,24 @@ describe("SendDelegateResignation", () => {
 
 			const { asFragment } = renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[2]);
-			await waitFor(() =>
-				expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[2]),
-			);
+			userEvent.paste(secondMnemonic(), MNEMONICS[2]);
+			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[2]));
 
-			expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveAttribute("aria-invalid");
-			expect(screen.getByTestId("StepNavigation__send-button")).toBeDisabled();
+			expect(secondMnemonic()).toHaveAttribute("aria-invalid");
+			expect(sendButton()).toBeDisabled();
 
 			expect(asFragment()).toMatchSnapshot();
 
@@ -276,25 +280,23 @@ describe("SendDelegateResignation", () => {
 
 			const { asFragment } = renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[1]);
-			await waitFor(() =>
-				expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]),
-			);
+			userEvent.paste(secondMnemonic(), MNEMONICS[1]);
+			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
 
-			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+			userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
@@ -331,25 +333,23 @@ describe("SendDelegateResignation", () => {
 
 			const { asFragment } = renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[1]);
-			await waitFor(() =>
-				expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]),
-			);
+			userEvent.paste(secondMnemonic(), MNEMONICS[1]);
+			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
 
-			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+			userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -378,11 +378,11 @@ describe("SendDelegateResignation", () => {
 
 			const { asFragment } = renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
 			userEvent.keyboard("{enter}");
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
 			userEvent.keyboard("{enter}");
 
@@ -391,13 +391,11 @@ describe("SendDelegateResignation", () => {
 			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[1]);
-			await waitFor(() =>
-				expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]),
-			);
+			userEvent.paste(secondMnemonic(), MNEMONICS[1]);
+			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
 
 			userEvent.keyboard("{enter}");
-			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+			userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -426,25 +424,23 @@ describe("SendDelegateResignation", () => {
 
 			renderPage();
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 			userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 			await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-			userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[1]);
-			await waitFor(() =>
-				expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toHaveValue(MNEMONICS[1]),
-			);
+			userEvent.paste(secondMnemonic(), MNEMONICS[1]);
+			await waitFor(() => expect(secondMnemonic()).toHaveValue(MNEMONICS[1]));
 
-			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+			userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -492,13 +488,13 @@ describe("SendDelegateResignation", () => {
 				},
 			);
 
-			await expect(screen.findByTestId("SendDelegateResignation__form-step")).resolves.toBeVisible();
+			await expect(formStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
-			await expect(screen.findByTestId("SendDelegateResignation__review-step")).resolves.toBeVisible();
+			await expect(reviewStep()).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 
 			await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -507,9 +503,9 @@ describe("SendDelegateResignation", () => {
 				expect(screen.getByTestId("AuthenticationStep__encryption-password")).toHaveValue("password"),
 			);
 
-			await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+			await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
-			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+			userEvent.click(sendButton());
 
 			await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 

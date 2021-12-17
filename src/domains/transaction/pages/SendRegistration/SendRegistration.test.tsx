@@ -121,6 +121,14 @@ const createMultiSignatureRegistrationMock = (wallet: Contracts.IReadWriteWallet
 		usesMultiSignature: () => false,
 	} as any);
 
+const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
+const formStep = () => screen.findByTestId("DelegateRegistrationForm__form-step");
+const sendButton = () => screen.getByTestId("StepNavigation__send-button");
+
+const reviewStepID = "DelegateRegistrationForm__review-step";
+const multisignatureTitle = "Multisignature Registration";
+const withKeyboard = "with keyboard";
+
 describe("Registration", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -178,7 +186,7 @@ describe("Registration", () => {
 	it.each([
 		["delegateRegistration", "Register Delegate"],
 		["secondSignature", "Register Second Signature"],
-		["multiSignature", "Multisignature Registration"],
+		["multiSignature", multisignatureTitle],
 	])("should handle registrationType param (%s)", async (type, label) => {
 		const registrationPath = `/profiles/${getDefaultProfileId()}/wallets/${secondWallet.id()}/send-registration/${type}`;
 		history.push(registrationPath);
@@ -200,11 +208,11 @@ describe("Registration", () => {
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(label));
 	});
 
-	it.each(["with keyboard", "without keyboard"])("should register delegate %s", async (inputMethod) => {
+	it.each([withKeyboard, "without keyboard"])("should register delegate %s", async (inputMethod) => {
 		const { asFragment, history } = await renderPage(wallet);
 
 		// Step 1
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("test_delegate"));
@@ -221,36 +229,36 @@ describe("Registration", () => {
 		// remove focus from fee button
 		userEvent.click(document.body);
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		if (inputMethod === "with keyboard") {
+		if (inputMethod === withKeyboard) {
 			userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 		}
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		// remove focus from back button
 		userEvent.click(document.body);
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).toBeEnabled());
-		if (inputMethod === "with keyboard") {
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		if (inputMethod === withKeyboard) {
 			userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 		}
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		if (inputMethod === "with keyboard") {
+		if (inputMethod === withKeyboard) {
 			userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 		}
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -259,7 +267,7 @@ describe("Registration", () => {
 		userEvent.paste(passwordInput, passphrase);
 		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).toBeEnabled());
+		await waitFor(() => expect(sendButton()).toBeEnabled());
 
 		const signMock = jest
 			.spyOn(wallet.transaction(), "signDelegateRegistration")
@@ -271,10 +279,10 @@ describe("Registration", () => {
 		});
 		const transactionMock = createDelegateRegistrationMock(wallet);
 
-		if (inputMethod === "with keyboard") {
+		if (inputMethod === withKeyboard) {
 			userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+			userEvent.click(sendButton());
 		}
 
 		await waitFor(() => {
@@ -322,11 +330,11 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).not.toHaveValue("0"));
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__backup-step")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__verification-step")).resolves.toBeVisible();
 
@@ -342,20 +350,20 @@ describe("Registration", () => {
 			}
 		}
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SecondSignatureRegistrationForm__review-step")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).toBeEnabled());
+		await waitFor(() => expect(sendButton()).toBeEnabled());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -371,7 +379,7 @@ describe("Registration", () => {
 
 		const transactionMock = createSecondSignatureRegistrationMock(wallet);
 
-		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(sendButton());
 
 		await waitFor(() =>
 			expect(signMock).toHaveBeenCalledWith({
@@ -410,24 +418,22 @@ describe("Registration", () => {
 
 		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"),
-		);
+		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
 
 		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
 		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		// Step 2
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		// Review step
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Authentication step
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -436,7 +442,7 @@ describe("Registration", () => {
 		userEvent.paste(mnemonic, passphrase);
 		await waitFor(() => expect(screen.getByTestId("AuthenticationStep__mnemonic")).toHaveValue(passphrase));
 
-		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("TransactionSuccessful")).resolves.toBeVisible();
 
@@ -484,23 +490,21 @@ describe("Registration", () => {
 
 		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"),
-		);
+		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
 
 		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
 		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		// Step 2
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent("Ledger Wallet"));
 
@@ -554,23 +558,21 @@ describe("Registration", () => {
 
 		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"),
-		);
+		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
 
 		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
 		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		// Step 2
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("LedgerDeviceError")).resolves.toBeVisible();
 
@@ -622,23 +624,21 @@ describe("Registration", () => {
 
 		await expect(screen.findByTestId("Registration__form")).resolves.toBeVisible();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("header__title")).toHaveTextContent("Multisignature Registration"),
-		);
+		await waitFor(() => expect(screen.getByTestId("header__title")).toHaveTextContent(multisignatureTitle));
 
 		userEvent.paste(screen.getByTestId("SelectDropdown__input"), wallet2.address());
 
 		userEvent.click(screen.getByText(transactionTranslations.MULTISIGNATURE.ADD_PARTICIPANT));
 
 		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		// Step 2
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		const mockDerivationPath = jest.spyOn(wallet.data(), "get").mockReturnValue("m/44'/1'/1'/0/0");
 		// Skip Authentication Step
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("LedgerDeviceError")).resolves.toBeVisible();
 
@@ -662,7 +662,7 @@ describe("Registration", () => {
 	it("should set fee", async () => {
 		await renderPage(wallet);
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		userEvent.click(
 			within(screen.getByTestId("InputFee")).getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED),
@@ -679,7 +679,7 @@ describe("Registration", () => {
 	it("should return to form step by cancelling fee warning", async () => {
 		await renderPage(wallet);
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
 
@@ -697,26 +697,26 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("DelegateRegistrationForm__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// Fee warning
 		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 	});
 
 	it("should proceed to authentication step by confirming fee warning", async () => {
 		await renderPage(wallet);
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
 
@@ -734,13 +734,13 @@ describe("Registration", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("DelegateRegistrationForm__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// Fee warning
 		expect(screen.getByTestId("FeeWarning__continue-button")).toBeInTheDocument();
@@ -759,18 +759,18 @@ describe("Registration", () => {
 
 		const secondPublicKeyMock = jest.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("Input__username"), "username");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("username"));
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -783,7 +783,7 @@ describe("Registration", () => {
 		userEvent.paste(secondMnemonic, MNEMONICS[2]);
 		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[2]));
 
-		expect(screen.getByTestId("StepNavigation__send-button")).toBeDisabled();
+		expect(sendButton()).toBeDisabled();
 
 		await waitFor(() => expect(screen.getByTestId("Input__error")).toBeVisible());
 
@@ -800,16 +800,16 @@ describe("Registration", () => {
 	it("should prevent going to the next step with enter on the success step", async () => {
 		await renderPage(wallet);
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("Input__username"), "username");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("username"));
 
 		userEvent.keyboard("{enter}");
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		userEvent.keyboard("{enter}");
 
@@ -862,7 +862,7 @@ describe("Registration", () => {
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
 
@@ -880,18 +880,18 @@ describe("Registration", () => {
 
 		const secondPublicKeyMock = jest.spyOn(secondWallet, "secondPublicKey").mockReturnValue(publicKey);
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(formStep()).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("Input__username"), "delegate");
 		await waitFor(() => expect(screen.getByTestId("Input__username")).toHaveValue("delegate"));
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
 
@@ -904,7 +904,7 @@ describe("Registration", () => {
 		userEvent.paste(secondMnemonic, MNEMONICS[1]);
 		await waitFor(() => expect(secondMnemonic).toHaveValue(MNEMONICS[1]));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		const broadcastMock = jest.spyOn(secondWallet.transaction(), "broadcast").mockImplementation(() => {
 			throw new Error("broadcast error");
@@ -912,7 +912,7 @@ describe("Registration", () => {
 
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
-		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 

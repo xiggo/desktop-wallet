@@ -11,6 +11,8 @@ import { env, getDefaultProfileId, render, screen } from "@/utils/testing-librar
 let wallet: Contracts.IReadWriteWallet;
 let delegate: Contracts.IReadOnlyWallet;
 
+const firstDelegateVoteButton = () => screen.getByTestId("DelegateRow__toggle-0");
+
 describe("DelegateRow", () => {
 	beforeAll(() => {
 		const profile = env.profiles().findById(getDefaultProfileId());
@@ -69,9 +71,8 @@ describe("DelegateRow", () => {
 				</tbody>
 			</table>,
 		);
-		const selectButton = screen.getByTestId("DelegateRow__toggle-0");
 
-		userEvent.click(selectButton);
+		userEvent.click(firstDelegateVoteButton());
 
 		expect(container).toBeInTheDocument();
 		expect(toggleVotesSelected).toHaveBeenCalledWith(delegate.address());
@@ -105,7 +106,7 @@ describe("DelegateRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.SELECTED);
+		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.SELECTED);
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -179,7 +180,7 @@ describe("DelegateRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.CURRENT);
+		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.CURRENT);
 		expect(screen.getByTestId("DelegateRow__toggle-1")).toHaveTextContent(commonTranslations.SELECT);
 		expect(screen.getByTestId("DelegateRow__toggle-2")).toBeDisabled();
 
@@ -218,7 +219,7 @@ describe("DelegateRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.UNSELECTED);
+		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.UNSELECTED);
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -286,7 +287,7 @@ describe("DelegateRow", () => {
 		);
 
 		expect(container).toBeInTheDocument();
-		expect(screen.getByTestId("DelegateRow__toggle-0")).toHaveTextContent(commonTranslations.CHANGED);
+		expect(firstDelegateVoteButton()).toHaveTextContent(commonTranslations.CHANGED);
 
 		expect(asFragment()).toMatchSnapshot();
 

@@ -7,18 +7,20 @@ import { render, screen } from "@/utils/testing-library";
 
 const history = createMemoryHistory();
 
+const leftIcon = "chevron-left-small.svg";
+
 describe("BackButton", () => {
 	it("should render", () => {
 		const { container } = render(<BackButton />, { history });
 
-		expect(container).toHaveTextContent("chevron-left-small.svg");
+		expect(container).toHaveTextContent(leftIcon);
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render when disabled", () => {
 		const { container } = render(<BackButton disabled />, { history });
 
-		expect(container).toHaveTextContent("chevron-left-small.svg");
+		expect(container).toHaveTextContent(leftIcon);
 		expect(container).toMatchSnapshot();
 	});
 
@@ -31,7 +33,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).toHaveBeenCalledWith(-1);
 
-		expect(container).toHaveTextContent("chevron-left-small.svg");
+		expect(container).toHaveTextContent(leftIcon);
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();
@@ -46,7 +48,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).toHaveBeenCalledWith("new-url");
 
-		expect(container).toHaveTextContent("chevron-left-small.svg");
+		expect(container).toHaveTextContent(leftIcon);
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();
@@ -61,7 +63,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).not.toHaveBeenCalled();
 
-		expect(container).toHaveTextContent("chevron-left-small.svg");
+		expect(container).toHaveTextContent(leftIcon);
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();
@@ -76,7 +78,7 @@ describe("BackButton", () => {
 
 		expect(historySpy).not.toHaveBeenCalled();
 
-		expect(container).toHaveTextContent("chevron-left-small.svg");
+		expect(container).toHaveTextContent(leftIcon);
 		expect(container).toMatchSnapshot();
 
 		historySpy.mockRestore();

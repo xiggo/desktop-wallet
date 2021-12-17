@@ -11,6 +11,9 @@ import React from "react";
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";
 
+const mainNetwork = "ark.mainnet";
+const testNetwork = "ark.devnet";
+
 describe("useDisplayWallets", () => {
 	let mainnetWallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
@@ -35,7 +38,7 @@ describe("useDisplayWallets", () => {
 		mainnetWallet = await profile.walletFactory().fromAddress({
 			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
 			coin: "ARK",
-			network: "ark.mainnet",
+			network: mainNetwork,
 		});
 
 		profile.wallets().push(mainnetWallet);
@@ -51,7 +54,7 @@ describe("useDisplayWallets", () => {
 
 	it("should return list of wallets by only one selected network", () => {
 		const useWalletFiltersSpy = jest.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
-			selectedNetworkIds: ["ark.devnet"],
+			selectedNetworkIds: [testNetwork],
 			walletsDisplayType: "all",
 		} as FilterWalletsHookProperties);
 
@@ -66,10 +69,10 @@ describe("useDisplayWallets", () => {
 		expect(current.availableWallets[1].alias()).toBe(wallets[0].alias());
 
 		expect(current.availableNetworks).toHaveLength(2);
-		expect(current.availableNetworks[0].id()).toBe("ark.mainnet");
+		expect(current.availableNetworks[0].id()).toBe(mainNetwork);
 
 		expect(current.filteredWalletsGroupedByNetwork).toHaveLength(1);
-		expect(current.filteredWalletsGroupedByNetwork[0][0].id()).toBe("ark.devnet");
+		expect(current.filteredWalletsGroupedByNetwork[0][0].id()).toBe(testNetwork);
 		expect(current.filteredWalletsGroupedByNetwork[0][1][0].alias()).toBe(wallets[0].alias());
 
 		expect(current.hasWalletsMatchingOtherNetworks).toBeTruthy();
@@ -84,7 +87,7 @@ describe("useDisplayWallets", () => {
 
 	it("should return all list wallets", async () => {
 		const useWalletFiltersSpy = jest.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
-			selectedNetworkIds: ["ark.devnet", "ark.mainnet"],
+			selectedNetworkIds: [testNetwork, mainNetwork],
 			walletsDisplayType: "all",
 		} as FilterWalletsHookProperties);
 
@@ -99,7 +102,7 @@ describe("useDisplayWallets", () => {
 		expect(current.availableNetworks).toHaveLength(2);
 
 		expect(current.filteredWalletsGroupedByNetwork).toHaveLength(2);
-		expect(current.filteredWalletsGroupedByNetwork[0][0].id()).toBe("ark.mainnet");
+		expect(current.filteredWalletsGroupedByNetwork[0][0].id()).toBe(mainNetwork);
 		expect(current.filteredWalletsGroupedByNetwork[0][1][0].alias()).toBe(wallets[2].alias());
 
 		expect(current.hasWalletsMatchingOtherNetworks).toBeFalsy();
@@ -135,7 +138,7 @@ describe("useDisplayWallets", () => {
 
 	it("should filter starred wallet types", async () => {
 		const useWalletFiltersSpy = jest.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
-			selectedNetworkIds: ["ark.devnet", "ark.mainnet"],
+			selectedNetworkIds: [testNetwork, mainNetwork],
 			walletsDisplayType: "starred",
 		} as FilterWalletsHookProperties);
 
@@ -160,7 +163,7 @@ describe("useDisplayWallets", () => {
 
 	it("should filter ledger wallet type", async () => {
 		const useWalletFiltersSpy = jest.spyOn(filterWalletsHooks, "useWalletFilters").mockReturnValue({
-			selectedNetworkIds: ["ark.devnet", "ark.mainnet"],
+			selectedNetworkIds: [testNetwork, mainNetwork],
 			walletsDisplayType: "ledger",
 		} as FilterWalletsHookProperties);
 
@@ -175,7 +178,7 @@ describe("useDisplayWallets", () => {
 		expect(current.availableNetworks).toHaveLength(2);
 
 		expect(current.filteredWalletsGroupedByNetwork).toHaveLength(1);
-		expect(current.filteredWalletsGroupedByNetwork[0][0].id()).toBe("ark.mainnet");
+		expect(current.filteredWalletsGroupedByNetwork[0][0].id()).toBe(mainNetwork);
 		expect(current.filteredWalletsGroupedByNetwork[0][1][0].address()).toBe(mainnetWallet.address());
 
 		expect(current.hasWalletsMatchingOtherNetworks).toBeFalsy();

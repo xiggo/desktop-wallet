@@ -20,6 +20,8 @@ const history = createMemoryHistory();
 
 const fixtureProfileId = getDefaultProfileId();
 const pluginsURL = `/profiles/${fixtureProfileId}/plugins`;
+const pluginName = "@dated/delegate-calculator-wallet-plugin";
+const pluginTitle = "ARK Delegate Calculator";
 
 const Component = () => {
 	const { fetchPluginPackages } = usePluginManagerContext();
@@ -33,12 +35,20 @@ const Component = () => {
 
 const downloadPluginCalled = (ipcRendererSpy) =>
 	expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
-		name: "@dated/delegate-calculator-wallet-plugin",
-		url: "https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
+		name: pluginName,
+		url: `https://registry.npmjs.org/${pluginName}/-/delegate-calculator-wallet-plugin-1.0.0.tgz`,
 	});
 
 const pluginGridToBeVisible = () =>
 	expect(within(screen.getByTestId("PluginManager__latest__gaming")).getByTestId("PluginGrid")).toBeVisible();
+
+const myPlugins = () => screen.getByTestId("PluginManager__container--my-plugins");
+const installPlugin = () => screen.getByTestId("PluginManager_header--install");
+const myPluginsTab = () => screen.getByTestId("tabs__tab-button-my-plugins");
+const listLayout = () => screen.getByTestId("LayoutControls__list--icon");
+
+const updateAll = "PluginManager__update-all";
+const testPluginName = "test-plugin";
 
 describe("PluginManager", () => {
 	beforeEach(() => {
@@ -63,9 +73,9 @@ describe("PluginManager", () => {
 		expect(screen.getByTestId("header__subtitle")).toHaveTextContent(translations.PAGE_PLUGIN_MANAGER.DESCRIPTION);
 
 		await waitFor(() =>
-			expect(
-				within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("ARK Delegate Calculator"),
-			).toHaveLength(1),
+			expect(within(screen.getByTestId("PluginManager__latest__utility")).getAllByText(pluginTitle)).toHaveLength(
+				1,
+			),
 		);
 
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
@@ -88,9 +98,9 @@ describe("PluginManager", () => {
 
 		// eslint-disable-next-line sonarjs/no-identical-functions
 		await waitFor(() =>
-			expect(
-				within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("ARK Delegate Calculator"),
-			).toHaveLength(1),
+			expect(within(screen.getByTestId("PluginManager__latest__utility")).getAllByText(pluginTitle)).toHaveLength(
+				1,
+			),
 		);
 
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
@@ -99,7 +109,7 @@ describe("PluginManager", () => {
 			within(screen.getByTestId("PluginManager__latest__utility")).getByTestId("PluginGrid"),
 		).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(listLayout());
 
 		expect(
 			within(screen.getByTestId("PluginManager__latest__utility")).getByTestId("PluginList"),
@@ -128,12 +138,12 @@ describe("PluginManager", () => {
 		userEvent.click(screen.getByTestId("tabs__tab-button-all"));
 
 		await waitFor(() =>
-			expect(
-				within(screen.getByTestId("PluginManager__container--all")).getAllByText("ARK Delegate Calculator"),
-			).toHaveLength(1),
+			expect(within(screen.getByTestId("PluginManager__container--all")).getAllByText(pluginTitle)).toHaveLength(
+				1,
+			),
 		);
 
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(listLayout());
 
 		expect(
 			within(screen.getByTestId("PluginManager__container--all")).getByTestId("PluginList"),
@@ -173,7 +183,7 @@ describe("PluginManager", () => {
 			within(screen.getByTestId(`PluginManager__container--${category}`)).getByTestId("PluginGrid"),
 		).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(listLayout());
 
 		expect(
 			within(screen.getByTestId(`PluginManager__container--${category}`)).getByTestId("PluginList"),
@@ -244,7 +254,7 @@ describe("PluginManager", () => {
 
 		await waitFor(pluginGridToBeVisible);
 
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(listLayout());
 
 		userEvent.click(screen.getAllByTestId("PluginListItem__install")[0]);
 
@@ -280,7 +290,7 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("PluginManager_header--install"));
+		userEvent.click(installPlugin());
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MANUAL_INSTALLATION_DISCLAIMER.TITLE);
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
@@ -312,7 +322,7 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("PluginManager_header--install"));
+		userEvent.click(installPlugin());
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MANUAL_INSTALLATION_DISCLAIMER.TITLE);
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
@@ -334,7 +344,7 @@ describe("PluginManager", () => {
 
 		mockAcceptedManualInstallation.mockRestore();
 
-		userEvent.click(screen.getByTestId("PluginManager_header--install"));
+		userEvent.click(installPlugin());
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_MANUAL_INSTALL_PLUGIN.TITLE);
 	});
@@ -357,7 +367,7 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("PluginManager_header--install"));
+		userEvent.click(installPlugin());
 
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MANUAL_INSTALLATION_DISCLAIMER.TITLE);
 		expect(screen.getByTestId("modal__inner")).toHaveTextContent(
@@ -378,7 +388,7 @@ describe("PluginManager", () => {
 
 		nock("https://github.com/")
 			.get("/arkecosystem/test-plugin/raw/master/package.json")
-			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin" });
+			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: testPluginName });
 
 		render(
 			<Route path="/profiles/:profileId/plugins">
@@ -391,14 +401,14 @@ describe("PluginManager", () => {
 		);
 
 		// Open and close
-		userEvent.click(screen.getByTestId("PluginManager_header--install"));
+		userEvent.click(installPlugin());
 
 		await expect(screen.findByTestId("PluginManualInstallModal")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
 		// Open and type
-		userEvent.click(screen.getByTestId("PluginManager_header--install"));
+		userEvent.click(installPlugin());
 
 		await expect(screen.findByTestId("PluginManualInstallModal")).resolves.toBeVisible();
 
@@ -436,7 +446,7 @@ describe("PluginManager", () => {
 
 		await waitFor(pluginGridToBeVisible);
 
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(listLayout());
 		await waitFor(() => expect(screen.getAllByTestId("PluginListItem__install")[0]).toBeInTheDocument());
 
 		userEvent.click(screen.getAllByTestId("PluginListItem__install")[0]);
@@ -470,7 +480,7 @@ describe("PluginManager", () => {
 
 		expect(inputElement).toBeInTheDocument();
 
-		userEvent.paste(inputElement, "ARK Delegate Calculator");
+		userEvent.paste(inputElement, pluginTitle);
 
 		await expect(screen.findByText(translations.PAGE_PLUGIN_MANAGER.VIEW.SEARCH)).resolves.toBeVisible();
 
@@ -482,7 +492,7 @@ describe("PluginManager", () => {
 		await expect(screen.findByTestId("PluginGrid__empty-message")).resolves.toBeVisible();
 
 		// Switch to list view
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(listLayout());
 
 		await expect(screen.findByTestId("PluginList__empty-message")).resolves.toBeVisible();
 
@@ -508,7 +518,7 @@ describe("PluginManager", () => {
 
 		await waitFor(pluginGridToBeVisible);
 
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(listLayout());
 		userEvent.click(screen.getAllByTestId("PluginListItem__install")[0]);
 
 		await waitFor(() =>
@@ -538,7 +548,7 @@ describe("PluginManager", () => {
 
 		await waitFor(pluginGridToBeVisible);
 
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(listLayout());
 		userEvent.click(screen.getAllByTestId("PluginListItem__install")[0]);
 
 		await waitFor(() =>
@@ -566,13 +576,11 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await expect(screen.findByText("ARK Delegate Calculator")).resolves.toBeVisible();
+		await expect(screen.findByText(pluginTitle)).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
 
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__latest__utility")).getAllByText("ARK Delegate Calculator")[0],
-		);
+		userEvent.click(within(screen.getByTestId("PluginManager__latest__utility")).getAllByText(pluginTitle)[0]);
 
 		expect(history.location.pathname).toBe(`/profiles/${fixtureProfileId}/plugins/details`);
 		expect(history.location.search).toBe("?pluginId=@dated/delegate-calculator-wallet-plugin");
@@ -580,7 +588,7 @@ describe("PluginManager", () => {
 
 	it("should open the plugin view page", async () => {
 		const plugin = new PluginController(
-			{ "desktop-wallet": { permissions: ["LAUNCH"] }, name: "test-plugin" },
+			{ "desktop-wallet": { permissions: ["LAUNCH"] }, name: testPluginName },
 			(api) => api.launch().render(<h1>My Plugin View</h1>),
 		);
 
@@ -599,8 +607,8 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
 
@@ -618,7 +626,7 @@ describe("PluginManager", () => {
 
 	it("should enable plugin on my-plugins", async () => {
 		const onEnabled = jest.fn();
-		const plugin = new PluginController({ name: "test-plugin" }, onEnabled);
+		const plugin = new PluginController({ name: testPluginName }, onEnabled);
 		pluginManager.plugins().push(plugin);
 
 		const { asFragment } = render(
@@ -631,21 +639,17 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await expect(screen.findByText("ARK Delegate Calculator")).resolves.toBeVisible();
+		await expect(screen.findByText(pluginTitle)).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
 		expect(screen.getByTestId("PluginListItem__disabled")).toBeInTheDocument();
 
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getAllByTestId("dropdown__toggle")[0],
-		);
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.ENABLE),
-		);
+		userEvent.click(within(myPlugins()).getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(within(myPlugins()).getByText(commonTranslations.ENABLE));
 
 		await expect(screen.findByTestId("PluginListItem__enabled")).resolves.toBeVisible();
 
@@ -658,7 +662,7 @@ describe("PluginManager", () => {
 
 	it("should fail to enable", async () => {
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
-		const plugin = new PluginController({ name: "test-plugin" }, { incompatible: true });
+		const plugin = new PluginController({ name: testPluginName }, { incompatible: true });
 		pluginManager.plugins().push(plugin);
 
 		render(
@@ -671,21 +675,17 @@ describe("PluginManager", () => {
 			},
 		);
 
-		await expect(screen.findByText("ARK Delegate Calculator")).resolves.toBeVisible();
+		await expect(screen.findByText(pluginTitle)).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.getAllByTestId("Card")).toHaveLength(9));
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
 		expect(screen.getByTestId("PluginListItem__disabled")).toBeInTheDocument();
 
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getAllByTestId("dropdown__toggle")[0],
-		);
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.ENABLE),
-		);
+		userEvent.click(within(myPlugins()).getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(within(myPlugins()).getByText(commonTranslations.ENABLE));
 
 		expect(toastSpy).toHaveBeenCalledWith(expect.stringMatching(/Failed to enable/));
 
@@ -694,7 +694,7 @@ describe("PluginManager", () => {
 
 	it("should disable plugin on my-plugins", async () => {
 		const onEnabled = jest.fn();
-		const plugin = new PluginController({ name: "test-plugin" }, onEnabled);
+		const plugin = new PluginController({ name: testPluginName }, onEnabled);
 		pluginManager.plugins().push(plugin);
 		plugin.enable(profile);
 
@@ -708,17 +708,13 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
 		expect(screen.getByTestId("PluginListItem__enabled")).toBeInTheDocument();
 
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getAllByTestId("dropdown__toggle")[0],
-		);
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.DISABLE),
-		);
+		userEvent.click(within(myPlugins()).getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(within(myPlugins()).getByText(commonTranslations.DISABLE));
 
 		await expect(screen.findByTestId("PluginListItem__disabled")).resolves.toBeVisible();
 
@@ -730,10 +726,7 @@ describe("PluginManager", () => {
 	it("should update plugin on my-plugins", async () => {
 		const ipcRendererSpy = jest.spyOn(ipcRenderer, "invoke").mockRejectedValue("Failed");
 
-		const plugin = new PluginController(
-			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
-			() => void 0,
-		);
+		const plugin = new PluginController({ name: pluginName, version: "0.0.1" }, () => void 0);
 		pluginManager.plugins().push(plugin);
 
 		const { asFragment } = render(
@@ -746,17 +739,13 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
 		await expect(screen.findByTestId("PluginDropdown__update-badge")).resolves.toBeVisible();
 
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getAllByTestId("dropdown__toggle")[0],
-		);
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.UPDATE),
-		);
+		userEvent.click(within(myPlugins()).getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(within(myPlugins()).getByText(commonTranslations.UPDATE));
 
 		await waitFor(() => downloadPluginCalled(ipcRendererSpy));
 
@@ -767,7 +756,7 @@ describe("PluginManager", () => {
 
 	it("should close confirmation window", async () => {
 		const onEnabled = jest.fn();
-		const plugin = new PluginController({ name: "test-plugin" }, onEnabled);
+		const plugin = new PluginController({ name: testPluginName }, onEnabled);
 		pluginManager.plugins().push(plugin);
 
 		render(
@@ -780,15 +769,11 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getAllByTestId("dropdown__toggle")[0],
-		);
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.DELETE),
-		);
+		userEvent.click(within(myPlugins()).getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(within(myPlugins()).getByText(commonTranslations.DELETE));
 
 		await expect(screen.findByTestId("PluginUninstallConfirmation")).resolves.toBeVisible();
 
@@ -805,7 +790,7 @@ describe("PluginManager", () => {
 	it("should delete plugin on my-plugins", async () => {
 		const onEnabled = jest.fn();
 
-		const plugin = new PluginController({ name: "test-plugin" }, onEnabled);
+		const plugin = new PluginController({ name: testPluginName }, onEnabled);
 		pluginManager.plugins().push(plugin);
 
 		render(
@@ -818,15 +803,11 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getAllByTestId("dropdown__toggle")[0],
-		);
-		userEvent.click(
-			within(screen.getByTestId("PluginManager__container--my-plugins")).getByText(commonTranslations.DELETE),
-		);
+		userEvent.click(within(myPlugins()).getAllByTestId("dropdown__toggle")[0]);
+		userEvent.click(within(myPlugins()).getByText(commonTranslations.DELETE));
 
 		await expect(screen.findByTestId("PluginUninstallConfirmation")).resolves.toBeVisible();
 
@@ -841,10 +822,7 @@ describe("PluginManager", () => {
 	});
 
 	it("should show update all banner", async () => {
-		const plugin = new PluginController(
-			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
-			() => void 0,
-		);
+		const plugin = new PluginController({ name: pluginName, version: "0.0.1" }, () => void 0);
 		pluginManager.plugins().push(plugin);
 
 		render(
@@ -857,21 +835,18 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
-		await expect(screen.findByTestId("PluginManager__update-all")).resolves.toBeVisible();
+		await expect(screen.findByTestId(updateAll)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("PluginManager__update-all")).not.toBeDisabled();
+		expect(screen.getByTestId(updateAll)).not.toBeDisabled();
 
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 	});
 
 	it("should show and close the update confirmation modal", async () => {
-		const plugin = new PluginController(
-			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
-			() => void 0,
-		);
+		const plugin = new PluginController({ name: pluginName, version: "0.0.1" }, () => void 0);
 		pluginManager.plugins().push(plugin);
 
 		render(
@@ -884,14 +859,14 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
-		await expect(screen.findByTestId("PluginManager__update-all")).resolves.toBeVisible();
+		await expect(screen.findByTestId(updateAll)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("PluginManager__update-all")).not.toBeDisabled();
+		expect(screen.getByTestId(updateAll)).not.toBeDisabled();
 
-		userEvent.click(screen.getByTestId("PluginManager__update-all"));
+		userEvent.click(screen.getByTestId(updateAll));
 
 		await expect(screen.findByTestId("PluginUpdatesConfirmation")).resolves.toBeVisible();
 
@@ -920,14 +895,7 @@ describe("PluginManager", () => {
 			}
 		});
 
-		pluginManager
-			.plugins()
-			.push(
-				new PluginController(
-					{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
-					() => void 0,
-				),
-			);
+		pluginManager.plugins().push(new PluginController({ name: pluginName, version: "0.0.1" }, () => void 0));
 
 		pluginManager
 			.plugins()
@@ -943,12 +911,12 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
-		await expect(screen.findByTestId("PluginManager__update-all")).resolves.toBeVisible();
+		await expect(screen.findByTestId(updateAll)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("PluginManager__update-all"));
+		userEvent.click(screen.getByTestId(updateAll));
 
 		await expect(screen.findByTestId("PluginUpdatesConfirmation")).resolves.toBeVisible();
 
@@ -963,10 +931,7 @@ describe("PluginManager", () => {
 	it("should show disabled update all banner if all updates are incompatible", async () => {
 		process.env.REACT_APP_PLUGIN_MINIMUM_VERSION = "100.0.0";
 
-		const plugin = new PluginController(
-			{ name: "@dated/delegate-calculator-wallet-plugin", version: "0.0.1" },
-			() => void 0,
-		);
+		const plugin = new PluginController({ name: pluginName, version: "0.0.1" }, () => void 0);
 		pluginManager.plugins().push(plugin);
 
 		render(
@@ -979,12 +944,12 @@ describe("PluginManager", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("tabs__tab-button-my-plugins"));
-		userEvent.click(screen.getByTestId("LayoutControls__list--icon"));
+		userEvent.click(myPluginsTab());
+		userEvent.click(listLayout());
 
-		await expect(screen.findByTestId("PluginManager__update-all")).resolves.toBeVisible();
+		await expect(screen.findByTestId(updateAll)).resolves.toBeVisible();
 
-		expect(screen.getByTestId("PluginManager__update-all")).toBeDisabled();
+		expect(screen.getByTestId(updateAll)).toBeDisabled();
 
 		pluginManager.plugins().removeById(plugin.config().id(), profile);
 

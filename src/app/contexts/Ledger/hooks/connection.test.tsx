@@ -23,6 +23,8 @@ import {
 
 const transport = getDefaultLedgerTransport();
 
+const LedgerWaitingDevice = "Waiting Device";
+
 describe("Use Ledger Connection", () => {
 	let profile: Contracts.IProfile;
 	let wallet: Contracts.IReadWriteWallet;
@@ -227,9 +229,9 @@ describe("Use Ledger Connection", () => {
 
 			userEvent.click(screen.getByText("Connect"));
 
-			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
+			expect(screen.getByText(LedgerWaitingDevice)).toBeInTheDocument();
 
-			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
+			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
 			await expect(screen.findByText("Connected")).resolves.toBeVisible();
 
@@ -247,9 +249,9 @@ describe("Use Ledger Connection", () => {
 
 			userEvent.click(screen.getByText("Connect"));
 
-			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
+			expect(screen.getByText(LedgerWaitingDevice)).toBeInTheDocument();
 
-			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
+			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
 			await expect(screen.findByText("Connected")).resolves.toBeVisible();
 
@@ -274,7 +276,7 @@ describe("Use Ledger Connection", () => {
 				screen.findByText(walletTranslations.MODAL_LEDGER_WALLET.GENERIC_CONNECTION_ERROR),
 			).resolves.toBeVisible();
 
-			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
+			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
 			await waitFor(() => expect(getPublicKeySpy).toHaveBeenCalledTimes(3));
 
@@ -292,9 +294,9 @@ describe("Use Ledger Connection", () => {
 
 			userEvent.click(screen.getByText("Connect"));
 
-			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
+			expect(screen.getByText(LedgerWaitingDevice)).toBeInTheDocument();
 
-			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument(), {
+			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument(), {
 				timeout: 4000,
 			});
 
@@ -324,9 +326,9 @@ describe("Use Ledger Connection", () => {
 
 			userEvent.click(screen.getByText("Connect"));
 
-			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
+			expect(screen.getByText(LedgerWaitingDevice)).toBeInTheDocument();
 
-			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
+			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
 			await expect(
 				screen.findByText(
@@ -362,9 +364,9 @@ describe("Use Ledger Connection", () => {
 
 			userEvent.click(screen.getByText("Connect"));
 
-			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
+			expect(screen.getByText(LedgerWaitingDevice)).toBeInTheDocument();
 
-			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
+			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
 			await expect(screen.findByText("Connected")).resolves.toBeVisible();
 
@@ -423,9 +425,9 @@ describe("Use Ledger Connection", () => {
 			toastSpy = jest.spyOn(toasts, "success").mockImplementationOnce();
 			userEvent.click(screen.getByText("Connect"));
 
-			expect(screen.getByText("Waiting Device")).toBeInTheDocument();
+			expect(screen.getByText(LedgerWaitingDevice)).toBeInTheDocument();
 
-			await waitFor(() => expect(screen.queryByText("Waiting Device")).not.toBeInTheDocument());
+			await waitFor(() => expect(screen.queryByText(LedgerWaitingDevice)).not.toBeInTheDocument());
 
 			await expect(screen.findByText("Connected")).resolves.toBeVisible();
 

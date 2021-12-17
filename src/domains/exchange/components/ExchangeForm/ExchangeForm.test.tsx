@@ -19,7 +19,9 @@ import { httpClient, toasts } from "@/app/services";
 
 let profile: Contracts.IProfile;
 
+const exchangeBaseURL = "https://exchanges.payvo.com";
 const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange/view`;
+const exchangeETHURL = "/api/changenow/currencies/eth";
 let history: MemoryHistory;
 
 jest.mock("utils/delay", () => ({
@@ -92,6 +94,12 @@ const selectCurrencies = async ({ from, to }: { from?: Record<string, string>; t
 		});
 	}
 };
+
+const continueButton = () => screen.getByTestId("ExchangeForm__continue-button");
+const reviewStep = () => screen.getByTestId("ExchangeForm__review-step");
+
+const refundAddressID = "ExchangeForm__refund-address";
+const payoutValue = "37042.3588384";
 
 describe("ExchangeForm", () => {
 	beforeAll(() => {
@@ -176,7 +184,7 @@ describe("ExchangeForm", () => {
 			provider: "changenow",
 		});
 
-		nock("https://exchanges.payvo.com")
+		nock(exchangeBaseURL)
 			.get("/api/changenow/orders/id")
 			.query(true)
 			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "new" } });
@@ -272,8 +280,8 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should show an error alert if the selected pair is unavailable", async () => {
-		nock("https://exchanges.payvo.com")
-			.get("/api/changenow/currencies/eth")
+		nock(exchangeBaseURL)
+			.get(exchangeETHURL)
 			.reply(200, require("tests/fixtures/exchange/changenow/currency-eth.json"))
 			.get("/api/changenow/tickers/btc/eth")
 			.reply(422, { error: { message: "Unavailable Pair" } });
@@ -331,7 +339,7 @@ describe("ExchangeForm", () => {
 
 		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
+			expect(screen.getByTestId(refundAddressID)).toBeInTheDocument();
 		});
 
 		await waitFor(() => {
@@ -341,7 +349,7 @@ describe("ExchangeForm", () => {
 		userEvent.click(screen.getByTestId("ExchangeForm__remove-refund-address"));
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("ExchangeForm__refund-address")).not.toBeInTheDocument();
+			expect(screen.queryByTestId(refundAddressID)).not.toBeInTheDocument();
 		});
 	});
 
@@ -351,7 +359,7 @@ describe("ExchangeForm", () => {
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
 
-		nock("https://exchanges.payvo.com").get("/api/changenow/currencies/eth").reply(200, currency);
+		nock(exchangeBaseURL).get(exchangeETHURL).reply(200, currency);
 
 		const onReady = jest.fn();
 
@@ -388,10 +396,10 @@ describe("ExchangeForm", () => {
 		currency.data.externalIdName = "external id";
 		currency.data.hasExternalId = true;
 
-		nock("https://exchanges.payvo.com")
+		nock(exchangeBaseURL)
 			.get("/api/changenow/currencies/eth/payoutAddress")
 			.reply(200, { data: true })
-			.get("/api/changenow/currencies/eth")
+			.get(exchangeETHURL)
 			.reply(200, currency);
 
 		const onReady = jest.fn();
@@ -413,7 +421,7 @@ describe("ExchangeForm", () => {
 
 		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
+			expect(screen.getByTestId(refundAddressID)).toBeInTheDocument();
 		});
 
 		const refundDropdown = screen.getAllByTestId("SelectDropdown__input")[3];
@@ -493,7 +501,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(payoutInput).toHaveValue("37042.3588384");
+			expect(payoutInput).toHaveValue(payoutValue);
 		});
 
 		// update amount output
@@ -501,7 +509,7 @@ describe("ExchangeForm", () => {
 		userEvent.paste(payoutInput, "1");
 
 		await waitFor(() => {
-			expect(payinInput).toHaveValue("37042.3588384");
+			expect(payinInput).toHaveValue(payoutValue);
 		});
 
 		// remove from currency
@@ -516,7 +524,7 @@ describe("ExchangeForm", () => {
 			from: { name: "Bitcoin", ticker: "BTC" },
 		});
 
-		expect(payinInput).toHaveValue("37042.3588384");
+		expect(payinInput).toHaveValue(payoutValue);
 	});
 
 	it("should remove amount if removing currency", async () => {
@@ -544,7 +552,7 @@ describe("ExchangeForm", () => {
 		userEvent.paste(payinInput, "1");
 
 		await waitFor(() => {
-			expect(payoutInput).toHaveValue("37042.3588384");
+			expect(payoutInput).toHaveValue(payoutValue);
 		});
 
 		// remove from currency
@@ -591,7 +599,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(payoutInput).toHaveValue("37042.3588384");
+			expect(payoutInput).toHaveValue(payoutValue);
 		});
 
 		// remove payin amount
@@ -631,7 +639,7 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(payoutInput).toHaveValue("37042.3588384");
+			expect(payoutInput).toHaveValue(payoutValue);
 		});
 
 		// remove payout amount
@@ -721,8 +729,8 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should clear recipient address error when unsetting to currency", async () => {
-		nock("https://exchanges.payvo.com")
-			.get("/api/changenow/currencies/eth")
+		nock(exchangeBaseURL)
+			.get(exchangeETHURL)
 			.reply(200, require("tests/fixtures/exchange/changenow/currency-eth.json"))
 			.get("/api/changenow/currencies/eth/payoutAddress")
 			.reply(200, { data: false });
@@ -767,8 +775,8 @@ describe("ExchangeForm", () => {
 	});
 
 	it("should clear refund address error when unsetting from currency", async () => {
-		nock("https://exchanges.payvo.com")
-			.get("/api/changenow/currencies/eth")
+		nock(exchangeBaseURL)
+			.get(exchangeETHURL)
 			.reply(200, require("tests/fixtures/exchange/changenow/currency-eth.json"))
 			.get("/api/changenow/currencies/eth/payoutAddress")
 			.reply(200, { data: false });
@@ -792,7 +800,7 @@ describe("ExchangeForm", () => {
 
 		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 
-		const refundAddress = screen.getByTestId("ExchangeForm__refund-address");
+		const refundAddress = screen.getByTestId(refundAddressID);
 
 		expect(refundAddress).toBeVisible();
 
@@ -820,7 +828,7 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock("https://exchanges.payvo.com").post("/api/changenow/orders").reply(500, "Server Error");
+		nock(exchangeBaseURL).post("/api/changenow/orders").reply(500, "Server Error");
 
 		const onReady = jest.fn();
 
@@ -860,17 +868,17 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(payoutInput).toHaveValue("37042.3588384");
+			expect(payoutInput).toHaveValue(payoutValue);
 		});
 
 		expect(screen.getByTestId("FormDivider__exchange-rate")).toBeInTheDocument();
 
-		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
 		// go to review step
-		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(continueButton());
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
+			expect(reviewStep()).toBeInTheDocument();
 		});
 
 		// back to form step
@@ -880,27 +888,27 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
+			expect(continueButton()).not.toBeDisabled();
 		});
 
 		// go to review step
-		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(continueButton());
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
+			expect(reviewStep()).toBeInTheDocument();
 		});
 
-		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 
 		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
+			expect(continueButton()).not.toBeDisabled();
 		});
 
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
-		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.GENERIC"));
@@ -913,7 +921,7 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock("https://exchanges.payvo.com")
+		nock(exchangeBaseURL)
 			.post("/api/changenow/orders")
 			.reply(422, { error: { message: "Invalid Address" } });
 
@@ -955,31 +963,31 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(payoutInput).toHaveValue("37042.3588384");
+			expect(payoutInput).toHaveValue(payoutValue);
 		});
 
 		expect(screen.getByTestId("FormDivider__exchange-rate")).toBeInTheDocument();
 
-		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
 		// go to review step
-		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(continueButton());
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
+			expect(reviewStep()).toBeInTheDocument();
 		});
 
-		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 
 		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
+			expect(continueButton()).not.toBeDisabled();
 		});
 
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
-		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.INVALID_ADDRESS", { ticker: "ARK" }));
@@ -992,7 +1000,7 @@ describe("ExchangeForm", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		nock("https://exchanges.payvo.com")
+		nock(exchangeBaseURL)
 			.post("/api/changenow/orders")
 			.reply(422, { error: { message: "Invalid Refund Address" } });
 
@@ -1034,45 +1042,43 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(payoutInput).toHaveValue("37042.3588384");
+			expect(payoutInput).toHaveValue(payoutValue);
 		});
 
 		expect(screen.getByTestId("FormDivider__exchange-rate")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("ExchangeForm__add-refund-address"));
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__refund-address")).toBeInTheDocument();
+			expect(screen.getByTestId(refundAddressID)).toBeInTheDocument();
 		});
 
-		const refundInput = within(screen.getByTestId("ExchangeForm__refund-address")).getByTestId(
-			"SelectDropdown__input",
-		);
+		const refundInput = within(screen.getByTestId(refundAddressID)).getByTestId("SelectDropdown__input");
 		userEvent.paste(refundInput, "refundAddress");
 
 		await waitFor(() => {
 			expect(refundInput).toHaveValue("refundAddress");
 		});
 
-		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
 		// go to review step
-		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(continueButton());
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
+			expect(reviewStep()).toBeInTheDocument();
 		});
 
-		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 
 		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
+			expect(continueButton()).not.toBeDisabled();
 		});
 
 		const toastSpy = jest.spyOn(toasts, "error").mockImplementation();
 
 		// submit form
-		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(toastSpy).toHaveBeenCalledWith(t("EXCHANGE.ERROR.INVALID_REFUND_ADDRESS", { ticker: "BTC" }));
@@ -1093,7 +1099,7 @@ describe("ExchangeForm", () => {
 			to: "ark",
 		};
 
-		nock("https://exchanges.payvo.com")
+		nock(exchangeBaseURL)
 			.post("/api/changenow/orders")
 			.reply(200, () => require("tests/fixtures/exchange/changenow/order.json"))
 			.get("/api/changenow/orders/182b657b2c259b")
@@ -1154,17 +1160,17 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(payoutInput).toHaveValue("37042.3588384");
+			expect(payoutInput).toHaveValue(payoutValue);
 		});
 
 		expect(screen.getByTestId("FormDivider__exchange-rate")).toBeInTheDocument();
 
-		expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
+		expect(continueButton()).not.toBeDisabled();
 
 		// go to review step
-		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(continueButton());
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
+			expect(reviewStep()).toBeInTheDocument();
 		});
 
 		// back to form step
@@ -1174,25 +1180,25 @@ describe("ExchangeForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
+			expect(continueButton()).not.toBeDisabled();
 		});
 
 		// go to review step
-		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(continueButton());
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
+			expect(reviewStep()).toBeInTheDocument();
 		});
 
-		expect(screen.getByTestId("ExchangeForm__continue-button")).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 
 		userEvent.click(screen.getByRole("checkbox"));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__continue-button")).not.toBeDisabled();
+			expect(continueButton()).not.toBeDisabled();
 		});
 
 		// submit form
-		userEvent.click(screen.getByTestId("ExchangeForm__continue-button"));
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("ExchangeForm__status-step")).toBeInTheDocument();
@@ -1322,7 +1328,7 @@ describe("ReviewStep", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ExchangeForm__review-step")).toBeInTheDocument();
+			expect(reviewStep()).toBeInTheDocument();
 		});
 
 		expect(container).toMatchSnapshot();
@@ -1356,7 +1362,7 @@ describe("StatusStep", () => {
 			provider: "changenow",
 		});
 
-		nock("https://exchanges.payvo.com")
+		nock(exchangeBaseURL)
 			.get("/api/changenow/orders/id")
 			.query(true)
 			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "new" } });
@@ -1400,7 +1406,7 @@ describe("StatusStep", () => {
 			provider: "changenow",
 		});
 
-		nock("https://exchanges.payvo.com")
+		nock(exchangeBaseURL)
 			.get(`/api/changenow/orders/${exchangeTransaction.orderId()}`)
 			.query(true)
 			.reply(200, { data: { id: exchangeTransaction.orderId(), status: "sending" } });

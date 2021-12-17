@@ -61,6 +61,11 @@ const getOptions = (optType: OptionType) => {
 	return optionGroup;
 };
 
+const keyboardArrowDown = () => userEvent.keyboard("{arrowdown}");
+const selectInput = () => screen.getByTestId("select-list__input");
+
+const firstOptionID = "SelectDropdown__option--0";
+
 describe("SelectDropdown", () => {
 	it.each([OptionType.base, OptionType.group])("should render option %s", (optType) => {
 		const { container } = render(<Select options={getOptions(optType)} />);
@@ -104,11 +109,11 @@ describe("SelectDropdown", () => {
 
 			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
-			await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
+			await expect(screen.findByTestId(firstOptionID)).resolves.toBeVisible();
 
 			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
-			await waitFor(() => expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument());
+			await waitFor(() => expect(screen.queryByTestId(firstOptionID)).not.toBeInTheDocument());
 		},
 	);
 
@@ -143,11 +148,9 @@ describe("SelectDropdown", () => {
 
 		userEvent.paste(selectDropdown, "Opt");
 
-		const firstOption = screen.getByTestId("SelectDropdown__option--0");
+		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();
 
-		expect(firstOption).toBeInTheDocument();
-
-		userEvent.click(firstOption);
+		userEvent.click(screen.getByTestId(firstOptionID));
 	});
 
 	it.each([OptionType.base, OptionType.group])("should select option %s", (optType) => {
@@ -157,13 +160,11 @@ describe("SelectDropdown", () => {
 
 		userEvent.paste(selectDropdown, "Opt");
 
-		const firstOption = screen.getByTestId("SelectDropdown__option--0");
+		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();
 
-		expect(firstOption).toBeInTheDocument();
+		userEvent.click(screen.getByTestId(firstOptionID));
 
-		userEvent.click(firstOption);
-
-		expect(screen.getByTestId("select-list__input")).toHaveValue("1");
+		expect(selectInput()).toHaveValue("1");
 	});
 
 	it.each([OptionType.base, OptionType.group])("should highlight option %s", (optType) => {
@@ -174,11 +175,9 @@ describe("SelectDropdown", () => {
 		userEvent.paste(selectDropdown, "Opt");
 		userEvent.tab();
 
-		const firstOption = screen.getByTestId("SelectDropdown__option--0");
+		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();
 
-		expect(firstOption).toBeInTheDocument();
-
-		expect(firstOption).toHaveClass("is-selected");
+		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-selected");
 	});
 
 	it.each([OptionType.base, OptionType.group])("should select options %s with arrow keys", (optType) => {
@@ -190,18 +189,16 @@ describe("SelectDropdown", () => {
 		userEvent.tab();
 		userEvent.keyboard("{backspace}");
 
-		const firstOption = screen.getByTestId("SelectDropdown__option--0");
+		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();
 
-		expect(firstOption).toBeInTheDocument();
+		userEvent.hover(screen.getByTestId(firstOptionID));
+		keyboardArrowDown();
 
-		userEvent.hover(firstOption);
-		userEvent.keyboard("{arrowdown}");
-
-		expect(firstOption).toHaveClass("is-highlighted");
+		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
 
 		userEvent.keyboard("{enter}");
 
-		expect(screen.getByTestId("select-list__input")).toHaveValue("1");
+		expect(selectInput()).toHaveValue("1");
 	});
 
 	it("should highlight first option after reach to the end of the match options", () => {
@@ -230,23 +227,21 @@ describe("SelectDropdown", () => {
 
 		userEvent.paste(selectDropdown, "Opt");
 
-		const firstOption = screen.getByTestId("SelectDropdown__option--0");
+		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();
 
-		expect(firstOption).toBeInTheDocument();
+		keyboardArrowDown();
 
-		userEvent.keyboard("{arrowdown}");
+		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
 
-		expect(firstOption).toHaveClass("is-highlighted");
-
-		userEvent.keyboard("{arrowdown}");
+		keyboardArrowDown();
 
 		const secondOption = screen.getByTestId("SelectDropdown__option--1");
 
 		expect(secondOption).toHaveClass("is-highlighted");
 
-		userEvent.keyboard("{arrowdown}");
+		keyboardArrowDown();
 
-		expect(firstOption).toHaveClass("is-highlighted");
+		expect(screen.getByTestId(firstOptionID)).toHaveClass("is-highlighted");
 	});
 
 	it.each([OptionType.base, OptionType.group])(
@@ -270,7 +265,7 @@ describe("SelectDropdown", () => {
 			userEvent.paste(selectDropdown, "Opt");
 			userEvent.keyboard("{enter}");
 
-			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
+			expect(selectInput()).toHaveValue("1");
 		},
 	);
 
@@ -283,7 +278,7 @@ describe("SelectDropdown", () => {
 			userEvent.paste(selectDropdown, "Opt");
 			userEvent.tab();
 
-			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
+			expect(selectInput()).toHaveValue("1");
 		},
 	);
 
@@ -296,7 +291,7 @@ describe("SelectDropdown", () => {
 
 		expect(selectDropdown).toHaveValue("Option 1");
 
-		userEvent.keyboard("{arrowdown}");
+		keyboardArrowDown();
 		userEvent.keyboard("{enter}");
 
 		expect(selectDropdown).toHaveValue("Option 2");
@@ -311,7 +306,7 @@ describe("SelectDropdown", () => {
 			userEvent.paste(selectDropdown, "Optt");
 			userEvent.tab();
 
-			expect(screen.getByTestId("select-list__input")).not.toHaveValue();
+			expect(selectInput()).not.toHaveValue();
 		},
 	);
 
@@ -324,7 +319,7 @@ describe("SelectDropdown", () => {
 			userEvent.paste(selectDropdown, "Opt");
 			userEvent.keyboard("A");
 
-			expect(screen.getByTestId("select-list__input")).not.toHaveValue();
+			expect(selectInput()).not.toHaveValue();
 		},
 	);
 
@@ -337,13 +332,13 @@ describe("SelectDropdown", () => {
 			userEvent.paste(selectDropdown, "Opt");
 			userEvent.keyboard("{enter}");
 
-			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
+			expect(selectInput()).toHaveValue("1");
 
 			userEvent.paste(selectDropdown, "test");
 			userEvent.keyboard("A");
 			userEvent.keyboard("B");
 
-			expect(screen.getByTestId("select-list__input")).not.toHaveValue();
+			expect(selectInput()).not.toHaveValue();
 		},
 	);
 
@@ -397,11 +392,11 @@ describe("SelectDropdown", () => {
 
 			userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
-			await expect(screen.findByTestId("SelectDropdown__option--0")).resolves.toBeVisible();
+			await expect(screen.findByTestId(firstOptionID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("SelectDropdown__option--0"));
+			userEvent.click(screen.getByTestId(firstOptionID));
 
-			expect(screen.getByTestId("select-list__input")).toHaveValue("1");
+			expect(selectInput()).toHaveValue("1");
 		},
 	);
 
@@ -425,14 +420,14 @@ describe("SelectDropdown", () => {
 		render(<Component />);
 
 		// check dropdown not open
-		expect(screen.getByTestId("select-list__input")).toHaveValue(initialValue);
+		expect(selectInput()).toHaveValue(initialValue);
 		expect(screen.queryByText("Option 2")).not.toBeInTheDocument();
 
 		// set null value
 		userEvent.click(screen.getByTestId("btn-reset"));
 
 		// check value reset and dropdown not open
-		expect(screen.getByTestId("select-list__input")).not.toHaveValue();
+		expect(selectInput()).not.toHaveValue();
 		expect(screen.queryByText("Option 2")).not.toBeInTheDocument();
 	});
 
@@ -442,7 +437,7 @@ describe("SelectDropdown", () => {
 
 		userEvent.paste(selectDropdown, "Test");
 
-		expect(screen.getByTestId("select-list__input")).toHaveValue("Test");
+		expect(selectInput()).toHaveValue("Test");
 	});
 
 	it.each([OptionType.base, OptionType.group])(
@@ -454,7 +449,7 @@ describe("SelectDropdown", () => {
 			userEvent.paste(selectDropdown, "Test");
 			fireEvent.blur(selectDropdown);
 
-			expect(screen.getByTestId("select-list__input")).toHaveValue("Test");
+			expect(selectInput()).toHaveValue("Test");
 		},
 	);
 
@@ -463,7 +458,7 @@ describe("SelectDropdown", () => {
 		(optType) => {
 			const { container } = render(<Select options={getOptions(optType)} defaultValue="3" allowFreeInput />);
 
-			expect(screen.getByTestId("select-list__input")).toHaveValue("3");
+			expect(selectInput()).toHaveValue("3");
 			expect(container).toMatchSnapshot();
 		},
 	);
@@ -477,11 +472,11 @@ describe("SelectDropdown", () => {
 			userEvent.clear(selectDropdown);
 			userEvent.paste(selectDropdown, options[0].label);
 
-			expect(screen.getByTestId("select-list__input")).toHaveValue(options[0].label);
+			expect(selectInput()).toHaveValue(options[0].label);
 
 			userEvent.paste(selectDropdown, "Unmatched");
 
-			expect(screen.queryByTestId("SelectDropdown__option--0")).not.toBeInTheDocument();
+			expect(screen.queryByTestId(firstOptionID)).not.toBeInTheDocument();
 		},
 	);
 
@@ -492,12 +487,12 @@ describe("SelectDropdown", () => {
 		userEvent.clear(selectDropdown);
 		userEvent.paste(selectDropdown, options[0].label);
 
-		expect(screen.getByTestId("select-list__input")).toHaveValue(options[0].label);
+		expect(selectInput()).toHaveValue(options[0].label);
 
 		userEvent.clear(selectDropdown);
 
-		expect(screen.getByTestId("select-list__input")).not.toHaveValue();
-		expect(screen.getByTestId("SelectDropdown__option--0")).toBeInTheDocument();
+		expect(selectInput()).not.toHaveValue();
+		expect(screen.getByTestId(firstOptionID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectDropdown__option--1")).toBeInTheDocument();
 		expect(screen.getByTestId("SelectDropdown__option--2")).toBeInTheDocument();
 	});

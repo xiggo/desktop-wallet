@@ -75,6 +75,8 @@ const createTransactionMock = (wallet: ProfilesContracts.IReadWriteWallet) =>
 		username: () => delegateRegistrationFixture.data.asset.delegate.username,
 	});
 
+const formStepID = "DelegateRegistrationForm__form-step";
+
 describe("DelegateRegistrationForm", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -94,7 +96,7 @@ describe("DelegateRegistrationForm", () => {
 	it("should render form step", async () => {
 		const { asFragment } = renderComponent();
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -110,7 +112,7 @@ describe("DelegateRegistrationForm", () => {
 	it("should set username", async () => {
 		const { form } = renderComponent();
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("Input__username"), "test_delegate");
 
@@ -125,7 +127,7 @@ describe("DelegateRegistrationForm", () => {
 			},
 		});
 
-		await expect(screen.findByTestId("DelegateRegistrationForm__form-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 		await expect(screen.findByTestId("InputFee")).resolves.toBeVisible();
 
 		userEvent.click(screen.getByText(translations.INPUT_FEE_VIEW_TYPE.ADVANCED));
@@ -145,7 +147,7 @@ describe("DelegateRegistrationForm", () => {
 	it("should show error if username contains illegal characters", async () => {
 		const { asFragment } = renderComponent();
 
-		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")));
+		await waitFor(() => expect(screen.getByTestId(formStepID)));
 
 		userEvent.paste(screen.getByTestId("Input__username"), "<invalid>");
 
@@ -158,7 +160,7 @@ describe("DelegateRegistrationForm", () => {
 	it("should error if username is too long", async () => {
 		const { asFragment } = renderComponent();
 
-		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")));
+		await waitFor(() => expect(screen.getByTestId(formStepID)));
 
 		userEvent.paste(screen.getByTestId("Input__username"), "thisisaveryveryverylongdelegatename");
 
@@ -171,7 +173,7 @@ describe("DelegateRegistrationForm", () => {
 	it("should show error if username already exists", async () => {
 		const { asFragment } = renderComponent();
 
-		await waitFor(() => expect(screen.getByTestId("DelegateRegistrationForm__form-step")));
+		await waitFor(() => expect(screen.getByTestId(formStepID)));
 
 		userEvent.paste(screen.getByTestId("Input__username"), "arkx");
 

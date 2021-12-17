@@ -46,6 +46,18 @@ const history = createMemoryHistory();
 
 jest.setTimeout(30_000);
 
+const continueButton = () => screen.getByTestId("ImportWallet__continue-button");
+const mnemonicInput = () => screen.getByTestId("ImportWallet__mnemonic-input");
+const addressInput = () => screen.findByTestId("ImportWallet__address-input");
+const finishButton = () => screen.getByTestId("ImportWallet__finish-button");
+const successStep = () => screen.getByTestId("ImportWallet__success-step");
+const methodStep = () => screen.getByTestId("ImportWallet__method-step");
+
+const secretInputID = "ImportWallet__secret-input";
+const password = "S3cUrePa$sword";
+const testNetwork = "ark.devnet";
+const ARKDevnet = "ARK Devnet";
+
 describe("ImportWallet", () => {
 	beforeAll(() => {
 		nock.disableNetConnect();
@@ -61,7 +73,7 @@ describe("ImportWallet", () => {
 
 		await env.profiles().restore(profile);
 
-		const walletId = profile.wallets().findByAddressWithNetwork(randomAddress, "ark.devnet")?.id();
+		const walletId = profile.wallets().findByAddressWithNetwork(randomAddress, testNetwork)?.id();
 
 		if (walletId) {
 			profile.wallets().forget(walletId);
@@ -81,7 +93,7 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 	});
 
 	it("should render network step without test networks", async () => {
@@ -105,7 +117,7 @@ describe("ImportWallet", () => {
 		let form: ReturnType<typeof useForm>;
 
 		const Component = () => {
-			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === "ark.devnet");
+			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
 
 			network.importMethods = () => ({
@@ -139,15 +151,13 @@ describe("ImportWallet", () => {
 			{ history, withProviders: false },
 		);
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__mnemonic-input")));
+		await waitFor(() => expect(mnemonicInput()));
 
-		const passphraseInput = screen.getByTestId("ImportWallet__mnemonic-input");
+		expect(mnemonicInput()).toBeInTheDocument();
 
-		expect(passphraseInput).toBeInTheDocument();
-
-		userEvent.paste(passphraseInput, mnemonic);
+		userEvent.paste(mnemonicInput(), mnemonic);
 
 		await waitFor(() => {
 			expect(form.getValues()).toMatchObject({
@@ -167,7 +177,7 @@ describe("ImportWallet", () => {
 		let form: ReturnType<typeof useForm>;
 
 		const Component = () => {
-			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === "ark.devnet");
+			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
 
 			network.importMethods = () => ({
@@ -205,7 +215,7 @@ describe("ImportWallet", () => {
 			{ history, withProviders: false },
 		);
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		await expect(screen.findByTestId("ImportWallet__mnemonic-input")).resolves.toBeVisible();
 
@@ -223,7 +233,7 @@ describe("ImportWallet", () => {
 
 		expect(screen.getByTestId("select-list__input")).toHaveValue("address");
 
-		await expect(screen.findByTestId("ImportWallet__address-input")).resolves.toBeVisible();
+		await expect(addressInput()).resolves.toBeVisible();
 	});
 
 	it("should render success step", async () => {
@@ -247,10 +257,10 @@ describe("ImportWallet", () => {
 
 		const { asFragment } = render(<Component />);
 
-		expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+		expect(successStep()).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 
-		expect(screen.getByText("ARK Devnet")).toBeInTheDocument();
+		expect(screen.getByText(ARKDevnet)).toBeInTheDocument();
 		expect(screen.getByText(importedWallet.address())).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
@@ -305,13 +315,13 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+			expect(methodStep()).toBeInTheDocument();
 		});
 
 		await waitFor(() => expect(screen.getByTestId("ImportWallet__back-button")).toBeEnabled());
@@ -343,23 +353,22 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__mnemonic-input")).not.toThrow());
-		const passphraseInput = screen.getByTestId("ImportWallet__mnemonic-input");
+		await waitFor(() => expect(() => mnemonicInput()).not.toThrow());
 
-		expect(passphraseInput).toBeInTheDocument();
+		expect(mnemonicInput()).toBeInTheDocument();
 
-		userEvent.paste(passphraseInput, mnemonic);
+		userEvent.paste(mnemonicInput(), mnemonic);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 		userEvent.keyboard("{enter}");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+			expect(successStep()).toBeInTheDocument();
 		});
 
 		userEvent.click(screen.getByTestId("ImportWallet__edit-alias"));
@@ -375,10 +384,10 @@ describe("ImportWallet", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
-		userEvent.click(screen.getByTestId("ImportWallet__finish-button"));
+		userEvent.click(finishButton());
 
 		await waitFor(() => {
-			expect(profile.wallets().findByAddressWithNetwork(identityAddress, "ark.devnet")).toBeInstanceOf(Wallet);
+			expect(profile.wallets().findByAddressWithNetwork(identityAddress, testNetwork)).toBeInstanceOf(Wallet);
 		});
 	});
 
@@ -403,40 +412,38 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
-		const passphraseInput = screen.getByTestId("ImportWallet__mnemonic-input");
+		expect(mnemonicInput()).toBeInTheDocument();
 
-		expect(passphraseInput).toBeInTheDocument();
+		userEvent.paste(mnemonicInput(), MNEMONICS[3]);
 
-		userEvent.paste(passphraseInput, MNEMONICS[3]);
-
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		userEvent.paste(screen.getAllByTestId("InputPassword")[0], "S3cUrePa$sword");
-		userEvent.paste(screen.getAllByTestId("InputPassword")[1], "S3cUrePa$sword");
+		userEvent.paste(screen.getAllByTestId("InputPassword")[0], password);
+		userEvent.paste(screen.getAllByTestId("InputPassword")[1], password);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await waitFor(
 			() => {
-				expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+				expect(successStep()).toBeInTheDocument();
 			},
 			{ timeout: 15_000 },
 		);
@@ -463,26 +470,24 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
-		const passphraseInput = screen.getByTestId("ImportWallet__mnemonic-input");
+		expect(mnemonicInput()).toBeInTheDocument();
 
-		expect(passphraseInput).toBeInTheDocument();
+		userEvent.paste(mnemonicInput(), MNEMONICS[0]);
 
-		userEvent.paste(passphraseInput, MNEMONICS[0]);
-
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -490,15 +495,15 @@ describe("ImportWallet", () => {
 
 		userEvent.paste(screen.getByTestId("EncryptPassword__second-mnemonic"), MNEMONICS[5]);
 
-		userEvent.paste(screen.getAllByTestId("InputPassword")[0], "S3cUrePa$sword");
-		userEvent.paste(screen.getAllByTestId("InputPassword")[1], "S3cUrePa$sword");
+		userEvent.paste(screen.getAllByTestId("InputPassword")[0], password);
+		userEvent.paste(screen.getAllByTestId("InputPassword")[1], password);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await waitFor(
 			() => {
-				expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+				expect(successStep()).toBeInTheDocument();
 			},
 			{ timeout: 15_000 },
 		);
@@ -525,14 +530,14 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -540,21 +545,21 @@ describe("ImportWallet", () => {
 
 		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
-		await expect(screen.findByTestId("ImportWallet__address-input")).resolves.toBeVisible();
+		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("ImportWallet__address-input"), randomAddress);
+		userEvent.paste(await addressInput(), randomAddress);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+			expect(successStep()).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("ImportWallet__finish-button"));
+		userEvent.click(finishButton());
 
 		await waitFor(() => {
-			expect(profile.wallets().findByAddressWithNetwork(randomAddress, "ark.devnet")).toBeInstanceOf(Wallet);
+			expect(profile.wallets().findByAddressWithNetwork(randomAddress, testNetwork)).toBeInstanceOf(Wallet);
 		});
 	});
 
@@ -579,14 +584,14 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -598,17 +603,17 @@ describe("ImportWallet", () => {
 
 		userEvent.paste(screen.getByTestId("ImportWallet__publicKey-input"), randomPublicKey);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+			expect(successStep()).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("ImportWallet__finish-button"));
+		userEvent.click(finishButton());
 
 		await waitFor(() => {
-			expect(profile.wallets().findByAddressWithNetwork(randomAddress, "ark.devnet")).toBeInstanceOf(Wallet);
+			expect(profile.wallets().findByAddressWithNetwork(randomAddress, testNetwork)).toBeInstanceOf(Wallet);
 		});
 	});
 
@@ -633,14 +638,14 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -652,7 +657,7 @@ describe("ImportWallet", () => {
 
 		userEvent.paste(screen.getByTestId("ImportWallet__publicKey-input"), randomPublicKeyInvalid);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeDisabled());
+		await waitFor(() => expect(continueButton()).toBeDisabled());
 	});
 
 	it("should import by secret", async () => {
@@ -678,14 +683,14 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -693,18 +698,18 @@ describe("ImportWallet", () => {
 
 		userEvent.click(screen.getByText(commonTranslations.SECRET));
 
-		await expect(screen.findByTestId("ImportWallet__secret-input")).resolves.toBeVisible();
+		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("ImportWallet__secret-input"), "secret.111");
+		userEvent.paste(screen.getByTestId(secretInputID), "secret.111");
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+			expect(successStep()).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("ImportWallet__finish-button"));
+		userEvent.click(finishButton());
 
 		await waitFor(() => expect(profile.wallets().count()).toBe(countBefore + 1));
 	});
@@ -730,14 +735,14 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -745,29 +750,29 @@ describe("ImportWallet", () => {
 
 		userEvent.click(screen.getByText(commonTranslations.SECRET));
 
-		await expect(screen.findByTestId("ImportWallet__secret-input")).resolves.toBeVisible();
+		await expect(screen.findByTestId(secretInputID)).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("ImportWallet__secret-input"), "secret.222");
+		userEvent.paste(screen.getByTestId(secretInputID), "secret.222");
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
 		});
 
-		userEvent.paste(screen.getAllByTestId("InputPassword")[0], "S3cUrePa$sword");
-		userEvent.paste(screen.getAllByTestId("InputPassword")[1], "S3cUrePa$sword");
+		userEvent.paste(screen.getAllByTestId("InputPassword")[0], password);
+		userEvent.paste(screen.getAllByTestId("InputPassword")[1], password);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await waitFor(
 			() => {
-				expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+				expect(successStep()).toBeInTheDocument();
 			},
 			{ timeout: 15_000 },
 		);
@@ -794,12 +799,12 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -807,19 +812,19 @@ describe("ImportWallet", () => {
 
 		userEvent.click(screen.getByText(commonTranslations.SECRET));
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
-		const passphraseInput = screen.getByTestId("ImportWallet__secret-input");
+		const passphraseInput = screen.getByTestId(secretInputID);
 
 		expect(passphraseInput).toBeInTheDocument();
 
 		userEvent.paste(passphraseInput, "abc");
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("ImportWallet__encryption-toggle"));
 
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("EncryptPassword")).toBeInTheDocument();
@@ -827,15 +832,15 @@ describe("ImportWallet", () => {
 
 		userEvent.paste(screen.getByTestId("EncryptPassword__second-secret"), "abc");
 
-		userEvent.paste(screen.getAllByTestId("InputPassword")[0], "S3cUrePa$sword");
-		userEvent.paste(screen.getAllByTestId("InputPassword")[1], "S3cUrePa$sword");
+		userEvent.paste(screen.getAllByTestId("InputPassword")[0], password);
+		userEvent.paste(screen.getAllByTestId("InputPassword")[1], password);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await waitFor(
 			() => {
-				expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+				expect(successStep()).toBeInTheDocument();
 			},
 			{ timeout: 15_000 },
 		);
@@ -862,14 +867,14 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -886,7 +891,7 @@ describe("ImportWallet", () => {
 	it("should show an error message for duplicate address when importing by mnemonic", async () => {
 		const generated = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: testNetwork,
 		});
 
 		profile.wallets().push(generated.wallet);
@@ -911,20 +916,18 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
-		const passphraseInput = screen.getByTestId("ImportWallet__mnemonic-input");
+		expect(mnemonicInput()).toBeInTheDocument();
 
-		expect(passphraseInput).toBeInTheDocument();
-
-		userEvent.paste(passphraseInput, generated.mnemonic);
+		userEvent.paste(mnemonicInput(), generated.mnemonic);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -936,7 +939,7 @@ describe("ImportWallet", () => {
 			);
 		});
 
-		expect(screen.getByTestId("ImportWallet__continue-button")).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 	});
 
 	it("should show an error message for duplicate address when importing by address", async () => {
@@ -960,14 +963,14 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -975,9 +978,9 @@ describe("ImportWallet", () => {
 
 		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
-		await expect(screen.findByTestId("ImportWallet__address-input")).resolves.toBeVisible();
+		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("ImportWallet__address-input"), profile.wallets().first().address());
+		userEvent.paste(await addressInput(), profile.wallets().first().address());
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -989,7 +992,7 @@ describe("ImportWallet", () => {
 			);
 		});
 
-		expect(screen.getByTestId("ImportWallet__continue-button")).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 	});
 
 	it("should show an error message for invalid address", async () => {
@@ -1013,14 +1016,14 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -1028,9 +1031,9 @@ describe("ImportWallet", () => {
 
 		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
-		await expect(screen.findByTestId("ImportWallet__address-input")).resolves.toBeVisible();
+		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("ImportWallet__address-input"), "123");
+		userEvent.paste(await addressInput(), "123");
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(
@@ -1039,7 +1042,7 @@ describe("ImportWallet", () => {
 			);
 		});
 
-		expect(screen.getByTestId("ImportWallet__continue-button")).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 	});
 
 	it("should render as ledger import", async () => {
@@ -1099,14 +1102,14 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -1114,18 +1117,18 @@ describe("ImportWallet", () => {
 
 		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
-		await expect(screen.findByTestId("ImportWallet__address-input")).resolves.toBeVisible();
+		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("ImportWallet__address-input"), randomNewAddress);
+		userEvent.paste(await addressInput(), randomNewAddress);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+			expect(successStep()).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("ImportWallet__finish-button"));
+		userEvent.click(finishButton());
 
 		await waitFor(() => {
 			expect(historySpy).toHaveBeenCalledWith(expect.stringContaining(`/profiles/${profile.id()}/wallets/`));
@@ -1148,7 +1151,7 @@ describe("ImportWallet", () => {
 		const wallet = await emptyProfile.walletFactory().fromMnemonicWithBIP39({
 			coin: "ARK",
 			mnemonic: MNEMONICS[1],
-			network: "ark.devnet",
+			network: testNetwork,
 		});
 
 		wallet.settings().set(Contracts.WalletSetting.Alias, "My wallet");
@@ -1172,14 +1175,14 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
-		await waitFor(() => expect(() => screen.getByTestId("ImportWallet__method-step")).not.toThrow());
+		await waitFor(() => expect(() => methodStep()).not.toThrow());
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectDropdown__caret"));
 
@@ -1187,15 +1190,15 @@ describe("ImportWallet", () => {
 
 		userEvent.click(screen.getByText(commonTranslations.ADDRESS));
 
-		await expect(screen.findByTestId("ImportWallet__address-input")).resolves.toBeVisible();
+		await expect(addressInput()).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("ImportWallet__address-input"), randomNewAddress);
+		userEvent.paste(await addressInput(), randomNewAddress);
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("ImportWallet__success-step")).toBeInTheDocument();
+			expect(successStep()).toBeInTheDocument();
 		});
 
 		const alias = "My Wallet";
@@ -1241,15 +1244,15 @@ describe("ImportWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
-		const coin = profile.coins().get("ARK", "ark.devnet");
+		const coin = profile.coins().get("ARK", testNetwork);
 		const coinMock = jest.spyOn(coin, "__construct").mockImplementationOnce(() => {
 			throw new Error("test");
 		});
 
-		await waitFor(() => expect(screen.getByTestId("ImportWallet__continue-button")).toBeEnabled());
-		userEvent.click(screen.getByTestId("ImportWallet__continue-button"));
+		await waitFor(() => expect(continueButton()).toBeEnabled());
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("SyncErrorMessage__retry")).resolves.toBeVisible();
 
@@ -1267,7 +1270,7 @@ describe("ImportWallet", () => {
 		const wif = "wif.1111";
 
 		const Component = () => {
-			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === "ark.devnet");
+			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
 
 			network.importMethods = () => ({
@@ -1306,7 +1309,7 @@ describe("ImportWallet", () => {
 			{ history, withProviders: false },
 		);
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		await waitFor(() => expect(screen.getByTestId("ImportWallet__wif-input")));
 
@@ -1338,7 +1341,7 @@ describe("ImportWallet", () => {
 		const wif = "wif.1111";
 
 		const Component = () => {
-			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === "ark.devnet");
+			const network = env.availableNetworks().find((net) => net.coin() === "ARK" && net.id() === testNetwork);
 			assertNetwork(network);
 
 			//ts-ignore
@@ -1375,7 +1378,7 @@ describe("ImportWallet", () => {
 			{ history, withProviders: false },
 		);
 
-		expect(screen.getByTestId("ImportWallet__method-step")).toBeInTheDocument();
+		expect(methodStep()).toBeInTheDocument();
 
 		await waitFor(() => expect(screen.getByTestId("ImportWallet__encryptedWif-input")));
 

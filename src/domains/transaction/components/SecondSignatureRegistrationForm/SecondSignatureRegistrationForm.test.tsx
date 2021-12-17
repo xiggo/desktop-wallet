@@ -26,6 +26,8 @@ import {
 const history = createMemoryHistory();
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;
 
+const secondMnemonic = "test mnemonic";
+
 describe("SecondSignatureRegistrationForm", () => {
 	const passphrase = "power return attend drink piece found tragic fire liar page disease combine";
 	let profile: ProfilesContracts.IProfile;
@@ -91,7 +93,7 @@ describe("SecondSignatureRegistrationForm", () => {
 			{
 				defaultValues: {
 					fees,
-					secondMnemonic: "test mnemonic",
+					secondMnemonic,
 				},
 				withProviders: true,
 			},
@@ -99,7 +101,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 		await waitFor(() => expect(screen.getByTestId("SecondSignatureRegistrationForm__generation-step")));
 
-		expect(form()?.getValues("secondMnemonic")).toBe("test mnemonic");
+		expect(form()?.getValues("secondMnemonic")).toBe(secondMnemonic);
 		expect(bip39GenerateMock).not.toHaveBeenCalled();
 		expect(asFragment()).toMatchSnapshot();
 
@@ -155,7 +157,7 @@ describe("SecondSignatureRegistrationForm", () => {
 				{
 					defaultValues: {
 						fees,
-						secondMnemonic: "test mnemonic",
+						secondMnemonic,
 						wallet: {
 							address: () => "address",
 						},
@@ -172,7 +174,7 @@ describe("SecondSignatureRegistrationForm", () => {
 
 			userEvent.click(screen.getByTestId("SecondSignature__copy"));
 
-			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith("test mnemonic"));
+			await waitFor(() => expect(writeTextMock).toHaveBeenCalledWith(secondMnemonic));
 
 			(navigator as any).clipboard = clipboardOriginal;
 
@@ -185,7 +187,7 @@ describe("SecondSignatureRegistrationForm", () => {
 				{
 					defaultValues: {
 						fees,
-						secondMnemonic: "test mnemonic",
+						secondMnemonic,
 						wallet: {
 							address: () => "address",
 						},
@@ -221,7 +223,7 @@ describe("SecondSignatureRegistrationForm", () => {
 				{
 					defaultValues: {
 						fees,
-						secondMnemonic: "test mnemonic",
+						secondMnemonic,
 						wallet: {
 							address: () => "address",
 						},
@@ -249,7 +251,7 @@ describe("SecondSignatureRegistrationForm", () => {
 				{
 					defaultValues: {
 						fees,
-						secondMnemonic: "test mnemonic",
+						secondMnemonic,
 						wallet: {
 							address: () => "address",
 						},

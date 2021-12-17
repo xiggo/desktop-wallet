@@ -6,6 +6,8 @@ import { render, screen, waitFor } from "utils/testing-library";
 
 import { LineGraph } from "./LineGraph";
 
+const itemArea = () => screen.getAllByTestId("LineGraph__item-hover-area");
+
 describe("LineGraph", () => {
 	let data: GraphDataPoint[];
 	let useWidthMock: jest.SpyInstance;
@@ -57,21 +59,21 @@ describe("LineGraph", () => {
 		);
 
 		expect(screen.getByTestId("LineGraph__svg")).toBeInTheDocument();
-		expect(screen.getAllByTestId("LineGraph__item-hover-area")).toHaveLength(3);
+		expect(itemArea()).toHaveLength(3);
 
 		expect(screen.queryByTestId("TooltipContent")).not.toBeInTheDocument();
 
-		userEvent.hover(screen.getAllByTestId("LineGraph__item-hover-area")[0]);
+		userEvent.hover(itemArea()[0]);
 
 		expect(screen.getByTestId("TooltipContent")).toBeInTheDocument();
 		expect(screen.getByTestId("TooltipContent")).toHaveTextContent("item 1 value: 50");
 
-		userEvent.unhover(screen.getAllByTestId("LineGraph__item-hover-area")[0]);
-		userEvent.hover(screen.getAllByTestId("LineGraph__item-hover-area")[1]);
+		userEvent.unhover(itemArea()[0]);
+		userEvent.hover(itemArea()[1]);
 
 		expect(screen.getByTestId("TooltipContent")).toHaveTextContent("item 2 value: 30");
 
-		userEvent.unhover(screen.getAllByTestId("LineGraph__item-hover-area")[1]);
+		userEvent.unhover(itemArea()[1]);
 
 		await waitFor(() => expect(screen.getByTestId("TooltipContainer")).toHaveClass("hidden"));
 

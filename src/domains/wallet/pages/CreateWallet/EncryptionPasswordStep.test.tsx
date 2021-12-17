@@ -14,6 +14,7 @@ let bip39GenerateMock: any;
 
 const passphrase = "power return attend drink piece found tragic fire liar page disease combine";
 const fixtureProfileId = getDefaultProfileId();
+const password = "S3cUrePa$sword";
 
 describe("EncryptionPasswordStep", () => {
 	beforeEach(() => {
@@ -124,13 +125,13 @@ describe("EncryptionPasswordStep", () => {
 		const passwordInput = screen.getAllByTestId("InputPassword")[0];
 		const confirmPassword = screen.getAllByTestId("InputPassword")[1];
 
-		userEvent.paste(passwordInput, "S3cUrePa$sword");
+		userEvent.paste(passwordInput, password);
 
-		await waitFor(() => expect(passwordInput).toHaveValue("S3cUrePa$sword"));
+		await waitFor(() => expect(passwordInput).toHaveValue(password));
 
-		userEvent.paste(confirmPassword, "S3cUrePa$sword");
+		userEvent.paste(confirmPassword, password);
 
-		await waitFor(() => expect(confirmPassword).toHaveValue("S3cUrePa$sword"));
+		await waitFor(() => expect(confirmPassword).toHaveValue(password));
 
 		userEvent.click(screen.getByTestId("CreateWallet__continue-encryption-button"));
 
@@ -240,13 +241,13 @@ describe("EncryptionPasswordStep", () => {
 		const passwordInput = screen.getAllByTestId("InputPassword")[0];
 		const confirmPassword = screen.getAllByTestId("InputPassword")[1];
 
-		userEvent.paste(passwordInput, "S3cUrePa$sword");
+		userEvent.paste(passwordInput, password);
 
-		await waitFor(() => expect(passwordInput).toHaveValue("S3cUrePa$sword"));
+		await waitFor(() => expect(passwordInput).toHaveValue(password));
 
-		userEvent.paste(confirmPassword, "S3cUrePa$sword");
+		userEvent.paste(confirmPassword, password);
 
-		await waitFor(() => expect(confirmPassword).toHaveValue("S3cUrePa$sword"));
+		await waitFor(() => expect(confirmPassword).toHaveValue(password));
 
 		expect(profile.wallets().values()).toHaveLength(0);
 

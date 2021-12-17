@@ -18,6 +18,10 @@ let defaultDelegate: {
 	governanceIdentifier: string;
 };
 
+const smallIcon = () => screen.getByText("hint-small.svg");
+
+const multivote = "WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE";
+
 describe("WalletVote", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -253,7 +257,7 @@ describe("WalletVote", () => {
 
 			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: 1 }))).toBeInTheDocument();
 
-			expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
+			expect(smallIcon()).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -298,7 +302,7 @@ describe("WalletVote", () => {
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t(multivote))).toBeInTheDocument();
 			expect(
 				screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE", { count: votes.length })),
 			).toBeInTheDocument();
@@ -337,7 +341,7 @@ describe("WalletVote", () => {
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t(multivote))).toBeInTheDocument();
 			expect(
 				screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY", { count: votes.length })),
 			).toBeInTheDocument();
@@ -375,7 +379,7 @@ describe("WalletVote", () => {
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t(multivote))).toBeInTheDocument();
 			expect(
 				screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.ACTIVE_COUNT", { count: 1 })),
 			).toBeInTheDocument();
@@ -383,7 +387,7 @@ describe("WalletVote", () => {
 				screen.getByText(`/ ${t("WALLETS.PAGE_WALLET_DETAILS.VOTES.STANDBY_COUNT", { count: 1 })}`),
 			).toBeInTheDocument();
 
-			expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
+			expect(smallIcon()).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -420,12 +424,12 @@ describe("WalletVote", () => {
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t(multivote))).toBeInTheDocument();
 
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Active 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
+			expect(smallIcon()).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -461,12 +465,12 @@ describe("WalletVote", () => {
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t(multivote))).toBeInTheDocument();
 
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
+			expect(smallIcon()).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -511,13 +515,13 @@ describe("WalletVote", () => {
 
 			await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-			expect(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE"))).toBeInTheDocument();
+			expect(screen.getByText(t(multivote))).toBeInTheDocument();
 
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Active 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Standby 1");
 			expect(screen.getByTestId("WalletVote")).toHaveTextContent("Resigned 1");
 
-			expect(screen.getByText("hint-small.svg")).toBeInTheDocument();
+			expect(smallIcon()).toBeInTheDocument();
 			expect(asFragment()).toMatchSnapshot();
 
 			walletSpy.mockRestore();
@@ -553,7 +557,7 @@ describe("WalletVote", () => {
 
 		await expect(screen.findByTestId("WalletVote")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByText(t("WALLETS.PAGE_WALLET_DETAILS.VOTES.MULTIVOTE")));
+		userEvent.click(screen.getByText(t(multivote)));
 
 		expect(onButtonClick).toHaveBeenCalledWith("current");
 

@@ -18,6 +18,10 @@ let bip39GenerateMock: any;
 const fixtureProfileId = getDefaultProfileId();
 const passphrase = "power return attend drink piece found tragic fire liar page disease combine";
 
+const continueButton = () => screen.getByTestId("CreateWallet__continue-button");
+
+const ARKDevnet = "ARK Devnet";
+
 describe("CreateWallet", () => {
 	beforeAll(() => {
 		bip39GenerateMock = jest.spyOn(BIP39, "generate").mockReturnValue(passphrase);
@@ -61,7 +65,6 @@ describe("CreateWallet", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
@@ -75,24 +78,24 @@ describe("CreateWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
-		expect(continueButton).toBeEnabled();
+		expect(continueButton()).toBeEnabled();
 
 		userEvent.clear(selectNetworkInput);
 
 		await waitFor(() => expect(selectNetworkInput).not.toHaveValue());
 
-		expect(continueButton).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
-		expect(continueButton).toBeEnabled();
+		expect(continueButton()).toBeEnabled();
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
@@ -102,11 +105,11 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
@@ -114,7 +117,7 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
@@ -127,11 +130,11 @@ describe("CreateWallet", () => {
 				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
 			}
 		}
-		await waitFor(() => expect(continueButton).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		expect(profile.wallets().values()).toHaveLength(0);
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 
@@ -185,7 +188,6 @@ describe("CreateWallet", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 		const backButton = screen.getByTestId("CreateWallet__back-button");
 
 		const historySpy = jest.spyOn(history, "push").mockImplementation();
@@ -199,24 +201,24 @@ describe("CreateWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
-		expect(continueButton).toBeEnabled();
+		expect(continueButton()).toBeEnabled();
 
 		userEvent.clear(selectNetworkInput);
 
 		await waitFor(() => expect(selectNetworkInput).not.toHaveValue());
 
-		expect(continueButton).toBeDisabled();
+		expect(continueButton()).toBeDisabled();
 
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
-		expect(continueButton).toBeEnabled();
+		expect(continueButton()).toBeEnabled();
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await waitFor(() => expect(profile.wallets().values()).toHaveLength(0));
 
@@ -226,7 +228,7 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -238,7 +240,7 @@ describe("CreateWallet", () => {
 
 		expect(within(steps).getAllByRole("listitem")).toHaveLength(5);
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
@@ -246,7 +248,7 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
@@ -259,9 +261,9 @@ describe("CreateWallet", () => {
 				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
 			}
 		}
-		await waitFor(() => expect(continueButton).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("EncryptPassword")).resolves.toBeVisible();
 
@@ -336,16 +338,15 @@ describe("CreateWallet", () => {
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 
 		expect(asFragment()).toMatchSnapshot();
 
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(continueButton).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -353,7 +354,7 @@ describe("CreateWallet", () => {
 
 		await expect(screen.findByTestId("NetworkStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
@@ -391,15 +392,13 @@ describe("CreateWallet", () => {
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		expect(selectNetworkInput).toHaveValue("ARK Devnet");
-
-		const continueButton = screen.getByTestId("CreateWallet__continue-button");
+		expect(selectNetworkInput).toHaveValue(ARKDevnet);
 
 		await waitFor(() => {
-			expect(continueButton).toBeEnabled();
+			expect(continueButton()).toBeEnabled();
 		});
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(
 			screen.findByText(walletTranslations.PAGE_CREATE_WALLET.NETWORK_STEP.GENERATION_ERROR),
@@ -439,27 +438,26 @@ describe("CreateWallet", () => {
 		expect(asFragment()).toMatchSnapshot();
 
 		const selectNetworkInput = screen.getByTestId("SelectNetworkInput__input");
-		const continueButton = screen.getByTestId("CreateWallet__continue-button");
 
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(continueButton).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
 		userEvent.clear(selectNetworkInput);
 
-		await waitFor(() => expect(continueButton).toBeDisabled());
+		await waitFor(() => expect(continueButton()).toBeDisabled());
 
 		userEvent.paste(selectNetworkInput, "ARK Dev");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(continueButton).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__WalletOverviewStep")).resolves.toBeVisible();
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__ConfirmPassphraseStep")).resolves.toBeVisible();
 
@@ -472,9 +470,9 @@ describe("CreateWallet", () => {
 				await waitFor(() => expect(screen.queryAllByText(/The #(\d+) word/).length === 2 - index));
 			}
 		}
-		await waitFor(() => expect(continueButton).toBeEnabled());
+		await waitFor(() => expect(continueButton()).toBeEnabled());
 
-		userEvent.click(continueButton);
+		userEvent.click(continueButton());
 
 		await expect(screen.findByTestId("CreateWallet__SuccessStep")).resolves.toBeVisible();
 

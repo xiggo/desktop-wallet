@@ -10,6 +10,8 @@ import { httpClient } from "@/app/services";
 import { StubStorage } from "@/tests/mocks";
 import { env, getDefaultProfileId } from "@/utils/testing-library";
 
+const ARKDevnet = "ark.devnet";
+
 describe("useFees", () => {
 	it("should find fees by type if already synced", async () => {
 		const profile = env.profiles().findById(getDefaultProfileId());
@@ -22,9 +24,9 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", "ark.devnet");
+		await env.fees().sync(profile, "ARK", ARKDevnet);
 
-		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toStrictEqual({
+		await expect(current.calculate({ coin: "ARK", network: ARKDevnet, type: "ipfs" })).resolves.toStrictEqual({
 			avg: 5,
 			isDynamic: true,
 			max: 5,
@@ -45,7 +47,7 @@ describe("useFees", () => {
 		await env.profiles().restore(profile);
 		await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARKDevnet,
 		});
 		await env.wallets().syncByProfile(profile);
 
@@ -54,9 +56,9 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", "ark.devnet");
+		await env.fees().sync(profile, "ARK", ARKDevnet);
 
-		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toStrictEqual({
+		await expect(current.calculate({ coin: "ARK", network: ARKDevnet, type: "ipfs" })).resolves.toStrictEqual({
 			avg: 5,
 			isDynamic: true,
 			max: 5,
@@ -81,7 +83,7 @@ describe("useFees", () => {
 		await env.profiles().restore(profile);
 		await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARKDevnet,
 		});
 		await env.wallets().syncByProfile(profile);
 
@@ -90,9 +92,9 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", "ark.devnet");
+		await env.fees().sync(profile, "ARK", ARKDevnet);
 
-		await expect(current.calculate({ coin: "ARK", network: "ark.devnet", type: "ipfs" })).resolves.toStrictEqual({
+		await expect(current.calculate({ coin: "ARK", network: ARKDevnet, type: "ipfs" })).resolves.toStrictEqual({
 			avg: 5,
 			isDynamic: true,
 			max: 5,
@@ -115,7 +117,7 @@ describe("useFees", () => {
 		await env.profiles().restore(profile);
 		await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARKDevnet,
 		});
 		await env.wallets().syncByProfile(profile);
 
@@ -124,13 +126,13 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", "ark.devnet");
+		await env.fees().sync(profile, "ARK", ARKDevnet);
 
 		await expect(
 			current.calculate({
 				coin: "ARK",
 				data: {},
-				network: "ark.devnet",
+				network: ARKDevnet,
 				type: "multiSignature",
 			}),
 		).resolves.toStrictEqual({
@@ -154,7 +156,7 @@ describe("useFees", () => {
 		await env.profiles().restore(profile);
 		const { wallet } = await profile.walletFactory().generate({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARKDevnet,
 		});
 		await env.wallets().syncByProfile(profile);
 
@@ -163,7 +165,7 @@ describe("useFees", () => {
 			result: { current },
 		} = renderHook(() => useFees(profile), { wrapper });
 
-		await env.fees().sync(profile, "ARK", "ark.devnet");
+		await env.fees().sync(profile, "ARK", ARKDevnet);
 
 		await expect(
 			current.calculate({

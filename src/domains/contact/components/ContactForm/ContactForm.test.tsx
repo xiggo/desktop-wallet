@@ -14,6 +14,14 @@ let profile: Contracts.IProfile;
 let contact: Contracts.IContact;
 let validArkDevnetAddress: string;
 
+const addressInput = () => screen.getByTestId("contact-form__address-input");
+const nameInput = () => screen.getByTestId("contact-form__name-input");
+const saveButton = () => screen.getByTestId("contact-form__save-btn");
+
+const addressListID = "contact-form__address-list-item";
+const addAddressID = "contact-form__add-address-btn";
+const ARKDevnet = "ARK Devnet";
+
 describe("ContactForm", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -30,7 +38,7 @@ describe("ContactForm", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
+			expect(saveButton()).toBeDisabled();
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -48,7 +56,7 @@ describe("ContactForm", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
+			expect(saveButton()).toBeDisabled();
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -66,36 +74,36 @@ describe("ContactForm", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__save-btn")).toBeDisabled();
+			expect(saveButton()).toBeDisabled();
 		});
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeInTheDocument();
 		});
 
-		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
+		userEvent.paste(nameInput(), "name");
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
 
 		userEvent.paste(selectNetworkInput, "ARK D");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
-		userEvent.paste(screen.getByTestId("contact-form__address-input"), validArkDevnetAddress);
+		userEvent.paste(addressInput(), validArkDevnetAddress);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(validArkDevnetAddress);
+			expect(addressInput()).toHaveValue(validArkDevnetAddress);
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
+			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
 		});
 
-		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId(addAddressID));
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1);
+			expect(screen.getByTestId(addressListID)).toBeVisible();
 		});
 
 		await waitFor(() => {
@@ -103,7 +111,7 @@ describe("ContactForm", () => {
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__save-btn")).not.toBeDisabled();
+			expect(saveButton()).not.toBeDisabled();
 		});
 	});
 
@@ -122,10 +130,10 @@ describe("ContactForm", () => {
 			/>,
 		);
 
-		userEvent.paste(screen.getByTestId("contact-form__name-input"), name);
+		userEvent.paste(nameInput(), name);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(name);
+			expect(nameInput()).toHaveValue(name);
 		});
 
 		await waitFor(() => {
@@ -141,18 +149,18 @@ describe("ContactForm", () => {
 		userEvent.paste(selectNetworkInput, "ARK D");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 	});
 
 	it("should add a valid address successfully", async () => {
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
 
-		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
+		userEvent.paste(nameInput(), "name");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("name");
+			expect(nameInput()).toHaveValue("name");
 		});
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
@@ -160,34 +168,34 @@ describe("ContactForm", () => {
 		userEvent.paste(selectNetworkInput, "ARK D");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
-		userEvent.paste(screen.getByTestId("contact-form__address-input"), validArkDevnetAddress);
+		userEvent.paste(addressInput(), validArkDevnetAddress);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(validArkDevnetAddress);
+			expect(addressInput()).toHaveValue(validArkDevnetAddress);
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
+			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
 		});
 
-		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId(addAddressID));
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1);
+			expect(screen.getByTestId(addressListID)).toBeVisible();
 		});
 	});
 
 	it("should not add invalid address and should display error message", async () => {
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
 
-		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
+		userEvent.paste(nameInput(), "name");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("name");
+			expect(nameInput()).toHaveValue("name");
 		});
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
@@ -195,36 +203,36 @@ describe("ContactForm", () => {
 		userEvent.paste(selectNetworkInput, "ARK D");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
-		userEvent.paste(screen.getByTestId("contact-form__address-input"), "invalid address");
+		userEvent.paste(addressInput(), "invalid address");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__address-input")).toHaveValue("invalid address");
+			expect(addressInput()).toHaveValue("invalid address");
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
+			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
 		});
 
-		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId(addAddressID));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 
-		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
 	});
 
 	it("should not add duplicate address and display error message", async () => {
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
 
-		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
+		userEvent.paste(nameInput(), "name");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("name");
+			expect(nameInput()).toHaveValue("name");
 		});
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
@@ -232,38 +240,38 @@ describe("ContactForm", () => {
 		userEvent.paste(selectNetworkInput, "ARK D");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
 		const contactAddress = contact.addresses().first().address();
 
-		userEvent.paste(screen.getByTestId("contact-form__address-input"), contactAddress);
+		userEvent.paste(addressInput(), contactAddress);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(contactAddress);
+			expect(addressInput()).toHaveValue(contactAddress);
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
+			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
 		});
 
-		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId(addAddressID));
 
 		await waitFor(() => {
 			expect(screen.getByTestId("Input__error")).toBeVisible();
 		});
 
-		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
 	});
 
 	it("should remove network from options", async () => {
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
 
-		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
+		userEvent.paste(nameInput(), "name");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("name");
+			expect(nameInput()).toHaveValue("name");
 		});
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
@@ -273,20 +281,20 @@ describe("ContactForm", () => {
 
 		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK"));
 
-		userEvent.type(screen.getByTestId("contact-form__address-input"), "AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
+		userEvent.type(addressInput(), "AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__address-input")).toHaveValue("AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
+			expect(addressInput()).toHaveValue("AYuYnr7WwwLUc9rLpALwVFn85NFGGmsNK7");
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__add-address-btn")).not.toBeDisabled();
+			expect(screen.getByTestId(addAddressID)).not.toBeDisabled();
 		});
 
-		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId(addAddressID));
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1);
+			expect(screen.getByTestId(addressListID)).toBeVisible();
 		});
 
 		// Second addition
@@ -294,7 +302,7 @@ describe("ContactForm", () => {
 		userEvent.paste(selectNetworkInput, "ARK");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 	});
 
 	it("should remove an address", async () => {
@@ -309,12 +317,12 @@ describe("ContactForm", () => {
 			/>,
 		);
 
-		expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(contact.addresses().count());
+		expect(screen.getAllByTestId(addressListID)).toHaveLength(contact.addresses().count());
 
 		userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
+			expect(screen.queryByTestId(addressListID)).not.toBeInTheDocument();
 		});
 	});
 
@@ -323,10 +331,10 @@ describe("ContactForm", () => {
 
 		render(<ContactForm onChange={onChange} errors={{}} profile={profile} onCancel={onCancel} onSave={onSave} />);
 
-		userEvent.paste(screen.getByTestId("contact-form__name-input"), "name");
+		userEvent.paste(nameInput(), "name");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue("name");
+			expect(nameInput()).toHaveValue("name");
 		});
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
@@ -334,29 +342,29 @@ describe("ContactForm", () => {
 		userEvent.paste(selectNetworkInput, "ARK D");
 		userEvent.keyboard("{enter}");
 
-		await waitFor(() => expect(selectNetworkInput).toHaveValue("ARK Devnet"));
+		await waitFor(() => expect(selectNetworkInput).toHaveValue(ARKDevnet));
 
-		userEvent.paste(screen.getByTestId("contact-form__address-input"), validArkDevnetAddress);
+		userEvent.paste(addressInput(), validArkDevnetAddress);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__address-input")).toHaveValue(validArkDevnetAddress);
+			expect(addressInput()).toHaveValue(validArkDevnetAddress);
 		});
 
 		await waitFor(() => {
-			expect(screen.queryByTestId("contact-form__add-address-btn")).not.toBeDisabled();
+			expect(screen.queryByTestId(addAddressID)).not.toBeDisabled();
 		});
 
-		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
+		userEvent.click(screen.getByTestId(addAddressID));
 
 		await waitFor(() => {
-			expect(screen.getAllByTestId("contact-form__address-list-item")).toHaveLength(1);
+			expect(screen.getByTestId(addressListID)).toBeVisible();
 		});
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__save-btn")).not.toBeDisabled();
+			expect(saveButton()).not.toBeDisabled();
 		});
 
-		userEvent.click(screen.getByTestId("contact-form__save-btn"));
+		userEvent.click(saveButton());
 
 		await waitFor(() => {
 			expect(onSave).toHaveBeenCalledWith({

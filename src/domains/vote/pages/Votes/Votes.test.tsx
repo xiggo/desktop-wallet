@@ -18,7 +18,10 @@ let profile: Contracts.IProfile;
 let wallet: Contracts.IReadWriteWallet;
 let blankWallet: Contracts.IReadWriteWallet;
 
+const routePath = "/profiles/:profileId/votes";
+
 const blankWalletPassphrase = "power return attend drink piece found tragic fire liar page disease combine";
+const walletID = "ac38fe6d-4b67-4ef1-85be-17c5f6841129";
 
 const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:walletId/votes", hasHistory = false) => {
 	let routeOptions: any = {
@@ -42,6 +45,8 @@ const renderPage = (route: string, routePath = "/profiles/:profileId/wallets/:wa
 	);
 };
 
+const firstVoteButtonID = "DelegateRow__toggle-0";
+
 describe("Votes", () => {
 	beforeAll(async () => {
 		nock("https://neoscan.io/api/main_net/v1/")
@@ -50,7 +55,7 @@ describe("Votes", () => {
 
 		emptyProfile = env.profiles().findById("cba050f1-880f-45f0-9af9-cfe48f406052");
 		profile = env.profiles().findById(getDefaultProfileId());
-		wallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		wallet = profile.wallets().findById(walletID);
 		blankWallet = profile.wallets().push(
 			await profile.walletFactory().fromMnemonicWithBIP39({
 				coin: "ARK",
@@ -88,13 +93,13 @@ describe("Votes", () => {
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("DelegateRow__toggle-0")).resolves.toBeVisible();
+		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render and handle wallet current voting exception", async () => {
-		const currentWallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		const currentWallet = profile.wallets().findById(walletID);
 		const currentMock = jest.spyOn(currentWallet.voting(), "current").mockImplementation(() => {
 			throw new Error("Error");
 		});
@@ -105,7 +110,7 @@ describe("Votes", () => {
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("DelegateRow__toggle-0")).resolves.toBeVisible();
+		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -114,7 +119,6 @@ describe("Votes", () => {
 
 	it("should render with no wallets", () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		const { asFragment, container } = renderPage(route, routePath);
 
 		expect(container).toBeInTheDocument();
@@ -126,7 +130,6 @@ describe("Votes", () => {
 
 	it("should toggle network selection from network filters", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		const { asFragment, container } = renderPage(route, routePath);
 
 		expect(container).toBeInTheDocument();
@@ -172,7 +175,6 @@ describe("Votes", () => {
 		await env.wallets().syncByProfile(profile);
 
 		const route = `/profiles/${profile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		renderPage(route, routePath);
 
 		expect(screen.getAllByTestId("AddressTable")).toHaveLength(2);
@@ -185,7 +187,6 @@ describe("Votes", () => {
 
 	it("should select starred option in the wallets display type", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		const { asFragment, container } = renderPage(route, routePath);
 
 		expect(container).toBeInTheDocument();
@@ -215,7 +216,6 @@ describe("Votes", () => {
 
 	it("should select ledger option in the wallets display type", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		const { asFragment, container } = renderPage(route, routePath);
 
 		expect(container).toBeInTheDocument();
@@ -244,7 +244,7 @@ describe("Votes", () => {
 	});
 
 	it("should filter current delegates", async () => {
-		const currentWallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		const currentWallet = profile.wallets().findById(walletID);
 		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
@@ -267,7 +267,7 @@ describe("Votes", () => {
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("DelegateRow__toggle-0")).resolves.toBeVisible();
+		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
 
@@ -277,14 +277,13 @@ describe("Votes", () => {
 
 		userEvent.click(screen.getByTestId("VotesFilter__option--current"));
 
-		await waitFor(() => expect(screen.getAllByTestId("DelegateRow__toggle-0")).toHaveLength(1));
+		await waitFor(() => expect(screen.getAllByTestId(firstVoteButtonID)).toHaveLength(1));
 
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should navigate to create create page", () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		const { asFragment } = renderPage(route, routePath, true);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
@@ -297,7 +296,6 @@ describe("Votes", () => {
 
 	it("should navigate to import wallet page", () => {
 		const route = `/profiles/${emptyProfile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		const { asFragment } = renderPage(route, routePath, true);
 
 		expect(screen.getByTestId("EmptyBlock")).toBeInTheDocument();
@@ -309,7 +307,7 @@ describe("Votes", () => {
 	});
 
 	it("should select an address and delegate", async () => {
-		const currentWallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		const currentWallet = profile.wallets().findById(walletID);
 		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
@@ -327,7 +325,6 @@ describe("Votes", () => {
 		]);
 
 		const route = `/profiles/${profile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		const { asFragment } = renderPage(route, routePath);
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
@@ -341,10 +338,10 @@ describe("Votes", () => {
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
+			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
+		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
 
 		userEvent.click(selectDelegateButton);
 
@@ -357,7 +354,6 @@ describe("Votes", () => {
 
 	it("should select an address without vote", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		const { asFragment } = renderPage(route, routePath);
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
@@ -380,10 +376,10 @@ describe("Votes", () => {
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
+			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
+		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
 
 		userEvent.click(selectDelegateButton);
 
@@ -404,10 +400,10 @@ describe("Votes", () => {
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
+			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
+		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
 
 		userEvent.click(selectDelegateButton);
 
@@ -418,7 +414,7 @@ describe("Votes", () => {
 	});
 
 	it("should handle resigned delegate and show empty results", async () => {
-		const currentWallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		const currentWallet = profile.wallets().findById(walletID);
 		jest.spyOn(currentWallet.voting(), "current").mockReturnValue([
 			{
 				amount: 0,
@@ -440,7 +436,7 @@ describe("Votes", () => {
 
 		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
 
-		await expect(screen.findByTestId("DelegateRow__toggle-0")).resolves.toBeVisible();
+		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
 		userEvent.click(within(screen.getByTestId("VotesFilter")).getByTestId("dropdown__toggle"));
 
@@ -454,7 +450,7 @@ describe("Votes", () => {
 	});
 
 	it("should trigger network connection warning", async () => {
-		const currentWallet = profile.wallets().findById("ac38fe6d-4b67-4ef1-85be-17c5f6841129");
+		const currentWallet = profile.wallets().findById(walletID);
 		const route = `/profiles/${profile.id()}/wallets/${currentWallet.id()}/votes`;
 
 		const walletRestoreMock = jest.spyOn(profile.wallets().first(), "hasSyncedWithNetwork").mockReturnValue(false);
@@ -480,10 +476,10 @@ describe("Votes", () => {
 		await expect(screen.findByTestId("DelegateTable")).resolves.toBeVisible();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
+			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
+		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
 
 		userEvent.click(selectDelegateButton);
 
@@ -506,10 +502,10 @@ describe("Votes", () => {
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
+			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectDelegateButton = screen.getByTestId("DelegateRow__toggle-0");
+		const selectDelegateButton = screen.getByTestId(firstVoteButtonID);
 
 		userEvent.click(selectDelegateButton);
 
@@ -522,7 +518,6 @@ describe("Votes", () => {
 
 	it("should emit action on continue button to unvote/vote", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		const { asFragment } = renderPage(route, routePath);
 
 		expect(screen.getByTestId("AddressTable")).toBeInTheDocument();
@@ -536,10 +531,10 @@ describe("Votes", () => {
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
 		await waitFor(() => {
-			expect(screen.getByTestId("DelegateRow__toggle-0")).toBeInTheDocument();
+			expect(screen.getByTestId(firstVoteButtonID)).toBeInTheDocument();
 		});
 
-		const selectUnvoteButton = screen.getByTestId("DelegateRow__toggle-0");
+		const selectUnvoteButton = screen.getByTestId(firstVoteButtonID);
 
 		userEvent.click(selectUnvoteButton);
 
@@ -573,7 +568,7 @@ describe("Votes", () => {
 		expect(container).toBeInTheDocument();
 		expect(screen.getByTestId("DelegateTable")).toBeInTheDocument();
 
-		await expect(screen.findByTestId("DelegateRow__toggle-0")).resolves.toBeVisible();
+		await expect(screen.findByTestId(firstVoteButtonID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -585,7 +580,6 @@ describe("Votes", () => {
 
 	it("should filter wallets by address", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		renderPage(route, routePath);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
@@ -604,7 +598,6 @@ describe("Votes", () => {
 
 	it("should filter wallets by alias", async () => {
 		const route = `/profiles/${profile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		renderPage(route, routePath);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));
@@ -625,7 +618,6 @@ describe("Votes", () => {
 		profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, true);
 
 		const route = `/profiles/${profile.id()}/votes`;
-		const routePath = "/profiles/:profileId/votes";
 		renderPage(route, routePath);
 
 		await waitFor(() => expect(screen.queryAllByTestId("TableRow")).toHaveLength(3));

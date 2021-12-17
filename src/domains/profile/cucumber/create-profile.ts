@@ -7,6 +7,8 @@ const translations = buildTranslations();
 
 createFixture("Welcome Screen routing");
 
+const submitButton = Selector('[data-testid="CreateProfile__submit-button"]');
+
 const preSteps = {
 	"Given Alice is on the welcome screen": async (t: TestController) => {
 		await visitWelcomeScreen(t);
@@ -63,7 +65,7 @@ cucumber("@createProfile-withPassword", {
 cucumber("@createProfile-disabledSaveButton", {
 	...preSteps,
 	"Then the create button should be disabled by default": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="CreateProfile__submit-button"]').hasAttribute("disabled")).ok();
+		await t.expect(submitButton.hasAttribute("disabled")).ok();
 	},
 });
 cucumber("@createProfile-invalidPassword", {
@@ -76,7 +78,7 @@ cucumber("@createProfile-invalidPassword", {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
 	},
 	"And the create button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="CreateProfile__submit-button"]').hasAttribute("disabled")).ok();
+		await t.expect(submitButton.hasAttribute("disabled")).ok();
 	},
 });
 cucumber("@createProfile-breachedPassword", {
@@ -89,7 +91,7 @@ cucumber("@createProfile-breachedPassword", {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
 	},
 	"And the create button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="CreateProfile__submit-button"]').hasAttribute("disabled")).ok();
+		await t.expect(submitButton.hasAttribute("disabled")).ok();
 	},
 });
 cucumber("@createProfile-passwordConfirmFail", {
@@ -108,7 +110,7 @@ cucumber("@createProfile-passwordConfirmFail", {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
 	},
 	"And the create button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="CreateProfile__submit-button"]').hasAttribute("disabled")).ok();
+		await t.expect(submitButton.hasAttribute("disabled")).ok();
 	},
 });
 cucumber("@createProfile-invalidNameLength", {
@@ -125,6 +127,6 @@ cucumber("@createProfile-invalidNameLength", {
 		await t.expect(Selector('[data-testid="Input__error"]').exists).ok();
 	},
 	"And the create button is disabled": async (t: TestController) => {
-		await t.expect(Selector('[data-testid="CreateProfile__submit-button"]').hasAttribute("disabled")).ok();
+		await t.expect(submitButton.hasAttribute("disabled")).ok();
 	},
 });

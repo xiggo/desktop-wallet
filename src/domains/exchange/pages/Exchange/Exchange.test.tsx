@@ -17,6 +17,7 @@ import { env, getDefaultProfileId, render, screen, waitFor, within } from "@/uti
 let history: MemoryHistory;
 let profile: Contracts.IProfile;
 
+const exchangeBaseURL = "https://exchanges.payvo.com";
 const exchangeURL = `/profiles/${getDefaultProfileId()}/exchange`;
 
 const stubData = {
@@ -72,7 +73,7 @@ describe("Exchange", () => {
 	});
 
 	it("should render empty", async () => {
-		nock("https://exchanges.payvo.com").get("/api").reply(200, { data: [] });
+		nock(exchangeBaseURL).get("/api").reply(200, { data: [] });
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/exchange">
@@ -100,7 +101,7 @@ describe("Exchange", () => {
 	});
 
 	it("should render with exchanges", async () => {
-		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
+		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		const { container } = render(
 			<Route path="/profiles/:profileId/exchange">
@@ -131,7 +132,7 @@ describe("Exchange", () => {
 	});
 
 	it("should navigate to exchange", async () => {
-		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
+		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -167,7 +168,7 @@ describe("Exchange", () => {
 	});
 
 	it("should navigate to history tab", async () => {
-		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
+		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -199,7 +200,7 @@ describe("Exchange", () => {
 	it("should show exchange transaction history", async () => {
 		profile.exchangeTransactions().create(stubData);
 
-		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
+		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -231,7 +232,7 @@ describe("Exchange", () => {
 		const updateSpy = jest.spyOn(profile.exchangeTransactions(), "update");
 		const exchangeTransaction = profile.exchangeTransactions().create(stubData);
 
-		nock("https://exchanges.payvo.com")
+		nock(exchangeBaseURL)
 			.get("/api")
 			.reply(200, require("tests/fixtures/exchange/exchanges.json"))
 			.get("/api/changenow/orders/id")
@@ -281,7 +282,7 @@ describe("Exchange", () => {
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
 
-		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
+		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -327,7 +328,7 @@ describe("Exchange", () => {
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
 
-		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
+		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">
@@ -388,7 +389,7 @@ describe("Exchange", () => {
 			.exchangeTransactions()
 			.update(exchangeTransaction.id(), { status: Contracts.ExchangeTransactionStatus.Finished });
 
-		nock("https://exchanges.payvo.com").get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
+		nock(exchangeBaseURL).get("/api").reply(200, require("tests/fixtures/exchange/exchanges.json"));
 
 		render(
 			<Route path="/profiles/:profileId/exchange">

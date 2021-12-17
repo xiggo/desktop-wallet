@@ -74,3 +74,5 @@ export const importWalletByAddress = async (t: any, address: string, alias = "Te
 
 	await t.expect(Selector("[data-testid=WalletHeader]").exists).ok();
 };
+
+export const modal = Selector("[data-testid=modal__inner]");

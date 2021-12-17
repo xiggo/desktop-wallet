@@ -33,6 +33,11 @@ let secondWallet: Contracts.IReadWriteWallet;
 const transport = getDefaultLedgerTransport();
 const mnemonic = MNEMONICS[0];
 
+const submitButton = () => screen.getByTestId("SignMessage__submit-button");
+const messageInput = () => screen.getByTestId("SignMessage__message-input");
+
+const signMessage = "Hello World";
+
 describe("SignMessage", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -123,7 +128,7 @@ describe("SignMessage", () => {
 	it("should render signed step with wallet alias", () => {
 		const aliasMock = jest.spyOn(wallet, "alias").mockReturnValue("my-alias");
 		const signedMessage = {
-			message: "Hello World",
+			message: signMessage,
 			signatory: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
 			signature:
 				"e16e8badc6475e2eb4eb814fa0ae434e9ca2240b6131f3bf560969989366baa270786fb87ae2fe2945d60408cedc0a757768ebc768b03bf78e5e9b7a20291ac6",
@@ -139,7 +144,7 @@ describe("SignMessage", () => {
 
 	it("should sign message", async () => {
 		const signedMessage = {
-			message: "Hello World",
+			message: signMessage,
 			signatory: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
 			signature:
 				"e16e8badc6475e2eb4eb814fa0ae434e9ca2240b6131f3bf560969989366baa270786fb87ae2fe2945d60408cedc0a757768ebc768b03bf78e5e9b7a20291ac6",
@@ -165,17 +170,15 @@ describe("SignMessage", () => {
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_MNEMONIC),
 		).toBeInTheDocument();
 
-		const messageInput = screen.getByTestId("SignMessage__message-input");
-
-		userEvent.paste(messageInput, "Hello World");
+		userEvent.paste(messageInput(), signMessage);
 
 		const mnemonicInput = screen.getByTestId("SignMessage__mnemonic-input");
 
 		userEvent.paste(mnemonicInput, mnemonic);
 
-		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(submitButton());
 
 		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
 
@@ -210,17 +213,15 @@ describe("SignMessage", () => {
 
 		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
-		const messageInput = screen.getByTestId("SignMessage__message-input");
-
-		userEvent.paste(messageInput, "Hello World");
+		userEvent.paste(messageInput(), signMessage);
 
 		const mnemonicInput = screen.getByTestId("SignMessage__mnemonic-input");
 
 		userEvent.paste(mnemonicInput, mnemonic);
 
-		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(submitButton());
 
 		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
 
@@ -231,7 +232,7 @@ describe("SignMessage", () => {
 
 	it("should sign message with encryption password", async () => {
 		const signedMessage = {
-			message: "Hello World",
+			message: signMessage,
 			signatory: "03d7001f0cfff639c0e458356581c919d5885868f14f72ba3be74c8f105cce34ac",
 			signature:
 				"e16e8badc6475e2eb4eb814fa0ae434e9ca2240b6131f3bf560969989366baa270786fb87ae2fe2945d60408cedc0a757768ebc768b03bf78e5e9b7a20291ac6",
@@ -260,17 +261,15 @@ describe("SignMessage", () => {
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_ENCRYPTION_PASSWORD),
 		).toBeInTheDocument();
 
-		const messageInput = screen.getByTestId("SignMessage__message-input");
-
-		userEvent.paste(messageInput, "Hello World");
+		userEvent.paste(messageInput(), signMessage);
 
 		const passwordInput = screen.getByTestId("SignMessage__encryption-password");
 
 		userEvent.paste(passwordInput, "password");
 
-		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(submitButton());
 
 		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
 
@@ -282,7 +281,7 @@ describe("SignMessage", () => {
 
 	it("should sign message with secret", async () => {
 		const signedMessage = {
-			message: "Hello World",
+			message: signMessage,
 			signatory: "03a02b9d5fdd1307c2ee4652ba54d492d1fd11a7d1bb3f3a44c4a05e79f19de933",
 			signature:
 				"dd373d859dc8d982de49532d55a654058cc18a79116677a09debf7a2b59b35ef27cf44c935a7b8685c359964b4a88dc602d20e52f7fae83f7482b221ba00179a",
@@ -316,17 +315,15 @@ describe("SignMessage", () => {
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_SECRET),
 		).toBeInTheDocument();
 
-		const messageInput = screen.getByTestId("SignMessage__message-input");
-
-		userEvent.paste(messageInput, "Hello World");
+		userEvent.paste(messageInput(), signMessage);
 
 		const secretInput = screen.getByTestId("SignMessage__secret-input");
 
 		userEvent.paste(secretInput, "secret");
 
-		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(submitButton());
 
 		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.SIGNED_STEP.TITLE)).resolves.toBeVisible();
 
@@ -378,13 +375,11 @@ describe("SignMessage", () => {
 			screen.getByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.DESCRIPTION_LEDGER),
 		).toBeInTheDocument();
 
-		const messageInput = screen.getByTestId("SignMessage__message-input");
+		userEvent.paste(messageInput(), signMessage);
 
-		userEvent.paste(messageInput, "Hello World");
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
-
-		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(submitButton());
 
 		act(() => {
 			observer.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
@@ -432,17 +427,15 @@ describe("SignMessage", () => {
 
 		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
-		const messageInput = screen.getByTestId("SignMessage__message-input");
+		userEvent.paste(messageInput(), signMessage);
 
-		userEvent.paste(messageInput, "Hello World");
-
-		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		act(() => {
 			observer.next({ descriptor: "", deviceModel: { id: "nanoX" }, type: "add" });
 		});
 
-		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(submitButton());
 
 		await waitFor(() =>
 			expect(toastSpy).toHaveBeenCalledWith(transactionTranslations.LEDGER_CONFIRMATION.REJECTED),
@@ -484,13 +477,11 @@ describe("SignMessage", () => {
 
 		await expect(screen.findByText(walletTranslations.MODAL_SIGN_MESSAGE.FORM_STEP.TITLE)).resolves.toBeVisible();
 
-		const messageInput = screen.getByTestId("SignMessage__message-input");
+		userEvent.paste(messageInput(), signMessage);
 
-		userEvent.paste(messageInput, "Hello World");
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		await waitFor(() => expect(screen.getByTestId("SignMessage__submit-button")).toBeEnabled());
-
-		userEvent.click(screen.getByTestId("SignMessage__submit-button"));
+		userEvent.click(submitButton());
 
 		await waitFor(
 			() => {
@@ -526,6 +517,6 @@ describe("SignMessage", () => {
 			},
 		);
 
-		await waitFor(() => expect(screen.getByTestId("SignMessage__message-input")).toHaveValue("My Custom Message"));
+		await waitFor(() => expect(messageInput()).toHaveValue("My Custom Message"));
 	});
 });

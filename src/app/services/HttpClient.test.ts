@@ -4,6 +4,8 @@ import { HttpClient } from "./HttpClient";
 
 let subject: HttpClient;
 
+const httpbin = "http://httpbin.org";
+
 describe("HttpClient", () => {
 	beforeAll(() => {
 		nock.disableNetConnect();
@@ -15,12 +17,12 @@ describe("HttpClient", () => {
 		const responseBody = {
 			args: { key: "value" },
 			origin: "87.95.132.111,10.100.91.201",
-			url: "http://httpbin.org/get",
+			url: `${httpbin}/get`,
 		};
 
-		nock("http://httpbin.org/").get("/get").query(true).reply(200, responseBody);
+		nock(httpbin).get("/get").query(true).reply(200, responseBody);
 
-		const response = await subject.get("http://httpbin.org/get", { key: "value" });
+		const response = await subject.get(`${httpbin}/get`, { key: "value" });
 
 		expect(response.json()).toStrictEqual(responseBody);
 	});
@@ -29,20 +31,20 @@ describe("HttpClient", () => {
 		const responseBody = {
 			args: {},
 			origin: "87.95.132.111,10.100.91.201",
-			url: "http://httpbin.org/get",
+			url: `${httpbin}/get`,
 		};
 
-		nock("http://httpbin.org/").get("/get").reply(200, responseBody);
+		nock(httpbin).get("/get").reply(200, responseBody);
 
-		const response = await subject.get("http://httpbin.org/get");
+		const response = await subject.get(`${httpbin}/get`);
 
 		expect(response.json()).toStrictEqual(responseBody);
 	});
 
 	it("should handle 404 status codes", async () => {
-		nock("http://httpbin.org/").get("/get").reply(404, {});
+		nock(httpbin).get("/get").reply(404, {});
 
-		await expect(subject.get("http://httpbin.org/get")).rejects.toThrow("HTTP request returned status code 404.");
+		await expect(subject.get(`${httpbin}/get`)).rejects.toThrow("HTTP request returned status code 404.");
 	});
 
 	it("should post with body", async () => {
@@ -55,12 +57,12 @@ describe("HttpClient", () => {
 				key: "value",
 			},
 			origin: "87.95.132.111,10.100.91.201",
-			url: "http://httpbin.org/post",
+			url: `${httpbin}/post`,
 		};
 
-		nock("http://httpbin.org/").post("/post").reply(200, responseBody);
+		nock(httpbin).post("/post").reply(200, responseBody);
 
-		const response = await subject.post("http://httpbin.org/post", { key: "value" });
+		const response = await subject.post(`${httpbin}/post`, { key: "value" });
 
 		expect(response.json()).toStrictEqual(responseBody);
 	});
@@ -76,20 +78,20 @@ describe("HttpClient", () => {
 				key: "value",
 			},
 			origin: "87.95.132.111,10.100.91.201",
-			url: "http://httpbin.org/post",
+			url: `${httpbin}/post`,
 		};
 
-		nock("http://httpbin.org/").post("/post").reply(200, responseBody);
+		nock(httpbin).post("/post").reply(200, responseBody);
 
 		const response = await subject
 			.withHeaders({ Authorization: "Bearer TOKEN" })
-			.post("http://httpbin.org/post", { key: "value" });
+			.post(`${httpbin}/post`, { key: "value" });
 
 		expect(response.json()).toStrictEqual(responseBody);
 	});
 
 	it("should throw if an unsupported method is used", async () => {
-		await expect(subject.delete("http://httpbin.org/delete")).rejects.toThrow(
+		await expect(subject.delete(`${httpbin}/delete`)).rejects.toThrow(
 			"Received no response. This looks like a bug.",
 		);
 	});

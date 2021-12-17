@@ -42,6 +42,12 @@ const renderWithFormProvider = (children: any, defaultValues?: any) => {
 	);
 };
 
+const selectFirstRecipient = () => userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+const recipientList = () => screen.getAllByTestId("recipient-list__recipient-list-item");
+const addRecipientButton = () => screen.getByTestId("AddRecipient__add-button");
+
+const selectRecipientID = "SelectRecipient__select-recipient";
+
 describe("AddRecipient", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -166,11 +172,11 @@ describe("AddRecipient", () => {
 
 		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
+		userEvent.click(screen.getByTestId(selectRecipientID));
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		selectFirstRecipient();
 
 		await waitFor(() => expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument());
 
@@ -298,18 +304,18 @@ describe("AddRecipient", () => {
 			expect(+form.getValues("amount")).toBe(values.amount);
 		});
 
-		expect(screen.getByTestId("AddRecipient__add-button")).toBeInTheDocument();
-		expect(screen.getByTestId("AddRecipient__add-button")).toBeDisabled();
+		expect(addRecipientButton()).toBeInTheDocument();
+		expect(addRecipientButton()).toBeDisabled();
 
 		// Valid address
 		userEvent.clear(screen.getByTestId("SelectDropdown__input"));
 		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD");
 
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__add-button")).toBeEnabled());
+		await waitFor(() => expect(addRecipientButton()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
+		userEvent.click(addRecipientButton());
 
-		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(4));
+		await waitFor(() => expect(recipientList()).toHaveLength(4));
 	});
 
 	it("should disable recipient fields if network is not filled", async () => {
@@ -357,11 +363,11 @@ describe("AddRecipient", () => {
 
 		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
+		userEvent.click(screen.getByTestId(selectRecipientID));
 
 		expect(screen.getByTestId("modal__inner")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		selectFirstRecipient();
 
 		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
@@ -371,9 +377,9 @@ describe("AddRecipient", () => {
 
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
-		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
+		userEvent.click(addRecipientButton());
 
-		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
+		await waitFor(() => expect(recipientList()).toHaveLength(1));
 
 		expect(screen.getAllByTestId("Address__alias")).toHaveLength(1);
 		expect(screen.getByText("ARK Wallet 1")).toBeInTheDocument();
@@ -384,13 +390,11 @@ describe("AddRecipient", () => {
 
 		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
+		userEvent.click(screen.getByTestId(selectRecipientID));
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		const firstAddress = screen.getByTestId("RecipientListItem__select-button-0");
-
-		userEvent.click(firstAddress);
+		selectFirstRecipient();
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
@@ -406,13 +410,11 @@ describe("AddRecipient", () => {
 
 		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
+		userEvent.click(screen.getByTestId(selectRecipientID));
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		const firstAddress = screen.getByTestId("RecipientListItem__select-button-0");
-
-		userEvent.click(firstAddress);
+		selectFirstRecipient();
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
@@ -428,13 +430,13 @@ describe("AddRecipient", () => {
 
 		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
+		userEvent.click(screen.getByTestId(selectRecipientID));
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryByTestId("Input__error")).not.toBeInTheDocument());
 
-		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		selectFirstRecipient();
 
 		userEvent.paste(screen.getByTestId("SelectDropdown__input"), "abc");
 
@@ -494,17 +496,15 @@ describe("AddRecipient", () => {
 
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
 
-		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(2));
+		await waitFor(() => expect(recipientList()).toHaveLength(2));
 
-		const removeButton = within(screen.getAllByTestId("recipient-list__recipient-list-item")[0]).getAllByTestId(
-			"recipient-list__remove-recipient",
-		);
+		const removeButton = within(recipientList()[0]).getAllByTestId("recipient-list__remove-recipient");
 
 		expect(removeButton[0]).toBeInTheDocument();
 
 		userEvent.click(removeButton[0]);
 
-		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
+		await waitFor(() => expect(recipientList()).toHaveLength(1));
 	});
 
 	it("should not override default values in single tab", async () => {
@@ -554,9 +554,9 @@ describe("AddRecipient", () => {
 
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), values.amount.toString());
 
-		userEvent.click(screen.getByTestId("AddRecipient__add-button"));
+		userEvent.click(addRecipientButton());
 
-		await waitFor(() => expect(screen.getAllByTestId("recipient-list__recipient-list-item")).toHaveLength(1));
+		await waitFor(() => expect(recipientList()).toHaveLength(1));
 
 		userEvent.click(screen.getByText(translations.TRANSACTION.SINGLE));
 
@@ -582,17 +582,17 @@ describe("AddRecipient", () => {
 
 		userEvent.click(screen.getByText(translations.TRANSACTION.MULTIPLE));
 
-		await expect(screen.findByTestId("SelectRecipient__select-recipient")).resolves.toBeVisible();
+		await expect(screen.findByTestId(selectRecipientID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SelectRecipient__select-recipient"));
+		userEvent.click(screen.getByTestId(selectRecipientID));
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("RecipientListItem__select-button-0"));
+		selectFirstRecipient();
 
 		userEvent.paste(screen.getByTestId("AddRecipient__amount"), "1");
 
-		await waitFor(() => expect(screen.getByTestId("AddRecipient__add-button")).toBeDisabled());
+		await waitFor(() => expect(addRecipientButton()).toBeDisabled());
 
 		mockMultiPaymentRecipients.mockRestore();
 	});

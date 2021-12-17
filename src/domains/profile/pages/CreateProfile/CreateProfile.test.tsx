@@ -24,6 +24,8 @@ const showOpenDialogParameters = {
 	properties: ["openFile"],
 };
 
+const profileName = "test profile";
+
 const baseSettings = {
 	ACCENT_COLOR: "green",
 	ADVANCED_MODE: false,
@@ -35,7 +37,7 @@ const baseSettings = {
 	EXCHANGE_CURRENCY: "BTC",
 	LOCALE: "en-US",
 	MARKET_PROVIDER: "cryptocompare",
-	NAME: "test profile",
+	NAME: profileName,
 	SCREENSHOT_PROTECTION: true,
 	THEME: "dark",
 	TIME_FORMAT: "h:mm A",
@@ -44,15 +46,20 @@ const baseSettings = {
 	USE_TEST_NETWORKS: false,
 };
 
+const BASE64_REGEX = /(?:[\d+/A-Za-z]{4})*(?:[\d+/A-Za-z]{2}==|[\d+/A-Za-z]{3}=)?/g;
+
+const uploadButton = () => screen.getByTestId("SelectProfileImage__upload-button");
+const submitButton = () => screen.getByTestId("CreateProfile__submit-button");
+
+const avatarID = "SelectProfileImage__avatar-identicon";
+
 const renderComponent = async () => {
 	const utils = render(<CreateProfile />);
 
-	await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeDisabled());
+	await waitFor(() => expect(submitButton()).toBeDisabled());
 
 	return utils;
 };
-
-const BASE64_REGEX = /(?:[\d+/A-Za-z]{4})*(?:[\d+/A-Za-z]{2}==|[\d+/A-Za-z]{3}=)?/g;
 
 describe("CreateProfile", () => {
 	beforeAll(() => {
@@ -93,7 +100,7 @@ describe("CreateProfile", () => {
 		await renderComponent();
 
 		// Upload avatar image
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(uploadButton());
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
@@ -111,9 +118,9 @@ describe("CreateProfile", () => {
 
 		userEvent.click(screen.getByRole("checkbox"));
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(submitButton());
 
 		await waitFor(() => expect(env.profiles().count()).toBe(1));
 
@@ -130,8 +137,7 @@ describe("CreateProfile", () => {
 	});
 
 	it("should not be able to create new profile if name already exists", async () => {
-		const name = "test profile";
-		const profile = env.profiles().create(name);
+		const profile = env.profiles().create(profileName);
 
 		await renderComponent();
 
@@ -140,12 +146,12 @@ describe("CreateProfile", () => {
 		inputElement.select();
 		userEvent.paste(inputElement, "t");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		inputElement.select();
-		userEvent.paste(inputElement, name);
+		userEvent.paste(inputElement, profileName);
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeDisabled());
+		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 
@@ -160,12 +166,12 @@ describe("CreateProfile", () => {
 		inputElement.select();
 		userEvent.paste(inputElement, "t");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
 		inputElement.select();
 		userEvent.paste(inputElement, "     ");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeDisabled());
+		await waitFor(() => expect(submitButton()).toBeDisabled());
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 	});
@@ -175,11 +181,11 @@ describe("CreateProfile", () => {
 
 		userEvent.paste(screen.getAllByTestId("Input")[0], "t");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() => expect(submitButton()).not.toHaveAttribute("disabled"));
 
-		userEvent.paste(screen.getAllByTestId("Input")[0], "test profile".repeat(10));
+		userEvent.paste(screen.getAllByTestId("Input")[0], profileName.repeat(10));
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(submitButton()).toHaveAttribute("disabled"));
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 	});
@@ -191,9 +197,9 @@ describe("CreateProfile", () => {
 		userEvent.paste(screen.getAllByTestId("InputPassword")[0], "S3cUrePa$sword.test");
 		userEvent.paste(screen.getAllByTestId("InputPassword")[1], "S3cUrePa$sword.test");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(submitButton());
 
 		await waitFor(() => expect(env.profiles().last().usesPassword()).toBe(true));
 	});
@@ -211,7 +217,7 @@ describe("CreateProfile", () => {
 		userEvent.paste(passwordInput, "S3cUrePa$sword.test");
 		userEvent.paste(passwordConfirmationInput, "S3cUrePa$sword.wrong");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(submitButton()).toHaveAttribute("disabled"));
 
 		passwordInput.select();
 		userEvent.paste(passwordInput, "S3cUrePa$sword");
@@ -219,7 +225,7 @@ describe("CreateProfile", () => {
 		passwordConfirmationInput.select();
 		userEvent.paste(passwordConfirmationInput, "S3cUrePa$sword");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).not.toHaveAttribute("disabled"));
+		await waitFor(() => expect(submitButton()).not.toHaveAttribute("disabled"));
 
 		passwordConfirmationInput.select();
 		userEvent.paste(passwordConfirmationInput, "S3cUrePa$sword.test");
@@ -227,7 +233,7 @@ describe("CreateProfile", () => {
 		passwordInput.select();
 		userEvent.paste(passwordInput, "S3cUrePa$sword.wrong");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toHaveAttribute("disabled"));
+		await waitFor(() => expect(submitButton()).toHaveAttribute("disabled"));
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
 	});
@@ -235,7 +241,7 @@ describe("CreateProfile", () => {
 	it("should update the avatar when removing focus from name input", async () => {
 		await renderComponent();
 
-		expect(screen.queryByTestId("SelectProfileImage__avatar-identicon")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(avatarID)).not.toBeInTheDocument();
 
 		const inputElement: HTMLInputElement = screen.getByTestId("Input");
 
@@ -246,17 +252,17 @@ describe("CreateProfile", () => {
 
 		fireEvent.blur(inputElement);
 
-		await expect(screen.findByTestId("SelectProfileImage__avatar-identicon")).resolves.toBeVisible();
+		await expect(screen.findByTestId(avatarID)).resolves.toBeVisible();
 
 		inputElement.select();
-		userEvent.paste(inputElement, "test profile");
-		await waitFor(() => expect(inputElement).toHaveValue("test profile"));
+		userEvent.paste(inputElement, profileName);
+		await waitFor(() => expect(inputElement).toHaveValue(profileName));
 
 		expect(inputElement).toHaveFocus();
 
 		fireEvent.blur(inputElement);
 
-		await expect(screen.findByTestId("SelectProfileImage__avatar-identicon")).resolves.toBeVisible();
+		await expect(screen.findByTestId(avatarID)).resolves.toBeVisible();
 
 		userEvent.clear(inputElement);
 		await waitFor(() => expect(inputElement).not.toHaveValue());
@@ -265,14 +271,14 @@ describe("CreateProfile", () => {
 
 		fireEvent.blur(inputElement);
 
-		expect(screen.queryByTestId("SelectProfileImage__avatar-identicon")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(avatarID)).not.toBeInTheDocument();
 	});
 
 	it("should not update the uploaded avatar when removing focus from name input", async () => {
 		await renderComponent();
 
 		// Upload avatar image
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(uploadButton());
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
@@ -293,7 +299,7 @@ describe("CreateProfile", () => {
 		const profileCount = env.profiles().count();
 
 		// Upload avatar image
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(uploadButton());
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
@@ -301,9 +307,9 @@ describe("CreateProfile", () => {
 
 		userEvent.paste(screen.getAllByTestId("Input")[0], "test profile 4");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(submitButton());
 
 		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
 	});
@@ -314,13 +320,13 @@ describe("CreateProfile", () => {
 		userEvent.paste(screen.getAllByTestId("Input")[0], "test profile 1");
 
 		// Upload avatar image
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(uploadButton());
 
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
 		userEvent.click(screen.getByTestId("SelectProfileImage__remove-button"));
 
-		expect(screen.getByTestId("SelectProfileImage__avatar-identicon")).toBeInTheDocument();
+		expect(screen.getByTestId(avatarID)).toBeInTheDocument();
 	});
 
 	it("should not upload avatar image", async () => {
@@ -333,14 +339,14 @@ describe("CreateProfile", () => {
 			filePaths: undefined,
 		}));
 
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		userEvent.click(uploadButton());
 		await waitFor(() => expect(showOpenDialogMock).toHaveBeenCalledWith(showOpenDialogParameters));
 
 		userEvent.paste(screen.getAllByTestId("Input")[0], "test profile 5");
 
-		await waitFor(() => expect(screen.getByTestId("CreateProfile__submit-button")).toBeEnabled());
+		await waitFor(() => expect(submitButton()).toBeEnabled());
 
-		userEvent.click(screen.getByTestId("CreateProfile__submit-button"));
+		userEvent.click(submitButton());
 
 		await waitFor(() => expect(env.profiles().count()).toBe(profileCount + 1));
 	});

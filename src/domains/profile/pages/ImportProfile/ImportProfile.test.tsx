@@ -15,6 +15,21 @@ const darkThemeDwe = fs.readFileSync("src/tests/fixtures/profile/import/profile-
 const lightThemeDwe = fs.readFileSync("src/tests/fixtures/profile/import/profile-light-theme.dwe");
 const history = createMemoryHistory();
 
+const importProfileURL = "/profiles/import";
+
+const browseFiles = () => screen.getByTestId("SelectFile__browse-files");
+
+const changeFileID = "SelectFileStep__change-file";
+const submitID = "PasswordModal__submit-button";
+const validPassword = "S3cUrePa$sword";
+const wrongPassword = "wrong password";
+
+const filePath = "path/to/sample-export.dwe";
+const sampleFiles = [
+	{ name: "profile-export.dwe", path: filePath },
+	{ name: "profile.dwe", path: filePath },
+];
+
 describe("ImportProfile", () => {
 	let consoleSpy: jest.SpyInstance;
 	let fsMock: jest.SpyInstance;
@@ -31,7 +46,7 @@ describe("ImportProfile", () => {
 
 	it("should render first step", async () => {
 		const history = createMemoryHistory();
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 
 		const { container } = render(
 			<EnvironmentProvider env={env}>
@@ -39,13 +54,13 @@ describe("ImportProfile", () => {
 			</EnvironmentProvider>,
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should go back", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
 		render(
@@ -55,7 +70,7 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("SelectFileStep__back"));
@@ -65,7 +80,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should change file format", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 
 		render(
 			<EnvironmentProvider env={env}>
@@ -74,15 +89,15 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectFileStep__change-file"));
+		userEvent.click(screen.getByTestId(changeFileID));
 
-		await waitFor(() => expect(screen.queryByTestId("SelectFileStep__change-file")).not.toBeInTheDocument());
+		await waitFor(() => expect(screen.queryByTestId(changeFileID)).not.toBeInTheDocument());
 	});
 
 	it("should select file and go to step 2", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 
 		render(
 			<EnvironmentProvider env={env}>
@@ -91,12 +106,12 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+				files: sampleFiles.slice(0, 1),
 			},
 		});
 
@@ -104,7 +119,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should request and set password for importing password protected profile", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 
 		render(
 			<EnvironmentProvider env={env}>
@@ -113,24 +128,24 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+				files: sampleFiles.slice(0, 1),
 			},
 		});
 
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), validPassword);
 
 		// wait for formState.isValid to be updated
-		await expect(screen.findByTestId("PasswordModal__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		expect(screen.getByTestId("ProcessingImport")).toBeVisible();
 
@@ -138,7 +153,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should close password modal and go back to select file", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 
 		render(
 			<EnvironmentProvider env={env}>
@@ -147,12 +162,12 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+				files: sampleFiles.slice(0, 1),
 			},
 		});
 
@@ -161,11 +176,11 @@ describe("ImportProfile", () => {
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 
-		await expect(screen.findByTestId("SelectFileStep__change-file")).resolves.toBeVisible();
+		await expect(screen.findByTestId(changeFileID)).resolves.toBeVisible();
 	});
 
 	it("should successfully import profile and return to home screen", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 		jest.spyOn(fs, "readFileSync").mockReturnValue(passwordProtectedDwe);
 
@@ -176,12 +191,12 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
+				files: sampleFiles.slice(1),
 			},
 		});
 
@@ -189,10 +204,10 @@ describe("ImportProfile", () => {
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
-		await waitFor(() => expect(screen.getByTestId("PasswordModal__input")).toHaveValue("S3cUrePa$sword"));
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), validPassword);
+		await waitFor(() => expect(screen.getByTestId("PasswordModal__input")).toHaveValue(validPassword));
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		expect(screen.getByTestId("ProcessingImport")).toBeVisible();
 
@@ -206,7 +221,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should successfully import legacy profile and return to home screen", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 		jest.spyOn(fs, "readFileSync").mockReturnValueOnce(legacyJson);
 
@@ -217,12 +232,12 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("SelectFileStep__change-file"));
+		userEvent.click(screen.getByTestId(changeFileID));
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
 				files: [{ name: "legacy-profile.json", path: "path/to/legacy-profile.json" }],
 			},
@@ -244,7 +259,7 @@ describe("ImportProfile", () => {
 		["dark", darkThemeDwe],
 		["light", lightThemeDwe],
 	])("should apply theme setting of imported profile regardless of OS preferences", async (theme, dweFile) => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 
 		jest.spyOn(fs, "readFileSync").mockReturnValueOnce(dweFile);
 
@@ -255,12 +270,12 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
+				files: sampleFiles.slice(1),
 			},
 		});
 
@@ -280,7 +295,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should go to step 3 and back", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 
 		render(
 			<EnvironmentProvider env={env}>
@@ -289,12 +304,12 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
+				files: sampleFiles.slice(1),
 			},
 		});
 
@@ -302,13 +317,13 @@ describe("ImportProfile", () => {
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), validPassword);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("S3cUrePa$sword");
+			expect(screen.getByTestId("PasswordModal__input")).toHaveValue(validPassword);
 		});
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		expect(screen.getByTestId("ProcessingImport")).toBeVisible();
 
@@ -316,11 +331,11 @@ describe("ImportProfile", () => {
 
 		userEvent.click(screen.getByTestId("CreateProfile__back-button"));
 
-		await expect(screen.findByTestId("SelectFileStep__change-file")).resolves.toBeVisible();
+		await expect(screen.findByTestId(changeFileID)).resolves.toBeVisible();
 	});
 
 	it("should fail profile import and show error step", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 
 		render(
@@ -330,25 +345,25 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+				files: sampleFiles.slice(0, 1),
 			},
 		});
 
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), "wrong password");
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), wrongPassword);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("wrong password");
+			expect(screen.getByTestId("PasswordModal__input")).toHaveValue(wrongPassword);
 		});
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
 
@@ -356,7 +371,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should fail profile import and retry", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 
 		render(
@@ -366,25 +381,25 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "profile.dwe", path: "path/to/sample-export.dwe" }],
+				files: sampleFiles.slice(1),
 			},
 		});
 
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), "wrong password");
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), wrongPassword);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("wrong password");
+			expect(screen.getByTestId("PasswordModal__input")).toHaveValue(wrongPassword);
 		});
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
 
@@ -396,7 +411,7 @@ describe("ImportProfile", () => {
 	});
 
 	it("should fail profile import and go back to home screen", async () => {
-		history.push("/profiles/import");
+		history.push(importProfileURL);
 		const corruptedDweMock = jest.spyOn(fs, "readFileSync").mockReturnValue(corruptedDwe);
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
 
@@ -407,25 +422,25 @@ describe("ImportProfile", () => {
 			{ history },
 		);
 
-		expect(screen.getByTestId("SelectFileStep__change-file")).toBeInTheDocument();
+		expect(screen.getByTestId(changeFileID)).toBeInTheDocument();
 		expect(screen.getByTestId("SelectFileStep__back")).toBeInTheDocument();
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "profile-export.dwe", path: "path/to/sample-export.dwe" }],
+				files: sampleFiles.slice(0, 1),
 			},
 		});
 
 		await expect(screen.findByTestId("ProcessingImport")).resolves.toBeVisible();
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("PasswordModal__input"), "wrong password");
+		userEvent.paste(screen.getByTestId("PasswordModal__input"), wrongPassword);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("PasswordModal__input")).toHaveValue("wrong password");
+			expect(screen.getByTestId("PasswordModal__input")).toHaveValue(wrongPassword);
 		});
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId("ImportError")).resolves.toBeVisible();
 

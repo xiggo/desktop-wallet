@@ -3,7 +3,7 @@ import { Selector } from "testcafe";
 import { buildTranslations } from "../../../app/i18n/helpers";
 import { cucumber } from "../../../utils/e2e-utils";
 import { goToProfile } from "../../profile/e2e/common";
-import { goToWallet } from "../e2e/common";
+import { goToWallet, modal } from "../e2e/common";
 
 const translations = buildTranslations();
 
@@ -15,7 +15,7 @@ const openUpdateWalletName = async (t: any) => {
 		),
 	);
 
-	await t.expect(Selector("[data-testid=modal__inner]").exists).ok();
+	await t.expect(modal.exists).ok();
 	await t.expect(Selector('[data-testid="modal__close-btn"]').exists).ok();
 };
 
@@ -33,7 +33,7 @@ const saveButtonStep = {
 	"And the update name save button is disabled": async (t: TestController) => {
 		await t.expect(Selector("[data-testid=UpdateWalletName__submit]").hasAttribute("disabled")).ok();
 		await t.click(Selector('[data-testid="UpdateWalletName__submit"]'));
-		await t.expect(Selector("[data-testid=modal__inner]").exists).ok();
+		await t.expect(modal.exists).ok();
 	},
 };
 
@@ -49,7 +49,7 @@ cucumber("@updateWalletName", {
 	},
 	"Then the wallet name is updated": async (t: TestController) => {
 		const walletLabelNameInput = Selector('[data-testid="UpdateWalletName__input"]');
-		await t.expect(Selector("[data-testid=modal__inner]").exists).notOk();
+		await t.expect(modal.exists).notOk();
 		await openUpdateWalletName(t);
 		await t.expect(walletLabelNameInput.value).eql("New Name");
 	},
@@ -60,7 +60,7 @@ cucumber("@updateWalletName-openAndCancel", {
 		await t.click(Selector("button").withText(translations.COMMON.CANCEL));
 	},
 	"Then the update name modal is no longer displayed": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=modal__inner]").exists).notOk();
+		await t.expect(modal.exists).notOk();
 	},
 });
 cucumber("@updateWalletName-openAndClose", {
@@ -69,7 +69,7 @@ cucumber("@updateWalletName-openAndClose", {
 		await t.click(Selector('[data-testid="modal__close-btn"]'));
 	},
 	"Then the update name modal is no longer displayed": async (t: TestController) => {
-		await t.expect(Selector("[data-testid=modal__inner]").exists).notOk();
+		await t.expect(modal.exists).notOk();
 	},
 });
 cucumber("@updateWalletName-invalidNameLength", {

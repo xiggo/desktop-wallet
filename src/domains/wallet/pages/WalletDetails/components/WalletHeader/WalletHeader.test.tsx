@@ -33,6 +33,8 @@ const clickItem = (label: string) => {
 	userEvent.click(within(screen.getByTestId("dropdown__content")).getByText(label));
 };
 
+const closeModal = () => userEvent.click(screen.getByTestId("modal__close-btn"));
+
 describe("WalletHeader", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -205,7 +207,7 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			userEvent.click(screen.getByTestId("modal__close-btn"));
+			closeModal();
 		} else {
 			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
@@ -223,7 +225,7 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			userEvent.click(screen.getByTestId("modal__close-btn"));
+			closeModal();
 		} else {
 			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
@@ -241,7 +243,7 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			userEvent.click(screen.getByTestId("modal__close-btn"));
+			closeModal();
 		} else {
 			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
@@ -259,7 +261,7 @@ describe("WalletHeader", () => {
 		);
 
 		if (action === "close") {
-			userEvent.click(screen.getByTestId("modal__close-btn"));
+			closeModal();
 		} else {
 			userEvent.click(screen.getByText(commonTranslations.CANCEL));
 		}
@@ -278,7 +280,7 @@ describe("WalletHeader", () => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(walletTranslations.MODAL_RECEIVE_FUNDS.TITLE),
 		);
 
-		userEvent.click(screen.getByTestId("modal__close-btn"));
+		closeModal();
 
 		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 	});
@@ -452,7 +454,7 @@ describe("WalletHeader", () => {
 
 		await expect(screen.findByTestId("UnlockTokensModal")).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("modal__close-btn"));
+		closeModal();
 
 		await waitFor(() => expect(screen.queryByTestId("UnlockTokensModal")).not.toBeInTheDocument());
 

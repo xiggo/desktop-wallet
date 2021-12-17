@@ -5,6 +5,8 @@ import React from "react";
 import { Clipboard } from "./Clipboard";
 import { render, screen, waitFor } from "@/utils/testing-library";
 
+const clipboardCheckmarkID = "clipboard-button__checkmark";
+
 describe("ClipboardButton", () => {
 	beforeAll(() => {
 		(navigator as any).clipboard = {
@@ -23,11 +25,11 @@ describe("ClipboardButton", () => {
 			</Clipboard>,
 		);
 
-		expect(screen.queryByTestId("clipboard-button__checkmark")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(clipboardCheckmarkID)).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
 
-		await expect(screen.findByTestId("clipboard-button__checkmark")).resolves.toBeInTheDocument();
+		await expect(screen.findByTestId(clipboardCheckmarkID)).resolves.toBeInTheDocument();
 	});
 
 	it("should hide checkmark", async () => {
@@ -37,13 +39,13 @@ describe("ClipboardButton", () => {
 			</Clipboard>,
 		);
 
-		expect(screen.queryByTestId("clipboard-button__checkmark")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(clipboardCheckmarkID)).not.toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("clipboard-button__wrapper"));
 
-		await expect(screen.findByTestId("clipboard-button__checkmark")).resolves.toBeInTheDocument();
+		await expect(screen.findByTestId(clipboardCheckmarkID)).resolves.toBeInTheDocument();
 
-		await waitFor(() => expect(screen.queryByTestId("clipboard-button__checkmark")).not.toBeInTheDocument(), {
+		await waitFor(() => expect(screen.queryByTestId(clipboardCheckmarkID)).not.toBeInTheDocument(), {
 			timeout: 2000,
 		});
 	});

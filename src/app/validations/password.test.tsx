@@ -5,6 +5,9 @@ import { useTranslation } from "react-i18next";
 
 import { password } from "./password";
 
+const validPassword = "S3cUr3!Pas#w0rd";
+const weakPasswordMessage = "COMMON.VALIDATION.PASSWORD_WEAK";
+
 describe("Password Validation", () => {
 	let pwnd: jest.SpyInstance;
 
@@ -25,9 +28,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("NO_LOWER")).resolves.toBe(
-			t("COMMON.VALIDATION.PASSWORD_WEAK"),
-		);
+		await expect(passwordValidation.password().validate("NO_LOWER")).resolves.toBe(t(weakPasswordMessage));
 		expect(pwnd).not.toHaveBeenCalled();
 	});
 
@@ -36,9 +37,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("no_upper")).resolves.toBe(
-			t("COMMON.VALIDATION.PASSWORD_WEAK"),
-		);
+		await expect(passwordValidation.password().validate("no_upper")).resolves.toBe(t(weakPasswordMessage));
 		expect(pwnd).not.toHaveBeenCalled();
 	});
 
@@ -47,9 +46,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("NoNumeric")).resolves.toBe(
-			t("COMMON.VALIDATION.PASSWORD_WEAK"),
-		);
+		await expect(passwordValidation.password().validate("NoNumeric")).resolves.toBe(t(weakPasswordMessage));
 		expect(pwnd).not.toHaveBeenCalled();
 	});
 
@@ -58,9 +55,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("N0SpecialChar5")).resolves.toBe(
-			t("COMMON.VALIDATION.PASSWORD_WEAK"),
-		);
+		await expect(passwordValidation.password().validate("N0SpecialChar5")).resolves.toBe(t(weakPasswordMessage));
 		expect(pwnd).not.toHaveBeenCalled();
 	});
 
@@ -69,9 +64,7 @@ describe("Password Validation", () => {
 		const { t } = result.current;
 		const passwordValidation = password(t);
 
-		await expect(passwordValidation.password().validate("shortpw")).resolves.toBe(
-			t("COMMON.VALIDATION.PASSWORD_WEAK"),
-		);
+		await expect(passwordValidation.password().validate("shortpw")).resolves.toBe(t(weakPasswordMessage));
 		expect(pwnd).not.toHaveBeenCalled();
 	});
 
@@ -82,15 +75,15 @@ describe("Password Validation", () => {
 
 		pwnd.mockImplementation(() => Promise.resolve(1));
 
-		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toBe(
+		await expect(passwordValidation.password().validate(validPassword)).resolves.toBe(
 			t("COMMON.VALIDATION.PASSWORD_LEAKED"),
 		);
-		expect(pwnd).toHaveBeenCalledWith("S3cUr3!Pas#w0rd");
+		expect(pwnd).toHaveBeenCalledWith(validPassword);
 
 		pwnd.mockImplementation(() => Promise.resolve(0));
 
-		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toBe(true);
-		expect(pwnd).toHaveBeenCalledWith("S3cUr3!Pas#w0rd");
+		await expect(passwordValidation.password().validate(validPassword)).resolves.toBe(true);
+		expect(pwnd).toHaveBeenCalledWith(validPassword);
 	});
 
 	it("should ignore leaked validation if haveibeenpwned API is unreachable", async () => {
@@ -100,18 +93,16 @@ describe("Password Validation", () => {
 
 		pwnd.mockImplementation(() => Promise.reject());
 
-		await expect(passwordValidation.password().validate("S3cUr3!Pas#w0rd")).resolves.toBe(true);
+		await expect(passwordValidation.password().validate(validPassword)).resolves.toBe(true);
 	});
 
 	it("should require different password than the old password", async () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const passwordRule = password(t).password("S3cUr3!Pas#w0rd");
+		const passwordRule = password(t).password(validPassword);
 
-		await expect(passwordRule.validate("S3cUr3!Pas#w0rd")).resolves.toBe(
-			t("COMMON.VALIDATION.PASSWORD_SAME_AS_OLD"),
-		);
+		await expect(passwordRule.validate(validPassword)).resolves.toBe(t("COMMON.VALIDATION.PASSWORD_SAME_AS_OLD"));
 		await expect(passwordRule.validate("S3cUr3!Pas#w0rd2different")).resolves.toBe(true);
 	});
 

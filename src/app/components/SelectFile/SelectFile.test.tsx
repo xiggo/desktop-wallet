@@ -9,15 +9,19 @@ import { useTranslation } from "react-i18next";
 import { SelectFile } from "./SelectFile";
 import { fireEvent, render, screen, waitFor } from "@/utils/testing-library";
 
+const browseFiles = () => screen.getByTestId("SelectFile__browse-files");
+
+const sampleFiles = [{ name: "sample-export.json", path: "path/to/sample-export.json" }];
+
 describe("SelectFile", () => {
 	it("should render with dwe file format", () => {
-		const { container } = render(<SelectFile fileFormat=".dwe" />);
+		const { container } = render(<SelectFile fileFormat=".dwe" onSelect={jest.fn} />);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should render with json file format", () => {
-		const { container } = render(<SelectFile fileFormat=".json" />);
+		const { container } = render(<SelectFile fileFormat=".json" onSelect={jest.fn} />);
 
 		expect(container).toMatchSnapshot();
 	});
@@ -33,7 +37,7 @@ describe("SelectFile", () => {
 		const onSelect = jest.fn();
 		render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
 
-		userEvent.click(screen.getByTestId("SelectFile__browse-files"));
+		userEvent.click(browseFiles());
 
 		expect(showOpenDialogMock).toHaveBeenCalledWith({
 			defaultPath: os.homedir(),
@@ -54,7 +58,7 @@ describe("SelectFile", () => {
 	});
 
 	it("should change background when dragging over drop zone", async () => {
-		render(<SelectFile fileFormat=".json" />);
+		render(<SelectFile fileFormat=".json" onSelect={jest.fn} />);
 
 		expect(screen.getByTestId("SelectFile__drop-zone")).toHaveClass(
 			"bg-theme-primary-50 dark:bg-theme-secondary-800",
@@ -62,7 +66,7 @@ describe("SelectFile", () => {
 
 		fireEvent.dragEnter(screen.getByTestId("SelectFile__drop-zone"), {
 			dataTransfer: {
-				files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
+				files: sampleFiles,
 			},
 		});
 
@@ -72,7 +76,7 @@ describe("SelectFile", () => {
 
 		fireEvent.dragLeave(screen.getByTestId("SelectFile__drop-zone"), {
 			dataTransfer: {
-				files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
+				files: sampleFiles,
 			},
 		});
 	});
@@ -82,21 +86,21 @@ describe("SelectFile", () => {
 		const onSelect = jest.fn();
 		render(<SelectFile fileFormat=".json" onSelect={onSelect} />);
 
-		fireEvent.dragOver(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.dragOver(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
+				files: sampleFiles,
 			},
 		});
 
-		fireEvent.dragEnter(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.dragEnter(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
+				files: sampleFiles,
 			},
 		});
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
-				files: [{ name: "sample-export.json", path: "path/to/sample-export.json" }],
+				files: sampleFiles,
 			},
 		});
 
@@ -109,9 +113,9 @@ describe("SelectFile", () => {
 
 		const fileFormat = ".json";
 
-		const { container } = render(<SelectFile fileFormat={fileFormat} />);
+		const { container } = render(<SelectFile fileFormat={fileFormat} onSelect={jest.fn} />);
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
 				files: [{ name: "sample-export.dwe", path: "path/to/sample-export.dwe" }],
 			},
@@ -130,9 +134,9 @@ describe("SelectFile", () => {
 		const { result } = renderHook(() => useTranslation());
 		const { t } = result.current;
 
-		const { container } = render(<SelectFile fileFormat=".json" />);
+		const { container } = render(<SelectFile fileFormat=".json" onSelect={jest.fn} />);
 
-		fireEvent.drop(screen.getByTestId("SelectFile__browse-files"), {
+		fireEvent.drop(browseFiles(), {
 			dataTransfer: {
 				files: [
 					{ name: "sample-export-1.json", path: "path/to/sample-export-1.json" },

@@ -87,6 +87,13 @@ const votingMockImplementation = () => [
 	},
 ];
 
+const continueButton = () => screen.getByTestId("StepNavigation__continue-button");
+const backButton = () => screen.getByTestId("StepNavigation__back-button");
+const sendButton = () => screen.getByTestId("StepNavigation__send-button");
+
+const reviewStepID = "SendVote__review-step";
+const formStepID = "SendVote__form-step";
+
 describe("SendVote", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -156,16 +163,14 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		// Back to select a delegate page
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__back-button")).not.toBeDisabled());
+		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		userEvent.click(backButton());
 
 		expect(container).toMatchSnapshot();
 	});
@@ -202,16 +207,14 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
 
 		// Back to select a delegate page
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__back-button")).not.toBeDisabled());
+		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		userEvent.click(backButton());
 
 		expect(container).toMatchSnapshot();
 	});
@@ -257,16 +260,14 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		// Back to select a delegate page
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__back-button")).not.toBeDisabled());
+		await waitFor(() => expect(backButton()).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		userEvent.click(backButton());
 
 		expect(container).toMatchSnapshot();
 	});
@@ -315,21 +316,19 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -359,10 +358,10 @@ describe("SendVote", () => {
 
 		expect(passwordInput).toHaveValue(passphrase);
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+			userEvent.click(sendButton());
 		});
 
 		act(() => {
@@ -443,21 +442,19 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -490,10 +487,10 @@ describe("SendVote", () => {
 
 		expect(passwordInput).toHaveValue(passphrase);
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+			userEvent.click(sendButton());
 		});
 
 		act(() => {
@@ -594,11 +591,9 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		// Fee
 		expect(screen.getAllByRole("radio")[1]).toBeChecked();
@@ -610,21 +605,21 @@ describe("SendVote", () => {
 		// remove focus from fee button
 		userEvent.click(document.body);
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		if (inputMethod === "with keyboard") {
 			userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 		}
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		if (inputMethod === "with keyboard") {
 			userEvent.keyboard("{enter}");
 		} else {
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 		}
 
 		// AuthenticationStep
@@ -651,13 +646,13 @@ describe("SendVote", () => {
 			jest.advanceTimersByTime(1000);
 		});
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
 			if (inputMethod === "with keyboard") {
 				userEvent.keyboard("{enter}");
 			} else {
-				userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+				userEvent.click(sendButton());
 			}
 		});
 
@@ -702,11 +697,9 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
 
 		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
@@ -717,20 +710,20 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("0.02"));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		// Back to form
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		userEvent.click(backButton());
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("0.02"));
 
 		// Back to review step
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		await expect(screen.findAllByTestId("Amount")).resolves.toBeArray();
 
@@ -769,11 +762,9 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
 
 		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
 
@@ -784,32 +775,32 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("0.02"));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		// Back to form
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		userEvent.click(backButton());
 		await waitFor(() => expect(screen.getByTestId("InputCurrency")).toHaveValue("0.02"));
 
 		// Back to review step
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// Authentication Step
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__back-button"));
+		userEvent.click(backButton());
 
 		// Back to Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// Back to AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -851,19 +842,17 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -883,10 +872,10 @@ describe("SendVote", () => {
 
 		expect(passwordInput).toHaveValue(passphrase);
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+			userEvent.click(sendButton());
 		});
 
 		act(() => {
@@ -934,11 +923,9 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		// Fee
 		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
@@ -950,20 +937,20 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// Fee warning
 		expect(screen.getByTestId("FeeWarning__cancel-button")).toBeInTheDocument();
 
 		userEvent.click(screen.getByTestId("FeeWarning__cancel-button"));
 
-		await expect(screen.findByTestId("SendVote__form-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(formStepID)).resolves.toBeVisible();
 	});
 
 	it("should proceed to authentication step by confirming fee warning", async () => {
@@ -998,11 +985,9 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
 		// Fee
 		userEvent.click(screen.getByText(transactionTranslations.INPUT_FEE_VIEW_TYPE.ADVANCED));
@@ -1014,13 +999,13 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(inputElement).toHaveValue("10"));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// Fee warning
 		expect(screen.getByTestId("FeeWarning__continue-button")).toBeInTheDocument();
@@ -1062,25 +1047,21 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -1089,7 +1070,7 @@ describe("SendVote", () => {
 		userEvent.paste(passwordInput, "wrong passphrase");
 		await waitFor(() => expect(passwordInput).toHaveValue("wrong passphrase"));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).toBeDisabled());
+		await waitFor(() => expect(sendButton()).toBeDisabled());
 
 		expect(screen.getByTestId("Input__error")).toBeInTheDocument();
 
@@ -1130,25 +1111,21 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		await expect(screen.findByTestId("SendVote__review-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(reviewStepID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// AuthenticationStep
 		await expect(screen.findByTestId("AuthenticationStep")).resolves.toBeVisible();
@@ -1162,9 +1139,9 @@ describe("SendVote", () => {
 		await waitFor(() => expect(passwordInput).toHaveValue(passphrase));
 
 		const historyMock = jest.spyOn(history, "push").mockReturnValue();
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
-		userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+		userEvent.click(sendButton());
 
 		await expect(screen.findByTestId("ErrorStep")).resolves.toBeVisible();
 
@@ -1217,17 +1194,15 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		const signMock = jest
 			.spyOn(wallet.transaction(), "signVote")
@@ -1239,10 +1214,10 @@ describe("SendVote", () => {
 		});
 		const transactionMock = createUnvoteTransactionMock(wallet);
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 		});
 
 		act(() => {
@@ -1319,17 +1294,15 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[1].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[1].username));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
 		const address = wallet.address();
 		const balance = wallet.balance();
@@ -1362,10 +1335,10 @@ describe("SendVote", () => {
 			}
 		});
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+			userEvent.click(continueButton());
 		});
 
 		act(() => {
@@ -1431,19 +1404,17 @@ describe("SendVote", () => {
 			},
 		);
 
-		expect(screen.getByTestId("SendVote__form-step")).toBeInTheDocument();
+		expect(screen.getByTestId(formStepID)).toBeInTheDocument();
 
-		await waitFor(() =>
-			expect(screen.getByTestId("SendVote__form-step")).toHaveTextContent(delegateData[0].username),
-		);
+		await waitFor(() => expect(screen.getByTestId(formStepID)).toHaveTextContent(delegateData[0].username));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__continue-button")).not.toBeDisabled());
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		await waitFor(() => expect(continueButton()).not.toBeDisabled());
+		userEvent.click(continueButton());
 
 		// Review Step
-		expect(screen.getByTestId("SendVote__review-step")).toBeInTheDocument();
+		expect(screen.getByTestId(reviewStepID)).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("StepNavigation__continue-button"));
+		userEvent.click(continueButton());
 
 		// AuthenticationStep
 		expect(screen.getByTestId("AuthenticationStep")).toBeInTheDocument();
@@ -1463,10 +1434,10 @@ describe("SendVote", () => {
 
 		await waitFor(() => expect(passwordInput).toHaveValue("password"));
 
-		await waitFor(() => expect(screen.getByTestId("StepNavigation__send-button")).not.toBeDisabled());
+		await waitFor(() => expect(sendButton()).not.toBeDisabled());
 
 		await act(async () => {
-			userEvent.click(screen.getByTestId("StepNavigation__send-button"));
+			userEvent.click(sendButton());
 		});
 
 		await expect(screen.findByTestId("TransactionSuccessful", undefined, { timeout: 4000 })).resolves.toBeVisible();

@@ -23,6 +23,8 @@ import {
 const fixtureProfileId = getDefaultProfileId();
 const profileDashboardUrl = `/profiles/${fixtureProfileId}/dashboard`;
 
+const submitID = "SignIn__submit-button";
+
 describe("Welcome", () => {
 	it("should render with profiles", () => {
 		const { container, asFragment, history } = render(<Welcome />);
@@ -97,10 +99,10 @@ describe("Welcome", () => {
 		userEvent.paste(screen.getByTestId("SignIn__input--password"), "password");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("SignIn__submit-button")).toBeEnabled();
+			expect(screen.getByTestId(submitID)).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("SignIn__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/dashboard`);
@@ -136,9 +138,9 @@ describe("Welcome", () => {
 		userEvent.paste(screen.getByTestId("SignIn__input--password"), "password");
 
 		// wait for formState.isValid to be updated
-		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SignIn__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => {
 			expect(history.location.pathname).toBe(`/profiles/${profile.id()}/settings`);
@@ -215,15 +217,15 @@ describe("Welcome", () => {
 			userEvent.paste(screen.getByTestId("SignIn__input--password"), `wrong password ${index}`);
 
 			// wait for form to be updated
-			await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("SignIn__submit-button"));
+			userEvent.click(screen.getByTestId(submitID));
 
 			// wait for form to be updated
-			await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 		}
 
-		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
+		expect(screen.getByTestId(submitID)).toBeDisabled();
 		expect(screen.getByTestId("SignIn__input--password")).toBeDisabled();
 
 		act(() => {
@@ -237,7 +239,7 @@ describe("Welcome", () => {
 		userEvent.click(screen.getByText(profile.settings().get(Contracts.ProfileSetting.Name)!));
 
 		// Still disabled
-		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
+		expect(screen.getByTestId(submitID)).toBeDisabled();
 
 		act(() => {
 			jest.advanceTimersByTime(50_000);
@@ -245,7 +247,7 @@ describe("Welcome", () => {
 		});
 
 		// wait for form to be updated
-		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
 		await waitFor(
 			() => expect(screen.getByTestId("Input__error")).toHaveAttribute("data-errortext", "Password invalid"),

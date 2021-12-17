@@ -17,6 +17,8 @@ import {
 
 let profile: Contracts.IProfile;
 
+const submitID = "SignIn__submit-button";
+
 describe("SignIn", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getPasswordProtectedProfileId());
@@ -32,14 +34,14 @@ describe("SignIn", () => {
 	});
 
 	it("should not render if not open", () => {
-		const { asFragment } = render(<SignIn profile={profile} isOpen={false} />);
+		const { asFragment } = render(<SignIn profile={profile} isOpen={false} onSuccess={jest.fn} />);
 
 		expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
 	it("should render a modal", async () => {
-		const { asFragment } = render(<SignIn isOpen={true} profile={profile} />);
+		const { asFragment } = render(<SignIn isOpen={true} profile={profile} onSuccess={jest.fn} />);
 
 		await waitFor(() => {
 			expect(screen.getByTestId("modal__inner")).toHaveTextContent(translations.MODAL_SIGN_IN.TITLE);
@@ -52,7 +54,7 @@ describe("SignIn", () => {
 	it("should cancel sign in", async () => {
 		const onCancel = jest.fn();
 
-		render(<SignIn isOpen={true} profile={profile} onCancel={onCancel} />);
+		render(<SignIn isOpen={true} profile={profile} onCancel={onCancel} onSuccess={jest.fn} />);
 
 		userEvent.click(screen.getByTestId("SignIn__cancel-button"));
 
@@ -69,9 +71,9 @@ describe("SignIn", () => {
 		userEvent.paste(screen.getByTestId("SignIn__input--password"), getDefaultPassword());
 
 		// wait for formState.isValid to be updated
-		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SignIn__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => {
 			expect(onSuccess).toHaveBeenCalledWith(getDefaultPassword());
@@ -86,15 +88,15 @@ describe("SignIn", () => {
 		userEvent.paste(screen.getByTestId("SignIn__input--password"), "wrong password");
 
 		// wait for formState.isValid to be updated
-		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("SignIn__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		// wait for formState.isValid to be updated
-		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
-		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
+		expect(screen.getByTestId(submitID)).toBeDisabled();
 	});
 
 	it("should set an error and disable the input if the password is invalid multiple times", async () => {
@@ -106,15 +108,15 @@ describe("SignIn", () => {
 			userEvent.paste(screen.getByTestId("SignIn__input--password"), `wrong password ${index}`);
 
 			// wait for form to be updated
-			await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-			userEvent.click(screen.getByTestId("SignIn__submit-button"));
+			userEvent.click(screen.getByTestId(submitID));
 
 			// wait for form to be updated
-			await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
+			await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 		}
 
-		expect(screen.getByTestId("SignIn__submit-button")).toBeDisabled();
+		expect(screen.getByTestId(submitID)).toBeDisabled();
 		expect(screen.getByTestId("SignIn__input--password")).toBeDisabled();
 
 		act(() => {
@@ -123,7 +125,7 @@ describe("SignIn", () => {
 		});
 
 		// wait for form to be updated
-		await expect(screen.findByTestId("SignIn__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
 		await waitFor(() =>
 			expect(screen.getByTestId("Input__error")).toHaveAttribute(

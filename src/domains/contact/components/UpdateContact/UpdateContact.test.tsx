@@ -14,6 +14,8 @@ const onClose = jest.fn();
 const onDelete = jest.fn();
 const onSave = jest.fn();
 
+const nameInput = () => screen.getByTestId("contact-form__name-input");
+
 describe("UpdateContact", () => {
 	beforeEach(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -33,7 +35,7 @@ describe("UpdateContact", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
+			expect(nameInput()).toHaveValue(contact.name());
 		});
 
 		expect(asFragment()).toMatchSnapshot();
@@ -54,7 +56,7 @@ describe("UpdateContact", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
+			expect(nameInput()).toHaveValue(contact.name());
 		});
 
 		userEvent.click(screen.getByTestId("contact-form__cancel-btn"));
@@ -85,7 +87,7 @@ describe("UpdateContact", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(newContact.name());
+			expect(nameInput()).toHaveValue(newContact.name());
 		});
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");
@@ -107,11 +109,11 @@ describe("UpdateContact", () => {
 
 		userEvent.click(screen.getByTestId("contact-form__add-address-btn"));
 
-		userEvent.clear(screen.getByTestId("contact-form__name-input"));
-		userEvent.paste(screen.getByTestId("contact-form__name-input"), contact.name());
+		userEvent.clear(nameInput());
+		userEvent.paste(nameInput(), contact.name());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
+			expect(nameInput()).toHaveValue(contact.name());
 		});
 
 		expect(screen.getByTestId("Input__error")).toBeVisible();
@@ -142,7 +144,7 @@ describe("UpdateContact", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(contact.name());
+			expect(nameInput()).toHaveValue(contact.name());
 		});
 
 		userEvent.click(screen.getByTestId("contact-form__delete-btn"));
@@ -178,10 +180,8 @@ describe("UpdateContact", () => {
 			/>,
 		);
 
-		const inputElement: HTMLInputElement = screen.getByTestId("contact-form__name-input");
-
 		await waitFor(() => {
-			expect(inputElement).toHaveValue(contact.name());
+			expect(nameInput()).toHaveValue(contact.name());
 		});
 
 		userEvent.click(screen.getAllByTestId("contact-form__remove-address-btn")[0]);
@@ -190,11 +190,11 @@ describe("UpdateContact", () => {
 			expect(screen.queryByTestId("contact-form__address-list-item")).not.toBeInTheDocument();
 		});
 
-		inputElement.select();
-		userEvent.paste(inputElement, newName);
+		(nameInput() as HTMLInputElement).select();
+		userEvent.paste(nameInput(), newName);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("contact-form__name-input")).toHaveValue(newName);
+			expect(nameInput()).toHaveValue(newName);
 		});
 
 		const selectNetworkInput = screen.getByTestId("SelectDropdown__input");

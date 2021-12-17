@@ -14,6 +14,14 @@ const history = createMemoryHistory();
 
 let profile: Contracts.IProfile;
 
+const confirmPassword = () => screen.getByTestId("Password-settings__input--password_2");
+const removeButton = () => screen.getByTestId("Password-settings__remove-button");
+
+const currentPasswordInputID = "Password-settings__input--currentPassword";
+const confirmModalInputID = "PasswordRemovalConfirmModal__input-password";
+const passwordInputID = "Password-settings__input--password_1";
+const submitID = "Password-settings__submit-button";
+const menuItemID = "side-menu__item--password";
 const password = "S3cUrePa$sword";
 
 describe("Password Settings", () => {
@@ -42,7 +50,7 @@ describe("Password Settings", () => {
 			},
 		);
 
-		await expect(screen.findByTestId("Password-settings__input--password_1")).resolves.toBeVisible();
+		await expect(screen.findByTestId(passwordInputID)).resolves.toBeVisible();
 
 		expect(container).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -61,20 +69,18 @@ describe("Password Settings", () => {
 
 		expect(container).toBeInTheDocument();
 
-		const currentPasswordInput = "Password-settings__input--currentPassword";
+		expect(screen.queryByTestId(currentPasswordInputID)).not.toBeInTheDocument();
 
-		expect(screen.queryByTestId(currentPasswordInput)).not.toBeInTheDocument();
+		userEvent.paste(screen.getByTestId(passwordInputID), password);
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), password);
-
-		userEvent.paste(screen.getByTestId("Password-settings__input--password_2"), password);
+		userEvent.paste(confirmPassword(), password);
 
 		// wait for formState.isValid to be updated
-		await expect(screen.findByTestId("Password-settings__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("Password-settings__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
-		await expect(screen.findByTestId(currentPasswordInput)).resolves.toBeVisible();
+		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -93,22 +99,22 @@ describe("Password Settings", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();
+			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
 		});
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--currentPassword"), password);
+		userEvent.paste(screen.getByTestId(currentPasswordInputID), password);
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), "S3cUrePa$sword2different");
+		userEvent.paste(screen.getByTestId(passwordInputID), "S3cUrePa$sword2different");
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--password_2"), "S3cUrePa$sword2different");
+		userEvent.paste(confirmPassword(), "S3cUrePa$sword2different");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("Password-settings__submit-button")).toBeEnabled();
+			expect(screen.getByTestId(submitID)).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("Password-settings__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
-		await expect(screen.findByTestId("Password-settings__input--currentPassword")).resolves.toBeVisible();
+		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
 	});
 
 	it("should show an error toast if the current password does not match", async () => {
@@ -130,33 +136,31 @@ describe("Password Settings", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();
+			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
 		});
 
-		userEvent.click(await screen.findByTestId("side-menu__item--password"));
+		userEvent.click(await screen.findByTestId(menuItemID));
 
-		const currentPasswordInput = "Password-settings__input--currentPassword";
+		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId(currentPasswordInput)).resolves.toBeVisible();
-
-		userEvent.paste(screen.getByTestId(currentPasswordInput), "wrong!");
+		userEvent.paste(screen.getByTestId(currentPasswordInputID), "wrong!");
 
 		await waitFor(() => {
-			expect(screen.getByTestId(currentPasswordInput)).toHaveValue("wrong!");
+			expect(screen.getByTestId(currentPasswordInputID)).toHaveValue("wrong!");
 		});
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), "AnotherS3cUrePa$swordNew");
+		userEvent.paste(screen.getByTestId(passwordInputID), "AnotherS3cUrePa$swordNew");
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--password_2"), "AnotherS3cUrePa$swordNew");
+		userEvent.paste(confirmPassword(), "AnotherS3cUrePa$swordNew");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("Password-settings__submit-button")).toBeEnabled();
+			expect(screen.getByTestId(submitID)).toBeEnabled();
 		});
 
-		userEvent.click(screen.getByTestId("Password-settings__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => {
-			expect(screen.getByTestId("Password-settings__submit-button")).toBeEnabled();
+			expect(screen.getByTestId(submitID)).toBeEnabled();
 		});
 
 		expect(toastSpy).toHaveBeenCalledWith(`${translations.SETTINGS.PASSWORD.ERROR.MISMATCH}`);
@@ -180,40 +184,32 @@ describe("Password Settings", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();
+			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("side-menu__item--password"));
+		userEvent.click(screen.getByTestId(menuItemID));
 
-		const currentPasswordInput = "Password-settings__input--currentPassword";
+		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
 
-		await expect(screen.findByTestId(currentPasswordInput)).resolves.toBeVisible();
-
-		userEvent.paste(screen.getByTestId(currentPasswordInput), password);
+		userEvent.paste(screen.getByTestId(currentPasswordInputID), password);
 
 		await waitFor(() => {
-			expect(screen.getByTestId(currentPasswordInput)).toHaveValue(password);
+			expect(screen.getByTestId(currentPasswordInputID)).toHaveValue(password);
 		});
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), "S3cUrePa$sword2different");
+		userEvent.paste(screen.getByTestId(passwordInputID), "S3cUrePa$sword2different");
 
-		await waitFor(() =>
-			expect(screen.getByTestId("Password-settings__input--password_1")).toHaveValue("S3cUrePa$sword2different"),
-		);
+		await waitFor(() => expect(screen.getByTestId(passwordInputID)).toHaveValue("S3cUrePa$sword2different"));
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--password_2"), "S3cUrePa$sword2different1");
+		userEvent.paste(confirmPassword(), "S3cUrePa$sword2different1");
 
-		await waitFor(() =>
-			expect(screen.getByTestId("Password-settings__input--password_2")).toHaveValue("S3cUrePa$sword2different1"),
-		);
+		await waitFor(() => expect(confirmPassword()).toHaveValue("S3cUrePa$sword2different1"));
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), "new password 2");
+		userEvent.paste(screen.getByTestId(passwordInputID), "new password 2");
 
-		await waitFor(() =>
-			expect(screen.getByTestId("Password-settings__input--password_2")).toHaveAttribute("aria-invalid"),
-		);
+		await waitFor(() => expect(confirmPassword()).toHaveAttribute("aria-invalid"));
 		// wait for formState.isValid to be updated
-		await waitFor(() => expect(screen.getByTestId("Password-settings__submit-button")).toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId(submitID)).toBeDisabled());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -231,28 +227,24 @@ describe("Password Settings", () => {
 		);
 
 		await waitFor(() => {
-			expect(screen.getByTestId("side-menu__item--password")).toBeInTheDocument();
+			expect(screen.getByTestId(menuItemID)).toBeInTheDocument();
 		});
 
-		userEvent.click(screen.getByTestId("side-menu__item--password"));
+		userEvent.click(screen.getByTestId(menuItemID));
 
-		await expect(screen.findByTestId("Password-settings__input--currentPassword")).resolves.toBeVisible();
+		await expect(screen.findByTestId(currentPasswordInputID)).resolves.toBeVisible();
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--currentPassword"), password);
+		userEvent.paste(screen.getByTestId(currentPasswordInputID), password);
 
-		await waitFor(() =>
-			expect(screen.getByTestId("Password-settings__input--currentPassword")).toHaveValue(password),
-		);
+		await waitFor(() => expect(screen.getByTestId(currentPasswordInputID)).toHaveValue(password));
 
-		userEvent.paste(screen.getByTestId("Password-settings__input--password_1"), password);
+		userEvent.paste(screen.getByTestId(passwordInputID), password);
 
-		await waitFor(() => expect(screen.getByTestId("Password-settings__input--password_1")).toHaveValue(password));
+		await waitFor(() => expect(screen.getByTestId(passwordInputID)).toHaveValue(password));
 
-		await waitFor(() =>
-			expect(screen.getByTestId("Password-settings__input--password_1")).toHaveAttribute("aria-invalid"),
-		);
+		await waitFor(() => expect(screen.getByTestId(passwordInputID)).toHaveAttribute("aria-invalid"));
 
-		await waitFor(() => expect(screen.getByTestId("Password-settings__submit-button")).toBeDisabled());
+		await waitFor(() => expect(screen.getByTestId(submitID)).toBeDisabled());
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -272,35 +264,33 @@ describe("Password Settings", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("side-menu__item--password"));
+		userEvent.click(screen.getByTestId(menuItemID));
 
-		expect(screen.getByTestId("Password-settings__remove-button")).toBeInTheDocument();
+		expect(removeButton()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Password-settings__remove-button"));
+		userEvent.click(removeButton());
 
-		expect(screen.getByTestId("PasswordRemovalConfirmModal__input-password")).toBeInTheDocument();
+		expect(screen.getByTestId(confirmModalInputID)).toBeInTheDocument();
 
 		// Close modal and re-open it.
 
 		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__cancel"));
 
-		expect(screen.queryByTestId("PasswordRemovalConfirmModal__input-password")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(confirmModalInputID)).not.toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Password-settings__remove-button"));
+		userEvent.click(removeButton());
 
-		await expect(screen.findByTestId("PasswordRemovalConfirmModal__input-password")).resolves.toBeVisible();
+		await expect(screen.findByTestId(confirmModalInputID)).resolves.toBeVisible();
 
 		// Fill in current password and confirm.
 
-		userEvent.paste(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), password);
+		userEvent.paste(screen.getByTestId(confirmModalInputID), password);
 
 		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeEnabled());
 
 		userEvent.click(screen.getByTestId("PasswordRemovalConfirmModal__confirm"));
 
-		await waitFor(() =>
-			expect(screen.queryByTestId("PasswordRemovalConfirmModal__input-password")).not.toBeInTheDocument(),
-		);
+		await waitFor(() => expect(screen.queryByTestId(confirmModalInputID)).not.toBeInTheDocument());
 
 		expect(forgetPasswordSpy).toHaveBeenCalledWith(password);
 		expect(toastSpy).toHaveBeenCalledWith(translations.SETTINGS.PASSWORD.REMOVAL.SUCCESS);
@@ -327,17 +317,17 @@ describe("Password Settings", () => {
 			},
 		);
 
-		userEvent.click(screen.getByTestId("side-menu__item--password"));
+		userEvent.click(screen.getByTestId(menuItemID));
 
-		expect(screen.getByTestId("Password-settings__remove-button")).toBeInTheDocument();
+		expect(removeButton()).toBeInTheDocument();
 
-		userEvent.click(screen.getByTestId("Password-settings__remove-button"));
+		userEvent.click(removeButton());
 
-		expect(screen.getByTestId("PasswordRemovalConfirmModal__input-password")).toBeInTheDocument();
+		expect(screen.getByTestId(confirmModalInputID)).toBeInTheDocument();
 
 		// Fill in wrong current password and confirm.
 
-		userEvent.paste(screen.getByTestId("PasswordRemovalConfirmModal__input-password"), "S3cUrePa$swordWrong");
+		userEvent.paste(screen.getByTestId(confirmModalInputID), "S3cUrePa$swordWrong");
 
 		await waitFor(() => expect(screen.getByTestId("PasswordRemovalConfirmModal__confirm")).toBeEnabled());
 

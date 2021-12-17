@@ -9,6 +9,8 @@ import { WalletUpdate } from "./WalletUpdate";
 import { render, screen, waitFor } from "@/utils/testing-library";
 import * as updaterHook from "@/app/hooks/use-updater";
 
+const firstStepID = "WalletUpdate__first-step";
+
 describe("WalletUpdate", () => {
 	it("should not render if not open", () => {
 		const { asFragment } = render(<WalletUpdate isOpen={false} />);
@@ -20,7 +22,7 @@ describe("WalletUpdate", () => {
 	it("should render 1st step", () => {
 		const { asFragment } = render(<FirstStep />);
 
-		expect(screen.getByTestId("WalletUpdate__first-step")).toBeInTheDocument();
+		expect(screen.getByTestId(firstStepID)).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
 	});
 
@@ -48,7 +50,7 @@ describe("WalletUpdate", () => {
 	it("should render", async () => {
 		const { asFragment } = render(<WalletUpdate isOpen={true} />);
 
-		await expect(screen.findByTestId("WalletUpdate__first-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(firstStepID)).resolves.toBeVisible();
 
 		expect(asFragment()).toMatchSnapshot();
 	});
@@ -57,7 +59,7 @@ describe("WalletUpdate", () => {
 		const onClose = jest.fn();
 		render(<WalletUpdate isOpen={true} onClose={onClose} />);
 
-		await expect(screen.findByTestId("WalletUpdate__first-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(firstStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("modal__close-btn"));
 		await waitFor(() => expect(onClose).toHaveBeenCalledWith());
@@ -67,7 +69,7 @@ describe("WalletUpdate", () => {
 		const onCancel = jest.fn();
 		render(<WalletUpdate isOpen={true} onCancel={onCancel} />);
 
-		await expect(screen.findByTestId("WalletUpdate__first-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(firstStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("WalletUpdate__cancel-button"));
 		await waitFor(() => expect(onCancel).toHaveBeenCalledWith());
@@ -76,7 +78,7 @@ describe("WalletUpdate", () => {
 	it("should handle update", async () => {
 		render(<WalletUpdate isOpen={true} />);
 
-		await expect(screen.findByTestId("WalletUpdate__first-step")).resolves.toBeVisible();
+		await expect(screen.findByTestId(firstStepID)).resolves.toBeVisible();
 
 		userEvent.click(screen.getByTestId("WalletUpdate__update-button"));
 

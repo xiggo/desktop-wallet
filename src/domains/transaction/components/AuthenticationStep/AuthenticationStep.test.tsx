@@ -14,6 +14,10 @@ import {
 	waitFor,
 } from "@/utils/testing-library";
 
+const secondMnemonicID = "AuthenticationStep__second-mnemonic";
+const secondSecretID = "AuthenticationStep__second-secret";
+const ARKDevnet = "ark.devnet";
+
 describe("AuthenticationStep", () => {
 	let wallet: Contracts.IReadWriteWallet;
 	let profile: Contracts.IProfile;
@@ -27,7 +31,7 @@ describe("AuthenticationStep", () => {
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "ARK",
 			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			network: ARKDevnet,
 		});
 
 		profile.wallets().push(wallet);
@@ -55,7 +59,7 @@ describe("AuthenticationStep", () => {
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "ARK",
 			mnemonic: MNEMONICS[0],
-			network: "ark.devnet",
+			network: ARKDevnet,
 		});
 
 		profile.wallets().push(wallet);
@@ -71,12 +75,12 @@ describe("AuthenticationStep", () => {
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), MNEMONICS[0]);
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), "wrong second mnemonic");
+		userEvent.paste(screen.getByTestId(secondMnemonicID), "wrong second mnemonic");
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
 
-		userEvent.clear(screen.getByTestId("AuthenticationStep__second-mnemonic"));
-		userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), secondMnemonic);
+		userEvent.clear(screen.getByTestId(secondMnemonicID));
+		userEvent.paste(screen.getByTestId(secondMnemonicID), secondMnemonic);
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
 
@@ -87,7 +91,7 @@ describe("AuthenticationStep", () => {
 	it("should validate if second secret matches the wallet second public key", async () => {
 		wallet = await profile.walletFactory().fromSecret({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARKDevnet,
 			secret: "abc",
 		});
 
@@ -97,12 +101,12 @@ describe("AuthenticationStep", () => {
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "abc");
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__second-secret"), "wrong second secret");
+		userEvent.paste(screen.getByTestId(secondSecretID), "wrong second secret");
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeFalsy());
 
-		userEvent.clear(screen.getByTestId("AuthenticationStep__second-secret"));
-		userEvent.paste(screen.getByTestId("AuthenticationStep__second-secret"), "abc");
+		userEvent.clear(screen.getByTestId(secondSecretID));
+		userEvent.paste(screen.getByTestId(secondSecretID), "abc");
 
 		await waitFor(() => expect(form()?.formState.isValid).toBeTruthy());
 	});
@@ -111,7 +115,7 @@ describe("AuthenticationStep", () => {
 		wallet = await profile.walletFactory().fromMnemonicWithBIP39({
 			coin: "ARK",
 			mnemonic: MNEMONICS[2],
-			network: "ark.devnet",
+			network: ARKDevnet,
 		});
 
 		const isSecondSignatureMock = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
@@ -120,7 +124,7 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
+		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
@@ -136,7 +140,7 @@ describe("AuthenticationStep", () => {
 	it("should request secret if wallet was imported using secret", async () => {
 		wallet = await profile.walletFactory().fromSecret({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARKDevnet,
 			secret: "secret",
 		});
 
@@ -146,7 +150,7 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
+		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(screen.getByTestId("AuthenticationStep__secret")).toBeInTheDocument();
 
@@ -163,7 +167,7 @@ describe("AuthenticationStep", () => {
 		wallet = await profile.walletFactory().fromAddress({
 			address: "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARKDevnet,
 		});
 
 		const isSecondSignatureMock = jest.spyOn(wallet, "isSecondSignature").mockReturnValue(false);
@@ -172,7 +176,7 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
+		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(screen.getByTestId("AuthenticationStep__mnemonic")).toBeInTheDocument();
 
@@ -188,7 +192,7 @@ describe("AuthenticationStep", () => {
 	it("should request private key if wallet was imported using private key", async () => {
 		wallet = await profile.walletFactory().fromPrivateKey({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARKDevnet,
 			privateKey: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712",
 		});
 
@@ -198,7 +202,7 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
+		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(screen.getByTestId("AuthenticationStep__private-key")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -207,7 +211,7 @@ describe("AuthenticationStep", () => {
 	it("should request WIF if wallet was imported using WIF", async () => {
 		wallet = await profile.walletFactory().fromWIF({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARKDevnet,
 			wif: "SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA",
 		});
 
@@ -217,7 +221,7 @@ describe("AuthenticationStep", () => {
 			withProviders: true,
 		});
 
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
+		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(screen.getByTestId("AuthenticationStep__wif")).toBeInTheDocument();
 		expect(asFragment()).toMatchSnapshot();
@@ -232,15 +236,15 @@ describe("AuthenticationStep", () => {
 		});
 
 		await expect(screen.findByTestId("AuthenticationStep__mnemonic")).resolves.toBeVisible();
-		await expect(screen.findByTestId("AuthenticationStep__second-mnemonic")).resolves.toBeVisible();
+		await expect(screen.findByTestId(secondMnemonicID)).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__mnemonic"), getDefaultWalletMnemonic());
 
 		await waitFor(() => {
-			expect(screen.getByTestId("AuthenticationStep__second-mnemonic")).toBeEnabled();
+			expect(screen.getByTestId(secondMnemonicID)).toBeEnabled();
 		});
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__second-mnemonic"), MNEMONICS[1]);
+		userEvent.paste(screen.getByTestId(secondMnemonicID), MNEMONICS[1]);
 
 		await waitFor(() =>
 			expect(form()?.getValues()).toStrictEqual({
@@ -257,7 +261,7 @@ describe("AuthenticationStep", () => {
 	it("should request secret and second secret", async () => {
 		wallet = await profile.walletFactory().fromSecret({
 			coin: "ARK",
-			network: "ark.devnet",
+			network: ARKDevnet,
 			secret: "abc",
 		});
 
@@ -266,15 +270,15 @@ describe("AuthenticationStep", () => {
 		});
 
 		await expect(screen.findByTestId("AuthenticationStep__secret")).resolves.toBeVisible();
-		await expect(screen.findByTestId("AuthenticationStep__second-secret")).resolves.toBeVisible();
+		await expect(screen.findByTestId(secondSecretID)).resolves.toBeVisible();
 
 		userEvent.paste(screen.getByTestId("AuthenticationStep__secret"), "abc");
 
 		await waitFor(() => {
-			expect(screen.getByTestId("AuthenticationStep__second-secret")).toBeEnabled();
+			expect(screen.getByTestId(secondSecretID)).toBeEnabled();
 		});
 
-		userEvent.paste(screen.getByTestId("AuthenticationStep__second-secret"), "abc");
+		userEvent.paste(screen.getByTestId(secondSecretID), "abc");
 
 		await waitFor(() =>
 			expect(form()?.getValues()).toStrictEqual({
@@ -296,7 +300,7 @@ describe("AuthenticationStep", () => {
 		await expect(screen.findByTestId("LedgerConfirmation-description")).resolves.toBeVisible();
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
-		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull());
+		await waitFor(() => expect(screen.queryByTestId(secondMnemonicID)).toBeNull());
 
 		expect(asFragment()).toMatchSnapshot();
 
@@ -321,7 +325,7 @@ describe("AuthenticationStep", () => {
 
 		await waitFor(() => expect(screen.queryByTestId("AuthenticationStep__mnemonic")).toBeNull());
 
-		expect(screen.queryByTestId("AuthenticationStep__second-mnemonic")).toBeNull();
+		expect(screen.queryByTestId(secondMnemonicID)).toBeNull();
 		expect(asFragment()).toMatchSnapshot();
 
 		jest.clearAllMocks();

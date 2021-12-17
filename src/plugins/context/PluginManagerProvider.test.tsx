@@ -10,18 +10,24 @@ import { PluginController, PluginManager } from "@/plugins/core";
 import { PluginConfigurationData } from "@/plugins/core/configuration";
 import { env, getDefaultProfileId, render, screen, waitFor } from "@/utils/testing-library";
 
+const pluginDirectory = "/plugins/test-plugin";
+const downloadChannel = "plugin:download";
+const installChannel = "plugin:install";
+const pluginKeyword = "wallet-plugin";
+const pluginName = "test-plugin";
+
 const invokeMock = (channel) => {
 	if (channel === "plugin:loader-fs.find") {
 		return {
-			config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
-			dir: "/plugins/test-plugin",
+			config: { keywords: ["@payvo", pluginKeyword], name: pluginName, version: "0.0.1" },
+			dir: pluginDirectory,
 			source: () => void 0,
 			sourcePath: "/plugins/test-plugin/index.js",
 		};
 	}
 
-	if (channel === "plugin:download") {
-		return "/plugins/test-plugin";
+	if (channel === downloadChannel) {
+		return pluginDirectory;
 	}
 };
 
@@ -80,7 +86,7 @@ describe("PluginManagerProvider", () => {
 	it("should report plugin", () => {
 		const ipcRendererMock = jest.spyOn(electron.ipcRenderer, "send").mockImplementation();
 
-		const plugin = new PluginController({ name: "test-plugin" }, () => void 0);
+		const plugin = new PluginController({ name: pluginName }, () => void 0);
 
 		const Component = () => {
 			const { reportPlugin } = usePluginManagerContext();
@@ -157,7 +163,7 @@ describe("PluginManagerProvider", () => {
 	it("should delete plugin", async () => {
 		const invokeMock = jest.spyOn(electron.ipcRenderer, "invoke").mockResolvedValue([]);
 
-		const plugin = new PluginController({ name: "test-plugin" }, () => void 0, "/plugins/example");
+		const plugin = new PluginController({ name: pluginName }, () => void 0, "/plugins/example");
 
 		const Component = () => {
 			const { deletePlugin } = usePluginManagerContext();
@@ -181,7 +187,7 @@ describe("PluginManagerProvider", () => {
 	});
 
 	it("should fetch packages", async () => {
-		const plugin = new PluginController({ name: "test-plugin" }, () => void 0);
+		const plugin = new PluginController({ name: pluginName }, () => void 0);
 		manager.plugins().push(plugin);
 
 		plugin.enable(profile);
@@ -218,14 +224,14 @@ describe("PluginManagerProvider", () => {
 
 	it("should install plugin from provider", async () => {
 		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel: string) => {
-			if (channel === "plugin:install") {
-				return Promise.resolve("/plugins/test-plugin");
+			if (channel === installChannel) {
+				return Promise.resolve(pluginDirectory);
 			}
 
 			if (channel === "plugin:loader-fs.find") {
 				return Promise.resolve({
-					config: { keywords: ["@payvo", "wallet-plugin"], name: "test-plugin", version: "0.0.1" },
-					dir: "/plugins/test-plugin",
+					config: { keywords: ["@payvo", pluginKeyword], name: pluginName, version: "0.0.1" },
+					dir: pluginDirectory,
 					source: () => void 0,
 					sourcePath: "/plugins/test-plugin/index.js",
 				});
@@ -274,22 +280,22 @@ describe("PluginManagerProvider", () => {
 		userEvent.click(screen.getAllByText("Install")[0]);
 
 		await waitFor(() =>
-			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:install", {
+			expect(ipcRendererSpy).toHaveBeenLastCalledWith(installChannel, {
 				name: "@dated/delegate-calculator-wallet-plugin",
 				profileId: profile.id(),
 				savedPath: "/plugins/temp/test-plugin",
 			}),
 		);
 
-		expect(manager.plugins().findById("test-plugin")).toBeDefined();
+		expect(manager.plugins().findById(pluginName)).toBeDefined();
 
 		ipcRendererSpy.mockRestore();
 	});
 
 	it("should download plugin from archive url", async () => {
 		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
-			if (channel === "plugin:download") {
-				return "/plugins/test-plugin";
+			if (channel === downloadChannel) {
+				return pluginDirectory;
 			}
 		});
 
@@ -302,7 +308,7 @@ describe("PluginManagerProvider", () => {
 							downloadPlugin({
 								archiveUrl:
 									"https://registry.npmjs.org/arkecosystem/test-plugin/-/test-plugin-1.0.0.tgz",
-								id: "test-plugin",
+								id: pluginName,
 							} as any)
 						}
 					>
@@ -323,8 +329,8 @@ describe("PluginManagerProvider", () => {
 		userEvent.click(screen.getByText("Fetch"));
 
 		await waitFor(() =>
-			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
-				name: "test-plugin",
+			expect(ipcRendererSpy).toHaveBeenLastCalledWith(downloadChannel, {
+				name: pluginName,
 				url: "https://registry.npmjs.org/arkecosystem/test-plugin/-/test-plugin-1.0.0.tgz",
 			}),
 		);
@@ -341,7 +347,7 @@ describe("PluginManagerProvider", () => {
 				<div>
 					<button
 						onClick={() =>
-							downloadPlugin({ id: "test-plugin" } as any, "https://github.com/arkecosystem/test-plugin")
+							downloadPlugin({ id: pluginName } as any, "https://github.com/arkecosystem/test-plugin")
 						}
 					>
 						Fetch
@@ -361,8 +367,8 @@ describe("PluginManagerProvider", () => {
 		userEvent.click(screen.getByText("Fetch"));
 
 		await waitFor(() =>
-			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
-				name: "test-plugin",
+			expect(ipcRendererSpy).toHaveBeenLastCalledWith(downloadChannel, {
+				name: pluginName,
 				url: "https://github.com/arkecosystem/test-plugin/archive/master.zip",
 			}),
 		);
@@ -380,7 +386,7 @@ describe("PluginManagerProvider", () => {
 					<button
 						onClick={() =>
 							downloadPlugin(
-								{ id: "test-plugin" } as any,
+								{ id: pluginName } as any,
 								"https://github.com/arkecosystem/repository/tree/master/subdirectory/test-plugin",
 							)
 						}
@@ -402,8 +408,8 @@ describe("PluginManagerProvider", () => {
 		userEvent.click(screen.getByText("Fetch"));
 
 		await waitFor(() =>
-			expect(ipcRendererSpy).toHaveBeenLastCalledWith("plugin:download", {
-				name: "test-plugin",
+			expect(ipcRendererSpy).toHaveBeenLastCalledWith(downloadChannel, {
+				name: pluginName,
 				url: "https://github.com/arkecosystem/repository/archive/master.zip",
 			}),
 		);
@@ -414,7 +420,7 @@ describe("PluginManagerProvider", () => {
 	it("should render properly for remote package", async () => {
 		nock("https://github.com/")
 			.get("/arkecosystem/remote-plugin/raw/master/package.json")
-			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: "remote-plugin" });
+			.reply(200, { keywords: ["@payvo", pluginKeyword], name: "remote-plugin" });
 
 		const Component = () => {
 			const { fetchLatestPackageConfiguration, pluginConfigurations } = usePluginManagerContext();
@@ -450,7 +456,7 @@ describe("PluginManagerProvider", () => {
 	it("should render properly for remote package in subdirectory", async () => {
 		nock("https://github.com/")
 			.get("/arkecosystem/repository/raw/master/subdirectory/remote-plugin/package.json")
-			.reply(200, { keywords: ["@payvo", "wallet-plugin"], name: "remote-plugin" });
+			.reply(200, { keywords: ["@payvo", pluginKeyword], name: "remote-plugin" });
 
 		const Component = () => {
 			const { fetchLatestPackageConfiguration, pluginConfigurations } = usePluginManagerContext();
@@ -589,24 +595,24 @@ describe("PluginManagerProvider", () => {
 		});
 
 		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
-			if (channel === "plugin:install") {
-				return Promise.resolve("/plugins/test-plugin");
+			if (channel === installChannel) {
+				return Promise.resolve(pluginDirectory);
 			}
 
 			if (channel === "plugin:loader-fs.find") {
 				return Promise.resolve({
 					config: {
-						keywords: ["@payvo", "wallet-plugin"],
+						keywords: ["@payvo", pluginKeyword],
 						name: plugin.config().name(),
 						version: "1.0.0",
 					},
-					dir: "/plugins/test-plugin",
+					dir: pluginDirectory,
 					source: () => void 0,
 					sourcePath: "/plugins/test-plugin/index.js",
 				});
 			}
 
-			if (channel === "plugin:download") {
+			if (channel === downloadChannel) {
 				return Promise.resolve("/plugins/temp/test-plugin");
 			}
 
@@ -655,14 +661,14 @@ describe("PluginManagerProvider", () => {
 		userEvent.click(screen.getByText("Status: update available. Click to update"));
 
 		await waitFor(() =>
-			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:download", {
+			expect(ipcRendererSpy).toHaveBeenCalledWith(downloadChannel, {
 				name: plugin.config().name(),
 				url: plugin.config().archiveUrl(),
 			}),
 		);
 
 		await waitFor(() =>
-			expect(ipcRendererSpy).toHaveBeenCalledWith("plugin:install", {
+			expect(ipcRendererSpy).toHaveBeenCalledWith(installChannel, {
 				name: plugin.config().name(),
 				profileId: profile.id(),
 				savedPath: "/plugins/temp/test-plugin",
@@ -699,7 +705,7 @@ describe("PluginManagerProvider", () => {
 		manager.plugins().push(plugin);
 
 		const ipcRendererSpy = jest.spyOn(electron.ipcRenderer, "invoke").mockImplementation((channel) => {
-			if (channel === "plugin:install") {
+			if (channel === installChannel) {
 				throw new Error("plugin installation rejected.");
 			}
 		});
@@ -810,7 +816,7 @@ describe("PluginManagerProvider", () => {
 	});
 
 	it("should reset filters", async () => {
-		const plugin = new PluginController({ name: "test-plugin" }, () => void 0);
+		const plugin = new PluginController({ name: pluginName }, () => void 0);
 		manager.plugins().push(plugin);
 
 		const Component = () => {

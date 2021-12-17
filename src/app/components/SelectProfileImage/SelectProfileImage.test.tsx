@@ -10,6 +10,8 @@ import { translations } from "@/app/i18n/common/i18n";
 import { toasts } from "@/app/services";
 import { render, screen, waitFor } from "@/utils/testing-library";
 
+const uploadButton = () => screen.getByTestId("SelectProfileImage__upload-button");
+
 describe("SelectProfileImage", () => {
 	it("should render", () => {
 		const onSelect = jest.fn();
@@ -54,9 +56,8 @@ describe("SelectProfileImage", () => {
 				} as any),
 		);
 
-		const button = screen.getByTestId("SelectProfileImage__upload-button");
-		button.addEventListener("click", openFileDialog as any);
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		uploadButton().addEventListener("click", openFileDialog as any);
+		userEvent.click(uploadButton());
 
 		await expect(
 			useFilesResult.current.openFile({
@@ -84,9 +85,8 @@ describe("SelectProfileImage", () => {
 				} as any),
 		);
 
-		const button = screen.getByTestId("SelectProfileImage__upload-button");
-		button.addEventListener("click", openFileDialog as any);
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		uploadButton().addEventListener("click", openFileDialog as any);
+		userEvent.click(uploadButton());
 
 		await waitFor(() => expect(toastSpy).toHaveBeenCalledWith(translations.ERRORS.INVALID_IMAGE));
 
@@ -107,9 +107,8 @@ describe("SelectProfileImage", () => {
 				} as any),
 		);
 
-		const button = screen.getByTestId("SelectProfileImage__upload-button");
-		button.addEventListener("click", openFileDialog as any);
-		userEvent.click(screen.getByTestId("SelectProfileImage__upload-button"));
+		uploadButton().addEventListener("click", openFileDialog as any);
+		userEvent.click(uploadButton());
 
 		await waitFor(() => expect(onSelect).not.toHaveBeenCalled());
 	});

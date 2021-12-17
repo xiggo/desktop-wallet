@@ -11,6 +11,8 @@ let passwordProtectedDwe: any;
 let json: any;
 let jsonEmpty: any;
 
+const submitID = "PasswordModal__submit-button";
+
 describe("Import Profile - Processing import", () => {
 	beforeAll(() => {
 		const jsonEmptyContent = fs.readFileSync("src/tests/fixtures/profile/import/d2_test_wallets-empty.json");
@@ -63,9 +65,9 @@ describe("Import Profile - Processing import", () => {
 
 		userEvent.paste(screen.getByTestId("PasswordModal__input"), "S3cUrePa$sword");
 
-		await expect(screen.findByTestId("PasswordModal__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		await waitFor(() => expect(onPasswordChange).toHaveBeenCalledWith("S3cUrePa$sword"));
 
@@ -98,9 +100,9 @@ describe("Import Profile - Processing import", () => {
 
 		userEvent.paste(screen.getByTestId("PasswordModal__input"), "invalid");
 
-		await expect(screen.findByTestId("PasswordModal__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 
@@ -126,9 +128,9 @@ describe("Import Profile - Processing import", () => {
 
 		userEvent.paste(screen.getByTestId("PasswordModal__input"), "invalid");
 
-		await expect(screen.findByTestId("PasswordModal__submit-button")).resolves.toBeVisible();
+		await expect(screen.findByTestId(submitID)).resolves.toBeVisible();
 
-		userEvent.click(screen.getByTestId("PasswordModal__submit-button"));
+		userEvent.click(screen.getByTestId(submitID));
 
 		await expect(screen.findByTestId("modal__inner")).resolves.toBeVisible();
 

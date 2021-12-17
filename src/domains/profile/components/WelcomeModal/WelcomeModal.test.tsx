@@ -17,6 +17,8 @@ const Wrapper = () => (
 	</ConfigurationProvider>
 );
 
+const nextButtonID = "WelcomeModal-next";
+
 describe("WelcomeModal", () => {
 	beforeAll(() => {
 		profile = env.profiles().findById(getDefaultProfileId());
@@ -58,16 +60,16 @@ describe("WelcomeModal", () => {
 		render(<Wrapper />);
 
 		expect(screen.getByTestId("WelcomeModal-skip")).toBeDefined();
-		expect(screen.getByTestId("WelcomeModal-next")).toBeDefined();
+		expect(screen.getByTestId(nextButtonID)).toBeDefined();
 		expect(screen.queryByTestId("DotNavigation")).not.toBeInTheDocument();
 		expect(screen.queryByTestId("WelcomeModal-finish")).not.toBeInTheDocument();
 		expect(screen.queryByTestId("WelcomeModal-prev")).not.toBeInTheDocument();
 
 		// Intermediate steps
 		for (const _ of [1, 2, 3]) {
-			userEvent.click(screen.getByTestId("WelcomeModal-next"));
+			userEvent.click(screen.getByTestId(nextButtonID));
 
-			expect(screen.getByTestId("WelcomeModal-next")).toBeDefined();
+			expect(screen.getByTestId(nextButtonID)).toBeDefined();
 			expect(screen.getByTestId("WelcomeModal-prev")).toBeDefined();
 			expect(screen.getByTestId("DotNavigation")).toBeDefined();
 			expect(screen.queryByTestId("WelcomeModal-finish")).not.toBeInTheDocument();
@@ -75,12 +77,12 @@ describe("WelcomeModal", () => {
 		}
 
 		// Final step
-		userEvent.click(screen.getByTestId("WelcomeModal-next"));
+		userEvent.click(screen.getByTestId(nextButtonID));
 
 		expect(screen.getByTestId("WelcomeModal-finish")).toBeDefined();
 		expect(screen.getByTestId("WelcomeModal-prev")).toBeDefined();
 		expect(screen.getByTestId("DotNavigation")).toBeDefined();
-		expect(screen.queryByTestId("WelcomeModal-next")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(nextButtonID)).not.toBeInTheDocument();
 		expect(screen.queryByTestId("WelcomeModal-skip")).not.toBeInTheDocument();
 	});
 
@@ -90,7 +92,7 @@ describe("WelcomeModal", () => {
 		render(<Wrapper />);
 
 		// Got to first step (to show the navigation dots)
-		userEvent.click(screen.getByTestId("WelcomeModal-next"));
+		userEvent.click(screen.getByTestId(nextButtonID));
 
 		// Go to final step
 		userEvent.click(screen.getByTestId("DotNavigation-Step-3"));
@@ -98,7 +100,7 @@ describe("WelcomeModal", () => {
 		expect(screen.getByTestId("WelcomeModal-finish")).toBeDefined();
 		expect(screen.getByTestId("WelcomeModal-prev")).toBeDefined();
 		expect(screen.getByTestId("DotNavigation")).toBeDefined();
-		expect(screen.queryByTestId("WelcomeModal-next")).not.toBeInTheDocument();
+		expect(screen.queryByTestId(nextButtonID)).not.toBeInTheDocument();
 		expect(screen.queryByTestId("WelcomeModal-skip")).not.toBeInTheDocument();
 	});
 });

@@ -8,6 +8,8 @@ import { goToTransferPage } from "../e2e/common";
 
 const translations = buildTranslations();
 const sendButton = Selector("button").withText(translations.COMMON.SEND);
+const recipientInput = Selector("[data-testid=SelectDropdown__input]");
+const amountInput = Selector("[data-testid=AddRecipient__amount]");
 
 const preSteps = {
 	"Given Alice is signed into a profile with an imported wallet": async (t: TestController) => {
@@ -25,7 +27,7 @@ cucumber(
 		...preSteps,
 		"When she attempts to send a multipay transaction with a valid mnemonic": async (t: TestController) => {
 			await t.click(Selector("span").withText(translations.TRANSACTION.MULTIPLE));
-			await t.typeText(Selector("[data-testid=AddRecipient__amount]"), "10", { replace: true });
+			await t.typeText(amountInput, "10", { replace: true });
 			await t.typeText(Selector("[data-testid=SelectDropdown__input]"), "D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP", {
 				paste: true,
 			});
@@ -68,8 +70,8 @@ cucumber(
 		...preSteps,
 		"When she attempts to send a multipay transaction with an invalid mnemonic": async (t: TestController) => {
 			await t.click(Selector("span").withText(translations.TRANSACTION.MULTIPLE));
-			await t.typeText(Selector("[data-testid=AddRecipient__amount]"), "10", { replace: true });
-			await t.typeText(Selector("[data-testid=SelectDropdown__input]"), "D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP", {
+			await t.typeText(amountInput, "10", { replace: true });
+			await t.typeText(recipientInput, "D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP", {
 				paste: true,
 			});
 			await t.pressKey("tab");
@@ -112,16 +114,16 @@ cucumber("@multipayTransaction-notClearValues", {
 	...preSteps,
 	"When she enters multipay details in the transaction form": async (t: TestController) => {
 		await t.click(Selector("span").withText(translations.TRANSACTION.MULTIPLE));
-		await t.typeText(Selector("[data-testid=AddRecipient__amount]"), "10", { replace: true });
-		await t.typeText(Selector("[data-testid=SelectDropdown__input]"), "DReUcXWdCz2QLKzHM9NdZQE7fAwAyPwAmd", {
+		await t.typeText(amountInput, "10", { replace: true });
+		await t.typeText(recipientInput, "DReUcXWdCz2QLKzHM9NdZQE7fAwAyPwAmd", {
 			paste: true,
 		});
 		await t.click(Selector("button").withText(translations.TRANSACTION.ADD_RECIPIENT));
-		await t.typeText(Selector("[data-testid=SelectDropdown__input]"), "D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP", {
+		await t.typeText(recipientInput, "D7JJ4ZfkJDwDCwuwzhtbCFapBUCWU3HHGP", {
 			paste: true,
 			replace: true,
 		});
-		await t.typeText(Selector("[data-testid=AddRecipient__amount]"), "10", { replace: true });
+		await t.typeText(amountInput, "10", { replace: true });
 
 		await t.click(Selector("button").withText(translations.TRANSACTION.ADD_RECIPIENT));
 	},
@@ -140,8 +142,8 @@ cucumber("@multipayTransaction-notClearValues", {
 cucumber("@multipayTransaction-singleField", {
 	...preSteps,
 	"When she enters details into the single transaction form": async (t: TestController) => {
-		await t.typeText(Selector("[data-testid=AddRecipient__amount]"), "10", { replace: true });
-		await t.typeText(Selector("[data-testid=SelectDropdown__input]"), "DReUcXWdCz2QLKzHM9NdZQE7fAwAyPwAmd", {
+		await t.typeText(amountInput, "10", { replace: true });
+		await t.typeText(recipientInput, "DReUcXWdCz2QLKzHM9NdZQE7fAwAyPwAmd", {
 			paste: true,
 		});
 

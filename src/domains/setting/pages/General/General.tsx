@@ -25,6 +25,9 @@ import { SettingsWrapper } from "@/domains/setting/components/SettingsPageWrappe
 import { useSettingsPrompt } from "@/domains/setting/hooks/use-settings-prompt";
 import { setScreenshotProtection } from "@/utils/electron-utils";
 
+const requiredFieldMessage = "COMMON.VALIDATION.FIELD_REQUIRED";
+const selectOption = "COMMON.SELECT_OPTION";
+
 export const GeneralSettings: React.FC = () => {
 	const profile = useActiveProfile();
 
@@ -159,7 +162,7 @@ export const GeneralSettings: React.FC = () => {
 					<FormLabel label={t("SETTINGS.GENERAL.SECURITY.AUTOMATIC_SIGN_OUT_PERIOD.TITLE")} />
 					<Select
 						id="select-auto-signout"
-						placeholder={t("COMMON.SELECT_OPTION", {
+						placeholder={t(selectOption, {
 							option: t("SETTINGS.GENERAL.SECURITY.AUTOMATIC_SIGN_OUT_PERIOD.TITLE"),
 						})}
 						ref={register()}
@@ -298,11 +301,11 @@ export const GeneralSettings: React.FC = () => {
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.PASSPHRASE_LANGUAGE")} />
 								<Select
 									id="select-passphrase-language"
-									placeholder={t("COMMON.SELECT_OPTION", {
+									placeholder={t(selectOption, {
 										option: t("SETTINGS.GENERAL.PERSONAL.PASSPHRASE_LANGUAGE"),
 									})}
 									ref={register({
-										required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+										required: t(requiredFieldMessage, {
 											field: t("SETTINGS.GENERAL.PERSONAL.PASSPHRASE_LANGUAGE"),
 										}).toString(),
 									})}
@@ -321,11 +324,11 @@ export const GeneralSettings: React.FC = () => {
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.CURRENCY")} />
 								<Select
 									id="select-currency"
-									placeholder={t("COMMON.SELECT_OPTION", {
+									placeholder={t(selectOption, {
 										option: t("SETTINGS.GENERAL.PERSONAL.CURRENCY"),
 									})}
 									ref={register({
-										required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+										required: t(requiredFieldMessage, {
 											field: t("SETTINGS.GENERAL.PERSONAL.CURRENCY"),
 										}).toString(),
 									})}
@@ -346,11 +349,11 @@ export const GeneralSettings: React.FC = () => {
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.LANGUAGE")} />
 								<Select
 									id="select-language"
-									placeholder={t("COMMON.SELECT_OPTION", {
+									placeholder={t(selectOption, {
 										option: t("SETTINGS.GENERAL.PERSONAL.LANGUAGE"),
 									})}
 									ref={register({
-										required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+										required: t(requiredFieldMessage, {
 											field: t("SETTINGS.GENERAL.PERSONAL.LANGUAGE"),
 										}).toString(),
 									})}
@@ -366,11 +369,11 @@ export const GeneralSettings: React.FC = () => {
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.MARKET_PROVIDER")} />
 								<Select
 									id="select-market-provider"
-									placeholder={t("COMMON.SELECT_OPTION", {
+									placeholder={t(selectOption, {
 										option: t("SETTINGS.GENERAL.PERSONAL.MARKET_PROVIDER"),
 									})}
 									ref={register({
-										required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+										required: t(requiredFieldMessage, {
 											field: t("SETTINGS.GENERAL.PERSONAL.MARKET_PROVIDER"),
 										}).toString(),
 									})}
@@ -403,11 +406,11 @@ export const GeneralSettings: React.FC = () => {
 								<FormLabel label={t("SETTINGS.GENERAL.PERSONAL.TIME_FORMAT")} />
 								<Select
 									id="select-time-format"
-									placeholder={t("COMMON.SELECT_OPTION", {
+									placeholder={t(selectOption, {
 										option: t("SETTINGS.GENERAL.PERSONAL.TIME_FORMAT"),
 									})}
 									ref={register({
-										required: t("COMMON.VALIDATION.FIELD_REQUIRED", {
+										required: t(requiredFieldMessage, {
 											field: t("SETTINGS.GENERAL.PERSONAL.TIME_FORMAT"),
 										}).toString(),
 									})}
