@@ -153,7 +153,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
 					disabled={isButtonDisabled}
 					variant={isCompact ? "transparent" : "secondary"}
 					className={cn({
-						"my-auto ": !isCompact,
+						"my-auto": !isCompact,
 						"text-theme-primary-600 hover:text-theme-primary-700": isCompact,
 					})}
 					onClick={handleSend}

@@ -69,7 +69,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 			const renderIcon = ({ icon }: DropdownOption) => (
 				<Icon
 					name={icon!}
-					className="dark:text-theme-secondary-600 dark:group-hover:text-theme-secondary-200"
+					className="dark:text-theme-secondary-600 dark:group-scope-hover:text-theme-secondary-200"
 				/>
 			);
 
@@ -97,7 +97,7 @@ export const Dropdown: FC<DropdownProperties> = ({
 					{(options as DropdownOption[]).map((option: DropdownOption, index: number) => (
 						<DropdownItem
 							aria-disabled={option.disabled}
-							className={cn({ group: !option.disabled })}
+							className={cn({ "group-scope": !option.disabled })}
 							disabled={option.disabled}
 							key={index}
 							data-testid={`dropdown__option--${key ? `${key}-` : ""}${index}`}

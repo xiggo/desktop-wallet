@@ -142,7 +142,7 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -282,7 +282,7 @@ exports[`WalletsGroup should handle list wallet click 1`] = `
       </div>
     </div>
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -560,7 +560,7 @@ exports[`WalletsGroup should render GroupNetworkTotal with amounts 1`] = `
 exports[`WalletsGroup should render group with different widths 1`] = `
 <DocumentFragment>
   <div
-    class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+    class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
     data-testid="WalletsGroup"
   >
     <div
@@ -705,7 +705,7 @@ exports[`WalletsGroup should render group with different widths 1`] = `
 exports[`WalletsGroup should render group with different widths 2`] = `
 <DocumentFragment>
   <div
-    class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+    class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
     data-testid="WalletsGroup"
   >
     <div
@@ -850,7 +850,7 @@ exports[`WalletsGroup should render group with different widths 2`] = `
 exports[`WalletsGroup should render group with different widths 3`] = `
 <DocumentFragment>
   <div
-    class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+    class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
     data-testid="WalletsGroup"
   >
     <div
@@ -1000,7 +1000,7 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -1140,7 +1140,7 @@ exports[`WalletsGroup should render with dark mode = false 1`] = `
       </div>
     </div>
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -1303,7 +1303,7 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -1443,7 +1443,7 @@ exports[`WalletsGroup should render with dark mode = true 1`] = `
       </div>
     </div>
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -1608,7 +1608,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -1729,7 +1729,7 @@ exports[`WalletsGroup should show skeleton when syncing exchange rates 1`] = `
       </div>
     </div>
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 fzernh group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 fzernh"
       data-testid="WalletsGroup"
     >
       <div

@@ -142,7 +142,7 @@ exports[`Portfolio grouped networks should apply ledger import 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -282,7 +282,7 @@ exports[`Portfolio grouped networks should apply ledger import 1`] = `
       </div>
     </div>
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -670,7 +670,7 @@ exports[`Portfolio grouped networks should open and close ledger import modal 1`
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -810,7 +810,7 @@ exports[`Portfolio grouped networks should open and close ledger import modal 1`
       </div>
     </div>
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -1109,7 +1109,7 @@ exports[`Portfolio grouped networks should render list 1`] = `
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -1249,7 +1249,7 @@ exports[`Portfolio grouped networks should render list 1`] = `
       </div>
     </div>
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -1548,7 +1548,7 @@ exports[`Portfolio grouped networks should render without testnet wallets 1`] = 
     data-testid="NetworkWalletsGroupList"
   >
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div
@@ -1688,7 +1688,7 @@ exports[`Portfolio grouped networks should render without testnet wallets 1`] = 
       </div>
     </div>
     <div
-      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS group"
+      class="WalletsGroupblocks__WalletGroupWrapper-sc-17614tu-0 kfyqS"
       data-testid="WalletsGroup"
     >
       <div

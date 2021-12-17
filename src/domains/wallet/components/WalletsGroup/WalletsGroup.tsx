@@ -32,7 +32,7 @@ export const WalletsGroup: React.VFC<WalletsGroupProperties> = ({ network, walle
 	);
 
 	return (
-		<WalletGroupWrapper data-testid="WalletsGroup" isCollapsed={!isExpanded} className={"group"}>
+		<WalletGroupWrapper data-testid="WalletsGroup" isCollapsed={!isExpanded}>
 			<WalletsGroupHeader
 				network={network}
 				wallets={wallets}
