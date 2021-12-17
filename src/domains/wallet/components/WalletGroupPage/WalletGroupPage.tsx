@@ -1,11 +1,11 @@
-import { Page } from "app/components/Layout";
-import { Pagination } from "app/components/Pagination";
-import { WalletGroupWrapper } from "domains/wallet/components/WalletsGroup/WalletsGroup.blocks";
-import { WalletsGroupHeader } from "domains/wallet/components/WalletsGroup/WalletsGroupHeader";
-import { WalletsList } from "domains/wallet/components/WalletsList/WalletsList";
-import { useDisplayWallets } from "domains/wallet/hooks/use-display-wallets";
 import React, { useMemo, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import { Page } from "@/app/components/Layout";
+import { Pagination } from "@/app/components/Pagination";
+import { WalletGroupWrapper } from "@/domains/wallet/components/WalletsGroup/WalletsGroup.blocks";
+import { WalletsGroupHeader } from "@/domains/wallet/components/WalletsGroup/WalletsGroupHeader";
+import { WalletsList } from "@/domains/wallet/components/WalletsList/WalletsList";
+import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
 
 const MAX_WALLETS_ON_SINGLE_PAGE_LIST = 15;
 

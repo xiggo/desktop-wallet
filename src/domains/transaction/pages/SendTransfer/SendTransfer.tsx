@@ -1,7 +1,5 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { useSendTransferForm } from "domains/transaction/hooks/use-send-transfer-form";
-import { SendTransferStep } from "domains/transaction/pages/SendTransfer/SendTransfer.contracts";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
 
@@ -10,6 +8,8 @@ import { TransferLedgerReview } from "./LedgerReview";
 import { NetworkStep } from "./NetworkStep";
 import { ReviewStep } from "./ReviewStep";
 import { SummaryStep } from "./SummaryStep";
+import { SendTransferStep } from "@/domains/transaction/pages/SendTransfer/SendTransfer.contracts";
+import { useSendTransferForm } from "@/domains/transaction/hooks/use-send-transfer-form";
 import { Form } from "@/app/components/Form";
 import { Page, Section } from "@/app/components/Layout";
 import { StepIndicator } from "@/app/components/StepIndicator";

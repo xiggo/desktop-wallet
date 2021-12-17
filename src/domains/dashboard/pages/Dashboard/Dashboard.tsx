@@ -1,14 +1,14 @@
 import { uniq } from "@payvo/sdk-helpers";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
-import { EmptyBlock } from "app/components/EmptyBlock";
-import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
-import { PortfolioBreakdown } from "domains/dashboard/components/PortfolioBreakdown";
-import { PortfolioHeader } from "domains/wallet/components/PortfolioHeader";
-import { WalletsGroupsList } from "domains/wallet/components/WalletsGroup";
-import { useLatestTransactions } from "domains/dashboard/hooks/use-latest-transactions";
-import { TransactionTable } from "domains/transaction/components/TransactionTable";
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { EmptyBlock } from "@/app/components/EmptyBlock";
+import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
+import { PortfolioBreakdown } from "@/domains/dashboard/components/PortfolioBreakdown";
+import { PortfolioHeader } from "@/domains/wallet/components/PortfolioHeader";
+import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup";
+import { useLatestTransactions } from "@/domains/dashboard/hooks/use-latest-transactions";
+import { TransactionTable } from "@/domains/transaction/components/TransactionTable";
 
 import { Page, Section } from "@/app/components/Layout";
 import { useConfiguration, useEnvironmentContext } from "@/app/contexts";

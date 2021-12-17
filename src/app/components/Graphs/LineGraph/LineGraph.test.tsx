@@ -1,10 +1,10 @@
 import userEvent from "@testing-library/user-event";
-import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
-import * as sharedGraphUtils from "app/components/Graphs/Graphs.shared";
 import React from "react";
 import { render, screen, waitFor } from "utils/testing-library";
 
 import { LineGraph } from "./LineGraph";
+import * as sharedGraphUtils from "@/app/components/Graphs/Graphs.shared";
+import { GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
 
 const itemArea = () => screen.getAllByTestId("LineGraph__item-hover-area");
 

@@ -1,9 +1,9 @@
 import userEvent from "@testing-library/user-event";
-import { buildTranslations } from "app/i18n/helpers";
 import React from "react";
 import { render, screen } from "utils/testing-library";
 
 import { PortfolioBreakdownDetails } from "./PortfolioBreakdownDetails";
+import { buildTranslations } from "@/app/i18n/helpers";
 
 const translations = buildTranslations();
 

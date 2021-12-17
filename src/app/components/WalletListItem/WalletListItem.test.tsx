@@ -1,10 +1,10 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import * as useWalletActionsModule from "domains/wallet/hooks/use-wallet-actions";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { WalletListItem } from "./WalletListItem";
+import * as useWalletActionsModule from "@/domains/wallet/hooks/use-wallet-actions";
 
 import { env, getDefaultProfileId, render, screen } from "@/utils/testing-library";
 import * as isFullySyncedModule from "@/domains/wallet/utils/is-fully-synced";

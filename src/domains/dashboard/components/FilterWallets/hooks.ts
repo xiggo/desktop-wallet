@@ -1,9 +1,9 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { useNetworks } from "app/hooks";
 import { useMemo } from "react";
 
 import { FilterWalletsHookProperties } from "./FilterWallets.contracts";
+import { useNetworks } from "@/app/hooks";
 import { useWalletConfig } from "@/domains/wallet/hooks";
 
 export const useWalletFilters = ({ profile }: { profile: Contracts.IProfile }) => {

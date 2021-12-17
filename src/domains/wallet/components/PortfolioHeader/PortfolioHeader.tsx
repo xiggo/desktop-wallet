@@ -1,10 +1,10 @@
-import { useActiveProfile } from "app/hooks";
-import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
-import { WalletsControls } from "domains/wallet/components/WalletsControls";
-import { LedgerWaitingDevice } from "domains/wallet/components/Ledger";
-import { useWalletActions } from "domains/wallet/hooks/use-wallet-actions";
 import React, { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useActiveProfile } from "@/app/hooks";
+import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
+import { WalletsControls } from "@/domains/wallet/components/WalletsControls";
+import { LedgerWaitingDevice } from "@/domains/wallet/components/Ledger";
+import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 
 export const PortfolioHeader: React.VFC = () => {
 	const { t } = useTranslation();

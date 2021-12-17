@@ -1,18 +1,17 @@
-import { DonutGraph } from "app/components/Graphs/DonutGraph";
-import { AddToOtherGroupFunction, GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
-import { useGraphData } from "app/components/Graphs/Graphs.shared";
-import { Modal } from "app/components/Modal";
-import { useTheme } from "app/hooks";
+import React, { useCallback, useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { AssetList, Balance, Tooltip } from "./PortfolioBreakdownDetails.blocks";
+import { GRAPH_HEIGHT, PortfolioBreakdownDetailsProperties } from "./PortfolioBreakdownDetails.contracts";
+import { DonutGraph } from "@/app/components/Graphs/DonutGraph";
+import { AddToOtherGroupFunction, GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
+import { useGraphData } from "@/app/components/Graphs/Graphs.shared";
+import { Modal } from "@/app/components/Modal";
+import { useTheme } from "@/app/hooks";
 import {
 	formatPercentage,
 	getColor,
 	getOtherGroupColor,
-} from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
-import React, { useCallback, useMemo } from "react";
-import { useTranslation } from "react-i18next";
-
-import { AssetList, Balance, Tooltip } from "./PortfolioBreakdownDetails.blocks";
-import { GRAPH_HEIGHT, PortfolioBreakdownDetailsProperties } from "./PortfolioBreakdownDetails.contracts";
+} from "@/domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
 
 export const PortfolioBreakdownDetails: React.VFC<PortfolioBreakdownDetailsProperties> = ({
 	isOpen,

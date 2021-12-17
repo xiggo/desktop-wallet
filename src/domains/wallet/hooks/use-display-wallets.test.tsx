@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import * as envHooks from "app/hooks/env";
-import { FilterWalletsHookProperties } from "domains/dashboard/components/FilterWallets";
-import * as filterWalletsHooks from "domains/dashboard/components/FilterWallets/hooks";
-import { useDisplayWallets } from "domains/wallet/hooks/use-display-wallets";
 import nock from "nock";
 import React from "react";
+import * as envHooks from "@/app/hooks/env";
+import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
+import * as filterWalletsHooks from "@/domains/dashboard/components/FilterWallets/hooks";
+import { useDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets";
 
 import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
 import { env, getDefaultProfileId, syncDelegates } from "@/utils/testing-library";

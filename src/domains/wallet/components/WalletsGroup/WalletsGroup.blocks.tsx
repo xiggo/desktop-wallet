@@ -1,22 +1,22 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Amount } from "app/components/Amount";
-import { Icon } from "app/components/Icon";
-import { WalletIcon } from "app/components/WalletIcons";
-import { useConfiguration } from "app/contexts";
-import { useActiveProfile, useTheme } from "app/hooks";
 import cn from "classnames";
+import React, { useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import tw, { styled } from "twin.macro";
+import { Amount } from "@/app/components/Amount";
+import { Icon } from "@/app/components/Icon";
+import { WalletIcon } from "@/app/components/WalletIcons";
+import { useConfiguration } from "@/app/contexts";
+import { useActiveProfile, useTheme } from "@/app/hooks";
 import {
 	LabelledTextProperties,
 	WalletsGroupChevronTogglerProperties,
 	WalletsGroupNetworkIconProperties,
 	WalletsGroupNetworkNameProperties,
 	WalletsGroupNetworkTotalProperties,
-} from "domains/wallet/components/WalletsGroup/WalletsGroup.contracts";
-import { NetworkIcon } from "domains/network/components/NetworkIcon";
-import React, { useLayoutEffect, useMemo, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
-import Skeleton from "react-loading-skeleton";
-import tw, { styled } from "twin.macro";
+} from "@/domains/wallet/components/WalletsGroup/WalletsGroup.contracts";
+import { NetworkIcon } from "@/domains/network/components/NetworkIcon";
+import { Skeleton } from "@/app/components/Skeleton";
 
 export const LabelledText: React.FC<LabelledTextProperties> = ({ label, children, maxWidthReference }) => {
 	const [width, setWidth] = useState<number | undefined>();

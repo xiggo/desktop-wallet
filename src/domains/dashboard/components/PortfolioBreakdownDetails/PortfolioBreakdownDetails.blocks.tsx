@@ -1,20 +1,8 @@
 import { Helpers } from "@payvo/sdk-profiles";
-import { Amount } from "app/components/Amount";
-import { Table, TableCell, TableRow } from "app/components/Table";
-import { Tooltip as AppTooltip } from "app/components/Tooltip";
-import { useTheme } from "app/hooks";
 import cn from "classnames";
-import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
-import {
-	formatAmount,
-	formatPercentage,
-	getColor,
-	getOtherGroupColor,
-} from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
 import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column, TableState } from "react-table";
-
 import {
 	AssetListItemProperties,
 	AssetListProperties,
@@ -22,6 +10,17 @@ import {
 	ONE_MILLION,
 	TooltipProperties,
 } from "./PortfolioBreakdownDetails.contracts";
+import { Amount } from "@/app/components/Amount";
+import { Table, TableCell, TableRow } from "@/app/components/Table";
+import { Tooltip as AppTooltip } from "@/app/components/Tooltip";
+import { useTheme } from "@/app/hooks";
+import { AssetItem } from "@/domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
+import {
+	formatAmount,
+	formatPercentage,
+	getColor,
+	getOtherGroupColor,
+} from "@/domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.helpers";
 
 const AssetListItem: React.VFC<AssetListItemProperties> = ({ asset, index, exchangeCurrency, grouped }) => {
 	const { isDarkMode } = useTheme();

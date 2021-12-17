@@ -1,9 +1,9 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
-import { useActiveProfile } from "app/hooks";
-import { useWalletFilters } from "domains/dashboard/components/FilterWallets";
-import { UseDisplayWallets } from "domains/wallet/hooks/use-display-wallets.contracts";
 import { useMemo } from "react";
+import { useActiveProfile } from "@/app/hooks";
+import { useWalletFilters } from "@/domains/dashboard/components/FilterWallets";
+import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
 
 const groupWalletsByNetwork = (
 	wallets: Contracts.IReadWriteWallet[],

@@ -1,16 +1,16 @@
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import * as filterWalletsHooks from "domains/dashboard/components/FilterWallets/hooks";
-import { PortfolioHeader } from "domains/wallet/components/PortfolioHeader/PortfolioHeader";
-import { WalletsGroupsList } from "domains/wallet/components/WalletsGroup";
-import * as useDisplayWallets from "domains/wallet/hooks/use-display-wallets";
-import { UseDisplayWallets } from "domains/wallet/hooks/use-display-wallets.contracts";
-import * as useWalletAction from "domains/wallet/hooks/use-wallet-actions";
 import { createMemoryHistory } from "history";
 import nock from "nock";
 import React from "react";
 import { Route } from "react-router-dom";
+import * as filterWalletsHooks from "@/domains/dashboard/components/FilterWallets/hooks";
+import { PortfolioHeader } from "@/domains/wallet/components/PortfolioHeader/PortfolioHeader";
+import { WalletsGroupsList } from "@/domains/wallet/components/WalletsGroup";
+import * as useDisplayWallets from "@/domains/wallet/hooks/use-display-wallets";
+import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
+import * as useWalletAction from "@/domains/wallet/hooks/use-wallet-actions";
 
 import * as ledgerModule from "@/app/contexts/Ledger/Ledger";
 import * as useRandomNumberHook from "@/app/hooks/use-random-number";

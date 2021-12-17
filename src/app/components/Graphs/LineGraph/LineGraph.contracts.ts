@@ -1,4 +1,4 @@
-import { AddToOtherGroupFunction, GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
+import { AddToOtherGroupFunction, GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
 
 interface LineGraphConfig {
 	graphWidth: number;

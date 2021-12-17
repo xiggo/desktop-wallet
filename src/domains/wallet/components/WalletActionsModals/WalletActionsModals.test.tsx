@@ -1,12 +1,12 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { screen } from "@testing-library/react";
-import { LedgerProvider } from "app/contexts";
-import * as envHooks from "app/hooks/env";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultLedgerTransport, getDefaultProfileId, render, syncDelegates } from "utils/testing-library";
 import { WalletActionsModals } from "./WalletActionsModals";
+import * as envHooks from "@/app/hooks/env";
+import { LedgerProvider } from "@/app/contexts";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 
 const dashboardURL = `/profiles/${getDefaultProfileId()}/dashboard`;

@@ -1,13 +1,13 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { renderHook } from "@testing-library/react-hooks";
-import { DropdownOption } from "app/components/Dropdown";
-import { ConfigurationProvider, EnvironmentProvider } from "app/contexts";
-import * as useActiveProfileModule from "app/hooks/env";
-import { useWalletActions } from "domains/wallet/hooks/use-wallet-actions";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Router } from "react-router-dom";
 import { env, getDefaultProfileId } from "utils/testing-library";
+import { DropdownOption } from "@/app/components/Dropdown";
+import { ConfigurationProvider, EnvironmentProvider } from "@/app/contexts";
+import * as useActiveProfileModule from "@/app/hooks/env";
+import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 
 describe("useWalletActions", () => {
 	const history = createMemoryHistory();

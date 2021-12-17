@@ -1,12 +1,12 @@
-import { Button } from "app/components/Button";
-import { useActiveProfile } from "app/hooks";
-import { WalletGroupWrapper } from "domains/wallet/components/WalletsGroup/WalletsGroup.blocks";
-import { WalletsGroupProperties } from "domains/wallet/components/WalletsGroup/WalletsGroup.contracts";
-import { WalletsGroupHeader } from "domains/wallet/components/WalletsGroup/WalletsGroupHeader";
-import { WalletsList } from "domains/wallet/components/WalletsList";
 import React, { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import { Button } from "@/app/components/Button";
+import { useActiveProfile } from "@/app/hooks";
+import { WalletGroupWrapper } from "@/domains/wallet/components/WalletsGroup/WalletsGroup.blocks";
+import { WalletsGroupProperties } from "@/domains/wallet/components/WalletsGroup/WalletsGroup.contracts";
+import { WalletsGroupHeader } from "@/domains/wallet/components/WalletsGroup/WalletsGroupHeader";
+import { WalletsList } from "@/domains/wallet/components/WalletsList";
 
 const MAX_WALLETS_ON_DASHBOARD_LIST = 10;
 

@@ -1,6 +1,6 @@
 import cn from "classnames";
 import React from "react";
-import Skeleton from "react-loading-skeleton";
+import { Skeleton } from "@/app/components/Skeleton";
 
 import { Circle } from "@/app/components/Circle";
 import { TableCell, TableRow } from "@/app/components/Table";

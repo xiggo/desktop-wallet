@@ -2954,9 +2954,14 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     >
                       <span>
                         <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 60px; height: 20px;"
+                          class="flex items-center leading-none"
                         >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 60px; height: 20px;"
+                          >
+                            ‌
+                          </span>
                           ‌
                         </span>
                       </span>
@@ -2975,9 +2980,14 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     >
                       <span>
                         <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 160px; height: 20px;"
+                          class="flex items-center leading-none"
                         >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 160px; height: 20px;"
+                          >
+                            ‌
+                          </span>
                           ‌
                         </span>
                       </span>
@@ -2996,9 +3006,14 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     >
                       <span>
                         <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 130px; height: 20px;"
+                          class="flex items-center leading-none"
                         >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 130px; height: 20px;"
+                          >
+                            ‌
+                          </span>
                           ‌
                         </span>
                       </span>
@@ -3093,9 +3108,14 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     >
                       <span>
                         <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 60px; height: 20px;"
+                          class="flex items-center leading-none"
                         >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 60px; height: 20px;"
+                          >
+                            ‌
+                          </span>
                           ‌
                         </span>
                       </span>
@@ -3114,9 +3134,14 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     >
                       <span>
                         <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 160px; height: 20px;"
+                          class="flex items-center leading-none"
                         >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 160px; height: 20px;"
+                          >
+                            ‌
+                          </span>
                           ‌
                         </span>
                       </span>
@@ -3135,9 +3160,14 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                     >
                       <span>
                         <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 130px; height: 20px;"
+                          class="flex items-center leading-none"
                         >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 130px; height: 20px;"
+                          >
+                            ‌
+                          </span>
                           ‌
                         </span>
                       </span>

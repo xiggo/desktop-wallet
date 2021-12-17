@@ -1,26 +1,26 @@
-import { Address } from "app/components/Address";
-import { Amount } from "app/components/Amount";
-import { Avatar } from "app/components/Avatar";
-import { Button } from "app/components/Button";
-import { Dropdown } from "app/components/Dropdown";
-import { Icon } from "app/components/Icon";
-import { TableCell } from "app/components/Table";
-import { Tooltip } from "app/components/Tooltip";
-import { WalletIcons } from "app/components/WalletIcons";
+import cn from "classnames";
+import React, { useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import { Address } from "@/app/components/Address";
+import { Amount } from "@/app/components/Amount";
+import { Avatar } from "@/app/components/Avatar";
+import { Button } from "@/app/components/Button";
+import { Dropdown } from "@/app/components/Dropdown";
+import { Icon } from "@/app/components/Icon";
+import { TableCell } from "@/app/components/Table";
+import { Tooltip } from "@/app/components/Tooltip";
+import { WalletIcons } from "@/app/components/WalletIcons";
 import {
 	BalanceCellProperties,
 	ButtonsCellProperties,
 	CurrencyCellProperties,
 	InfoCellProperties,
 	WalletCellProperties,
-} from "app/components/WalletListItem/WalletListItem.contracts";
-import { useConfiguration } from "app/contexts";
-import { useActiveProfile, useWalletAlias } from "app/hooks";
-import cn from "classnames";
-import { useWalletOptions } from "domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
-import React, { useCallback } from "react";
-import { useTranslation } from "react-i18next";
-import Skeleton from "react-loading-skeleton";
+} from "@/app/components/WalletListItem/WalletListItem.contracts";
+import { useConfiguration } from "@/app/contexts";
+import { useActiveProfile, useWalletAlias } from "@/app/hooks";
+import { useWalletOptions } from "@/domains/wallet/pages/WalletDetails/hooks/use-wallet-options";
+import { Skeleton } from "@/app/components/Skeleton";
 
 const starIconDimensions: [number, number] = [18, 18];
 const excludedIcons = ["isStarred"];
@@ -39,45 +39,38 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet, handleTogg
 	return (
 		<TableCell
 			variant="start"
+			size="sm"
 			innerClassName={cn(isCompact ? "space-x-3" : "space-x-4")}
 			isCompact={isCompact}
-			data-testid={"TableCell_Wallet"}
+			data-testid="TableCell_Wallet"
 		>
-			<div
-				className={cn(
-					"flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800",
-					{
-						"h-11 gap-4": !isCompact,
-						"h-5 gap-3": isCompact,
-					},
-				)}
+			<Tooltip
+				content={
+					wallet.isStarred()
+						? t("WALLETS.PAGE_WALLET_DETAILS.UNSTAR_WALLET")
+						: t("WALLETS.PAGE_WALLET_DETAILS.STAR_WALLET")
+				}
 			>
-				<Tooltip
-					content={
-						wallet.isStarred()
-							? t("WALLETS.PAGE_WALLET_DETAILS.UNSTAR_WALLET")
-							: t("WALLETS.PAGE_WALLET_DETAILS.STAR_WALLET")
-					}
+				<div
+					data-testid="WalletIcon__Starred"
+					className="flex items-center justify-center"
+					onClick={handleToggleStar}
 				>
-					<div
-						data-testid={`WalletIcon__Starred`}
-						className={`flex items-center justify-center `}
-						onClick={handleToggleStar}
-					>
-						<Icon
-							className={"text-theme-warning-400"}
-							name={wallet.isStarred() ? "StarFilled" : "Star"}
-							dimensions={starIconDimensions}
-						/>
-					</div>
-				</Tooltip>
-				<div />
-			</div>
+					<Icon
+						className={"text-theme-warning-400"}
+						name={wallet.isStarred() ? "StarFilled" : "Star"}
+						dimensions={starIconDimensions}
+					/>
+				</div>
+			</Tooltip>
+
 			<div
 				className={cn(
-					"flex-shrink-0 flex items-center",
-					{ "space-x-4": isCompact },
-					{ "-space-x-1": !isCompact },
+					"flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800",
+					{
+						"pl-3 ml-3": isCompact,
+						"pl-4 ml-4": !isCompact,
+					},
 				)}
 			>
 				<Avatar
@@ -86,6 +79,7 @@ export const WalletCell: React.VFC<WalletCellProperties> = ({ wallet, handleTogg
 					shadowClassName="ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black"
 				/>
 			</div>
+
 			<div className="w-20 flex-1">
 				<Address walletName={alias} address={wallet.address()} />
 			</div>
@@ -106,7 +100,7 @@ export const BalanceCell: React.VFC<BalanceCellProperties> = ({ wallet, isCompac
 		{isSynced ? (
 			<Amount value={wallet.balance()} ticker={wallet.network().ticker()} />
 		) : (
-			<Skeleton height={20} width={100} />
+			<Skeleton height={16} width={100} />
 		)}
 	</TableCell>
 );
@@ -116,7 +110,7 @@ export const CurrencyCell: React.VFC<CurrencyCellProperties> = ({ wallet, isSync
 	const { t } = useTranslation();
 	let currencyPlaceholder: React.ReactNode;
 	if (profileIsSyncingExchangeRates) {
-		currencyPlaceholder = <Skeleton height={20} width={100} />;
+		currencyPlaceholder = <Skeleton height={16} width={100} />;
 	} else if (wallet.network().isTest() || !isSynced) {
 		currencyPlaceholder = t("COMMON.NOT_AVAILABLE");
 	} else {
@@ -152,22 +146,22 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
 	}, []);
 
 	return (
-		<TableCell variant="end" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>
+		<TableCell variant="end" size="sm" innerClassName="justify-end text-theme-secondary-text" isCompact={isCompact}>
 			<div onClick={handleStopPropagation} data-testid="WalletHeader__send-button">
 				<Button
 					size={isCompact ? "icon" : undefined}
 					disabled={isButtonDisabled}
 					variant={isCompact ? "transparent" : "secondary"}
-					className={cn("ml-3", {
+					className={cn({
 						"my-auto ": !isCompact,
-						"text-theme-primary-600 hover:text-theme-primary-700 -mr-3": isCompact,
+						"text-theme-primary-600 hover:text-theme-primary-700": isCompact,
 					})}
 					onClick={handleSend}
 				>
 					{t("COMMON.SEND")}
 				</Button>
 			</div>
-			<div data-testid="WalletHeader__more-button" className="ml-3">
+			<div data-testid="WalletHeader__more-button" className={cn({ "ml-3": !isCompact })}>
 				<Dropdown
 					toggleContent={
 						<Button
@@ -175,7 +169,7 @@ export const ButtonsCell: React.VFC<ButtonsCellProperties> = ({
 							size={isCompact ? "icon" : undefined}
 							disabled={isRestoring}
 							className={cn("w-11", {
-								"-mr-3 text-theme-primary-300 hover:text-theme-primary-600": isCompact,
+								"-mr-1.5 text-theme-primary-300 hover:text-theme-primary-600": isCompact,
 								"flex-1 text-white bg-theme-primary-600 hover:bg-theme-primary-700": !isCompact,
 							})}
 						>

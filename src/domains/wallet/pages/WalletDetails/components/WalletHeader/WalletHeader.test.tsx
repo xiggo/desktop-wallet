@@ -1,12 +1,12 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import * as envHooks from "app/hooks/env";
-import * as useWalletActionsModule from "domains/wallet/hooks/use-wallet-actions";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 
 import { WalletHeader } from "./WalletHeader";
+import * as useWalletActionsModule from "@/domains/wallet/hooks/use-wallet-actions";
+import * as envHooks from "@/app/hooks/env";
 import { LedgerProvider } from "@/app/contexts/Ledger/Ledger";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 import * as useQRCodeHook from "@/domains/wallet/components/ReceiveFunds/hooks";

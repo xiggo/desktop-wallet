@@ -1,20 +1,20 @@
-import { Icon } from "app/components/Icon";
-import { useTheme } from "app/hooks";
 import cn from "classnames";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { Icon } from "@/app/components/Icon";
+import { useTheme } from "@/app/hooks";
 import {
 	GroupChevronToggle,
 	GroupNetworkIcon,
 	GroupNetworkName,
 	GroupNetworkTotal,
 	LabelledText,
-} from "domains/wallet/components/WalletsGroup/WalletsGroup.blocks";
+} from "@/domains/wallet/components/WalletsGroup/WalletsGroup.blocks";
 import {
 	WalletsGroupHeaderProperties,
 	WalletsGroupHeaderSkeletonProperties,
-} from "domains/wallet/components/WalletsGroup/WalletsGroup.contracts";
-import React from "react";
-import { useTranslation } from "react-i18next";
-import Skeleton from "react-loading-skeleton";
+} from "@/domains/wallet/components/WalletsGroup/WalletsGroup.contracts";
+import { Skeleton } from "@/app/components/Skeleton";
 
 export const WalletsGroupHeader: React.VFC<WalletsGroupHeaderProperties> = ({
 	wallets,

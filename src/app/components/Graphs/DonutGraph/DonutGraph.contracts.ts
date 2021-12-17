@@ -1,6 +1,6 @@
-import { GraphAnimation } from "app/components/Graphs/GraphHoverAnimation/GraphHoverAnimation.contract";
-import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
 import React from "react";
+import { GraphAnimation } from "@/app/components/Graphs/GraphHoverAnimation/GraphHoverAnimation.contract";
+import { GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
 
 const BACKGROUND_CIRCLE_SPACING = 16;
 const GRAPH_MARGIN = 32;

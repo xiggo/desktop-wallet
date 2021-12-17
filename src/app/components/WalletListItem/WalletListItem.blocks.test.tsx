@@ -1,12 +1,12 @@
 import { Contracts } from "@payvo/sdk-profiles";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { ButtonsCell, CurrencyCell, WalletCell } from "app/components/WalletListItem/WalletListItem.blocks";
-import * as useConfigurationModule from "app/contexts/Configuration/Configuration";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, render } from "utils/testing-library";
+import * as useConfigurationModule from "@/app/contexts/Configuration/Configuration";
+import { ButtonsCell, CurrencyCell, WalletCell } from "@/app/components/WalletListItem/WalletListItem.blocks";
 import { translations as walletTranslations } from "@/domains/wallet/i18n";
 import { translations as commonTranslations } from "@/app/i18n/common/i18n";
 

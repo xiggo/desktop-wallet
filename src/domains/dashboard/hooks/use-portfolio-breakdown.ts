@@ -1,8 +1,8 @@
 import { sortByDesc } from "@payvo/sdk-helpers";
 import { Contracts } from "@payvo/sdk-profiles";
-import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
 import { useEffect, useMemo, useState } from "react";
 import { assertString } from "utils/assertions";
+import { AssetItem } from "@/domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
 
 type UsePortfolioBreakdownHook = (input: {
 	profile: Contracts.IProfile;

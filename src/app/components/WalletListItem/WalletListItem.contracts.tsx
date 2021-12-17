@@ -1,5 +1,5 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { useWalletActions } from "domains/wallet/hooks/use-wallet-actions";
+import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 
 export interface WalletListItemSkeletonProperties {
 	isCompact: boolean;

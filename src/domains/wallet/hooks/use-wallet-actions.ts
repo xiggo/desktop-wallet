@@ -1,11 +1,11 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { DropdownOption } from "app/components/Dropdown";
-import { useEnvironmentContext } from "app/contexts";
-import { useActiveProfile } from "app/hooks";
-import { WalletActionsModalType } from "domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 import React, { useCallback, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { openExternal } from "utils/electron-utils";
+import { DropdownOption } from "@/app/components/Dropdown";
+import { useEnvironmentContext } from "@/app/contexts";
+import { useActiveProfile } from "@/app/hooks";
+import { WalletActionsModalType } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals.contracts";
 
 export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 	const { persist } = useEnvironmentContext();

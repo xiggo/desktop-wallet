@@ -1,15 +1,14 @@
 import { LSK } from "@payvo/sdk-lsk";
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import { GRAPH_MIN_VALUE } from "app/components/Graphs/Graphs.contracts";
-import * as sharedGraphUtils from "app/components/Graphs/Graphs.shared";
-import * as useThemeHook from "app/hooks/use-theme";
-import { buildTranslations } from "app/i18n/helpers";
 import nock from "nock";
 import React from "react";
 import { env, render, screen } from "utils/testing-library";
-
 import { PortfolioBreakdown } from "./PortfolioBreakdown";
+import { GRAPH_MIN_VALUE } from "@/app/components/Graphs/Graphs.contracts";
+import * as sharedGraphUtils from "@/app/components/Graphs/Graphs.shared";
+import * as useThemeHook from "@/app/hooks/use-theme";
+import { buildTranslations } from "@/app/i18n/helpers";
 
 const translations = buildTranslations();
 

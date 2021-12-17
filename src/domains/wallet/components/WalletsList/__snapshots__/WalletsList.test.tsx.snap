@@ -3,7 +3,7 @@
 exports[`WalletsList should render 1`] = `
 <DocumentFragment>
   <div
-    class="pt-6 px-4 mb-2 mx-2"
+    class="pt-6 px-4 mb-2"
     data-testid="WalletsList"
   >
     <div
@@ -127,7 +127,7 @@ exports[`WalletsList should render 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-32 min-w-32"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -153,29 +153,24 @@ exports[`WalletsList should render 1`] = `
                 data-testid="TableCell_Wallet"
               >
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                 >
                   <div
-                    class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                    class="flex items-center justify-center"
+                    data-testid="WalletIcon__Starred"
                   >
                     <div
-                      class="flex items-center justify-center "
-                      data-testid="WalletIcon__Starred"
+                      class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                      height="18"
+                      width="18"
                     >
-                      <div
-                        class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                        height="18"
-                        width="18"
-                      >
-                        <svg>
-                          star.svg
-                        </svg>
-                      </div>
+                      <svg>
+                        star.svg
+                      </svg>
                     </div>
-                    <div />
                   </div>
                   <div
-                    class="flex-shrink-0 flex items-center space-x-4"
+                    class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                   >
                     <div
                       class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -266,13 +261,13 @@ exports[`WalletsList should render 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                 >
                   <div
                     data-testid="WalletHeader__send-button"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                       type="button"
                     >
                       <div
@@ -283,7 +278,7 @@ exports[`WalletsList should render 1`] = `
                     </button>
                   </div>
                   <div
-                    class="ml-3"
+                    class=""
                     data-testid="WalletHeader__more-button"
                   >
                     <div
@@ -293,7 +288,7 @@ exports[`WalletsList should render 1`] = `
                         data-testid="dropdown__toggle"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                           type="button"
                         >
                           <div
@@ -324,29 +319,24 @@ exports[`WalletsList should render 1`] = `
                 data-testid="TableCell_Wallet"
               >
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                 >
                   <div
-                    class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                    class="flex items-center justify-center"
+                    data-testid="WalletIcon__Starred"
                   >
                     <div
-                      class="flex items-center justify-center "
-                      data-testid="WalletIcon__Starred"
+                      class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                      height="18"
+                      width="18"
                     >
-                      <div
-                        class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                        height="18"
-                        width="18"
-                      >
-                        <svg>
-                          star.svg
-                        </svg>
-                      </div>
+                      <svg>
+                        star.svg
+                      </svg>
                     </div>
-                    <div />
                   </div>
                   <div
-                    class="flex-shrink-0 flex items-center space-x-4"
+                    class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                   >
                     <div
                       class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -451,13 +441,13 @@ exports[`WalletsList should render 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                 >
                   <div
                     data-testid="WalletHeader__send-button"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                       type="button"
                     >
                       <div
@@ -468,7 +458,7 @@ exports[`WalletsList should render 1`] = `
                     </button>
                   </div>
                   <div
-                    class="ml-3"
+                    class=""
                     data-testid="WalletHeader__more-button"
                   >
                     <div
@@ -478,7 +468,7 @@ exports[`WalletsList should render 1`] = `
                         data-testid="dropdown__toggle"
                       >
                         <button
-                          class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                           type="button"
                         >
                           <div
@@ -512,7 +502,7 @@ exports[`WalletsList should render 1`] = `
 exports[`WalletsList should render empty skeleton block 1`] = `
 <DocumentFragment>
   <div
-    class="pt-6 px-4 mb-2 mx-2"
+    class="pt-6 px-4 mb-2"
     data-testid="WalletsList"
   >
     <div
@@ -636,7 +626,7 @@ exports[`WalletsList should render empty skeleton block 1`] = `
                 </div>
               </th>
               <th
-                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-32 min-w-32"
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
                 colspan="1"
                 data-testid="table__th--4"
                 role="columnheader"
@@ -660,37 +650,37 @@ exports[`WalletsList should render empty skeleton block 1`] = `
             >
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl items-center space-x-3"
                 >
-                  <div
-                    class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
-                  >
-                    <div
-                      class="flex items-center justify-center "
-                      data-testid="WalletIcon__Starred"
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
                     >
-                      <span>
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px;"
-                        >
-                          ‌
-                        </span>
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 18px; height: 18px;"
+                      >
+                        ‌
                       </span>
-                    </div>
-                    <div />
-                  </div>
+                      ‌
+                    </span>
+                  </span>
                   <div
-                    class="flex items-center space-x-4"
+                    class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3 space-x-3"
                   >
                     <div
                       class="Circle__CircleWrapper-sc-d5u41q-0 csrTuU border-transparent ring-theme-background"
                     >
                       <span>
                         <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px;"
+                          class="flex items-center leading-none"
                         >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 20px; height: 20px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
                           ‌
                         </span>
                       </span>
@@ -698,9 +688,14 @@ exports[`WalletsList should render empty skeleton block 1`] = `
                   </div>
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 200px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 200px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -708,13 +703,18 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-center text-sm font-bold text-center align-middle"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-center"
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 100px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 100px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -722,13 +722,18 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD font-semibold justify-end"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 150px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 150px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -736,13 +741,18 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 100px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 100px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -750,7 +760,7 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                 >
                   <button
                     class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
@@ -769,7 +779,7 @@ exports[`WalletsList should render empty skeleton block 1`] = `
                     data-testid="WalletHeader__more-button"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                       disabled=""
                       type="button"
                     >
@@ -797,37 +807,37 @@ exports[`WalletsList should render empty skeleton block 1`] = `
             >
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl items-center space-x-3"
                 >
-                  <div
-                    class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
-                  >
-                    <div
-                      class="flex items-center justify-center "
-                      data-testid="WalletIcon__Starred"
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
                     >
-                      <span>
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px;"
-                        >
-                          ‌
-                        </span>
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 18px; height: 18px;"
+                      >
+                        ‌
                       </span>
-                    </div>
-                    <div />
-                  </div>
+                      ‌
+                    </span>
+                  </span>
                   <div
-                    class="flex items-center space-x-4"
+                    class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3 space-x-3"
                   >
                     <div
                       class="Circle__CircleWrapper-sc-d5u41q-0 csrTuU border-transparent ring-theme-background"
                     >
                       <span>
                         <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px;"
+                          class="flex items-center leading-none"
                         >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 20px; height: 20px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
                           ‌
                         </span>
                       </span>
@@ -835,9 +845,14 @@ exports[`WalletsList should render empty skeleton block 1`] = `
                   </div>
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 200px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 200px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -845,13 +860,18 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-center text-sm font-bold text-center align-middle"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-center"
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 100px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 100px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -859,13 +879,18 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD font-semibold justify-end"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 150px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 150px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -873,13 +898,18 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 100px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 100px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -887,7 +917,7 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                 >
                   <button
                     class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
@@ -906,7 +936,7 @@ exports[`WalletsList should render empty skeleton block 1`] = `
                     data-testid="WalletHeader__more-button"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                       disabled=""
                       type="button"
                     >
@@ -934,37 +964,37 @@ exports[`WalletsList should render empty skeleton block 1`] = `
             >
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl items-center space-x-3"
                 >
-                  <div
-                    class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
-                  >
-                    <div
-                      class="flex items-center justify-center "
-                      data-testid="WalletIcon__Starred"
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
                     >
-                      <span>
-                        <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px;"
-                        >
-                          ‌
-                        </span>
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 18px; height: 18px;"
+                      >
+                        ‌
                       </span>
-                    </div>
-                    <div />
-                  </div>
+                      ‌
+                    </span>
+                  </span>
                   <div
-                    class="flex items-center space-x-4"
+                    class="flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3 space-x-3"
                   >
                     <div
                       class="Circle__CircleWrapper-sc-d5u41q-0 csrTuU border-transparent ring-theme-background"
                     >
                       <span>
                         <span
-                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                          style="width: 20px; height: 20px;"
+                          class="flex items-center leading-none"
                         >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 20px; height: 20px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
                           ‌
                         </span>
                       </span>
@@ -972,9 +1002,14 @@ exports[`WalletsList should render empty skeleton block 1`] = `
                   </div>
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 200px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 200px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -982,13 +1017,18 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-center text-sm font-bold text-center align-middle"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-center"
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 100px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 100px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -996,13 +1036,18 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD font-semibold justify-end"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 150px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 150px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -1010,13 +1055,18 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-400"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD justify-end"
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 100px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 100px; height: 16px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -1024,7 +1074,7 @@ exports[`WalletsList should render empty skeleton block 1`] = `
               </td>
               <td>
                 <div
-                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                 >
                   <button
                     class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
@@ -1043,7 +1093,7 @@ exports[`WalletsList should render empty skeleton block 1`] = `
                     data-testid="WalletHeader__more-button"
                   >
                     <button
-                      class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                       disabled=""
                       type="button"
                     >

@@ -1,5 +1,5 @@
-import { GraphDataPoint } from "app/components/Graphs/Graphs.contracts";
-import { AssetItem } from "domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
+import { GraphDataPoint } from "@/app/components/Graphs/Graphs.contracts";
+import { AssetItem } from "@/domains/dashboard/components/PortfolioBreakdown/PortfolioBreakdown.contracts";
 
 const GRAPH_HEIGHT = 280;
 const ONE_MILLION = 10 ** 6;

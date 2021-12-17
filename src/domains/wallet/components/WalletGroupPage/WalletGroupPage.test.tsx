@@ -1,14 +1,14 @@
 import { Networks } from "@payvo/sdk";
 import { Contracts } from "@payvo/sdk-profiles";
 import userEvent from "@testing-library/user-event";
-import * as envHooks from "app/hooks/env";
-import * as useDisplayWallets from "domains/wallet/hooks/use-display-wallets";
-import { UseDisplayWallets } from "domains/wallet/hooks/use-display-wallets.contracts";
-import { WalletGroupPage } from "domains/wallet/components/WalletGroupPage/WalletGroupPage";
 import { createMemoryHistory } from "history";
 import React from "react";
 import { Route } from "react-router-dom";
 import { env, getDefaultProfileId, render, screen, syncDelegates } from "utils/testing-library";
+import * as envHooks from "@/app/hooks/env";
+import * as useDisplayWallets from "@/domains/wallet/hooks/use-display-wallets";
+import { UseDisplayWallets } from "@/domains/wallet/hooks/use-display-wallets.contracts";
+import { WalletGroupPage } from "@/domains/wallet/components/WalletGroupPage/WalletGroupPage";
 
 const history = createMemoryHistory();
 

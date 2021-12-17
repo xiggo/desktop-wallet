@@ -1,7 +1,7 @@
 import React from "react";
 
-import { FilterWalletsHookProperties } from "domains/dashboard/components/FilterWallets";
 import { WalletsControls } from "./WalletsControls";
+import { FilterWalletsHookProperties } from "@/domains/dashboard/components/FilterWallets";
 import { render } from "@/utils/testing-library";
 
 describe("WalletsControls", () => {

@@ -1,6 +1,5 @@
-import { WalletGroupPage } from "domains/wallet/components/WalletGroupPage";
-
 import { CreateWallet, ImportWallet, WalletDetails } from "./pages";
+import { WalletGroupPage } from "@/domains/wallet/components/WalletGroupPage";
 
 export const WalletRoutes = [
 	{

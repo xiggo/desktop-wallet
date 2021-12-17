@@ -1,10 +1,10 @@
-import { GraphHoverAnimation } from "app/components/Graphs/GraphHoverAnimation";
-import { useGraphData, useGraphTooltip, useGraphWidth } from "app/components/Graphs/Graphs.shared";
 import React, { useMemo } from "react";
 
 import { LineGraphEmpty } from "./LineGraph.blocks";
 import { BASE_CONFIG, LineGraphConfig, LineGraphProperties } from "./LineGraph.contracts";
 import { useLineGraph } from "./LineGraph.helpers";
+import { useGraphData, useGraphTooltip, useGraphWidth } from "@/app/components/Graphs/Graphs.shared";
+import { GraphHoverAnimation } from "@/app/components/Graphs/GraphHoverAnimation";
 
 export const LineGraph: React.VFC<LineGraphProperties> = ({
 	data,

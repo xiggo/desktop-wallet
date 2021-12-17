@@ -1,14 +1,14 @@
+import React from "react";
 import {
 	BalanceCell,
 	ButtonsCell,
 	CurrencyCell,
 	InfoCell,
 	WalletCell,
-} from "app/components/WalletListItem/WalletListItem.blocks";
-import { WalletListItemProperties } from "app/components/WalletListItem/WalletListItem.contracts";
-import { WalletActionsModals } from "domains/wallet/components/WalletActionsModals/WalletActionsModals";
-import { useWalletActions } from "domains/wallet/hooks/use-wallet-actions";
-import React from "react";
+} from "@/app/components/WalletListItem/WalletListItem.blocks";
+import { WalletListItemProperties } from "@/app/components/WalletListItem/WalletListItem.contracts";
+import { WalletActionsModals } from "@/domains/wallet/components/WalletActionsModals/WalletActionsModals";
+import { useWalletActions } from "@/domains/wallet/hooks/use-wallet-actions";
 
 import { TableRow } from "@/app/components/Table";
 import { isFullySynced } from "@/domains/wallet/utils/is-fully-synced";

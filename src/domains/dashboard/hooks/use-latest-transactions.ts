@@ -2,7 +2,7 @@ import { sortByDesc } from "@payvo/sdk-helpers";
 import { Contracts, DTO } from "@payvo/sdk-profiles";
 import { useEffect, useState } from "react";
 
-import { useWalletConfig } from "domains/wallet/hooks";
+import { useWalletConfig } from "@/domains/wallet/hooks";
 import { useProfileTransactions } from "@/domains/transaction/hooks/use-profile-transactions";
 
 interface LatestTransactionsStateProperties {

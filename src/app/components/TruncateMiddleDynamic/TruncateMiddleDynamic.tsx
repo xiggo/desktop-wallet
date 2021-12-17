@@ -1,8 +1,8 @@
-import { TruncateMiddleDynamicProperties } from "app/components/TruncateMiddleDynamic/TruncateMiddleDynamic.contracts";
 import cn from "classnames";
 import React, { useLayoutEffect, useState } from "react";
 
 import { useResizeDetector } from "react-resize-detector";
+import { TruncateMiddleDynamicProperties } from "@/app/components/TruncateMiddleDynamic/TruncateMiddleDynamic.contracts";
 import { Tooltip } from "@/app/components/Tooltip";
 
 export const getTruncatedValue = (referenceElement: HTMLElement, elementWidth: number, value: string, offset = 0) => {

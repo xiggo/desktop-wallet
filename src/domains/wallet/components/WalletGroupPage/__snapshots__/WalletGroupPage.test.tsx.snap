@@ -341,9 +341,14 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 60px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 60px; height: 20px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -362,9 +367,14 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 160px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 160px; height: 20px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -383,9 +393,14 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                 >
                   <span>
                     <span
-                      class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
-                      style="width: 130px; height: 20px;"
+                      class="flex items-center leading-none"
                     >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 130px; height: 20px;"
+                      >
+                        ‌
+                      </span>
                       ‌
                     </span>
                   </span>
@@ -395,7 +410,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
           </div>
         </div>
         <div
-          class="pt-6 px-4 mb-2 mx-2"
+          class="pt-6 px-4 mb-2"
           data-testid="WalletsList"
         >
           <div
@@ -519,7 +534,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       </div>
                     </th>
                     <th
-                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-32 min-w-32"
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
                       colspan="1"
                       data-testid="table__th--4"
                       role="columnheader"
@@ -545,29 +560,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -658,13 +668,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -675,7 +685,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -685,7 +695,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -716,29 +726,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -829,13 +834,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -846,7 +851,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -856,7 +861,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -887,29 +892,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -1000,13 +1000,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -1017,7 +1017,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -1027,7 +1027,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -1058,29 +1058,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -1171,13 +1166,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -1188,7 +1183,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -1198,7 +1193,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -1229,29 +1224,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -1342,13 +1332,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -1359,7 +1349,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -1369,7 +1359,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -1400,29 +1390,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -1513,13 +1498,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -1530,7 +1515,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -1540,7 +1525,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -1571,29 +1556,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -1684,13 +1664,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -1701,7 +1681,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -1711,7 +1691,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -1742,29 +1722,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -1855,13 +1830,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -1872,7 +1847,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -1882,7 +1857,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -1913,29 +1888,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -2026,13 +1996,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -2043,7 +2013,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -2053,7 +2023,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -2084,29 +2054,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -2197,13 +2162,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -2214,7 +2179,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -2224,7 +2189,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -2255,29 +2220,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -2368,13 +2328,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -2385,7 +2345,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -2395,7 +2355,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -2426,29 +2386,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -2539,13 +2494,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -2556,7 +2511,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -2566,7 +2521,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -2597,29 +2552,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -2710,13 +2660,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -2727,7 +2677,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -2737,7 +2687,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -2768,29 +2718,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -2881,13 +2826,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -2898,7 +2843,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -2908,7 +2853,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div
@@ -2939,29 +2884,24 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                       data-testid="TableCell_Wallet"
                     >
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx space-x-3"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 eNekfl space-x-3"
                       >
                         <div
-                          class="flex justify-center divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 h-5 gap-3"
+                          class="flex items-center justify-center"
+                          data-testid="WalletIcon__Starred"
                         >
                           <div
-                            class="flex items-center justify-center "
-                            data-testid="WalletIcon__Starred"
+                            class="sc-bdvvtL jjGTFI text-theme-warning-400"
+                            height="18"
+                            width="18"
                           >
-                            <div
-                              class="sc-bdvvtL jjGTFI text-theme-warning-400"
-                              height="18"
-                              width="18"
-                            >
-                              <svg>
-                                star.svg
-                              </svg>
-                            </div>
+                            <svg>
+                              star.svg
+                            </svg>
                           </div>
-                          <div />
                         </div>
                         <div
-                          class="flex-shrink-0 flex items-center space-x-4"
+                          class="flex-shrink-0 flex items-center border-l border-theme-secondary-300 dark:border-theme-secondary-800 pl-3 ml-3"
                         >
                           <div
                             class="Avatar__AvatarWrapper-sc-18vw8a4-0 itzeiy ring-theme-background group-hover:ring-theme-secondary-100 group-hover:bg-theme-secondary-100 dark:group-hover:ring-black dark:group-hover:bg-black flex-shrink-0"
@@ -3052,13 +2992,13 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                     </td>
                     <td>
                       <div
-                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end text-theme-secondary-text"
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 bfFMyp justify-end text-theme-secondary-text"
                       >
                         <div
                           data-testid="WalletHeader__send-button"
                         >
                           <button
-                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF ml-3 text-theme-primary-600 hover:text-theme-primary-700 -mr-3"
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF text-theme-primary-600 hover:text-theme-primary-700"
                             type="button"
                           >
                             <div
@@ -3069,7 +3009,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                           </button>
                         </div>
                         <div
-                          class="ml-3"
+                          class=""
                           data-testid="WalletHeader__more-button"
                         >
                           <div
@@ -3079,7 +3019,7 @@ exports[`WalletGroupPage should render empty list if no wallets 1`] = `
                               data-testid="dropdown__toggle"
                             >
                               <button
-                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-3 text-theme-primary-300 hover:text-theme-primary-600"
+                                class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 -mr-1.5 text-theme-primary-300 hover:text-theme-primary-600"
                                 type="button"
                               >
                                 <div

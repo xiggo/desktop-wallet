@@ -4,7 +4,7 @@ import {
 	GRAPH_COLOR_OTHER_DARK,
 	GRAPH_COLORS,
 	GRAPH_COLORS_DARK,
-} from "app/components/Graphs/Graphs.contracts";
+} from "@/app/components/Graphs/Graphs.contracts";
 
 const getColor = (index: number, isDarkMode: boolean): string => {
 	const colors = isDarkMode ? GRAPH_COLORS_DARK : GRAPH_COLORS;

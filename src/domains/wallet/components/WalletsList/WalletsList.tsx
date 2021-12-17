@@ -1,13 +1,13 @@
 import { Contracts } from "@payvo/sdk-profiles";
-import { Table } from "app/components/Table";
-import { WalletListItem } from "app/components/WalletListItem";
-import { WalletListItemSkeleton } from "app/components/WalletListItem/WalletListItemSkeleton";
-import { useConfiguration } from "app/contexts";
-import { useActiveProfile } from "app/hooks";
-import { WalletsListProperties } from "domains/wallet/components/WalletsList/WalletsList.contracts";
 import React, { useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Column } from "react-table";
+import { Table } from "@/app/components/Table";
+import { WalletListItem } from "@/app/components/WalletListItem";
+import { WalletListItemSkeleton } from "@/app/components/WalletListItem/WalletListItemSkeleton";
+import { useConfiguration } from "@/app/contexts";
+import { useActiveProfile } from "@/app/hooks";
+import { WalletsListProperties } from "@/domains/wallet/components/WalletsList/WalletsList.contracts";
 
 export const WalletsList: React.VFC<WalletsListProperties> = ({ wallets }) => {
 	const profile = useActiveProfile();
@@ -44,8 +44,8 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({ wallets }) => {
 			},
 			{
 				Header: "Actions",
-				cellWidth: "w-32",
 				className: "hidden no-border",
+				minimumWidth: true,
 			},
 		],
 		[t],
@@ -69,7 +69,7 @@ export const WalletsList: React.VFC<WalletsListProperties> = ({ wallets }) => {
 	);
 
 	return (
-		<div data-testid="WalletsList" className="pt-6 px-4 mb-2 mx-2">
+		<div data-testid="WalletsList" className="pt-6 px-4 mb-2">
 			{(wallets.length > 0 || showSkeletons) && (
 				<div data-testid="WalletTable">
 					<Table columns={columns} data={tableRows}>
