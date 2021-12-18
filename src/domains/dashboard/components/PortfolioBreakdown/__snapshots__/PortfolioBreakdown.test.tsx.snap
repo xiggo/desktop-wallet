@@ -33,10 +33,10 @@ exports[`PortfolioBreakdown should render loading when items converted balance c
     data-testid="PortfolioBreakdownSkeleton"
   >
     <div
-      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -62,7 +62,7 @@ exports[`PortfolioBreakdown should render loading when items converted balance c
         </div>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -88,7 +88,7 @@ exports[`PortfolioBreakdown should render loading when items converted balance c
         </div>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -115,7 +115,7 @@ exports[`PortfolioBreakdown should render loading when items converted balance c
       </div>
     </div>
     <div
-      class="flex-1 ml-4 self-end"
+      class="flex-1 ml-6 self-end"
     >
       <span>
         <span
@@ -142,10 +142,10 @@ exports[`PortfolioBreakdown should render loading when profile is not restored y
     data-testid="PortfolioBreakdownSkeleton"
   >
     <div
-      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -171,7 +171,7 @@ exports[`PortfolioBreakdown should render loading when profile is not restored y
         </div>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -197,7 +197,7 @@ exports[`PortfolioBreakdown should render loading when profile is not restored y
         </div>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -224,7 +224,7 @@ exports[`PortfolioBreakdown should render loading when profile is not restored y
       </div>
     </div>
     <div
-      class="flex-1 ml-4 self-end"
+      class="flex-1 ml-6 self-end"
     >
       <span>
         <span
@@ -251,10 +251,10 @@ exports[`PortfolioBreakdown should render loading when syncing exchange rates 1`
     data-testid="PortfolioBreakdownSkeleton"
   >
     <div
-      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -280,7 +280,7 @@ exports[`PortfolioBreakdown should render loading when syncing exchange rates 1`
         </div>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -306,7 +306,7 @@ exports[`PortfolioBreakdown should render loading when syncing exchange rates 1`
         </div>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -333,7 +333,7 @@ exports[`PortfolioBreakdown should render loading when syncing exchange rates 1`
       </div>
     </div>
     <div
-      class="flex-1 ml-4 self-end"
+      class="flex-1 ml-6 self-end"
     >
       <span>
         <span
@@ -360,10 +360,10 @@ exports[`PortfolioBreakdown should render with dark mode = false 1`] = `
     data-testid="PortfolioBreakdown"
   >
     <div
-      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -378,7 +378,7 @@ exports[`PortfolioBreakdown should render with dark mode = false 1`] = `
         </span>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -393,7 +393,7 @@ exports[`PortfolioBreakdown should render with dark mode = false 1`] = `
         </span>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -639,10 +639,10 @@ exports[`PortfolioBreakdown should render with dark mode = true 1`] = `
     data-testid="PortfolioBreakdown"
   >
     <div
-      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -657,7 +657,7 @@ exports[`PortfolioBreakdown should render with dark mode = true 1`] = `
         </span>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -672,7 +672,7 @@ exports[`PortfolioBreakdown should render with dark mode = true 1`] = `
         </span>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -918,10 +918,10 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = fa
     data-testid="PortfolioBreakdown"
   >
     <div
-      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -936,7 +936,7 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = fa
         </span>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -951,7 +951,7 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = fa
         </span>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -1024,10 +1024,10 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = tr
     data-testid="PortfolioBreakdown"
   >
     <div
-      class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+      class="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
     >
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -1042,7 +1042,7 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = tr
         </span>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -1057,7 +1057,7 @@ exports[`PortfolioBreakdown should render zero balance state with dark mode = tr
         </span>
       </div>
       <div
-        class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+        class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
       >
         <span
           class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"

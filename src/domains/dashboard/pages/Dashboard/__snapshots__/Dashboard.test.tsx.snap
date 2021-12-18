@@ -416,10 +416,10 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
               data-testid="PortfolioBreakdown"
             >
               <div
-                class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                class="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
               >
                 <div
-                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                  class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
                 >
                   <span
                     class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -434,7 +434,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                   </span>
                 </div>
                 <div
-                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                  class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
                 >
                   <span
                     class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -449,7 +449,7 @@ exports[`Dashboard should display empty block when there are no transactions 1`]
                   </span>
                 </div>
                 <div
-                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                  class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
                 >
                   <span
                     class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -1215,10 +1215,10 @@ exports[`Dashboard should render 1`] = `
               data-testid="PortfolioBreakdown"
             >
               <div
-                class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                class="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
               >
                 <div
-                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                  class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
                 >
                   <span
                     class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -1233,7 +1233,7 @@ exports[`Dashboard should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                  class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
                 >
                   <span
                     class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -1248,7 +1248,7 @@ exports[`Dashboard should render 1`] = `
                   </span>
                 </div>
                 <div
-                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                  class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
                 >
                   <span
                     class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -2808,10 +2808,10 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
               data-testid="PortfolioBreakdown"
             >
               <div
-                class="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                class="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
               >
                 <div
-                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                  class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
                 >
                   <span
                     class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -2826,7 +2826,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                   </span>
                 </div>
                 <div
-                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                  class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
                 >
                   <span
                     class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"
@@ -2841,7 +2841,7 @@ exports[`Dashboard should render loading state when profile is syncing 1`] = `
                   </span>
                 </div>
                 <div
-                  class="flex flex-col font-semibold space-y-1 pl-3 first:pl-0"
+                  class="flex flex-col font-semibold space-y-1 pl-4 first:pl-0"
                 >
                   <span
                     class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap"

@@ -112,7 +112,7 @@ export const PortfolioBreakdown: React.VFC<PortfolioBreakdownProperties> = ({
 				className="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
 				data-testid="PortfolioBreakdown"
 			>
-				<div className="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
+				<div className="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
 					<LabelledText label={t("COMMON.YOUR_BALANCE")}>
 						{(textClassName) => <Amount className={textClassName} ticker={ticker} value={balance} />}
 					</LabelledText>

@@ -43,7 +43,7 @@ const Legend: React.VFC<LegendProperties> = ({ hasZeroBalance, onMoreDetailsClic
 };
 
 const LabelledText: React.FC<LabelledTextProperties> = ({ label, children }) => (
-	<div className="flex flex-col font-semibold space-y-1 pl-3 first:pl-0">
+	<div className="flex flex-col font-semibold space-y-1 pl-4 first:pl-0">
 		<span className="text-sm text-theme-secondary-500 dark:text-theme-secondary-700 whitespace-nowrap">
 			{label}
 		</span>
@@ -111,7 +111,7 @@ const PortfolioBreakdownSkeleton: React.VFC = () => {
 			className="py-4 px-6 bg-theme-secondary-100 dark:bg-black rounded-xl flex"
 			data-testid="PortfolioBreakdownSkeleton"
 		>
-			<div className="flex space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
+			<div className="flex space-x-4 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800">
 				<LabelledText label={t("COMMON.YOUR_BALANCE")}>
 					{() => (
 						<div className="flex items-center h-7">
@@ -125,7 +125,7 @@ const PortfolioBreakdownSkeleton: React.VFC = () => {
 				{skeletonBlock(t("COMMON.WALLETS"))}
 			</div>
 
-			<div className="flex-1 ml-4 self-end" ref={lineGraphSkeletonReference}>
+			<div className="flex-1 ml-6 self-end" ref={lineGraphSkeletonReference}>
 				<Skeleton height={8} width={lineGraphSkeletonReference.current?.clientWidth ?? 0} />
 			</div>
 		</div>
