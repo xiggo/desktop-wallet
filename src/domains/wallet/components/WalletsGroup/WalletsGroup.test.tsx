@@ -33,8 +33,6 @@ describe("WalletsGroup", () => {
 	beforeAll(async () => {
 		profile = env.profiles().findById(getDefaultProfileId());
 
-		history.push(dashboardURL);
-
 		mainnetWallet = await profile.walletFactory().fromAddress({
 			address: "AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX",
 			coin: "ARK",
@@ -217,6 +215,10 @@ describe("WalletsGroup", () => {
 		userEvent.click(screen.getByTestId("DeleteResource__submit-button"));
 
 		await waitFor(() => expect(profile.wallets().count()).toBe(count - 1));
+
+		await waitFor(() => {
+			expect(screen.queryByTestId("modal__inner")).not.toBeInTheDocument();
+		});
 	});
 
 	it.each([-500, 0, 500])("should render group with different widths", (width) => {

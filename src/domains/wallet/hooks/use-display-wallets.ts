@@ -21,6 +21,7 @@ export const useDisplayWallets: UseDisplayWallets = () => {
 	const profile = useActiveProfile();
 
 	const isRestored = profile.status().isRestored();
+	const walletsCount = profile.wallets().count();
 	const { walletsDisplayType, selectedNetworkIds } = useWalletFilters({ profile });
 
 	const wallets = useMemo(
@@ -36,7 +37,7 @@ export const useDisplayWallets: UseDisplayWallets = () => {
 						(a.alias() ?? "").localeCompare(b.alias() ?? ""),
 				),
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-		[profile, isRestored],
+		[profile, isRestored, walletsCount],
 	);
 
 	const filteredByDisplayType = useMemo(

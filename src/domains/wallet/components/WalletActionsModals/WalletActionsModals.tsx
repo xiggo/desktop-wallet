@@ -24,6 +24,12 @@ export const WalletActionsModals: VFC<WalletActionsProperties> = ({ wallet, acti
 		[setActiveModal],
 	);
 
+	const handleDeleteWallet = async () => {
+		await handleDelete();
+
+		hideActiveModal();
+	};
+
 	const { alias } = useMemo(
 		() =>
 			getWalletAlias({
@@ -74,7 +80,7 @@ export const WalletActionsModals: VFC<WalletActionsProperties> = ({ wallet, acti
 				/>
 			)}
 			{activeModal === "delete-wallet" && (
-				<DeleteWallet onClose={hideActiveModal} onCancel={hideActiveModal} onDelete={handleDelete} />
+				<DeleteWallet onClose={hideActiveModal} onCancel={hideActiveModal} onDelete={handleDeleteWallet} />
 			)}
 
 			{activeModal === "second-signature" && (

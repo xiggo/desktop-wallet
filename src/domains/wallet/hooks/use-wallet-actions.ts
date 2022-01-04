@@ -59,7 +59,6 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 				return;
 			}
 			stopEventBubbling(event);
-			setActiveModal(undefined);
 
 			profile.wallets().forget(wallet.id());
 			profile.notifications().transactions().forgetByRecipient(wallet.address());
@@ -67,7 +66,7 @@ export const useWalletActions = (wallet?: Contracts.IReadWriteWallet) => {
 
 			history.push(`/profiles/${profile.id()}/dashboard`);
 		},
-		[profile, history, wallet, persist, setActiveModal, stopEventBubbling],
+		[profile, history, wallet, persist, stopEventBubbling],
 	);
 
 	const handleSelectOption = useCallback(
