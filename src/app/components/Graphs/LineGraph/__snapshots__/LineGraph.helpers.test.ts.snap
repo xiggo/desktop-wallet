@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LineGraph.helpers useLineGraph should assign full graph width to single graph segment 1`] = `
+Array [
+  Object {
+    "className": "fill-current text-theme-success-600",
+    "height": 8,
+    "rx": 4,
+    "width": 100,
+    "x": 0,
+    "y": 8,
+  },
+]
+`;
+
 exports[`LineGraph.helpers useLineGraph should plot data to svg rectangles needed to render the line 1`] = `
 Array [
   Object {

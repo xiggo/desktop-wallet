@@ -23,5 +23,19 @@ describe("LineGraph.helpers", () => {
 
 			expect(result.current).toMatchSnapshot();
 		});
+
+		it("should assign full graph width to single graph segment", () => {
+			const { result } = renderHook(() =>
+				useLineGraph([{ color: "success-600", data: { label: "item 1" }, value: 95 }], {
+					graphWidth: 100,
+					segmentHeight: 8,
+					segmentHeightHover: 16,
+					segmentSpacing: 8,
+				}),
+			);
+
+			expect(result.current[0].width).toBe(100);
+			expect(result.current).toMatchSnapshot();
+		});
 	});
 });

@@ -14,7 +14,13 @@ const useLineGraph = (data: GraphDataPoint[], config: LineGraphConfig): React.SV
 		for (let index = 0; index < data.length; index++) {
 			const item = data[index];
 
-			let width = (item.value * graphWidth) / 100;
+			let width: number;
+
+			if (data.length === 1) {
+				width = graphWidth;
+			} else {
+				width = (item.value * graphWidth) / 100;
+			}
 
 			if (index < data.length - 1) {
 				// Decrease width by spacing to every item except the last one.
