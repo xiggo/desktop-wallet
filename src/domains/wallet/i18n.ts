@@ -104,7 +104,7 @@ export const translations = {
 	PAGE_CREATE_WALLET: {
 		NETWORK_STEP: {
 			GENERATION_ERROR:
-				"An error occurred while creating your new address, please try again. If the error persists, kindly get in touch with our support team.",
+				"This network (mainnet) is not available yet. If you want to connect to the Solar Development Networks, please head over to settings and enable development networks.",
 			SUBTITLE: "Select a cryptoasset to create your new wallet address.",
 			TITLE: "Select a Cryptoasset",
 		},
@@ -126,7 +126,7 @@ export const translations = {
 			},
 			TITLE: "Your Passphrase",
 			WARNING:
-				"You are responsible for storing and protecting this mnemonic passphrase offline. The Payvo Wallet cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
+				"You are responsible for storing and protecting this mnemonic passphrase offline. The Solar Wallet cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
 		},
 
 		PROCESS_COMPLETED_STEP: {

@@ -2,14 +2,14 @@
     "name": "solar-wallet",
     "version": "1.0.0",
     "private": true,
-    "description": "solar Wallet",
+    "description": "Solar Wallet",
     "homepage": "./",
     "bugs": {
-        "url": "https://github.com/solar-network/wallet/issues"
+        "url": "https://github.com/solar-network/desktop-wallet/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/solar-network/wallet.git"
+        "url": "git+https://github.com/solar-network/desktop-wallet.git"
     },
     "license": "MIT",
     "author": "Solar Network <hello@solar.network>",
@@ -297,8 +297,8 @@
         }
     },
     "build": {
-        "productName": "Payvo Wallet",
-        "appId": "io.payvo.wallet",
+        "productName": "Solar Wallet",
+        "appId": "io.solar.wallet",
         "artifactName": "${name}-${os}-${arch}-${version}.${ext}",
         "afterSign": "scripts/notarize.js",
         "npmRebuild": true,
@@ -313,9 +313,9 @@
             "app-update.yml"
         ],
         "protocols": {
-            "name": "Payvo URI scheme",
+            "name": "Solar URI scheme",
             "schemes": [
-                "payvo"
+                "solar"
             ],
             "role": "Viewer"
         },
@@ -346,7 +346,7 @@
                 "tar.gz"
             ],
             "desktop": {
-                "MimeType": "x-scheme-handler/payvo;"
+                "MimeType": "x-scheme-handler/solar;"
             }
         },
         "deb": {

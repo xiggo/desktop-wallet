@@ -9,8 +9,8 @@ export const translations = {
 	AMOUNT_PLACEHOLDER: "Enter an amount",
 	AND: "and",
 	APPEARANCE: "Appearance",
-	APP_NAME: "Payvo Wallet",
-	APP_NAME_SHORT: "Payvo Wallet",
+	APP_NAME: "Solar Wallet",
+	APP_NAME_SHORT: "Solar Wallet",
 	ARK: "ARK",
 	ASSET: "Asset",
 	ASSETS: "Assets",
@@ -214,7 +214,7 @@ export const translations = {
 	PARTICIPANT: "Participant",
 	PASSWORD: "Password",
 	PASSWORDS: "Passwords",
-	PAYVO_WALLET: "Payvo Wallet",
+	PAYVO_WALLET: "Solar Wallet",
 	PERIOD: "Period",
 	PERIODS: {
 		DAILY: "Daily",
@@ -229,7 +229,7 @@ export const translations = {
 	PROFILE: "Profile",
 	PROFILE_SYNC_COMPLETED: "Data updated successfully",
 	PROFILE_SYNC_FAILED:
-		"There has been a network problem on <NetworkNames/> while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click <RetryLink/> to retry.",
+		"There has been a network problem while trying to retrieve your wallet information and as a result, your data could be out of sync or incorrect. Click <RetryLink/> to retry.",
 	PROFILE_SYNC_STARTED: "Synchronizing your wallets data. Please wait...",
 	PUBLIC_KEY: "Public Key",
 	PUBLIC_NETWORKS: "Public Networks",

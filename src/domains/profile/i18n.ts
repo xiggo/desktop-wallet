@@ -67,15 +67,15 @@ export const translations = {
 	MODAL_WELCOME: {
 		DONT_SHOW_CHECKBOX_LABEL: "Don't show this quick tour again.",
 		STEP_1_DESCRIPTION:
-			"Start a quick tour to learn how to get the most out of the Payvo Wallet, or skip it to go directly to your profile.",
-		STEP_1_TITLE: "Welcome to Payvo Wallet",
+			"Start a quick tour to learn how to get the most out of the Solar Wallet, or skip it to go directly to your profile.",
+		STEP_1_TITLE: "Welcome to Solar Wallet",
 		STEP_2_DESCRIPTION:
 			"Create or import existing wallets from a broad range of assets and secure them using industry-standard encryption.",
 		STEP_2_TITLE: "Manage Your Assets",
 		STEP_3_DESCRIPTION:
-			"Payvo lets you extend your wallet’s functionality with a growing collection of Games, Utilities and more.",
+			"Solar lets you extend your wallet’s functionality with a growing collection of Games, Utilities and more.",
 		STEP_3_TITLE: "Enhance Your Experience With Plugins",
-		STEP_4_DESCRIPTION: "With Payvo, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
+		STEP_4_DESCRIPTION: "With Solar, you’re in control. Swap assets effortlessly without ever leaving your wallet.",
 		STEP_4_TITLE: "Exchange Assets On The Fly",
 		STEP_5_DESCRIPTION:
 			"Customize or search your news feed to view the latest updates on your favorite cryptoassets.",

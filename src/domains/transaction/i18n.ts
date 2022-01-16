@@ -223,7 +223,7 @@ export const translations = {
 			},
 			TITLE: "Your Second Signature",
 			WARNING:
-				"You are responsible for storing and protecting this mnemonic passphrase offline. The Payvo Wallet cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
+				"You are responsible for storing and protecting this mnemonic passphrase offline. The Solar Wallet cannot reveal this to you at a later time. If you lose this mnemonic passphrase, you will lose your funds.",
 		},
 	},
 	PAGE_TRANSACTION_SEND: {

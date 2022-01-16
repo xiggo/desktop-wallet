@@ -1,8 +1,8 @@
 export const translations = {
-	BRAND: "Payvo Wallet",
-	COPYRIGHT: "© ARK.io",
+	BRAND: "Solar Wallet",
+	COPYRIGHT: "© solar.network",
 	LOADING: "Initializing...",
-	PRODUCT: "An ARK.io Product",
+	PRODUCT: "A Payvo Product",
 	RIGHTS: "All Rights Reserved",
 	VERSION: "Version",
 };
