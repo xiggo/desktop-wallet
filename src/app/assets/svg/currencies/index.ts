@@ -16,6 +16,7 @@ import { ReactComponent as MEETONE } from "./meetone.svg";
 import { ReactComponent as NANO } from "./nano.svg";
 import { ReactComponent as NEO } from "./neo.svg";
 import { ReactComponent as SOL } from "./sol.svg";
+import { ReactComponent as SXP } from "./sxp.svg";
 import { ReactComponent as TLOS } from "./tlos.svg";
 import { ReactComponent as TRX } from "./trx.svg";
 import { ReactComponent as WAX } from "./wax.svg";
@@ -45,6 +46,8 @@ export const Currencies = {
 	NANO,
 	NEO,
 	SOL,
+	SXP,
+	dSXP: SXP,
 	TBIND: BIND,
 	TLOS,
 	TRX,

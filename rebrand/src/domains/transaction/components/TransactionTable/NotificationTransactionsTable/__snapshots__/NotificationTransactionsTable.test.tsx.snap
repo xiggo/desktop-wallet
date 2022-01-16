@@ -1,0 +1,1011 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationsTransactionTable should render compact skeleton 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="space-y-2"
+    >
+      <div
+        class="text-base font-semibold text-theme-secondary-500"
+      >
+        Transactions
+      </div>
+      <div
+        class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR"
+        role="table"
+      >
+        <table
+          cellpadding="0"
+          class="table-auto"
+        >
+          <tbody
+            role="rowgroup"
+          >
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                >
+                  <span
+                    class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                >
+                  <span
+                    class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                >
+                  <span
+                    class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                >
+                  <span
+                    class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                >
+                  <span
+                    class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                >
+                  <span
+                    class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                >
+                  <span
+                    class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                >
+                  <span
+                    class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                >
+                  <span
+                    class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                >
+                  <div
+                    class="flex items-center -space-x-1"
+                  >
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                    <div
+                      class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ border-transparent ring-theme-background"
+                    >
+                      <span>
+                        <span
+                          class="flex items-center leading-none"
+                        >
+                          <span
+                            class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                            style="width: 44px; height: 44px; border-radius: 50%;"
+                          >
+                            ‌
+                          </span>
+                          ‌
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <span>
+                    <span
+                      class="flex items-center leading-none"
+                    >
+                      <span
+                        class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                        style="width: 1px; height: 16px;"
+                      >
+                        ‌
+                      </span>
+                      ‌
+                    </span>
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                >
+                  <span
+                    class="flex items-center px-2 space-x-1 h-7 rounded border border-theme-secondary-300 dark:border-theme-secondary-800"
+                  >
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 1px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                    <span>
+                      <span
+                        class="flex items-center leading-none"
+                      >
+                        <span
+                          class="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+                          style="width: 35px; height: 16px;"
+                        >
+                          ‌
+                        </span>
+                        ‌
+                      </span>
+                    </span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

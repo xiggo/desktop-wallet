@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmRemovePendingTransaction should not render if not open 1`] = `<DocumentFragment />`;
+
+exports[`ConfirmRemovePendingTransaction should not render if transaction type is not available 1`] = `<DocumentFragment />`;
+
+exports[`ConfirmRemovePendingTransaction should render multisignature registration 1`] = `
+<DocumentFragment>
+  <div
+    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
+    data-testid="modal__overlay"
+  >
+    <div
+      class="Modal__ModalContainer-sc-5lu2mc-0 llpHYe"
+      tabindex="-1"
+    >
+      <div
+        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
+        data-testid="modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
+        >
+          <button
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
+            data-testid="modal__close-btn"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="sc-bdvvtL fCrhkg"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Remove Transaction
+          </h2>
+          <div
+            class="flex-1"
+          >
+            <svg
+              class="my-8 mx-auto w-64"
+            >
+              delete-banner-dark-green.svg
+            </svg>
+            <div
+              class="my-8 text-theme-secondary-text"
+              data-testid="ConfirmRemovePendingTransaction__Multisignature-Registration"
+            >
+              Are you sure you want to remove Multisignature Registration from the transaction pool? This action cannot be undone.
+            </div>
+            <div
+              class="flex justify-end mt-8 space-x-3"
+            >
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                data-testid="ConfirmRemovePendingTransaction__cancel"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Cancel
+                </div>
+              </button>
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
+                data-testid="ConfirmRemovePendingTransaction__remove"
+                type="submit"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <div
+                    class="sc-bdvvtL fCrhkg"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      trash.svg
+                    </svg>
+                  </div>
+                  <span>
+                    Remove
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ConfirmRemovePendingTransaction should render multisignature transaction 1`] = `
+<DocumentFragment>
+  <div
+    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
+    data-testid="modal__overlay"
+  >
+    <div
+      class="Modal__ModalContainer-sc-5lu2mc-0 llpHYe"
+      tabindex="-1"
+    >
+      <div
+        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
+        data-testid="modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
+        >
+          <button
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
+            data-testid="modal__close-btn"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="sc-bdvvtL fCrhkg"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Remove Transaction
+          </h2>
+          <div
+            class="flex-1"
+          >
+            <svg
+              class="my-8 mx-auto w-64"
+            >
+              delete-banner-dark-green.svg
+            </svg>
+            <div
+              class="my-8 text-theme-secondary-text"
+              data-testid="ConfirmRemovePendingTransaction__Transfer-Transaction"
+            >
+              Are you sure you want to remove Transfer Transaction from the transaction pool? This action cannot be undone.
+            </div>
+            <div
+              class="flex justify-end mt-8 space-x-3"
+            >
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                data-testid="ConfirmRemovePendingTransaction__cancel"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Cancel
+                </div>
+              </button>
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 fxPCrX"
+                data-testid="ConfirmRemovePendingTransaction__remove"
+                type="submit"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  <div
+                    class="sc-bdvvtL fCrhkg"
+                    height="16"
+                    width="16"
+                  >
+                    <svg>
+                      trash.svg
+                    </svg>
+                  </div>
+                  <span>
+                    Remove
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,510 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LedgerReview should render for unvote and vote transaction 1`] = `
+<div>
+  <div
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kUQvOC no-ligatures"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+    >
+      <div
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+      >
+        Unvotes (1)
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="VoteList__ListWrapper-sc-1nnybs4-0 gUTXGV"
+        >
+          <div
+            class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="flex-1 ml-4 w-28"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    Test Username
+                  </span>
+                </span>
+                <span
+                  class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+    >
+      <div
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+      >
+        Votes (1)
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="VoteList__ListWrapper-sc-1nnybs4-0 gUTXGV"
+        >
+          <div
+            class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="flex-1 ml-4 w-28"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    Test Username
+                  </span>
+                </span>
+                <span
+                  class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-2"
+  >
+    <div
+      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+    >
+      <div
+        class="relative p-4"
+      >
+        <div
+          class="flex divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+        >
+          <div
+            class="flex flex-col justify-center py-2 px-4 w-1/2"
+          >
+            <span
+              class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
+            >
+              Transaction Amount
+            </span>
+            <span
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+          <div
+            class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
+          >
+            <span
+              class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
+            >
+              Transaction Fee
+            </span>
+            <span
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        >
+          <div
+            class="py-2 ml-px bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+          >
+            <div
+              class="sc-bdvvtL fCrhkg"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
+      >
+        <span
+          class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
+        >
+          Total Amount
+        </span>
+        <span
+          class="whitespace-nowrap text-2xl font-bold"
+          data-testid="Amount"
+        >
+          0 DARK
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LedgerReview should render for unvote transaction 1`] = `
+<div>
+  <div
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kUQvOC no-ligatures"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+    >
+      <div
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+      >
+        Unvotes (1)
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="VoteList__ListWrapper-sc-1nnybs4-0 gUTXGV"
+        >
+          <div
+            class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="flex-1 ml-4 w-28"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    Test Username
+                  </span>
+                </span>
+                <span
+                  class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-2"
+  >
+    <div
+      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+    >
+      <div
+        class="relative p-4"
+      >
+        <div
+          class="flex divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+        >
+          <div
+            class="flex flex-col justify-center py-2 px-4 w-1/2"
+          >
+            <span
+              class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
+            >
+              Transaction Amount
+            </span>
+            <span
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+          <div
+            class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
+          >
+            <span
+              class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
+            >
+              Transaction Fee
+            </span>
+            <span
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        >
+          <div
+            class="py-2 ml-px bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+          >
+            <div
+              class="sc-bdvvtL fCrhkg"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
+      >
+        <span
+          class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
+        >
+          Total Amount
+        </span>
+        <span
+          class="whitespace-nowrap text-2xl font-bold"
+          data-testid="Amount"
+        >
+          0 DARK
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LedgerReview should render for vote transaction 1`] = `
+<div>
+  <div
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 kUQvOC no-ligatures"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+    >
+      <div
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+      >
+        Votes (1)
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="VoteList__ListWrapper-sc-1nnybs4-0 gUTXGV"
+        >
+          <div
+            class="flex items-center py-4 border-b border-dashed last:border-b-0 border-theme-secondary-300 dark:border-theme-secondary-800"
+          >
+            <div
+              class="Avatar__AvatarWrapper-sc-18vw8a4-0 krsvod flex-shrink-0"
+              data-testid="Avatar"
+            >
+              <div
+                class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+              >
+                <img
+                  alt="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                  src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 150, 136)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"80\\" cy=\\"50\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                  title="D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD"
+                />
+              </div>
+            </div>
+            <div
+              class="flex-1 ml-4 w-28"
+            >
+              <div
+                class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+              >
+                <span
+                  class="font-semibold text-base text-theme-text"
+                  data-testid="Address__alias"
+                >
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    Test Username
+                  </span>
+                </span>
+                <span
+                  class="flex-1 inline-flex overflow-hidden text-theme-secondary-500 dark:text-theme-secondary-700 font-semibold text-base"
+                  data-testid="Address__address"
+                >
+                  D8rr7B1d6TL6pf14LgMz4sKp1VBMs6YUYD
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mt-2"
+  >
+    <div
+      class="rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+    >
+      <div
+        class="relative p-4"
+      >
+        <div
+          class="flex divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+        >
+          <div
+            class="flex flex-col justify-center py-2 px-4 w-1/2"
+          >
+            <span
+              class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
+            >
+              Transaction Amount
+            </span>
+            <span
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+          <div
+            class="flex flex-col justify-center py-2 px-4 w-1/2 text-right"
+          >
+            <span
+              class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
+            >
+              Transaction Fee
+            </span>
+            <span
+              class="whitespace-nowrap mt-1 text-lg font-semibold"
+              data-testid="Amount"
+            >
+              0 DARK
+            </span>
+          </div>
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        >
+          <div
+            class="py-2 ml-px bg-theme-background text-theme-secondary-900 dark:text-theme-secondary-600"
+          >
+            <div
+              class="sc-bdvvtL fCrhkg"
+              height="16"
+              width="16"
+            >
+              <svg>
+                plus.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center py-6 rounded-b-lg border-t border-theme-secondary-300 justfiy-center bg-theme-secondary-100 dark:border-theme-secondary-800 dark:bg-theme-secondary-800"
+      >
+        <span
+          class="TotalAmountBox__AmountLabel-sc-aeus64-0 kwOhOA"
+        >
+          Total Amount
+        </span>
+        <span
+          class="whitespace-nowrap text-2xl font-bold"
+          data-testid="Amount"
+        >
+          0 DARK
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

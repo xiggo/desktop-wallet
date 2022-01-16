@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionExplorerLink should render a transaction link 1`] = `
+<div>
+  <div
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 GJFVE no-ligatures"
+    data-testid="TransactionDetail"
+  >
+    <div
+      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+    >
+      <div
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+      >
+        ID
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="flex overflow-hidden items-baseline space-x-3"
+        >
+          <span
+            class="overflow-hidden"
+          >
+            <a
+              class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
+              data-ring-focus-margin="-m-1"
+              data-testid="Link"
+              href="#"
+              rel="noopener noreferrer"
+              to="transaction-link"
+            >
+              <span
+                class="Link__Content-sc-ec014t-1 fPOlTq"
+              >
+                <span
+                  class="flex-1 inline-flex overflow-hidden"
+                >
+                  test-id
+                </span>
+              </span>
+              <div
+                class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
+                data-testid="Link__external"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  arrow-external.svg
+                </svg>
+              </div>
+            </a>
+          </span>
+          <span
+            class="flex text-theme-primary-300 dark:text-theme-secondary-600"
+          >
+            <button
+              class="relative focus:outline-none ring-focus"
+              data-ring-focus-margin="-m-1"
+              data-testid="clipboard-icon__wrapper"
+              type="button"
+            >
+              <div
+                class="sc-bdvvtL fCrhkg"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  copy.svg
+                </svg>
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

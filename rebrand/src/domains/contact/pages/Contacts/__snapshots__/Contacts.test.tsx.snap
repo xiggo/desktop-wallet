@@ -1,0 +1,2083 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contacts should render with contacts 1`] = `
+<DocumentFragment>
+  <div
+    class="flex relative flex-col min-h-screen"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
+    >
+      <div
+        class="flex relative h-21"
+      >
+        <button
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+        >
+          <div
+            class="sc-bdvvtL Cfvxc mx-auto"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-left-small.svg
+            </svg>
+          </div>
+        </button>
+        <div
+          class="flex flex-1 px-8"
+        >
+          <div
+            class="flex items-center my-auto"
+          >
+            <div
+              class="flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
+                title="Plugins"
+              >
+                Plugins
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
+                title="News"
+              >
+                News
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
+          >
+            <div>
+              <div
+                class="relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                      data-testid="navbar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc p-1"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            bell.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        >
+                          <div
+                            class="w-2 h-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--send"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--receive"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        qr-code.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+          </div>
+          <div
+            class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
+          >
+            <div
+              class="text-right"
+            >
+              <div
+                class="text-xs font-semibold text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="text-sm font-bold text-theme-secondary-text dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <div
+                  class="relative justify-center items-center align-middle rounded-full cursor-pointer"
+                  data-testid="navbar__useractions"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="Profile Avatar"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      />
+                      <span
+                        class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                      >
+                        JO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col flex-1"
+    >
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="flex justify-between items-end bg-theme-background"
+          >
+            <div
+              class="space-y-4"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                My Contacts
+              </h1>
+              <div
+                class="text-theme-secondary-text"
+                data-testid="header__subtitle"
+              >
+                Manage your frequent Contacts
+              </div>
+            </div>
+            <div>
+              <div
+                class="flex justify-end items-top"
+              >
+                <div
+                  class="flex items-center space-x-5 text-theme-primary-200"
+                >
+                  <div
+                    class="relative"
+                    data-testid="HeaderSearchBar"
+                  >
+                    <div
+                      class="group"
+                    >
+                      <button
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center space-x-3 h-5"
+                        >
+                          <span>
+                            Search
+                          </span>
+                          <div
+                            class="sc-bdvvtL qGXhc"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              magnifying-glass.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="pl-8 my-auto ml-8 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
+                  />
+                </div>
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB whitespace-nowrap"
+                  data-testid="contacts__add-contact-btn"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Add Contact
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="w-full"
+            data-testid="ContactList"
+          >
+            <div
+              class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
+              role="table"
+            >
+              <table
+                cellpadding="0"
+                class="table-auto"
+              >
+                <thead>
+                  <tr
+                    class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+                    role="row"
+                  >
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                      colspan="1"
+                      data-testid="table__th--0"
+                      role="columnheader"
+                      style="cursor: pointer;"
+                      title="Toggle SortBy"
+                    >
+                      <div
+                        class="flex flex-inline align-top"
+                      >
+                        <div>
+                          Name
+                        </div>
+                        <div
+                          class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                        >
+                          <div
+                            class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                            height="10"
+                            role="img"
+                            width="10"
+                          >
+                            <svg>
+                              chevron-down-small.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-1"
+                      colspan="1"
+                      data-testid="table__th--1"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top justify-center"
+                      >
+                        <div>
+                          Cryptoasset
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                      colspan="1"
+                      data-testid="table__th--2"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top"
+                      >
+                        <div>
+                          Address
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-1"
+                      colspan="1"
+                      data-testid="table__th--3"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top"
+                      >
+                        <div>
+                          Copy
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                      colspan="1"
+                      data-testid="table__th--4"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top hidden no-border"
+                      >
+                        <div>
+                          Actions
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  role="rowgroup"
+                >
+                  <tr
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                      >
+                        <div
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                          >
+                            <img
+                              alt="Brian"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"30\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              title="Brian"
+                            />
+                            <span
+                              class="absolute text-sm font-semibold text-theme-background"
+                            >
+                              BR
+                            </span>
+                          </div>
+                        </div>
+                        <span
+                          class="font-semibold"
+                          data-testid="ContactListItem__name"
+                        >
+                          Brian
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
+                      >
+                        <div
+                          aria-label="ARK Devnet"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        >
+                          <div
+                            class="sc-bdvvtL qGXhc"
+                            data-testid="NetworkIcon__icon"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              ark.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class=""
+                      data-testid="ContactListItem__address"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
+                      >
+                        <div
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                          >
+                            <img
+                              alt="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"40\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"0\\" cy=\\"30\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"40\\" cx=\\"90\\" cy=\\"50\\" fill=\\"rgb(255, 193, 7)\\"/></svg>"
+                              title="D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
+                      >
+                        <button
+                          class="relative focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                          >
+                            <div
+                              class="sc-bdvvtL fCrhkg"
+                              height="16"
+                              width="16"
+                            >
+                              <svg>
+                                copy.svg
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <button
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                            data-testid="ContactListItem__send-button"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Send
+                            </div>
+                          </button>
+                          <div
+                            class="visible"
+                          >
+                            <div
+                              class="relative"
+                            >
+                              <span
+                                data-testid="dropdown__toggle"
+                              >
+                                <button
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center space-x-2"
+                                  >
+                                    <div
+                                      class="sc-bdvvtL qGXhc"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg>
+                                        ellipsis-vertical.svg
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 fXMgbp"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                      >
+                        <div
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                          >
+                            <img
+                              alt="Rok"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(3, 169, 244)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"50\\" cx=\\"60\\" cy=\\"30\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"45\\" cx=\\"10\\" cy=\\"70\\" fill=\\"rgb(255, 87, 34)\\"/></svg>"
+                              title="Rok"
+                            />
+                            <span
+                              class="absolute text-sm font-semibold text-theme-background"
+                            >
+                              RO
+                            </span>
+                          </div>
+                        </div>
+                        <span
+                          class="font-semibold"
+                          data-testid="ContactListItem__name"
+                        >
+                          Rok
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
+                      >
+                        <div
+                          aria-label="ARK Devnet"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        >
+                          <div
+                            class="sc-bdvvtL qGXhc"
+                            data-testid="NetworkIcon__icon"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              ark.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+                      data-testid="ContactListItem__address"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
+                      >
+                        <div
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                          >
+                            <img
+                              alt="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(244, 67, 54)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"50\\" cx=\\"40\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(255, 87, 34)\\"/><circle r=\\"35\\" cx=\\"100\\" cy=\\"70\\" fill=\\"rgb(76, 175, 80)\\"/></svg>"
+                              title="DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DFJ5Z51F1euNNdRUQJKQVdG4h495LZkc6T
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
+                      >
+                        <button
+                          class="relative focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                          >
+                            <div
+                              class="sc-bdvvtL fCrhkg"
+                              height="16"
+                              width="16"
+                            >
+                              <svg>
+                                copy.svg
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <button
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                            data-testid="ContactListItem__send-button"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Send
+                            </div>
+                          </button>
+                          <div
+                            class="visible"
+                          >
+                            <div
+                              class="relative"
+                            >
+                              <span
+                                data-testid="dropdown__toggle"
+                              >
+                                <button
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center space-x-2"
+                                  >
+                                    <div
+                                      class="sc-bdvvtL qGXhc"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg>
+                                        ellipsis-vertical.svg
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 fXMgbp"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                      />
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
+                      >
+                        <div
+                          aria-label="ARK Devnet"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        >
+                          <div
+                            class="sc-bdvvtL qGXhc"
+                            data-testid="NetworkIcon__icon"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              ark.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+                      data-testid="ContactListItem__address"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
+                      >
+                        <div
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                          >
+                            <img
+                              alt="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(255, 193, 7)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"50\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"35\\" cx=\\"90\\" cy=\\"60\\" fill=\\"rgb(3, 169, 244)\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"30\\" fill=\\"rgb(156, 39, 176)\\"/></svg>"
+                              title="D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
+                      >
+                        <button
+                          class="relative focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                          >
+                            <div
+                              class="sc-bdvvtL fCrhkg"
+                              height="16"
+                              width="16"
+                            >
+                              <svg>
+                                copy.svg
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="border-b border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <button
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                            data-testid="ContactListItem__send-button"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Send
+                            </div>
+                          </button>
+                          <div
+                            class="invisible"
+                          >
+                            <div
+                              class="relative"
+                            >
+                              <span
+                                data-testid="dropdown__toggle"
+                              >
+                                <button
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center space-x-2"
+                                  >
+                                    <div
+                                      class="sc-bdvvtL qGXhc"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg>
+                                        ellipsis-vertical.svg
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                      />
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
+                      >
+                        <div
+                          aria-label="ARK Devnet"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                          data-testid="NetworkIcon-ARK-ark.devnet"
+                        >
+                          <div
+                            class="sc-bdvvtL qGXhc"
+                            data-testid="NetworkIcon__icon"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              ark.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class=""
+                      data-testid="ContactListItem__address"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
+                      >
+                        <div
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                          >
+                            <img
+                              alt="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(3, 169, 244)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"40\\" cx=\\"20\\" cy=\\"70\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"50\\" cx=\\"0\\" cy=\\"40\\" fill=\\"rgb(255, 152, 0)\\"/></svg>"
+                              title="DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            DKrACQw7ytoU2gjppy3qKeE2dQhZjfXYqu
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
+                      >
+                        <button
+                          class="relative focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                          >
+                            <div
+                              class="sc-bdvvtL fCrhkg"
+                              height="16"
+                              width="16"
+                            >
+                              <svg>
+                                copy.svg
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <button
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                            data-testid="ContactListItem__send-button"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Send
+                            </div>
+                          </button>
+                          <div
+                            class="invisible"
+                          >
+                            <div
+                              class="relative"
+                            >
+                              <span
+                                data-testid="dropdown__toggle"
+                              >
+                                <button
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center space-x-2"
+                                  >
+                                    <div
+                                      class="sc-bdvvtL qGXhc"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg>
+                                        ellipsis-vertical.svg
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Contacts should render with contacts of live networks only 1`] = `
+<DocumentFragment>
+  <div
+    class="flex relative flex-col min-h-screen"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
+    >
+      <div
+        class="flex relative h-21"
+      >
+        <button
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+        >
+          <div
+            class="sc-bdvvtL Cfvxc mx-auto"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-left-small.svg
+            </svg>
+          </div>
+        </button>
+        <div
+          class="flex flex-1 px-8"
+        >
+          <div
+            class="flex items-center my-auto"
+          >
+            <div
+              class="flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
+                title="Plugins"
+              >
+                Plugins
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
+                title="News"
+              >
+                News
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
+          >
+            <div>
+              <div
+                class="relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                      data-testid="navbar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc p-1"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            bell.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        >
+                          <div
+                            class="w-2 h-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT"
+                  data-testid="navbar__buttons--send"
+                  disabled=""
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 lcpndT"
+                  data-testid="navbar__buttons--receive"
+                  disabled=""
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        qr-code.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+          </div>
+          <div
+            class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
+          >
+            <div
+              class="text-right"
+            >
+              <div
+                class="text-xs font-semibold text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="text-sm font-bold text-theme-secondary-text dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <div
+                  class="relative justify-center items-center align-middle rounded-full cursor-pointer"
+                  data-testid="navbar__useractions"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="Profile Avatar"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      />
+                      <span
+                        class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                      >
+                        JO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col flex-1"
+    >
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="flex justify-between items-end bg-theme-background"
+          >
+            <div
+              class="space-y-4"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                My Contacts
+              </h1>
+              <div
+                class="text-theme-secondary-text"
+                data-testid="header__subtitle"
+              >
+                Manage your frequent Contacts
+              </div>
+            </div>
+            <div>
+              <div
+                class="flex justify-end items-top"
+              >
+                <div
+                  class="flex items-center space-x-5 text-theme-primary-200"
+                >
+                  <div
+                    class="relative"
+                    data-testid="HeaderSearchBar"
+                  >
+                    <div
+                      class="group"
+                    >
+                      <button
+                        class="ControlButton__ControlButtonStyled-sc-1l8cuc8-0 ckIXFQ ring-focus"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center space-x-3 h-5"
+                        >
+                          <span>
+                            Search
+                          </span>
+                          <div
+                            class="sc-bdvvtL qGXhc"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              magnifying-glass.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="pl-8 my-auto ml-8 h-10 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
+                  />
+                </div>
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB whitespace-nowrap"
+                  data-testid="contacts__add-contact-btn"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Add Contact
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="w-full"
+            data-testid="ContactList"
+          >
+            <div
+              class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
+              role="table"
+            >
+              <table
+                cellpadding="0"
+                class="table-auto"
+              >
+                <thead>
+                  <tr
+                    class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+                    role="row"
+                  >
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                      colspan="1"
+                      data-testid="table__th--0"
+                      role="columnheader"
+                      style="cursor: pointer;"
+                      title="Toggle SortBy"
+                    >
+                      <div
+                        class="flex flex-inline align-top"
+                      >
+                        <div>
+                          Name
+                        </div>
+                        <div
+                          class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                        >
+                          <div
+                            class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                            height="10"
+                            role="img"
+                            width="10"
+                          >
+                            <svg>
+                              chevron-down-small.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-1"
+                      colspan="1"
+                      data-testid="table__th--1"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top justify-center"
+                      >
+                        <div>
+                          Cryptoasset
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                      colspan="1"
+                      data-testid="table__th--2"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top"
+                      >
+                        <div>
+                          Address
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-1"
+                      colspan="1"
+                      data-testid="table__th--3"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top"
+                      >
+                        <div>
+                          Copy
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold w-1"
+                      colspan="1"
+                      data-testid="table__th--4"
+                      role="columnheader"
+                    >
+                      <div
+                        class="flex flex-inline align-top hidden no-border"
+                      >
+                        <div>
+                          Actions
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  role="rowgroup"
+                >
+                  <tr
+                    class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+                    data-testid="TableRow"
+                  >
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 beVmY space-x-4"
+                      >
+                        <div
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                          >
+                            <img
+                              alt="Brian"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(0, 188, 212)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"50\\" fill=\\"rgb(139, 195, 74)\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"70\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"40\\" cx=\\"60\\" cy=\\"30\\" fill=\\"rgb(233, 30, 99)\\"/></svg>"
+                              title="Brian"
+                            />
+                            <span
+                              class="absolute text-sm font-semibold text-theme-background"
+                            >
+                              BR
+                            </span>
+                          </div>
+                        </div>
+                        <span
+                          class="font-semibold"
+                          data-testid="ContactListItem__name"
+                        >
+                          Brian
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq justify-center"
+                      >
+                        <div
+                          aria-label="ARK"
+                          class="Circle__CircleWrapper-sc-d5u41q-0 ePUgJq text-theme-primary-600 border-theme-primary-100 dark:border-theme-primary-600 ring-theme-background"
+                          data-testid="NetworkIcon-ARK-ark.mainnet"
+                        >
+                          <div
+                            class="sc-bdvvtL qGXhc"
+                            data-testid="NetworkIcon__icon"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              ark.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class=""
+                      data-testid="ContactListItem__address"
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4"
+                      >
+                        <div
+                          class="Avatar__AvatarWrapper-sc-18vw8a4-0 gljhIf flex-shrink-0"
+                          data-testid="Avatar"
+                        >
+                          <div
+                            class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                          >
+                            <img
+                              alt="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                              src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(156, 39, 176)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"40\\" cx=\\"10\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/><circle r=\\"45\\" cx=\\"70\\" cy=\\"60\\" fill=\\"rgb(33, 150, 243)\\"/><circle r=\\"60\\" cx=\\"0\\" cy=\\"70\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                              title="AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                        >
+                          <span
+                            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                            data-testid="Address__address"
+                          >
+                            AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iWCFjq space-x-4 justify-center"
+                      >
+                        <button
+                          class="relative focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="text-theme-primary-300 dark:text-theme-secondary-700"
+                          >
+                            <div
+                              class="sc-bdvvtL fCrhkg"
+                              height="16"
+                              width="16"
+                            >
+                              <svg>
+                                copy.svg
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <div
+                        class="TableCell__TableCellInnerWrapper-sc-v39gua-0 jEaNbo justify-end"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <button
+                            class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                            data-testid="ContactListItem__send-button"
+                            type="button"
+                          >
+                            <div
+                              class="flex items-center space-x-2"
+                            >
+                              Send
+                            </div>
+                          </button>
+                          <div
+                            class="visible"
+                          >
+                            <div
+                              class="relative"
+                            >
+                              <span
+                                data-testid="dropdown__toggle"
+                              >
+                                <button
+                                  class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX"
+                                  type="button"
+                                >
+                                  <div
+                                    class="flex items-center space-x-2"
+                                  >
+                                    <div
+                                      class="sc-bdvvtL qGXhc"
+                                      height="20"
+                                      width="20"
+                                    >
+                                      <svg>
+                                        ellipsis-vertical.svg
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </button>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Contacts should render without contacts 1`] = `
+<DocumentFragment>
+  <div
+    class="flex relative flex-col min-h-screen"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
+    >
+      <div
+        class="flex relative h-21"
+      >
+        <button
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+        >
+          <div
+            class="sc-bdvvtL Cfvxc mx-auto"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-left-small.svg
+            </svg>
+          </div>
+        </button>
+        <div
+          class="flex flex-1 px-8"
+        >
+          <div
+            class="flex items-center my-auto"
+          >
+            <div
+              class="flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
+                title="Plugins"
+              >
+                Plugins
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
+                title="News"
+              >
+                News
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
+          >
+            <div>
+              <div
+                class="relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                      data-testid="navbar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc p-1"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            bell.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        >
+                          <div
+                            class="w-2 h-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--send"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--receive"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        qr-code.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+          </div>
+          <div
+            class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
+          >
+            <div
+              class="text-right"
+            >
+              <div
+                class="text-xs font-semibold text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="text-sm font-bold text-theme-secondary-text dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <div
+                  class="relative justify-center items-center align-middle rounded-full cursor-pointer"
+                  data-testid="navbar__useractions"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="Profile Avatar"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      />
+                      <span
+                        class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                      >
+                        JO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col flex-1"
+    >
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="flex justify-between items-end bg-theme-background"
+          >
+            <div
+              class="space-y-4"
+            >
+              <h1
+                class="mb-0 text-2xl"
+                data-testid="header__title"
+              >
+                My Contacts
+              </h1>
+              <div
+                class="text-theme-secondary-text"
+                data-testid="header__subtitle"
+              >
+                Manage your frequent Contacts
+              </div>
+            </div>
+            <div>
+              <div
+                class="flex justify-end items-top"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB whitespace-nowrap"
+                  data-testid="contacts__add-contact-btn"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    Add Contact
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="border border-solid border-theme-secondary-300 dark:border-theme-secondary-800 rounded-lg text-theme-secondary-text text-center leading-5 p-6"
+            data-testid="EmptyBlock"
+          >
+            <div>
+              It looks like you don't have any Contacts yet. After adding new Contacts, they can be viewed here.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

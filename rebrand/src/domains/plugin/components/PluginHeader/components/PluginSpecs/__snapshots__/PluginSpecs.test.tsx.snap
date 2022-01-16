@@ -1,0 +1,447 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PluginSpecs should render properly 1`] = `
+<DocumentFragment>
+  <div
+    class="flex justify-between space-4"
+  >
+    <div
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Author
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span
+              class="font-semibold text-theme-secondary-text truncate max-w-48"
+            >
+              Payvo
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Category
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            Utility
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Website
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <a
+              class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
+              data-ring-focus-margin="-m-1"
+              data-testid="PluginSpecs__website"
+              href="#"
+              rel="noopener noreferrer"
+              to="https://github.com/arkecosystem/explorer"
+            >
+              <span
+                class="Link__Content-sc-ec014t-1 fPOlTq"
+              >
+                <span>
+                  View
+                </span>
+              </span>
+              <div
+                class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
+                data-testid="Link__external"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  arrow-external.svg
+                </svg>
+              </div>
+            </a>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Status
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span>
+              Not installed
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col text-right"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Size
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span
+              data-testid="PluginSpecs__size"
+            >
+              4.2 Mb
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col text-right"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Version
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            1.3.8
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PluginSpecs should render without url and size 1`] = `
+<DocumentFragment>
+  <div
+    class="flex justify-between space-4"
+  >
+    <div
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Author
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span
+              class="font-semibold text-theme-secondary-text truncate max-w-48"
+            >
+              Payvo
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Category
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            Utility
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Website
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span>
+              N/A
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Status
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span>
+              Not installed
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col text-right"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Size
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span
+              data-testid="PluginSpecs__size"
+            >
+              N/A
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col text-right"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Version
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            1.3.8
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PluginSpecs should show loading state for size 1`] = `
+<div>
+  <div
+    class="flex justify-between space-4"
+  >
+    <div
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Author
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span
+              class="font-semibold text-theme-secondary-text truncate max-w-48"
+            >
+              Payvo
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Category
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            Utility
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Website
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span>
+              N/A
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Status
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span>
+              Not installed
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+    >
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col text-right"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Size
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            <span
+              data-testid="PluginSpecs__size-skeleton"
+            >
+              <span>
+                <span
+                  class="flex items-center leading-none"
+                >
+                  <span
+                    class="react-loading-skeleton mt-0.5 css-1eg0sfo-skeletonStyles-Skeleton"
+                    style="width: 60px; height: 20px;"
+                  >
+                    ‌
+                  </span>
+                  ‌
+                </span>
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex pl-6"
+      >
+        <div
+          class="flex flex-col text-right"
+        >
+          <span
+            class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+          >
+            Version
+          </span>
+          <span
+            class="font-semibold text-theme-secondary-text"
+          >
+            1.3.8
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,2841 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PluginDetails should render properly 1`] = `
+<div>
+  <button>
+    Fetch Packages
+  </button>
+  <div
+    class="flex relative flex-col min-h-screen"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
+    >
+      <div
+        class="flex relative h-21"
+      >
+        <button
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+        >
+          <div
+            class="sc-bdvvtL Cfvxc mx-auto"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-left-small.svg
+            </svg>
+          </div>
+        </button>
+        <div
+          class="flex flex-1 px-8"
+        >
+          <div
+            class="flex items-center my-auto"
+          >
+            <div
+              class="flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                aria-current="page"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus active"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
+                title="Plugins"
+              >
+                Plugins
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
+                title="News"
+              >
+                News
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
+          >
+            <div>
+              <div
+                class="relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                      data-testid="navbar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc p-1"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            bell.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        >
+                          <div
+                            class="w-2 h-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--send"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--receive"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        qr-code.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+          </div>
+          <div
+            class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
+          >
+            <div
+              class="text-right"
+            >
+              <div
+                class="text-xs font-semibold text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="text-sm font-bold text-theme-secondary-text dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <div
+                  class="relative justify-center items-center align-middle rounded-full cursor-pointer"
+                  data-testid="navbar__useractions"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="Profile Avatar"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      />
+                      <span
+                        class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                      >
+                        JO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col flex-1"
+    >
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="w-full bg-theme-background"
+            data-testid="plugin-details__header"
+          >
+            <div
+              class="flex w-full"
+            >
+              <div
+                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fchVGU bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                data-testid="PluginImage"
+              >
+                <svg>
+                  plugin-logo-placeholder.svg
+                </svg>
+              </div>
+              <div
+                class="flex flex-col justify-between pl-8 w-full min-w-0"
+              >
+                <div
+                  class="flex justify-between items-end"
+                >
+                  <div
+                    class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <span
+                        class="text-2xl font-bold truncate"
+                      >
+                        Test Plugin
+                      </span>
+                    </div>
+                    <span
+                      class="text-medium text-theme-secondary-500 truncate"
+                    />
+                  </div>
+                  <div
+                    class="flex"
+                  >
+                    <div
+                      class="flex items-center space-x-3"
+                    >
+                      <button
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                        data-testid="PluginHeader__button--report"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <div
+                            class="sc-bdvvtL qGXhc"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              circle-exclamation-mark.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                      <div
+                        class="relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="relative"
+                          >
+                            <button
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX text-left"
+                              type="button"
+                            >
+                              <div
+                                class="flex items-center space-x-2"
+                              >
+                                <div
+                                  class="sc-bdvvtL qGXhc"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <svg>
+                                    ellipsis-vertical.svg
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
+                  type="horizontal"
+                />
+                <div
+                  class="flex justify-between space-4"
+                >
+                  <div
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                  >
+                    <div
+                      class="flex"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Author
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span
+                            class="font-semibold text-theme-secondary-text truncate max-w-48"
+                          >
+                            Unknown
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Category
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          Other
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Website
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            N/A
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Status
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            Disabled
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                  >
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col text-right"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Size
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span
+                            data-testid="PluginSpecs__size"
+                          >
+                            0 B
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col text-right"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Version
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          0.0.0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="space-y-8"
+          >
+            <div
+              class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
+            >
+              <div
+                class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
+              >
+                <div
+                  class="sc-bdvvtL qGXhc"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    circle-exclamation-mark.svg
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="flex flex-col w-full"
+              >
+                <p
+                  class="font-semibold dark:text-theme-secondary-500"
+                  data-testid="Alert__title"
+                >
+                  Disclaimer
+                </p>
+                <div
+                  class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
+                >
+                  The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PluginDetails should render properly for remote package 1`] = `
+<div>
+  <button>
+    Fetch Package
+  </button>
+  <div
+    class="flex relative flex-col min-h-screen"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
+    >
+      <div
+        class="flex relative h-21"
+      >
+        <button
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+        >
+          <div
+            class="sc-bdvvtL Cfvxc mx-auto"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-left-small.svg
+            </svg>
+          </div>
+        </button>
+        <div
+          class="flex flex-1 px-8"
+        >
+          <div
+            class="flex items-center my-auto"
+          >
+            <div
+              class="flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                aria-current="page"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus active"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
+                title="Plugins"
+              >
+                Plugins
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
+                title="News"
+              >
+                News
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
+          >
+            <div>
+              <div
+                class="relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                      data-testid="navbar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc p-1"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            bell.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        >
+                          <div
+                            class="w-2 h-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--send"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--receive"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        qr-code.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+          </div>
+          <div
+            class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
+          >
+            <div
+              class="text-right"
+            >
+              <div
+                class="text-xs font-semibold text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="text-sm font-bold text-theme-secondary-text dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <div
+                  class="relative justify-center items-center align-middle rounded-full cursor-pointer"
+                  data-testid="navbar__useractions"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="Profile Avatar"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      />
+                      <span
+                        class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                      >
+                        JO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col flex-1"
+    >
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="w-full bg-theme-background"
+            data-testid="plugin-details__header"
+          >
+            <div
+              class="flex w-full"
+            >
+              <div
+                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fchVGU bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                data-testid="PluginImage"
+              >
+                <svg>
+                  plugin-logo-placeholder.svg
+                </svg>
+              </div>
+              <div
+                class="flex flex-col justify-between pl-8 w-full min-w-0"
+              >
+                <div
+                  class="flex justify-between items-end"
+                >
+                  <div
+                    class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <span
+                        class="text-2xl font-bold truncate"
+                      >
+                        Remote Plugin
+                      </span>
+                    </div>
+                    <span
+                      class="text-medium text-theme-secondary-500 truncate"
+                    />
+                  </div>
+                  <div
+                    class="flex"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
+                      data-testid="PluginHeader__button--install"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Install
+                      </div>
+                    </button>
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk ml-3"
+                      data-testid="PluginHeader__button--report"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            circle-exclamation-mark.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
+                  type="horizontal"
+                />
+                <div
+                  class="flex justify-between space-4"
+                >
+                  <div
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                  >
+                    <div
+                      class="flex"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Author
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span
+                            class="font-semibold text-theme-secondary-text truncate max-w-48"
+                          >
+                            Unknown
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Category
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          Other
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Website
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            N/A
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Status
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            Not installed
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                  >
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col text-right"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Size
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span
+                            data-testid="PluginSpecs__size"
+                          >
+                            N/A
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col text-right"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Version
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          0.0.0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="space-y-8"
+          >
+            <div
+              class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
+            >
+              <div
+                class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
+              >
+                <div
+                  class="sc-bdvvtL qGXhc"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    circle-exclamation-mark.svg
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="flex flex-col w-full"
+              >
+                <p
+                  class="font-semibold dark:text-theme-secondary-500"
+                  data-testid="Alert__title"
+                >
+                  Disclaimer
+                </p>
+                <div
+                  class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
+                >
+                  The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PluginDetails should report plugin 1`] = `
+<div>
+  <button>
+    Fetch Packages
+  </button>
+  <div
+    class="flex relative flex-col min-h-screen"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
+    >
+      <div
+        class="flex relative h-21"
+      >
+        <button
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+        >
+          <div
+            class="sc-bdvvtL Cfvxc mx-auto"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-left-small.svg
+            </svg>
+          </div>
+        </button>
+        <div
+          class="flex flex-1 px-8"
+        >
+          <div
+            class="flex items-center my-auto"
+          >
+            <div
+              class="flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                aria-current="page"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus active"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
+                title="Plugins"
+              >
+                Plugins
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
+                title="News"
+              >
+                News
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
+          >
+            <div>
+              <div
+                class="relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                      data-testid="navbar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc p-1"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            bell.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        >
+                          <div
+                            class="w-2 h-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--send"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--receive"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        qr-code.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+          </div>
+          <div
+            class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
+          >
+            <div
+              class="text-right"
+            >
+              <div
+                class="text-xs font-semibold text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="text-sm font-bold text-theme-secondary-text dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <div
+                  class="relative justify-center items-center align-middle rounded-full cursor-pointer"
+                  data-testid="navbar__useractions"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="Profile Avatar"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      />
+                      <span
+                        class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                      >
+                        JO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col flex-1"
+    >
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="w-full bg-theme-background"
+            data-testid="plugin-details__header"
+          >
+            <div
+              class="flex w-full"
+            >
+              <div
+                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fchVGU bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                data-testid="PluginImage"
+              >
+                <svg>
+                  plugin-logo-placeholder.svg
+                </svg>
+              </div>
+              <div
+                class="flex flex-col justify-between pl-8 w-full min-w-0"
+              >
+                <div
+                  class="flex justify-between items-end"
+                >
+                  <div
+                    class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <span
+                        class="text-2xl font-bold truncate"
+                      >
+                        Test Plugin
+                      </span>
+                    </div>
+                    <span
+                      class="text-medium text-theme-secondary-500 truncate"
+                    />
+                  </div>
+                  <div
+                    class="flex"
+                  >
+                    <div
+                      class="flex items-center space-x-3"
+                    >
+                      <button
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                        data-testid="PluginHeader__button--report"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <div
+                            class="sc-bdvvtL qGXhc"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              circle-exclamation-mark.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                      <div
+                        class="relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="relative"
+                          >
+                            <button
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX text-left"
+                              type="button"
+                            >
+                              <div
+                                class="flex items-center space-x-2"
+                              >
+                                <div
+                                  class="sc-bdvvtL qGXhc"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <svg>
+                                    ellipsis-vertical.svg
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
+                  type="horizontal"
+                />
+                <div
+                  class="flex justify-between space-4"
+                >
+                  <div
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                  >
+                    <div
+                      class="flex"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Author
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span
+                            class="font-semibold text-theme-secondary-text truncate max-w-48"
+                          >
+                            Unknown
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Category
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          Other
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Website
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            N/A
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Status
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            Disabled
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                  >
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col text-right"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Size
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span
+                            data-testid="PluginSpecs__size"
+                          >
+                            0 B
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col text-right"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Version
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          0.0.0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="space-y-8"
+          >
+            <div
+              class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
+            >
+              <div
+                class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
+              >
+                <div
+                  class="sc-bdvvtL qGXhc"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    circle-exclamation-mark.svg
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="flex flex-col w-full"
+              >
+                <p
+                  class="font-semibold dark:text-theme-secondary-500"
+                  data-testid="Alert__title"
+                >
+                  Disclaimer
+                </p>
+                <div
+                  class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
+                >
+                  The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PluginDetails should show configuration for plugins from npm 1`] = `
+<div>
+  <button>
+    Fetch Packages
+  </button>
+  <div
+    class="flex relative flex-col min-h-screen"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
+    >
+      <div
+        class="flex relative h-21"
+      >
+        <button
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+        >
+          <div
+            class="sc-bdvvtL Cfvxc mx-auto"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-left-small.svg
+            </svg>
+          </div>
+        </button>
+        <div
+          class="flex flex-1 px-8"
+        >
+          <div
+            class="flex items-center my-auto"
+          >
+            <div
+              class="flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                aria-current="page"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus active"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
+                title="Plugins"
+              >
+                Plugins
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
+                title="News"
+              >
+                News
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
+          >
+            <div>
+              <div
+                class="relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                      data-testid="navbar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc p-1"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            bell.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        >
+                          <div
+                            class="w-2 h-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--send"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--receive"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        qr-code.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+          </div>
+          <div
+            class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
+          >
+            <div
+              class="text-right"
+            >
+              <div
+                class="text-xs font-semibold text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="text-sm font-bold text-theme-secondary-text dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <div
+                  class="relative justify-center items-center align-middle rounded-full cursor-pointer"
+                  data-testid="navbar__useractions"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="Profile Avatar"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      />
+                      <span
+                        class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                      >
+                        JO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col flex-1"
+    >
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="w-full bg-theme-background"
+            data-testid="plugin-details__header"
+          >
+            <div
+              class="flex w-full"
+            >
+              <div
+                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fchVGU bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                data-testid="PluginImage"
+              >
+                <img
+                  alt="Logo"
+                  class="object-cover w-full h-full"
+                  src="https://raw.githubusercontent.com/dated/delegate-calculator-wallet-plugin/master/images/logo.png"
+                />
+              </div>
+              <div
+                class="flex flex-col justify-between pl-8 w-full min-w-0"
+              >
+                <div
+                  class="flex justify-between items-end"
+                >
+                  <div
+                    class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <span
+                        class="text-2xl font-bold truncate"
+                      >
+                        ARK Delegate Calculator
+                      </span>
+                    </div>
+                    <span
+                      class="text-medium text-theme-secondary-500 truncate"
+                    >
+                      Compare delegate payouts and get an overview of your potential staking rewards on the ARK Public Network directly in the Payvo Wallet
+                    </span>
+                  </div>
+                  <div
+                    class="flex"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
+                      data-testid="PluginHeader__button--install"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        Install
+                      </div>
+                    </button>
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk ml-3"
+                      data-testid="PluginHeader__button--report"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            circle-exclamation-mark.svg
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
+                  type="horizontal"
+                />
+                <div
+                  class="flex justify-between space-4"
+                >
+                  <div
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                  >
+                    <div
+                      class="flex"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Author
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span
+                            class="font-semibold text-theme-secondary-text truncate max-w-48"
+                          >
+                            dated
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Category
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          Utility
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Website
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <a
+                            class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
+                            data-ring-focus-margin="-m-1"
+                            data-testid="PluginSpecs__website"
+                            href="#"
+                            rel="noopener noreferrer"
+                            to="https://github.com/dated/delegate-calculator-wallet-plugin"
+                          >
+                            <span
+                              class="Link__Content-sc-ec014t-1 fPOlTq"
+                            >
+                              <span>
+                                View
+                              </span>
+                            </span>
+                            <div
+                              class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
+                              data-testid="Link__external"
+                              height="16"
+                              width="16"
+                            >
+                              <svg>
+                                arrow-external.svg
+                              </svg>
+                            </div>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Status
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            Not installed
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                  >
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col text-right"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Size
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span
+                            data-testid="PluginSpecs__size"
+                          >
+                            123 kB
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col text-right"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Version
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          1.0.0
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="space-y-8"
+          >
+            <div
+              data-testid="PluginInfo__description"
+            >
+              <h4
+                class="font-bold"
+              >
+                About
+              </h4>
+              <p
+                class="mt-3 text-theme-secondary-600"
+              >
+                Compare delegate payouts and get an overview of your potential staking rewards on the ARK Public Network directly in the Payvo Wallet
+              </p>
+            </div>
+            <div
+              data-testid="PluginInfo__permissions"
+            >
+              <h4
+                class="font-bold"
+              >
+                Permissions
+              </h4>
+              <div
+                class="inline-flex items-baseline space-x-2"
+              >
+                <p
+                  class="mt-3 text-theme-secondary-600"
+                >
+                  <span
+                    class="TruncateEnd__Wrapper-sc-1hhdnni-0"
+                    data-testid="TruncateEnd"
+                  >
+                    Allows to register a custom view, Allows performin…
+                  </span>
+                </p>
+                <button
+                  class="font-semibold link"
+                >
+                  View All
+                </button>
+              </div>
+            </div>
+            <div
+              data-testid="PluginInfo__requirements"
+            >
+              <h4
+                class="font-bold"
+              >
+                Requirements
+              </h4>
+              <p
+                class="mt-3 text-theme-secondary-600"
+              >
+                <span>
+                  Payvo Wallet Version v1.0.0+
+                </span>
+              </p>
+            </div>
+            <div
+              class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
+            >
+              <div
+                class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
+              >
+                <div
+                  class="sc-bdvvtL qGXhc"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    circle-exclamation-mark.svg
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="flex flex-col w-full"
+              >
+                <p
+                  class="font-semibold dark:text-theme-secondary-500"
+                  data-testid="Alert__title"
+                >
+                  Disclaimer
+                </p>
+                <div
+                  class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
+                >
+                  The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PluginDetails should update package 1`] = `
+<div>
+  <button>
+    Fetch Packages
+  </button>
+  <div
+    class="flex relative flex-col min-h-screen"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
+    >
+      <div
+        class="flex relative h-21"
+      >
+        <button
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+        >
+          <div
+            class="sc-bdvvtL Cfvxc mx-auto"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-left-small.svg
+            </svg>
+          </div>
+        </button>
+        <div
+          class="flex flex-1 px-8"
+        >
+          <div
+            class="flex items-center my-auto"
+          >
+            <div
+              class="flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                aria-current="page"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus active"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
+                title="Plugins"
+              >
+                Plugins
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
+                title="News"
+              >
+                News
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
+          >
+            <div>
+              <div
+                class="relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                      data-testid="navbar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc p-1"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            bell.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        >
+                          <div
+                            class="w-2 h-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--send"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--receive"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        qr-code.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+          </div>
+          <div
+            class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
+          >
+            <div
+              class="text-right"
+            >
+              <div
+                class="text-xs font-semibold text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="text-sm font-bold text-theme-secondary-text dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <div
+                  class="relative justify-center items-center align-middle rounded-full cursor-pointer"
+                  data-testid="navbar__useractions"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="Profile Avatar"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      />
+                      <span
+                        class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                      >
+                        JO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col flex-1"
+    >
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 gIRSYc border-theme-secondary-300 dark:border-theme-secondary-800 hasBorder"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="w-full bg-theme-background"
+            data-testid="plugin-details__header"
+          >
+            <div
+              class="flex w-full"
+            >
+              <div
+                class="PluginImage__PluginImageWrapper-sc-10kztrf-0 fchVGU bg-theme-primary-100 text-theme-primary-600 dark:bg-theme-secondary-800 dark:text-theme-secondary-700"
+                data-testid="PluginImage"
+              >
+                <svg>
+                  plugin-logo-placeholder.svg
+                </svg>
+              </div>
+              <div
+                class="flex flex-col justify-between pl-8 w-full min-w-0"
+              >
+                <div
+                  class="flex justify-between items-end"
+                >
+                  <div
+                    class="flex overflow-hidden flex-col mr-8 space-y-2 leading-tight"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      <span
+                        class="text-2xl font-bold truncate"
+                      >
+                        Delegate Calculator Wallet Plugin
+                      </span>
+                    </div>
+                    <span
+                      class="text-medium text-theme-secondary-500 truncate"
+                    />
+                  </div>
+                  <div
+                    class="flex"
+                  >
+                    <div
+                      class="flex items-center space-x-3"
+                    >
+                      <button
+                        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                        data-testid="PluginHeader__button--report"
+                        type="button"
+                      >
+                        <div
+                          class="flex items-center space-x-2"
+                        >
+                          <div
+                            class="sc-bdvvtL qGXhc"
+                            height="20"
+                            width="20"
+                          >
+                            <svg>
+                              circle-exclamation-mark.svg
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                      <div
+                        class="relative"
+                      >
+                        <span
+                          data-testid="dropdown__toggle"
+                        >
+                          <div
+                            class="relative"
+                          >
+                            <button
+                              class="OriginalButton__StyledButton-sc-o0fs2j-0 hdgSCX text-left"
+                              type="button"
+                            >
+                              <div
+                                class="flex items-center space-x-2"
+                              >
+                                <div
+                                  class="sc-bdvvtL qGXhc"
+                                  height="20"
+                                  width="20"
+                                >
+                                  <svg>
+                                    ellipsis-vertical.svg
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                            <span
+                              class="Badge__Wrapper-sc-w9wbbm-0 hSxNrj flex border-2 rounded-full justify-center items-center align-middle bg-theme-background border-transparent cursor-pointer bg-theme-danger-400"
+                              data-testid="PluginDropdown__update-badge"
+                            >
+                              <span />
+                            </span>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="Divider-sc-17ehhxk-0 FRyyK border-theme-secondary-300 dark:border-theme-secondary-800"
+                  type="horizontal"
+                />
+                <div
+                  class="flex justify-between space-4"
+                >
+                  <div
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                  >
+                    <div
+                      class="flex"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Author
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span
+                            class="font-semibold text-theme-secondary-text truncate max-w-48"
+                          >
+                            Unknown
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Category
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          Other
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Website
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            N/A
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Status
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span>
+                            Disabled
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="flex space-x-6 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800"
+                  >
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col text-right"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Size
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          <span
+                            data-testid="PluginSpecs__size"
+                          >
+                            0 B
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex pl-6"
+                    >
+                      <div
+                        class="flex flex-col text-right"
+                      >
+                        <span
+                          class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700"
+                        >
+                          Version
+                        </span>
+                        <span
+                          class="font-semibold text-theme-secondary-text"
+                        >
+                          0.0.1
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Section__SectionWrapper-sc-plnv9l-0 fYoPaw"
+      >
+        <div
+          class="container px-10 mx-auto"
+        >
+          <div
+            class="space-y-8"
+          >
+            <div
+              class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
+            >
+              <div
+                class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
+              >
+                <div
+                  class="sc-bdvvtL qGXhc"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    circle-exclamation-mark.svg
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="flex flex-col w-full"
+              >
+                <p
+                  class="font-semibold dark:text-theme-secondary-500"
+                  data-testid="Alert__title"
+                >
+                  Disclaimer
+                </p>
+                <div
+                  class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
+                >
+                  The availability of this Plugin in the Payvo Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

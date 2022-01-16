@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionTimestamp should render 1`] = `
+<div>
+  <div
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
+    data-testid="TransactionTimestamp"
+  >
+    <div
+      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+    >
+      <div
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+      >
+        Timestamp
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        31.07.2020 4:34 PM
+      </div>
+    </div>
+  </div>
+</div>
+`;

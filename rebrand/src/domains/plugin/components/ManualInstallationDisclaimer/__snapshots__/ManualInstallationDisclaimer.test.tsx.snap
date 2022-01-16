@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ManualInstallationDisclaimer should not render if not open 1`] = `<DocumentFragment />`;
+
+exports[`ManualInstallationDisclaimer should render a modal 1`] = `
+<DocumentFragment>
+  <div
+    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
+    data-testid="modal__overlay"
+  >
+    <div
+      class="Modal__ModalContainer-sc-5lu2mc-0 cSWyoG"
+      tabindex="-1"
+    >
+      <div
+        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
+        data-testid="modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
+        >
+          <button
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
+            data-testid="modal__close-btn"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="sc-bdvvtL fCrhkg"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Disclaimer
+          </h2>
+          <div
+            class="flex-1"
+          >
+            <svg
+              class="m-auto my-8 w-3/5"
+            >
+              generic-warning-dark-green.svg
+            </svg>
+            <div
+              class="whitespace-pre-line text-theme-secondary-text"
+            >
+              By accepting the following terms, you hereby assume the risk associated with downloading files and installing said files from a direct URL link. The aforementioned links have neither been tested nor approved by ARK.io and ARK SCIC.
+
+We make no warranties, expressed or implied, as to the sustainability, availability, security, of these URLs. We are not responsible for any consequences which may occur from downloading, viewing, or installing files directly from a URL. ARK.io and ARK SCIC shall bear no liability for any loss suffered by users as a result of clicking an unverified direct URL.
+
+You acknowledge that clicking unverified URLs may result in you downloading, viewing, or installing content that may have bugs, glitches, lack of functionality, or can cause damage to your machine or result in the loss of data.
+            </div>
+            <fieldset
+              class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex mt-6"
+            >
+              <label
+                class="flex items-center space-x-3 w-max cursor-pointer"
+              >
+                <input
+                  class="Checkbox-sc-1aq7nos-0 gdmzcT"
+                  color="success"
+                  data-testid="ManualInstallationDisclaimer__rememberChoice-toggle"
+                  name="rememberChoice"
+                  type="checkbox"
+                />
+                <span
+                  class="text-sm text-theme-secondary-500 dark:text-theme-secondary-700"
+                >
+                  Do not show this message again
+                </span>
+              </label>
+            </fieldset>
+            <div
+              class="flex justify-end mt-8 space-x-3"
+            >
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                data-testid="ManualInstallationDisclaimer__decline-button"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  I Decline
+                </div>
+              </button>
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 isLyLB"
+                data-testid="ManualInstallationDisclaimer__accept-button"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  I Accept
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

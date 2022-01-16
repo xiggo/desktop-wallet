@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiPaymentRecipients should render recipients 1`] = `
+<div>
+  <div
+    class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 hFlzIg no-ligatures"
+    data-testid="MultiPaymentRecipients"
+  >
+    <div
+      class="flex-1 space-y-2 w-40 whitespace-nowrap"
+    >
+      <div
+        class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+      >
+        <div
+          class="flex items-center space-x-4"
+        >
+          <span>
+            Recipients (2)
+          </span>
+          <div
+            class="Divider-sc-17ehhxk-0 hhDSpl border-theme-secondary-300 dark:border-theme-secondary-800"
+            type="vertical"
+          />
+          <a
+            class="Link__AnchorStyled-sc-ec014t-0 eeKUfa group ring-focus"
+            data-ring-focus-margin="-m-1"
+            data-testid="Link"
+            href="#"
+            rel="noopener noreferrer"
+            to="https://explorer.ark.io/transaction/ee4175091d9f4dacf5fed213711c3e0e4cc371e37afa7bce0429d09bcf3ecefe"
+          >
+            <span
+              class="Link__Content-sc-ec014t-1 fPOlTq"
+            >
+              View Full List
+            </span>
+            <div
+              class="sc-bdvvtL fCrhkg flex-shrink-0 duration-200 inline-block text-sm"
+              data-testid="Link__external"
+              height="16"
+              width="16"
+            >
+              <svg>
+                arrow-external.svg
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="flex items-center font-semibold"
+      >
+        <div
+          class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+        >
+          <span
+            class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
+            data-testid="Address__address"
+          >
+            test-address1
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex items-center -space-x-1"
+    >
+      <div
+        class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+        data-testid="Avatar"
+      >
+        <div
+          class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+        >
+          <img
+            alt="test-address1"
+            src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"55\\" cx=\\"90\\" cy=\\"40\\" fill=\\"rgb(156, 39, 176)\\"/><circle r=\\"40\\" cx=\\"100\\" cy=\\"60\\" fill=\\"rgb(0, 188, 212)\\"/><circle r=\\"60\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(139, 195, 74)\\"/></svg>"
+            title="test-address1"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

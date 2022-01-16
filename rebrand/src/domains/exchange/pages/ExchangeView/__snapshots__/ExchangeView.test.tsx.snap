@@ -1,0 +1,1091 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExchangeView should render 1`] = `
+<div>
+  <div
+    class="flex relative flex-col min-h-screen"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
+    >
+      <div
+        class="flex relative h-21"
+      >
+        <button
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+        >
+          <div
+            class="sc-bdvvtL Cfvxc mx-auto"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-left-small.svg
+            </svg>
+          </div>
+        </button>
+        <div
+          class="flex flex-1 px-8"
+        >
+          <div
+            class="flex items-center my-auto"
+          >
+            <div
+              class="flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
+                title="Plugins"
+              >
+                Plugins
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                aria-current="page"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus active"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
+                title="News"
+              >
+                News
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
+          >
+            <div>
+              <div
+                class="relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                      data-testid="navbar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc p-1"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            bell.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        >
+                          <div
+                            class="w-2 h-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--send"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--receive"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        qr-code.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+          </div>
+          <div
+            class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
+          >
+            <div
+              class="text-right"
+            >
+              <div
+                class="text-xs font-semibold text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="text-sm font-bold text-theme-secondary-text dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <div
+                  class="relative justify-center items-center align-middle rounded-full cursor-pointer"
+                  data-testid="navbar__useractions"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="Profile Avatar"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      />
+                      <span
+                        class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                      >
+                        JO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col flex-1"
+    >
+      <div
+        class="flex flex-col items-center justify-center relative flex-1 w-full h-full py-20"
+      >
+        <div
+          class="absolute inset-0 flex items-center p-32"
+          style="background-color: rgb(63, 68, 85);"
+        >
+          <svg
+            class="w-full h-full"
+          >
+            world-map.svg
+          </svg>
+        </div>
+        <div
+          class="w-full max-w-3xl relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background flex"
+        >
+          <div
+            class="h-25 mx-auto mb-8"
+          >
+            <img
+              alt="ChangeNOW Header Logo"
+              class="object-cover w-full h-full"
+              src="https://exchanges.payvo.com/images/changenow/dark.png"
+            />
+          </div>
+          <form
+            class="space-y-5"
+            data-testid="ExchangeForm"
+          >
+            <div>
+              <ul
+                class="StepIndicator__StepWrapper-sc-1kbqtlh-1 cTsjIC"
+              >
+                <li
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 bIEtwY"
+                />
+                <li
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 dXZskg"
+                />
+                <li
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 dXZskg"
+                />
+                <li
+                  class="StepIndicator__StepStyled-sc-1kbqtlh-0 dXZskg"
+                />
+              </ul>
+              <div
+                class="mt-8"
+              >
+                <div
+                  data-testid="tab-pabel__active-panel"
+                >
+                  <div
+                    class="flex flex-col"
+                    data-testid="ExchangeForm__form-step"
+                  >
+                    <div
+                      class="flex space-x-3"
+                    >
+                      <div
+                        class="w-2/5"
+                      >
+                        <fieldset
+                          class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
+                        >
+                          <label
+                            class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
+                            data-testid="FormLabel"
+                            for="fromCurrency"
+                          >
+                            Cryptoasset
+                          </label>
+                          <div
+                            class="relative w-full"
+                          >
+                            <div
+                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                            >
+                              <div
+                                class="relative flex flex-1 h-full"
+                              >
+                                <input
+                                  class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                                  data-testid="select-list__input"
+                                  name="fromCurrency"
+                                  readonly=""
+                                  tabindex="-1"
+                                  value=""
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="relative w-full"
+                            >
+                              <div
+                                aria-expanded="false"
+                                aria-haspopup="listbox"
+                                aria-owns="fromCurrency-menu"
+                                role="combobox"
+                              >
+                                <label
+                                  for="fromCurrency-input"
+                                  id="fromCurrency-label"
+                                />
+                                <div
+                                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                                >
+                                  <div
+                                    class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background ring-theme-background"
+                                  />
+                                  <div
+                                    class="relative flex flex-1 h-full"
+                                  >
+                                    <input
+                                      aria-autocomplete="list"
+                                      aria-controls="fromCurrency-menu"
+                                      aria-labelledby="fromCurrency-label"
+                                      autocomplete="off"
+                                      class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                                      data-testid="SelectDropdown__input"
+                                      id="fromCurrency-input"
+                                      name="fromCurrency"
+                                      placeholder="Select Cryptoasset"
+                                      value=""
+                                    />
+                                  </div>
+                                  <div
+                                    class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                    data-testid="Input__addon-end"
+                                  >
+                                    <div
+                                      class=""
+                                    >
+                                      <div
+                                        class="flex justify-center items-center py-2 px-1"
+                                        data-testid="SelectDropdown__caret"
+                                      >
+                                        <div
+                                          class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
+                                          height="10"
+                                          width="10"
+                                        >
+                                          <svg>
+                                            caret-down.svg
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <ul
+                                  aria-labelledby="fromCurrency-label"
+                                  class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                                  id="fromCurrency-menu"
+                                  role="listbox"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                      <div
+                        class="w-3/5"
+                      >
+                        <fieldset
+                          class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
+                        >
+                          <label
+                            class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
+                            data-testid="FormLabel"
+                            for="payinAmount"
+                          >
+                            You Send
+                          </label>
+                          <div
+                            class="relative"
+                          >
+                            <div
+                              class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                            >
+                              <div
+                                class="relative flex flex-1 h-full"
+                              >
+                                <input
+                                  class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                                  data-testid="InputCurrency"
+                                  name="payinAmount"
+                                  placeholder="Enter an amount"
+                                  type="text"
+                                  value=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div
+                      class="flex ml-8 space-x-8"
+                    >
+                      <div
+                        class="relative h-20 my-1 border-l border-theme-secondary-300 dark:border-theme-secondary-800"
+                      >
+                        <div
+                          class="absolute w-2 h-2 rounded-full border border-theme-secondary-300 dark:border-theme-secondary-800 bg-theme-background top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                        />
+                      </div>
+                      <div
+                        class="flex flex-1 items-center"
+                      >
+                        <div
+                          class="flex items-center space-x-2 text-sm"
+                        >
+                          <span
+                            class="font-semibold text-theme-primary-600 border-b border-theme-primary-600 border-dashed mt-px"
+                          >
+                            Estimated Rate
+                            :
+                          </span>
+                          <span>
+                            N/A
+                          </span>
+                        </div>
+                        <button
+                          class="OriginalButton__StyledButton-sc-o0fs2j-0 kMtMtx ml-auto"
+                          data-testid="ExchangeForm__swap-button"
+                          disabled=""
+                          type="button"
+                        >
+                          <div
+                            class="flex items-center space-x-2"
+                          >
+                            <div
+                              class="sc-bdvvtL fCrhkg"
+                              height="16"
+                              width="16"
+                            >
+                              <svg>
+                                arrow-down-up.svg
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="space-y-6"
+                    >
+                      <div
+                        class="flex space-x-3"
+                      >
+                        <div
+                          class="w-2/5"
+                        >
+                          <fieldset
+                            class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
+                          >
+                            <label
+                              class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
+                              data-testid="FormLabel"
+                              for="toCurrency"
+                            >
+                              Cryptoasset
+                            </label>
+                            <div
+                              class="relative w-full"
+                            >
+                              <div
+                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                              >
+                                <div
+                                  class="relative flex flex-1 h-full"
+                                >
+                                  <input
+                                    class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                                    data-testid="select-list__input"
+                                    name="toCurrency"
+                                    readonly=""
+                                    tabindex="-1"
+                                    value=""
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                class="relative w-full"
+                              >
+                                <div
+                                  aria-expanded="false"
+                                  aria-haspopup="listbox"
+                                  aria-owns="toCurrency-menu"
+                                  role="combobox"
+                                >
+                                  <label
+                                    for="toCurrency-input"
+                                    id="toCurrency-label"
+                                  />
+                                  <div
+                                    class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                                  >
+                                    <div
+                                      class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background ring-theme-background"
+                                    />
+                                    <div
+                                      class="relative flex flex-1 h-full"
+                                    >
+                                      <input
+                                        aria-autocomplete="list"
+                                        aria-controls="toCurrency-menu"
+                                        aria-labelledby="toCurrency-label"
+                                        autocomplete="off"
+                                        class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default"
+                                        data-testid="SelectDropdown__input"
+                                        id="toCurrency-input"
+                                        name="toCurrency"
+                                        placeholder="Select Cryptoasset"
+                                        value=""
+                                      />
+                                    </div>
+                                    <div
+                                      class="flex items-center space-x-3 divide-x divide-theme-secondary-300 dark:divide-theme-secondary-800 text-theme-primary-300 dark:text-theme-secondary-600"
+                                      data-testid="Input__addon-end"
+                                    >
+                                      <div
+                                        class=""
+                                      >
+                                        <div
+                                          class="flex justify-center items-center py-2 px-1"
+                                          data-testid="SelectDropdown__caret"
+                                        >
+                                          <div
+                                            class="sc-bdvvtL Cfvxc transition-transform text-theme-secondary-500"
+                                            height="10"
+                                            width="10"
+                                          >
+                                            <svg>
+                                              caret-down.svg
+                                            </svg>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <ul
+                                    aria-labelledby="toCurrency-label"
+                                    class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                                    id="toCurrency-menu"
+                                    role="listbox"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                        <div
+                          class="w-3/5"
+                        >
+                          <fieldset
+                            class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
+                          >
+                            <label
+                              class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
+                              data-testid="FormLabel"
+                              for="payoutAmount"
+                            >
+                              You Get
+                            </label>
+                            <div
+                              class="relative"
+                            >
+                              <div
+                                class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR"
+                              >
+                                <div
+                                  class="relative flex flex-1 h-full"
+                                >
+                                  <input
+                                    class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                                    data-testid="InputCurrency"
+                                    name="payoutAmount"
+                                    placeholder="Enter an amount"
+                                    type="text"
+                                    value=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </div>
+                      <div
+                        data-testid="ExchangeForm__recipient-address"
+                      >
+                        <fieldset
+                          class="FormField__FormFieldStyled-sc-q4bblx-0 dFNJMk flex flex-col space-y-2"
+                        >
+                          <label
+                            class="flex mb-2 text-sm font-semibold transition-colors duration-100 FormLabel text-theme-secondary-text"
+                            data-testid="FormLabel"
+                            for="recipientWallet"
+                          >
+                            Recipient Wallet
+                          </label>
+                          <div>
+                            <div
+                              class="flex relative items-center w-full text-left"
+                              data-testid="SelectRecipient__wrapper"
+                            >
+                              <div
+                                class="relative w-full"
+                              >
+                                <div
+                                  class="Input__InputWrapperStyled-sc-1i8sd1r-0 cLNVAR sr-only"
+                                >
+                                  <div
+                                    class="relative flex flex-1 h-full"
+                                  >
+                                    <input
+                                      aria-invalid="false"
+                                      class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full"
+                                      data-testid="select-list__input"
+                                      name="recipientWallet"
+                                      readonly=""
+                                      tabindex="-1"
+                                      value=""
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  class="relative w-full"
+                                >
+                                  <div
+                                    aria-expanded="false"
+                                    aria-haspopup="listbox"
+                                    aria-owns="SelectRecipient__dropdown-menu"
+                                    role="combobox"
+                                  >
+                                    <label
+                                      for="SelectRecipient__dropdown-input"
+                                      id="SelectRecipient__dropdown-label"
+                                    />
+                                    <div
+                                      class="Input__InputWrapperStyled-sc-1i8sd1r-0 ktoJbG"
+                                      disabled=""
+                                    >
+                                      <div
+                                        class="flex items-center"
+                                      >
+                                        <div
+                                          class="Circle__CircleWrapper-sc-d5u41q-0 bcplCx bg-theme-secondary-200 border-theme-secondary-200 dark:bg-theme-secondary-700 dark:border-theme-secondary-700 ring-theme-background"
+                                        />
+                                      </div>
+                                      <div
+                                        class="relative flex flex-1 h-full"
+                                      >
+                                        <input
+                                          aria-autocomplete="list"
+                                          aria-controls="SelectRecipient__dropdown-menu"
+                                          aria-invalid="false"
+                                          aria-labelledby="SelectRecipient__dropdown-label"
+                                          autocomplete="off"
+                                          class="Input__InputStyled-sc-1i8sd1r-1 hPntwa p-0 border-none bg-transparent focus:ring-0 no-ligatures w-full cursor-default text-theme-secondary-text"
+                                          data-testid="SelectDropdown__input"
+                                          disabled=""
+                                          id="SelectRecipient__dropdown-input"
+                                          name="recipientWallet"
+                                          placeholder="Enter the payout address"
+                                          value=""
+                                        />
+                                      </div>
+                                    </div>
+                                    <ul
+                                      aria-labelledby="SelectRecipient__dropdown-label"
+                                      class="styles__SelectOptionsList-sc-120rtxy-0 dJMsqc"
+                                      id="SelectRecipient__dropdown-menu"
+                                      role="listbox"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-end mt-8 space-x-3"
+                >
+                  <div
+                    class="mr-auto"
+                  >
+                    <button
+                      class="link font-semibold text-sm"
+                      data-testid="ExchangeForm__add-refund-address"
+                      type="button"
+                    >
+                      Add Refund Wallet
+                    </button>
+                  </div>
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+                    data-testid="ExchangeForm__back-button"
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      Back
+                    </div>
+                  </button>
+                  <button
+                    class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
+                    data-testid="ExchangeForm__continue-button"
+                    disabled=""
+                    type="button"
+                  >
+                    <div
+                      class="flex items-center space-x-2"
+                    >
+                      Continue
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ExchangeView should render warning without exchange 1`] = `
+<div>
+  <div
+    class="flex relative flex-col min-h-screen"
+  >
+    <nav
+      aria-labelledby="main menu"
+      class="NavigationBarblocks__NavWrapper-sc-nciu2a-0 iVVfMx"
+    >
+      <div
+        class="flex relative h-21"
+      >
+        <button
+          class="BackButton__StyledBackButton-sc-18ta3r7-0 gAKHms flex w-12"
+        >
+          <div
+            class="sc-bdvvtL Cfvxc mx-auto"
+            height="10"
+            width="10"
+          >
+            <svg>
+              chevron-left-small.svg
+            </svg>
+          </div>
+        </button>
+        <div
+          class="flex flex-1 px-8"
+        >
+          <div
+            class="flex items-center my-auto"
+          >
+            <div
+              class="flex items-center justify-center my-auto mr-4 pl-0.5 text-white rounded-xl w-11 h-11 bg-theme-success-600"
+            >
+              <svg
+                height="28"
+              >
+                payvo-logo.svg
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="flex mr-auto ml-4 space-x-8 h-21"
+            data-testid="navigationBar__menu"
+          >
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/dashboard"
+                title="Portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/plugins"
+                title="Plugins"
+              >
+                Plugins
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                aria-current="page"
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus active"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/exchange"
+                title="Exchange"
+              >
+                Exchange
+              </a>
+            </li>
+            <li
+              class="flex"
+            >
+              <a
+                class="flex relative items-center font-semibold transition-colors duration-200 focus:outline-none text-md text-theme-secondary-text ring-focus"
+                data-ring-focus-margin="-mx-2"
+                href="/profiles/b999d134-7a24-481e-a95d-bc47c543bfc9/news"
+                title="News"
+              >
+                News
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center my-auto space-x-4"
+            data-testid="navigationBar__notifications"
+          >
+            <div>
+              <div
+                class="relative"
+              >
+                <span
+                  data-testid="dropdown__toggle"
+                >
+                  <div
+                    class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT group"
+                  >
+                    <button
+                      class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                      data-testid="navbar__buttons--notifications"
+                      type="button"
+                    >
+                      <div
+                        class="flex items-center space-x-2"
+                      >
+                        <div
+                          class="sc-bdvvtL qGXhc p-1"
+                          height="20"
+                          width="20"
+                        >
+                          <svg>
+                            bell.svg
+                          </svg>
+                        </div>
+                        <div
+                          class="flex absolute top-1 right-1 justify-center items-center p-1 rounded-full transition-all duration-100 ease-linear bg-theme-background dark:group-hover:bg-theme-secondary-800 group-hover:bg-theme-primary-100"
+                        >
+                          <div
+                            class="w-2 h-2 rounded-full bg-theme-danger-500"
+                          />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--send"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        double-arrow-right.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="NavigationBarblocks__NavigationButtonWrapper-sc-nciu2a-1 ijuJJT"
+              >
+                <button
+                  class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF"
+                  data-testid="navbar__buttons--receive"
+                  type="button"
+                >
+                  <div
+                    class="flex items-center space-x-2"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc p-1"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        qr-code.svg
+                      </svg>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="h-8 border-r border-theme-secondary-300 dark:border-theme-secondary-800"
+            />
+          </div>
+          <div
+            class="flex items-center my-auto ml-8 space-x-4"
+            data-testid="navigationBar__userInfo"
+          >
+            <div
+              class="text-right"
+            >
+              <div
+                class="text-xs font-semibold text-theme-secondary-500"
+              >
+                Your Balance
+              </div>
+              <div
+                class="text-sm font-bold text-theme-secondary-text dark:text-theme-text"
+                data-testid="Balance__value"
+              >
+                <span
+                  class="whitespace-nowrap"
+                  data-testid="Amount"
+                >
+                  0 BTC
+                </span>
+              </div>
+            </div>
+            <div
+              class="relative"
+            >
+              <span
+                data-testid="dropdown__toggle"
+              >
+                <div
+                  class="relative justify-center items-center align-middle rounded-full cursor-pointer"
+                  data-testid="navbar__useractions"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="Profile Avatar"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(233, 30, 99)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"80\\" cy=\\"30\\" fill=\\"rgb(76, 175, 80)\\"/><circle r=\\"55\\" cx=\\"0\\" cy=\\"60\\" fill=\\"rgb(255, 152, 0)\\"/><circle r=\\"40\\" cx=\\"50\\" cy=\\"50\\" fill=\\"rgb(3, 169, 244)\\"/></svg>"
+                      />
+                      <span
+                        class="absolute text-sm font-semibold text-theme-background dark:text-theme-text"
+                      >
+                        JO
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="flex flex-col flex-1"
+    >
+      <div
+        class="flex flex-col items-center justify-center relative flex-1 w-full h-full py-20"
+      >
+        <div
+          class="absolute inset-0 flex items-center p-32"
+          style="background-color: rgb(63, 68, 85);"
+        >
+          <svg
+            class="w-full h-full"
+          >
+            world-map.svg
+          </svg>
+        </div>
+        <div
+          class="w-full max-w-3xl relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background hidden"
+        >
+          <div
+            class="h-25 mx-auto mb-8"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,511 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReceiveFunds should not render qrcode without an address 1`] = `
+<DocumentFragment>
+  <div
+    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
+    data-testid="modal__overlay"
+  >
+    <div
+      class="Modal__ModalContainer-sc-5lu2mc-0 llpHYe"
+      tabindex="-1"
+    >
+      <div
+        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
+        data-testid="modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
+        >
+          <button
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
+            data-testid="modal__close-btn"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="sc-bdvvtL fCrhkg"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Receive Funds
+          </h2>
+          <div
+            class="flex-1"
+          >
+            <div
+              data-testid="ReceiveFunds__address"
+            >
+              <div
+                class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 GJFVE no-ligatures"
+                data-testid="TransactionDetail"
+              >
+                <div
+                  class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                >
+                  <div
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+                  >
+                    Address
+                  </div>
+                  <div
+                    class="flex items-center font-semibold"
+                  >
+                    <div
+                      class="flex items-center space-x-2 overflow-hidden"
+                    >
+                      <div
+                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                      />
+                      <span
+                        class="flex flex-grow text-theme-primary-300 dark:text-theme-secondary-600"
+                      >
+                        <button
+                          class="relative focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="sc-bdvvtL fCrhkg"
+                            height="16"
+                            width="16"
+                          >
+                            <svg>
+                              copy.svg
+                            </svg>
+                          </div>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="-space-x-1 whitespace-nowrap"
+                >
+                  <div
+                    aria-label="ARK Devnet"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                    data-testid="NetworkIcon-ARK-ark.devnet"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc"
+                      data-testid="NetworkIcon__icon"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        ark.svg
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk mt-8 w-full"
+                data-testid="ReceiveFunds__toggle"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Specify Amount
+                </div>
+              </button>
+            </div>
+            <div
+              class="mx-auto mt-8 w-64 h-64"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ReceiveFunds should render with a wallet name 1`] = `
+<DocumentFragment>
+  <div
+    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
+    data-testid="modal__overlay"
+  >
+    <div
+      class="Modal__ModalContainer-sc-5lu2mc-0 llpHYe"
+      tabindex="-1"
+    >
+      <div
+        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
+        data-testid="modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
+        >
+          <button
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
+            data-testid="modal__close-btn"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="sc-bdvvtL fCrhkg"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Receive Funds
+          </h2>
+          <div
+            class="flex-1"
+          >
+            <div
+              data-testid="ReceiveFunds__name"
+            >
+              <div
+                class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 GJFVE no-ligatures"
+                data-testid="TransactionDetail"
+              >
+                <div
+                  class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                >
+                  <div
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+                  >
+                    Name
+                  </div>
+                  <div
+                    class="flex items-center font-semibold"
+                  >
+                    My Wallet
+                  </div>
+                </div>
+                <div
+                  aria-label="ARK Devnet"
+                  class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                  data-testid="NetworkIcon-ARK-ark.devnet"
+                >
+                  <div
+                    class="sc-bdvvtL qGXhc"
+                    data-testid="NetworkIcon__icon"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      ark.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-testid="ReceiveFunds__address"
+            >
+              <div
+                class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 GJFVE no-ligatures"
+                data-testid="TransactionDetail"
+              >
+                <div
+                  class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                >
+                  <div
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+                  >
+                    Address
+                  </div>
+                  <div
+                    class="flex items-center font-semibold"
+                  >
+                    <div
+                      class="flex items-center space-x-2 overflow-hidden"
+                    >
+                      <div
+                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                      >
+                        <span
+                          class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          abc
+                        </span>
+                      </div>
+                      <span
+                        class="flex flex-grow text-theme-primary-300 dark:text-theme-secondary-600"
+                      >
+                        <button
+                          class="relative focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="sc-bdvvtL fCrhkg"
+                            height="16"
+                            width="16"
+                          >
+                            <svg>
+                              copy.svg
+                            </svg>
+                          </div>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="-space-x-1 whitespace-nowrap"
+                >
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="abc"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"60\\" cx=\\"80\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                        title="abc"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk mt-8 w-full"
+                data-testid="ReceiveFunds__toggle"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Specify Amount
+                </div>
+              </button>
+            </div>
+            <div
+              class="mx-auto mt-8 w-64 h-64"
+            >
+              <img
+                alt="QR Code"
+                class="p-3 w-64 h-64 rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+                data-testid="ReceiveFunds__qrcode"
+                src="data:image/png;base64,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"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ReceiveFunds should render without a wallet name 1`] = `
+<DocumentFragment>
+  <div
+    class="flex fixed inset-0 z-50 py-20 w-full h-full bg-opacity-60 dark:bg-opacity-80 bg-theme-secondary-900-rgba overflow-overlay dark:bg-black-rgba"
+    data-testid="modal__overlay"
+  >
+    <div
+      class="Modal__ModalContainer-sc-5lu2mc-0 llpHYe"
+      tabindex="-1"
+    >
+      <div
+        class="flex overflow-hidden relative flex-col p-10 shadow-2xl rounded-2.5xl bg-theme-background"
+        data-testid="modal__inner"
+      >
+        <div
+          class="absolute top-0 right-0 z-10 mt-5 mr-5 rounded transition-all duration-100 ease-linear bg-theme-primary-100 dark:bg-theme-secondary-800 dark:text-theme-secondary-600 dark:hover:bg-theme-secondary-700 dark:hover:text-theme-secondary-400 hover:bg-theme-primary-300"
+        >
+          <button
+            class="OriginalButton__StyledButton-sc-o0fs2j-0 enzTPF w-11 h-11"
+            data-testid="modal__close-btn"
+            type="button"
+          >
+            <div
+              class="flex items-center space-x-2"
+            >
+              <div
+                class="sc-bdvvtL fCrhkg"
+                height="16"
+                width="16"
+              >
+                <svg>
+                  cross.svg
+                </svg>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div
+          class="relative space-y-4"
+        >
+          <h2
+            class="mb-0 text-2xl font-bold"
+          >
+            Receive Funds
+          </h2>
+          <div
+            class="flex-1"
+          >
+            <div
+              data-testid="ReceiveFunds__address"
+            >
+              <div
+                class="TransactionDetail__TransactionDetailStyled-sc-r7sfme-0 GJFVE no-ligatures"
+                data-testid="TransactionDetail"
+              >
+                <div
+                  class="flex-1 space-y-2 w-40 whitespace-nowrap"
+                >
+                  <div
+                    class="text-sm font-semibold text-theme-secondary-500 dark:text-theme-secondary-700 no-ligatures"
+                  >
+                    Address
+                  </div>
+                  <div
+                    class="flex items-center font-semibold"
+                  >
+                    <div
+                      class="flex items-center space-x-2 overflow-hidden"
+                    >
+                      <div
+                        class="flex overflow-hidden flex-grow items-center space-x-2 whitespace-nowrap no-ligatures"
+                      >
+                        <span
+                          class="flex-1 inline-flex overflow-hidden text-theme-text font-semibold text-base"
+                          data-testid="Address__address"
+                        >
+                          abc
+                        </span>
+                      </div>
+                      <span
+                        class="flex flex-grow text-theme-primary-300 dark:text-theme-secondary-600"
+                      >
+                        <button
+                          class="relative focus:outline-none ring-focus"
+                          data-ring-focus-margin="-m-1"
+                          data-testid="clipboard-icon__wrapper"
+                          type="button"
+                        >
+                          <div
+                            class="sc-bdvvtL fCrhkg"
+                            height="16"
+                            width="16"
+                          >
+                            <svg>
+                              copy.svg
+                            </svg>
+                          </div>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="-space-x-1 whitespace-nowrap"
+                >
+                  <div
+                    aria-label="ARK Devnet"
+                    class="Circle__CircleWrapper-sc-d5u41q-0 egSsGQ text-theme-secondary-700 border-theme-secondary-300 dark:border-theme-secondary-700 ring-theme-background"
+                    data-testid="NetworkIcon-ARK-ark.devnet"
+                  >
+                    <div
+                      class="sc-bdvvtL qGXhc"
+                      data-testid="NetworkIcon__icon"
+                      height="20"
+                      width="20"
+                    >
+                      <svg>
+                        ark.svg
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="Avatar__AvatarWrapper-sc-18vw8a4-0 ewMeZp flex-shrink-0"
+                    data-testid="Avatar"
+                  >
+                    <div
+                      class="w-full h-full inline-flex items-center justify-center overflow-hidden align-middle rounded-full"
+                    >
+                      <img
+                        alt="abc"
+                        src="data:image/svg+xml;utf8,<svg version=\\"1.1\\" xmlns=\\"http://www.w3.org/2000/svg\\" class=\\"picasso\\" width=\\"100\\" height=\\"100\\" viewBox=\\"0 0 100 100\\"><style>.picasso circle{mix-blend-mode:soft-light;}</style><rect fill=\\"rgb(76, 175, 80)\\" width=\\"100\\" height=\\"100\\"/><circle r=\\"45\\" cx=\\"30\\" cy=\\"60\\" fill=\\"rgb(255, 193, 7)\\"/><circle r=\\"50\\" cx=\\"50\\" cy=\\"30\\" fill=\\"rgb(244, 67, 54)\\"/><circle r=\\"60\\" cx=\\"80\\" cy=\\"40\\" fill=\\"rgb(0, 150, 136)\\"/></svg>"
+                        title="abc"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <button
+                class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk mt-8 w-full"
+                data-testid="ReceiveFunds__toggle"
+                type="button"
+              >
+                <div
+                  class="flex items-center space-x-2"
+                >
+                  Specify Amount
+                </div>
+              </button>
+            </div>
+            <div
+              class="mx-auto mt-8 w-64 h-64"
+            >
+              <img
+                alt="QR Code"
+                class="p-3 w-64 h-64 rounded-lg border border-theme-secondary-300 dark:border-theme-secondary-800"
+                data-testid="ReceiveFunds__qrcode"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6CAYAAACI7Fo9AAAAAklEQVR4AewaftIAAAkQSURBVO3BQYqdWa6F0c8iJpIJ2ZZA8x+CQJqIO8ZtV7Maj3P86g8uN6zca337/uPnLxZKD56qaU7Sg6dqmldJD25qmqfSg6dqmndID56qabYxRGQ9Q0TWM0RkPUNE1jNEZD1DRNYzRGS9D34jPfiKappXSQ9Oapqb9OAdapqn0oM/UXrwDunBV1TTnBgisp4hIusZIrKeISLrGSKyniEi6xkist4Hn1TTvEJ68Co1zU16cJIePJUe3NQ0N+nBUzXNO6QHNzXNNjXNK6QHTxkisp4hIusZIrKeISLrGSKyniEi630g/5Oa5iY9eCo9uKlpTtKDp2qam/TgqZrmJj04qWmeqmlu0oN/E0NE1jNEZD1DRNYzRGQ9Q0TWM0RkPUNE1vtA/o+a5hVqmpv04CY9OKlpbtKDp2qap9KDm5rmJD24qWlO0gP5L0NE1jNEZD1DRNYzRGQ9Q0TWM0RkvQ8+KT3YJj14qqY5SQ9uapqb9OCpmuYV0oPPSA+eSg9Oapqb9OBV0oOvxhCR9QwRWc8QkfUMEVnPEJH1DBFZzxCR9T74jZpG/qumuUkPTmqam/TgpqY5SQ9uapqT9OCmpnmqprlJD05qmpv04B1qmj+NISLrGSKyniEi6xkisp4hIusZIrKeISLrfaQH8v+XHtzUNCfpwWekByc1zU168BXVNCfpwU1N8wrpwTaGiKxniMh6hoisZ4jIeoaIrGeIyHrfvv/4+YuL9OCmpvmK0oOnapqn0oOnappXSQ/+TWqam/TgpKb5itKDpwwRWc8QkfUMEVnPEJH1DBFZzxCR9QwRWe/bX3//84tPqGlO0oN3qWlO0oNXqWlO0oN3qWlO0oObmuYkPbipad4hPbipaZ5KD16lpnkFQ0TWM0RkPUNE1jNEZD1DRNYzRGS9D36jprlJD56qab6imuap9OAdapo/UXrwCjXNU+nBTU1zkx6c1DSvkh6cGCKyniEi6xkisp4hIusZIrKeISLrGSKy3gefVNOcpAevkh7c1DRPpQcnNc1TNc1NenBT05ykBzc1zVPpwavUNK+QHjxV09ykB38aQ0TWM0RkPUNE1jNEZD1DRNYzRGS9b99//PzFRXrwVE3zVHpwU9PcpAcnNc2rpAfvUNPcpAcnNc1NenBS03xGenBS09ykB0/VNCfpwWfUNE+lB69giMh6hoisZ4jIeoaIrGeIyHqGiKxniMh63/76+59fXNQ0N+nBSU3zKunBUzXNTXpwUtPcpAcnNc1NenBT02yTHjxV05ykB0/VNDfpwavUNCfpwU1Nc2KIyHqGiKxniMh6hoisZ4jIeoaIrGeIyHrfvv/4+YtPSA9Oapqb9OCpmuYmPXiFmuZd0oNXqGmeSg9epaa5SQ9Oapqb9OBPU9PcpAcnhoisZ4jIeoaIrGeIyHqGiKxniMh6H7xQevBUTXOTHtzUNE+lB0+lB0/VNDc1zUl6cFPTnKQHT9U071LTnKQHT9U0N+nBUzXNU+nBU4aIrGeIyHqGiKxniMh6hoisZ4jIeoaIrPfBC9U0N+nBSXpwU9M8lR7c1DT/JjXNu6QHJzXNTXpwUtM8lR58Rk1zkh68gyEi6xkisp4hIusZIrKeISLrGSKy3kd68CdKD25qmm3Sg1dID25qmqfSg6fSg5ua5iQ9eKqmuUkPbtKDd6hpTgwRWc8QkfUMEVnPEJH1DBFZzxCR9QwRWe/bX3//84uLmmab9GCbmuYmPTipaZ5KDz6jpjlJD16lptkmPTgxRGQ9Q0TWM0RkPUNE1jNEZD1DRNb79tff//zioqZ5Kj14l5rmFdKDV6lpbtKDk5rmqfTgpqbZJj04qWn+ROnBiSEi6xkisp4hIusZIrKeISLrGSKyniEi633wRjXNq6QHT9U0X1FN8wo1zU16cFLT3KQHT9U0N+nBSU1zU9OcpAc3Nc2rpAcnNc1NTXNiiMh6hoisZ4jIeoaIrGeIyHqGiKxniMh6HzXNZ6QHT6UHJzXNTXrwVE3zKjXNSXrwLunBUzXNUzXNq9Q0T6UHJzXNTXrwpzFEZD1DRNYzRGQ9Q0TWM0RkPUNE1vvgN9KDV6lpTtKDm5rmVdKDk5rmJj04qWlu0oObmuapmuap9OCpmuYmPXiFmuap9OCmprlJD05qmpv04Kn04MQQkfUMEVnPEJH1DBFZzxCR9QwRWc8QkfW+ff/x8xcX6cFNTXOSHrxLTXOSHrxKTfNUenBT0zyVHjxV05ykBzc1zaukB0/VNCfpwbvUNCfpwVOGiKxniMh6hoisZ4jIeoaIrGeIyHrfvv/4+YuL9OCmpjlJD25qmpP04KamuUkPnqppTtKDp2qaP1F68A41zU16cFLTfEXpwavUNCeGiKxniMh6hoisZ4jIeoaIrGeIyHqGiKz37a+///nFv0xN8xWlB69S05ykBzc1zTukBzc1zVPpwavUNF+NISLrGSKyniEi6xkisp4hIusZIrLeR02zUXpwkh48VdPcpAcnNc1NTfMONc1T6cFNTfOnqWlu0oOn0oN3MERkPUNE1jNEZD1DRNYzRGQ9Q0TWM0RkvQ9+Iz34imqap2qam/TgJD24qWmeSg+eqmmeSg9eJT24qWm+mvTgVWqadzBEZD1DRNYzRGQ9Q0TWM0RkPUNE1jNEZL0PPqmmeYX04E+UHnxF6cFTNc1T6cFNenBS09ykByc1zU1N8w7pwavUNCeGiKxniMh6hoisZ4jIeoaIrGeIyHofyP+kprlJD56qaV6lpnmHmuYmPThJD55KD25qmpP04DNqmpOa5iY9OKlpnjJEZD1DRNYzRGQ9Q0TWM0RkPUNE1jNEZL0P5H+SHtzUNE+lB+9Q09ykB0/VNE/VNE+lBzfpwUlN8xnpwSukB08ZIrKeISLrGSKyniEi6xkisp4hIut98EnpwZ8mPbipaZ5KD05qmpua5qn04KamOUkPbmqak/TgJj24qWneoaY5SQ8+o6Z5hfTgKUNE1jNEZD1DRNYzRGQ9Q0TWM0RkPUNE1vvgN2qabWqam/TgHdKDm5rmqfTgpKa5SQ9Oapqb9OAmPTipaZ6qab6i9OCpmuYmPTgxRGQ9Q0TWM0RkPUNE1jNEZD1DRNb7D50e0Vc29O2pAAAAAElFTkSuQmCC"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

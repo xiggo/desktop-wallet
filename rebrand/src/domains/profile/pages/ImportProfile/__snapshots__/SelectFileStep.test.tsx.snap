@@ -1,0 +1,547 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Import Profile Select File Step should change back from json to dwe 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+  >
+    <div
+      class="flex justify-between items-end bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Select a .json file with your Profile and related properties to start the import process.
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="SelectFile"
+    >
+      <div
+        class="h-full flex flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+        data-testid="SelectFile__drop-zone"
+      >
+        <div
+          class="sc-bdvvtL kCgesw"
+          height="40"
+          width="40"
+        >
+          <svg>
+            extension-json.svg
+          </svg>
+        </div>
+        <div
+          class="mt-8 space-x-px"
+        >
+          <span
+            class="font-semibold"
+          >
+            Drag & Drop or
+             
+          </span>
+          <button
+            class="relative font-semibold cursor-pointer focus:outline-none link ring-focus"
+            data-ring-focus-margin="-m-1"
+            data-testid="SelectFile__browse-files"
+            title="Click here to upload"
+            type="button"
+          >
+            Browse Files
+          </button>
+        </div>
+        <div
+          class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        >
+          Supported format is .json
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6"
+    >
+      <div
+        class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
+      >
+        <div
+          class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
+        >
+          <div
+            class="sc-bdvvtL qGXhc"
+            height="20"
+            width="20"
+          >
+            <svg>
+              circle-exclamation-mark.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full"
+        >
+          <div
+            class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
+          >
+            Please note that importing a Profile from Desktop Wallet v2 in .json format is supported temporarily and will soon be disabled. We recommend that you re-save your Profile in the new .dwe format.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-end mt-8 space-x-3"
+    >
+      <button
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+        data-testid="SelectFileStep__back"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Back
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Import Profile Select File Step should handle back event 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+  >
+    <div
+      class="flex justify-between items-end bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Select a .dwe file with your Profile and related properties to start the import process.
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="SelectFile"
+    >
+      <div
+        class="h-full flex flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+        data-testid="SelectFile__drop-zone"
+      >
+        <div
+          class="sc-bdvvtL kCgesw"
+          height="40"
+          width="40"
+        >
+          <svg>
+            extension-dwe.svg
+          </svg>
+        </div>
+        <div
+          class="mt-8 space-x-px"
+        >
+          <span
+            class="font-semibold"
+          >
+            Drag & Drop or
+             
+          </span>
+          <button
+            class="relative font-semibold cursor-pointer focus:outline-none link ring-focus"
+            data-ring-focus-margin="-m-1"
+            data-testid="SelectFile__browse-files"
+            title="Click here to upload"
+            type="button"
+          >
+            Browse Files
+          </button>
+        </div>
+        <div
+          class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        >
+          Supported format is .dwe
+        </div>
+      </div>
+    </div>
+    <p
+      class="mt-6 text-base text-center text-theme-secondary-text"
+    >
+      <span>
+        Importing from Desktop Wallet v2?
+         
+      </span>
+      <button
+        class="relative font-semibold cursor-pointer focus:outline-none link ring-focus"
+        data-ring-focus-margin="-m-1"
+        data-testid="SelectFileStep__change-file"
+        title="Click here."
+        type="button"
+      >
+        Click here.
+      </button>
+    </p>
+    <div
+      class="flex justify-end mt-8 space-x-3"
+    >
+      <button
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+        data-testid="SelectFileStep__back"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Back
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Import Profile Select File Step should render file selection for dwe and switch to json 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+  >
+    <div
+      class="flex justify-between items-end bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Select a .dwe file with your Profile and related properties to start the import process.
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="SelectFile"
+    >
+      <div
+        class="h-full flex flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+        data-testid="SelectFile__drop-zone"
+      >
+        <div
+          class="sc-bdvvtL kCgesw"
+          height="40"
+          width="40"
+        >
+          <svg>
+            extension-dwe.svg
+          </svg>
+        </div>
+        <div
+          class="mt-8 space-x-px"
+        >
+          <span
+            class="font-semibold"
+          >
+            Drag & Drop or
+             
+          </span>
+          <button
+            class="relative font-semibold cursor-pointer focus:outline-none link ring-focus"
+            data-ring-focus-margin="-m-1"
+            data-testid="SelectFile__browse-files"
+            title="Click here to upload"
+            type="button"
+          >
+            Browse Files
+          </button>
+        </div>
+        <div
+          class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        >
+          Supported format is .dwe
+        </div>
+      </div>
+    </div>
+    <p
+      class="mt-6 text-base text-center text-theme-secondary-text"
+    >
+      <span>
+        Importing from Desktop Wallet v2?
+         
+      </span>
+      <button
+        class="relative font-semibold cursor-pointer focus:outline-none link ring-focus"
+        data-ring-focus-margin="-m-1"
+        data-testid="SelectFileStep__change-file"
+        title="Click here."
+        type="button"
+      >
+        Click here.
+      </button>
+    </p>
+    <div
+      class="flex justify-end mt-8 space-x-3"
+    >
+      <button
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+        data-testid="SelectFileStep__back"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Back
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Import Profile Select File Step should render with dwe fileFormat selected 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+  >
+    <div
+      class="flex justify-between items-end bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Select a .dwe file with your Profile and related properties to start the import process.
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="SelectFile"
+    >
+      <div
+        class="h-full flex flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+        data-testid="SelectFile__drop-zone"
+      >
+        <div
+          class="sc-bdvvtL kCgesw"
+          height="40"
+          width="40"
+        >
+          <svg>
+            extension-dwe.svg
+          </svg>
+        </div>
+        <div
+          class="mt-8 space-x-px"
+        >
+          <span
+            class="font-semibold"
+          >
+            Drag & Drop or
+             
+          </span>
+          <button
+            class="relative font-semibold cursor-pointer focus:outline-none link ring-focus"
+            data-ring-focus-margin="-m-1"
+            data-testid="SelectFile__browse-files"
+            title="Click here to upload"
+            type="button"
+          >
+            Browse Files
+          </button>
+        </div>
+        <div
+          class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        >
+          Supported format is .dwe
+        </div>
+      </div>
+    </div>
+    <p
+      class="mt-6 text-base text-center text-theme-secondary-text"
+    >
+      <span>
+        Importing from Desktop Wallet v2?
+         
+      </span>
+      <button
+        class="relative font-semibold cursor-pointer focus:outline-none link ring-focus"
+        data-ring-focus-margin="-m-1"
+        data-testid="SelectFileStep__change-file"
+        title="Click here."
+        type="button"
+      >
+        Click here.
+      </button>
+    </p>
+    <div
+      class="flex justify-end mt-8 space-x-3"
+    >
+      <button
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+        data-testid="SelectFileStep__back"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Back
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Import Profile Select File Step should render with json fileFormat selected 1`] = `
+<div>
+  <div
+    class="mx-auto max-w-xl"
+  >
+    <div
+      class="flex justify-between items-end bg-theme-background"
+    >
+      <div
+        class="space-y-4"
+      >
+        <h1
+          class="mb-0 text-2xl"
+          data-testid="header__title"
+        >
+          Import Profile
+        </h1>
+        <div
+          class="text-theme-secondary-text"
+          data-testid="header__subtitle"
+        >
+          Select a .json file with your Profile and related properties to start the import process.
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative p-2 mt-8 h-52 rounded-lg border-2 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800"
+      data-testid="SelectFile"
+    >
+      <div
+        class="h-full flex flex-col items-center justify-center rounded-lg transition-colors duration-200 bg-theme-primary-50 dark:bg-theme-secondary-800"
+        data-testid="SelectFile__drop-zone"
+      >
+        <div
+          class="sc-bdvvtL kCgesw"
+          height="40"
+          width="40"
+        >
+          <svg>
+            extension-json.svg
+          </svg>
+        </div>
+        <div
+          class="mt-8 space-x-px"
+        >
+          <span
+            class="font-semibold"
+          >
+            Drag & Drop or
+             
+          </span>
+          <button
+            class="relative font-semibold cursor-pointer focus:outline-none link ring-focus"
+            data-ring-focus-margin="-m-1"
+            data-testid="SelectFile__browse-files"
+            title="Click here to upload"
+            type="button"
+          >
+            Browse Files
+          </button>
+        </div>
+        <div
+          class="mt-2 text-sm font-semibold text-theme-secondary-500"
+        >
+          Supported format is .json
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-6"
+    >
+      <div
+        class="flex overflow-hidden flex-col space-y-4 rounded-lg p-4 bg-theme-warning-50 dark:bg-theme-secondary-800 sm:space-y-0 sm:space-x-4 sm:flex-row sm:items-center"
+      >
+        <div
+          class="h-11 w-11 flex flex-shrink-0 items-center justify-center rounded-lg text-white bg-theme-warning-600"
+        >
+          <div
+            class="sc-bdvvtL qGXhc"
+            height="20"
+            width="20"
+          >
+            <svg>
+              circle-exclamation-mark.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="flex flex-col w-full"
+        >
+          <div
+            class="text-sm leading-relaxed break-words dark:text-theme-secondary-500"
+          >
+            Please note that importing a Profile from Desktop Wallet v2 in .json format is supported temporarily and will soon be disabled. We recommend that you re-save your Profile in the new .dwe format.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-end mt-8 space-x-3"
+    >
+      <button
+        class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+        data-testid="SelectFileStep__back"
+        type="button"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          Back
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

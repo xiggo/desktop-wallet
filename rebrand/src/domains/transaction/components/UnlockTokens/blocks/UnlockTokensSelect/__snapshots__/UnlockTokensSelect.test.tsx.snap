@@ -1,0 +1,533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnlockTokensSelect should render 1`] = `
+<DocumentFragment>
+  <div
+    class="flex justify-between items-end bg-theme-background"
+  >
+    <div
+      class="space-y-4"
+    >
+      <h1
+        class="mb-0 text-2xl"
+        data-testid="header__title"
+      >
+        Locked Balance
+      </h1>
+      <div
+        class="text-theme-secondary-text"
+        data-testid="header__subtitle"
+      >
+        View the details of your locked balances and waiting periods within the table below. Select the balances you wish to unlock once the waiting period has expired.
+      </div>
+    </div>
+  </div>
+  <div
+    class="py-3"
+  >
+    <div
+      class="relative border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+    >
+      <div
+        class="Table__TableWrapper-sc-1gcp0fb-0 jHfvAR -mt-3"
+        role="table"
+      >
+        <table
+          cellpadding="0"
+          class="table-auto"
+        >
+          <thead>
+            <tr
+              class="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+              role="row"
+            >
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                colspan="1"
+                data-testid="table__th--0"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div>
+                    Amount
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                  >
+                    <div
+                      class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg>
+                        chevron-down-small.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                colspan="1"
+                data-testid="table__th--1"
+                role="columnheader"
+                style="cursor: pointer;"
+                title="Toggle SortBy"
+              >
+                <div
+                  class="flex flex-inline align-top"
+                >
+                  <div>
+                    Time
+                  </div>
+                  <div
+                    class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                  >
+                    <div
+                      class="sc-bdvvtL Cfvxc transition-transform transform rotate-180"
+                      height="10"
+                      role="img"
+                      width="10"
+                    >
+                      <svg>
+                        chevron-down-small.svg
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+                colspan="1"
+                data-testid="table__th--2"
+                role="columnheader"
+              >
+                <div
+                  class="flex flex-inline align-top justify-end float-right flex-row-reverse"
+                >
+                  <div>
+                    <span
+                      class="mr-3"
+                    >
+                      Status
+                    </span>
+                    <input
+                      class="Checkbox-sc-1aq7nos-0 gdmzcT"
+                      color="success"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            role="rowgroup"
+          >
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
+                >
+                  <span
+                    class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="Amount"
+                  >
+                    10 LSK
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
+                >
+                  <time
+                    class="text-theme-secondary-700"
+                    datetime="Mon, 01 Jun 2020 00:00:00 GMT"
+                  >
+                    01 Jun 2020 at 00:00:00 (a month ago)
+                  </time>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
+                >
+                  <div
+                    class="flex items-center"
+                  >
+                    <div
+                      class="flex items-center"
+                    >
+                      <span
+                        class="text-theme-secondary-700"
+                        data-testid="UnlockableBalanceRow__status"
+                      >
+                        Unlockable
+                      </span>
+                      <div
+                        class="sc-bdvvtL qGXhc text-theme-primary-600 mr-3 ml-2"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          unlock-token.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <input
+                      class="Checkbox-sc-1aq7nos-0 gdmzcT"
+                      color="success"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
+                >
+                  <span
+                    class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="Amount"
+                  >
+                    20 LSK
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
+                >
+                  <time
+                    class="text-theme-secondary-700"
+                    datetime="Mon, 15 Jun 2020 00:00:00 GMT"
+                  >
+                    15 Jun 2020 at 00:00:00 (16 days ago)
+                  </time>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
+                >
+                  <div
+                    class="flex items-center"
+                  >
+                    <div
+                      class="flex items-center"
+                    >
+                      <span
+                        class="text-theme-secondary-700"
+                        data-testid="UnlockableBalanceRow__status"
+                      >
+                        Unlockable
+                      </span>
+                      <div
+                        class="sc-bdvvtL qGXhc text-theme-primary-600 mr-3 ml-2"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          unlock-token.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <input
+                      class="Checkbox-sc-1aq7nos-0 gdmzcT"
+                      color="success"
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
+                >
+                  <span
+                    class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="Amount"
+                  >
+                    30 LSK
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
+                >
+                  <time
+                    class="text-theme-secondary-700"
+                    datetime="Sat, 01 Aug 2020 00:00:00 GMT"
+                  >
+                    01 Aug 2020 at 00:00:00 (in a month)
+                  </time>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
+                >
+                  <div
+                    class="flex items-center"
+                  >
+                    <div
+                      class="flex items-center"
+                    >
+                      <span
+                        class="text-theme-secondary-700"
+                        data-testid="UnlockableBalanceRow__status"
+                      >
+                        Locked
+                      </span>
+                      <div
+                        class="sc-bdvvtL qGXhc text-theme-secondary-700 mr-3 ml-2"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          lock.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <input
+                      class="Checkbox-sc-1aq7nos-0 gdmzcT"
+                      color="success"
+                      disabled=""
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr
+              class="TableRow__TableRowStyled-sc-y9j4av-0 jRikRC"
+              data-testid="TableRow"
+            >
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 UdZIx"
+                >
+                  <span
+                    class="whitespace-nowrap font-bold text-theme-secondary-900 dark:text-theme-secondary-200"
+                    data-testid="Amount"
+                  >
+                    40 LSK
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 iTMWpD"
+                >
+                  <time
+                    class="text-theme-secondary-700"
+                    datetime="Tue, 01 Sep 2020 00:00:00 GMT"
+                  >
+                    01 Sep 2020 at 00:00:00 (in 2 months)
+                  </time>
+                </div>
+              </td>
+              <td>
+                <div
+                  class="TableCell__TableCellInnerWrapper-sc-v39gua-0 dMbCwx justify-end"
+                >
+                  <div
+                    class="flex items-center"
+                  >
+                    <div
+                      class="flex items-center"
+                    >
+                      <span
+                        class="text-theme-secondary-700"
+                        data-testid="UnlockableBalanceRow__status"
+                      >
+                        Locked
+                      </span>
+                      <div
+                        class="sc-bdvvtL qGXhc text-theme-secondary-700 mr-3 ml-2"
+                        height="20"
+                        width="20"
+                      >
+                        <svg>
+                          lock.svg
+                        </svg>
+                      </div>
+                    </div>
+                    <input
+                      class="Checkbox-sc-1aq7nos-0 gdmzcT"
+                      color="success"
+                      disabled=""
+                      type="checkbox"
+                    />
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div
+      class="flex items-center justify-between mt-4"
+    >
+      <div
+        class="flex flex-col items-start"
+        data-testid="UnlockTokensTotal"
+      >
+        <p
+          class="text-theme-secondary-500 text-sm font-semibold mb-2"
+        >
+          Total Amount
+        </p>
+        <div
+          class="Label-sc-4akkzw-0 gHbVRS"
+          color="neutral"
+        >
+          <div
+            class="flex space-x-1 items-stretch"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              0 LSK
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-end"
+        data-testid="UnlockTokensTotal"
+      >
+        <p
+          class="text-theme-secondary-500 text-sm font-semibold mb-2"
+        >
+          Transaction Fee
+        </p>
+        <div
+          class="Label-sc-4akkzw-0 gHbVRS"
+          color="neutral"
+        >
+          <div
+            class="flex space-x-1 items-stretch"
+          >
+            <span
+              class="whitespace-nowrap"
+              data-testid="Amount"
+            >
+              0 LSK
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex justify-end space-x-3"
+  >
+    <button
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Close
+      </div>
+    </button>
+    <button
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
+      disabled=""
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Unlock
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`UnlockTokensSelect should render empty 1`] = `
+<DocumentFragment>
+  <div
+    class="flex justify-between items-end bg-theme-background"
+  >
+    <div
+      class="space-y-4"
+    >
+      <h1
+        class="mb-0 text-2xl"
+        data-testid="header__title"
+      >
+        Locked Balance
+      </h1>
+      <div
+        class="text-theme-secondary-text"
+        data-testid="header__subtitle"
+      >
+        View the details of your locked balances and waiting periods within the table below. Select the balances you wish to unlock once the waiting period has expired.
+      </div>
+    </div>
+  </div>
+  <div
+    class="py-3"
+  >
+    <div
+      class="border border-solid border-theme-secondary-300 dark:border-theme-secondary-800 rounded-lg text-theme-secondary-text text-center leading-5 p-6"
+      data-testid="EmptyBlock"
+    >
+      <div>
+        Your wallet doesn’t have any locked balance.
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex justify-end space-x-3"
+  >
+    <button
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 cxgwmk"
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Close
+      </div>
+    </button>
+    <button
+      class="OriginalButton__StyledButton-sc-o0fs2j-0 kkDhXe"
+      disabled=""
+      type="button"
+    >
+      <div
+        class="flex items-center space-x-2"
+      >
+        Unlock
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
