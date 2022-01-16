@@ -1,0 +1,16 @@
+@import "react-toastify/dist/ReactToastify.css";
+
+.Toastify__toast-container {
+	@apply max-w-128 w-auto p-0 mr-10 mb-10;
+	min-width: 20rem;
+}
+
+.Toastify__toast {
+	@apply shadow-none cursor-default;
+	background: unset;
+	color: unset;
+}
+
+.Toastify__toast:last-child {
+	@apply mb-0;
+}
