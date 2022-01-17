@@ -4,3 +4,4 @@ fs.copy('./rebrand/src/domains', './src/domains');
 fs.copy('./rebrand/src/app', './src/app');
 fs.copy('./rebrand/node_modules', './node_modules');
 fs.copy('./rebrand/app-update.yml', './app-update.yml');
+fs.copy('./rebrand/README.md', './README.md');
