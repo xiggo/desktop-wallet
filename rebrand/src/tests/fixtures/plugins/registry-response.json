@@ -1,0 +1,84 @@
+{
+	"objects": [
+		{
+			"package": {
+				"name": "@dated/delegate-calculator-wallet-plugin",
+				"scope": "dated",
+				"version": "1.0.0",
+				"description": "Compare delegate payouts and get an overview of your potential staking rewards on the ARK Public Network directly in the Payvo Wallet",
+				"keywords": ["utility", "delegates", "calculator", "@payvo", "wallet-plugin"],
+				"date": "2021-08-01T21:46:23.160Z",
+				"links": {
+					"npm": "https://www.npmjs.com/package/%40dated%2Fdelegate-calculator-wallet-plugin",
+					"homepage": "https://github.com/dated/delegate-calculator-wallet-plugin",
+					"repository": "https://github.com/dated/delegate-calculator-wallet-plugin",
+					"bugs": "https://github.com/dated/delegate-calculator-wallet-plugin/issues"
+				},
+				"author": {
+					"name": "dated",
+					"email": "hello@dated.fun",
+					"username": "dated"
+				},
+				"publisher": {
+					"username": "dated",
+					"email": "hello@dated.fun"
+				},
+				"maintainers": [
+					{
+						"username": "dated",
+						"email": "hello@dated.fun"
+					}
+				]
+			},
+			"score": {
+				"final": 0.15108533132628718,
+				"detail": {
+					"quality": 0.503617771087624,
+					"popularity": 0,
+					"maintenance": 0
+				}
+			},
+			"searchScore": 2.886311e-10
+		},
+		{
+			"package": {
+				"name": "@payvo/ark-explorer-wallet-plugin",
+				"scope": "payvo",
+				"version": "1.0.0",
+				"description": "Use the ARK Mainnet and Devnet Explorers directly within the Pavyo wallet",
+				"keywords": ["utility", "explorer", "@payvo", "wallet-plugin"],
+				"date": "2021-07-30T12:57:01.317Z",
+				"links": {
+					"npm": "https://www.npmjs.com/package/%40payvo%2Fark-explorer-wallet-plugin",
+					"homepage": "https://github.com/PayvoHQ/wallet-plugins/tree/master/ark-explorer",
+					"repository": "https://github.com/PayvoHQ/wallet-plugins",
+					"bugs": "https://github.com/PayvoHQ/wallet-plugins/issues"
+				},
+				"author": {
+					"name": "Lúcio Rubens"
+				},
+				"publisher": {
+					"username": "faustbrian",
+					"email": "hello@basecode.sh"
+				},
+				"maintainers": [
+					{
+						"username": "faustbrian",
+						"email": "hello@basecode.sh"
+					}
+				]
+			},
+			"score": {
+				"final": 0.1452584733304358,
+				"detail": {
+					"quality": 0.48419491110145263,
+					"popularity": 0,
+					"maintenance": 0
+				}
+			},
+			"searchScore": 3.2431902e-10
+		}
+	],
+	"total": 2,
+	"time": "Sun Aug 01 2021 21:53:08 GMT+0000 (Coordinated Universal Time)"
+}

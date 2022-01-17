@@ -1,0 +1,117 @@
+{
+	"_id": "@dated/delegate-calculator-wallet-plugin",
+	"name": "@dated/delegate-calculator-wallet-plugin",
+	"dist-tags": {
+		"latest": "1.0.0"
+	},
+	"versions": {
+		"1.0.0": {
+			"name": "@dated/delegate-calculator-wallet-plugin",
+			"version": "1.0.0",
+			"description": "Compare delegate payouts and get an overview of your potential staking rewards on the ARK Public Network directly in the Payvo Wallet",
+			"main": "dist/dated-delegate-calculator-wallet-plugin.cjs.js",
+			"author": {
+				"name": "dated",
+				"email": "hello@dated.fun"
+			},
+			"license": "MIT",
+			"private": false,
+			"repository": {
+				"type": "git",
+				"url": "git+https://github.com/dated/delegate-calculator-wallet-plugin.git"
+			},
+			"desktop-wallet": {
+				"title": "ARK Delegate Calculator",
+				"logo": "https://raw.githubusercontent.com/dated/delegate-calculator-wallet-plugin/master/images/logo.png",
+				"categories": ["utility"],
+				"permissions": ["LAUNCH", "HTTP", "PROFILE", "STORE"],
+				"urls": ["^"],
+				"minimumVersion": "1.0.0"
+			},
+			"keywords": ["utility", "delegates", "calculator", "@payvo", "wallet-plugin"],
+			"homepage": "https://github.com/dated/delegate-calculator-wallet-plugin",
+			"scripts": {
+				"format": "yarn lint && yarn prettier",
+				"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+				"prettier": "prettier --write \"./*.{ts,tsx,js,json,md}\" \"./**/*.{ts,tsx,js,json,md}\"",
+				"prepublishOnly": "yarn build",
+				"build": "preconstruct build",
+				"watch": "preconstruct watch"
+			},
+			"dependencies": {
+				"react": "^16.13.1"
+			},
+			"devDependencies": {
+				"@babel/preset-react": "^7.14.5",
+				"@babel/preset-typescript": "^7.14.5",
+				"@preconstruct/cli": "^2.1.0",
+				"@types/eslint-plugin-prettier": "^3.1.0",
+				"@typescript-eslint/eslint-plugin": "^4.28.4",
+				"@typescript-eslint/parser": "^4.28.4",
+				"eslint": "^7.31.0",
+				"eslint-config-prettier": "^8.3.0",
+				"eslint-plugin-import": "^2.23.4",
+				"eslint-plugin-prettier": "^3.4.0",
+				"eslint-plugin-promise": "^5.1.0",
+				"eslint-plugin-react": "^7.24.0",
+				"eslint-plugin-react-hooks": "^4.2.0",
+				"eslint-plugin-simple-import-sort": "^7.0.0",
+				"eslint-plugin-sort-keys-fix": "^1.1.1",
+				"eslint-plugin-unused-imports": "^1.1.2",
+				"prettier": "^2.3.2",
+				"typescript": "3.9.5"
+			},
+			"licenseText": "The MIT License (MIT)\n\nCopyright (c) 2021 dated <hello@dated.fun>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+			"_id": "@dated/delegate-calculator-wallet-plugin@1.0.0",
+			"dist": {
+				"shasum": "3a76d1e1295bf047b25cd407d96f683a6a501c12",
+				"integrity": "sha512-ME5pPVDCJWxNY+ubKeomdkFxvjbSpm6e9KlMVoCoSUR9TWpxpo/zGRlcOIw3+T0ccEXHAATr8p711whza8Trqg==",
+				"tarball": "https://registry.npmjs.org/@dated/delegate-calculator-wallet-plugin/-/delegate-calculator-wallet-plugin-1.0.0.tgz",
+				"fileCount": 60,
+				"unpackedSize": 122515,
+				"npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJhBxYvCRA9TVsSAnZWagAAEbUP/jK5kX4/pBibdQcGPKOM\nzfj/u2CsJYMcx5jG4OuOLHF497bWLDeC8xqtTjmhhTCn1Nj/Y4mTE0btmNTM\nhAyWBB8BgLiQORp2LkoVkWVh7/zK0xQyGPSccMFLh7SfmnwNlg5a6UShpQhL\nuARUqao6GLnM3BCXIgthy7LdNLFAERBVeOCaB5VxCAxLuD9+XjgBB0+KWAXX\n9y1CK6hM5r+LyQrCl/MbXDxMTynIuCHpvHNndtRN418WmExcD1Z+dIvBc8gL\nVQ6LDAMpJ6Fx1kNQZzi/SO2woMyOY0HWclwy3/mkNGWjbvk7SX79MuJGsz6a\nY8odvFVl2O8S/BxZkMB3YYRUX8CL5bC9PcKbbEsnYULvnHwXVPV00zZ2C+RP\nELPGlhpgSgsYQ4kBGPVXEJsGQ51k4KVF2mVMHbueylxy6u/fnf/9iMoe+Eig\nlZ28x4k4cLwUrldHeDsZBn8ozJUutmp3S206MrEct/asU687oLLnmkXPCuSn\nUFQTtEmmFMwwiGJPp//QUBbAFeqv3UYfG1zvSF1v9j74B9JFczun5wA7KcsK\nj/AaCBsLbcSywNy2qG134/mUWHjKv1d4hCV9pKqLV7lwaqOgMYL093BAG4mw\nmMm0Head5bJ6FaXMaAX2eFq2PeEzOqY9U27mIvHgkEkfvIf2YUDl8/u1wnLr\nJubm\r\n=C0m5\r\n-----END PGP SIGNATURE-----\r\n"
+			},
+			"_npmUser": {
+				"name": "dated",
+				"email": "hello@dated.fun"
+			},
+			"directories": {},
+			"maintainers": [
+				{
+					"name": "dated",
+					"email": "hello@dated.fun"
+				}
+			],
+			"_npmOperationalInternal": {
+				"host": "s3://npm-registry-packages",
+				"tmp": "tmp/delegate-calculator-wallet-plugin_1.0.0_1627854383000_0.14749538097557746"
+			},
+			"_hasShrinkwrap": false
+		}
+	},
+	"time": {
+		"created": "2021-08-01T21:46:22.921Z",
+		"1.0.0": "2021-08-01T21:46:23.160Z",
+		"modified": "2021-08-01T21:46:25.036Z"
+	},
+	"maintainers": [
+		{
+			"name": "dated",
+			"email": "hello@dated.fun"
+		}
+	],
+	"description": "Compare delegate payouts and get an overview of your potential staking rewards on the ARK Public Network directly in the Payvo Wallet",
+	"homepage": "https://github.com/dated/delegate-calculator-wallet-plugin",
+	"keywords": ["utility", "delegates", "calculator", "@payvo", "wallet-plugin"],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dated/delegate-calculator-wallet-plugin.git"
+	},
+	"author": {
+		"name": "dated",
+		"email": "hello@dated.fun"
+	},
+	"license": "MIT",
+	"readme": "# ARK Delegate Calculator Plugin\n\n> Compare delegate payouts and get an overview of your potential staking rewards on the ARK Public Network directly in the Payvo Wallet.\n\n## Installation\n\nInstall this plugin directly through the Plugins Manager of the Payvo Wallet. Alternatively you can clone or [download this repository](https://github.com/dated/delegate-calculator-wallet-plugin/archive/master.zip) and unzip it into `~/.payvo-wallet/plugins/`.\n\n## Credits\n\n-   [Edgar Goetzendorff](https://github.com/dated)\n-   [All Contributors](../../contributors)\n\n## License\n\n[MIT](LICENSE) © [Edgar Goetzendorff](https://github.com/dated)\n",
+	"readmeFilename": "README.md"
+}

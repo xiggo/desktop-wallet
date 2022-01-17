@@ -1,0 +1,21 @@
+{
+	"name": "plugin-test-launch",
+	"version": "0.1.1",
+	"keywords": [
+		"@payvo",
+		"wallet-plugin"
+	],
+	"author": "Lucio",
+	"desktop-wallet": {
+		"title": "Test Launch",
+		"categories": [
+			"other"
+		],
+		"permissions": [
+			"LAUNCH",
+			"MESSAGE",
+			"PROFILE"
+		],
+		"minimumVersion": "1.0.0"
+	}
+}

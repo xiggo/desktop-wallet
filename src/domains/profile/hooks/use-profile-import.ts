@@ -44,34 +44,34 @@ export const useProfileImport = ({ env }: { env: Environment }) => {
 		const profile = env.profiles().create("");
 
 		for (const wallet of data.wallets) {
-			if (wallet?.address && wallet?.balance.ARK) {
-				await profile.coins().set("ARK", "ark.mainnet").__construct();
+			if (wallet?.address && wallet?.balance.SXP) {
+				await profile.coins().set("SXP", "sxp.mainnet").__construct();
 			}
 
-			if (wallet?.address && wallet?.balance.DARK) {
-				await profile.coins().set("ARK", "ark.devnet").__construct();
+			if (wallet?.address && wallet?.balance.dSXP) {
+				await profile.coins().set("SXP", "sxp.testnet").__construct();
 			}
 		}
 
 		await Promise.all(
 			data.wallets.map(async (wallet: Record<string, any>) => {
-				if (wallet?.address && wallet?.balance.ARK) {
+				if (wallet?.address && wallet?.balance.SXP) {
 					const importedWallet = await profile.walletFactory().fromAddress({
 						address: wallet.address,
-						coin: "ARK",
-						network: "ark.mainnet",
+						coin: "SXP",
+						network: "sxp.mainnet",
 					});
 					profile.wallets().push(importedWallet);
 					return wallet;
 				}
 
-				if (wallet?.address && wallet?.balance.DARK) {
+				if (wallet?.address && wallet?.balance.dSXP) {
 					profile.settings().set(Contracts.ProfileSetting.UseTestNetworks, true);
 
 					const importedWallet = await profile.walletFactory().fromAddress({
 						address: wallet.address,
-						coin: "ARK",
-						network: "ark.devnet",
+						coin: "SXP",
+						network: "sxp.testnet",
 					});
 					profile.wallets().push(importedWallet);
 					return importedWallet;

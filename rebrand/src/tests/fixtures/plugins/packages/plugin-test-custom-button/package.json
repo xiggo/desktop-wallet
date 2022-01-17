@@ -1,0 +1,19 @@
+{
+	"name": "plugin-test-custom-button",
+	"version": "0.0.1",
+	"keywords": [
+		"@payvo",
+		"wallet-plugin"
+	],
+	"author": "Lucio",
+	"desktop-wallet": {
+		"title": "Test Custom Button",
+		"categories": [
+			"utility"
+		],
+		"permissions": [
+			"THEME"
+		],
+		"minimumVersion": "1.0.0"
+	}
+}
