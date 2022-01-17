@@ -130,7 +130,7 @@ function createWindow() {
 
 	mainWindow.webContents.on("did-finish-load", () => {
 		const version = app.getVersion();
-		const windowTitle = `Payvo Wallet ${version}`;
+		const windowTitle = `Solar Wallet ${version}`;
 		mainWindow && mainWindow.setTitle(windowTitle);
 
 		broadcastURL(deeplinkingUrl);
