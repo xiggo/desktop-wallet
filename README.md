@@ -1,7 +1,8 @@
 # Solar Desktop Wallet
 
-
-> Lead Maintainer: [Brian Faust](https://github.com/faustbrian)
+<p align="center">
+    <img src="https://github.com/Solar-network/desktop-wallet/blob/master/banner.png" />
+</p>
 
 ## Download
 
