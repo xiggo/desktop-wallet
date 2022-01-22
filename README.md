@@ -1,7 +1,7 @@
 # Solar Desktop Wallet
 
 <p align="center">
-    <img src="https://github.com/Solar-network/desktop-wallet/blob/master/banner.png" />
+    <img src="https://github.com/Solar-network/desktop-wallet/blob/master/banner.jpg" />
 </p>
 
 ## Download
