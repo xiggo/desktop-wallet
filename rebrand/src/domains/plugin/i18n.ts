@@ -22,7 +22,7 @@ export const translations = {
 	},
 	MANUAL_INSTALLATION_DISCLAIMER: {
 		DISCLAIMER:
-			"By accepting the following terms, you hereby assume the risk associated with downloading files and installing said files from a direct URL link. The aforementioned links have neither been tested nor approved by ARK.io and ARK SCIC.\n\nWe make no warranties, expressed or implied, as to the sustainability, availability, security, of these URLs. We are not responsible for any consequences which may occur from downloading, viewing, or installing files directly from a URL. ARK.io and ARK SCIC shall bear no liability for any loss suffered by users as a result of clicking an unverified direct URL.\n\nYou acknowledge that clicking unverified URLs may result in you downloading, viewing, or installing content that may have bugs, glitches, lack of functionality, or can cause damage to your machine or result in the loss of data.",
+			"By accepting the following terms, you hereby assume the risk associated with downloading files and installing said files from a direct URL link. The aforementioned links have neither been tested nor approved by Solar.org.\n\nWe make no warranties, expressed or implied, as to the sustainability, availability, security, of these URLs. We are not responsible for any consequences which may occur from downloading, viewing, or installing files directly from a URL. Solar.org shall bear no liability for any loss suffered by users as a result of clicking an unverified direct URL.\n\nYou acknowledge that clicking unverified URLs may result in you downloading, viewing, or installing content that may have bugs, glitches, lack of functionality, or can cause damage to your machine or result in the loss of data.",
 		TITLE: "Disclaimer",
 	},
 	MINIMUM_VERSION_NOT_SATISFIED:
@@ -119,7 +119,7 @@ export const translations = {
 	PLUGIN_INFO: {
 		ABOUT: "About",
 		DISCLAIMER:
-			"The availability of this Plugin in the Solar Wallet does not mean that either ARK.io or ARK SCIC is directly involved in its development or developers. By installing it, you assume any associated risks.",
+			"The availability of this Plugin in the Solar Wallet does not mean that Solar.org is directly involved in its development or developers. By installing it, you assume any associated risks.",
 		NOT_ENABLED: "This Plugin is not enabled",
 		NOT_LAUNCHEABLE: "This Plugin cannot be launched",
 		REPORT: "Report Plugin",
