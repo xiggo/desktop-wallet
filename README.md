@@ -1,8 +1,5 @@
 # Solar Desktop Wallet
 
-<p align="center">
-    <img src="./banner.jpg?sanitize=true" />
-</p>
 
 > Lead Maintainer: [Brian Faust](https://github.com/faustbrian)
 

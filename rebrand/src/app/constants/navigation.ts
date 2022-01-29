@@ -41,14 +41,14 @@ export const getUserInfoActions = (t: TFunction): (DropdownOption & NavigationBa
 		title: "settings",
 		value: "settings",
 	},
-//	{
-//		icon: "ArrowExternal",
-//		isExternal: true,
-//		label: t("COMMON.SUPPORT"),
-//		mountPath: () => "https://payvo.com/contact",
-//		title: "support",
-//		value: "support",
-//	},
+	{
+		icon: "ArrowExternal",
+		isExternal: true,
+		label: t("COMMON.SUPPORT"),
+		mountPath: () => "https://solar.network/community",
+		title: "support",
+		value: "support",
+	},
 	{
 		label: t("COMMON.SIGN_OUT"),
 		mountPath: () => `/`,

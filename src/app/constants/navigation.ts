@@ -16,10 +16,10 @@ export const getNavigationMenu = (t: TFunction): NavigationBarMenuItem[] => [
 		mountPath: (profileId) => `/profiles/${profileId}/exchange`,
 		title: t("COMMON.EXCHANGE"),
 	},
-//	{
-//		mountPath: (profileId) => `/profiles/${profileId}/news`,
-//		title: t("COMMON.NEWS"),
-//	},
+	{
+		mountPath: (profileId) => `/profiles/${profileId}/news`,
+		title: t("COMMON.NEWS"),
+	},
 ];
 
 export const getUserInfoActions = (t: TFunction): (DropdownOption & NavigationBarMenuItem)[] => [
